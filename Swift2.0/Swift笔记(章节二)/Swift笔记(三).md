@@ -214,6 +214,34 @@ for item in people {
 
 print("工厂人数: \(workerCount)，学生rens: \(studentCount)")
 ```
+- 上诉代码使用for in遍历people数组集合，当从people数组集合取出元素，我们只知道是people类型，但是不知道是哪个子类
+##### 使用as，as！和as?进行类型转换
+
+- 学习as，as！和as?之前，先了解一下对象的类型转换，并不是所有的类型都能相互转换
+
+```swift
+
+let p1: Person = Student(name: "Tom", age: 18, school: "清华大学")
+let  p2: Person = Student(name: "Ben", age: 28, school: "北京大学")
+let  p3: Person = Student(name: "Tony", age: 38, school: "香港大学")
+let  p4: Student = Student(name: "Tom", age: 18, factory: "钢厂")
+let  p5: Worker = Worker(name: "Ben", age: 20, factory: "电厂")
+
+```
+- 下面我们详细说明一下as， as！和as？操作符与上下类型之间的关系
+##### 1. as操作符
+- as操作符仅仅只应用，由于向上转型很少进行，所以代码中很少能够看到使用as操作符的情况
+```swift
+let p4: Student = Student(name: "Ben", age: 40, school:"清华大学")
+let p41: Student = p4 as Person //向上转型
+```
+- 将Student类型的p4转成Person类型是向上转型，向上转型通常可以省略as Person部分
+
+##### 1. as！操作符号
+- 使用as！操作符可以应用如下3中情况，将非可选类型为非可选类型，将非可选类型和将可选类型为可选类型
+
+
+
 
 
 
