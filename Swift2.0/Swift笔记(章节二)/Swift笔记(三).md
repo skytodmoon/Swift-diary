@@ -432,6 +432,140 @@ print(Account.interesRate)
 - 扩展中不仅可以定义只读计算属性，还可以定义读写计算属性，实例计算属性和静态计算属性，但不能定义存储属性
 
 ##### 扩展方法
+- 我们可以在原始类型上扩展方法，包括实例方法和静态方法，这些添加方法的定义与普通方法的定义是一样的
+- 实例
+
+
+```swift
+
+extension Double {
+    static var interestRate : Double = 0.068
+    
+    func interestBy1() -> Double {
+        
+        return self * Double.interestRate
+    }
+    mutating func interestBy2() {
+        
+        self = self * Double.interestRate
+    }
+    static func interestBy3(amount: Double) -> Double {
+        return interestRate * amount
+    }
+}
+
+let interest1 = (10_00.00).interestBy1()
+print("利息1 : \(interest1)")
+
+
+let interest2 = 10_00.00
+print("利息2 : \(interest2)")
+
+
+let interest3 = Double.interestBy3(10_00.00)
+print("利息3 : \(interest3)")
+```
+
+
+##### 扩展构造函数
+- 扩展类型的时候也可以添加新的构造函数。值类型与引用类型扩展有所区别，值类型包括了除类以外的其他类型，主要是枚举类型和结构类型
+
+##### 值类型扩展结构函数
+
+- 代码示例
+
+```swift
+struct Rectangle {
+    
+    var width : Double
+    var height : Double
+    
+    init(width : Double, height: Double) {
+        self.width = width
+        self.height = height
+    }
+}
+
+extension Rectangle {
+    init(length : Double) {
+        self.init(width : length, height: length)
+    }
+}
+
+var rect = Rectangle(width: 320.0, height: 480.0)
+print("长方形: \(rect.width) x \(rect.height)")
+
+
+var square = Rectangle(length: 500.0)
+print("长方形: \(square.width) x \(square.height)")
+```
+##### 引用类型扩展结构函数
+
+- 下面我们讨论一下引用类扩展中如何定义构造函数，引用类型只包含一个类型，即类的类型
+
+- 扩展类的时候能向类中添加新的便利构造函数，但不能添加新的指定的函数或析函数，指定构造函数和析函数只能由原始类型提供
+
+- 示例
+
+```swift
+class Person {
+    var name : String
+    var age : Int
+    
+    func description() -> String {
+        return "\(name) 年龄是: \(age)"
+    }
+    init(name: String, age: Int){
+        self.name = name
+        self.age = age
+    }
+    
+}
+
+extension Person {
+    convenience init (name: String){
+        self.init(name: name ,age: 8)
+    }
+}
+
+let p1 = Person(name: "Mary")
+print("Persion1 : \(p1.description())")
+
+let p2 = Person(name: "Toony", age: 28)
+print("Persion2 : \(p2.description())")
+```
+
+##### 扩展下标
+- 我们可以把下标认为是特殊的属性，可以实现索引的访问属性，我们可以在元素类型的基础上扩展下标功能
+- 字符串本身没有提供按照下标访问字符串的功能
+
+```swift
+extension String {
+    subscript(index : Int) ->String {
+        if index > self.characters.count {
+            return ""
+        }
+        var c: String = ""
+        var i = 0
+        
+        for characters in self.characters {
+            if (i == index){
+                c = String(characters)
+                break
+            }
+            i++
+        }
+        return c
+    }
+}
+
+let s = "Ths quick brown fox  jumos ovar the lazy dog"
+
+print(s[0])
+print("ABC"[2])
+```
+
+
 
 
 
