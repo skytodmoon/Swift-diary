@@ -564,7 +564,102 @@ let s = "Ths quick brown fox  jumos ovar the lazy dog"
 print(s[0])
 print("ABC"[2])
 ```
+## 协议
+##### 协议的概念
+- 在面向对象分析与设计方法学中，你可能会有这样的经历：一些类的方法所执行的内容是无法确定的，只能它的子类中才能确定
+- 比如，几何图形类可以绘制图形的方法，但是绘制图形方法的具体内容无法确定，这是因为我们不知道绘制什么样的几何图形
+- 几何图形这种类在面向对象分享与设计方法学称为抽象类，方法称为抽象方法，矩形和圆形都是几何图形的子类，他们实现了几何图形的绘制图形的抽象方法
 
+##### 协议的定义语法
+
+```swift
+protocol 协议名 {
+	//协议内容
+}
+
+//在声明遵守协议时，语法如下
+
+类型，类型名： 协议1，协议2{
+	//准守协议内容
+}
+```
+
+- **其中类型包括class ，Struts和enum ，类型名由我们自定定义**
+- **如果一个类继承父类的同时也要准守协议，应当把父类放在所有的协议之前**
+
+```swift
+class 类： 父类，协议1，协议2 {
+	//准守协议内容
+}
+```
+
+- 只有类的定义会有父类和协议混合声明，结构体和枚举是没有父类型
+
+##### 协议方法
+##### 协议实例方法
+- 代码示例
+
+```swift
+protocol Figure {
+    func onDraw()//定义抽象绘制几何图形
+}
+
+class Rectangle: Figure {
+    func onDraw() {
+        print("绘制矩形")
+    }
+}
+class Circle: Figure {
+    func onDraw() {
+        print("绘制图形")
+    }
+}
+
+let rect: Figure = Rectangle()
+rect.onDraw()
+
+let circle: Figure = Circle()
+Circle.onDraw()
+```
+
+##### 协议静态方法
+- 在协议中定义静态方法时前面添加static关键字，那么准从协议的时候，准从静态方法前的关键字class还是static呢？
+- 示例代码
+
+```swift
+protocol Account {
+    
+    static func inerestBy(amount: Double) -> Double
+}
+
+class ClassImp : Account {
+    
+    class func inerestBy(amount: Double) -> Double {
+        
+        return 0.0668 * amount
+    }
+}
+
+struct StructImp: Account {
+    
+     func inerestBy(amount: Double) -> Double {
+        
+        return 0.0668 * amount
+    }
+}
+
+enum EnumImp: Account {
+    
+    static func inerestBy(amount: Double) -> Double {
+        
+        return 0.0668 * amount
+    }
+}
+```
+- **代码说明**
+- 协议静态方法定义和声明都比较麻烦，与具体的类型有关，使用的时候需要注意
+
+##### 协议变异方法
 
 
 
