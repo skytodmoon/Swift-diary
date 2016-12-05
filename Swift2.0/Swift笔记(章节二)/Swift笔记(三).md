@@ -240,6 +240,198 @@ let p41: Student = p4 as Person //向上转型
 ##### 1. as！操作符号
 - 使用as！操作符可以应用如下3中情况，将非可选类型为非可选类型，将非可选类型和将可选类型为可选类型
 
+```swift
+//向上转型，使用as！
+//1.将非可选类型为非可选类型
+let p11 = p1 as! Student
+let p6: Person? = Student(name:"Tom", age: 20 ,school: "清华大学")
+
+//let p111  = p2 as! Student //异常
+
+//2.将可选类型为非可选类型
+
+```
+- 使用as!操作符时，诺在转换过程中不能转换为目标类型就会出现错误
+##### 1. as!操作符
+1. 使用as?操作符可以应用于如下两种情况,将非可选类型和非可选类型和将非可选类型为可选类型
+
+
+```swift
+let p6: Person? = Student(name:"Tom", age: 20 ,school: "清华大学")
+//向上转型，使用as!
+let p21 = p1 as! Student
+let p211 = p2 as! Student
+//2.将非可选类型为可选类型
+let p7: Person? = Student(name:"Tom", age: 20 ,school: "清华大学")
+let p22 = p7 as?  Student?
+```
+- 示例2
+
+```swift
+let student1 = Student(name: "Tom", age: 18, school: "清华大学")
+let student2 = Student(name: "Ben", age: 28, school: "北京大学")
+let student3 = Student(name: "Tony", age: 38, school: "香港大学")
+
+let worker1 = Worker(name: "Tom", age: 18, factory: "钢厂")
+let worker2 = Worker(name: "Ben", age: 20, factory: "电厂")
+
+let people = [student1,student3,student3,worker1,worker2]
+
+
+
+for item in people {
+    if let student  = item as? Student {
+        print("Student school: \(Student.school)")
+    }else if let worker = item as? Worker{
+        print("Worker factory: \(Worker.factory)")
+    }
+}
+```
+- 1. 使用for in遍历people数组集合，在循环中，**let student = item as? Student语句使用as?操作符元素换为Student类型：如果转成成功，则把元素赋值给Student变量**
+- 2. as?操作符是在不确定是否类型转换能够成功的情况下使用，如果成功转换结果可选类型，如果我们能够确保转换一定成功，可以使用as！操作符在转同时进行隐藏拆包
+
+```swift
+let people = Student[student1,student2,student3,worker1,worker2]
+
+let stud1 = people[0] as? Student
+print(stud1)
+print(stud1!.name)
+```
+```swift
+let stud2 = people[1] as! Student
+print(stud2)
+print(stud2.name)
+
+Optional(Student）
+```
+
+##### 使用Any和AnyObject类型
+- 在object-c和Swift混合编程时，object-c的id类型和Swift的AnyObject类型可以呼唤，但是两者有本质区别，id类型是泛型，可以代表任何对象指针类型，编译器不会检查id类型，是动态的，而Swift得anyboject类型是一个实实表示的类型
+
+```swift
+let student1 = Student(name: "Tom", age: 18, school: "清华大学")
+let student2 = Student(name: "Ben", age: 28, school: "北京大学")
+let student3 = Student(name: "Tony", age: 38, school: "香港大学")
+
+let worker1 = Worker(name: "Tom", age: 18, factory: "钢厂")
+let worker2 = Worker(name: "Ben", age: 20, factory: "电厂")
+
+let people = [student1,student3,student3,worker1,worker2]
+
+let people1:[Person] = [student1,student2,student3,worker1,worker2]
+let people2: [AnyObject]
+let people3: [Any] = [student1,student2,student3,worker1,worker2]
+
+for item in people3 {
+    if let Student = item as? Student {
+        print("Student school: \(Student.school)")
+    }else if let Worker = item as? Worker {
+        print("Worker factory: \(Worker.factory)")
+    }
+}
+```
+- 原则上诺能够使用具体的数据类型，则尽量不要使用Anyobject类型，更要少考虑使用any类型，从集合取出这些实例时，请尽可能将Anyobject或Any类型转换为特定类型
+
+## 扩展
+
+- 扩展机制只在Swift和oc两种语言中有
+
+#### 轻量级继承机制
+
+1. 在面向对象分析与设计方法学中，为了增强一个类的新功能，我们可以通过继承机制从父类继承一些方法和属性，然后再更加需要在子类中添加一些方法和属性，这样就可以得到增强的功能的新类了，但是这种方式受到了限制，继承过程比较烦琐
+2. 对于扩展这种‘轻量级’继承机制，只有oc的分类机制此类，其他面向对象的语言没有，因为很多java实用Swift语言不擅长实用扩展机制，而是保守地实用继承机制，在设计基于Swift语言的程序时，我们要优先扩展机制是否能够满足需求
+
+##### 声明扩展
+
+##### 声明扩展的语法格式
+
+```swift
+extension 类型名 {
+	
+	//添加新功能
+}
+```
+
+- 声明扩展的关键字是extension，“类型名”是Swift中已有的类型，包括类，结构体和枚举，但是我们任然可以扩展整型，浮点型，布尔型，字符串等基本数据类型，因为这些类型本质也是结构类型
+
+```swift
+struct Int : SignedIntegerType {
+    init()
+    init(_ value: Int)
+    static func convertFromIntergerLiteral(value: Int) -> Int
+    typealias ArrayBoundType = Int
+    func getArrayBoundValue() -> Int
+    static var max: Int {get}
+    static var min: (get)
+}
+```
+- 从定义可见Int是结构体类型，不仅是Int类型，我们熟悉的整型，浮点型，字符串等数据类型本质上都是结构类型
+- **具体而言，Swift中的扩展机制可以在原始类型中添加的新功能包括**
+- *实例计算属性和类型计算属性*
+- *实例方法和类型方法*
+- *结构函数*
+- *下标*
+
+- 此外，还有嵌套类型等内容也可以扩展，扩展还可以遵从协议
+
+##### 扩展计算属性
+
+- 我们可以在原始类型上扩展计算属性，包括实例计算属性和静态属性，这些添加计算属性的定义，与计算属性的定义一样
+- 实例
+
+```swift
+extension Int {
+    var errorMessaeg : String {
+        var errorStr = ""
+        switch (self) {
+        case -7:
+            errorStr = "没有数据"
+        case -6:
+            errorStr = "日期没有输入"
+        case -5:
+            errorStr = "内容没有输入"
+        case -4:
+            errorStr = "ID没有输入"
+        case -3:
+            errorStr = "数据访问失败"
+        case -2:
+            errorStr = "你的账号最多插入10条数据"
+        case -1:
+            errorStr = "用户不存在"
+        default:
+            errorStr = ""
+        }
+        return errorStr
+    }
+}
+
+let message = (-7).errorMessaeg
+print("Error Code : -7, Error Message : \(message)")
+```
+
+- 定义的Int类型扩展，定义只读计算属性errorMessage，switch是分支语言，Swift表达式self，即当前实例，然后通过Swift的case判断哪个分支，并返回错误描述信息
+- 静态属性示例
+
+```swift
+let message = (-7).errorMessaeg
+print("Error Code : -7, Error Message : \(message)")
+
+
+struct Account {
+    var amount : Double = 0.0
+    var owner : String = ""
+}
+
+extension Account {
+    static var interesRate : Double {
+        return 0.0668
+    }
+}
+print(Account.interesRate)
+```
+- 扩展中不仅可以定义只读计算属性，还可以定义读写计算属性，实例计算属性和静态计算属性，但不能定义存储属性
+
+##### 扩展方法
 
 
 
