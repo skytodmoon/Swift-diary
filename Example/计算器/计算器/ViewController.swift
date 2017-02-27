@@ -33,20 +33,91 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTap(sender: UIButton) {
         /*** labelResult中默认是0，如果开始输入数字,则先清除0*/
-        
+        if labelResult.text == "0" || (isSecond && secondOperand == 0.0){
+            labelResult.text = ""
+        }
+        /** 将用户录入的数添加到lableResult中 **/
+        labelResult.text = labelResult.text! + sender.titleLabel!.text!
+        if isSecond {
+            secondOperand = NSString(string:labelResult.text!).doubleValue
+            }else{
+            /**将lableResult中的字符串转化为双精度数 **/
+                firstOperand = NSString(string:labelResult.text!).doubleValue
+        }
         
     }
     
     @IBAction func decimalPointTap() {
-        
-        if isSecond {
-            secondOperand = (labelResult.text! as NSString).doubleValue
+        /***  如果没有输入小数点则执行下面的的操作 */
+        if !decimalPointFlag {
+            labelResult.text = labelResult.text! + "."
+            if isSecond{
+                secondOperand = NSString(string:labelResult.text!).doubleValue
         }else{
-            firstOperand = (labelResult.text! as NSString).doubleValue
+                firstOperand = NSString(string:labelResult.text!).doubleValue
         }
         decimalPointFlag = !decimalPointFlag
+        }
     }
     
-
+    @IBAction func opeartopTap(sender: UIButton) {
+        if firstOperand != 0{
+            isSecond = true
+            decimalPointFlag = false
+            
+            switch sender.titleLabel!.text! {
+            case "+":
+                operandFlag = "+"
+            case "-":
+                operandFlag = "-"
+            case "x":
+                operandFlag = "x"
+            case "/":
+                operandFlag = "/"
+            default:
+                operandFlag = ""
+            }
+        }
+    }
+    
+    @IBAction func resultTap() {
+        /***  确保第二操数有值 */
+        if isSecond {
+            //除数不能为0
+            if operandFlag == "/" && secondOperand == 0{
+                print("Error:除数不能为0")
+                return
+            }
+            var result: Double = 0.0
+            switch operandFlag {
+            case "+":
+                result = firstOperand + secondOperand
+            case "-":
+                result = firstOperand - secondOperand
+            case "*":
+                result = firstOperand * secondOperand
+            case "/":
+                result = firstOperand / secondOperand
+            default:
+                result = 0.0
+            }
+            
+            labelResult.text = result.description
+            
+            print("第一操作数: \(firstOperand)")
+            print("第二操作数: \(secondOperand)")
+            print("操作符: \(operandFlag)")
+            print("结果: \(result)")
+        }
+    }
+    
+    
+    @IBAction func clear() {
+        labelResult.text = "0"
+        firstOperand = 0.0
+        secondOperand = 0.0
+        decimalPointFlag = false
+        isSecond = false
+        operandFlag = ""
+    }
 }
-
