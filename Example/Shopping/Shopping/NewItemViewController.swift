@@ -8,13 +8,24 @@
 
 import UIKit
 
+protocol NewItemViewControllerDelegate {
+    func addNewItem(controller: NewItemViewController, item: Item)
+}
+
 class NewItemViewController: UIViewController {
     
     @IBOutlet weak var itemNameTextField: UITextField!
     
     @IBOutlet weak var brandNameTextField: UITextField!
+    
+    var item: Item?
+    var delegate: NewItemViewControllerDelegate! = nil
 
     @IBAction func saveItem(sender: UIButton) {
+        if itemNameTextField.text != nil && brandNameTextField.text != nil {
+            item = Item(itemName: itemNameTextField.text!,brandName: brandNameTextField.text!)
+        }
+        delegate.addNewItem(self, item: item!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

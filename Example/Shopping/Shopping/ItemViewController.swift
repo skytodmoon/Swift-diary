@@ -13,6 +13,8 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var brandNameLabel: UILabel!
     
+    var item: Item?
+    
     var itemName: String?
     var brandName: String?
     override func viewDidLoad() {
@@ -21,14 +23,24 @@ class ItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(animated: Bool) {
-        if itemName != nil {
-            itemNameLabel.text = itemName
+    
+    @IBAction func isBuy(sender: UIButton){
+        if item != nil {
+            if item?.isBuy == false {
+                item?.isBuy = true
+                itemNameLabel.textColor = UIColor.greenColor()
+            }else {
+                item?.isBuy = false
+                itemNameLabel.textColor = UIColor.redColor()
+            }
             
+            print(item?.description())
         }
-        
-        if brandName != nil {
-            brandNameLabel.text = brandName
+    }
+    override func viewWillAppear(animated: Bool) {
+        if item != nil {
+            itemNameLabel.text = item?.itemName
+            brandNameLabel.text = item?.brandName
         }
     }
 

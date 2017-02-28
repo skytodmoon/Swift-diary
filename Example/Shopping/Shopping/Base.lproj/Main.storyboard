@@ -124,6 +124,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqA-pD-EQW">
                                 <rect key="frame" x="66" y="201" width="204" height="30"/>
                                 <state key="normal" title="已购买"/>
+                                <connections>
+                                    <action selector="isBuy:" destination="YKn-lF-I1A" eventType="touchUpInside" id="wE1-1x-MTS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-JX-ZXw">
                                 <rect key="frame" x="66" y="126" width="134" height="21"/>
