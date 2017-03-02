@@ -16,6 +16,13 @@
 		1DB9F2661E6869D900966EC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9F2641E6869D900966EC1 /* LaunchScreen.storyboard */; };
 		1DB9F2711E6869D900966EC1 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2701E6869D900966EC1 /* _____Tests.m */; };
 		1DB9F27C1E6869D900966EC1 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F27B1E6869D900966EC1 /* _____UITests.m */; };
+		1DB9F28F1E686E6600966EC1 /* classCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9F28C1E686E6600966EC1 /* classCategory.plist */; };
+		1DB9F2901E686E6600966EC1 /* iCategoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9F28D1E686E6600966EC1 /* iCategoryList.plist */; };
+		1DB9F2911E686E6600966EC1 /* InfoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9F28E1E686E6600966EC1 /* InfoConfig.plist */; };
+		1DB9F2971E686F5800966EC1 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2961E686F5800966EC1 /* NSString+Size.m */; };
+		1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F29C1E68701D00966EC1 /* MainViewController.m */; };
+		1DB9F2A21E68723700966EC1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A11E68723700966EC1 /* HomeViewController.m */; };
+		1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,19 @@
 		1DB9F2771E6869D900966EC1 /* 第三方框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第三方框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB9F27B1E6869D900966EC1 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		1DB9F27D1E6869D900966EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DB9F28C1E686E6600966EC1 /* classCategory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = classCategory.plist; sourceTree = "<group>"; };
+		1DB9F28D1E686E6600966EC1 /* iCategoryList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = iCategoryList.plist; sourceTree = "<group>"; };
+		1DB9F28E1E686E6600966EC1 /* InfoConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = InfoConfig.plist; sourceTree = "<group>"; };
+		1DB9F2931E686EF600966EC1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		1DB9F2951E686F5800966EC1 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		1DB9F2961E686F5800966EC1 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		1DB9F2981E686FA500966EC1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1DB9F29B1E68701D00966EC1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1DB9F29C1E68701D00966EC1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1DB9F2A01E68723700966EC1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1DB9F2A11E68723700966EC1 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1DB9F2A31E68731D00966EC1 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-第三方框架.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.release.xcconfig"; sourceTree = "<group>"; };
 		ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +147,7 @@
 				1DB9F2641E6869D900966EC1 /* LaunchScreen.storyboard */,
 				1DB9F2671E6869D900966EC1 /* Info.plist */,
 				1DB9F2561E6869D900966EC1 /* Supporting Files */,
+				1DB9F2981E686FA500966EC1 /* PrefixHeader.pch */,
 			);
 			path = "第三方框架";
 			sourceTree = "<group>";
@@ -160,6 +181,8 @@
 		1DB9F2891E686DF100966EC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9F29E1E68722E00966EC1 /* Home */,
+				1DB9F2991E68700E00966EC1 /* Main */,
 				1DB9F28A1E686DF100966EC1 /* Other */,
 			);
 			path = Classes;
@@ -168,6 +191,8 @@
 		1DB9F28A1E686DF100966EC1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9F2941E686F3200966EC1 /* Category */,
+				1DB9F2921E686EE100966EC1 /* Macro */,
 				1DB9F28B1E686DF100966EC1 /* Resource */,
 			);
 			path = Other;
@@ -176,8 +201,64 @@
 		1DB9F28B1E686DF100966EC1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9F28C1E686E6600966EC1 /* classCategory.plist */,
+				1DB9F28D1E686E6600966EC1 /* iCategoryList.plist */,
+				1DB9F28E1E686E6600966EC1 /* InfoConfig.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		1DB9F2921E686EE100966EC1 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F2931E686EF600966EC1 /* Header.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		1DB9F2941E686F3200966EC1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F2951E686F5800966EC1 /* NSString+Size.h */,
+				1DB9F2961E686F5800966EC1 /* NSString+Size.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1DB9F2991E68700E00966EC1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F29A1E68700E00966EC1 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1DB9F29A1E68700E00966EC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F29B1E68701D00966EC1 /* MainViewController.h */,
+				1DB9F29C1E68701D00966EC1 /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DB9F29E1E68722E00966EC1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F29F1E68722E00966EC1 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1DB9F29F1E68722E00966EC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F2A01E68723700966EC1 /* HomeViewController.h */,
+				1DB9F2A11E68723700966EC1 /* HomeViewController.m */,
+				1DB9F2A31E68731D00966EC1 /* MainNavigationController.h */,
+				1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8974233DF42399D7E5AE3428 /* Frameworks */ = {
@@ -295,7 +376,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB9F2661E6869D900966EC1 /* LaunchScreen.storyboard in Resources */,
+				1DB9F28F1E686E6600966EC1 /* classCategory.plist in Resources */,
+				1DB9F2901E686E6600966EC1 /* iCategoryList.plist in Resources */,
 				1DB9F2631E6869D900966EC1 /* Assets.xcassets in Resources */,
+				1DB9F2911E686E6600966EC1 /* InfoConfig.plist in Resources */,
 				1DB9F2611E6869D900966EC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,9 +453,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB9F2971E686F5800966EC1 /* NSString+Size.m in Sources */,
 				1DB9F25E1E6869D900966EC1 /* ViewController.m in Sources */,
 				1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */,
+				1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */,
+				1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */,
 				1DB9F2581E6869D900966EC1 /* main.m in Sources */,
+				1DB9F2A21E68723700966EC1 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "第三方框架/PrefixHeader.pch";
 				INFOPLIST_FILE = "第三方框架/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
@@ -527,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "第三方框架/PrefixHeader.pch";
 				INFOPLIST_FILE = "第三方框架/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
