@@ -117,6 +117,7 @@
 		1DB9F2551E6869D900966EC1 /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9F2891E686DF100966EC1 /* Classes */,
 				1DB9F2591E6869D900966EC1 /* AppDelegate.h */,
 				1DB9F25A1E6869D900966EC1 /* AppDelegate.m */,
 				1DB9F25C1E6869D900966EC1 /* ViewController.h */,
@@ -154,6 +155,29 @@
 				1DB9F27D1E6869D900966EC1 /* Info.plist */,
 			);
 			path = "第三方框架UITests";
+			sourceTree = "<group>";
+		};
+		1DB9F2891E686DF100966EC1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F28A1E686DF100966EC1 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1DB9F28A1E686DF100966EC1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9F28B1E686DF100966EC1 /* Resource */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1DB9F28B1E686DF100966EC1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		8974233DF42399D7E5AE3428 /* Frameworks */ = {
@@ -489,6 +513,7 @@
 			baseConfigurationReference = ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "第三方框架/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
@@ -501,6 +526,7 @@
 			baseConfigurationReference = E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "第三方框架/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
