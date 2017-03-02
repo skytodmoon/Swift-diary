@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138DE2F8BFB1D2AAAEA02247 /* libPods-第三方框架.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */; };
 		1DB9F2581E6869D900966EC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2571E6869D900966EC1 /* main.m */; };
 		1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F25A1E6869D900966EC1 /* AppDelegate.m */; };
 		1DB9F25E1E6869D900966EC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F25D1E6869D900966EC1 /* ViewController.m */; };
@@ -51,6 +52,9 @@
 		1DB9F2771E6869D900966EC1 /* 第三方框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第三方框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB9F27B1E6869D900966EC1 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		1DB9F27D1E6869D900966EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-第三方框架.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.release.xcconfig"; sourceTree = "<group>"; };
+		ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138DE2F8BFB1D2AAAEA02247 /* libPods-第三方框架.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CB013F1FAD6C5E3E6FD075D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */,
+				E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1DB9F24A1E6869D800966EC1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				1DB9F26F1E6869D900966EC1 /* 第三方框架Tests */,
 				1DB9F27A1E6869D900966EC1 /* 第三方框架UITests */,
 				1DB9F2541E6869D900966EC1 /* Products */,
+				1CB013F1FAD6C5E3E6FD075D /* Pods */,
+				8974233DF42399D7E5AE3428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +156,14 @@
 			path = "第三方框架UITests";
 			sourceTree = "<group>";
 		};
+		8974233DF42399D7E5AE3428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DB9F2801E6869D900966EC1 /* Build configuration list for PBXNativeTarget "第三方框架" */;
 			buildPhases = (
+				49CD057052CD1A377DFFB656 /* [CP] Check Pods Manifest.lock */,
 				1DB9F24F1E6869D900966EC1 /* Sources */,
 				1DB9F2501E6869D900966EC1 /* Frameworks */,
 				1DB9F2511E6869D900966EC1 /* Resources */,
+				40D13E04EEFD5DD494432F04 /* [CP] Embed Pods Frameworks */,
+				84767EDDD11AF111855DA2C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40D13E04EEFD5DD494432F04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49CD057052CD1A377DFFB656 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84767EDDD11AF111855DA2C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DB9F24F1E6869D900966EC1 /* Sources */ = {
@@ -411,6 +486,7 @@
 		};
 		1DB9F2811E6869D900966EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "第三方框架/Info.plist";
@@ -422,6 +498,7 @@
 		};
 		1DB9F2821E6869D900966EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "第三方框架/Info.plist";
@@ -496,6 +573,7 @@
 				1DB9F2821E6869D900966EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DB9F2831E6869D900966EC1 /* Build configuration list for PBXNativeTarget "第三方框架Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +582,7 @@
 				1DB9F2851E6869D900966EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DB9F2861E6869D900966EC1 /* Build configuration list for PBXNativeTarget "第三方框架UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +591,7 @@
 				1DB9F2881E6869D900966EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
