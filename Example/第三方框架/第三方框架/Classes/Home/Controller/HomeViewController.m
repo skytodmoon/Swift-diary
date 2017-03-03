@@ -14,6 +14,7 @@
 #import "HomeimageScrollCell.h"
 #import "HomelbumCell.h"
 #import "HomeCourseCell.h"
+#import "HomeCateViewController.h"
 #import "HomeCourseDetailViewController.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,ImageScrollViewDelegate,HomelbumDelegate>{
 
@@ -162,7 +163,7 @@
      __weak typeof(self) weakself = self;
       NSString *urlStr = @"http://pop.client.chuanke.com/?mod=recommend&act=mobile&client=2&limit=20";
     [[Networking sharedManager] getRecommendCourseResult:nil url:urlStr successBlock:^(id responseBody) {
-        NSLog(@"请求推荐课程数据成功");
+        NSLog(@"请求数据成功");
         NSMutableArray *focusArray = [responseBody objectForKey:@"FocusList"];
         NSMutableArray *courseArray = [responseBody objectForKey:@"CourseList"];
         NSMutableArray *albumArray = [responseBody objectForKey:@"AlbumList"];
@@ -189,13 +190,12 @@
             [_albumListArray addObject:jzAlbumM];
             [_albumImgurlArray addObject:jzAlbumM.PhotoURL];
         }
-//        weakself.tableView.hidden = NO;
+        weakself.tableView.hidden = NO;
         [weakself.tableView reloadData];
         [weakself.tableView.mj_header endRefreshing];
     } failureBlock:^(NSString *error) {
-        [SVProgressHUD showErrorWithStatus:error];
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙,请重新加载"];
         
-        NSLog(@"请求推荐课程数据失败：%@",error);
         [weakself.tableView.mj_header endRefreshing];
     }];
     
@@ -317,27 +317,25 @@
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    if (_type == 0) {
-//        HomeCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
-//        HomeCourseDetailViewController *jzCourseM = [[HomeCourseDetailViewController alloc] init];
-//        jzCourseM.SID = jzCourseM.SID;
-//        jzCourseM.courseId = jzCourseM.CourseID;
-//        [self.navigationController pushViewController:jzCourseM animated:YES];
-//    }else{
-//        JZCateViewController *jzCateVC = [[JZCateViewController alloc] init];
-//        if (indexPath.row == 0) {
-//            jzCateVC.cateType = @"zhibo";
-//        }else{
-//            NSDictionary *dic = _iCategoryListArray[indexPath.row-1];
-//            jzCateVC.cateType = @"feizhibo";
-//            jzCateVC.cateNameArray = [dic objectForKey:@"categoryName"];
-//            jzCateVC.cateIDArray = [dic objectForKey:@"categoryID"];
-//        }
-//    
-//        
-//        [self.navigationController pushViewController:jzCateVC animated:YES];
-//    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (_type == 0) {
+        HomeCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
+        HomeCourseDetailViewController *jzCourseDVC = [[HomeCourseDetailViewController alloc] init];
+        jzCourseM.SID = jzCourseM.SID;
+        jzCourseM.CourseID = jzCourseM.CourseID;
+        [self.navigationController pushViewController:jzCourseDVC animated:YES];
+    }else{
+        HomeCateViewController *jzCateVC = [[HomeCateViewController alloc] init];
+        if (indexPath.row == 0) {
+            jzCateVC.cateType = @"zhibo";
+        }else{
+            NSDictionary *dic = _iCategoryListArray[indexPath.row-1];
+            jzCateVC.cateType = @"feizhibo";
+            jzCateVC.cateNameArray = [dic objectForKey:@"categoryName"];
+            jzCateVC.cateIDArray = [dic objectForKey:@"categoryID"];
+        }
+        [self.navigationController pushViewController:jzCateVC animated:YES];
+    }
     
 }
 

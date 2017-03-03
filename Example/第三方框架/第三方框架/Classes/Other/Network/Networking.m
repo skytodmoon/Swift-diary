@@ -46,4 +46,36 @@
 }
 
 
+#pragma mark - Get
+-(void)getDataResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    AFHTTPSessionManager *manager = [self baseHtppRequest];
+    
+    //两种编码方式
+    NSString *urlStr = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:url parameters:userInfo progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+        failureBlock(errorStr);
+    }];
+}
+
+#pragma mark - 获取课程详情
+-(void)getClassListResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    AFHTTPSessionManager *manager = [self baseHtppRequest];
+    
+    //两种编码方式
+    NSString *urlStr = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:url parameters:userInfo progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+        failureBlock(errorStr);
+    }];
+}
+
 @end
