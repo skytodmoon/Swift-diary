@@ -7,8 +7,21 @@
 //
 
 #import "HomeViewController.h"
+#import "SearchViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+
+    NSMutableArray *_focusListArray;/**< 第一个轮播数据 */
+    NSMutableArray *_focusImgurlArray;/**< 第一个轮播图片URL数据 */
+    NSMutableArray *_courseListArray;/**< 列表数据 */
+    NSMutableArray *_albumListArray;/**< 第二个轮播数据 */
+    NSMutableArray *_albumImgurlArray;/**< 第二个轮播图片URL数据 */
+    
+    NSInteger _type;/**< segment */
+    
+    NSMutableArray *_classCategoryArray;/**< 课程分类数组 */
+    NSMutableArray *_iCategoryListArray;
+}
 @property(nonatomic, strong) UITableView *tableView;
 @end
 
@@ -75,6 +88,24 @@
 -(void)OnNameBtn{
     UIAlertView *alertVC = [[UIAlertView alloc] initWithTitle:@"关于作者" message:@"作者：QJL，QQ：274721774，例子说明，转载请注明出处，不可用于商业用途及其他不合法用途。" delegate:self cancelButtonTitle:@"同意" otherButtonTitles:nil, nil];
     [alertVC show];
+}
+
+//搜索
+-(void)OnSearchBtn:(UIButton *)sender{
+    self.hidesBottomBarWhenPushed=YES;
+    SearchViewController *search = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:search animated:YES];
+}
+
+//响应事件
+-(void)OnTapSegmentCtr:(UISegmentedControl *)seg{
+    NSInteger index = seg.selectedSegmentIndex;
+    if (index == 0) {
+        _type = 0;
+    }else{
+        _type = 1;
+    }
+    [self.tableView reloadData];
 }
 
 

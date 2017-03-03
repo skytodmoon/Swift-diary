@@ -24,6 +24,7 @@
 		1DB9F2A21E68723700966EC1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A11E68723700966EC1 /* HomeViewController.m */; };
 		1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */; };
 		5B79D7B51E68FCAC002A5E7A /* QJLRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7B41E68FCAC002A5E7A /* QJLRefresh.m */; };
+		5B79D7BA1E68FEB1002A5E7A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7B91E68FEB1002A5E7A /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-第三方框架.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B79D7B31E68FCAC002A5E7A /* QJLRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLRefresh.h; sourceTree = "<group>"; };
 		5B79D7B41E68FCAC002A5E7A /* QJLRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLRefresh.m; sourceTree = "<group>"; };
+		5B79D7B81E68FEB1002A5E7A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		5B79D7B91E68FEB1002A5E7A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E30CA7C4832BFA2104D5BDC2 /* Pods-第三方框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.release.xcconfig"; sourceTree = "<group>"; };
 		ED20B5CB3C36E91089A03B01 /* Pods-第三方框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-第三方框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-第三方框架/Pods-第三方框架.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +187,7 @@
 		1DB9F2891E686DF100966EC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B79D7B61E68FE9E002A5E7A /* Search */,
 				1DB9F29E1E68722E00966EC1 /* Home */,
 				1DB9F2991E68700E00966EC1 /* Main */,
 				1DB9F28A1E686DF100966EC1 /* Other */,
@@ -272,6 +276,23 @@
 				5B79D7B41E68FCAC002A5E7A /* QJLRefresh.m */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		5B79D7B61E68FE9E002A5E7A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5B79D7B71E68FE9E002A5E7A /* Controller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5B79D7B71E68FE9E002A5E7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B79D7B81E68FEB1002A5E7A /* SearchViewController.h */,
+				5B79D7B91E68FEB1002A5E7A /* SearchViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8974233DF42399D7E5AE3428 /* Frameworks */ = {
@@ -470,6 +491,7 @@
 				1DB9F25E1E6869D900966EC1 /* ViewController.m in Sources */,
 				1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */,
 				1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */,
+				5B79D7BA1E68FEB1002A5E7A /* SearchViewController.m in Sources */,
 				1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */,
 				5B79D7B51E68FCAC002A5E7A /* QJLRefresh.m in Sources */,
 				1DB9F2581E6869D900966EC1 /* main.m in Sources */,
