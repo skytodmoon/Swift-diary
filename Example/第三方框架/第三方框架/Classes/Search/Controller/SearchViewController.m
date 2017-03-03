@@ -9,12 +9,14 @@
 #import "SearchViewController.h"
 
 @interface SearchViewController ()
+@property (nonatomic, strong) UITextField *textField;
 @property(nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation SearchViewController
 
 - (void)viewDidLoad {
+    self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
     [self setNav];
      [self initTableView];
@@ -52,6 +54,28 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)OnTapCollectBtn:(UIButton *)sender{
+    [self.view endEditing:YES];
+    if ([self.textField.text isEqualToString:@""]) {
+        UIAlertView *alertV = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入内容再搜索" delegate:self cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+        [alertV show];
+        return;
+    }
+    [self getData];
+    
+}
+
+
+-(void)getData{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self getSearchData];
+    });
+}
+
+//搜索数据
+-(void)getSearchData{
+    
+}
 
 -(void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64+40, screen_width, screen_height-64-40-49) style:UITableViewStylePlain];
