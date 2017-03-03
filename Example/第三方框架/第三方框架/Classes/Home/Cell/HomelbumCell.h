@@ -1,5 +1,5 @@
 //
-//  HomeimageScrollCell.h
+//  HomelbumCell.h
 //  第三方框架
 //
 //  Created by 金亮齐 on 2017/3/3.
@@ -7,14 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImageScrollView.h"
 
-@interface HomeimageScrollCell : UITableViewCell
+@protocol HomelbumDelegate <NSObject>
 
-@property(nonatomic, strong) ImageScrollView *imageScrollView;
-@property(nonatomic, strong) NSArray *imageArr;
+@optional
+-(void)didSelectedAlbumAtIndex:(NSInteger)index;
 
--(void)setImageArray:(NSArray *)imageArray;
+@end
+
+@interface HomelbumCell : UITableViewCell
+
+@property(nonatomic, strong) NSArray *imgurlArray;
+
+@property(nonatomic, assign) id<HomelbumDelegate> delegate;
+
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier frame:(CGRect)frame;
 
 @end

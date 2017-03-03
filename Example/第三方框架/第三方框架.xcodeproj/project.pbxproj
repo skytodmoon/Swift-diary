@@ -23,9 +23,15 @@
 		1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F29C1E68701D00966EC1 /* MainViewController.m */; };
 		1DB9F2A21E68723700966EC1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A11E68723700966EC1 /* HomeViewController.m */; };
 		1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */; };
-		5B62CE0F1E6909AC00B9B7DC /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE0E1E6909AC00B9B7DC /* HomeModel.m */; };
 		5B62CE121E6909F300B9B7DC /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE111E6909F300B9B7DC /* HomeTableViewCell.m */; };
 		5B62CE161E690D1E00B9B7DC /* HomeimageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE151E690D1E00B9B7DC /* HomeimageScrollCell.m */; };
+		5B62CE1A1E692C5000B9B7DC /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE191E692C5000B9B7DC /* ImageScrollView.m */; };
+		5B62CE1D1E692DE400B9B7DC /* HomelbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE1C1E692DE400B9B7DC /* HomelbumCell.m */; };
+		5B62CE201E692F0000B9B7DC /* HomeCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE1F1E692F0000B9B7DC /* HomeCourseCell.m */; };
+		5B62CE231E692F2200B9B7DC /* HomeCourseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE221E692F2200B9B7DC /* HomeCourseListModel.m */; };
+		5B62CE261E69306900B9B7DC /* HomeCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE251E69306900B9B7DC /* HomeCourseDetailViewController.m */; };
+		5B62CE291E69340900B9B7DC /* HomeFocusListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE281E69340900B9B7DC /* HomeFocusListModel.m */; };
+		5B62CE2C1E6934BF00B9B7DC /* HomeAlbumListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62CE2B1E6934BF00B9B7DC /* HomeAlbumListModel.m */; };
 		5B79D7B51E68FCAC002A5E7A /* QJLRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7B41E68FCAC002A5E7A /* QJLRefresh.m */; };
 		5B79D7BA1E68FEB1002A5E7A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7B91E68FEB1002A5E7A /* SearchViewController.m */; };
 		5B79D7BE1E6902F6002A5E7A /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7BD1E6902F6002A5E7A /* Networking.m */; };
@@ -79,12 +85,24 @@
 		1DB9F2A31E68731D00966EC1 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-第三方框架.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B62CE0D1E6909AC00B9B7DC /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
-		5B62CE0E1E6909AC00B9B7DC /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		5B62CE101E6909F300B9B7DC /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		5B62CE111E6909F300B9B7DC /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		5B62CE141E690D1E00B9B7DC /* HomeimageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeimageScrollCell.h; sourceTree = "<group>"; };
 		5B62CE151E690D1E00B9B7DC /* HomeimageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeimageScrollCell.m; sourceTree = "<group>"; };
+		5B62CE181E692C5000B9B7DC /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		5B62CE191E692C5000B9B7DC /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
+		5B62CE1B1E692DE400B9B7DC /* HomelbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomelbumCell.h; sourceTree = "<group>"; };
+		5B62CE1C1E692DE400B9B7DC /* HomelbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomelbumCell.m; sourceTree = "<group>"; };
+		5B62CE1E1E692F0000B9B7DC /* HomeCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCourseCell.h; sourceTree = "<group>"; };
+		5B62CE1F1E692F0000B9B7DC /* HomeCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCourseCell.m; sourceTree = "<group>"; };
+		5B62CE211E692F2200B9B7DC /* HomeCourseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCourseListModel.h; sourceTree = "<group>"; };
+		5B62CE221E692F2200B9B7DC /* HomeCourseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCourseListModel.m; sourceTree = "<group>"; };
+		5B62CE241E69306900B9B7DC /* HomeCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCourseDetailViewController.h; sourceTree = "<group>"; };
+		5B62CE251E69306900B9B7DC /* HomeCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCourseDetailViewController.m; sourceTree = "<group>"; };
+		5B62CE271E69340900B9B7DC /* HomeFocusListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFocusListModel.h; sourceTree = "<group>"; };
+		5B62CE281E69340900B9B7DC /* HomeFocusListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFocusListModel.m; sourceTree = "<group>"; };
+		5B62CE2A1E6934BF00B9B7DC /* HomeAlbumListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAlbumListModel.h; sourceTree = "<group>"; };
+		5B62CE2B1E6934BF00B9B7DC /* HomeAlbumListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAlbumListModel.m; sourceTree = "<group>"; };
 		5B79D7B31E68FCAC002A5E7A /* QJLRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLRefresh.h; sourceTree = "<group>"; };
 		5B79D7B41E68FCAC002A5E7A /* QJLRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLRefresh.m; sourceTree = "<group>"; };
 		5B79D7B81E68FEB1002A5E7A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -266,6 +284,7 @@
 		1DB9F29E1E68722E00966EC1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B62CE171E692C4200B9B7DC /* View */,
 				5B62CE0B1E69099A00B9B7DC /* Cell */,
 				5B62CE0C1E69099A00B9B7DC /* Model */,
 				1DB9F29F1E68722E00966EC1 /* Controller */,
@@ -280,6 +299,8 @@
 				1DB9F2A11E68723700966EC1 /* HomeViewController.m */,
 				1DB9F2A31E68731D00966EC1 /* MainNavigationController.h */,
 				1DB9F2A41E68731D00966EC1 /* MainNavigationController.m */,
+				5B62CE241E69306900B9B7DC /* HomeCourseDetailViewController.h */,
+				5B62CE251E69306900B9B7DC /* HomeCourseDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +312,10 @@
 				5B62CE111E6909F300B9B7DC /* HomeTableViewCell.m */,
 				5B62CE141E690D1E00B9B7DC /* HomeimageScrollCell.h */,
 				5B62CE151E690D1E00B9B7DC /* HomeimageScrollCell.m */,
+				5B62CE1B1E692DE400B9B7DC /* HomelbumCell.h */,
+				5B62CE1C1E692DE400B9B7DC /* HomelbumCell.m */,
+				5B62CE1E1E692F0000B9B7DC /* HomeCourseCell.h */,
+				5B62CE1F1E692F0000B9B7DC /* HomeCourseCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -298,10 +323,23 @@
 		5B62CE0C1E69099A00B9B7DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B62CE0D1E6909AC00B9B7DC /* HomeModel.h */,
-				5B62CE0E1E6909AC00B9B7DC /* HomeModel.m */,
+				5B62CE211E692F2200B9B7DC /* HomeCourseListModel.h */,
+				5B62CE221E692F2200B9B7DC /* HomeCourseListModel.m */,
+				5B62CE271E69340900B9B7DC /* HomeFocusListModel.h */,
+				5B62CE281E69340900B9B7DC /* HomeFocusListModel.m */,
+				5B62CE2A1E6934BF00B9B7DC /* HomeAlbumListModel.h */,
+				5B62CE2B1E6934BF00B9B7DC /* HomeAlbumListModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5B62CE171E692C4200B9B7DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B62CE181E692C5000B9B7DC /* ImageScrollView.h */,
+				5B62CE191E692C5000B9B7DC /* ImageScrollView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B79D7AF1E68FC32002A5E7A /* Refresh */ = {
@@ -533,14 +571,20 @@
 			files = (
 				1DB9F2971E686F5800966EC1 /* NSString+Size.m in Sources */,
 				5B79D7BE1E6902F6002A5E7A /* Networking.m in Sources */,
+				5B62CE231E692F2200B9B7DC /* HomeCourseListModel.m in Sources */,
 				5B62CE121E6909F300B9B7DC /* HomeTableViewCell.m in Sources */,
+				5B62CE1D1E692DE400B9B7DC /* HomelbumCell.m in Sources */,
+				5B62CE291E69340900B9B7DC /* HomeFocusListModel.m in Sources */,
 				1DB9F25E1E6869D900966EC1 /* ViewController.m in Sources */,
+				5B62CE201E692F0000B9B7DC /* HomeCourseCell.m in Sources */,
 				1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */,
+				5B62CE2C1E6934BF00B9B7DC /* HomeAlbumListModel.m in Sources */,
+				5B62CE261E69306900B9B7DC /* HomeCourseDetailViewController.m in Sources */,
 				1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */,
 				5B79D7BA1E68FEB1002A5E7A /* SearchViewController.m in Sources */,
+				5B62CE1A1E692C5000B9B7DC /* ImageScrollView.m in Sources */,
 				1DB9F2A51E68731D00966EC1 /* MainNavigationController.m in Sources */,
 				5B79D7B51E68FCAC002A5E7A /* QJLRefresh.m in Sources */,
-				5B62CE0F1E6909AC00B9B7DC /* HomeModel.m in Sources */,
 				1DB9F2581E6869D900966EC1 /* main.m in Sources */,
 				5B62CE161E690D1E00B9B7DC /* HomeimageScrollCell.m in Sources */,
 				1DB9F2A21E68723700966EC1 /* HomeViewController.m in Sources */,

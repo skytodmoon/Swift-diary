@@ -9,9 +9,13 @@
 #import "HomeViewController.h"
 #import "SearchViewController.h"
 #import "HomeTableViewCell.h"
-#import "HomeModel.h"
+#import "HomeCourseListModel.h"
+#import "HomeFocusListModel.h"
 #import "HomeimageScrollCell.h"
-@interface HomeViewController (){
+#import "HomelbumCell.h"
+#import "HomeCourseCell.h"
+#import "HomeCourseDetailViewController.h"
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,ImageScrollViewDelegate,HomelbumDelegate>{
 
     NSMutableArray *_focusListArray;/**< 第一个轮播数据 */
     NSMutableArray *_focusImgurlArray;/**< 第一个轮播图片URL数据 */
@@ -31,15 +35,35 @@
 
 - (void)viewDidLoad {
     
+    [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    [super viewDidLoad];
-    
+    [self initData];
     [self setNav];
     
     [self initTableView];
+    [self getRecommendData];
     // Do any additional setup after loading the view.
+}
+
+-(void)initData{
+    _focusListArray = [[NSMutableArray alloc] init];
+    _courseListArray = [[NSMutableArray alloc] init];
+    _albumListArray = [[NSMutableArray alloc] init];
+    
+    _focusImgurlArray = [[NSMutableArray alloc] init];
+    _albumImgurlArray = [[NSMutableArray alloc] init];
+    
+    _type = 0;
+    //读取plist文件
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"classCategory" ofType:@"plist"];
+    _classCategoryArray = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    
+    //课程类型
+    NSString *iCategoryListPath = [[NSBundle mainBundle] pathForResource:@"iCategoryList" ofType:@"plist"];
+    _iCategoryListArray = [[NSMutableArray alloc] initWithContentsOfFile:iCategoryListPath];
+    
+    
 }
 
 -(void)setNav{
@@ -113,8 +137,8 @@
 
 -(void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 98, screen_width, screen_height-98-49) style:UITableViewStylePlain];
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     /***   添加下拉刷新 */
@@ -152,20 +176,21 @@
         
         
         for (int i = 0; i < focusArray.count; ++i) {
-            HomeModel *jzFocusM = [HomeModel mj_objectWithKeyValues:focusArray[i]];
+            HomeCourseListModel *jzFocusM = [HomeCourseListModel mj_objectWithKeyValues:focusArray[i]];
             [_focusListArray addObject:jzFocusM];
-            [_focusImgurlArray addObject:jzFocusM.photoURL];
+            [_focusImgurlArray addObject:jzFocusM.PhotoURL];
         }
         for (int i = 0; i < courseArray.count; ++i) {
-            HomeModel *jzCourseM = [HomeModel mj_objectWithKeyValues:courseArray[i]];
+            HomeCourseListModel *jzCourseM = [HomeCourseListModel mj_objectWithKeyValues:courseArray[i]];
             [_courseListArray addObject:jzCourseM];
         }
         for (int i = 0; i < albumArray.count; ++i) {
-            HomeModel *jzAlbumM = [HomeModel mj_objectWithKeyValues:albumArray[i]];
+            HomeCourseListModel *jzAlbumM = [HomeCourseListModel mj_objectWithKeyValues:albumArray[i]];
             [_albumListArray addObject:jzAlbumM];
-            [_albumImgurlArray addObject:jzAlbumM.photoURL];
+            [_albumImgurlArray addObject:jzAlbumM.PhotoURL];
         }
-        weakself.tableView.hidden = NO;
+//        weakself.tableView.hidden = NO;
+        [weakself.tableView reloadData];
         [weakself.tableView.mj_header endRefreshing];
     } failureBlock:^(NSString *error) {
         [SVProgressHUD showErrorWithStatus:error];
@@ -220,9 +245,9 @@
             return cell;
         }else if (indexPath.row == 1){
             static NSString *cellIndentifier = @"courseCell1";
-            HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-            if (cell == nil) {
-                cell = [[JZAlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier frame:CGRectMake(0, 0, screen_width, 90)];
+            HomelbumCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            if (cell == nil) {                
+                cell = [[HomelbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier frame:CGRectMake(0, 0, screen_width, 90)];
                 //下划线
                 UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 89.5, screen_width, 0.5)];
                 lineView.backgroundColor = separaterColor;
@@ -232,20 +257,20 @@
             cell.delegate = self;
             [cell setImgurlArray:_albumImgurlArray];
             
+            
             return cell;
         }else if (indexPath.row > 1){
             static NSString *cellIndentifier = @"courseCell2";
-            JZCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            HomeCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
             if (cell == nil) {
-                cell = [[JZCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
-                //            NSLog(@"%f/%f",cell.frame.size.width,cell.frame.size.height);
+                cell = [[HomeCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
                 //下划线
                 UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 71.5, screen_width, 0.5)];
                 lineView.backgroundColor = separaterColor;
                 [cell addSubview:lineView];
             }
             
-            JZCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
+            HomeCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
             [cell setJzCourseM:jzCourseM];
             
             return cell;
@@ -292,42 +317,39 @@
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (_type == 0) {
-        JZCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
-        JZCourseDetailViewController *jzCourseDVC = [[JZCourseDetailViewController alloc] init];
-        jzCourseDVC.SID = jzCourseM.SID;
-        jzCourseDVC.courseId = jzCourseM.CourseID;
-        [self.navigationController pushViewController:jzCourseDVC animated:YES];
-    }else{
-        JZCateViewController *jzCateVC = [[JZCateViewController alloc] init];
-        if (indexPath.row == 0) {
-            jzCateVC.cateType = @"zhibo";
-        }else{
-            NSDictionary *dic = _iCategoryListArray[indexPath.row-1];
-            jzCateVC.cateType = @"feizhibo";
-            jzCateVC.cateNameArray = [dic objectForKey:@"categoryName"];
-            jzCateVC.cateIDArray = [dic objectForKey:@"categoryID"];
-        }
-        
-        
-        [self.navigationController pushViewController:jzCateVC animated:YES];
-    }
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    if (_type == 0) {
+//        HomeCourseListModel *jzCourseM = _courseListArray[indexPath.row-2];
+//        HomeCourseDetailViewController *jzCourseM = [[HomeCourseDetailViewController alloc] init];
+//        jzCourseM.SID = jzCourseM.SID;
+//        jzCourseM.courseId = jzCourseM.CourseID;
+//        [self.navigationController pushViewController:jzCourseM animated:YES];
+//    }else{
+//        JZCateViewController *jzCateVC = [[JZCateViewController alloc] init];
+//        if (indexPath.row == 0) {
+//            jzCateVC.cateType = @"zhibo";
+//        }else{
+//            NSDictionary *dic = _iCategoryListArray[indexPath.row-1];
+//            jzCateVC.cateType = @"feizhibo";
+//            jzCateVC.cateNameArray = [dic objectForKey:@"categoryName"];
+//            jzCateVC.cateIDArray = [dic objectForKey:@"categoryID"];
+//        }
+//    
+//        
+//        [self.navigationController pushViewController:jzCateVC animated:YES];
+//    }
     
 }
 
 
 #pragma mark - ImageScrollViewDelegate
 -(void)didSelectImageAtIndex:(NSInteger)index{
-    NSLog(@"图index:%ld",index);
-    JZFocusListModel *jzFocusM = _focusListArray[index];
+    HomeFocusListModel *jzFocusM = _focusListArray[index];
     
-    JZCourseDetailViewController *jzCourseDVC = [[JZCourseDetailViewController alloc] init];
+    HomeCourseDetailViewController *jzCourseDVC = [[HomeCourseDetailViewController alloc] init];
     jzCourseDVC.SID = jzFocusM.SID;
     jzCourseDVC.courseId = jzFocusM.CourseID;
     [self.navigationController pushViewController:jzCourseDVC animated:YES];
-    //    [self presentViewController:jzCourseDVC animated:YES completion:nil];
-    
 }
 
 #pragma mark - JZAlbumDelegate
