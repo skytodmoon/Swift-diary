@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		138DE2F8BFB1D2AAAEA02247 /* libPods-第三方框架.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */; };
+		1D393EE01E6EAD0A003B87DE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D393EDF1E6EAD0A003B87DE /* ProfileViewController.m */; };
 		1DB9F2581E6869D900966EC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F2571E6869D900966EC1 /* main.m */; };
 		1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F25A1E6869D900966EC1 /* AppDelegate.m */; };
 		1DB9F25E1E6869D900966EC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9F25D1E6869D900966EC1 /* ViewController.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D393EDE1E6EAD0A003B87DE /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		1D393EDF1E6EAD0A003B87DE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		1DB9F2531E6869D900966EC1 /* 第三方框架.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "第三方框架.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB9F2571E6869D900966EC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DB9F2591E6869D900966EC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +175,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1D393EDC1E6EACFE003B87DE /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				1D393EDD1E6EACFE003B87DE /* Controller */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		1D393EDD1E6EACFE003B87DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D393EDE1E6EAD0A003B87DE /* ProfileViewController.h */,
+				1D393EDF1E6EAD0A003B87DE /* ProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1DB9F24A1E6869D800966EC1 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +261,7 @@
 		1DB9F2891E686DF100966EC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D393EDC1E6EACFE003B87DE /* Personal */,
 				5B79D7B61E68FE9E002A5E7A /* Search */,
 				1DB9F29E1E68722E00966EC1 /* Home */,
 				1DB9F2991E68700E00966EC1 /* Main */,
@@ -643,6 +664,7 @@
 				5B62CE331E6940B400B9B7DC /* HomeCourseDetailModel.m in Sources */,
 				5B62CE261E69306900B9B7DC /* HomeCourseDetailViewController.m in Sources */,
 				1DB9F29D1E68701D00966EC1 /* MainViewController.m in Sources */,
+				1D393EE01E6EAD0A003B87DE /* ProfileViewController.m in Sources */,
 				5B1FABF21E694C1D00000E15 /* DetailCateModel.m in Sources */,
 				5B79D7BA1E68FEB1002A5E7A /* SearchViewController.m in Sources */,
 				5B62CE1A1E692C5000B9B7DC /* ImageScrollView.m in Sources */,

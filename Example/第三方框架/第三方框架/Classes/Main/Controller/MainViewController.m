@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "HomeViewController.h"
+#import "ProfileViewController.h"
 #import "MainNavigationController.h"
 
 @interface MainViewController ()
@@ -32,7 +33,7 @@
 //    
 //    [self setupChildVc:[[MoreViewController alloc] init] title:@"更多" image:@"more" selectedImage:@"moreSeletced"];
 //    
-//    [self setupChildVc:[[ProfileViewController alloc] init] title:@"我" image:@"me" selectedImage:@"meSeletced"];
+    [self setupChildVc:[[ProfileViewController alloc] init] title:@"我" image:@"bottom_tab2_unpre" selectedImage:@"bottom_tab2_pre"];
     
 }
 
