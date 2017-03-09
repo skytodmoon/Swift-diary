@@ -2,12 +2,18 @@
 # platform :ios, '9.0'
 
 target '第三方框架' do
-  
-pod "AFNetworking"
-pod 'SDWebImage'
-pod 'MBProgressHUD'
-pod 'MJRefresh'
-pod 'MJExtension'
-pod 'SVProgressHUD'
+    # Uncomment this line to define a global platform for your project
+    # platform :ios, '9.0'
+    
+    target '第三方框架' do
+        
+        pod "AFNetworking"
+        pod 'SDWebImage'
+        pod 'MBProgressHUD'
+        pod 'MJRefresh'
+        pod 'MJExtension'
+        pod 'SVProgressHUD'
+        
+    end
 
 end
