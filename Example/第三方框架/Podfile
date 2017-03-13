@@ -5,7 +5,6 @@ target '第三方框架' do
     # Uncomment this line to define a global platform for your project
     # platform :ios, '9.0'
     
-    target '第三方框架' do
         
         pod "AFNetworking"
         pod 'SDWebImage'
@@ -13,7 +12,8 @@ target '第三方框架' do
         pod 'MJRefresh'
         pod 'MJExtension'
         pod 'SVProgressHUD'
+        pod 'Masonry'
+        pod 'SDCycleScrollView'
         
-    end
 
 end
