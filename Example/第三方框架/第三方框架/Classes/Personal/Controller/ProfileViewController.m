@@ -11,6 +11,7 @@
 #import "UINavigationBar+NavAlpha.h"
 #import "QYMineBlurView.h"
 #import "UserInfo.h"
+#import "MineModel.h"
 
 @interface ProfileViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)QYMineBlurView * qyBlurView;
@@ -163,7 +164,18 @@
 -(void)getProfileData{
 
     [[Networking sharedManager] getProfileResult:nil url:@"http://open.qyer.com/qyer/user/profile?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=20&lat=40.01259304990385&lon=116.4602651432521&oauth_token=73a0d5197ceab969461b6ddb980e573a&page=1&track_app_channel=App%2520Store&track_app_version=7.0.1&track_device_info=iPhone8%2C1&track_deviceid=7931B9E3-0421-4170-821D-958F62A93A33&track_os=ios%25209.3.4&track_user_id=7917461&user_id=7917461&v=1" successBlock:^(id responseBody) {
-        NSLog(@"个人数据请求成功");
+        MineModel * mineModel = [MineModel mj_objectWithKeyValues:responseBody];
+        UserInfo * userData = [UserInfo mj_objectWithKeyValues:mineModel.data];
+        NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:userData.cover]];
+        UIImage *image = [[UIImage alloc]initWithData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.iconImage sd_setImageWithURL:[NSURL URLWithString:userData.avatar] placeholderImage:[UIImage imageNamed:@"placeHolder"]];
+            self.nameLabel.text = userData.username;
+            _qyBlurView.originalImage = image;
+            self.fensiLb.text = [NSString stringWithFormat:@"粉丝 %@",userData.fans];
+            self.guanzhuLb.text = [NSString stringWithFormat:@"关注 %@",userData.follow];
+            self.titleLb.text = userData.username;
+        });
     } failureBlock:^(NSString *error) {
         NSLog(@"%@",error);
     }];
