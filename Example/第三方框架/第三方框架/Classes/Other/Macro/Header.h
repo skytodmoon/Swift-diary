@@ -21,6 +21,11 @@
 #define separaterColor RGB(200, 199, 204)
 #define selectColor RGB(46, 158, 138)
 
+//个人中心颜色
+#define kDKBlurredBackgroundDefaultLevel 0.9f
+#define kDKBlurredBackgroundDefaultGlassLevel 0.2f
+#define kDKBlurredBackgroundDefaultGlassColor [UIColor whiteColor]
+
 
 // 3.是否为4inch
 #define fourInch ([UIScreen mainScreen].bounds.size.height == 568)
@@ -47,6 +52,9 @@
 //6.经纬度
 #define LATITUDE_DEFAULT 39.983497
 #define LONGITUDE_DEFAULT 116.318042
+
+//设置我的头像的高度
+#define topViewHeight 272
 
 //7.
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
