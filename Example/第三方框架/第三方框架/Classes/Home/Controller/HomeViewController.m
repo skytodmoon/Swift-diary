@@ -72,7 +72,6 @@
     backView.backgroundColor = navigationBarColor;
     [self.view addSubview:backView];
     
-    //声明：原创所有，不要注释下面的UIButton
     UIButton *nameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     nameBtn.frame = CGRectMake(10, 20, 60, 40);
     nameBtn.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -96,7 +95,6 @@
     [searchBtn addTarget:self action:@selector(OnSearchBtn:) forControlEvents:UIControlEventTouchUpInside];
     [backView addSubview:searchBtn];
     
-    //
     NSArray *segmentArray = [[NSArray alloc] initWithObjects:@"精选推荐",@"课程分类", nil];
     UISegmentedControl *segmentCtr = [[UISegmentedControl alloc] initWithItems:segmentArray];
     segmentCtr.frame = CGRectMake(36, 64, screen_width-36*2, 30);
@@ -160,6 +158,7 @@
 
 //请求推荐课程数据
 -(void)getRecommendData{
+    [SVProgressHUD showWithStatus:@"加载中"];
      __weak typeof(self) weakself = self;
       NSString *urlStr = @"http://pop.client.chuanke.com/?mod=recommend&act=mobile&client=2&limit=20";
     [[Networking sharedManager] getRecommendCourseResult:nil url:urlStr successBlock:^(id responseBody) {
@@ -193,6 +192,7 @@
         weakself.tableView.hidden = NO;
         [weakself.tableView reloadData];
         [weakself.tableView.mj_header endRefreshing];
+        [SVProgressHUD dismiss];
     } failureBlock:^(NSString *error) {
         [SVProgressHUD showErrorWithStatus:@"网络繁忙,请重新加载"];
         

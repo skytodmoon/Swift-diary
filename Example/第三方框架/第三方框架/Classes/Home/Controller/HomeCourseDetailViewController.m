@@ -99,19 +99,28 @@
 
 
 -(void)loadNewData{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    //设置时间间隔
+    NSTimeInterval period = 10.0;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    //每秒执行
+    dispatch_source_set_timer(_timer, dispatch_walltime(NULL, 0), period * NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(_timer, ^{
+        //在这里执行事件
         [self getClassListData];
     });
+    dispatch_resume(_timer);
 }
 
 
 -(void)getClassListData{
+    
 
     NSString *urlStr = [NSString stringWithFormat:@"http://pop.client.chuanke.com/?mod=course&act=info&do=getClassList&sid=%@&courseid=%@&version=%@&uid=%@",self.SID,self.courseId,VERSION,UID];
     NSLog(@"urlStr:%@",urlStr);
     __weak typeof(self) weakself = self;
     [[Networking sharedManager] getClassListResult:nil url:urlStr successBlock:^(id responseBody){
-        NSLog(@"获取课程列表成功");
+
         //这个版本的MJExtension里没有setupObjectClassInArray
         _jzCourseDM = [HomeCourseDetailModel mj_objectWithKeyValues:responseBody];
         [_dataSourceArray removeAllObjects];
@@ -136,7 +145,7 @@
         [weakself.tableView reloadData];
         [weakself.tableView.mj_header endRefreshing];
     } failureBlock:^(NSString *error){
-        NSLog(@"获取课程列表失败：%@",error);
+        
         [weakself.tableView.mj_header endRefreshing];
     }];
 

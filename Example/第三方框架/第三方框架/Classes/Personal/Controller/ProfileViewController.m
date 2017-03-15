@@ -65,17 +65,17 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     UIColor *color = RGBA(6, 173, 114,1);
     [self.navigationController.navigationBar cnSetBackgroundColor:[color colorWithAlphaComponent:0]];
-    
-    UIButton * xiaoxi = [UIButton buttonWithType:UIButtonTypeCustom];
-    xiaoxi.frame = CGRectMake(0, 0, 25, 25);
-    [xiaoxi setImage:[UIImage imageNamed:@"消息"] forState:UIControlStateNormal];
-    UIBarButtonItem * leftBar = [[UIBarButtonItem alloc]initWithCustomView:xiaoxi];
+    /***添加左右导航栏 */
+    UIButton * message = [UIButton buttonWithType:UIButtonTypeCustom];
+    message.frame = CGRectMake(0, 0, 25, 25);
+    [message setImage:[UIImage imageNamed:@"消息"] forState:UIControlStateNormal];
+    UIBarButtonItem * leftBar = [[UIBarButtonItem alloc]initWithCustomView:message];
     self.navigationItem.leftBarButtonItem = leftBar;
     
-    UIButton * shezhi = [UIButton buttonWithType:UIButtonTypeCustom];
-    shezhi.frame = CGRectMake(0, 0, 25, 25);
-    [shezhi setImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
-    UIBarButtonItem * rightBar = [[UIBarButtonItem alloc]initWithCustomView:shezhi];
+    UIButton * setting = [UIButton buttonWithType:UIButtonTypeCustom];
+    setting.frame = CGRectMake(0, 0, 25, 25);
+    [setting setImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
+    UIBarButtonItem * rightBar = [[UIBarButtonItem alloc]initWithCustomView:setting];
     self.navigationItem.rightBarButtonItem = rightBar;
     
     UILabel * titleLb=  [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
@@ -135,12 +135,12 @@
     [self.header addSubview:iconImage];
     self.iconImage = iconImage;
     
-    UILabel * namelb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.iconImage.frame)+15, 105, 150, 20)];
-    namelb.textColor = [UIColor whiteColor];
-    namelb.font = [UIFont systemFontOfSize:15];
-    namelb.textAlignment = NSTextAlignmentLeft;
-    [self.header addSubview:namelb];
-    self.nameLabel = namelb;
+    UILabel * namelbel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.iconImage.frame)+15, 105, 150, 20)];
+    namelbel.textColor = [UIColor whiteColor];
+    namelbel.font = [UIFont systemFontOfSize:15];
+    namelbel.textAlignment = NSTextAlignmentLeft;
+    [self.header addSubview:namelbel];
+    self.nameLabel = namelbel;
     
     UILabel * fensi = [[UILabel alloc]initWithFrame:CGRectMake(self.nameLabel.x, CGRectGetMaxY(self.nameLabel.frame)+10, 60, 16)];
     fensi.textColor = [UIColor whiteColor];
@@ -162,21 +162,26 @@
 }
 
 -(void)getProfileData{
-
+    [SVProgressHUD showWithStatus:@"正在加载中"];
     [[Networking sharedManager] getProfileResult:nil url:@"http://open.qyer.com/qyer/user/profile?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=20&lat=40.01259304990385&lon=116.4602651432521&oauth_token=73a0d5197ceab969461b6ddb980e573a&page=1&track_app_channel=App%2520Store&track_app_version=7.0.1&track_device_info=iPhone8%2C1&track_deviceid=7931B9E3-0421-4170-821D-958F62A93A33&track_os=ios%25209.3.4&track_user_id=7917461&user_id=7917461&v=1" successBlock:^(id responseBody) {
         MineModel * mineModel = [MineModel mj_objectWithKeyValues:responseBody];
         UserInfo * userData = [UserInfo mj_objectWithKeyValues:mineModel.data];
         NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:userData.cover]];
         UIImage *image = [[UIImage alloc]initWithData:data];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.iconImage sd_setImageWithURL:[NSURL URLWithString:userData.avatar] placeholderImage:[UIImage imageNamed:@"placeHolder"]];
-            self.nameLabel.text = userData.username;
-            _qyBlurView.originalImage = image;
-            self.fensiLb.text = [NSString stringWithFormat:@"粉丝 %@",userData.fans];
-            self.guanzhuLb.text = [NSString stringWithFormat:@"关注 %@",userData.follow];
-            self.titleLb.text = userData.username;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 2), ^{
+            // 处理耗时的操作
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.iconImage sd_setImageWithURL:[NSURL URLWithString:userData.avatar] placeholderImage:[UIImage imageNamed:@"placeHolder"]];
+                self.nameLabel.text = userData.username;
+                _qyBlurView.originalImage = image;
+                self.fensiLb.text = [NSString stringWithFormat:@"粉丝 %@",userData.fans];
+                self.guanzhuLb.text = [NSString stringWithFormat:@"关注 %@",userData.follow];
+                self.titleLb.text = userData.username;
+                [SVProgressHUD dismiss];
+            });
         });
     } failureBlock:^(NSString *error) {
+        [SVProgressHUD showErrorWithStatus:@"网络繁忙,请重新加载"];
         NSLog(@"%@",error);
     }];
 }
