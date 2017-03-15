@@ -86,7 +86,7 @@
     titleLb.y = 10;
     [self.navigationController.navigationBar addSubview:titleLb];
     self.titleLb = titleLb;
-    NSLog(@"%@",NSStringFromCGRect(self.titleLb.frame));
+
 }
 
 -(void)setupUI{
