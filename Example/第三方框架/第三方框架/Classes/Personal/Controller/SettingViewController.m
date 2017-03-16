@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "LoginViewController.h"
 #import "PrefixHeader.pch"
 #import "AlertView.h"
 
@@ -164,8 +165,8 @@
             [self shareView];
             
         }else if (indexPath.row == 4){
-//            LoginViewController *login = [[LoginViewController alloc]init];
-//            [self presentViewController:login animated:YES completion:nil];
+            LoginViewController *login = [[LoginViewController alloc]init];
+            [self.navigationController pushViewController:login animated:YES];
         }
     }
 }
