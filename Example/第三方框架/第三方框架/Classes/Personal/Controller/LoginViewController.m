@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "DMRegisterViewController.h"
+#import "ForgotPassWordViewController.h"
 #import "PrefixHeader.pch"
 
 @interface LoginViewController ()<UITextFieldDelegate>
@@ -82,8 +84,8 @@
 //注册按钮点击事件
 -(void)registerBtnClick
 {
-//    DMRegisterViewController *vc = [[DMRegisterViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    DMRegisterViewController *vc = [[DMRegisterViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)createTextFileds
@@ -186,8 +188,8 @@
 }
 -(void)registerButtonClick:(UIButton *)button
 {
-//    DMRegisterViewController *vc = [[DMRegisterViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    DMRegisterViewController *vc = [[DMRegisterViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(void)loginButtonClick:(UIButton *)button
 {
@@ -216,8 +218,8 @@
 }
 -(void)forgotPwdButtonClick:(UIButton *)button
 {
-//    ForgotPassWordViewController *vc = [[ForgotPassWordViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    ForgotPassWordViewController *vc = [[ForgotPassWordViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(void)QQBtnClick
 {
