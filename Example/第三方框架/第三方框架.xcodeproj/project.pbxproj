@@ -10,6 +10,7 @@
 		138DE2F8BFB1D2AAAEA02247 /* libPods-第三方框架.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D1DA68FA81A67CD0A64D8B /* libPods-第三方框架.a */; };
 		1D393EE01E6EAD0A003B87DE /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D393EDF1E6EAD0A003B87DE /* ProfileViewController.m */; };
 		1D5768651E7AA2540074F62F /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5768641E7AA2540074F62F /* SettingViewController.m */; };
+		1D5768681E7AA80E0074F62F /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5768671E7AA80E0074F62F /* AlertView.m */; };
 		1D728FC51E76DD88001294A3 /* UINavigationBar+NavAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D728FC41E76DD88001294A3 /* UINavigationBar+NavAlpha.m */; };
 		1D728FC81E76DE78001294A3 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D728FC71E76DE78001294A3 /* UIView+Extension.m */; };
 		1DA7364A1E780A2400BBB3E7 /* QYMineBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA736491E780A2400BBB3E7 /* QYMineBlurView.m */; };
@@ -74,6 +75,8 @@
 		1D393EDF1E6EAD0A003B87DE /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		1D5768631E7AA2540074F62F /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		1D5768641E7AA2540074F62F /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		1D5768661E7AA80E0074F62F /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		1D5768671E7AA80E0074F62F /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		1D728FC31E76DD88001294A3 /* UINavigationBar+NavAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+NavAlpha.h"; sourceTree = "<group>"; };
 		1D728FC41E76DD88001294A3 /* UINavigationBar+NavAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+NavAlpha.m"; sourceTree = "<group>"; };
 		1D728FC61E76DE78001294A3 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		1D728FC21E76D536001294A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D5768661E7AA80E0074F62F /* AlertView.h */,
+				1D5768671E7AA80E0074F62F /* AlertView.m */,
 				1DA736481E780A2400BBB3E7 /* QYMineBlurView.h */,
 				1DA736491E780A2400BBB3E7 /* QYMineBlurView.m */,
 			);
@@ -707,6 +712,7 @@
 				5B62CE2F1E693FA000B9B7DC /* HomeCateViewController.m in Sources */,
 				1DB9F25B1E6869D900966EC1 /* AppDelegate.m in Sources */,
 				5B1FABEC1E694B4500000E15 /* DetailAllCourseCell.m in Sources */,
+				1D5768681E7AA80E0074F62F /* AlertView.m in Sources */,
 				5B1FABF81E69516400000E15 /* DetailClassListModel.m in Sources */,
 				5B1FABF51E69512700000E15 /* DetailStepListModel.m in Sources */,
 				1DA7364D1E780F1700BBB3E7 /* UserInfo.m in Sources */,
