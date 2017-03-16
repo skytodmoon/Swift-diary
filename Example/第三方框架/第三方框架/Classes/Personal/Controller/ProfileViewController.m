@@ -12,6 +12,7 @@
 #import "QYMineBlurView.h"
 #import "UserInfo.h"
 #import "MineModel.h"
+#import "SettingViewController.h"
 
 @interface ProfileViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)QYMineBlurView * qyBlurView;
@@ -69,11 +70,13 @@
     UIButton * message = [UIButton buttonWithType:UIButtonTypeCustom];
     message.frame = CGRectMake(0, 0, 25, 25);
     [message setImage:[UIImage imageNamed:@"消息"] forState:UIControlStateNormal];
+    [message addTarget:self action:@selector(leftBtn) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftBar = [[UIBarButtonItem alloc]initWithCustomView:message];
     self.navigationItem.leftBarButtonItem = leftBar;
     
     UIButton * setting = [UIButton buttonWithType:UIButtonTypeCustom];
     setting.frame = CGRectMake(0, 0, 25, 25);
+    [setting addTarget:self action:@selector(rightBtn) forControlEvents:UIControlEventTouchUpInside];
     [setting setImage:[UIImage imageNamed:@"设置"] forState:UIControlStateNormal];
     UIBarButtonItem * rightBar = [[UIBarButtonItem alloc]initWithCustomView:setting];
     self.navigationItem.rightBarButtonItem = rightBar;
@@ -87,6 +90,18 @@
     [self.navigationController.navigationBar addSubview:titleLb];
     self.titleLb = titleLb;
 
+}
+
+-(void)rightBtn{
+    SettingViewController *setting = [[SettingViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:setting animated:YES];
+    NSLog(@"点击了设置");
+}
+
+-(void)leftBtn{
+
+    NSLog(@"点击了消息");
 }
 
 -(void)setupUI{
