@@ -20,6 +20,15 @@
 
 @implementation MapViewController
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [SVProgressHUD showWithStatus:@"加载中"];
+    _mapView.showsUserLocation = YES;
+    _mapView.userTrackingMode = MAUserTrackingModeFollow;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNav];
@@ -73,24 +82,7 @@
     
 }
 
--(void)ahah{
-    
-    AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
-    request.location = [AMapGeoPoint locationWithLatitude:26.063184 longitude:119.298224];
-    request.keywords = _position;
-    // types属性表示限定搜索POI的类别，默认为：餐饮服务|商务住宅|生活服务
-    // POI的类型共分为20种大类别，分别为：
-    // 汽车服务|汽车销售|汽车维修|摩托车服务|餐饮服务|购物服务|生活服务|体育休闲服务|
-    // 医疗保健服务|住宿服务|风景名胜|商务住宅|政府机构及社会团体|科教文化服务|
-    // 交通设施服务|金融保险服务|公司企业|道路附属设施|地名地址信息|公共设施
-    request.types = @"餐饮服务|生活服务|商务住宅";
-    request.sortrule = 0;
-    request.radius = 700;
-    request.requireExtension = YES;
-    
-    //发起周边搜索
-    [_search AMapPOIAroundSearch: request];
-}
+
 
 //实现POI搜索对应的回调函数
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
@@ -143,16 +135,52 @@
     
 }
 
--(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
-updatingLocation:(BOOL)updatingLocation
+-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation
 {
-    if(updatingLocation)
-    {
-//        取出当前位置的坐标
-        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+//    if(updatingLocation)
+//    {
+////        取出当前位置的坐标
+//        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
+//    }
+    _locationManager = [userLocation.location copy];
+    
+}
+
+#pragma mark 定位用户进行地理编码查询
+-(void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+
+    if ([view.annotation isKindOfClass:[MAUserLocation class]]) {
+        [self initAction];
+    };
+}
+
+-(void)initAction{
+    if (_locationManager) {
+        AMapReGeocodeSearchRequest *request = [[AMapReGeocodeSearchRequest alloc]init];
+//        request.location = [AMapGeoPoint locationWithLatitude:_locationManager longitude:_locationManager];
+        [_search AMapReGoecodeSearch:request];
     }
 }
 
+-(void)ahah{
+    
+    AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
+    
+    request.location = [AMapGeoPoint locationWithLatitude:26.063184 longitude:119.298224];
+    request.keywords = _position;
+    // types属性表示限定搜索POI的类别，默认为：餐饮服务|商务住宅|生活服务
+    // POI的类型共分为20种大类别，分别为：
+    // 汽车服务|汽车销售|汽车维修|摩托车服务|餐饮服务|购物服务|生活服务|体育休闲服务|
+    // 医疗保健服务|住宿服务|风景名胜|商务住宅|政府机构及社会团体|科教文化服务|
+    // 交通设施服务|金融保险服务|公司企业|道路附属设施|地名地址信息|公共设施
+    request.types = @"餐饮服务|生活服务|商务住宅";
+    request.sortrule = 0;
+    request.radius = 700;
+    request.requireExtension = YES;
+    
+    //发起周边搜索
+    [_search AMapPOIAroundSearch: request];
+}
 #pragma mark -----------------获得当前位置信息城市 区 街道-------------------------
 
 
