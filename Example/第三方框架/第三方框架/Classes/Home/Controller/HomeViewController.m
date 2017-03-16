@@ -16,6 +16,7 @@
 #import "HomeCourseCell.h"
 #import "HomeCateViewController.h"
 #import "HomeCourseDetailViewController.h"
+#import "MapViewController.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,ImageScrollViewDelegate,HomelbumDelegate>{
 
     NSMutableArray *_focusListArray;/**< 第一个轮播数据 */
@@ -75,7 +76,7 @@
     UIButton *nameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     nameBtn.frame = CGRectMake(10, 20, 60, 40);
     nameBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-    [nameBtn setTitle:@"点击这" forState:UIControlStateNormal];
+    [nameBtn setTitle:@"地图" forState:UIControlStateNormal];
     [nameBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [nameBtn addTarget:self action:@selector(OnNameBtn) forControlEvents:UIControlEventTouchUpInside];
     [backView addSubview:nameBtn];
@@ -111,8 +112,8 @@
 }
 
 -(void)OnNameBtn{
-    UIAlertView *alertVC = [[UIAlertView alloc] initWithTitle:@"关于作者" message:@"作者：QJL，QQ：274721774，例子说明，转载请注明出处，不可用于商业用途及其他不合法用途。" delegate:self cancelButtonTitle:@"同意" otherButtonTitles:nil, nil];
-    [alertVC show];
+    MapViewController *mapview = [[MapViewController alloc] init];
+    [self.navigationController pushViewController:mapview animated:YES];
 }
 
 //搜索

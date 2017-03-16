@@ -10,6 +10,8 @@
 #define Header_h
 #import "UITextField+Shake.h"
 
+#define APIKEY @"5aed7f0e8121d1d985e3344f98ca5955";
+
 // 1.判断是否为iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
