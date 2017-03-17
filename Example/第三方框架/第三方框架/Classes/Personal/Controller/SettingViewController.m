@@ -28,34 +28,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initNav];
+    [self setupNav];
+//    [self initNav];
     [self createTableView];
     // Do any additional setup after loading the view.
 }
 
--(void)initNav{
-    //创建一个导航栏
-    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screen_width, 66)];
-    //把导航栏集合添加到导航栏中，设置动画关闭，设置颜色
-    [navBar pushNavigationItem:[self navItem] animated:NO];
-    //设置NavigationBar背景颜色
-    [[UINavigationBar appearance] setBarTintColor:RGBA(26,198,180,1)];
-    [self.view addSubview:navBar];
+-(void)setupNav{
+
+    self.view.backgroundColor = navigationBarColor;
+    //设置导航栏内容
+    self.navigationItem.title = @"我的";
+    //设置导航栏左边的按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationButtonReturn" highImage:@"navigationButtonReturnClick" target:self action:@selector(coinButtonClick)];
+    //设置导航栏右边的按钮
+    self.navigationItem.rightBarButtonItems = @[[UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingButtonClick)],[UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click"target:self action:@selector(moonButtonClick)]];
 }
 
--(UINavigationItem *)navItem{
-    // 创建一个导航项
-    UINavigationItem *navigationItem = [[UINavigationItem alloc]
-                                        initWithTitle:@"设置"];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
-    
-    return navigationItem;
+-(void)coinButtonClick{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)createTableView
 {
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     

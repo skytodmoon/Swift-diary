@@ -20,16 +20,6 @@
     // Do any additional setup after loading the view.
 }
 
-/**
- *  当第一次使用这个类的时候回调用一次
- */
-+(void)initialize {
-    
-    //设置导航栏主题
-    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
-    
-    [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-}
 
 /**
  *  统一所有控制器导航栏左上角的返回按钮

@@ -193,6 +193,7 @@
 }
 -(void)loginButtonClick:(UIButton *)button
 {
+
     if (_phoneTextFiled.text.length == 11 && _passwordTextFiled.text.length <= 16 && _passwordTextFiled.text.length >= 8) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"登陆" message:@"恭喜你登陆成功" preferredStyle:UIAlertControllerStyleAlert];

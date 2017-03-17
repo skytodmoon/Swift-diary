@@ -17,6 +17,12 @@
 
 @implementation MainViewController
 
+
++(void)initialize{
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

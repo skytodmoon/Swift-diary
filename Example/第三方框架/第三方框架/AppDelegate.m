@@ -10,7 +10,7 @@
 #import "MainViewController.h"
 #import "PrefixHeader.pch"
 
-@interface AppDelegate ()
+@interface AppDelegate ()  <UITabBarControllerDelegate>
 
 @end
 
@@ -27,6 +27,7 @@
     
     //设置窗口的跟控制器
     MainViewController *tabbarController = [[MainViewController alloc]init];
+    tabbarController.delegate = self;
     self.window.rootViewController = tabbarController;
     
     //显示窗口
