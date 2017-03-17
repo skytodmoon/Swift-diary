@@ -12,7 +12,8 @@
 #import "DetailStepListModel.h"
 #import "DetailClassListModel.h"
 #import "HomeCourseDetailInfoCell.h"
-@interface HomeCourseDetailViewController ()<UITableViewDataSource,UITableViewDelegate,HomeCourseDetailInfoDelegate>
+@interface HomeCourseDetailViewController ()
+//<UITableViewDataSource,UITableViewDelegate,HomeCourseDetailInfoDelegate>
 {
     HomeCourseDetailModel *_jzCourseDM;
     
@@ -79,8 +80,8 @@
 
 -(void)initTableview{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStylePlain];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
+//    self.tableView.delegate = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     /***   添加下拉刷新 */
