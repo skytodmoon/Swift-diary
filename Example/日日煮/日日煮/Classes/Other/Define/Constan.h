@@ -9,6 +9,12 @@
 #ifndef Constan_h
 #define Constan_h
 
+#import "RequestPaths.h"
+#import "UIView+MBProgressHUD.h"
+#import "NSString+Extension.h"
+#import <AFNetworking.h>
+
+
 /** 屏幕宽度 */
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 
