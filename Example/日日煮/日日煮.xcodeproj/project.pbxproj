@@ -19,6 +19,8 @@
 		1DCDC53E1E80079400E39B43 /* UIView+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC53D1E80079400E39B43 /* UIView+MBProgressHUD.m */; };
 		1DCDC5411E80096B00E39B43 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5401E80096B00E39B43 /* NSString+Extension.m */; };
 		1DCDC5471E800A6400E39B43 /* NSObject+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5461E800A6400E39B43 /* NSObject+AFNetworking.m */; };
+		1DCDC54F1E800F8200E39B43 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC54E1E800F8200E39B43 /* WelcomeViewController.m */; };
+		1DCDC5531E800FC500E39B43 /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5521E800FC500E39B43 /* FirstPageViewController.m */; };
 		DA79F78A79B92C1167741D1D /* libPods-日日煮.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670B28B2B9653ECBED885F0D /* libPods-日日煮.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		1DCDC5401E80096B00E39B43 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		1DCDC5451E800A6400E39B43 /* NSObject+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFNetworking.h"; sourceTree = "<group>"; };
 		1DCDC5461E800A6400E39B43 /* NSObject+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AFNetworking.m"; sourceTree = "<group>"; };
+		1DCDC54D1E800F8200E39B43 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		1DCDC54E1E800F8200E39B43 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		1DCDC5511E800FC500E39B43 /* FirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewController.h; sourceTree = "<group>"; };
+		1DCDC5521E800FC500E39B43 /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
 		670B28B2B9653ECBED885F0D /* libPods-日日煮.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-日日煮.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD73F4BB3230F2F54DE7E163 /* Pods-日日煮.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.debug.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.debug.xcconfig"; sourceTree = "<group>"; };
 		B38F7FAE3AAF15D5209231B7 /* Pods-日日煮.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.release.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +198,9 @@
 		1DCDC5341E7FD8F100E39B43 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1DCDC5501E800FC500E39B43 /* All */,
+				1DCDC54C1E800F7800E39B43 /* Welcome */,
+				1DCDC5481E800EFB00E39B43 /* ViewController */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -211,6 +220,33 @@
 				1DCDC5381E7FDA1D00E39B43 /* RequestPaths.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		1DCDC5481E800EFB00E39B43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1DCDC54C1E800F7800E39B43 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC54D1E800F8200E39B43 /* WelcomeViewController.h */,
+				1DCDC54E1E800F8200E39B43 /* WelcomeViewController.m */,
+			);
+			name = Welcome;
+			path = ViewController/Welcome;
+			sourceTree = "<group>";
+		};
+		1DCDC5501E800FC500E39B43 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC5511E800FC500E39B43 /* FirstPageViewController.h */,
+				1DCDC5521E800FC500E39B43 /* FirstPageViewController.m */,
+			);
+			name = All;
+			path = ViewController/All;
 			sourceTree = "<group>";
 		};
 		5D55A8E6B5F2C76B684A2C26 /* Frameworks */ = {
@@ -412,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4F08D51E7D282300C82E0C /* ViewController.m in Sources */,
+				1DCDC54F1E800F8200E39B43 /* WelcomeViewController.m in Sources */,
 				1DCDC5411E80096B00E39B43 /* NSString+Extension.m in Sources */,
+				1DCDC5531E800FC500E39B43 /* FirstPageViewController.m in Sources */,
 				1D4F08D21E7D282300C82E0C /* AppDelegate.m in Sources */,
 				1DCDC53B1E7FDAA400E39B43 /* AppDelegate+Extension.m in Sources */,
 				1D4F08CF1E7D282300C82E0C /* main.m in Sources */,
