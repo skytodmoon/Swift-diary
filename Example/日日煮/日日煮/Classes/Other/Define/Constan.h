@@ -9,13 +9,7 @@
 #ifndef Constan_h
 #define Constan_h
 
-#import "RequestPaths.h"
-#import "AppDelegate+Extension.h"
-#import "UIView+MBProgressHUD.h"
-#import "NSString+Extension.h"
-#import "AFNetworking.h"
-#import "AFNetworkActivityIndicatorManager.h"
-#import "AFNetworkReachabilityManager.h"
+
 
 
 /** 屏幕宽度 */

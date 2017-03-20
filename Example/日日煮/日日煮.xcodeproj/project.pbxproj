@@ -24,6 +24,8 @@
 		1DCDC5561E8010D200E39B43 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5551E8010D200E39B43 /* UIScrollView+Refresh.m */; };
 		1DCDC5591E80111A00E39B43 /* NSObject+Paarse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5581E80111A00E39B43 /* NSObject+Paarse.m */; };
 		1DCDC55B1E8011A800E39B43 /* MyBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DCDC55A1E8011A800E39B43 /* MyBundle.bundle */; };
+		1DCDC5601E80122B00E39B43 /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC55F1E80122B00E39B43 /* MenuModel.m */; };
+		1DCDC5631E80123900E39B43 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5621E80123900E39B43 /* NetManager.m */; };
 		DA79F78A79B92C1167741D1D /* libPods-日日煮.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670B28B2B9653ECBED885F0D /* libPods-日日煮.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,10 @@
 		1DCDC5571E80111A00E39B43 /* NSObject+Paarse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Paarse.h"; sourceTree = "<group>"; };
 		1DCDC5581E80111A00E39B43 /* NSObject+Paarse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Paarse.m"; sourceTree = "<group>"; };
 		1DCDC55A1E8011A800E39B43 /* MyBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MyBundle.bundle; sourceTree = "<group>"; };
+		1DCDC55E1E80122B00E39B43 /* MenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuModel.h; sourceTree = "<group>"; };
+		1DCDC55F1E80122B00E39B43 /* MenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuModel.m; sourceTree = "<group>"; };
+		1DCDC5611E80123900E39B43 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		1DCDC5621E80123900E39B43 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		670B28B2B9653ECBED885F0D /* libPods-日日煮.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-日日煮.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD73F4BB3230F2F54DE7E163 /* Pods-日日煮.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.debug.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.debug.xcconfig"; sourceTree = "<group>"; };
 		B38F7FAE3AAF15D5209231B7 /* Pods-日日煮.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.release.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				1DCDC5331E7FD8F100E39B43 /* Category */,
+				1DCDC55C1E80120F00E39B43 /* Model */,
+				1DCDC55D1E80120F00E39B43 /* NetManager */,
 				1DCDC5341E7FD8F100E39B43 /* Main */,
 				1DCDC5351E7FD8F100E39B43 /* Other */,
 			);
@@ -260,6 +268,24 @@
 			);
 			name = All;
 			path = ViewController/All;
+			sourceTree = "<group>";
+		};
+		1DCDC55C1E80120F00E39B43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC55E1E80122B00E39B43 /* MenuModel.h */,
+				1DCDC55F1E80122B00E39B43 /* MenuModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DCDC55D1E80120F00E39B43 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC5611E80123900E39B43 /* NetManager.h */,
+				1DCDC5621E80123900E39B43 /* NetManager.m */,
+			);
+			path = NetManager;
 			sourceTree = "<group>";
 		};
 		5D55A8E6B5F2C76B684A2C26 /* Frameworks */ = {
@@ -465,7 +491,9 @@
 				1DCDC54F1E800F8200E39B43 /* WelcomeViewController.m in Sources */,
 				1DCDC5411E80096B00E39B43 /* NSString+Extension.m in Sources */,
 				1DCDC5591E80111A00E39B43 /* NSObject+Paarse.m in Sources */,
+				1DCDC5601E80122B00E39B43 /* MenuModel.m in Sources */,
 				1DCDC5531E800FC500E39B43 /* FirstPageViewController.m in Sources */,
+				1DCDC5631E80123900E39B43 /* NetManager.m in Sources */,
 				1D4F08D21E7D282300C82E0C /* AppDelegate.m in Sources */,
 				1DCDC53B1E7FDAA400E39B43 /* AppDelegate+Extension.m in Sources */,
 				1D4F08CF1E7D282300C82E0C /* main.m in Sources */,
