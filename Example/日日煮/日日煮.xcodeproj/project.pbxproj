@@ -15,6 +15,7 @@
 		1D4F08DD1E7D282300C82E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4F08DB1E7D282300C82E0C /* LaunchScreen.storyboard */; };
 		1D4F08E81E7D282300C82E0C /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F08E71E7D282300C82E0C /* ___Tests.m */; };
 		1D4F08F31E7D282300C82E0C /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F08F21E7D282300C82E0C /* ___UITests.m */; };
+		1DCDC53B1E7FDAA400E39B43 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC53A1E7FDAA400E39B43 /* AppDelegate+Extension.m */; };
 		DA79F78A79B92C1167741D1D /* libPods-日日煮.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 670B28B2B9653ECBED885F0D /* libPods-日日煮.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,10 @@
 		1D4F08F21E7D282300C82E0C /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
 		1D4F08F41E7D282300C82E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D4F09011E7D2A4200C82E0C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1DCDC5371E7FD93B00E39B43 /* Constan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constan.h; sourceTree = "<group>"; };
+		1DCDC5381E7FDA1D00E39B43 /* RequestPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestPaths.h; sourceTree = "<group>"; };
+		1DCDC5391E7FDAA400E39B43 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
+		1DCDC53A1E7FDAA400E39B43 /* AppDelegate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Extension.m"; sourceTree = "<group>"; };
 		670B28B2B9653ECBED885F0D /* libPods-日日煮.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-日日煮.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD73F4BB3230F2F54DE7E163 /* Pods-日日煮.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.debug.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.debug.xcconfig"; sourceTree = "<group>"; };
 		B38F7FAE3AAF15D5209231B7 /* Pods-日日煮.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-日日煮.release.xcconfig"; path = "Pods/Target Support Files/Pods-日日煮/Pods-日日煮.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +158,44 @@
 		1D4F09001E7D2A3B00C82E0C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DCDC5331E7FD8F100E39B43 /* Category */,
+				1DCDC5341E7FD8F100E39B43 /* Main */,
+				1DCDC5351E7FD8F100E39B43 /* Other */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		1DCDC5331E7FD8F100E39B43 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC5391E7FDAA400E39B43 /* AppDelegate+Extension.h */,
+				1DCDC53A1E7FDAA400E39B43 /* AppDelegate+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1DCDC5341E7FD8F100E39B43 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1DCDC5351E7FD8F100E39B43 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC5361E7FD92B00E39B43 /* Define */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1DCDC5361E7FD92B00E39B43 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				1DCDC5371E7FD93B00E39B43 /* Constan.h */,
+				1DCDC5381E7FDA1D00E39B43 /* RequestPaths.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		5D55A8E6B5F2C76B684A2C26 /* Frameworks */ = {
@@ -357,6 +398,7 @@
 			files = (
 				1D4F08D51E7D282300C82E0C /* ViewController.m in Sources */,
 				1D4F08D21E7D282300C82E0C /* AppDelegate.m in Sources */,
+				1DCDC53B1E7FDAA400E39B43 /* AppDelegate+Extension.m in Sources */,
 				1D4F08CF1E7D282300C82E0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
