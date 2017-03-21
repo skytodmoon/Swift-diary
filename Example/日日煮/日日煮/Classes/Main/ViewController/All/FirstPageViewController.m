@@ -13,6 +13,7 @@
 #import "SearchPageViewController.h"
 #import "CookMenuViewController.h"
 #import "ToAppStore.h"
+#import "MJRefresh.h"
 #import "PrefixHeader.pch"
 
 static NSString *const identify = @"Cell";
@@ -63,7 +64,7 @@ static NSString *const identify = @"Cell";
     cell.labelDec.text = [self.menuVM detailForRow:indexPath.row];
     cell.labelTitle.text = [self.menuVM titleForRow:indexPath.row];
     cell.labelReNewTime.text = [self.menuVM releaseDateForRow:indexPath.row];
-    [cell.imageV setImageWithURL:[self.menuVM iconIVForRow:indexPath.row]placeholder:@"default"._image];
+    [cell.imageV setImageWithURL:[self.menuVM iconIVForRow:indexPath.row]placeholder:@"default".yx_image];
     return cell;
 }
 #pragma mark - CollectionView Delegate
@@ -124,7 +125,7 @@ static NSString *const identify = @"Cell";
             make.width.height.equalTo(45);
         }];
         _upToTop.layer.cornerRadius = 45/2.0;
-        UIImageView *image = @"upupup"._imageView;
+        UIImageView *image = @"upupup".yx_imageView;
         [_upToTop addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
@@ -146,8 +147,8 @@ static NSString *const identify = @"Cell";
         _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[FirstPageCell class] forCellWithReuseIdentifier:identify];
         
-        NSArray *arr = @[@"load1"._image, @"load2"._image, @"load3"._image, @"load4"._image, @"load5"._image, @"load6"._image];
-        NSArray *arr1 = @[@"load1"._image];
+        NSArray *arr = @[@"load1".yx_image, @"load2".yx_image, @"load3".yx_image, @"load4".yx_image, @"load5".yx_image, @"load6".yx_image];
+        NSArray *arr1 = @[@"load1".yx_image];
         MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh:)];
         //        [header setImages:arr forState:MJRefreshStateIdle];
         [header setImages:arr1 forState:MJRefreshStatePulling];
@@ -156,10 +157,10 @@ static NSString *const identify = @"Cell";
         header.stateLabel.hidden = YES;
         self.collectionView.mj_header = header;
         WK(weakSelf);
+        WK(weakSelf);
         [self.collectionView addBackFooterRefresh:^{
             [weakSelf.menuVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
                 if (error) {
-                    DDLogError(@"error: %@",error);
                     return ;
                 }
                 [weakSelf.collectionView reloadData];
@@ -200,7 +201,7 @@ static NSString *const identify = @"Cell";
             make.width.height.equalTo(33);
         }];
         [_btnSearch addTarget:self action:@selector(clickUpTheButton:) forControlEvents:UIControlEventTouchUpInside];
-        [_btnSearch setImage:@"search"._image forState:UIControlStateNormal];
+        [_btnSearch setImage:@"search".yx_image forState:UIControlStateNormal];
     }
     return _btnSearch;
 }
@@ -219,7 +220,6 @@ static NSString *const identify = @"Cell";
 - (void)headerRefresh:sender{
     [self.menuVM getDataWithRequestMode:VMRequestModeRefresh completionHandler:^(NSError *error) {
         if (error) {
-            DDLogError(@"error: %@",error);
             return ;
         }
         [self.collectionView reloadData];
