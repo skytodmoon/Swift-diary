@@ -51,7 +51,7 @@
         CGFloat height = kScreenW/1242.0*297;
         [_backImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.right.equalTo(0);
-            make.height.equalTo(height);
+            make.height.equalTo(self.height);
         }];
         _backImage.image = @"buttomImg".yx_image;
     }
