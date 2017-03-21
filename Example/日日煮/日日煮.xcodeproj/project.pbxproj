@@ -19,6 +19,9 @@
 		1DC97B9F1E80EC7D002C8873 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97B9E1E80EC7D002C8873 /* BaseViewModel.m */; };
 		1DC97BA31E80EE3D002C8873 /* FirstPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97BA21E80EE3D002C8873 /* FirstPageCell.m */; };
 		1DC97BA71E80EE7C002C8873 /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97BA61E80EE7C002C8873 /* StickCollectionViewFlowLayout.m */; };
+		1DC97BAA1E80F4BC002C8873 /* SearchPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97BA91E80F4BC002C8873 /* SearchPageViewController.m */; };
+		1DC97BAD1E80F4D1002C8873 /* CookMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97BAC1E80F4D1002C8873 /* CookMenuViewController.m */; };
+		1DC97BB01E80F500002C8873 /* ToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC97BAF1E80F500002C8873 /* ToAppStore.m */; };
 		1DCDC53B1E7FDAA400E39B43 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC53A1E7FDAA400E39B43 /* AppDelegate+Extension.m */; };
 		1DCDC53E1E80079400E39B43 /* UIView+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC53D1E80079400E39B43 /* UIView+MBProgressHUD.m */; };
 		1DCDC5411E80096B00E39B43 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCDC5401E80096B00E39B43 /* NSString+Extension.m */; };
@@ -76,6 +79,12 @@
 		1DC97BA21E80EE3D002C8873 /* FirstPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageCell.m; sourceTree = "<group>"; };
 		1DC97BA51E80EE7C002C8873 /* StickCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		1DC97BA61E80EE7C002C8873 /* StickCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1DC97BA81E80F4BC002C8873 /* SearchPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPageViewController.h; sourceTree = "<group>"; };
+		1DC97BA91E80F4BC002C8873 /* SearchPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPageViewController.m; sourceTree = "<group>"; };
+		1DC97BAB1E80F4D1002C8873 /* CookMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookMenuViewController.h; sourceTree = "<group>"; };
+		1DC97BAC1E80F4D1002C8873 /* CookMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookMenuViewController.m; sourceTree = "<group>"; };
+		1DC97BAE1E80F500002C8873 /* ToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToAppStore.h; sourceTree = "<group>"; };
+		1DC97BAF1E80F500002C8873 /* ToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToAppStore.m; sourceTree = "<group>"; };
 		1DCDC5371E7FD93B00E39B43 /* Constan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constan.h; sourceTree = "<group>"; };
 		1DCDC5381E7FDA1D00E39B43 /* RequestPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestPaths.h; sourceTree = "<group>"; };
 		1DCDC5391E7FDAA400E39B43 /* AppDelegate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Extension.h"; sourceTree = "<group>"; };
@@ -233,6 +242,8 @@
 			children = (
 				1DC97BA51E80EE7C002C8873 /* StickCollectionViewFlowLayout.h */,
 				1DC97BA61E80EE7C002C8873 /* StickCollectionViewFlowLayout.m */,
+				1DC97BAE1E80F500002C8873 /* ToAppStore.h */,
+				1DC97BAF1E80F500002C8873 /* ToAppStore.m */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -309,6 +320,10 @@
 			children = (
 				1DCDC5511E800FC500E39B43 /* FirstPageViewController.h */,
 				1DCDC5521E800FC500E39B43 /* FirstPageViewController.m */,
+				1DC97BA81E80F4BC002C8873 /* SearchPageViewController.h */,
+				1DC97BA91E80F4BC002C8873 /* SearchPageViewController.m */,
+				1DC97BAB1E80F4D1002C8873 /* CookMenuViewController.h */,
+				1DC97BAC1E80F4D1002C8873 /* CookMenuViewController.m */,
 			);
 			name = All;
 			path = ViewController/All;
@@ -532,7 +547,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4F08D51E7D282300C82E0C /* ViewController.m in Sources */,
+				1DC97BAA1E80F4BC002C8873 /* SearchPageViewController.m in Sources */,
 				1DCDC54F1E800F8200E39B43 /* WelcomeViewController.m in Sources */,
+				1DC97BAD1E80F4D1002C8873 /* CookMenuViewController.m in Sources */,
 				1DCDC5411E80096B00E39B43 /* NSString+Extension.m in Sources */,
 				1DC97BA71E80EE7C002C8873 /* StickCollectionViewFlowLayout.m in Sources */,
 				1DCDC5591E80111A00E39B43 /* NSObject+Paarse.m in Sources */,
@@ -545,6 +562,7 @@
 				1DC97B9C1E80EC5D002C8873 /* MenuViewModel.m in Sources */,
 				1D4F08CF1E7D282300C82E0C /* main.m in Sources */,
 				1DCDC5471E800A6400E39B43 /* NSObject+AFNetworking.m in Sources */,
+				1DC97BB01E80F500002C8873 /* ToAppStore.m in Sources */,
 				1DCDC53E1E80079400E39B43 /* UIView+MBProgressHUD.m in Sources */,
 				1DCDC5561E8010D200E39B43 /* UIScrollView+Refresh.m in Sources */,
 				1DC97BA31E80EE3D002C8873 /* FirstPageCell.m in Sources */,
