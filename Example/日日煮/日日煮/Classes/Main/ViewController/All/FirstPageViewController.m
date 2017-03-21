@@ -7,6 +7,12 @@
 //
 
 #import "FirstPageViewController.h"
+#import "MenuViewModel.h"
+#import "FirstPageCell.h"
+#import "StickCollectionViewFlowLayout.h"
+#import "YXSearchPageViewController.h"
+#import "YXCookMenuViewController.h"
+#import "LBToAppStore.h"
 
 @interface FirstPageViewController ()
 
