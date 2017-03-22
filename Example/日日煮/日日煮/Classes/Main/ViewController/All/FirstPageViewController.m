@@ -120,9 +120,9 @@ static NSString *const identify = @"Cell";
         _upToTop = [[UIControl alloc] init];
         [self.view addSubview:_upToTop];
         [_upToTop mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(-30);
-            make.bottom.equalTo(-160);
-            make.width.height.equalTo(45);
+            make.right.equalTo(@-30);
+            make.bottom.equalTo(@-160);
+            make.width.height.equalTo(@45);
         }];
         _upToTop.layer.cornerRadius = 45/2.0;
         UIImageView *image = @"upupup".yx_imageView;
@@ -157,7 +157,6 @@ static NSString *const identify = @"Cell";
         header.stateLabel.hidden = YES;
         self.collectionView.mj_header = header;
         WK(weakSelf);
-        WK(weakSelf);
         [self.collectionView addBackFooterRefresh:^{
             [weakSelf.menuVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
                 if (error) {
@@ -180,10 +179,10 @@ static NSString *const identify = @"Cell";
         _searchView = [[UIView alloc] init];
         [self.view addSubview:_searchView];
         [_searchView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(190);
-            make.bottom.equalTo(-90);
-            make.height.equalTo(45);
-            make.width.equalTo(200);
+            make.right.equalTo(@190);
+            make.bottom.equalTo(@-90);
+            make.height.equalTo(@45);
+            make.width.equalTo(@200);
         }];
         _searchView.backgroundColor = kRGBColor(253, 183, 154, 1.0);
         _searchView.layer.cornerRadius = 22.5;
@@ -196,9 +195,9 @@ static NSString *const identify = @"Cell";
         _btnSearch = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.searchView addSubview:_btnSearch];
         [_btnSearch mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(10);
+            make.left.equalTo(@10);
             make.centerY.equalTo(0);
-            make.width.height.equalTo(33);
+            make.width.height.equalTo(@33);
         }];
         [_btnSearch addTarget:self action:@selector(clickUpTheButton:) forControlEvents:UIControlEventTouchUpInside];
         [_btnSearch setImage:@"search".yx_image forState:UIControlStateNormal];

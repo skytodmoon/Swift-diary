@@ -65,13 +65,13 @@
         [self.backImage addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(leftX);
-            make.bottom.equalTo(-10);
-            make.width.height.equalTo(15);
+            make.bottom.equalTo(@-10);
+            make.width.height.equalTo(@15);
         }];
         [self.backImage addSubview:_labelShareCount];
         [_labelShareCount mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(image.mas_right).equalTo(2);
-            make.bottom.equalTo(-10);
+            make.left.equalTo(image.mas_right).equalTo(@2);
+            make.bottom.equalTo(@-10);
         }];
         _labelShareCount.textColor = [UIColor lightTextColor];
         _labelShareCount.font = [UIFont systemFontOfSize:13];
@@ -88,13 +88,13 @@
         CGFloat leftX = kScreenW/8.0 - 8;
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(leftX);
-            make.bottom.equalTo(-10);
-            make.width.height.equalTo(15);
+            make.bottom.equalTo(@-10);
+            make.width.height.equalTo(@15);
         }];
         [self.backImage addSubview:_labelCookTime];
         [_labelCookTime mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(image.mas_right).equalTo(2);
-            make.bottom.equalTo(-10);
+            make.left.equalTo(image.mas_right).equalTo(@2);
+            make.bottom.equalTo(@-10);
         }];
         _labelCookTime.textColor = [UIColor lightTextColor];
         _labelCookTime.font = [UIFont systemFontOfSize:13];
@@ -108,16 +108,16 @@
         [self.backImage addSubview:_labelClickCount];
         [_labelClickCount mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
-            make.bottom.equalTo(-10);
+            make.bottom.equalTo(@-10);
         }];
         _labelClickCount.textColor = [UIColor lightTextColor];
         _labelClickCount.font = [UIFont systemFontOfSize:13];
         UIImageView *image = @"Home_viewIcon".yx_imageView;
         [self.backImage addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(_labelClickCount.mas_left).equalTo(-2);
-            make.bottom.equalTo(-10);
-            make.width.height.equalTo(15);
+            make.right.equalTo(_labelClickCount.mas_left).equalTo(@-2);
+            make.bottom.equalTo(@-10);
+            make.width.height.equalTo(@15);
         }];
     }
     return _labelClickCount;
@@ -129,7 +129,7 @@
         [self.backImage addSubview:_labelDec];
         CGFloat width = kScreenW -100;
         [_labelDec mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.labelClickCount.mas_top).equalTo(-20);
+            make.bottom.equalTo(self.labelClickCount.mas_top).equalTo(@-20);
             make.centerX.equalTo(0);
             make.width.equalTo(width);
         }];
@@ -144,7 +144,7 @@
         _labelTitle = [[UILabel alloc] init];
         [self.backImage addSubview:_labelTitle];
         [_labelTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.labelDec.mas_top).equalTo(-20);
+            make.bottom.equalTo(self.labelDec.mas_top).equalTo(@-20);
             make.centerX.equalTo(0);
         }];
         _labelTitle.textColor = [UIColor whiteColor];
@@ -159,24 +159,24 @@
         [self.imageV addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.top.equalTo(0);
-            make.height.equalTo(24);
+            make.height.equalTo(@24);
         }];
         view.backgroundColor = kRGBColor(0, 0, 0, 0.4);
         _labelReNewTime = [[UILabel alloc] init];
         [view addSubview:_labelReNewTime];
         [_labelReNewTime mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(-5);
-            make.centerY.equalTo(0);
+            make.right.equalTo(@-5);
+            make.centerY.equalTo(@0);
         }];
         _labelReNewTime.textColor = [UIColor whiteColor];
         _labelReNewTime.font = [UIFont systemFontOfSize:14];
         UIImageView *image = @"Home_calenderIcon".yx_imageView;
         [view addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(5);
-            make.right.equalTo(_labelReNewTime.mas_left).equalTo(-5);
-            make.top.equalTo(5);
-            make.width.height.equalTo(14);
+            make.left.equalTo(@5);
+            make.right.equalTo(_labelReNewTime.mas_left).equalTo(@-5);
+            make.top.equalTo(@5);
+            make.width.height.equalTo(@14);
         }];
     }
     return _labelReNewTime;
