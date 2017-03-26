@@ -51,7 +51,7 @@
         CGFloat height = kScreenW/1242.0*297;
         [_backImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.bottom.right.equalTo(0);
-            make.height.equalTo(self.height);
+//            make.height.equalTo(self.height);
         }];
         _backImage.image = @"buttomImg".yx_image;
     }
@@ -64,7 +64,7 @@
         UIImageView *image = @"Home_shareIcon".yx_imageView;
         [self.backImage addSubview:image];
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(leftX);
+//            make.left.equalTo(leftX);
             make.bottom.equalTo(@-10);
             make.width.height.equalTo(@15);
         }];
@@ -87,7 +87,7 @@
         [self.backImage addSubview:image];
         CGFloat leftX = kScreenW/8.0 - 8;
         [image mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(leftX);
+//            make.left.equalTo(leftX);
             make.bottom.equalTo(@-10);
             make.width.height.equalTo(@15);
         }];
@@ -131,7 +131,7 @@
         [_labelDec mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.labelClickCount.mas_top).equalTo(@-20);
             make.centerX.equalTo(0);
-            make.width.equalTo(width);
+//            make.width.equalTo(width);
         }];
         _labelDec.textColor = [UIColor lightTextColor];
         _labelDec.font = [UIFont systemFontOfSize:19];

@@ -156,17 +156,17 @@ static NSString *const identify = @"Cell";
         header.lastUpdatedTimeLabel.hidden = YES;
         header.stateLabel.hidden = YES;
         self.collectionView.mj_header = header;
-        WK(weakSelf);
+//        WK(weakSelf);
         [self.collectionView addBackFooterRefresh:^{
-            [weakSelf.menuVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
+            [self.menuVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
                 if (error) {
                     return ;
                 }
-                [weakSelf.collectionView reloadData];
-                if (weakSelf.menuVM.isLoadMore) {
-                    [weakSelf.collectionView endFooterRefresh];
+                [self.collectionView reloadData];
+                if (self.menuVM.isLoadMore) {
+                    [self.collectionView endFooterRefresh];
                 }else {
-                    [weakSelf.collectionView endFooterRefreshWithNoMoreData];
+                    [self.collectionView endFooterRefreshWithNoMoreData];
                 }
             }];
         }];
