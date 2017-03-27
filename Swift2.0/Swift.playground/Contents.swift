@@ -1973,15 +1973,398 @@ for i in 0 ..< 10 {
     print("\n")
 }
 
+//实例方法
+
+class Account3 {
+    var amount: Double = 10_000.00  //账户金额
+    var owner: String = "Tony"  //账户名
+    
+    //计算利息
+    func insterseWithRate(rate: Double ) -> Double {
+        return rate * amount
+    }
+    
+}
+
+//使用规范命名
+
+/**
+ *   在siwft中，方法和函数的主要区别是下三点
+ - 方法的调用前面要有主体，而函数不需要
+ - 方法是在枚举，结构体或类内部定义的
+ - 方法命名规范和函数不同
+ - 比较同一个方法的API
+ */
+
+class Employee34 {
+    var no: Int = 0   //员工类
+    var firstName: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+}
+
+class Department34 {
+    var no: Int = 0
+    var name: String = ""
+    var employees: [Employee34] = [Employee34]()
+    
+    func insertWithObject(anObject: AnyObject, anIndex index: Int) -> () {
+        
+        let emp = anObject as! Employee34
+        employees.insert(emp, atIndex:index)
+    }
+}
+
+var dept34 = Department34()
+
+var emp134 = Employee34()
+dept34.insertWithObject(emp134, anIndex: 0)
+
+
+var emp234 = Employee34()
+dept34.insertWithObject(emp234, anIndex: 0)
+
+
+var emp334 = Employee34()
+dept34.insertWithObject(emp334, anIndex: 0)
+
+print(dept34.employees.count)
+
+//结构静态方法
+//*Swift中定义静态方法，称为类型方法，静态方法的定义属性类似，枚举和构造体的静态方法使用关键字是static，类静态方法使用的关键字是Class或者static，如果使用static定义，则该方法不能在子类重写*
+
+
+import UIKit
+
+struct Account34 {
+    
+    var owner: String = "Tony"
+    static var interestRate: Double = 0.068
+    
+    static func interestBy(amount: Double) -> Double {
+        
+        return interestRate * amount
+    }
+    
+    func mesageWith(amount: Double) -> String {
+        
+        let interset = Account34.interestBy(amount)
+        return "\(self.owner)的利息是\(interset)"
+    }
+}
+////调用静态方法
+print(Account34.interestBy(100.00))
+var myAccount34 = Account()
+
+//默认构造函数
+
+class Rectangle {
+    var width: Double = 0.0
+    var heigth: Double = 0.0
+}
+
+var rect = Rectangle()
+rect.width = 320.0
+rect.heigth = 480.0
+
+print("长方形:\(rect.width) x \(rect.heigth)")
+
+
+//构造函数与储存属性初始化
+
+/**
+ *  构造函数的主要作用是初始化实例，其中包括：初始话存储属性和其他的初始话
+ - 如果储存属性在构造函数中没有变化，在定义的时候也没有初始化，那么就会发生编辑错误，计算属性不报错数据，所以不需要初始化，构造函数也不需要初始话静态属性，因为他们与具体事例个体无关
+ */
+
+class Employee26 {
+    
+    let no : Int
+    var name: String?
+    var job: String?
+    var salary: Double
+    var dept: Department26?
+    
+    init() {
+        no = 0
+        salary = 0.0
+        dept = nil
+    }
+}
+
+struct Department26{
+    
+    let no: Int
+    var name: String
+    
+    init() {
+        no = 10
+        name = "SALES"
+    }
+}
+
+let dept26 = Department26()
+var emp26 = Employee26()
+
+
+//使用外部参数名
+
+/**
+ *  为了增强程序的可读性，Swift中的方法可以使用外部参数名，构造函数中也可以使用外部参数名，构造函数中的外部参数名要比一般的方法和函数更有意义，由于构造函数命名都是init，如果一个类型中有多个构造函数，我们可以通过不同的外部参数名区分调用不同的构造函数
+ */
+
+class RectangleA {
+    var width: Double = 0.0
+    var heigth: Double = 0.0
+    
+    init() {
+    }
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+}
+
+
+class RectangleB {
+    var width: Double = 0.0
+    var heigth: Double = 0.0
+    
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+}
+
+var rectb = RectangleB(width: 320, heigth: 480)
+print("长方形B\(rectb.width) x \(rectb.heigth)")
+
+struct RectangleD {
+    var width: Double = 0.0
+    var heigth: Double = 0.0
+}
+var rectc = RectangleD(width: 320, heigth: 480)
+
+//构造函数重载
+
+class Rectangle22 {
+    
+    var width: Double
+    var heigth: Double
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    
+    init(W width: Double, H heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    init(length: Double) {
+        
+        self.width = length
+        self.heigth = length
+    }
+    
+    init() {
+        self.width = 640.0
+        self.heigth = 940.0
+    }
+}
+
+var rect1 = Rectangle22 (width: 320, heigth: 480)
+print("长方形B\(rect1.width) x \(rect1.heigth)")
+
+var rect2 = Rectangle22 (W: 320, H: 480)
+print("长方形B\(rect2.width) x \(rect2.heigth)")
+
+var rect3 = Rectangle22(length: 500.0)
+print("长方形B\(rect3.width) x \(rect3.heigth)")
+
+var rect4 = Rectangle22()
+print("长方形B\(rect4.width) x \(rect4.heigth)")
+
+
+//构造函数代理
+
+class Rectangle17 {
+    
+    var width: Double
+    var heigth: Double
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    
+    init(W width: Double, H heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    convenience init(length: Double) {
+        
+        self.init(W: length, H: length)
+    }
+    
+    convenience init() {
+        self.init(width: 640.0, heigth: 940.0)
+        
+    }
+}
+
+var rect14 = Rectangle17 (width: 320, heigth: 480)
+print("长方形B\(rect1.width) x \(rect1.heigth)")
+
+var rect24 = Rectangle17 (W: 320, H: 480)
+print("长方形B\(rect2.width) x \(rect2.heigth)")
+
+var rect34 = Rectangle17(length: 500.0)
+print("长方形B\(rect3.width) x \(rect3.heigth)")
+
+var rect44 = Rectangle17()
+print("长方形B\(rect4.width) x \(rect4.heigth)")
+
+
+// 类构造函数横向代理
+// 由于类没有继承关系，类构造函数代理比较复杂，分为横向代理和向上代理
+//
+//横向代理雷诗雨机构提类型构造函数代理，发生在同一类内部，这种构造函数称为便利构造函数
+//
+//向上代理发生在继承情况下，在子类构造函数过程中先要调用父类构造函数，初始化父储存属性，这种构造函数称为指定构造函数
+
+class Rectangle1 {
+    
+    var width: Double
+    var heigth: Double
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    
+    init(W width: Double, H heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    convenience init(length: Double) {
+        
+        self.init(W: length, H: length)
+    }
+    
+    convenience init() {
+        self.init(width: 640.0, heigth: 940.0)
+        
+    }
+}
+
+var rect11 = Rectangle1 (width: 320, heigth: 480)
+print("长方形B\(rect1.width) x \(rect1.heigth)")
+
+var rect21 = Rectangle1 (W: 320, H: 480)
+print("长方形B\(rect2.width) x \(rect2.heigth)")
+
+var rect31 = Rectangle1(length: 500.0)
+print("长方形B\(rect3.width) x \(rect3.heigth)")
+
+var rect41 = Rectangle1()
+print("长方形B\(rect4.width) x \(rect4.heigth)")
+
+
+//析构函数
 
 
 
+class Rectangle2 {
+    
+    var width: Double
+    var heigth: Double
+    
+    
+    init(width: Double, heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    
+    init(W width: Double, H heigth: Double) {
+        self.width = width
+        self.heigth = heigth
+    }
+    deinit {
+        print("调用析构函数")
+        self.width = 0.0
+        self.heigth = 0.0
+    }
+}
+
+//类继承
+
+/**
+ *  继承性是面向对象的重要特征之一，Swift中的继承只能发生在类上，不能发生在枚举和机构体上，在Swift中，一个类可以继承另一个类的方法，属性，下标等。当一个类继承其他的时候，继承叫子类，被继承叫做父类
+ */
+
+class Person2 {
+    var name: String
+    var age: Int
+    
+    func description() -> String {
+        return "\(name) 年龄是: \(age)"
+    }
+    init() {
+        name = ""
+        age = 1
+    }
+}
 
 
+class Student2 {
+    var name: String
+    var age: Int
+    
+    var school: String
+    
+    func description() -> String {
+        return "\(name) 年龄是: \(age)"
+    }
+    init() {
+        school = ""
+        name = ""
+        age = 1
+    }
+}
 
 
+class Student3: Person2{
+    var school: String
+    override init () {
+        school = ""
+        super.init()
+        age = 8
+    }
+}
 
+/**
+ *  - Person类中定义了三个函数，构造函数直接的调用形成了构造函数
+ - *指定构造函数必须调用其直接父类的指定构造函数*
+ - *遍历构造函数必须调用同一个类中定义的其他构造函数*
+ - *遍历构造函数必须最终以调用一个指定的构造函数结束*
+ */
 
+/**
+ *  构造过程安全检查
+ */
+
+//构造函数继承
+//重写
+//重写静态属性
+//
 
 
 
