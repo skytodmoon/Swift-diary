@@ -15,14 +15,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "cityChange:", name: SD_CurrentCityChange_Notification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.cityChange(_:)), name: SD_CurrentCityChange_Notification, object: nil)
         
         cityRightBtn = TextImageButton(frame: CGRectMake(0, 20, 80, 44))
         let user = NSUserDefaults.standardUserDefaults()
         if let currentCity = user.objectForKey(SD_Current_SelectedCity) as? String {
             cityRightBtn.setTitle(currentCity, forState: .Normal)
         } else {
-            cityRightBtn.setTitle("北京", forState: .Normal)
+            cityRightBtn.setTitle("深圳", forState: .Normal)
         }
         
         cityRightBtn.titleLabel?.font = theme.SDNavItemFont
@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
     func pushcityView () {
         let cityVC = CityViewController()
         cityVC.cityName = self.cityRightBtn.titleForState(.Normal)
-        let nav = MainNavigationController(rootViewController: cityVC)
+        let nav = NavigationController(rootViewController: cityVC)
         presentViewController(nav, animated: true, completion: nil)
     }
     

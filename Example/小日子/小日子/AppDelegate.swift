@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setShared()
         
         setUserMapInfo()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.showMianViewController), name: SD_ShowMianTabbarController_Notification, object: nil)
+        
+
         // Override point for customization after application launch.
         return true
     }
