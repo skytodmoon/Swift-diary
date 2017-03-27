@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutWeViewController" customModule="小日子" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="HgW-yz-U3z" id="22g-2i-fVK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HgW-yz-U3z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PMg-lQ-d6I">
+                    <rect key="frame" x="136" y="10" width="102" height="99"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="8Vj-eX-eYC"/>
+                        <constraint firstAttribute="height" constant="99" id="H3b-KH-9gt"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboat_detail" translatesAutoresizingMaskIntoConstraints="NO" id="Zqt-DV-eYX">
+                    <rect key="frame" x="45" y="117" width="285" height="241"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="241" id="9V0-bH-I7y"/>
+                        <constraint firstAttribute="width" constant="285" id="lG8-bn-2Jd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺合作: partner@xiaorizi.me" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF5-IG-DNU">
+                    <rect key="frame" x="100" y="620" width="215" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者姓名: 醉看红尘这场梦" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5D-fJ-mLU">
+                    <rect key="frame" x="100" y="593" width="165" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本:1.0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faE-Cy-Cdp">
+                    <rect key="frame" x="0.0" y="570" width="375" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kF5-IG-DNU" secondAttribute="bottom" constant="30" id="03u-nf-k6l"/>
+                <constraint firstItem="J5D-fJ-mLU" firstAttribute="leading" secondItem="HgW-yz-U3z" secondAttribute="leading" constant="100" id="0nN-Q6-DIa"/>
+                <constraint firstItem="kF5-IG-DNU" firstAttribute="leading" secondItem="HgW-yz-U3z" secondAttribute="leading" constant="100" id="0s2-t3-h1V"/>
+                <constraint firstAttribute="centerX" secondItem="Zqt-DV-eYX" secondAttribute="centerX" id="1Ad-Hl-WFV"/>
+                <constraint firstItem="Zqt-DV-eYX" firstAttribute="top" secondItem="PMg-lQ-d6I" secondAttribute="bottom" constant="8" id="1Cj-p3-EWa"/>
+                <constraint firstItem="kF5-IG-DNU" firstAttribute="top" secondItem="J5D-fJ-mLU" secondAttribute="bottom" constant="10" id="AMx-aG-9NN"/>
+                <constraint firstAttribute="trailing" secondItem="faE-Cy-Cdp" secondAttribute="trailing" id="DUs-yL-Jsg"/>
+                <constraint firstAttribute="centerX" secondItem="PMg-lQ-d6I" secondAttribute="centerX" id="HBp-bw-Onn"/>
+                <constraint firstItem="PMg-lQ-d6I" firstAttribute="top" secondItem="HgW-yz-U3z" secondAttribute="top" constant="10" id="IPY-YP-r4f"/>
+                <constraint firstItem="faE-Cy-Cdp" firstAttribute="leading" secondItem="HgW-yz-U3z" secondAttribute="leading" id="b7R-QB-Unq"/>
+                <constraint firstItem="J5D-fJ-mLU" firstAttribute="top" secondItem="faE-Cy-Cdp" secondAttribute="bottom" constant="8" id="gJC-gC-d80"/>
+                <constraint firstAttribute="trailing" secondItem="J5D-fJ-mLU" secondAttribute="trailing" constant="110" id="rFh-cG-cAa"/>
+                <constraint firstAttribute="trailing" secondItem="kF5-IG-DNU" secondAttribute="trailing" constant="60" id="uQf-zd-z8Q"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="298.5" y="257.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aboat_detail" width="285" height="241"/>
+        <image name="logo" width="102" height="99"/>
+    </resources>
+</document>
