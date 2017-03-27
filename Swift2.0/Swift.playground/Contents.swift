@@ -1142,19 +1142,338 @@ if studentList31 == studentList41 {
 //可变Set集合
 
 
+var studentList16: Set<String> = ["张三","王五","李四"]
+print(studentList16)
+
+let removeStudent16 = studentList16.removeFirst()
+print(studentList16)
+print(removeStudent16)
+
+studentList16.insert("懂六")
+print(studentList16)
+
+let student16 = "张三"
+studentList16.remove(student16)
+print(studentList16)
+
+if !studentList16.contains(student16){
+    print("删除学生: \(student16)成功")
+}else{
+    print("删除学生: \(studentList16.count)")
+}
+
+//Set集合运算
+
+let A: Set<String> = ["a","b","c","d"]
+let B: Set<String> = ["d","c","e","f"]
+
+print("A和B交集 = \(A.intersect(B))")
+print("A和B交集 = \(A.union(B))")
+print("A和B异交集 = \(A.exclusiveOr(B))")
+
+let C = A.subtract(B)
+print("A和B差集 =\(C)")
+
+if C.isSubsetOf(A) {
+    print("C是A的子集")
+}
+
+
+//使用函数
+/**
+ 在定义一个函数关键字就是`func`,函数名需要符合标识命名规范，多个参数列表之间可以用逗号隔开，在参数列表后面使用箭头指示返回值类型，返回值有单个值和多个值，多个值返回就可以使用元组类型实现，如果函数没有返回值，用`-> 返回类型`对应的，如果函数有返回值，我们需要在函数数体使用return语句计算值得返回，如果没有返回值，函数中可以省略return语句
+ */
+
+func rectangleArea(width:Double,height:Double) -> Double {
+    let area = width * height
+    
+    return area
+}
+
+print("长方形的面积: \(rectangleArea(320, height: 480))")
+
+//使用外部参数名
+
+func rectangleArea3(width:Double,height:Double) -> Double {
+    let area = width * height
+    
+    return area
+}
+
+print("长方形的面积: \(rectangleArea(320, height: 480))")
+
+
+//修改函数名称就是外部参数
+
+func rectangleArea4(W width:Double,H height:Double) -> Double {
+    let area = width * height
+    
+    return area
+}
+
+print("长方形的面积: \(rectangleArea(320, height: 480))")
+
+
+//参数的传递引用
+func increment(inout value: Double, amout:Double = 1.0) {
+    
+    value += amout
+    
+}
+var value12: Double = 10.0
+
+increment(&value12)
+print(value12)
+
+increment(&value12, amout: 100.0)
+print(value12)
 
 
 
 
+//隐藏return关键字
+func calculate(opr: String) -> (Int, Int) -> Int {
+    
+    var result : (Int, Int)-> Int
+    
+    switch (opr) {
+    case "+":
+        result = {(a, b) in a + b }
+    default:
+        result = {
+            (a, b)  in  a - b}
+    }
+    return result
+}
+
+let f1:(Int, Int) -> Int = calculate("+")
+print("\(f1(10 , 5))")
+
+
+
+let f2:(Int, Int) -> Int = calculate("1")
+print("\(f2(10 , 5))")
+
+
+//省略参数名
+func calculate3(opr: String) -> (Int, Int) -> Int {
+    
+    var result : (Int, Int)-> Int
+    
+    switch (opr) {
+    case "+":
+        result = {$0 + $1}
+    default:
+        result = {$0 - $1}
+    }
+    return result
+}
+
+let f11:(Int, Int) -> Int = calculate3("+")
+print("\(f11(10 , 5))")
+
+
+let f21:(Int, Int) -> Int = calculate3("1")
+print("\(f21(10 , 5))")
+
+//作为函数返回类型使用
+
+
+//定义计算长方形面积的函数
+func rectangleArea7(width: Double, height: Double) -> Double {
+    
+    let area  = width * height
+    
+    return area
+}
+
+
+//定义计算三角形面积的函数
+func triangleArea8(bottom: Double, height: Double) -> Double {
+    
+    let area  = 0.5 * bottom * height
+    
+    return area
+}
+
+func getArea(type : String) -> (Double, Double) -> Double {
+    
+    var returnFunction:(Double, Double) -> Double
+    
+    switch (type) {
+    case "rect":
+        returnFunction = rectangleArea
+    case "tria":
+        returnFunction = rectangleArea
+    default:
+        returnFunction = rectangleArea
+    }
+    return returnFunction
+}
+//获得计算三角形面积的函数
+var area : (Double, Double)-> Double = getArea("tria")
+print("三角形的面积: \(area(10,15))")
+
+//获取计算长方形面积的函数
+area = getArea("rect")
+print("长方形的面积: \(area(10,15))")
+
+
+//嵌套函数
+
+func calculate11(opr: String) -> (Int, Int) -> Int {
+    //定义+函数
+    func add(a: Int, b: Int) -> Int{
+        return a + b
+    }
+    //定义-函数
+    func sub(a: Int, b: Int) -> Int{
+        return a - b
+    }
+    var result: (Int, Int) -> Int
+    
+    switch (opr) {
+    case "+":
+        result = add
+    case "-":
+        result = sub
+    default:
+        result = add
+    }
+    return result
+}
+
+let f44:(Int, Int) -> Int = calculate11("+")
+print("\(f1(10 , 5))")
+
+
+
+let f33:(Int, Int) -> Int = calculate11("1")
+print("\(f2(10 , 5))")
+
+
+
+//使用比包返回值
+
+let c1:Int = {(a: Int , b: Int) -> Int in
+    return a + b
+}(10,5)
+print("10+5 =\(c1)")
+
+let c2:Int = {(a: Int , b: Int) -> Int in
+    return a - b
+}(10,5)
+print("10-5 =\(c2)")
+
+
+//比包的概念
+
+
+func calculate33(opr: String) -> (Int, Int) -> Int {
+    
+    var result : (Int, Int)-> Int
+    
+    switch (opr) {
+    case "+":
+        result = {
+            (a: Int, b: Int) -> Int in
+            return a + b
+        }
+    default:
+        result = {
+            (a: Int, b: Int) -> Int in
+            return a - b
+        }
+    }
+    return result
+}
+
+let f16:(Int, Int) -> Int = calculate33("+")
+print("\(f1(10 , 5))")
+
+
+
+let f15:(Int, Int) -> Int = calculate33("1")
+print("\(f2(10 , 5))")
+
+//类型推断简化
+func calculate15(opr: String) -> (Int, Int) -> Int {
+    
+    var result : (Int, Int)-> Int
+    
+    switch (opr) {
+    case "+":
+        result = {(a, b) in return a + b }
+    default:
+        result = {
+            (a, b)  in return a - b}
+    }
+    return result
+}
+
+let f12:(Int, Int) -> Int = calculate15("+")
+print("\(f1(10 , 5))")
+
+
+
+let f13:(Int, Int) -> Int = calculate15("1")
+print("\(f2(10 , 5))")
 
 
 
 
+//使用尾随比包
+
+func calculate(opr: String, funN:(Int, Int) -> Int) {
+    
+    
+    switch (opr) {
+    case "+":
+        print("10 + 5 = \(funN(10,5))")
+    default:
+        print("10 - 5 = \(funN(10,5))")
+    }
+    
+}
+
+calculate("+", funN: {(a: Int, b: Int) -> Int in return a + b})
+calculate("+") {(a: Int, b: Int) -> Int in return a + b}
+calculate("+") { $0 + $1 }
+
+calculate("-"){
+    (a: Int, b: Int) -> Int in
+    return a - b
+}
+
+calculate("-"){
+    $0 + $1
+}
 
 
+//捕获上下文的变量和常量
+
+func makeArray() -> (String)-> [String] {
+    
+    var ary: [String] = [String]()
+    
+    func addElement(element: String) -> [String] {
+        ary.append(element)
+        return ary
+    }
+    return addElement
+}
 
 
+//Swift语言中的面向对象特征
 
+
+/**
+ *  *封装性: 封装就是尽可能隐藏对象的内部细节，对外形成一个边界，只保留对外接口和外部发生联系*
+ *继承性：一些特殊类能够具有一般类的全部属性和方法，这称作为特殊类对一般类的继承。比如客轮和轮船，客轮就是特殊类，轮船就是一般类，通常我们称为父类，或称为子类*
+ *多态性：对象的多态性是指父类中定义的属性或者方法被子类继承之后，可以使用同一个属性或者方法在父类以及各个子类中具有不同的含义，称为多台，比如动物有吃的方法，每个动物都有不同的吃法*
+ */
+
+//成员值
 
 
 
