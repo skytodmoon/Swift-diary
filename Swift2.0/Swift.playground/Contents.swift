@@ -518,6 +518,468 @@ for doc in docFolder {
 print("文件夹world文档是: \(javaDocCount)")
 
 
+//控制语句
+
+//- 分支语句：if switch guard
+//- 循环语句：while repeat-while for for-in
+//- 跳转语句: break continue fallthrough return throw
+
+//if语句
+
+var score3 = 95
+
+if score3 >= 85 {
+    print("你真优秀")
+}
+
+if score3 < 60 {
+    print("你需要努力加倍学习")
+}
+
+if score3 >= 60 && score3 < 85 {
+    print("你的成绩还可以，任需要继续加油")
+}
+
+/**
+ *  if 条件语句表达式{
+ 语句组1
+ }else{
+ 语句组2
+ }
+ */
+
+//else-if 语句
+
+let testscore = 76
+var grade3: Character
+
+if testscore >= 90 {
+    grade3 = "A"
+}else if testscore >= 80 {
+    grade3 = "B"
+}else if testscore >= 70 {
+    grade3 = "C"
+}else if testscore >= 60 {
+    grade3 = "D"
+}else{
+    grade3 = "F"
+}
+print("Grade = \(grade3)")
+
+//swith语句
+
+let testscore3 = 86
+var grade4: Character
+
+switch testscore3 / 10 {
+case 9:
+    grade4 = "优"
+case 8:
+    grade4 = "良"
+case 7,6:
+    grade4 = "中"
+default:
+    grade4 = "差"
+}
+print("Grade = \(grade4)")
+
+
+let value = 1.000
+var desc: String
+
+switch value {
+case 0.0:
+    desc = "最小值"
+case 0.5:
+    desc = "中值"
+case 1.0:
+    desc = "最大值"
+default:
+    desc = "其他值"
+}
+print("说明 = \(desc)")
+
+
+let level2 = "优"
+var desc2: String
+
+switch level2 {
+case "优":
+    desc2 = "90分以上"
+case "良":
+    desc2 = "80分~90分"
+case "中":
+    desc2 = "70分~80分"
+case "差":
+    desc2 = "低于60分"
+default:
+    desc2 = "无法判断"
+}
+print("说明 = \(desc2)")
+
+//guard语句
+
+/**
+ *  定义一个Blog结构体
+ */
+
+struct Blog {
+    
+    let name11: String?
+    let URL11: String?
+    let Author11: String?
+}
+
+func isLongStyleBlog(blog: Blog) {
+    
+    if let blogName = blog.name11 {
+        print("这篇博客名: \(blogName)")
+        
+        if let blogAuthor = blog.Author11 {
+            print("这篇博客名由\(blogAuthor)写的")
+            
+            if let blogURL = blog.Author11 {
+                print("这篇博客名: \(blogURL)")
+            }else {
+                print("这篇博客没有网址!")
+            }
+            
+        }else{
+            print("这篇博客没有作者")
+        }
+        
+    }else{
+        print("这篇博客没有名字")
+    }
+}
+
+func guardLongStyleBlog(blog: Blog) {
+    
+    guard let blogName = blog.name11 else {
+        print("这篇博客没有名字!")
+        return
+    }
+    print("这篇博客名：\(blogName)")
+    
+    guard let blogAuthor = blog.Author11 else {
+        print("这篇博客没有作者!")
+        return
+    }
+    
+    print("这篇博客由：\(blogAuthor)写的")
+    
+    guard let blogURL = blog.URL11 else {
+        print("这篇博客没有网址!")
+        return
+    }
+    
+    print("这篇博客网址：\(blogURL)")
+    
+}
+
+
+//循环语句var i: Int64 = 0
+
+while i * i < 100_000 {
+    i += 1
+}
+
+print("i = \(i)")
+print("i = \(i * i)")
+
+//repea-while语句
+
+var i1: Int64 = 0
+
+repeat {
+    i1 += 1
+}while i1 * i1 < 100_100
+
+print("i = \(i1)")
+print("i * i = \(i1 * i1)")
+
+
+
+//for语句
+
+print("n  n*n")
+print("_____________")
+
+for i12 in 1 ..< 10 {
+    print("\(i12) x \(i12) = \(i12 * i12)")
+}
+
+var x13: Int32
+var y13: Int32
+
+for x13 = 0, y13 = 10; x13 < y13; x13++, y13-- {
+    print("(x13,y13) = (\(x13), \(y13))")
+}
+
+
+//for-in语句
+
+let numbers = [1,2,3,4,5,6,7,8,9,10]
+
+print("------for------")
+
+for i14 in 0 ..< numbers.count {
+    print("Count is: \(i14)")
+}
+
+/**
+ *  采用for-in循环语句遍历
+ */
+
+let numbers3 = [1,2,3,4,5,6,7,8,9,10]
+
+print("------for------")
+
+for item in numbers3 {
+    print("Count is: \(item)")
+}
+
+
+/**
+ *  items是循环变量，item之前使用var声明，它采用的是隐藏变量声明，in后面是集合实例，for-in循环语句将后面集合中的元素一一取出来，保存在item语句遍历集合的时候要简单方便很多，在for-in语句中如果需要循环变量，可以使用eumerate方法
+ */
+
+//假设有一个数组，原来遍历数组的方式
+
+let numbers4 = [1,2,3,4,5,6,7,8,9,10]
+
+
+for (index, element) in numbers4.enumerate() {
+    print("Item \(index): \(element)")
+}
+
+
+//break语句
+
+label1: for x in 0 ..< 5 {
+    label2: for var y = 5; y > 0; y -= 1 {
+        if y == x {
+            break label1
+        }
+        print("(x,y) = (\(x),\(y)")
+    }
+}
+
+
+//continue语句
+
+//带有标签的continue语句示例
+label1: for x in 0 ..< 5 {
+    label2: for var y = 5; y > 0; y -= 1 {
+        if y == x {
+            continue label1
+        }
+        print("(x,y) = (\(x),\(y)")
+    }
+}
+
+print("Gamer Over")
+
+
+//fallthrough语句
+
+var j = 1
+var x15 = 4
+
+
+switch x15 {
+case 1:
+    j += 1
+case 2:
+    j += 1
+case 3:
+    j += 1
+case 4:
+    j += 1
+case 5:
+    j += 1
+default:
+    j += 1
+}
+print("j = \(j)")
+
+
+var j12 = 1
+var x18 = 4
+
+switch x18 {
+case 1:
+    j12 += 1
+case 2:
+    j12 += 1
+case 3:
+    j12 += 1
+case 4:
+    j12 += 1
+    fallthrough
+case 5:
+    j12 += 1
+    fallthrough
+default:
+    j12 += 1
+}
+print("j12 = \(j12)")
+
+//swich中使用区间运算符
+
+let testScore = 80
+
+var grade: Character
+
+switch testScore {
+case 90...100:
+    grade = "优"
+case 80..<90:
+    grade = "良"
+case 60..<80:
+    grade = "中"
+case 0..<60:
+    grade = "差"
+default:
+    grade = "无"
+}
+
+print("Grade = \(grade)")
+
+var  student = (id: "10002", name: "李四", age: 32, ChineseScore: 80, EnglishScore: 89)
+var  deac: String
+
+switch student {
+case (_,_,_, 90...100, 90...100):
+    deac = "优"
+case (_,_,_, 80..<90, 80..<90):
+    deac = "良"
+case (_,_,_, 60..<80, 60..<80):
+    deac = "中"
+case (_,_,_, 60..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac = "偏科"
+case (_,_,_, 0..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac = "严重偏科"
+default:
+    deac = "无"
+}
+
+print("说明: \(deac)")
+
+
+
+//for-in中使用区间运算符
+
+let numbers11 = [1,2,3,4,5,6,7,8,9,10]
+
+let count11 = numbers11.count
+print("----半个开区间-----")
+
+
+print("----闭区间-----")
+
+for i in 0...5 {
+    print("第\(i + 1)个元素: \(numbers11[i])")
+}
+
+//if中的值绑定
+
+
+//定义一个Blog(博客)结构体
+struct Blog2 {
+    let name8: String?
+    let URL8: String?
+    let Author8: String?
+}
+
+func isStyleBlog(blog: Blog2) {
+    
+    if let blogName = blog.name8,
+        let _ = blog.URL8,
+        let _ = blog.Author8 {
+        print("这篇博客名: \(blogName)")
+        print("这篇博客名: \(blogName)")
+        print("这篇博客名: \(blogName)")
+    } else {
+        print("这篇博客信息不完整")
+    }
+}
+
+let blog1 = Blog(name11: nil, URL11: "www.baidu.com", Author11: "Tom")
+let blog2 = Blog(name11: "Tony", URL11: "www.baidu.com", Author11: "Tony")
+
+print("--blog1--")
+
+
+print("--blog2--")
+
+
+//swith中的值绑定
+
+var  student7 = (id: "10002", name: "李四", age: 32, ChineseScore: 90, EnglishScore: 91)
+var  deac7: String
+
+switch student7 {
+case (_,_, let AGE,90...100, 90...100):
+    if (AGE > 30) {
+        deac7 = "老优"
+    }else{
+        deac7 = "小优"
+    }
+    
+case (_,_,_, 80..<90, 80..<90):
+    deac7 = "良"
+case (_,_,_, 60..<80, 60..<80):
+    deac7 = "中"
+case (_,_,_, 60..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac7 = "偏科"
+case (_,_,_, 0..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac7 = "严重偏科"
+default:
+    deac7 = "无"
+}
+
+print("说明: \(deac7)")
+
+
+//switch中使用where语句
+
+
+var  student9 = (id: "10002", name: "李四", age: 32, ChineseScore: 90, EnglishScore: 91)
+var  deac9: String
+
+switch student9 {
+case (_,_, let age,90...100, 90...100):
+    deac9 = "优"
+case (_,_,_, 80..<90, 80..<90):
+    deac9 = "良"
+case (_,_,_, 60..<80, 60..<80):
+    deac9 = "中"
+case (_,_,_, 60..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac9 = "偏科"
+case (_,_,_, 0..<80, 90...100),(_,_,_, 90...100, 60..<80):
+    deac9 = "严重偏科"
+default:
+    deac9 = "无"
+}
+
+print("说明: \(deac9)")
+
+
+//for-in中使用where语句
+
+let numbers18 = [1,2,3,4,5,6,7,8,9,10]
+
+print("----for-in-----")
+
+for item in numbers18 where item > 5 {
+    print("Count is: \(item)")
+}
+
+
+
+
+
 
 
 
