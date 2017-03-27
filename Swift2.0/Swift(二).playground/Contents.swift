@@ -1,3 +1,5 @@
+import UIKit
+
 //重写静态方法
 class Account {
     //账户名
@@ -300,6 +302,94 @@ enum EnumImp: Account12 {
 
 //协议变异方法
 
+protocol Editable {
+    mutating func edit()
+}
 
+class ClassImp7: Editable {
+    var name = "ClassImp"
+    func edit() {
+        print("编辑了")
+        self.name = "编辑了"
+    }
+}
+
+struct StructImp: Editable {
+    var name = "StructImp"
+    mutating func edit() {
+        print("编辑了")
+        self.name = "编辑了"
+    }
+}
+
+enum EnumImp7: Editable {
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    
+    mutating func edit() {
+        print("编辑了")
+        self = .Friday
+    }
+}
+
+var classInstance: Editable = ClassImp7()
+classInstance.edit()
+
+var structInstance: Editable = StructImp()
+structInstance.edit()
+
+var enumInstance: Editable = EnumImp7.Monday
+enumInstance.edit()
+
+//协议合成
+//定义轮船协议
+
+protocol Ship {
+    //排水量
+    var displacement: Double { get set }
+}
+
+//定义武器协议
+
+protocol Weapon {
+    //火炮门数
+    var gunNumber: Int { get set }
+}
+//定义军舰类
+class WarShip10: Ship,Weapon {
+    //排水量
+    var displacement: Double = 1000_000.00
+    //火炮门数
+    var gunNumber = 10
+}
+
+func showWarResource(resource: protocol<Ship,Weapon>) {
+    print("Ship \(resource.displacement) - Weapon \(resource.gunNumber)")
+}
+
+
+
+//class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+//    var listTeams: [[String: String]]!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+//    //UITableViewDelegate
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 10
+//    }
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//    }
+//    
+//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//    }
+//}
 
 
