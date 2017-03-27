@@ -977,6 +977,174 @@ for item in numbers18 where item > 5 {
 }
 
 
+//guard中使用where语句
+
+//定义一个Blog(博客)结构体
+struct Blog8 {
+    let name8: String?
+    let URL8: String?
+    var Author8: String?
+}
+
+func guardStyleBlog(blog8: Blog8) {
+    
+    guard let blogName = blog8.name8
+        where blog8.Author8 == "Tony" && blogName == "Tony Blog" else {
+            
+            print("这篇博客信息名字")
+            return
+    }
+    print("这篇博客名: \(blogName)")
+    
+}
+//Swift中的数组集合
+
+//数组声明和初始话
+
+/**
+ *  Swift数组类型是Array，Array是结构类型，是一个一个维泛型的集合
+ *  Foundation框架也有数组类型，NSArray。NSarray是一个类，而并非Array结构体，因此提到数组时，应该明确Swift中的Array数组，还是Foundation框架中的NSArray数组，它们之间可以通过，相互转化。
+ * 在声明一个Array类的时候可以使用下面语句
+ * var studentList1: Array<String>`
+ * var studentList2: [String]`
+ * 其中studnetList1明确指定类型为Array<String>,<String>是泛型，说明这个数组中只能存放字符串类型的数据，studnetList2变量也是一个只能存放字符串的数组。[stirng]和array<Stirng>是等价的[String]是简化写法
+ * 上面声明的Array还不能运行，还需要初始话；array类型往往在声明的同时初始化，
+ */
+
+var studentList1: Array<String> = ["张三","李四","王五","童六"]
+
+var studentList2: [String] = ["张三","李四","王五","童六"]
+
+var studentList3: [String] = ["张三","李四","王五","童六"]
+
+var studentList4: [String];
+
+//可变数组
+
+var studentList: Array<String> = ["张三","李四","王五"]
+
+print(studentList)
+
+studentList.append("童六")
+print(studentList)
+
+studentList += ["刘备","关羽"]
+print(studentList)
+
+studentList.insert("张飞", atIndex: studentList.count)
+print(studentList)
+
+let removeStudent = studentList.removeAtIndex(0)
+print(studentList)
+
+studentList[0] = "诸葛亮"
+print(studentList)
+
+
+var studentList13: [String] = ["张三","李四","王五"]
+
+for item in studentList13 {
+    
+    print(item)
+}
+for (index, value) in studentList13.enumerate(){
+    print("Item \(index + 1) : \(value)")
+}
+
+//字典声明和初始化
+
+var studentDictionary1: Dictionary<Int, String> = [102:"李四",105:"王五",109:"李四"]
+
+var studentDictionary2 = [102 : "李四",105 : "王五",109 : "李四"]
+
+var studentDictionary3 = [102 : "李四",105 : "王五",109 : "李四"]
+
+var studentDictionary4 = Dictionary<Int,String>()
+var studentDictionary5 = [Int: String]()
+
+//可变字典
+
+/**
+ *  不可变字典和可变字典的关系类似于不可变数组和可变数组之间的关系，var声明的字典是可变字典，如果初始化之后不再修改字典，应该将字典声明为let，即不变的字典
+  字典元素的删除方法有两种，一种是给一个键赋值nil，这样可以删除元素，一种是通过字典removeValueForkey方法删除元素，方法返回值是要删除的值
+ 字典元素替换也有两种，一种是直接给一个存在的赋值，这样新值就会替换旧值，另一种方法通过updateValue方法替换
+ */
+
+
+var studentDictionary: Dictionary<Int, String> = [102:"李四",105:"王五",109:"李四"]
+
+studentDictionary[110] = "懂六"
+
+print("班级人数: \(studentDictionary.count)")
+
+let dismissStudent = studentDictionary.removeValueForKey(102)
+
+print("开除的学生 \(dismissStudent!)")
+
+studentDictionary[105] = nil
+
+studentDictionary[109] = "张三"
+
+let replaceStudent = studentDictionary.updateValue("李四", forKey: 110)
+
+print("被替换的学生是: \(replaceStudent)")
+
+//字典遍历
+
+var studentDictionary12 = [102 : "李四",105 : "王五",109 : "李四"]
+
+print("----遍历键---")
+for studentID in studentDictionary12.keys {
+    print("学号: \(studentID)")
+}
+
+print("----遍历键---")
+for studentName in studentDictionary12.values {
+    print("学号: \(studentName)")
+}
+
+
+print("----遍历键---")
+for (studentID,studentName) in studentDictionary12 {
+    print("\(studentID): \(studentName)")
+}
+
+
+//Set集合
+
+/**
+ *  如果数组比较，数组中的元素是有序的，可以重复出现，可以重复出现，而Set是无序的，不能重复的元素。数组强调的是有序的，Set强调是不重复的*
+ *  Set类型是set，set是一个结构体类型，也是一个一维泛型集合*
+ *  NSSet是一个类，而结构体，因此Set应该明确是set，它们之间可以通过相互转化*
+ */
+
+
+let studentList11: Set<String> = ["张三","王五","李四"]
+var studentList21 = Set<String>()
+
+var studentList31 = ["张三","王五","李四","懂六"]
+var studentList41: [String] = ["张三","王五","李四","懂六"]
+
+let studentList51: Set<String> = ["张三","王五","李四"]
+
+if studentList11 == studentList51 {
+    print("studentList11等于studentList51")
+}else{
+    print("studentList11不等于studentList51")
+}
+
+if studentList31 == studentList41 {
+    print("studentList31等于studentList41")
+}else{
+    print("studentList31不等于studentList41")
+}
+
+//可变Set集合
+
+
+
+
+
 
 
 
