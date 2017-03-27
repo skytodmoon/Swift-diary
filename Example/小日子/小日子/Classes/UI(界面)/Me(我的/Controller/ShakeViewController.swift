@@ -27,7 +27,7 @@ class ShakeViewController: UIViewController {
         button.setBackgroundImage(UIImage(named: "fsyzm"), forState: .Normal)
         button.setTitle("在摇一次", forState: .Normal)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        button.addTarget(self, action: "aginButtonClick", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(ShakeViewController.aginButtonClick), forControlEvents: .TouchUpInside)
         foodView.addSubview(button)
         return foodView
     }()
