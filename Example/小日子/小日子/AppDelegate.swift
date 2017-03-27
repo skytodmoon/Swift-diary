@@ -92,10 +92,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func showMianViewController() {
-//        let mainTabBarVC = MainTabBarController()
-//        self.window!.rootViewController = mainTabBarVC
-//        let nav = mainTabBarVC.viewControllers![0] as? NavigationController
-//        (nav?.viewControllers[0] as! MainViewController).pushcityView()
+        let mainTabBarVC = MainTabBarController()
+        self.window!.rootViewController = mainTabBarVC
+        let nav = mainTabBarVC.viewControllers![0] as? NavigationController
+        (nav?.viewControllers[0] as! MainViewController).pushcityView()
     }
     
     func applicationDidReceiveMemoryWarning(application: UIApplication) {
