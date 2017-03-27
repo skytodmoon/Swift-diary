@@ -18,7 +18,7 @@ class CityViewController: UIViewController {
     var layout = UICollectionViewFlowLayout()
     
     lazy var domesticCitys: NSMutableArray? = {
-        let arr = NSMutableArray(array: ["北京", "上海", "成都", "广州", "杭州", "西安", "重庆", "厦门", "台北"])
+        let arr = NSMutableArray(array: ["深圳", "上海", "北京", "成都", "广州", "杭州", "西安", "重庆", "厦门"])
         return arr
     }()
     lazy var overseasCitys: NSMutableArray? = {
