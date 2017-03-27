@@ -1475,6 +1475,519 @@ func makeArray() -> (String)-> [String] {
 
 //成员值
 
+enum WeekDays {
+    case Monday, Tuesday,Wednesday,Thursday,Firday
+}
+
+var day  = WeekDays.Firday
+day = WeekDays.Wednesday
+day = .Monday
+
+func writeGreeting(day: WeekDays)  {
+    
+    switch day {
+    case .Monday:
+        print("星期一好")
+    case .Tuesday:
+        print("星期二好")
+    case .Monday:
+        print("星期三好")
+    case .Wednesday:
+        print("星期四好")
+    case .Firday:
+        print("星期五好")
+    default:
+        break
+    }
+}
+
+writeGreeting(day)
+writeGreeting(WeekDays.Firday)
+
+
+/**
+ *  使用枚举成员赋值，我们可以采用完整的“枚举类型名，成员值”的形式，也可以省略枚举类型儿采用“成员值”的形式，这种省略形式能够访问的前提是，Swift编辑器能够根据上下文环境推断类型
+ - 为了方便反复的调用，我们定义writeGretting函数，枚举类型siwtch能够很好地配合使用，在switch语句中使用枚举没有default分支
+ - 在Swift中使用枚举类型时，siwtch语句中的case必须全面包含枚举中的所有成员，不能多也不能少，包括使用default的情况下，defaul也表示某个枚举成员
+ */
+
+//原始值
+
+
+enum WeekDays2: Int {
+    case Monday = 0, Tuesday,Wednesday,Thursday,Firday
+}
+
+var day2  = WeekDays2.Firday
+
+
+func writeGreeting2(day: WeekDays2)  {
+    
+    switch day {
+    case .Monday:
+        print("星期一好")
+    case .Tuesday:
+        print("星期二好")
+    case .Monday:
+        print("星期三好")
+    case .Wednesday:
+        print("星期四好")
+    case .Firday:
+        print("星期五好")
+    default:
+        break
+    }
+    
+}
+
+let firday = WeekDays2.Firday.rawValue
+let thursday = WeekDays2(rawValue: 3)
+
+if(WeekDays2.Firday.rawValue == 4){
+    print("星期五好")
+}
+writeGreeting(day)
+
+//相关值
+enum Figure {
+    case Rectangle(Int, Int)
+    case Circle(Int)
+}
+
+func printFigure(figure: Figure)  {
+    switch figure {
+    case .Rectangle(let width, let height):
+        print("矩形的宽：\(width), 高: \(height)")
+    case.Circle(let radius):
+        print("圆形的半径为:\(radius)")
+    }
+}
+
+var figure = Figure.Rectangle(1024, 768)
+printFigure(figure)
+
+figure = .Circle(600)
+printFigure(figure)
+
+
+//类和构造体定义
+
+class Employee {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    
+    var dept: DEpartment?   //所在部门
+}
+
+struct DEpartment {   //所在部门结构体
+    var no: Int = 0     //部门编号属性
+    var name: String = "" //部门名称属性
+}
+//值类型和引用类型
+/*数据类型可以分支为值类型和引用类型，这是由赋值或者参数传递方式决定的，值类型就是赋值给函数传递参数时创建一个副本，把副本传递过去这样在函数的调用过程中不会影响原始数据，引用累心就是在赋值或者给函数传递参数的时候本身引用传递过去，这样在函数的调用过程中会影响原始数据
+ - 谨记：只有类是引用类型，其他类型全部都是值类型，即构造体非常相似，它也是值类型。值类型包括整型，浮点型，布尔型，字符串，元组，集合，还有枚举
+ *
+ */
+
+
+class Employee14 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    
+    var dept: DEpartment?   //所在部门
+}
+
+struct DEpartment14 {   //所在部门结构体
+    var no: Int = 0     //部门编号属性
+    var name: String = "" //部门名称属性
+}
+
+var dept = DEpartment()
+dept.no = 10
+dept.name = "Sales"
+
+let emp = Employee()
+emp.no = 1000
+emp.name = "Martin"
+emp.job = "Slesman"
+emp.salary = 1250
+emp.dept = dept
+
+func updateDept ( inout dept: DEpartment){
+    dept.name = "Research"
+}
+print("Department更新前:\(dept.name)")
+updateDept(&dept)
+print("Department更新后:\(dept.name)")
+
+func unodateEmp(emp: Employee){
+    emp.job = "Clerk"
+}
+
+print("Department更新前:\(dept.name)")
+unodateEmp(emp)
+print("Department更新后:\(dept.name)")
+
+
+//引用类型的比较
+
+class Employee13 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    
+    var dept: DEpartment?   //所在部门
+}
+
+struct DEpartment13 {   //所在部门结构体
+    var no: Int = 0     //部门编号属性
+    var name: String = "" //部门名称属性
+}
+
+var dept3 = DEpartment()
+dept3.no = 10
+dept3.name = "Sales"
+
+let emp1 = Employee()
+emp1.no = 1000
+emp1.name = "Martin"
+emp1.job = "Slesman"
+emp1.salary = 1250
+emp1.dept = dept
+
+let emp2 = Employee()
+emp2.no = 1000
+emp2.name = "Martin"
+emp2.job = "Slesman"
+emp2.salary = 1250
+emp2.dept = dept
+
+if emp1 === emp2 {
+    print("emp1 === emp2")
+}
+
+if emp1 === emp1 {
+    print("emp1 === emp1")
+}
+
+var dept1 = DEpartment()
+dept1.no = 10
+dept1.name = "Saler"
+
+var dept2 = DEpartment()
+dept2.no = 10
+dept2.name = "Saler"
+
+//类型嵌套
+
+class Employee19 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    var dept: Department19 = Department19()   //所在部门
+    var day: WeekDays = WeekDays.Firday
+    
+    struct Department19 {
+        var no: Int = 10
+        var name: String = "SALES"
+    }
+    
+    enum WeekDays19 {
+        case Monday, Tuesday,Wednesday,Thursday,Firday
+        
+        struct Day {
+            static var message: String = "Today is..."
+        }
+    }
+}
+
+
+var emp19 = Employee19()
+print(emp19.dept.name)
+print(emp19.day)
+
+//可选类型中的感叹号
+
+/**
+ *  声明这个类型可选类型，访问这种类型的变量或常量可以不使用感叹号
+ */
+
+//可选链的感叹号
+
+/***
+ *  多个实例具有关联的关系，当从一个没有实例应用另外一个实例的方法，属性和下标等救赎形成引用链，由于这个链条某些环节可能有值，也可能没有值
+ */
+
+//可选类型中的问号(?)
+//访问范围
+
+/**
+ *  首先，我们需要搞清楚范围的界面，访问范围主要有两个：模块和源文件
+ - 模块是指一个应用程序包或者一个框架，在siwft中，我们可以用import关键字模块引用到自己的店工程中
+ - 框架也是很多Swift文件以及其他文件的集合，但是和应用程序包不同的是，它编译的结果不可执行文件
+ - 源文件是指Swift中的.Swift文件，编译之后被包含在应用程序或者框架中。通常一个源文件包含一个对象类型(类，结构体和枚举)，这些类型又包含函数，属性
+ */
+
+//使用访问级别最佳实践
+
+class Employee15 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    var dept: DEpartment15?   //所在部门
+}
+
+internal struct DEpartment15 {
+    var no: Int = 0
+    var name: String = ""
+}
+
+//编译错误
+//public let emp = Employee()
+//public var emp = Employee
+
+
+
+//- 定义了private级别的类Employee，所以当代码创建声明emp常量时，会发生编译错误，定义inernal的机构提Departement，创建声明dept变量是，会发生编译错误
+
+class Employee21 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    var dept: DEpartment21?   //所在部门
+}
+
+internal struct DEpartment21 {
+    var no: Int = 0
+    var name: String = ""
+}
+//编译错误
+//public func getEmpDept(emp: Employee) -> DEpartment21? {
+//    return emp.dept
+//}
+
+//设计原则
+
+/**
+ *  如果我们编写的应用程序中，应用程序包中的所有siwft文件某其中定义的实体都是提供应用使用的，而不是提供其他模块使用的，那么我们就不用1设置访问级别了
+ - 如果我们开发的是框架，框架编译的文件不能独立运行，因此它天生就给被人使用，这种情况要详细设计其中的Swift文件和实体访问的级别，让别人使用的可以设定为public，不想让别人看到的可以设定internal或者private
+ */
+
+//元祖类型的访问级别
+
+
+class Employee22 {
+    var no: Int = 0   //员工类
+    var name: String = "" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    var dept: DEpartment22?   //所在部门
+}
+
+internal struct DEpartment22 {
+    var no: Int = 0
+    var name: String = ""
+}
+
+private let emp22 = Employee()
+var dept22 = DEpartment22()
+
+private var student22 = (dept, emp)
+
+//枚举类型的访问级别
+
+public enum WeekDays15 {
+    
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+}
+
+//## 选择类还是结构体最佳实践
+//#### 类和结构体异同
+//##### 类和结构体都具有以下功能
+//- 定义存储属性
+//- 定义方法
+//- 定义下标
+//- 定义构造函数
+//- 定义扩展
+//- 实现协议
+//
+//##### 只有类才有的功能
+//
+//- 能够继承另外一个类
+//- 能够核对运行时对象的类型
+//- 分析构对象释放资源
+//- 引用计数允许一个实例有多个引用
+//
+//#### 选择的原则
+
+//计算属性的概念
+
+class Employee32 {
+    var no: Int = 0   //员工类
+    var firstName: String = "Tony" // 员工编号属性
+    var lastName: String = "Guan" // 员工编号属性
+    var job: String?        //员工姓名属性
+    var salary: Double = 0  //工作属性
+    lazy var dept: Department32 = Department32()
+    
+    var fullName: String {
+        get {
+            return firstName + "." + lastName
+        }
+        set (newFullName) {
+            var name = newFullName.componentsSeparatedByString(".")
+            firstName = name[0]
+            lastName = name[0]
+            
+        }
+    }
+}
+
+struct Department32 {
+    var no: Int = 0
+    var name: String = ""
+}
+
+//静态属性
+
+/**
+ *   在介绍静态属性之前，我们先看看一个类的设计，有一个Account类，假设它们有三个属性：amout insterestReae owner，这三个属性中，会因人而异，对应的账户这些内容是不同的
+ - amount和owner属性和账户个体有关，称为实例属性，insteresRates属性和个体无关，或者说所有账户个体是共享的，这种属性称为静态属性或者类型属性
+ - 语法格式
+ */
+
+struct Account {
+    var amount: Double = 0.0  //账户金额
+    var owner: String = ""  //账户名
+    
+    static var insteresRete: Double = 0.0668  //利率
+    
+    static var staticProp: Double {
+        
+        return insteresRete * 1_00_00
+    }
+    var instanceProp: Double {
+        
+        return Account.insteresRete * amount
+        
+    }
+}
+
+//访问静态属性
+print(Account.staticProp)
+
+var myAccount = Account()
+//访问实例属性
+myAccount.amount = 1_00_00
+//访问静态属性
+print(myAccount.instanceProp)
+
+
+enum Account2 {
+    
+    case 中国银行
+    case 中国工商银行
+    case 中国建设银行
+    case 中国农业银行
+    
+    
+    static var insteresRete: Double = 0.0668  //利率
+    
+    static var staticProp: Double {
+        
+        return insteresRete * 1_000_00
+    }
+    var instanceProp: Double {
+        
+        switch self {
+        case .中国银行:
+            Account.insteresRete = 0.667
+        case .中国工商银行:
+            Account.insteresRete = 0.687
+        case .中国建设银行:
+            Account.insteresRete = 0.697
+        case .中国农业银行:
+            Account.insteresRete = 0.687
+        }
+        return Account.insteresRete * 1_000_00
+    }
+}
+
+//访问静态属性
+print(Account2.staticProp)
+
+var myAccount2 = Account2.中国工商银行
+
+//访问静态属性
+print(myAccount.instanceProp)
+
+
+//二维数组
+
+struct DoubleDimensionalArray {
+    
+    let rows: Int, columns: Int
+    var grid: [Int]
+    
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(count: rows * columns, repeatedValue: 0)
+    }
+    subscript(row: Int, col: Int) -> Int {
+        get{
+            return grid[(row * columns) + col]
+        }
+        set(newValue1){
+            grid[(row * columns) + col] = newValue1
+        }
+    }
+}
+
+var ary2 = DoubleDimensionalArray(rows: 10, columns: 10)
+
+//初始话二位数组
+for i in 0 ..< 10 {
+    for j in 0 ..< 10 {
+        ary2[i,j] = i * j
+    }
+}
+
+//打印输出二位数组
+for i in 0 ..< 10 {
+    for j in 0 ..< 10 {
+        print("\t (ary2[i,j])")
+    }
+    print("\n")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
