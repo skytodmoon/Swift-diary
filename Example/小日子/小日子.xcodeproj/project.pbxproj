@@ -36,6 +36,12 @@
 		5B5930851E8A15BF00839FAD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930841E8A15BF00839FAD /* MapView.swift */; };
 		5B59308A1E8A18A500839FAD /* nearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930881E8A18A500839FAD /* nearCell.swift */; };
 		5B59308B1E8A18A500839FAD /* nearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930891E8A18A500839FAD /* nearCell.xib */; };
+		5B59308D1E8A19DA00839FAD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59308C1E8A19DA00839FAD /* DetailViewController.swift */; };
+		5B59308F1E8A1A1800839FAD /* GuessLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59308E1E8A1A1800839FAD /* GuessLikeView.swift */; };
+		5B5930911E8A1A2600839FAD /* GuessLikeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930901E8A1A2600839FAD /* GuessLikeView.xib */; };
+		5B5930931E8A1A5000839FAD /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930921E8A1A5000839FAD /* MoreView.swift */; };
+		5B5930951E8A1A5C00839FAD /* MoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930941E8A1A5C00839FAD /* MoreView.xib */; };
+		5B5930971E8A1A8E00839FAD /* EventWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930961E8A1A8E00839FAD /* EventWebView.swift */; };
 		5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */; };
 		5B8774F01E64000B0066F5D7 /* ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */; };
 		5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774F11E6400310066F5D7 /* DetailCell.swift */; };
@@ -154,6 +160,12 @@
 		5B5930841E8A15BF00839FAD /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5B5930881E8A18A500839FAD /* nearCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearCell.swift; sourceTree = "<group>"; };
 		5B5930891E8A18A500839FAD /* nearCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearCell.xib; sourceTree = "<group>"; };
+		5B59308C1E8A19DA00839FAD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B59308E1E8A1A1800839FAD /* GuessLikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessLikeView.swift; sourceTree = "<group>"; };
+		5B5930901E8A1A2600839FAD /* GuessLikeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuessLikeView.xib; sourceTree = "<group>"; };
+		5B5930921E8A1A5000839FAD /* MoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		5B5930941E8A1A5C00839FAD /* MoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreView.xib; sourceTree = "<group>"; };
+		5B5930961E8A1A8E00839FAD /* EventWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventWebView.swift; sourceTree = "<group>"; };
 		5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyViewController.swift; sourceTree = "<group>"; };
 		5B8774F11E6400310066F5D7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -325,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				5B5930801E8A14B400839FAD /* ExperienceViewController.swift */,
+				5B59308C1E8A19DA00839FAD /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +544,11 @@
 				5B5930841E8A15BF00839FAD /* MapView.swift */,
 				5B5930881E8A18A500839FAD /* nearCell.swift */,
 				5B5930891E8A18A500839FAD /* nearCell.xib */,
+				5B59308E1E8A1A1800839FAD /* GuessLikeView.swift */,
+				5B5930901E8A1A2600839FAD /* GuessLikeView.xib */,
+				5B5930921E8A1A5000839FAD /* MoreView.swift */,
+				5B5930941E8A1A5C00839FAD /* MoreView.xib */,
+				5B5930961E8A1A8E00839FAD /* EventWebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -712,6 +730,7 @@
 				5B8952441E5BC7DC006B9187 /* Experience in Resources */,
 				1D6AD7A71E5B2F3200CF50C7 /* LaunchScreen.storyboard in Resources */,
 				5B89523F1E5BC7DC006B9187 /* 南锣鼓巷 in Resources */,
+				5B5930911E8A1A2600839FAD /* GuessLikeView.xib in Resources */,
 				1D6AD7A41E5B2F3200CF50C7 /* Assets.xcassets in Resources */,
 				5B8774F41E6400310066F5D7 /* DetailCell.xib in Resources */,
 				5B89525F1E5BDD70006B9187 /* fourpage-375w-667h@2x.jpg in Resources */,
@@ -730,6 +749,7 @@
 				1D6AD7A21E5B2F3200CF50C7 /* Main.storyboard in Resources */,
 				5B89523E1E5BC7DC006B9187 /* 798 in Resources */,
 				5B8952641E5BDD7B006B9187 /* author@2x.png in Resources */,
+				5B5930951E8A1A5C00839FAD /* MoreView.xib in Resources */,
 				5B8952611E5BDD70006B9187 /* fourpage-568h@2x.jpg in Resources */,
 				5B8952601E5BDD70006B9187 /* fourpage-414w-736h@3x.jpg in Resources */,
 				5B8952431E5BC7DC006B9187 /* events in Resources */,
@@ -815,8 +835,10 @@
 				5B959DB41E5C4BFA00D0E0FE /* MainTabBarController.swift in Sources */,
 				5B959DA51E5C4B3500D0E0FE /* UserAccountTool.swift in Sources */,
 				5B59308A1E8A18A500839FAD /* nearCell.swift in Sources */,
+				5B5930931E8A1A5000839FAD /* MoreView.swift in Sources */,
 				5B94E6ED1E5D27CF000F69AB /* SettingCell.swift in Sources */,
 				5B5930741E8A121400839FAD /* NearViewController.swift in Sources */,
+				5B59308D1E8A19DA00839FAD /* DetailViewController.swift in Sources */,
 				5B102B8D1E8930C600F914BE /* ClassifyModel.swift in Sources */,
 				5B959DB21E5C4BFA00D0E0FE /* LeadpageViewController.swift in Sources */,
 				5B94E6D61E5D1D1E000F69AB /* String+Hash.swift in Sources */,
@@ -832,6 +854,7 @@
 				5B94E6F01E5D2A17000F69AB /* FileTool.swift in Sources */,
 				5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */,
 				5B5930721E8A11EA00839FAD /* SDRefreshHeader.swift in Sources */,
+				5B5930971E8A1A8E00839FAD /* EventWebView.swift in Sources */,
 				5B8952751E5BE261006B9187 /* theme.swift in Sources */,
 				5B959DBF1E5C5B9600D0E0FE /* ShakeViewController.swift in Sources */,
 				5B959DA21E5C4AEB00D0E0FE /* FeedbackViewController.swift in Sources */,
@@ -861,6 +884,7 @@
 				1D6AD79D1E5B2F3200CF50C7 /* AppDelegate.swift in Sources */,
 				5B102B851E892A1800F914BE /* CityHeadCollectionReusableView.swift in Sources */,
 				5B59307D1E8A138600839FAD /* EventCellTableViewCell.swift in Sources */,
+				5B59308F1E8A1A1800839FAD /* GuessLikeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
