@@ -8,7 +8,12 @@
 
 import UIKit
 
+/// 店发现 店详情的高度
+public let EventViewController_ShopView_Height: CGFloat = 45
+
 class EventViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
