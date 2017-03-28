@@ -6,9 +6,12 @@
 #import <CommonCrypto/CommonCrypto.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <MJRefresh.h>
-
 #import <UMSocialCore/UMSocialCore.h>
 // U-Share分享面板SDK，未添加分享面板SDK可将此行去掉
 #import <UShareUI/UShareUI.h>
 #import "RegExCategories.h"
 #import "UIImageView+WebCache.h"
+/***  高德地图桥接文件 */
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <MAMapKit/MAMapKit.h>

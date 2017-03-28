@@ -33,6 +33,9 @@
 		5B59307D1E8A138600839FAD /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */; };
 		5B59307E1E8A138600839FAD /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */; };
 		5B5930831E8A14B400839FAD /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930801E8A14B400839FAD /* ExperienceViewController.swift */; };
+		5B5930851E8A15BF00839FAD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930841E8A15BF00839FAD /* MapView.swift */; };
+		5B59308A1E8A18A500839FAD /* nearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930881E8A18A500839FAD /* nearCell.swift */; };
+		5B59308B1E8A18A500839FAD /* nearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930891E8A18A500839FAD /* nearCell.xib */; };
 		5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */; };
 		5B8774F01E64000B0066F5D7 /* ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */; };
 		5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774F11E6400310066F5D7 /* DetailCell.swift */; };
@@ -148,6 +151,9 @@
 		5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
 		5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
 		5B5930801E8A14B400839FAD /* ExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
+		5B5930841E8A15BF00839FAD /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		5B5930881E8A18A500839FAD /* nearCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearCell.swift; sourceTree = "<group>"; };
+		5B5930891E8A18A500839FAD /* nearCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearCell.xib; sourceTree = "<group>"; };
 		5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyViewController.swift; sourceTree = "<group>"; };
 		5B8774F11E6400310066F5D7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -522,6 +528,9 @@
 				5B5930781E8A12ED00839FAD /* ThemeCell.xib */,
 				5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */,
 				5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */,
+				5B5930841E8A15BF00839FAD /* MapView.swift */,
+				5B5930881E8A18A500839FAD /* nearCell.swift */,
+				5B5930891E8A18A500839FAD /* nearCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -717,6 +726,7 @@
 				5B59307E1E8A138600839FAD /* EventCellTableViewCell.xib in Resources */,
 				5B8952491E5BC823006B9187 /* glass.wav in Resources */,
 				5B8952421E5BC7DC006B9187 /* Details in Resources */,
+				5B59308B1E8A18A500839FAD /* nearCell.xib in Resources */,
 				1D6AD7A21E5B2F3200CF50C7 /* Main.storyboard in Resources */,
 				5B89523E1E5BC7DC006B9187 /* 798 in Resources */,
 				5B8952641E5BDD7B006B9187 /* author@2x.png in Resources */,
@@ -804,6 +814,7 @@
 				5B94E6E91E5D2785000F69AB /* AboutWeViewController.swift in Sources */,
 				5B959DB41E5C4BFA00D0E0FE /* MainTabBarController.swift in Sources */,
 				5B959DA51E5C4B3500D0E0FE /* UserAccountTool.swift in Sources */,
+				5B59308A1E8A18A500839FAD /* nearCell.swift in Sources */,
 				5B94E6ED1E5D27CF000F69AB /* SettingCell.swift in Sources */,
 				5B5930741E8A121400839FAD /* NearViewController.swift in Sources */,
 				5B102B8D1E8930C600F914BE /* ClassifyModel.swift in Sources */,
@@ -815,6 +826,7 @@
 				5B959D8E1E5C3D0600D0E0FE /* ExploreViewController.swift in Sources */,
 				5B8774F71E64014F0066F5D7 /* ShareModel.swift in Sources */,
 				5B102B831E8929F100F914BE /* CityCollectionViewCell.swift in Sources */,
+				5B5930851E8A15BF00839FAD /* MapView.swift in Sources */,
 				5B102B7F1E89292D00F914BE /* MainViewController.swift in Sources */,
 				5B8952791E5BE458006B9187 /* UIView+Extension.swift in Sources */,
 				5B94E6F01E5D2A17000F69AB /* FileTool.swift in Sources */,
