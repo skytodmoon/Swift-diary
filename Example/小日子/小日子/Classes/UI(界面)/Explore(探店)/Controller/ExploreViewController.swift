@@ -70,20 +70,20 @@ class ExploreViewController: MainViewController,DoubleTextViewDelegate {
         dayTableView.contentInset = UIEdgeInsetsMake(-35, 0, 35, 0)
         backgroundScrollView.addSubview(dayTableView)
         
-        setTableViewHeader(self, refreshingAction: #selector(ExploreViewController.pullLoadDayData), imageFrame: CGRectMake((AppWidth - SD_RefreshImage_Width) * 0.5, 47, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: dayTableView)
+        setTableViewmj_header(self, refreshingAction: #selector(ExploreViewController.pullLoadDayData), imageFrame: CGRectMake((AppWidth - SD_RefreshImage_Width) * 0.5, 47, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: dayTableView)
     }
     
     private func setalbumTableView() {
         albumTableView = MainTableView(frame: CGRectMake(AppWidth, 0, AppWidth, backgroundScrollView.height), style: .Plain, dataSource: self, delegate: self)
         backgroundScrollView.addSubview(albumTableView)
         
-        setTableViewHeader(self, refreshingAction: #selector(ExploreViewController.pullLoadAlbumData), imageFrame: CGRectMake((AppWidth - SD_RefreshImage_Width) * 0.5, 10, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: albumTableView)
+        setTableViewmj_header(self, refreshingAction: #selector(ExploreViewController.pullLoadAlbumData), imageFrame: CGRectMake((AppWidth - SD_RefreshImage_Width) * 0.5, 10, SD_RefreshImage_Width, SD_RefreshImage_Height), tableView: albumTableView)
     }
     
-    private func setTableViewHeader(refreshingTarget: AnyObject, refreshingAction: Selector, imageFrame: CGRect, tableView: UITableView) {
-        let header = SDRefreshHeader(refreshingTarget: refreshingTarget, refreshingAction: refreshingAction)
-        header.gifView!.frame = imageFrame
-        tableView.header = header
+    private func setTableViewmj_header(refreshingTarget: AnyObject, refreshingAction: Selector, imageFrame: CGRect, tableView: UITableView) {
+        let mj_header = SDRefreshHeader(refreshingTarget: refreshingTarget, refreshingAction: refreshingAction)
+        mj_header.gifView!.frame = imageFrame
+        tableView.mj_header = mj_header
     }
     
     ///MARK:- 下拉加载刷新数据
@@ -95,12 +95,12 @@ class ExploreViewController: MainViewController,DoubleTextViewDelegate {
             EveryDays.loadEventsData { (data, error) -> () in
                 if error != nil {
                     SVProgressHUD.showErrorWithStatus("数据加载失败")
-                    tmpSelf!.dayTableView.header.endRefreshing()
+                    tmpSelf!.dayTableView.mj_header.endRefreshing()
                     return
                 }
                 tmpSelf!.everyDays = data!
                 tmpSelf!.dayTableView.reloadData()
-                tmpSelf!.dayTableView.header.endRefreshing()
+                tmpSelf!.dayTableView.mj_header.endRefreshing()
             }
         }
     }
@@ -112,12 +112,12 @@ class ExploreViewController: MainViewController,DoubleTextViewDelegate {
             ThemeModels.loadThemesData { (data, error) -> () in
                 if error != nil {
                     SVProgressHUD.showErrorWithStatus("网络不给力")
-                    tmpSelf!.albumTableView.header.endRefreshing()
+                    tmpSelf!.albumTableView.mj_header.endRefreshing()
                     return
                 }
                 tmpSelf!.themes = data!
                 tmpSelf!.albumTableView.reloadData()
-                tmpSelf!.albumTableView.header.endRefreshing()
+                tmpSelf!.albumTableView.mj_header.endRefreshing()
             }
             
         }

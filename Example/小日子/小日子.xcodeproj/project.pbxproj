@@ -25,7 +25,11 @@
 		5B5930681E8A068700839FAD /* EveryDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930671E8A068700839FAD /* EveryDayModel.swift */; };
 		5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930691E8A06A500839FAD /* SwiftDictModel.swift */; };
 		5B59306C1E8A094B00839FAD /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59306B1E8A094B00839FAD /* MainTableView.swift */; };
-		5B59306E1E8A0A9300839FAD /* SDRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59306D1E8A0A9300839FAD /* SDRefreshHeader.swift */; };
+		5B5930721E8A11EA00839FAD /* SDRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930711E8A11EA00839FAD /* SDRefreshHeader.swift */; };
+		5B5930741E8A121400839FAD /* NearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930731E8A121400839FAD /* NearViewController.swift */; };
+		5B5930761E8A123500839FAD /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930751E8A123500839FAD /* ThemeViewController.swift */; };
+		5B5930791E8A12ED00839FAD /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930771E8A12ED00839FAD /* ThemeCell.swift */; };
+		5B59307A1E8A12ED00839FAD /* ThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930781E8A12ED00839FAD /* ThemeCell.xib */; };
 		5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */; };
 		5B8774F01E64000B0066F5D7 /* ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */; };
 		5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774F11E6400310066F5D7 /* DetailCell.swift */; };
@@ -134,7 +138,11 @@
 		5B5930671E8A068700839FAD /* EveryDayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayModel.swift; sourceTree = "<group>"; };
 		5B5930691E8A06A500839FAD /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		5B59306B1E8A094B00839FAD /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
-		5B59306D1E8A0A9300839FAD /* SDRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRefreshHeader.swift; sourceTree = "<group>"; };
+		5B5930711E8A11EA00839FAD /* SDRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRefreshHeader.swift; sourceTree = "<group>"; };
+		5B5930731E8A121400839FAD /* NearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearViewController.swift; sourceTree = "<group>"; };
+		5B5930751E8A123500839FAD /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		5B5930771E8A12ED00839FAD /* ThemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
+		5B5930781E8A12ED00839FAD /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeCell.xib; sourceTree = "<group>"; };
 		5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyViewController.swift; sourceTree = "<group>"; };
 		5B8774F11E6400310066F5D7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -472,6 +480,8 @@
 			children = (
 				5B959D8C1E5C3D0600D0E0FE /* ExploreViewController.swift */,
 				5B102B8A1E89308C00F914BE /* EventViewController.swift */,
+				5B5930731E8A121400839FAD /* NearViewController.swift */,
+				5B5930751E8A123500839FAD /* ThemeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -480,6 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */,
+				5B5930771E8A12ED00839FAD /* ThemeCell.swift */,
+				5B5930781E8A12ED00839FAD /* ThemeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,7 +534,7 @@
 				5B94E6EF1E5D2A17000F69AB /* FileTool.swift */,
 				5B8774F81E6401C00066F5D7 /* ShareTool.swift */,
 				5B5930691E8A06A500839FAD /* SwiftDictModel.swift */,
-				5B59306D1E8A0A9300839FAD /* SDRefreshHeader.swift */,
+				5B5930711E8A11EA00839FAD /* SDRefreshHeader.swift */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -669,6 +681,7 @@
 				5B8952451E5BC7DC006B9187 /* More in Resources */,
 				5B94E6E61E5D2255000F69AB /* MyCenterViewController.xib in Resources */,
 				5B8952401E5BC7DC006B9187 /* 三里屯 in Resources */,
+				5B59307A1E8A12ED00839FAD /* ThemeCell.xib in Resources */,
 				5B8952461E5BC7DC006B9187 /* Nears in Resources */,
 				5B8952411E5BC7DC006B9187 /* Classify in Resources */,
 				5B8952491E5BC823006B9187 /* glass.wav in Resources */,
@@ -762,6 +775,7 @@
 				5B959D871E5C3C6700D0E0FE /* ExperienceViewController.swift in Sources */,
 				5B959DA51E5C4B3500D0E0FE /* UserAccountTool.swift in Sources */,
 				5B94E6ED1E5D27CF000F69AB /* SettingCell.swift in Sources */,
+				5B5930741E8A121400839FAD /* NearViewController.swift in Sources */,
 				5B102B8D1E8930C600F914BE /* ClassifyModel.swift in Sources */,
 				5B959DB21E5C4BFA00D0E0FE /* LeadpageViewController.swift in Sources */,
 				5B94E6D61E5D1D1E000F69AB /* String+Hash.swift in Sources */,
@@ -775,7 +789,7 @@
 				5B8952791E5BE458006B9187 /* UIView+Extension.swift in Sources */,
 				5B94E6F01E5D2A17000F69AB /* FileTool.swift in Sources */,
 				5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */,
-				5B59306E1E8A0A9300839FAD /* SDRefreshHeader.swift in Sources */,
+				5B5930721E8A11EA00839FAD /* SDRefreshHeader.swift in Sources */,
 				5B8952751E5BE261006B9187 /* theme.swift in Sources */,
 				5B959DBF1E5C5B9600D0E0FE /* ShakeViewController.swift in Sources */,
 				5B959DA21E5C4AEB00D0E0FE /* FeedbackViewController.swift in Sources */,
@@ -794,9 +808,11 @@
 				5B8952771E5BE344006B9187 /* UIColor+Extension.swift in Sources */,
 				5B959D941E5C3DC700D0E0FE /* UIImage+Extension.swift in Sources */,
 				5B959DB91E5C5B7000D0E0FE /* OrderViewController.swift in Sources */,
+				5B5930791E8A12ED00839FAD /* ThemeCell.swift in Sources */,
 				5B89527C1E5BE51A006B9187 /* RegExCategories.m in Sources */,
 				5B94E6E51E5D2255000F69AB /* MyCenterViewController.swift in Sources */,
 				5B102B871E892ED400F914BE /* LoadAnimatImageView.swift in Sources */,
+				5B5930761E8A123500839FAD /* ThemeViewController.swift in Sources */,
 				1D6AD79F1E5B2F3200CF50C7 /* ViewController.swift in Sources */,
 				5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */,
 				1D6AD79D1E5B2F3200CF50C7 /* AppDelegate.swift in Sources */,
