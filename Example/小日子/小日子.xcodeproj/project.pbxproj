@@ -30,6 +30,8 @@
 		5B5930761E8A123500839FAD /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930751E8A123500839FAD /* ThemeViewController.swift */; };
 		5B5930791E8A12ED00839FAD /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930771E8A12ED00839FAD /* ThemeCell.swift */; };
 		5B59307A1E8A12ED00839FAD /* ThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930781E8A12ED00839FAD /* ThemeCell.xib */; };
+		5B59307D1E8A138600839FAD /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */; };
+		5B59307E1E8A138600839FAD /* EventCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */; };
 		5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */; };
 		5B8774F01E64000B0066F5D7 /* ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */; };
 		5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774F11E6400310066F5D7 /* DetailCell.swift */; };
@@ -143,6 +145,8 @@
 		5B5930751E8A123500839FAD /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		5B5930771E8A12ED00839FAD /* ThemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
 		5B5930781E8A12ED00839FAD /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeCell.xib; sourceTree = "<group>"; };
+		5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
+		5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCellTableViewCell.xib; sourceTree = "<group>"; };
 		5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyViewController.swift; sourceTree = "<group>"; };
 		5B8774F11E6400310066F5D7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 				5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */,
 				5B5930771E8A12ED00839FAD /* ThemeCell.swift */,
 				5B5930781E8A12ED00839FAD /* ThemeCell.xib */,
+				5B59307B1E8A138600839FAD /* EventCellTableViewCell.swift */,
+				5B59307C1E8A138600839FAD /* EventCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,6 +690,7 @@
 				5B59307A1E8A12ED00839FAD /* ThemeCell.xib in Resources */,
 				5B8952461E5BC7DC006B9187 /* Nears in Resources */,
 				5B8952411E5BC7DC006B9187 /* Classify in Resources */,
+				5B59307E1E8A138600839FAD /* EventCellTableViewCell.xib in Resources */,
 				5B8952491E5BC823006B9187 /* glass.wav in Resources */,
 				5B8952421E5BC7DC006B9187 /* Details in Resources */,
 				1D6AD7A21E5B2F3200CF50C7 /* Main.storyboard in Resources */,
@@ -817,6 +824,7 @@
 				5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */,
 				1D6AD79D1E5B2F3200CF50C7 /* AppDelegate.swift in Sources */,
 				5B102B851E892A1800F914BE /* CityHeadCollectionReusableView.swift in Sources */,
+				5B59307D1E8A138600839FAD /* EventCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
