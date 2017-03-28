@@ -8,7 +8,18 @@
 
 import UIKit
 
-class ExploreViewController: MainViewController {
+public let SD_RefreshImage_Height: CGFloat = 40
+public let SD_RefreshImage_Width: CGFloat = 35
+
+class ExploreViewController: MainViewController,DoubleTextViewDelegate {
+    
+    private var backgroundScrollView: UIScrollView!
+    private var doubleTextView: DoubleTextView!
+    private var everyDays: EveryDays?
+    private var albumTableView: MainTableView!
+    private var dayTableView: MainTableView!
+    private var themes: ThemeModels?
+    private var events: EveryDays?
 
     override func viewDidLoad() {
         super.viewDidLoad()
