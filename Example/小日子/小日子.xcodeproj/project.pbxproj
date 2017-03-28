@@ -42,6 +42,12 @@
 		5B5930931E8A1A5000839FAD /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930921E8A1A5000839FAD /* MoreView.swift */; };
 		5B5930951E8A1A5C00839FAD /* MoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5930941E8A1A5C00839FAD /* MoreView.xib */; };
 		5B5930971E8A1A8E00839FAD /* EventWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930961E8A1A8E00839FAD /* EventWebView.swift */; };
+		5B5930991E8A1AC400839FAD /* ShopDetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930981E8A1AC400839FAD /* ShopDetailContentView.swift */; };
+		5B59309B1E8A1ACB00839FAD /* ShopDetailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B59309A1E8A1ACB00839FAD /* ShopDetailContentView.xib */; };
+		5B59309D1E8A2A4300839FAD /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59309C1E8A2A4300839FAD /* ShopDetailView.swift */; };
+		5B59309F1E8A2AAF00839FAD /* NavigatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59309E1E8A2AAF00839FAD /* NavigatorViewController.swift */; };
+		5B5930A11E8A2B0A00839FAD /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930A01E8A2B0A00839FAD /* CustomAnnotationView.swift */; };
+		5B5930A31E8A2B2800839FAD /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930A21E8A2B2800839FAD /* CustomCalloutView.swift */; };
 		5B79D7AC1E68513F002A5E7A /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */; };
 		5B8774F01E64000B0066F5D7 /* ClassifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */; };
 		5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8774F11E6400310066F5D7 /* DetailCell.swift */; };
@@ -166,6 +172,12 @@
 		5B5930921E8A1A5000839FAD /* MoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		5B5930941E8A1A5C00839FAD /* MoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreView.xib; sourceTree = "<group>"; };
 		5B5930961E8A1A8E00839FAD /* EventWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventWebView.swift; sourceTree = "<group>"; };
+		5B5930981E8A1AC400839FAD /* ShopDetailContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailContentView.swift; sourceTree = "<group>"; };
+		5B59309A1E8A1ACB00839FAD /* ShopDetailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailContentView.xib; sourceTree = "<group>"; };
+		5B59309C1E8A2A4300839FAD /* ShopDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
+		5B59309E1E8A2AAF00839FAD /* NavigatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorViewController.swift; sourceTree = "<group>"; };
+		5B5930A01E8A2B0A00839FAD /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		5B5930A21E8A2B2800839FAD /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		5B79D7AB1E68513F002A5E7A /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		5B8774EE1E64000B0066F5D7 /* ClassifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifyViewController.swift; sourceTree = "<group>"; };
 		5B8774F11E6400310066F5D7 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
@@ -490,6 +502,9 @@
 				5B102B821E8929F100F914BE /* CityCollectionViewCell.swift */,
 				5B102B841E892A1800F914BE /* CityHeadCollectionReusableView.swift */,
 				5B59306B1E8A094B00839FAD /* MainTableView.swift */,
+				5B59309C1E8A2A4300839FAD /* ShopDetailView.swift */,
+				5B5930A01E8A2B0A00839FAD /* CustomAnnotationView.swift */,
+				5B5930A21E8A2B2800839FAD /* CustomCalloutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +564,8 @@
 				5B5930921E8A1A5000839FAD /* MoreView.swift */,
 				5B5930941E8A1A5C00839FAD /* MoreView.xib */,
 				5B5930961E8A1A8E00839FAD /* EventWebView.swift */,
+				5B5930981E8A1AC400839FAD /* ShopDetailContentView.swift */,
+				5B59309A1E8A1ACB00839FAD /* ShopDetailContentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +622,7 @@
 				5B959DB11E5C4BFA00D0E0FE /* NavigationController.swift */,
 				5B102B7E1E89292D00F914BE /* MainViewController.swift */,
 				5B102B801E89299600F914BE /* CityViewController.swift */,
+				5B59309E1E8A2AAF00839FAD /* NavigatorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -738,6 +756,7 @@
 				5B94E6F51E5D2AAA000F69AB /* ShareView.xib in Resources */,
 				5B8952451E5BC7DC006B9187 /* More in Resources */,
 				5B94E6E61E5D2255000F69AB /* MyCenterViewController.xib in Resources */,
+				5B59309B1E8A1ACB00839FAD /* ShopDetailContentView.xib in Resources */,
 				5B8952401E5BC7DC006B9187 /* 三里屯 in Resources */,
 				5B59307A1E8A12ED00839FAD /* ThemeCell.xib in Resources */,
 				5B8952461E5BC7DC006B9187 /* Nears in Resources */,
@@ -832,9 +851,13 @@
 				5B959DB61E5C4BFA00D0E0FE /* NavigationController.swift in Sources */,
 				5B959D921E5C3D8B00D0E0FE /* UIBarButtonItem+Extension.swift in Sources */,
 				5B94E6E91E5D2785000F69AB /* AboutWeViewController.swift in Sources */,
+				5B5930A31E8A2B2800839FAD /* CustomCalloutView.swift in Sources */,
+				5B59309D1E8A2A4300839FAD /* ShopDetailView.swift in Sources */,
 				5B959DB41E5C4BFA00D0E0FE /* MainTabBarController.swift in Sources */,
+				5B59309F1E8A2AAF00839FAD /* NavigatorViewController.swift in Sources */,
 				5B959DA51E5C4B3500D0E0FE /* UserAccountTool.swift in Sources */,
 				5B59308A1E8A18A500839FAD /* nearCell.swift in Sources */,
+				5B5930991E8A1AC400839FAD /* ShopDetailContentView.swift in Sources */,
 				5B5930931E8A1A5000839FAD /* MoreView.swift in Sources */,
 				5B94E6ED1E5D27CF000F69AB /* SettingCell.swift in Sources */,
 				5B5930741E8A121400839FAD /* NearViewController.swift in Sources */,
@@ -866,6 +889,7 @@
 				5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */,
 				5B59306C1E8A094B00839FAD /* MainTableView.swift in Sources */,
 				5B102B891E89305600F914BE /* ClassDetailViewController.swift in Sources */,
+				5B5930A11E8A2B0A00839FAD /* CustomAnnotationView.swift in Sources */,
 				5B959D961E5C41BD00D0E0FE /* String+Extension.swift in Sources */,
 				5B102B811E89299600F914BE /* CityViewController.swift in Sources */,
 				5B5930681E8A068700839FAD /* EveryDayModel.swift in Sources */,
