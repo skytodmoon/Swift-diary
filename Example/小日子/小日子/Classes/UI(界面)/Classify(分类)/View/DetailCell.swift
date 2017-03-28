@@ -17,5 +17,27 @@ class DetailCell: UITableViewCell {
     @IBOutlet weak var disLabel: UILabel!
 
   
+    var model: EventModel? {
+        didSet {
+            titleLabel.text = model!.title
+            subTitleLabel.text = model!.address
+            if let imsStr = model?.imgs?.last {
+                backImageView.wxn_setImageWithURL(NSURL(string: imsStr)!, placeholderImage: UIImage(named: "quesheng")!)
+            }
+            
+            if model!.isShowDis {
+                disImageV.hidden = false
+                disLabel.hidden = false
+                disLabel.text = model!.distanceForUser
+            } else {
+                disLabel.hidden = true
+                disImageV.hidden = true
+            }
+        }
+    }
     
+    override func awakeFromNib() {
+        self.selectionStyle = .None
+    }
+
 }
