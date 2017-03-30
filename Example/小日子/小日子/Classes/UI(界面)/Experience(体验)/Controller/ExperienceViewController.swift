@@ -9,6 +9,12 @@
 import UIKit
 
 class ExperienceViewController: MainViewController {
+    
+    var experModel: ExperienceModel? {
+        didSet {
+            headView?.experModel = experModel
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
