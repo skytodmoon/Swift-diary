@@ -54,8 +54,25 @@
     [super viewDidLoad];
     [self initNav];
     [self setupUI];
-    [self getProfileData];
+//    [self getProfileData];
+    [self textinitData];
     // Do any additional setup after loading the view.
+}
+
+-(void)textinitData{
+    
+    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+
+    NSString *str = @"[{\"mac\":\"54:4A:16:25:84:09\",\"rssi\":\"-5\",\"phoneMac\":\"asdasd\"}]";
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:str,@"data",nil];
+    
+
+    [manger GET:@"http://115.28.237.78:8080/wiqun/android/ShowBluetoothByMac!showBluetoothByMac" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"responseObject = %@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 -(void)initNav{
