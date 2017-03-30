@@ -30,6 +30,9 @@
 		5B56DE3D1E8D1C34005E8A0F /* ExploreBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE3C1E8D1C34005E8A0F /* ExploreBottomView.swift */; };
 		5B56DE3F1E8D1C42005E8A0F /* ExploreBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B56DE3E1E8D1C42005E8A0F /* ExploreBottomView.xib */; };
 		5B56DE411E8D1C7C005E8A0F /* ExperienceWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */; };
+		5B56DE431E8D1D2A005E8A0F /* BuyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE421E8D1D2A005E8A0F /* BuyDetailViewController.swift */; };
+		5B56DE461E8D1D4C005E8A0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE441E8D1D4C005E8A0F /* SignUpViewController.swift */; };
+		5B56DE471E8D1D4C005E8A0F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B56DE451E8D1D4C005E8A0F /* SignUpViewController.xib */; };
 		5B5930681E8A068700839FAD /* EveryDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930671E8A068700839FAD /* EveryDayModel.swift */; };
 		5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930691E8A06A500839FAD /* SwiftDictModel.swift */; };
 		5B59306C1E8A094B00839FAD /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59306B1E8A094B00839FAD /* MainTableView.swift */; };
@@ -168,6 +171,9 @@
 		5B56DE3C1E8D1C34005E8A0F /* ExploreBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBottomView.swift; sourceTree = "<group>"; };
 		5B56DE3E1E8D1C42005E8A0F /* ExploreBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreBottomView.xib; sourceTree = "<group>"; };
 		5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceWebView.swift; sourceTree = "<group>"; };
+		5B56DE421E8D1D2A005E8A0F /* BuyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDetailViewController.swift; sourceTree = "<group>"; };
+		5B56DE441E8D1D4C005E8A0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5B56DE451E8D1D4C005E8A0F /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		5B5930671E8A068700839FAD /* EveryDayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayModel.swift; sourceTree = "<group>"; };
 		5B5930691E8A06A500839FAD /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		5B59306B1E8A094B00839FAD /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
@@ -368,6 +374,9 @@
 				5B59308C1E8A19DA00839FAD /* DetailViewController.swift */,
 				5B56DE361E8D1B26005E8A0F /* ExperHeadPushViewController.swift */,
 				5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */,
+				5B56DE421E8D1D2A005E8A0F /* BuyDetailViewController.swift */,
+				5B56DE441E8D1D4C005E8A0F /* SignUpViewController.swift */,
+				5B56DE451E8D1D4C005E8A0F /* SignUpViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -797,6 +806,7 @@
 				5B8952611E5BDD70006B9187 /* fourpage-568h@2x.jpg in Resources */,
 				5B8952601E5BDD70006B9187 /* fourpage-414w-736h@3x.jpg in Resources */,
 				5B8952431E5BC7DC006B9187 /* events in Resources */,
+				5B56DE471E8D1D4C005E8A0F /* SignUpViewController.xib in Resources */,
 				5B94E6EA1E5D2785000F69AB /* AboutWeViewController.xib in Resources */,
 				5B56DE3B1E8D1B5D005E8A0F /* ExperienceCell.xib in Resources */,
 				5B94E6EE1E5D27CF000F69AB /* SettingCell.xib in Resources */,
@@ -915,6 +925,7 @@
 				5B959D9D1E5C478D00D0E0FE /* MeViewController.swift in Sources */,
 				5B8774F91E6401C00066F5D7 /* ShareTool.swift in Sources */,
 				5B8774F31E6400310066F5D7 /* DetailCell.swift in Sources */,
+				5B56DE431E8D1D2A005E8A0F /* BuyDetailViewController.swift in Sources */,
 				5B56DE3A1E8D1B5D005E8A0F /* ExperienceCell.swift in Sources */,
 				5B59306C1E8A094B00839FAD /* MainTableView.swift in Sources */,
 				5B102B891E89305600F914BE /* ClassDetailViewController.swift in Sources */,
@@ -936,6 +947,7 @@
 				1D6AD79F1E5B2F3200CF50C7 /* ViewController.swift in Sources */,
 				5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */,
 				1D6AD79D1E5B2F3200CF50C7 /* AppDelegate.swift in Sources */,
+				5B56DE461E8D1D4C005E8A0F /* SignUpViewController.swift in Sources */,
 				5B102B851E892A1800F914BE /* CityHeadCollectionReusableView.swift in Sources */,
 				5B56DE371E8D1B26005E8A0F /* ExperHeadPushViewController.swift in Sources */,
 				5B59307D1E8A138600839FAD /* EventCellTableViewCell.swift in Sources */,
