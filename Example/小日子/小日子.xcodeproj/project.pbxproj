@@ -27,6 +27,9 @@
 		5B56DE371E8D1B26005E8A0F /* ExperHeadPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE361E8D1B26005E8A0F /* ExperHeadPushViewController.swift */; };
 		5B56DE3A1E8D1B5D005E8A0F /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE381E8D1B5D005E8A0F /* ExperienceCell.swift */; };
 		5B56DE3B1E8D1B5D005E8A0F /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B56DE391E8D1B5D005E8A0F /* ExperienceCell.xib */; };
+		5B56DE3D1E8D1C34005E8A0F /* ExploreBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE3C1E8D1C34005E8A0F /* ExploreBottomView.swift */; };
+		5B56DE3F1E8D1C42005E8A0F /* ExploreBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B56DE3E1E8D1C42005E8A0F /* ExploreBottomView.xib */; };
+		5B56DE411E8D1C7C005E8A0F /* ExperienceWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */; };
 		5B5930681E8A068700839FAD /* EveryDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930671E8A068700839FAD /* EveryDayModel.swift */; };
 		5B59306A1E8A06A500839FAD /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5930691E8A06A500839FAD /* SwiftDictModel.swift */; };
 		5B59306C1E8A094B00839FAD /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59306B1E8A094B00839FAD /* MainTableView.swift */; };
@@ -162,6 +165,9 @@
 		5B56DE361E8D1B26005E8A0F /* ExperHeadPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperHeadPushViewController.swift; sourceTree = "<group>"; };
 		5B56DE381E8D1B5D005E8A0F /* ExperienceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
 		5B56DE391E8D1B5D005E8A0F /* ExperienceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
+		5B56DE3C1E8D1C34005E8A0F /* ExploreBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBottomView.swift; sourceTree = "<group>"; };
+		5B56DE3E1E8D1C42005E8A0F /* ExploreBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreBottomView.xib; sourceTree = "<group>"; };
+		5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceWebView.swift; sourceTree = "<group>"; };
 		5B5930671E8A068700839FAD /* EveryDayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayModel.swift; sourceTree = "<group>"; };
 		5B5930691E8A06A500839FAD /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		5B59306B1E8A094B00839FAD /* MainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 				5B5930801E8A14B400839FAD /* ExperienceViewController.swift */,
 				5B59308C1E8A19DA00839FAD /* DetailViewController.swift */,
 				5B56DE361E8D1B26005E8A0F /* ExperHeadPushViewController.swift */,
+				5B56DE401E8D1C7C005E8A0F /* ExperienceWebView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -379,6 +386,8 @@
 				5B56DE341E8D1A93005E8A0F /* ExperHeadView.swift */,
 				5B56DE381E8D1B5D005E8A0F /* ExperienceCell.swift */,
 				5B56DE391E8D1B5D005E8A0F /* ExperienceCell.xib */,
+				5B56DE3C1E8D1C34005E8A0F /* ExploreBottomView.swift */,
+				5B56DE3E1E8D1C42005E8A0F /* ExploreBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,6 +772,7 @@
 				5B8952441E5BC7DC006B9187 /* Experience in Resources */,
 				1D6AD7A71E5B2F3200CF50C7 /* LaunchScreen.storyboard in Resources */,
 				5B89523F1E5BC7DC006B9187 /* 南锣鼓巷 in Resources */,
+				5B56DE3F1E8D1C42005E8A0F /* ExploreBottomView.xib in Resources */,
 				5B5930911E8A1A2600839FAD /* GuessLikeView.xib in Resources */,
 				1D6AD7A41E5B2F3200CF50C7 /* Assets.xcassets in Resources */,
 				5B8774F41E6400310066F5D7 /* DetailCell.xib in Resources */,
@@ -864,6 +874,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B959DB31E5C4BFA00D0E0FE /* LoginViewController.swift in Sources */,
+				5B56DE3D1E8D1C34005E8A0F /* ExploreBottomView.swift in Sources */,
 				5B959DB61E5C4BFA00D0E0FE /* NavigationController.swift in Sources */,
 				5B959D921E5C3D8B00D0E0FE /* UIBarButtonItem+Extension.swift in Sources */,
 				5B94E6E91E5D2785000F69AB /* AboutWeViewController.swift in Sources */,
@@ -913,6 +924,7 @@
 				5B5930681E8A068700839FAD /* EveryDayModel.swift in Sources */,
 				5B94E6F31E5D2A9D000F69AB /* ShareView.swift in Sources */,
 				5B8952771E5BE344006B9187 /* UIColor+Extension.swift in Sources */,
+				5B56DE411E8D1C7C005E8A0F /* ExperienceWebView.swift in Sources */,
 				5B959D941E5C3DC700D0E0FE /* UIImage+Extension.swift in Sources */,
 				5B5930831E8A14B400839FAD /* ExperienceViewController.swift in Sources */,
 				5B959DB91E5C5B7000D0E0FE /* OrderViewController.swift in Sources */,
