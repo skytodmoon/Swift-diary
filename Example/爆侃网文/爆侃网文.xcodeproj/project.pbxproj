@@ -69,6 +69,10 @@
 		5B68C0381E8E46B900A6158B /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */; };
 		5B68C03C1E8E731C00A6158B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C03A1E8E731C00A6158B /* LoginViewController.swift */; };
 		5B68C03D1E8E731C00A6158B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C03B1E8E731C00A6158B /* LoginViewController.xib */; };
+		5B68C03F1E8E73CE00A6158B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C03E1E8E73CE00A6158B /* VideoViewController.swift */; };
+		5B68C0411E8E73DF00A6158B /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0401E8E73DF00A6158B /* VideoViewController.storyboard */; };
+		5B68C0441E8E746C00A6158B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0431E8E746C00A6158B /* VideoCell.swift */; };
+		5B68C0461E8E74A000A6158B /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0451E8E74A000A6158B /* VideoTableViewController.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +165,10 @@
 		5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		5B68C03A1E8E731C00A6158B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B68C03B1E8E731C00A6158B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5B68C03E1E8E73CE00A6158B /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		5B68C0401E8E73DF00A6158B /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
+		5B68C0431E8E746C00A6158B /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		5B68C0451E8E74A000A6158B /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				5B68BFCC1E8E171F00A6158B /* Controller */,
+				5B68C0421E8E745B00A6158B /* View */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -425,6 +434,9 @@
 		5B68BFCC1E8E171F00A6158B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B68C03E1E8E73CE00A6158B /* VideoViewController.swift */,
+				5B68C0401E8E73DF00A6158B /* VideoViewController.storyboard */,
+				5B68C0451E8E74A000A6158B /* VideoTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -548,6 +560,14 @@
 				5B68C03B1E8E731C00A6158B /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5B68C0421E8E745B00A6158B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B68C0431E8E746C00A6158B /* VideoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F212597BFBBFF531848156D1 /* Pods */ = {
@@ -683,6 +703,7 @@
 				5B68BF7B1E8DEE9500A6158B /* LaunchScreen.storyboard in Resources */,
 				5B68BF781E8DEE9500A6158B /* Assets.xcassets in Resources */,
 				5B68C0001E8E3DE300A6158B /* CommentCell.xib in Resources */,
+				5B68C0411E8E73DF00A6158B /* VideoViewController.storyboard in Resources */,
 				5B68C0261E8E444600A6158B /* SetFontView.xib in Resources */,
 				5B68BF761E8DEE9500A6158B /* Main.storyboard in Resources */,
 				5B68C01A1E8E3EEF00A6158B /* NewsThreePicCell.xib in Resources */,
@@ -772,6 +793,7 @@
 				5B68C02A1E8E460700A6158B /* PhotoDetailModel.swift in Sources */,
 				5B68BFFF1E8E3DE300A6158B /* CommentCell.swift in Sources */,
 				5B68C0151E8E3ED500A6158B /* NewsOnePicCell.swift in Sources */,
+				5B68C0441E8E746C00A6158B /* VideoCell.swift in Sources */,
 				5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */,
 				5B68C01C1E8E3F0C00A6158B /* TopLabel.swift in Sources */,
 				5B68BFBE1E8DF5AD00A6158B /* NewFeatureViewController.swift in Sources */,
@@ -797,10 +819,12 @@
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,
 				5B68BF711E8DEE9500A6158B /* AppDelegate.swift in Sources */,
 				5B68BFC01E8DF5C500A6158B /* NavigationController.swift in Sources */,
+				5B68C03F1E8E73CE00A6158B /* VideoViewController.swift in Sources */,
 				5B68BFB71E8DF4EE00A6158B /* API.swift in Sources */,
 				5B68C0321E8E465500A6158B /* PhotoBottomBar.swift in Sources */,
 				5B68BFB51E8DF4CF00A6158B /* Common.swift in Sources */,
 				5B68C02C1E8E461A00A6158B /* ProgressView.swift in Sources */,
+				5B68C0461E8E74A000A6158B /* VideoTableViewController.swift in Sources */,
 				5B68BFDC1E8E17F900A6158B /* PhotoViewController.swift in Sources */,
 				5B68BFFC1E8E3DCD00A6158B /* ColumnReusableView.swift in Sources */,
 			);
