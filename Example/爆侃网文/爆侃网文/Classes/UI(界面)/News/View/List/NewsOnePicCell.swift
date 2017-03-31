@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import YYWebImage
 
 class NewsOnePicCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var postModel: ArticleListModel? {
+        didSet {
+            iconView.image = nil
+            iconView.yy_setImageWithURL(NSURL(string: postModel!.titlepic!), placeholder: UIImage(named: "placeholder_logo"))
+            articleTitleLabel.text = postModel?.title!
+            timeLabel.text = postModel?.newstime!
+            commentLabel.text = postModel?.plnum!
+            showNumLabel.text = postModel?.onclick!
+        }
     }
     
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var articleTitleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var showNumLabel: UILabel!
 }

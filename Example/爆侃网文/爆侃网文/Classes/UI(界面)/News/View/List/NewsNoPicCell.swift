@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import YYWebImage
 
 class NewsNoPicCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var postModel: ArticleListModel? {
+        didSet {
+            articleTitleLabel.text = postModel?.title!
+            timeLabel.text = postModel?.newstime!
+            commentLabel.text = postModel?.plnum!
+            showNumLabel.text = postModel?.onclick!
+        }
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var articleTitleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var showNumLabel: UILabel!
+    
+    /**
+     计算行高
+     */
+    func getRowHeight(postModel: ArticleListModel) -> CGFloat {
+        self.postModel = postModel
+        layoutIfNeeded()
+        return CGRectGetMaxY(timeLabel.frame) + 15
     }
     
 }
