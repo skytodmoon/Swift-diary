@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // 配置全局样式
         setupGlobalStyle()
+        // 配置全局数据
+        setupGlobalData()
         // 配置控制器
-         setupRootViewController()
+        setupRootViewController()
+        // 配置键盘管理
+        setupKeyBoardManager()
         return true
     }
     
@@ -28,6 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarHidden = false
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         ProgressHUD.setupHUD() // 配置HUD
+    }
+    
+    /** 配置全局数据 */
+    private func setupGlobalData() {
+        // 设置初始正文字体大小
+        if NSUserDefaults.standardUserDefaults().integerForKey(CONTENT_FONT_SIZE) == 0 {
+            // 字体 14小   16中   18大   20  22   24  共6个等级，可以用枚举列举使用
+            NSUserDefaults.standardUserDefaults().setInteger(16, forKey: CONTENT_FONT_SIZE)
+        }
+        
+        // 验证缓存的账号是否有效
+        AccountModel.checkUserInfo()
     }
     
     
@@ -56,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 对比
         return currentVersion > sandboxVersion
+    }
+    
+    /** 配置键盘管理者 */
+    private func setupKeyBoardManager() {
+        IQKeyboardManager.sharedManager().enable = true
     }
 
     func applicationWillResignActive(application: UIApplication) {

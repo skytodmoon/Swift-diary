@@ -28,7 +28,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
 
         // 准备视图
-        prepareUI()
+//        prepareUI()
 
     }
 
