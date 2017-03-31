@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupRootViewController()
         // 配置键盘管理
         setupKeyBoardManager()
+        // 配置shareSDK
+        setupShareSDK()
         // 配置JPUSH
         setupJPush(launchOptions)
         return true
@@ -82,6 +84,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupKeyBoardManager() {
         IQKeyboardManager.sharedManager().enable = true
     }
+    
+    
+    /** 配置shareSDK */
+    private func setupShareSDK() -> Void {
+        
+        ShareSDK.registerApp(SHARESDK_APP_KEY,
+                             activePlatforms: [
+                                SSDKPlatformType.TypeSinaWeibo.rawValue,
+                                SSDKPlatformType.TypeQQ.rawValue,
+                                SSDKPlatformType.TypeWechat.rawValue],
+                             onImport: {(platform : SSDKPlatformType) -> Void in
+                                switch platform {
+                                case SSDKPlatformType.TypeWechat:
+                                    ShareSDKConnector.connectWeChat(WXApi.classForCoder())
+                                case SSDKPlatformType.TypeQQ:
+                                    ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
+                                default:
+                                    break
+                                }},
+                             onConfiguration: {(platform : SSDKPlatformType,appInfo : NSMutableDictionary!) -> Void in
+                                switch platform {
+                                case SSDKPlatformType.TypeSinaWeibo:
+                                    appInfo.SSDKSetupSinaWeiboByAppKey(WB_APP_KEY, appSecret : WB_APP_SECRET, redirectUri : WB_REDIRECT_URL, authType : SSDKAuthTypeBoth)
+                                case SSDKPlatformType.TypeWechat:
+                                    appInfo.SSDKSetupWeChatByAppId(WX_APP_ID, appSecret: WX_APP_SECRET)
+                                case SSDKPlatformType.TypeQQ:
+                                    appInfo.SSDKSetupQQByAppId(QQ_APP_ID, appKey: QQ_APP_KEY, authType: SSDKAuthTypeBoth)
+                                default:
+                                    break
+                                }})
+    }
+    
+
     
     /** 配置极光推送 */
     private func setupJPush(launchOptions: [NSObject: AnyObject]?) {
