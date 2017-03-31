@@ -8,14 +8,41 @@
 
 import UIKit
 
+protocol PhotoBottomBarDelegate {
+    func didTappedBackButton(button: UIButton)
+    func didTappedEditButton(button: UIButton)
+    func didTappedCommentButton(button: UIButton)
+    func didTappedCollectButton(button: UIButton)
+    func didTappedShareButton(button: UIButton)
+}
+
+
 class PhotoBottomBar: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var collectionButton: UIButton!
+    
+    var delegate: PhotoBottomBarDelegate?
+    
+    @IBAction func didTappedBackButton(button: UIButton) {
+        delegate?.didTappedBackButton(button)
     }
-    */
+    
+    @IBAction func didTappedEditButton(button: UIButton) {
+        delegate?.didTappedEditButton(button)
+    }
+    
+    @IBAction func didTappedCommentButton(button: UIButton) {
+        delegate?.didTappedCommentButton(button)
+    }
+    
+    @IBAction func didTappedCollectButton(button: UIButton) {
+        delegate?.didTappedCollectButton(button)
+    }
+    
+    @IBAction func didTappedShareButton(button: UIButton) {
+        delegate?.didTappedShareButton(button)
+    }
+
 
 }

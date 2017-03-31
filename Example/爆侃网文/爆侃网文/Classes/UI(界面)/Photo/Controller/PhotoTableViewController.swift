@@ -7,89 +7,171 @@
 //
 
 import UIKit
+import SDCycleScrollView
+import MJRefresh
 
-class PhotoTableViewController: UITableViewController {
-
+class PhotoTableViewController: UITableViewController, SDCycleScrollViewDelegate {
+    
+    /// 分类数据
+    var classid: Int? {
+        didSet {
+            if pageIndex == 1 {
+                tableView.mj_header.beginRefreshing()
+            }
+        }
+    }
+    
+    // 页码
+    var pageIndex = 1
+    
+    /// 模型数组
+    var photoList = [ArticleListModel]()
+    
+    /// 新闻cell重用标识符
+    let newsReuseIdentifier = "newsReuseIdentifier"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.registerClass(PhotoListCell.self, forCellReuseIdentifier: newsReuseIdentifier)
+        tableView.rowHeight = 200
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        let headerRefresh = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(updateNewData))
+        headerRefresh.lastUpdatedTimeLabel.hidden = true
+        tableView.mj_header = headerRefresh
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    /**
+     下拉加载最新数据
+     */
+    @objc private func updateNewData() {
+        loadNews(classid!, pageIndex: 1, method: 0)
     }
-
+    
+    /**
+     上拉加载更多数据
+     */
+    @objc private func loadMoreData() {
+        pageIndex += 1
+        loadNews(classid!, pageIndex: pageIndex, method: 1)
+    }
+    
+    /**
+     根据分类id、页码加载数据
+     
+     - parameter classid:    当前栏目id
+     - parameter pageIndex:  当前页码
+     - parameter method:     加载方式 0下拉加载最新 1上拉加载更多
+     */
+    private func loadNews(classid: Int, pageIndex: Int, method: Int) {
+        let parameters = [
+            "table" : "photo",
+            "classid" : classid,
+            "pageIndex" : pageIndex,
+            ]
+        
+        NetworkTool.shareNetworkTool.get(ARTICLE_LIST, parameters: parameters as? [String : AnyObject]) { (success, result, error) -> () in
+            
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            
+            if success == true {
+                if let successResult = result {
+                    
+                    let minId = self.photoList.last?.id ?? "0"
+                    let maxId = self.photoList.first?.id ?? "0"
+                    
+                    let data = successResult["data"][0].arrayValue.reverse()
+                    
+                    for article in data {
+                        
+                        var dict = [
+                            "title" : article["title"].string!,          // 文章标题
+                            "bclassid" : article["bclassid"].string!,    // 终极栏目id
+                            "classid" : article["classid"].string!,      // 当前子分类id
+                            "newstime" : article["newstime"].string!,    // 发布时间
+                            "created_at" : article["created_at"].string!,// 创建文章时间戳
+                            "username" : article["username"].string!,    // 用户名
+                            "onclick" : article["onclick"].string!,      // 点击量
+                            "smalltext" : article["smalltext"].string!,  // 简介
+                            "id" : article["id"].string!,                // 文章id
+                            "classname" : article["classname"].string!,  // 分类名称
+                            "table" : article["table"].string!,          // 数据表名
+                            "titleurl" : "\(BASE_URL)\(article["titleurl"].string!)", // 文章url
+                        ]
+                        
+                        // 标题图片可能无值
+                        if article["titlepic"].string != "" {
+                            dict["titlepic"] = article["titlepic"].string!
+                            
+                            let postModel = ArticleListModel(dict: dict)
+                            
+                            if method == 0 {
+                                if Int(maxId) < Int(postModel.id!) {
+                                    self.photoList.insert(postModel, atIndex: 0)
+                                }
+                            } else {
+                                if Int(minId) > Int(postModel.id!) {
+                                    self.photoList.append(postModel)
+                                }
+                            }
+                            
+                        } else {
+                            // 如果无图，就跳过
+                            continue
+                        }
+                        
+                    }
+                    
+                    // 刷新表格
+                    self.tableView.reloadData()
+                    
+                } else {
+                    print("error:\(error)")
+                }
+                
+            }
+        }
+        
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return photoList.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier(newsReuseIdentifier) as! PhotoListCell
+        cell.postModel = photoList[indexPath.row]
+        cell.cellHeight = 200
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currentListModel = photoList[indexPath.row]
+        let detailVc = PhotoDetailViewController()
+        detailVc.photoParam = (currentListModel.classid!, currentListModel.id!)
+        navigationController?.pushViewController(detailVc, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! PhotoListCell).cellOffset()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        let array = tableView.visibleCells
+        for cell in array {
+            // 里面的图片跟随移动
+            (cell as! PhotoListCell).cellOffset()
+        }
+        
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+

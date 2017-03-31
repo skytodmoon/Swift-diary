@@ -67,6 +67,8 @@
 		5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */; };
 		5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0351E8E46A500A6158B /* PhotoDetailViewController.swift */; };
 		5B68C0381E8E46B900A6158B /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */; };
+		5B68C03C1E8E731C00A6158B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C03A1E8E731C00A6158B /* LoginViewController.swift */; };
+		5B68C03D1E8E731C00A6158B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C03B1E8E731C00A6158B /* LoginViewController.xib */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +159,8 @@
 		5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoBottomBar.xib; sourceTree = "<group>"; };
 		5B68C0351E8E46A500A6158B /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		5B68C03A1E8E731C00A6158B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5B68C03B1E8E731C00A6158B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -390,6 +394,7 @@
 		5B68BFC81E8E171F00A6158B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B68C0391E8E72FF00A6158B /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +541,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B68C0391E8E72FF00A6158B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5B68C03A1E8E731C00A6158B /* LoginViewController.swift */,
+				5B68C03B1E8E731C00A6158B /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F212597BFBBFF531848156D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +631,11 @@
 					5B68BF6C1E8DEE9500A6158B = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = C4R9UP276A;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5B68BF801E8DEE9600A6158B = {
 						CreatedOnToolsVersion = 7.3;
@@ -658,6 +677,7 @@
 				5B68C00E1E8E3E7D00A6158B /* StarAndShareCell.xib in Resources */,
 				5B68C0161E8E3ED500A6158B /* NewsOnePicCell.xib in Resources */,
 				5B68C00A1E8E3E6200A6158B /* NewsBottomBar.xib in Resources */,
+				5B68C03D1E8E731C00A6158B /* LoginViewController.xib in Resources */,
 				5B68BFD01E8E175000A6158B /* NewsViewController.storyboard in Resources */,
 				5B68C0121E8E3EB600A6158B /* NewsNoPicCell.xib in Resources */,
 				5B68BF7B1E8DEE9500A6158B /* LaunchScreen.storyboard in Resources */,
@@ -771,6 +791,7 @@
 				5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */,
 				5B68C0111E8E3EB600A6158B /* NewsNoPicCell.swift in Sources */,
 				5B68C0301E8E464300A6158B /* PhotoDetailCell.swift in Sources */,
+				5B68C03C1E8E731C00A6158B /* LoginViewController.swift in Sources */,
 				5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */,
 				5B68C0061E8E3E3900A6158B /* DetailOtherCell.swift in Sources */,
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,

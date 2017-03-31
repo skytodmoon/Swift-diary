@@ -10,7 +10,7 @@
         <!--图秀-->
         <scene sceneID="ckc-Uq-vFg">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mqn-Xd-dLs" customClass="JFPhotoViewController" customModule="爆侃网文" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mqn-Xd-dLs" customClass="PhotoViewController" customModule="爆侃网文" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tUK-om-XoJ"/>
                         <viewControllerLayoutGuide type="bottom" id="fuU-RQ-tUC"/>
@@ -42,14 +42,14 @@
                                     <constraint firstAttribute="height" constant="70" id="Xk1-DA-fQL"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-ZM-xaJ" userLabel="topScrollView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-ZM-xaJ" userLabel="topScrollView">
                                 <rect key="frame" x="0.0" y="64" width="560" height="40"/>
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cvn-BJ-qt9"/>
                                 </constraints>
                             </scrollView>
-                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-EV-o5G" userLabel="contentScrollView">
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-EV-o5G" userLabel="contentScrollView">
                                 <rect key="frame" x="0.0" y="104" width="600" height="496"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -62,12 +62,14 @@
                             <constraint firstItem="V3q-ZM-xaJ" firstAttribute="leading" secondItem="rwb-V9-5e0" secondAttribute="leading" id="2Oa-Ga-56e"/>
                             <constraint firstItem="FHU-EV-o5G" firstAttribute="top" secondItem="V3q-ZM-xaJ" secondAttribute="bottom" id="37a-Uy-bya"/>
                             <constraint firstItem="HvU-g6-pnF" firstAttribute="leading" secondItem="rwb-V9-5e0" secondAttribute="leading" id="6cV-2M-Lrb"/>
+                            <constraint firstItem="FHU-EV-o5G" firstAttribute="top" secondItem="V3q-ZM-xaJ" secondAttribute="bottom" id="8Sx-iG-5YR"/>
                             <constraint firstAttribute="trailing" secondItem="V3q-ZM-xaJ" secondAttribute="trailing" id="BI9-nZ-1vr"/>
                             <constraint firstAttribute="trailing" secondItem="HvU-g6-pnF" secondAttribute="trailing" id="ECk-5a-11D"/>
                             <constraint firstItem="nVh-rT-fTe" firstAttribute="top" secondItem="rwb-V9-5e0" secondAttribute="topMargin" id="JF6-JJ-tac"/>
                             <constraint firstItem="nVh-rT-fTe" firstAttribute="leading" secondItem="rwb-V9-5e0" secondAttribute="leading" id="LZx-TS-hFa"/>
                             <constraint firstItem="HvU-g6-pnF" firstAttribute="centerY" secondItem="rwb-V9-5e0" secondAttribute="centerY" id="Nbg-WK-PcO"/>
                             <constraint firstAttribute="trailing" secondItem="nVh-rT-fTe" secondAttribute="trailing" id="OYt-ev-Qdw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V3q-ZM-xaJ" secondAttribute="trailing" constant="20" id="WsE-ms-yE1"/>
                             <constraint firstItem="fuU-RQ-tUC" firstAttribute="top" secondItem="FHU-EV-o5G" secondAttribute="bottom" id="ZBW-cO-yTr"/>
                             <constraint firstAttribute="trailing" secondItem="FHU-EV-o5G" secondAttribute="trailing" id="n0h-zf-Th1"/>
                             <constraint firstItem="FHU-EV-o5G" firstAttribute="leading" secondItem="rwb-V9-5e0" secondAttribute="leading" id="tsN-zH-cM8"/>
@@ -111,7 +113,7 @@
         <!--Navigation Controller-->
         <scene sceneID="AFD-bS-gwD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hz5-hD-UIz" customClass="JFNavigationController" customModule="爆侃网文" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hz5-hD-UIz" customClass="NavigationController" customModule="爆侃网文" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vjb-ye-gYw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

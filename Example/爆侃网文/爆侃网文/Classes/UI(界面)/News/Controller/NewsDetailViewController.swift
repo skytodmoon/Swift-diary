@@ -623,7 +623,7 @@ extension NewsDetailViewController: NewsBottomBarDelegate, CommentCommitViewDele
                 }
             }
         } else {
-//            presentViewController(NavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)), animated: true, completion: { })
+            presentViewController(NavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)), animated: true, completion: { })
         }
         
     }
