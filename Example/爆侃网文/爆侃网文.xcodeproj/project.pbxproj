@@ -65,6 +65,8 @@
 		5B68C0301E8E464300A6158B /* PhotoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C02F1E8E464300A6158B /* PhotoDetailCell.swift */; };
 		5B68C0321E8E465500A6158B /* PhotoBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0311E8E465500A6158B /* PhotoBottomBar.swift */; };
 		5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */; };
+		5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0351E8E46A500A6158B /* PhotoDetailViewController.swift */; };
+		5B68C0381E8E46B900A6158B /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,8 @@
 		5B68C02F1E8E464300A6158B /* PhotoDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailCell.swift; sourceTree = "<group>"; };
 		5B68C0311E8E465500A6158B /* PhotoBottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBottomBar.swift; sourceTree = "<group>"; };
 		5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoBottomBar.xib; sourceTree = "<group>"; };
+		5B68C0351E8E46A500A6158B /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -367,6 +371,8 @@
 			children = (
 				5B68BFD91E8E17F900A6158B /* PhotoViewController.storyboard */,
 				5B68BFDA1E8E17F900A6158B /* PhotoViewController.swift */,
+				5B68C0351E8E46A500A6158B /* PhotoDetailViewController.swift */,
+				5B68C0371E8E46B900A6158B /* PhotoTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -751,12 +757,14 @@
 				5B68BFBE1E8DF5AD00A6158B /* NewFeatureViewController.swift in Sources */,
 				5B68BFC21E8DF5DE00A6158B /* TabBarController.swift in Sources */,
 				5B68C00D1E8E3E7D00A6158B /* StarAndShareCell.swift in Sources */,
+				5B68C0381E8E46B900A6158B /* PhotoTableViewController.swift in Sources */,
 				5B68BFFA1E8E3DBC00A6158B /* EditColumnViewCell.swift in Sources */,
 				5B68BFE01E8E2A7600A6158B /* ArticleDetailModel.swift in Sources */,
 				5B68C0241E8E443500A6158B /* SetFontView.swift in Sources */,
 				5B68BFCE1E8E173D00A6158B /* NewsViewController.swift in Sources */,
 				5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
+				5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
 				5B68BFEC1E8E2D1800A6158B /* ArticleListModel.swift in Sources */,
 				5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */,
