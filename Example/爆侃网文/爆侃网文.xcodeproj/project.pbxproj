@@ -59,6 +59,12 @@
 		5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C01F1E8E3F6B00A6158B /* EditColumnViewController.swift */; };
 		5B68C0241E8E443500A6158B /* SetFontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0231E8E443500A6158B /* SetFontView.swift */; };
 		5B68C0261E8E444600A6158B /* SetFontView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0251E8E444500A6158B /* SetFontView.xib */; };
+		5B68C02A1E8E460700A6158B /* PhotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0291E8E460700A6158B /* PhotoDetailModel.swift */; };
+		5B68C02C1E8E461A00A6158B /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C02B1E8E461A00A6158B /* ProgressView.swift */; };
+		5B68C02E1E8E462F00A6158B /* PhotoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C02D1E8E462F00A6158B /* PhotoListCell.swift */; };
+		5B68C0301E8E464300A6158B /* PhotoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C02F1E8E464300A6158B /* PhotoDetailCell.swift */; };
+		5B68C0321E8E465500A6158B /* PhotoBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0311E8E465500A6158B /* PhotoBottomBar.swift */; };
+		5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +147,12 @@
 		5B68C01F1E8E3F6B00A6158B /* EditColumnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditColumnViewController.swift; sourceTree = "<group>"; };
 		5B68C0231E8E443500A6158B /* SetFontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetFontView.swift; sourceTree = "<group>"; };
 		5B68C0251E8E444500A6158B /* SetFontView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetFontView.xib; sourceTree = "<group>"; };
+		5B68C0291E8E460700A6158B /* PhotoDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailModel.swift; sourceTree = "<group>"; };
+		5B68C02B1E8E461A00A6158B /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		5B68C02D1E8E462F00A6158B /* PhotoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListCell.swift; sourceTree = "<group>"; };
+		5B68C02F1E8E464300A6158B /* PhotoDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailCell.swift; sourceTree = "<group>"; };
+		5B68C0311E8E465500A6158B /* PhotoBottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBottomBar.swift; sourceTree = "<group>"; };
+		5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoBottomBar.xib; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -344,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				5B68BFC61E8E171F00A6158B /* Controller */,
+				5B68C0271E8E45F300A6158B /* Model */,
+				5B68C0281E8E45F300A6158B /* View */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -496,6 +510,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B68C0271E8E45F300A6158B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B68C0291E8E460700A6158B /* PhotoDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B68C0281E8E45F300A6158B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B68C02B1E8E461A00A6158B /* ProgressView.swift */,
+				5B68C02D1E8E462F00A6158B /* PhotoListCell.swift */,
+				5B68C02F1E8E464300A6158B /* PhotoDetailCell.swift */,
+				5B68C0311E8E465500A6158B /* PhotoBottomBar.swift */,
+				5B68C0331E8E466400A6158B /* PhotoBottomBar.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F212597BFBBFF531848156D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B68C0041E8E3E1800A6158B /* CommentCommitView.xib in Resources */,
+				5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */,
 				5B68C00E1E8E3E7D00A6158B /* StarAndShareCell.xib in Resources */,
 				5B68C0161E8E3ED500A6158B /* NewsOnePicCell.xib in Resources */,
 				5B68C00A1E8E3E6200A6158B /* NewsBottomBar.xib in Resources */,
@@ -699,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B68C01E1E8E3F5800A6158B /* CommentTableViewController.swift in Sources */,
+				5B68C02E1E8E462F00A6158B /* PhotoListCell.swift in Sources */,
 				5B68BFEA1E8E2D0C00A6158B /* AccountModel.swift in Sources */,
 				5B68BFE41E8E2A8C00A6158B /* OtherLinkModel.swift in Sources */,
 				5B68C0191E8E3EEF00A6158B /* NewsThreePicCell.swift in Sources */,
@@ -707,6 +743,7 @@
 				5B68BFF41E8E3D5800A6158B /* NewsTableViewController.swift in Sources */,
 				5B68C0081E8E3E5200A6158B /* NewsBottomBar.swift in Sources */,
 				5B68C0021E8E3E0800A6158B /* CommentCommitView.swift in Sources */,
+				5B68C02A1E8E460700A6158B /* PhotoDetailModel.swift in Sources */,
 				5B68BFFF1E8E3DE300A6158B /* CommentCell.swift in Sources */,
 				5B68C0151E8E3ED500A6158B /* NewsOnePicCell.swift in Sources */,
 				5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */,
@@ -725,13 +762,16 @@
 				5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */,
 				5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */,
 				5B68C0111E8E3EB600A6158B /* NewsNoPicCell.swift in Sources */,
+				5B68C0301E8E464300A6158B /* PhotoDetailCell.swift in Sources */,
 				5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */,
 				5B68C0061E8E3E3900A6158B /* DetailOtherCell.swift in Sources */,
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,
 				5B68BF711E8DEE9500A6158B /* AppDelegate.swift in Sources */,
 				5B68BFC01E8DF5C500A6158B /* NavigationController.swift in Sources */,
 				5B68BFB71E8DF4EE00A6158B /* API.swift in Sources */,
+				5B68C0321E8E465500A6158B /* PhotoBottomBar.swift in Sources */,
 				5B68BFB51E8DF4CF00A6158B /* Common.swift in Sources */,
+				5B68C02C1E8E461A00A6158B /* ProgressView.swift in Sources */,
 				5B68BFDC1E8E17F900A6158B /* PhotoViewController.swift in Sources */,
 				5B68BFFC1E8E3DCD00A6158B /* ColumnReusableView.swift in Sources */,
 			);
