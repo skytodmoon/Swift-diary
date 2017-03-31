@@ -20,6 +20,9 @@
 		5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFB21E8DF48F00A6158B /* UIImage+Extension.swift */; };
 		5B68BFB51E8DF4CF00A6158B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFB41E8DF4CF00A6158B /* Common.swift */; };
 		5B68BFB71E8DF4EE00A6158B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFB61E8DF4EE00A6158B /* API.swift */; };
+		5B68BFBE1E8DF5AD00A6158B /* NewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFBD1E8DF5AD00A6158B /* NewFeatureViewController.swift */; };
+		5B68BFC01E8DF5C500A6158B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFBF1E8DF5C500A6158B /* NavigationController.swift */; };
+		5B68BFC21E8DF5DE00A6158B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFC11E8DF5DE00A6158B /* TabBarController.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		5B68BFB21E8DF48F00A6158B /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5B68BFB41E8DF4CF00A6158B /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5B68BFB61E8DF4EE00A6158B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5B68BFBD1E8DF5AD00A6158B /* NewFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureViewController.swift; sourceTree = "<group>"; };
+		5B68BFBF1E8DF5C500A6158B /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		5B68BFC11E8DF5DE00A6158B /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +203,7 @@
 		5B68BFAA1E8DF3E200A6158B /* UI(界面) */ = {
 			isa = PBXGroup;
 			children = (
+				5B68BFB81E8DF57A00A6158B /* Main */,
 			);
 			path = "UI(界面)";
 			sourceTree = "<group>";
@@ -206,6 +213,24 @@
 			children = (
 			);
 			path = "Vender(SDK)";
+			sourceTree = "<group>";
+		};
+		5B68BFB81E8DF57A00A6158B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B68BFB91E8DF57A00A6158B /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B68BFB91E8DF57A00A6158B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B68BFBD1E8DF5AD00A6158B /* NewFeatureViewController.swift */,
+				5B68BFBF1E8DF5C500A6158B /* NavigationController.swift */,
+				5B68BFC11E8DF5DE00A6158B /* TabBarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F212597BFBBFF531848156D1 /* Pods */ = {
@@ -401,11 +426,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B68BF731E8DEE9500A6158B /* ViewController.swift in Sources */,
+				5B68BFBE1E8DF5AD00A6158B /* NewFeatureViewController.swift in Sources */,
+				5B68BFC21E8DF5DE00A6158B /* TabBarController.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
 				5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */,
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,
 				5B68BF711E8DEE9500A6158B /* AppDelegate.swift in Sources */,
+				5B68BFC01E8DF5C500A6158B /* NavigationController.swift in Sources */,
 				5B68BFB71E8DF4EE00A6158B /* API.swift in Sources */,
 				5B68BFB51E8DF4CF00A6158B /* Common.swift in Sources */,
 			);

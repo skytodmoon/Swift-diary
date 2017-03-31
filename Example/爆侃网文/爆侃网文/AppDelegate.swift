@@ -15,8 +15,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // 配置控制器
+         setupRootViewController()
         return true
+    }
+    
+    
+    /** 根控制器 */
+    private func setupRootViewController() {
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController =  isNewVersion() ? NewFeatureViewController() : TabBarController()
+        window?.makeKeyAndVisible()
+    }
+    
+    /** 判断是否是新版本 */
+    private func isNewVersion() -> Bool {
+        // 获取当前的版本号
+        let versionString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        print(versionString)
+        
+        let currentVersion = Double(versionString)!
+        
+        // 获取到之前的版本号
+        let sandboxVersionKey = "sandboxVersionKey"
+        let sandboxVersion = NSUserDefaults.standardUserDefaults().doubleForKey(sandboxVersionKey)
+        
+        // 保存当前版本号
+        NSUserDefaults.standardUserDefaults().setDouble(currentVersion, forKey: sandboxVersionKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        // 对比
+        return currentVersion > sandboxVersion
     }
 
     func applicationWillResignActive(application: UIApplication) {
