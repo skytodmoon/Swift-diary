@@ -73,6 +73,8 @@
 		5B68C0411E8E73DF00A6158B /* VideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0401E8E73DF00A6158B /* VideoViewController.storyboard */; };
 		5B68C0441E8E746C00A6158B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0431E8E746C00A6158B /* VideoCell.swift */; };
 		5B68C0461E8E74A000A6158B /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0451E8E74A000A6158B /* VideoTableViewController.swift */; };
+		5B68C0481E8E755000A6158B /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0471E8E755000A6158B /* ReadViewController.swift */; };
+		5B68C04A1E8E755F00A6158B /* ReadViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0491E8E755F00A6158B /* ReadViewController.storyboard */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,8 @@
 		5B68C0401E8E73DF00A6158B /* VideoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoViewController.storyboard; sourceTree = "<group>"; };
 		5B68C0431E8E746C00A6158B /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		5B68C0451E8E74A000A6158B /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		5B68C0471E8E755000A6158B /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		5B68C0491E8E755F00A6158B /* ReadViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReadViewController.storyboard; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +422,8 @@
 		5B68BFCA1E8E171F00A6158B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B68C0471E8E755000A6158B /* ReadViewController.swift */,
+				5B68C0491E8E755F00A6158B /* ReadViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -695,6 +701,7 @@
 				5B68C0041E8E3E1800A6158B /* CommentCommitView.xib in Resources */,
 				5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */,
 				5B68C00E1E8E3E7D00A6158B /* StarAndShareCell.xib in Resources */,
+				5B68C04A1E8E755F00A6158B /* ReadViewController.storyboard in Resources */,
 				5B68C0161E8E3ED500A6158B /* NewsOnePicCell.xib in Resources */,
 				5B68C00A1E8E3E6200A6158B /* NewsBottomBar.xib in Resources */,
 				5B68C03D1E8E731C00A6158B /* LoginViewController.xib in Resources */,
@@ -826,6 +833,7 @@
 				5B68C02C1E8E461A00A6158B /* ProgressView.swift in Sources */,
 				5B68C0461E8E74A000A6158B /* VideoTableViewController.swift in Sources */,
 				5B68BFDC1E8E17F900A6158B /* PhotoViewController.swift in Sources */,
+				5B68C0481E8E755000A6158B /* ReadViewController.swift in Sources */,
 				5B68BFFC1E8E3DCD00A6158B /* ColumnReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

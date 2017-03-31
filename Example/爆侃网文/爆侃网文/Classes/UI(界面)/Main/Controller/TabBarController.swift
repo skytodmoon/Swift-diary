@@ -40,11 +40,11 @@ class TabBarController: UITabBarController {
         // 视频
         let bzoneVc = UIStoryboard.init(name: "VideoViewController", bundle: nil).instantiateInitialViewController()!
                 addChildViewController(bzoneVc, title: "视频", imageName: "tabbar_icon_bar")
+
+        //  阅读
+        let readVc = UIStoryboard.init(name: "ReadViewController", bundle: nil).instantiateInitialViewController()!
+                addChildViewController(readVc, title: "阅读", imageName: "tabbar_icon_reader")
 //
-//        //  阅读
-//        let readVc = UIStoryboard.init(name: "ReadViewController", bundle: nil).instantiateInitialViewController()!
-//                addChildViewController(readVc, title: "阅读", imageName: "tabbar_icon_reader")
-//        
 //        // 我
 //        let profileVc = UIStoryboard.init(name: "ProfileViewController", bundle: nil).instantiateInitialViewController()!
 //        addChildViewController(profileVc, title: "我", imageName: "tabbar_icon_me")
