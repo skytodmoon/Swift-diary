@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import YYWebImage
+
+protocol CommentCellDelegate {
+    func didTappedStarButton(button: UIButton, commentModel: CommentModel)
+}
 
 class CommentCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
+    var delegate: CommentCellDelegate?
+    
+    var commentModel: CommentModel? {
+        didSet {
+            avatarImageView.yy_setImageWithURL(NSURL(string: commentModel!.userpic!), options: YYWebImageOptions.IgnorePlaceHolder)
+            usernameLabel.text = commentModel!.plusername!
+            timeLabel.text = commentModel!.saytime!
+            contentLabel.text = commentModel!.saytext!
+            starButton.setTitle("\(commentModel!.zcnum)", forState: UIControlState.Normal)
+        }
+    }
+    
+    func getCellHeight(commentModel: CommentModel) -> CGFloat {
+        self.commentModel = commentModel
+        layoutIfNeeded()
+        return CGRectGetMaxY(contentLabel.frame) + 10
+    }
+    
+    /** 点击了赞 */
+    @IBAction func didTappedStarButton(sender: UIButton) {
+        delegate?.didTappedStarButton(sender, commentModel: commentModel!)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

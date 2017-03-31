@@ -55,6 +55,8 @@
 		5B68C0191E8E3EEF00A6158B /* NewsThreePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C0171E8E3EEF00A6158B /* NewsThreePicCell.swift */; };
 		5B68C01A1E8E3EEF00A6158B /* NewsThreePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68C0181E8E3EEF00A6158B /* NewsThreePicCell.xib */; };
 		5B68C01C1E8E3F0C00A6158B /* TopLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C01B1E8E3F0C00A6158B /* TopLabel.swift */; };
+		5B68C01E1E8E3F5800A6158B /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C01D1E8E3F5800A6158B /* CommentTableViewController.swift */; };
+		5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68C01F1E8E3F6B00A6158B /* EditColumnViewController.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		5B68C0171E8E3EEF00A6158B /* NewsThreePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsThreePicCell.swift; sourceTree = "<group>"; };
 		5B68C0181E8E3EEF00A6158B /* NewsThreePicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsThreePicCell.xib; sourceTree = "<group>"; };
 		5B68C01B1E8E3F0C00A6158B /* TopLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLabel.swift; sourceTree = "<group>"; };
+		5B68C01D1E8E3F5800A6158B /* CommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		5B68C01F1E8E3F6B00A6158B /* EditColumnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditColumnViewController.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -326,6 +330,8 @@
 				5B68BFCD1E8E173D00A6158B /* NewsViewController.swift */,
 				5B68BFF11E8E3CF300A6158B /* NewsDetailViewController.swift */,
 				5B68BFF31E8E3D5800A6158B /* NewsTableViewController.swift */,
+				5B68C01D1E8E3F5800A6158B /* CommentTableViewController.swift */,
+				5B68C01F1E8E3F6B00A6158B /* EditColumnViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -669,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B68C01E1E8E3F5800A6158B /* CommentTableViewController.swift in Sources */,
 				5B68BFEA1E8E2D0C00A6158B /* AccountModel.swift in Sources */,
 				5B68BFE41E8E2A8C00A6158B /* OtherLinkModel.swift in Sources */,
 				5B68C0191E8E3EEF00A6158B /* NewsThreePicCell.swift in Sources */,
@@ -679,6 +686,7 @@
 				5B68C0021E8E3E0800A6158B /* CommentCommitView.swift in Sources */,
 				5B68BFFF1E8E3DE300A6158B /* CommentCell.swift in Sources */,
 				5B68C0151E8E3ED500A6158B /* NewsOnePicCell.swift in Sources */,
+				5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */,
 				5B68C01C1E8E3F0C00A6158B /* TopLabel.swift in Sources */,
 				5B68BFBE1E8DF5AD00A6158B /* NewFeatureViewController.swift in Sources */,
 				5B68BFC21E8DF5DE00A6158B /* TabBarController.swift in Sources */,

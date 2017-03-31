@@ -23,6 +23,8 @@ class NewsViewController: UIViewController {
     // 栏目数组
     private var selectedArray: [[String : String]]?
     private var optionalArray: [[String : String]]?
+    
+    let editColumnVc = EditColumnViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
