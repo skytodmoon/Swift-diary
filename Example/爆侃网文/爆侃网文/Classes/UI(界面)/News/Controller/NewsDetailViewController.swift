@@ -576,34 +576,26 @@ extension NewsDetailViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - NewsBottomBarDelegate、CommentCommitViewDelegate
 extension NewsDetailViewController: NewsBottomBarDelegate, CommentCommitViewDelegate, SetFontViewDelegate {
     
-    /**
-     底部返回按钮点击
-     */
+    /** 底部返回按钮点击 */
     func didTappedBackButton(button: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    /**
-     底部编辑按钮点击
-     */
+    /** 底部编辑按钮点击 */
     func didTappedEditButton(button: UIButton) {
         let commentCommitView = NSBundle.mainBundle().loadNibNamed("CommentCommitView", owner: nil, options: nil).last as! CommentCommitView
         commentCommitView.delegate = self
         commentCommitView.show()
     }
     
-    /**
-     底部字体按钮点击 - 原来是评论
-     */
-    func didTappedCommentButton(button: UIButton) {
-        let setFontSizeView = NSBundle.mainBundle().loadNibNamed("SetFontView", owner: nil, options: nil).last as! SetFontView
-        setFontSizeView.delegate = self
-        setFontSizeView.show()
-    }
+    /** 底部字体按钮点击 - 原来是评论 */
+//    func didTappedCommentButton(button: UIButton) {
+//        let setFontSizeView = NSBundle.mainBundle().loadNibNamed("SetFontView", owner: nil, options: nil).last as! SetFontView
+//        setFontSizeView.delegate = self
+//        setFontSizeView.show()
+//    }
     
-    /**
-     底部收藏按钮点击
-     */
+    /** 底部收藏按钮点击 */
     func didTappedCollectButton(button: UIButton) {
         
         if AccountModel.isLogin() {
@@ -631,14 +623,12 @@ extension NewsDetailViewController: NewsBottomBarDelegate, CommentCommitViewDele
                 }
             }
         } else {
-            presentViewController(NavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)), animated: true, completion: { })
+//            presentViewController(NavigationController(rootViewController: LoginViewController(nibName: "LoginViewController", bundle: nil)), animated: true, completion: { })
         }
         
     }
     
-    /**
-     底部分享按钮点击
-     */
+    /** 底部分享按钮点击 */
     func didTappedShareButton(button: UIButton) {
         
         // 从缓存中获取标题图片
@@ -716,9 +706,7 @@ extension NewsDetailViewController: NewsBottomBarDelegate, CommentCommitViewDele
         }
     }
     
-    /**
-     修改了正文字体大小，需要重新显示
-     */
+    /** 修改了正文字体大小，需要重新显示 */
     func didChangeFontSize() {
         loadWebViewContent(model!)
     }
@@ -747,9 +735,7 @@ extension NewsDetailViewController: WKNavigationDelegate {
 // MARK: - StarAndShareCellDelegate
 extension NewsDetailViewController: StarAndShareCellDelegate {
     
-    /**
-     根据类型分享
-     */
+    /** 根据类型分享 */
     private func shareWithType(type: SSDKPlatformType) {
         
         guard let currentModel = model else {return}
@@ -783,23 +769,17 @@ extension NewsDetailViewController: StarAndShareCellDelegate {
         }
     }
     
-    /**
-     点击QQ
-     */
+    /** 点击QQ */
     func didTappedQQButton(button: UIButton) {
         shareWithType(SSDKPlatformType.SubTypeQQFriend)
     }
     
-    /**
-     点击了微信
-     */
+    /** 点击了微信 */
     func didTappedWeixinButton(button: UIButton) {
         shareWithType(SSDKPlatformType.SubTypeWechatSession)
     }
     
-    /**
-     点击了朋友圈
-     */
+    /** 点击了朋友圈 */
     func didTappedFriendCircleButton(button: UIButton) {
         shareWithType(SSDKPlatformType.SubTypeWechatTimeline)
     }
