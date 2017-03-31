@@ -15,9 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // 配置全局样式
+        setupGlobalStyle()
         // 配置控制器
          setupRootViewController()
         return true
+    }
+    
+    
+    /** 全局样式 */
+    private func setupGlobalStyle() {
+        UIApplication.sharedApplication().statusBarHidden = false
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        ProgressHUD.setupHUD() // 配置HUD
     }
     
     

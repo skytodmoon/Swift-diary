@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SnapKit
+import SVProgressHUD
+
 
 /**
  是否是夜间模式

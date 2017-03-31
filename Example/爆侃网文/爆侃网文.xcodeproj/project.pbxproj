@@ -30,6 +30,8 @@
 		5B68BFE01E8E2A7600A6158B /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFDF1E8E2A7600A6158B /* ArticleDetailModel.swift */; };
 		5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFE11E8E2A8300A6158B /* CommentModel.swift */; };
 		5B68BFE41E8E2A8C00A6158B /* OtherLinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFE31E8E2A8C00A6158B /* OtherLinkModel.swift */; };
+		5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFE51E8E2B4700A6158B /* ProgressHUD.swift */; };
+		5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68BFE71E8E2B5300A6158B /* NetworkTool.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		5B68BFDF1E8E2A7600A6158B /* ArticleDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
 		5B68BFE11E8E2A8300A6158B /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		5B68BFE31E8E2A8C00A6158B /* OtherLinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherLinkModel.swift; sourceTree = "<group>"; };
+		5B68BFE51E8E2B4700A6158B /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		5B68BFE71E8E2B5300A6158B /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +214,8 @@
 		5B68BFA91E8DF3E200A6158B /* Tool(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				5B68BFE51E8E2B4700A6158B /* ProgressHUD.swift */,
+				5B68BFE71E8E2B5300A6158B /* NetworkTool.swift */,
 			);
 			path = "Tool(工具)";
 			sourceTree = "<group>";
@@ -550,9 +556,11 @@
 				5B68BFC21E8DF5DE00A6158B /* TabBarController.swift in Sources */,
 				5B68BFE01E8E2A7600A6158B /* ArticleDetailModel.swift in Sources */,
 				5B68BFCE1E8E173D00A6158B /* NewsViewController.swift in Sources */,
+				5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
 				5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */,
+				5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */,
 				5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */,
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,
 				5B68BF711E8DEE9500A6158B /* AppDelegate.swift in Sources */,
