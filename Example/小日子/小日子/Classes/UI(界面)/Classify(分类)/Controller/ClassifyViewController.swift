@@ -77,11 +77,11 @@ class ClassifyViewController: MainViewController {
             ClassifyModel.loadClassifyModel { (data, error) -> () in
                 if error != nil {
                     SVProgressHUD.showErrorWithStatus("网络不给力")
-                    tmpSelf!.collView.header.endRefreshing()
+                    tmpSelf!.collView.mj_header.endRefreshing()
                     return
                 }
                 tmpSelf!.classData = data!
-                tmpSelf!.collView.header.endRefreshing()
+                tmpSelf!.collView.mj_header.endRefreshing()
                 tmpSelf!.collView.reloadData()
             }
         }
