@@ -589,11 +589,11 @@ extension NewsDetailViewController: NewsBottomBarDelegate, CommentCommitViewDele
     }
     
     /** 底部字体按钮点击 - 原来是评论 */
-//    func didTappedCommentButton(button: UIButton) {
-//        let setFontSizeView = NSBundle.mainBundle().loadNibNamed("SetFontView", owner: nil, options: nil).last as! SetFontView
-//        setFontSizeView.delegate = self
-//        setFontSizeView.show()
-//    }
+    func didTappedCommentButton(button: UIButton) {
+        let setFontSizeView = NSBundle.mainBundle().loadNibNamed("SetFontView", owner: nil, options: nil).last as! SetFontView
+        setFontSizeView.delegate = self
+        setFontSizeView.show()
+    }
     
     /** 底部收藏按钮点击 */
     func didTappedCollectButton(button: UIButton) {
