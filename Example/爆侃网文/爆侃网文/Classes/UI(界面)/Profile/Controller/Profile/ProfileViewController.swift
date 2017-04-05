@@ -37,11 +37,11 @@ class ProfileViewController: BaseTableViewController {
 
     /** 准备数据 */
     private func prepareData() {
-        //        let group1CellModel1 = ProfileCellArrowModel(title: "离线阅读", icon: "setting_star_icon")
-        //        group1CellModel1.operation = { () -> Void in
-        //            print("离线阅读")
-        //        }
-        //        let group1 = ProfileCellGroupModel(cells: [group1CellModel1])
+                let group1CellModel1 = ProfileCellArrowModel(title: "离线阅读", icon: "setting_star_icon")
+                group1CellModel1.operation = { () -> Void in
+                    print("离线阅读")
+                }
+                let group1 = ProfileCellGroupModel(cells: [group1CellModel1])
         
         let group2CellModel1 = ProfileCellLabelModel(title: "清除缓存", icon: "setting_clear_icon", text: "0.0M")
         group2CellModel1.operation = { () -> Void in
@@ -149,26 +149,24 @@ class ProfileViewController: BaseTableViewController {
 // MARK: - ProfileHeaderViewDelegate
 extension ProfileViewController: ProfileHeaderViewDelegate {
     
-    /**
-     头像按钮点击
-     */
+    /** 头像按钮点击 */
     func didTappedAvatarButton() {
         if AccountModel.isLogin() {
-            //            // 更换头像
-            //            let avaterAlertC = UIAlertController(title: "修改头像", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-            //            let selectPhoto = UIAlertAction(title: "相册选择", style: .Default, handler: { (action) in
-            //
-            //            })
-            //            let takePhoto = UIAlertAction(title: "拍照", style: .Default, handler: { (action) in
-            //
-            //            })
-            //            let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: { (action) in
-            //
-            //            })
-            //            avaterAlertC.addAction(selectPhoto)
-            //            avaterAlertC.addAction(takePhoto)
-            //            avaterAlertC.addAction(cancel)
-            //            presentViewController(avaterAlertC, animated: true, completion: nil)
+                        // 更换头像
+                        let avaterAlertC = UIAlertController(title: "修改头像", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+                        let selectPhoto = UIAlertAction(title: "相册选择", style: .Default, handler: { (action) in
+            
+                        })
+                        let takePhoto = UIAlertAction(title: "拍照", style: .Default, handler: { (action) in
+            
+                        })
+                        let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: { (action) in
+            
+                        })
+                        avaterAlertC.addAction(selectPhoto)
+                        avaterAlertC.addAction(takePhoto)
+                        avaterAlertC.addAction(cancel)
+                        presentViewController(avaterAlertC, animated: true, completion: nil)
             // 还没有修改头像的接口，这里进个人资料里
             navigationController?.pushViewController(EditProfileViewController(style: UITableViewStyle.Grouped), animated: true)
         } else {
