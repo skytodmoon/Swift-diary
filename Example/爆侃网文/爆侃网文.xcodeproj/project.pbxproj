@@ -83,6 +83,9 @@
 		5BA2E21D1E9478F3009761CD /* ProfileCellGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E21C1E9478F3009761CD /* ProfileCellGroupModel.swift */; };
 		5BA2E21F1E947912009761CD /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E21E1E947912009761CD /* ProfileCellModel.swift */; };
 		5BA2E2211E947952009761CD /* ProfileCellSwitchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2201E947952009761CD /* ProfileCellSwitchModel.swift */; };
+		5BA2E2231E947980009761CD /* ProfileCellArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2221E947980009761CD /* ProfileCellArrowModel.swift */; };
+		5BA2E2251E9479CA009761CD /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2241E9479CA009761CD /* ProfileCell.swift */; };
+		5BA2E2271E947A8B009761CD /* ProfileCellLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2261E947A8B009761CD /* ProfileCellLabelModel.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +192,9 @@
 		5BA2E21C1E9478F3009761CD /* ProfileCellGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellGroupModel.swift; sourceTree = "<group>"; };
 		5BA2E21E1E947912009761CD /* ProfileCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellModel.swift; sourceTree = "<group>"; };
 		5BA2E2201E947952009761CD /* ProfileCellSwitchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellSwitchModel.swift; sourceTree = "<group>"; };
+		5BA2E2221E947980009761CD /* ProfileCellArrowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellArrowModel.swift; sourceTree = "<group>"; };
+		5BA2E2241E9479CA009761CD /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		5BA2E2261E947A8B009761CD /* ProfileCellLabelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCellLabelModel.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -548,6 +554,8 @@
 				5BA2E21C1E9478F3009761CD /* ProfileCellGroupModel.swift */,
 				5BA2E21E1E947912009761CD /* ProfileCellModel.swift */,
 				5BA2E2201E947952009761CD /* ProfileCellSwitchModel.swift */,
+				5BA2E2221E947980009761CD /* ProfileCellArrowModel.swift */,
+				5BA2E2261E947A8B009761CD /* ProfileCellLabelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -557,6 +565,7 @@
 			children = (
 				5B68C0231E8E443500A6158B /* SetFontView.swift */,
 				5B68C0251E8E444500A6158B /* SetFontView.xib */,
+				5BA2E2241E9479CA009761CD /* ProfileCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -851,6 +860,7 @@
 				5B68BFFF1E8E3DE300A6158B /* CommentCell.swift in Sources */,
 				5B68C0151E8E3ED500A6158B /* NewsOnePicCell.swift in Sources */,
 				5BA2E21D1E9478F3009761CD /* ProfileCellGroupModel.swift in Sources */,
+				5BA2E2251E9479CA009761CD /* ProfileCell.swift in Sources */,
 				5B68C0441E8E746C00A6158B /* VideoCell.swift in Sources */,
 				5B68C0201E8E3F6B00A6158B /* EditColumnViewController.swift in Sources */,
 				5B68C0551E8E76C600A6158B /* ProfileFeedbackViewController.swift in Sources */,
@@ -863,6 +873,7 @@
 				5B68BFE01E8E2A7600A6158B /* ArticleDetailModel.swift in Sources */,
 				5B68C0241E8E443500A6158B /* SetFontView.swift in Sources */,
 				5B68BFCE1E8E173D00A6158B /* NewsViewController.swift in Sources */,
+				5BA2E2231E947980009761CD /* ProfileCellArrowModel.swift in Sources */,
 				5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
 				5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */,
@@ -878,6 +889,7 @@
 				5B68C0531E8E76B700A6158B /* DutyViewController.swift in Sources */,
 				5B68BFB31E8DF48F00A6158B /* UIImage+Extension.swift in Sources */,
 				5B68C0061E8E3E3900A6158B /* DetailOtherCell.swift in Sources */,
+				5BA2E2271E947A8B009761CD /* ProfileCellLabelModel.swift in Sources */,
 				5B68BFB11E8DF47300A6158B /* String+Extension.swift in Sources */,
 				5B68BF711E8DEE9500A6158B /* AppDelegate.swift in Sources */,
 				5B68BFC01E8DF5C500A6158B /* NavigationController.swift in Sources */,

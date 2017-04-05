@@ -9,5 +9,10 @@
 import UIKit
 
 class ProfileCellSwitchModel: ProfileCellModel {
+    
+    /// 开关状态
+    var on: Bool {
+        return NSUserDefaults.standardUserDefaults().boolForKey(NIGHT_KEY)
+    }
 
 }
