@@ -91,6 +91,9 @@
 		5BA2E22E1E947C64009761CD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E22D1E947C64009761CD /* EditProfileViewController.swift */; };
 		5BA2E2311E947C97009761CD /* CollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2301E947C97009761CD /* CollectionTableViewController.swift */; };
 		5BA2E2341E947CCE009761CD /* CommentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2331E947CCE009761CD /* CommentListTableViewController.swift */; };
+		5BA2E2381E947D8A009761CD /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2361E947D8A009761CD /* ForgotViewController.swift */; };
+		5BA2E2391E947D8A009761CD /* ForgotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E2371E947D8A009761CD /* ForgotViewController.xib */; };
+		5BA2E23B1E947DDF009761CD /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E23A1E947DDF009761CD /* LoginButton.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +208,9 @@
 		5BA2E22D1E947C64009761CD /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		5BA2E2301E947C97009761CD /* CollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTableViewController.swift; sourceTree = "<group>"; };
 		5BA2E2331E947CCE009761CD /* CommentListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentListTableViewController.swift; sourceTree = "<group>"; };
+		5BA2E2361E947D8A009761CD /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		5BA2E2371E947D8A009761CD /* ForgotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotViewController.xib; sourceTree = "<group>"; };
+		5BA2E23A1E947DDF009761CD /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -438,6 +444,7 @@
 		5B68BFC81E8E171F00A6158B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5BA2E2351E947D78009761CD /* Forgot */,
 				5BA2E22F1E947C87009761CD /* Collection */,
 				5BA2E2321E947CBD009761CD /* Comment */,
 				5BA2E22C1E947C47009761CD /* Info */,
@@ -581,6 +588,7 @@
 				5BA2E2241E9479CA009761CD /* ProfileCell.swift */,
 				5BA2E2281E947B47009761CD /* ProfileHeaderView.swift */,
 				5BA2E22A1E947B57009761CD /* ProfileHeaderView.xib */,
+				5BA2E23A1E947DDF009761CD /* LoginButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -670,6 +678,15 @@
 				5BA2E2331E947CCE009761CD /* CommentListTableViewController.swift */,
 			);
 			path = Comment;
+			sourceTree = "<group>";
+		};
+		5BA2E2351E947D78009761CD /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				5BA2E2361E947D8A009761CD /* ForgotViewController.swift */,
+				5BA2E2371E947D8A009761CD /* ForgotViewController.xib */,
+			);
+			path = Forgot;
 			sourceTree = "<group>";
 		};
 		F212597BFBBFF531848156D1 /* Pods */ = {
@@ -811,6 +828,7 @@
 				5B68C0261E8E444600A6158B /* SetFontView.xib in Resources */,
 				5B68C04F1E8E75F500A6158B /* ProfileViewController.storyboard in Resources */,
 				5B68BF761E8DEE9500A6158B /* Main.storyboard in Resources */,
+				5BA2E2391E947D8A009761CD /* ForgotViewController.xib in Resources */,
 				5B68C01A1E8E3EEF00A6158B /* NewsThreePicCell.xib in Resources */,
 				5B68BFDB1E8E17F900A6158B /* PhotoViewController.storyboard in Resources */,
 			);
@@ -918,11 +936,13 @@
 				5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
 				5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */,
+				5BA2E23B1E947DDF009761CD /* LoginButton.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
 				5B68BFEC1E8E2D1800A6158B /* ArticleListModel.swift in Sources */,
 				5BA2E2211E947952009761CD /* ProfileCellSwitchModel.swift in Sources */,
 				5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */,
 				5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */,
+				5BA2E2381E947D8A009761CD /* ForgotViewController.swift in Sources */,
 				5B68C0111E8E3EB600A6158B /* NewsNoPicCell.swift in Sources */,
 				5B68C04D1E8E75E500A6158B /* ProfileViewController.swift in Sources */,
 				5B68C0301E8E464300A6158B /* PhotoDetailCell.swift in Sources */,
