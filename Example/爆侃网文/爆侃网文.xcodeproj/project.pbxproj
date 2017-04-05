@@ -94,6 +94,9 @@
 		5BA2E2381E947D8A009761CD /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2361E947D8A009761CD /* ForgotViewController.swift */; };
 		5BA2E2391E947D8A009761CD /* ForgotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E2371E947D8A009761CD /* ForgotViewController.xib */; };
 		5BA2E23B1E947DDF009761CD /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E23A1E947DDF009761CD /* LoginButton.swift */; };
+		5BA2E23E1E948A7D009761CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E23C1E948A7D009761CD /* RegisterViewController.swift */; };
+		5BA2E23F1E948A7D009761CD /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E23D1E948A7D009761CD /* RegisterViewController.xib */; };
+		5BA2E2411E948B5F009761CD /* ProfileTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +214,9 @@
 		5BA2E2361E947D8A009761CD /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		5BA2E2371E947D8A009761CD /* ForgotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotViewController.xib; sourceTree = "<group>"; };
 		5BA2E23A1E947DDF009761CD /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		5BA2E23C1E948A7D009761CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5BA2E23D1E948A7D009761CD /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTopButton.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -589,6 +595,7 @@
 				5BA2E2281E947B47009761CD /* ProfileHeaderView.swift */,
 				5BA2E22A1E947B57009761CD /* ProfileHeaderView.xib */,
 				5BA2E23A1E947DDF009761CD /* LoginButton.swift */,
+				5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,6 +625,8 @@
 			children = (
 				5B68C03A1E8E731C00A6158B /* LoginViewController.swift */,
 				5B68C03B1E8E731C00A6158B /* LoginViewController.xib */,
+				5BA2E23C1E948A7D009761CD /* RegisterViewController.swift */,
+				5BA2E23D1E948A7D009761CD /* RegisterViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -813,6 +822,7 @@
 			files = (
 				5B68C0041E8E3E1800A6158B /* CommentCommitView.xib in Resources */,
 				5B68C0341E8E466400A6158B /* PhotoBottomBar.xib in Resources */,
+				5BA2E23F1E948A7D009761CD /* RegisterViewController.xib in Resources */,
 				5B68C00E1E8E3E7D00A6158B /* StarAndShareCell.xib in Resources */,
 				5B68C04A1E8E755F00A6158B /* ReadViewController.storyboard in Resources */,
 				5B68C0161E8E3ED500A6158B /* NewsOnePicCell.xib in Resources */,
@@ -908,6 +918,7 @@
 				5B68BFEA1E8E2D0C00A6158B /* AccountModel.swift in Sources */,
 				5B68BFE41E8E2A8C00A6158B /* OtherLinkModel.swift in Sources */,
 				5B68C0191E8E3EEF00A6158B /* NewsThreePicCell.swift in Sources */,
+				5BA2E2411E948B5F009761CD /* ProfileTopButton.swift in Sources */,
 				5B68BF731E8DEE9500A6158B /* ViewController.swift in Sources */,
 				5B68BFF21E8E3CF300A6158B /* NewsDetailViewController.swift in Sources */,
 				5B68BFF41E8E3D5800A6158B /* NewsTableViewController.swift in Sources */,
@@ -939,6 +950,7 @@
 				5BA2E23B1E947DDF009761CD /* LoginButton.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
 				5B68BFEC1E8E2D1800A6158B /* ArticleListModel.swift in Sources */,
+				5BA2E23E1E948A7D009761CD /* RegisterViewController.swift in Sources */,
 				5BA2E2211E947952009761CD /* ProfileCellSwitchModel.swift in Sources */,
 				5B68BFE21E8E2A8300A6158B /* CommentModel.swift in Sources */,
 				5B68BFE81E8E2B5300A6158B /* NetworkTool.swift in Sources */,
