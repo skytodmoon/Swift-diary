@@ -97,6 +97,9 @@
 		5BA2E23E1E948A7D009761CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E23C1E948A7D009761CD /* RegisterViewController.swift */; };
 		5BA2E23F1E948A7D009761CD /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E23D1E948A7D009761CD /* RegisterViewController.xib */; };
 		5BA2E2411E948B5F009761CD /* ProfileTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */; };
+		5BA2E2431E948C8C009761CD /* InfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2421E948C8C009761CD /* InfoHeaderView.swift */; };
+		5BA2E2451E948D06009761CD /* UserCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2441E948D06009761CD /* UserCommentModel.swift */; };
+		5BA2E2471E948D13009761CD /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E2461E948D13009761CD /* CollectionModel.swift */; };
 		D804D5DCF1468EB61F8900C2 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9BAF1745459F50BC3DF6D /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -217,6 +220,9 @@
 		5BA2E23C1E948A7D009761CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5BA2E23D1E948A7D009761CD /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTopButton.swift; sourceTree = "<group>"; };
+		5BA2E2421E948C8C009761CD /* InfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoHeaderView.swift; sourceTree = "<group>"; };
+		5BA2E2441E948D06009761CD /* UserCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCommentModel.swift; sourceTree = "<group>"; };
+		5BA2E2461E948D13009761CD /* CollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
 		C2D952829907CA4A820C8134 /* Pods-爆侃网文.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BB7C735D8A5A8A77D0E7 /* Pods-爆侃网文.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爆侃网文.release.xcconfig"; path = "Pods/Target Support Files/Pods-爆侃网文/Pods-爆侃网文.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -596,6 +602,7 @@
 				5BA2E22A1E947B57009761CD /* ProfileHeaderView.xib */,
 				5BA2E23A1E947DDF009761CD /* LoginButton.swift */,
 				5BA2E2401E948B5F009761CD /* ProfileTopButton.swift */,
+				5BA2E2421E948C8C009761CD /* InfoHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +661,7 @@
 		5BA2E2171E9478D0009761CD /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				5BA2E2441E948D06009761CD /* UserCommentModel.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -661,6 +669,7 @@
 		5BA2E2181E9478D0009761CD /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				5BA2E2461E948D13009761CD /* CollectionModel.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -945,10 +954,12 @@
 				5B68BFCE1E8E173D00A6158B /* NewsViewController.swift in Sources */,
 				5BA2E2231E947980009761CD /* ProfileCellArrowModel.swift in Sources */,
 				5B68BFE61E8E2B4700A6158B /* ProgressHUD.swift in Sources */,
+				5BA2E2451E948D06009761CD /* UserCommentModel.swift in Sources */,
 				5B68BFAD1E8DF43A00A6158B /* Color+Extension.swift in Sources */,
 				5B68C0361E8E46A500A6158B /* PhotoDetailViewController.swift in Sources */,
 				5BA2E23B1E947DDF009761CD /* LoginButton.swift in Sources */,
 				5B68BFAF1E8DF45900A6158B /* UIView+Extension.swift in Sources */,
+				5BA2E2431E948C8C009761CD /* InfoHeaderView.swift in Sources */,
 				5B68BFEC1E8E2D1800A6158B /* ArticleListModel.swift in Sources */,
 				5BA2E23E1E948A7D009761CD /* RegisterViewController.swift in Sources */,
 				5BA2E2211E947952009761CD /* ProfileCellSwitchModel.swift in Sources */,
@@ -973,6 +984,7 @@
 				5B68C0511E8E766000A6158B /* BaseTableViewController.swift in Sources */,
 				5B68C0321E8E465500A6158B /* PhotoBottomBar.swift in Sources */,
 				5B68BFB51E8DF4CF00A6158B /* Common.swift in Sources */,
+				5BA2E2471E948D13009761CD /* CollectionModel.swift in Sources */,
 				5B68C02C1E8E461A00A6158B /* ProgressView.swift in Sources */,
 				5BA2E2311E947C97009761CD /* CollectionTableViewController.swift in Sources */,
 				5B68C0461E8E74A000A6158B /* VideoTableViewController.swift in Sources */,
