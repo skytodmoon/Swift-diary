@@ -9,16 +9,16 @@
 import UIKit
 import MJRefresh
 
-class CommentListTableViewController: UITableViewController {
+class CollectionTableViewController: UITableViewController {
     
-    var articleList = [UserCommentModel]()
+    var articleList = [CollectionModel]()
     let identifier = "favaidentifier"
     var pageIndex = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "足迹"
+        title = "收藏"
         tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
         let headerRefresh = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(updateNewData))
         headerRefresh.lastUpdatedTimeLabel.hidden = true
@@ -64,18 +64,17 @@ class CommentListTableViewController: UITableViewController {
             "pageIndex" : pageIndex
         ]
         
-        NetworkTool.shareNetworkTool.get(GET_USER_COMMENT, parameters: parameters) { (success, result, error) -> () in
+        NetworkTool.shareNetworkTool.get(GET_USER_FAVA, parameters: parameters) { (success, result, error) -> () in
             
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
-            
             print(result)
             if success == true {
                 if let successResult = result {
                     let data = successResult["data"].arrayValue.reverse()
                     
-                    let minId = self.articleList.last?.plid ?? "0"
-                    let maxId = self.articleList.first?.plid ?? "0"
+                    let minId = self.articleList.last?.favaid ?? "0"
+                    let maxId = self.articleList.first?.favaid ?? "0"
                     
                     for fava in data {
                         
@@ -84,23 +83,19 @@ class CommentListTableViewController: UITableViewController {
                             "classid" : fava["classid"].stringValue,
                             "id" : fava["id"].stringValue,
                             "tbname" : fava["tbname"].stringValue,
-                            "saytext" : fava["saytext"].stringValue,
-                            "saytime" : fava["saytime"].stringValue,
-                            "plid" : fava["plid"].stringValue,
-                            "plstep" : fava["plstep"].stringValue,
-                            "plusername" : fava["plusername"].stringValue,
-                            "zcnum" : fava["zcnum"].stringValue,
-                            "userpic" : fava["userpic"].stringValue
+                            "favatime" : fava["favatime"].stringValue,
+                            "favaid" : fava["favaid"].stringValue,
+                            "cid" : fava["cid"].stringValue
                         ]
                         
-                        let postModel = UserCommentModel(dict: dict)
+                        let postModel = CollectionModel(dict: dict)
                         
                         if method == 0 {
-                            if Int(maxId) < Int(postModel.plid!) {
+                            if Int(maxId) < Int(postModel.favaid!) {
                                 self.articleList.insert(postModel, atIndex: 0)
                             }
                         } else {
-                            if Int(minId) > Int(postModel.plid!) {
+                            if Int(minId) > Int(postModel.favaid!) {
                                 self.articleList.append(postModel)
                             }
                         }
