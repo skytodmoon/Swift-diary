@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7E36371E9B7E6700ECCFCA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */; };
+		5B7E36391E9B7E8600ECCFCA /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */; };
 		5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */; };
 		5BA2E3821E95CF8B009761CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E3811E95CF8B009761CD /* ViewController.swift */; };
 		5BA2E3851E95CF8B009761CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E3831E95CF8B009761CD /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		08A6DE333BA42B090292DC2B /* Pods-爱鲜蜂UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂UITests/Pods-爱鲜蜂UITests.release.xcconfig"; sourceTree = "<group>"; };
 		174C4CA84167A1AD62B1FD45 /* Pods____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4169B1AE1883D2ED37ED2966 /* Pods____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
 		5BA2E37C1E95CF8B009761CD /* 爱鲜蜂.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA2E3811E95CF8B009761CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +414,8 @@
 		5BA2E3AF1E95CFA2009761CD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */,
+				5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1148,6 +1154,7 @@
 			files = (
 				5BA2E4A61E95D07D009761CD /* UIImageView+HighlightedWebCache.m in Sources */,
 				5BA2E4961E95D07D009761CD /* UIScrollView+MJExtension.m in Sources */,
+				5B7E36371E9B7E6700ECCFCA /* MainTabBarController.swift in Sources */,
 				5BA2E4A01E95D07D009761CD /* SDWebImageManager.m in Sources */,
 				5BA2E49C1E95D07D009761CD /* SDWebImageCompat.m in Sources */,
 				5BA2E4A11E95D07D009761CD /* SDWebImagePrefetcher.m in Sources */,
@@ -1180,6 +1187,7 @@
 				5BA2E49E1E95D07D009761CD /* SDWebImageDownloader.m in Sources */,
 				5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */,
 				5BA2E4911E95D07D009761CD /* MJRefreshGifHeader.m in Sources */,
+				5B7E36391E9B7E8600ECCFCA /* AnimationTabBarController.swift in Sources */,
 				5BA2E48F1E95D07D009761CD /* MJRefreshBackNormalFooter.m in Sources */,
 				5BA2E4AD1E95D07D009761CD /* SVProgressHUD.m in Sources */,
 				5BA2E4A71E95D07D009761CD /* UIImageView+WebCache.m in Sources */,
