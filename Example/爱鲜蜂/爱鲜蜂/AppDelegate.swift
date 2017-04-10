@@ -45,14 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainTabBar
     }
     
-    // MARK: - Action
-    func showMainTabbarControllerSucess(noti: NSNotification) {
-        let adImage = noti.object as! UIImage
-        let mainTabBar = MainTabBarController()
-        mainTabBar.adImage = adImage
-        window?.rootViewController = mainTabBar
-    }
-    
     func showMainTabbarControllerFale() {
         window!.rootViewController = MainTabBarController()
     }

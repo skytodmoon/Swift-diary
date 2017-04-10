@@ -15,6 +15,7 @@
 		5B7E36411E9B7F6C00ECCFCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36401E9B7F6C00ECCFCA /* BaseViewController.swift */; };
 		5B7E36441E9B7FD000ECCFCA /* MainAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36431E9B7FD000ECCFCA /* MainAD.swift */; };
 		5B7E36461E9B800B00ECCFCA /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36451E9B800B00ECCFCA /* SwiftDictModel.swift */; };
+		5B7E36491E9B806A00ECCFCA /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36481E9B806A00ECCFCA /* ADViewController.swift */; };
 		5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */; };
 		5BA2E3821E95CF8B009761CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E3811E95CF8B009761CD /* ViewController.swift */; };
 		5BA2E3851E95CF8B009761CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E3831E95CF8B009761CD /* Main.storyboard */; };
@@ -132,6 +133,7 @@
 		5B7E36401E9B7F6C00ECCFCA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B7E36431E9B7FD000ECCFCA /* MainAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAD.swift; sourceTree = "<group>"; };
 		5B7E36451E9B800B00ECCFCA /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
+		5B7E36481E9B806A00ECCFCA /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		5BA2E37C1E95CF8B009761CD /* 爱鲜蜂.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA2E3811E95CF8B009761CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +340,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5B7E36471E9B805D00ECCFCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E36481E9B806A00ECCFCA /* ADViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5B9E9BD87DCD160BF406F00F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +492,7 @@
 		5BA2E3B51E95CFA2009761CD /* MainModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E36471E9B805D00ECCFCA /* Controller */,
 				5B7E36421E9B7FC300ECCFCA /* Model */,
 			);
 			path = MainModel;
@@ -1215,6 +1226,7 @@
 				5B7E363D1E9B7F0A00ECCFCA /* Color+Extension.swift in Sources */,
 				5BA2E4871E95D07D009761CD /* MJRefreshBackFooter.m in Sources */,
 				5BA2E48C1E95D07D009761CD /* MJRefreshAutoNormalFooter.m in Sources */,
+				5B7E36491E9B806A00ECCFCA /* ADViewController.swift in Sources */,
 				5BA2E4AA1E95D07D009761CD /* README.md in Sources */,
 				5BA2E49E1E95D07D009761CD /* SDWebImageDownloader.m in Sources */,
 				5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */,
