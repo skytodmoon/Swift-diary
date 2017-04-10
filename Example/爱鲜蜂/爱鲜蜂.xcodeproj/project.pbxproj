@@ -11,6 +11,10 @@
 		5B7E36391E9B7E8600ECCFCA /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */; };
 		5B7E363B1E9B7ED400ECCFCA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E363A1E9B7ED400ECCFCA /* Theme.swift */; };
 		5B7E363D1E9B7F0A00ECCFCA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E363C1E9B7F0A00ECCFCA /* Color+Extension.swift */; };
+		5B7E363F1E9B7F5000ECCFCA /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E363E1E9B7F5000ECCFCA /* GuideViewController.swift */; };
+		5B7E36411E9B7F6C00ECCFCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36401E9B7F6C00ECCFCA /* BaseViewController.swift */; };
+		5B7E36441E9B7FD000ECCFCA /* MainAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36431E9B7FD000ECCFCA /* MainAD.swift */; };
+		5B7E36461E9B800B00ECCFCA /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36451E9B800B00ECCFCA /* SwiftDictModel.swift */; };
 		5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */; };
 		5BA2E3821E95CF8B009761CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E3811E95CF8B009761CD /* ViewController.swift */; };
 		5BA2E3851E95CF8B009761CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E3831E95CF8B009761CD /* Main.storyboard */; };
@@ -124,6 +128,10 @@
 		5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
 		5B7E363A1E9B7ED400ECCFCA /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5B7E363C1E9B7F0A00ECCFCA /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		5B7E363E1E9B7F5000ECCFCA /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		5B7E36401E9B7F6C00ECCFCA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5B7E36431E9B7FD000ECCFCA /* MainAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAD.swift; sourceTree = "<group>"; };
+		5B7E36451E9B800B00ECCFCA /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictModel.swift; sourceTree = "<group>"; };
 		5BA2E37C1E95CF8B009761CD /* 爱鲜蜂.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA2E3811E95CF8B009761CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +330,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B7E36421E9B7FC300ECCFCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E36431E9B7FD000ECCFCA /* MainAD.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B9E9BD87DCD160BF406F00F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +436,7 @@
 			children = (
 				5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */,
 				5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */,
+				5B7E36401E9B7F6C00ECCFCA /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -465,6 +482,7 @@
 		5BA2E3B51E95CFA2009761CD /* MainModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E36421E9B7FC300ECCFCA /* Model */,
 			);
 			path = MainModel;
 			sourceTree = "<group>";
@@ -482,6 +500,7 @@
 		5BA2E3B71E95CFA2009761CD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E363E1E9B7F5000ECCFCA /* GuideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -559,6 +578,7 @@
 		5BA2E3D01E95CFA2009761CD /* Tool(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E36451E9B800B00ECCFCA /* SwiftDictModel.swift */,
 			);
 			path = "Tool(工具类)";
 			sourceTree = "<group>";
@@ -1160,12 +1180,15 @@
 			files = (
 				5BA2E4A61E95D07D009761CD /* UIImageView+HighlightedWebCache.m in Sources */,
 				5BA2E4961E95D07D009761CD /* UIScrollView+MJExtension.m in Sources */,
+				5B7E36461E9B800B00ECCFCA /* SwiftDictModel.swift in Sources */,
 				5B7E36371E9B7E6700ECCFCA /* MainTabBarController.swift in Sources */,
 				5BA2E4A01E95D07D009761CD /* SDWebImageManager.m in Sources */,
 				5BA2E49C1E95D07D009761CD /* SDWebImageCompat.m in Sources */,
+				5B7E36411E9B7F6C00ECCFCA /* BaseViewController.swift in Sources */,
 				5BA2E4A11E95D07D009761CD /* SDWebImagePrefetcher.m in Sources */,
 				5BA2E3821E95CF8B009761CD /* ViewController.swift in Sources */,
 				5BA2E49B1E95D07D009761CD /* SDImageCache.m in Sources */,
+				5B7E36441E9B7FD000ECCFCA /* MainAD.swift in Sources */,
 				5BA2E4931E95D07D009761CD /* MJRefreshStateHeader.m in Sources */,
 				5BA2E4A21E95D07D009761CD /* UIButton+WebCache.m in Sources */,
 				5BA2E4861E95D07D009761CD /* MJRefreshAutoFooter.m in Sources */,
@@ -1175,6 +1198,7 @@
 				5BA2E48D1E95D07D009761CD /* MJRefreshAutoStateFooter.m in Sources */,
 				5BA2E4881E95D07D009761CD /* MJRefreshComponent.m in Sources */,
 				5BA2E4A31E95D07D009761CD /* UIImage+GIF.m in Sources */,
+				5B7E363F1E9B7F5000ECCFCA /* GuideViewController.swift in Sources */,
 				5BA2E4A81E95D07D009761CD /* UIView+WebCacheOperation.m in Sources */,
 				5BA2E48A1E95D07D009761CD /* MJRefreshHeader.m in Sources */,
 				5BA2E4921E95D07D009761CD /* MJRefreshNormalHeader.m in Sources */,
