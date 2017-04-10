@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B7E36371E9B7E6700ECCFCA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */; };
 		5B7E36391E9B7E8600ECCFCA /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */; };
+		5B7E363B1E9B7ED400ECCFCA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E363A1E9B7ED400ECCFCA /* Theme.swift */; };
+		5B7E363D1E9B7F0A00ECCFCA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7E363C1E9B7F0A00ECCFCA /* Color+Extension.swift */; };
 		5BA2E3801E95CF8B009761CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */; };
 		5BA2E3821E95CF8B009761CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2E3811E95CF8B009761CD /* ViewController.swift */; };
 		5BA2E3851E95CF8B009761CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2E3831E95CF8B009761CD /* Main.storyboard */; };
@@ -120,6 +122,8 @@
 		4169B1AE1883D2ED37ED2966 /* Pods____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7E36361E9B7E6700ECCFCA /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5B7E36381E9B7E8600ECCFCA /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
+		5B7E363A1E9B7ED400ECCFCA /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5B7E363C1E9B7F0A00ECCFCA /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5BA2E37C1E95CF8B009761CD /* 爱鲜蜂.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA2E37F1E95CF8B009761CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA2E3811E95CF8B009761CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 		5BA2E3B01E95CFA2009761CD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5B7E363C1E9B7F0A00ECCFCA /* Color+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA2E3BB1E95CFA2009761CD /* Resouce */,
+				5B7E363A1E9B7ED400ECCFCA /* Theme.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1179,8 +1185,10 @@
 				5BA2E4971E95D07D009761CD /* UIScrollView+MJRefresh.m in Sources */,
 				5BA2E49F1E95D07D009761CD /* SDWebImageDownloaderOperation.m in Sources */,
 				5BA2E4991E95D07D009761CD /* MKAnnotationView+WebCache.m in Sources */,
+				5B7E363B1E9B7ED400ECCFCA /* Theme.swift in Sources */,
 				5BA2E4981E95D07D009761CD /* UIView+MJExtension.m in Sources */,
 				5BA2E48E1E95D07D009761CD /* MJRefreshBackGifFooter.m in Sources */,
+				5B7E363D1E9B7F0A00ECCFCA /* Color+Extension.swift in Sources */,
 				5BA2E4871E95D07D009761CD /* MJRefreshBackFooter.m in Sources */,
 				5BA2E48C1E95D07D009761CD /* MJRefreshAutoNormalFooter.m in Sources */,
 				5BA2E4AA1E95D07D009761CD /* README.md in Sources */,
