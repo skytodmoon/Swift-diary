@@ -52,11 +52,9 @@ class ExploreMainController: UIViewController {
             .responseJSON { response in
                 if (response.result.error == nil) {
                     print("请求成功")
-                    debugPrint("HTTP Response Body: \(response.data)")
                 }
                 else {
                     print("请求失败")
-                    debugPrint("HTTP Request failed: \(response.result.error)")
                 }
         }
     }
