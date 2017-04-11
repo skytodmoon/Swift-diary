@@ -1,7 +1,7 @@
 //
 //  SnapKit
 //
-//  Copyright (c) 2011-Present SnapKit Team - https://github.com/SnapKit
+//  Copyright (c) 2011-2015 SnapKit Team - https://github.com/SnapKit
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,35 +22,24 @@
 //  THE SOFTWARE.
 
 #if os(iOS) || os(tvOS)
-    import UIKit
-#else
-    import AppKit
-#endif
+import UIKit
 
-
-@available(iOS 8.0, *)
-public struct ConstraintLayoutSupportDSL: ConstraintDSL {
+/**
+    Used to expose public API on view controllers
+*/
+public extension UIViewController {
     
-    public var target: AnyObject? {
-        return self.support
-    }
+    /// top layout guide top
+    public var snp_topLayoutGuideTop: ConstraintItem { return ConstraintItem(object: self.topLayoutGuide, attributes: ConstraintAttributes.Top) }
     
-    internal let support: ConstraintLayoutSupport
+    /// top layout guide bottom
+    public var snp_topLayoutGuideBottom: ConstraintItem { return ConstraintItem(object: self.topLayoutGuide, attributes: ConstraintAttributes.Bottom) }
     
-    internal init(support: ConstraintLayoutSupport) {
-        self.support = support
-        
-    }
+    /// bottom layout guide top
+    public var snp_bottomLayoutGuideTop: ConstraintItem { return ConstraintItem(object: self.bottomLayoutGuide, attributes: ConstraintAttributes.Top) }
     
-    public var top: ConstraintItem {
-        return ConstraintItem(target: self.target, attributes: ConstraintAttributes.top)
-    }
+    /// bottom layout guide bottom
+    public var snp_bottomLayoutGuideBottom: ConstraintItem { return ConstraintItem(object: self.bottomLayoutGuide, attributes: ConstraintAttributes.Bottom) }
     
-    public var bottom: ConstraintItem {
-        return ConstraintItem(target: self.target, attributes: ConstraintAttributes.bottom)
-    }
-    
-    public var height: ConstraintItem {
-        return ConstraintItem(target: self.target, attributes: ConstraintAttributes.height)
-    }
 }
+#endif
