@@ -36,6 +36,7 @@ class ExploreMainCell: UITableViewCell {
     }
     
     @IBOutlet weak var layout: UICollectionViewFlowLayout!
+    @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!{
         didSet{
             categoryLabel.layer.borderWidth = 0
