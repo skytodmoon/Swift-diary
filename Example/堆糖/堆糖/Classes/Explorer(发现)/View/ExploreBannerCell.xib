@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XgP-Hj-sTr" customClass="ExploreBannerCell" customModule="堆糖" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-sB-uJN">
+                        <rect key="frame" x="0.0" y="100" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="zg0-T6-Cae"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q0B-5x-e9H">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="95"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uJG-sB-uJN" secondAttribute="bottom" id="CHe-ai-d9k"/>
+                <constraint firstAttribute="trailing" secondItem="q0B-5x-e9H" secondAttribute="trailing" id="H9l-Ns-ALX"/>
+                <constraint firstAttribute="trailing" secondItem="uJG-sB-uJN" secondAttribute="trailing" id="Q5J-ll-0uc"/>
+                <constraint firstItem="uJG-sB-uJN" firstAttribute="top" secondItem="q0B-5x-e9H" secondAttribute="bottom" constant="5" id="RDn-u7-wve"/>
+                <constraint firstItem="q0B-5x-e9H" firstAttribute="top" secondItem="XgP-Hj-sTr" secondAttribute="top" id="uV6-MA-PL9"/>
+                <constraint firstItem="q0B-5x-e9H" firstAttribute="leading" secondItem="XgP-Hj-sTr" secondAttribute="leading" id="wsB-cG-EEU"/>
+                <constraint firstItem="uJG-sB-uJN" firstAttribute="leading" secondItem="XgP-Hj-sTr" secondAttribute="leading" id="wvp-Ta-01a"/>
+            </constraints>
+            <size key="customSize" width="202" height="198"/>
+            <connections>
+                <outlet property="photoImageView" destination="q0B-5x-e9H" id="JZ9-XY-Olz"/>
+                <outlet property="titleLabel" destination="uJG-sB-uJN" id="A0P-93-R9h"/>
+            </connections>
+            <point key="canvasLocation" x="264" y="406"/>
+        </collectionViewCell>
+    </objects>
+</document>
