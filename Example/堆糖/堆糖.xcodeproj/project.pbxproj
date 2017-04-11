@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7E54DAF138738E008700FD /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6585B057E59BB8FC5F84C9F /* Pods___.framework */; };
 		5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE67F1E9CB66500D38E34 /* Main.storyboard */; };
 		5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6841E9CB66500D38E34 /* LaunchScreen.storyboard */; };
 		5BCEE6911E9CB66500D38E34 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE6901E9CB66500D38E34 /* __Tests.swift */; };
@@ -24,6 +25,7 @@
 		5BCEE7001E9CB6EB00D38E34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6FF1E9CB6EB00D38E34 /* Images.xcassets */; };
 		5BCEE7021E9CB80400D38E34 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE7011E9CB80400D38E34 /* MainNavigationController.swift */; };
 		5BCEE7041E9CB82000D38E34 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE7031E9CB82000D38E34 /* UIColor+Extension.swift */; };
+		5BCEE7061E9CBA3800D38E34 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE7051E9CBA3700D38E34 /* NetWorkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-堆糖.debug.xcconfig"; path = "Pods/Target Support Files/Pods-堆糖/Pods-堆糖.debug.xcconfig"; sourceTree = "<group>"; };
 		5BCEE6781E9CB66500D38E34 /* 堆糖.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "堆糖.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEE6801E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BCEE6851E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +70,11 @@
 		5BCEE6FF1E9CB6EB00D38E34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5BCEE7011E9CB80400D38E34 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		5BCEE7031E9CB82000D38E34 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5BCEE7051E9CBA3700D38E34 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
+		5FDD6BDEE5C9B273904E465C /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F854B9B7E4025B2551B71A /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6585B057E59BB8FC5F84C9F /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58E328548ED62DC4C910E40 /* Pods-堆糖.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-堆糖.release.xcconfig"; path = "Pods/Target Support Files/Pods-堆糖/Pods-堆糖.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7E54DAF138738E008700FD /* Pods___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,8 @@
 				5BCEE68F1E9CB66500D38E34 /* 堆糖Tests */,
 				5BCEE69A1E9CB66500D38E34 /* 堆糖UITests */,
 				5BCEE6791E9CB66500D38E34 /* Products */,
+				A0376A1D57E3C4F38536B663 /* Pods */,
+				976BB69B34576A95915AB5E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -663,6 +674,7 @@
 		5BCEE6F01E9CB68B00D38E34 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5BCEE7051E9CBA3700D38E34 /* NetWorkTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -683,6 +695,25 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		976BB69B34576A95915AB5E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6585B057E59BB8FC5F84C9F /* Pods___.framework */,
+				A0F854B9B7E4025B2551B71A /* Pods___Tests.framework */,
+				5FDD6BDEE5C9B273904E465C /* Pods___UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0376A1D57E3C4F38536B663 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */,
+				E58E328548ED62DC4C910E40 /* Pods-堆糖.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -690,9 +721,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BCEE6A01E9CB66500D38E34 /* Build configuration list for PBXNativeTarget "堆糖" */;
 			buildPhases = (
+				1234C386CE53520BE0E0E27B /* [CP] Check Pods Manifest.lock */,
 				5BCEE6741E9CB66500D38E34 /* Sources */,
 				5BCEE6751E9CB66500D38E34 /* Frameworks */,
 				5BCEE6761E9CB66500D38E34 /* Resources */,
+				9D98E23F2295B88FF1622AD8 /* [CP] Embed Pods Frameworks */,
+				1F429404AF7F9D26D5AE7246 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -810,11 +844,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1234C386CE53520BE0E0E27B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1F429404AF7F9D26D5AE7246 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-堆糖/Pods-堆糖-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D98E23F2295B88FF1622AD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-堆糖/Pods-堆糖-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5BCEE6741E9CB66500D38E34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCEE7061E9CBA3800D38E34 /* NetWorkTool.swift in Sources */,
 				5BCEE7021E9CB80400D38E34 /* MainNavigationController.swift in Sources */,
 				5BCEE6FD1E9CB68B00D38E34 /* ViewController.swift in Sources */,
 				5BCEE6FE1E9CB68B00D38E34 /* StoreController.swift in Sources */,
@@ -965,6 +1048,7 @@
 		};
 		5BCEE6A11E9CB66500D38E34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -977,6 +1061,7 @@
 		};
 		5BCEE6A21E9CB66500D38E34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58E328548ED62DC4C910E40 /* Pods-堆糖.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
