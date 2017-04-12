@@ -5,4 +5,4 @@ class Counter {
     }
 }
 var counter = Counter()
-counter.incrementBy(2, numberOfTimes: 7)
+counter.incrementBy(amount: 2, numberOfTimes: 7)

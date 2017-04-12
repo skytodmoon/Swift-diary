@@ -6,4 +6,4 @@ func sumOf(numbers: Int...) -> Int {
     return sum
 }
 sumOf()
-sumOf(42, 597, 12)
+sumOf(numbers: 42, 597, 12)
