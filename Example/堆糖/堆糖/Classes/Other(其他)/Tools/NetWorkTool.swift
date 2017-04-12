@@ -9,51 +9,24 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import NVActivityIndicatorView
 
 
-enum Method: String {
-    case OPTIONS, GET, HEAD, POST, PUT, PATCH, DELETE, TRACE, CONNECT
-}
 
 class NetWorkTool: NSObject {
 
-    typealias successClosure = (response: NSData?)->()
-    typealias failureClosure = (error: NSError?)->()
+    typealias SuccessfulBlock = (obj: JSON)->Void
+    typealias FailBlock = (obj:NSError)->Void
     
-    private static let instance = NetWorkTool()
-    class var sharedInstance: NetWorkTool {
-        return instance
-    }
-
-/** get请求 */
-func get(url: String,parameters: [String:AnyObject]?,success: successClosure,
-failure: failureClosure ){
-    
-    Alamofire.request(.GET, url, parameters: parameters).responseData{ response in
-        
-        switch response.result {
-        case .Success :
-//            let json = JSON(data: response.result.value!)
-            success(response: response.data)
-        case.Failure :
-            failure(error: response.result.error)
-        }
-    }
-}
-
-/** post请求 */
-func post(url: String,parameters: [String:AnyObject]?,success: successClosure,failure: failureClosure ){
-        
-    Alamofire.request(.GET, url, parameters: parameters).responseData{ response in
-            
-        switch response.result {
-        case .Success :
-//            let json = JSON(data: response.result.value!)
-            success(response: response.data)
-            case.Failure :
-                failure(error: response.result.error)
+    class func getData(urlStr: String, parameters: [String: AnyObject]? = nil, failBlock: FailBlock, successfulBlock: SuccessfulBlock){
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        Alamofire.request(.GET, urlStr, parameters: parameters).responseJSON{ response in
+        if let value = response.result.value {
+            let json = JSON(value)
+            successfulBlock(obj: json)
+        }else if let error = response.result.error{
+                failBlock(obj: error)
             }
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
     }
 }

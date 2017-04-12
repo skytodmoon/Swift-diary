@@ -42,18 +42,23 @@ class ExploreMainController: UIViewController {
     
     private func sendRequestRequest() {
 
-        NetWorkTool.sharedInstance.get(urlString, parameters: nil, success: { (response) -> () in
-            
-            self.models = ExploreMainModel.loadExploreMainModels(response!)
-            
-            
-            self.tableView.reloadData()
-            
-        }) { (error) -> () in
-            
-            DEBUGLOG(error)
-            
+//        NetWorkTool.sharedInstance.get(urlString, parameters: nil, success: { (response) -> () in
+//            
+//            self.models = ExploreMainModel.loadExploreMainModels(response!)
+//            self.tableView.reloadData()
+//            
+//        }) { (error) -> () in
+//            
+//            DEBUGLOG(error)
+//            
+//        }
+        NetWorkTool.getData(urlString, parameters: nil, failBlock: { (obj) in
+            print("请求失败")
+            }) { (obj) in
+                self.models = ExploreMainModel.loadExploreMainModels(obj!)
+                self.tableView.reloadData()
         }
+        
     }
 }
 
