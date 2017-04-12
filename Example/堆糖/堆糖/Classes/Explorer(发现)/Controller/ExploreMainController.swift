@@ -11,7 +11,6 @@ import Alamofire
 
 
 private let ExploreMainCellID = "ExploreMainCell"
-private let urlString = "http://www.duitang.com/napi/index/groups/?app_code=gandalf&app_version=5.9%20rv%3A150681&device_name=Unknown%20iPhone&device_platform=iPhone6%2C1&locale=zh_CN&platform_name=iPhone%20OS&platform_version=9.2.1&screen_height=568&screen_width=320"
 
 class ExploreMainController: UIViewController {
     
@@ -41,24 +40,27 @@ class ExploreMainController: UIViewController {
     
     
     private func sendRequestRequest() {
-
-//        NetWorkTool.sharedInstance.get(urlString, parameters: nil, success: { (response) -> () in
-//            
-//            self.models = ExploreMainModel.loadExploreMainModels(response!)
-//            self.tableView.reloadData()
-//            
-//        }) { (error) -> () in
-//            
-//            DEBUGLOG(error)
-//            
-//        }
-        NetWorkTool.getData(urlString, parameters: nil, failBlock: { (obj) in
-            print("请求失败")
-            }) { (obj) in
-                self.models = ExploreMainModel.loadExploreMainModels(obj!)
-                self.tableView.reloadData()
+        let urlParams = [
+            "app_code":"gandalf",
+            "app_version":"5.9 rv:150681",
+            "device_name":"Unknown iPhone",
+            "device_platform":"iPhone6,1",
+            "locale":"zh_CN",
+            "platform_name":"iPhone OS",
+            "platform_version":"9.2.1",
+            "screen_height":"568",
+            "screen_width":"320",
+            ]
+        NetWorkTool.sharedInstance.get("http://www.duitang.com/napi/index/groups/", parameters: urlParams, success: { (response) -> () in
+            
+            self.models = ExploreMainModel.loadExploreMainModels(response!)
+            self.tableView.reloadData()
+            
+        }) { (error) -> () in
+            
+            DEBUGLOG(error)
+            
         }
-        
     }
 }
 
