@@ -36,6 +36,7 @@
 		5BAA71A31E9F18FB00902529 /* FUNC 的参数修饰.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "FUNC 的参数修饰.playground"; sourceTree = "<group>"; };
 		5BAA71A41E9F198C00902529 /* 字面量转换.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "字面量转换.playground"; sourceTree = "<group>"; };
 		5BAA71A51E9F1B6F00902529 /* 下标.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "下标.playground"; sourceTree = "<group>"; };
+		5BAA71A61E9F1C2400902529 /* 方法嵌套.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "方法嵌套.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		5BAA71841E9F0AA200902529 = {
 			isa = PBXGroup;
 			children = (
+				5BAA71A61E9F1C2400902529 /* 方法嵌套.playground */,
 				5BAA71A51E9F1B6F00902529 /* 下标.playground */,
 				5BAA71A41E9F198C00902529 /* 字面量转换.playground */,
 				5BAA71A31E9F18FB00902529 /* FUNC 的参数修饰.playground */,
@@ -233,6 +235,7 @@
 		5BAA71951E9F0AA200902529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -240,6 +243,7 @@
 		5BAA71961E9F0AA200902529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
