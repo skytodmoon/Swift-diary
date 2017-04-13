@@ -28,7 +28,7 @@ StringLiteralConvertible
 */
 
 protocol BooleanLiteralConvertible {
-    typealias BooleanLiteralType
+    associatedtype BooleanLiteralType
     
     /// Create an instance initialized to `value`.
     init(booleanLiteral value: BooleanLiteralType)
