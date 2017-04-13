@@ -14,6 +14,7 @@ func logIfTrue(predicate: () -> Bool) {
         print("True")
     }
 }
+
 //在调用的时候，我们需要写这样的代码
 
 logIfTrue({return 2 > 1})
@@ -25,15 +26,16 @@ logIfTrue({2 > 1})
 
 logIfTrue{2 > 1}
 //但是不管哪种方式，要么是书写起来十分麻烦，要么是表达上不太清晰，看起来都让人生气。于是 @autoclosure 登场了。我们可以改换方法参数，在参数名前面加上 @autoclosure 关键字：
-
+/*
 func logIfTrue(@autoclosure predicate: () -> Bool) {
     if predicate() {
         print("True")
     }
 }
+ */
 //这时候我们就可以直接写：
 
-logIfTrue(2 > 1)
+//logIfTrue(2 > 1)
 //来进行调用了，Swift 将会把 2 > 1 这个表达式自动转换为 () -> Bool。这样我们就得到了一个写法简单，表意清楚的式子。
 
 //在 Swift 中，有一个非常有用的操作符，可以用来快速地对 nil 进行条件判断，那就是 ??。这个操作符可以判断输入并在当左侧的值是非 nil 的 Optional 值时返回其 value，当左侧是 nil 时返回右侧的值，比如：
@@ -45,12 +47,14 @@ var currentLevel = level ?? startLevel
 
 //在这个例子中我们没有设置过 level，因此最后 startLevel 被赋值给了 currentLevel。如果我们充满好奇心地点进 ?? 的定义，可以看到 ?? 有两种版本：
 
+/*
 func ??<T>(optional: T?, @autoclosure defaultValue: () -> T?) -> T?
 
 func ??<T>(optional: T?, @autoclosure defaultValue: () -> T) -> T
-
+ 
+*/
 //在这里我们的输入满足的是后者，虽然表面上看 startLevel 只是一个 Int，但是其实在使用时它被自动封装成了一个 () -> Int，有了这个提示，我们不妨来猜测一下 ?? 的实现吧：
-
+/*
 func ??<T>(optional: T?, @autoclosure defaultValue: () -> T) -> T {
     switch optional {
     case .Some(let value):
@@ -59,7 +63,7 @@ func ??<T>(optional: T?, @autoclosure defaultValue: () -> T) -> T {
         return defaultValue()
     }
 }
-
+*/
 //可能你会有疑问，为什么这里要使用 autoclosure，直接接受 T 作为参数并返回不行么，为何要用 () -> T 这样的形式包装一遍，岂不是画蛇添足？其实这正是 autoclosure 的一个最值得称赞的地方。如果我们直接使用 T，那么就意味着在 ?? 操作符真正取值之前，我们就必须准备好一个默认值传入到这个方法中，一般来说这不会有很大问题，但是如果这个默认值是通过一系列复杂计算得到的话，可能会成为浪费 -- 因为其实如果 optional 不是 nil 的话，我们实际上是完全没有用到这个默认值，而会直接返回 optional 解包后的值的。这样的开销是完全可以避免的，方法就是将默认值的计算推迟到 optional 判定为 nil 之后。
 
 //就这样，我们可以巧妙地绕过条件判断和强制转换，以很优雅的写法处理对 Optional 及默认值的取值了。最后要提一句的是，@autoclosure 并不支持带有输入参数的写法，也就是说只有形如 () -> T 的参数才能使用这个特性进行简化。另外因为调用者往往很容易忽视 @autoclosure 这个特性，所以在写接受 @autoclosure 的方法时还请特别小心，如果在容易产生歧义或者误解的时候，还是使用完整的闭包写法会比较好。

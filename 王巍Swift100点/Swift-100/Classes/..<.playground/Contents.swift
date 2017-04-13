@@ -17,34 +17,34 @@ for i in 0...3 {
 //如果你认为 ... 和 ..< 只有这点内容的话，就大错特错了。我们可以仔细看看 Swift 中对着两个操作符的定义 (为了清晰，我稍微更改了一下它们的次序)：
 
 /*
-/// Forms a closed range that contains both `minimum` and `maximum`.
-func ...<Pos : ForwardIndexType>(minimum: Pos, maximum: Pos)
-    -> Range<Pos>
-
-/// Forms a closed range that contains both `start` and `end`.
-/// Requres: `start <= end`
-func ...<Pos : ForwardIndexType where Pos : Comparable>(start: Pos, end: Pos)
-    -> Range<Pos>
-
-
-/// Forms a half-open range that contains `minimum`, but not
-/// `maximum`.
-func ..<<Pos : ForwardIndexType>(minimum: Pos, maximum: Pos)
-    -> Range<Pos>
-
-/// Forms a half-open range that contains `start`, but not
-/// `end`.  Requires: `start <= end`
-func ..<<Pos : ForwardIndexType where Pos : Comparable>(start: Pos, end: Pos)
-    -> Range<Pos>
-
-
-/// Returns a closed interval from `start` through `end`
-func ...<T : Comparable>(start: T, end: T) -> ClosedInterval<T>
-
-/// Returns a half-open interval from `start` to `end`
-func ..<<T : Comparable>(start: T, end: T) -> HalfOpenInterval<T>
-不难发现，其实这几个方法都是支持泛型的。除了我们常用的输入 Int 或者 Double，返回一个 Range 以外，这个操作符还有一个接受 Comparable 的输入，并返回 ClosedInterval 或 HalfOpenInterval 的重载。在 Swift 中，除了数字以外另一个实现了 Comparable 的基本类型就是 String。也就是说，我们可以通过 ... 或者 ..< 来连接两个字符串。一个常见的使用场景就是检查某个字符是否是合法的字符。比如想确认一个单词里的全部字符都是小写英文字母的话，可以这么做：
-*/
+ /// Forms a closed range that contains both `minimum` and `maximum`.
+ func ...<Pos : ForwardIndexType>(minimum: Pos, maximum: Pos)
+ -> Range<Pos>
+ 
+ /// Forms a closed range that contains both `start` and `end`.
+ /// Requres: `start <= end`
+ func ...<Pos : ForwardIndexType where Pos : Comparable>(start: Pos, end: Pos)
+ -> Range<Pos>
+ 
+ 
+ /// Forms a half-open range that contains `minimum`, but not
+ /// `maximum`.
+ func ..<<Pos : ForwardIndexType>(minimum: Pos, maximum: Pos)
+ -> Range<Pos>
+ 
+ /// Forms a half-open range that contains `start`, but not
+ /// `end`.  Requires: `start <= end`
+ func ..<<Pos : ForwardIndexType where Pos : Comparable>(start: Pos, end: Pos)
+ -> Range<Pos>
+ 
+ 
+ /// Returns a closed interval from `start` through `end`
+ func ...<T : Comparable>(start: T, end: T) -> ClosedInterval<T>
+ 
+ /// Returns a half-open interval from `start` to `end`
+ func ..<<T : Comparable>(start: T, end: T) -> HalfOpenInterval<T>
+ 不难发现，其实这几个方法都是支持泛型的。除了我们常用的输入 Int 或者 Double，返回一个 Range 以外，这个操作符还有一个接受 Comparable 的输入，并返回 ClosedInterval 或 HalfOpenInterval 的重载。在 Swift 中，除了数字以外另一个实现了 Comparable 的基本类型就是 String。也就是说，我们可以通过 ... 或者 ..< 来连接两个字符串。一个常见的使用场景就是检查某个字符是否是合法的字符。比如想确认一个单词里的全部字符都是小写英文字母的话，可以这么做：
+ */
 
 let test = "helLo"
 let interval = "a"..."z"
