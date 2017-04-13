@@ -12,24 +12,45 @@ class ClubMainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupNavgation()
+        
+        setupSegmentedControl()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func setupNavgation(){
+        
+        addChildViewController(ClubHotController())
+        addChildViewController(ClubClubController())
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "我的话题", titleColor: UIColor.grayColor(), target: self, action: #selector(ClubMainController.rightBarButtonClick))
+    }
+    func setupSegmentedControl() {
+        
+        let segmentedArray = ["热门","Club"]
+        let segmentedControl =  UISegmentedControl(items: segmentedArray)
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.tintColor = UIColor.tintColor()
+        segmentedControl.addTarget(self, action: #selector(ClubMainController.segmentedControlChange(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        navigationItem.titleView = segmentedControl
+        segmentedControlChange(segmentedControl)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - 事件
+    @objc private func segmentedControlChange(segmentedControl:UISegmentedControl) {
+        
+        let vc = childViewControllers[segmentedControl.selectedSegmentIndex]
+        vc.view.frame = view.bounds
+        view.addSubview(vc.view)
     }
-    */
+    
+    
+    @objc private func rightBarButtonClick(){
+        
+        navigationController?.pushViewController(MeMainController(), animated: true)
+    }
+    
 
 }

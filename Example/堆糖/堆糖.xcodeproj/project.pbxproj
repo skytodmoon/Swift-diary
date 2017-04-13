@@ -13,6 +13,9 @@
 		5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */; };
 		5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B71E9F241A00902529 /* ClubHotCell.swift */; };
 		5BAA71BA1E9F241A00902529 /* ClubHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA71B81E9F241A00902529 /* ClubHotCell.xib */; };
+		5BAA71BC1E9F24AE00902529 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71BB1E9F24AE00902529 /* UIBarButtonItem+Extension.swift */; };
+		5BAA71C01E9F27CC00902529 /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */; };
+		5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C21E9F27DA00902529 /* RefreshFooter.m */; };
 		5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE67F1E9CB66500D38E34 /* Main.storyboard */; };
 		5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6841E9CB66500D38E34 /* LaunchScreen.storyboard */; };
 		5BCEE6911E9CB66500D38E34 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE6901E9CB66500D38E34 /* __Tests.swift */; };
@@ -65,6 +68,11 @@
 		5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotModel.swift; sourceTree = "<group>"; };
 		5BAA71B71E9F241A00902529 /* ClubHotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotCell.swift; sourceTree = "<group>"; };
 		5BAA71B81E9F241A00902529 /* ClubHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubHotCell.xib; sourceTree = "<group>"; };
+		5BAA71BB1E9F24AE00902529 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		5BAA71BE1E9F27CC00902529 /* RefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeader.h; sourceTree = "<group>"; };
+		5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshHeader.m; sourceTree = "<group>"; };
+		5BAA71C11E9F27DA00902529 /* RefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshFooter.h; sourceTree = "<group>"; };
+		5BAA71C21E9F27DA00902529 /* RefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshFooter.m; sourceTree = "<group>"; };
 		5BCEE6781E9CB66500D38E34 /* 堆糖.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "堆糖.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEE6801E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BCEE6851E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,6 +189,17 @@
 				5BAA71B31E9F23CC00902529 /* ClubClubController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BAA71BD1E9F27AE00902529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71BE1E9F27CC00902529 /* RefreshHeader.h */,
+				5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */,
+				5BAA71C11E9F27DA00902529 /* RefreshFooter.h */,
+				5BAA71C21E9F27DA00902529 /* RefreshFooter.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BCEE66F1E9CB66500D38E34 = {
@@ -452,9 +471,6 @@
 			isa = PBXGroup;
 			children = (
 				5BCEE6D81E9CB68B00D38E34 /* Controller */,
-				5BCEE6DA1E9CB68B00D38E34 /* Login(登录) */,
-				5BCEE6DB1E9CB68B00D38E34 /* Model */,
-				5BCEE6DC1E9CB68B00D38E34 /* View */,
 			);
 			path = "Main(主框架)";
 			sourceTree = "<group>";
@@ -466,27 +482,6 @@
 				5BCEE7011E9CB80400D38E34 /* MainNavigationController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6DA1E9CB68B00D38E34 /* Login(登录) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Login(登录)";
-			sourceTree = "<group>";
-		};
-		5BCEE6DB1E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6DC1E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5BCEE6DD1E9CB68B00D38E34 /* Me(我) */ = {
@@ -502,8 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				5BCEE6DF1E9CB68B00D38E34 /* Controller */,
-				5BCEE6E21E9CB68B00D38E34 /* Model */,
-				5BCEE6E31E9CB68B00D38E34 /* View */,
+				5BAA71BD1E9F27AE00902529 /* View */,
 			);
 			path = "MeMain(主界面)";
 			sourceTree = "<group>";
@@ -515,20 +509,6 @@
 				5BCEE6E11E9CB68B00D38E34 /* MeMainController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6E21E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6E31E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5BCEE6E41E9CB68B00D38E34 /* MeSetting(设置) */ = {
@@ -597,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				5BCEE7031E9CB82000D38E34 /* UIColor+Extension.swift */,
+				5BAA71BB1E9F24AE00902529 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -852,12 +833,15 @@
 				5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */,
 				5BCEE7251E9CF15C00D38E34 /* ExploreBannerCell.swift in Sources */,
 				5BCEE7021E9CB80400D38E34 /* MainNavigationController.swift in Sources */,
+				5BAA71C01E9F27CC00902529 /* RefreshHeader.m in Sources */,
 				5BCEE6FD1E9CB68B00D38E34 /* ViewController.swift in Sources */,
+				5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */,
 				5BCEE6FE1E9CB68B00D38E34 /* StoreController.swift in Sources */,
 				5BCEE7041E9CB82000D38E34 /* UIColor+Extension.swift in Sources */,
 				5BCEE6F91E9CB68B00D38E34 /* MeMainBaseController.swift in Sources */,
 				5BCEE7211E9CF13400D38E34 /* ExploreMainCell.swift in Sources */,
 				5BCEE6F71E9CB68B00D38E34 /* HomeMainController.swift in Sources */,
+				5BAA71BC1E9F24AE00902529 /* UIBarButtonItem+Extension.swift in Sources */,
 				5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */,
 				5BCEE6FB1E9CB68B00D38E34 /* AppDelegate.swift in Sources */,
 				5BCEE6FA1E9CB68B00D38E34 /* MeMainController.swift in Sources */,
