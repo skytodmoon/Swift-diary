@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F7E54DAF138738E008700FD /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6585B057E59BB8FC5F84C9F /* Pods___.framework */; };
+		5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71AF1E9F239A00902529 /* ClubHotController.swift */; };
+		5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B31E9F23CC00902529 /* ClubClubController.swift */; };
+		5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */; };
+		5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B71E9F241A00902529 /* ClubHotCell.swift */; };
+		5BAA71BA1E9F241A00902529 /* ClubHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA71B81E9F241A00902529 /* ClubHotCell.xib */; };
 		5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE67F1E9CB66500D38E34 /* Main.storyboard */; };
 		5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6841E9CB66500D38E34 /* LaunchScreen.storyboard */; };
 		5BCEE6911E9CB66500D38E34 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE6901E9CB66500D38E34 /* __Tests.swift */; };
@@ -55,6 +60,11 @@
 
 /* Begin PBXFileReference section */
 		52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-堆糖.debug.xcconfig"; path = "Pods/Target Support Files/Pods-堆糖/Pods-堆糖.debug.xcconfig"; sourceTree = "<group>"; };
+		5BAA71AF1E9F239A00902529 /* ClubHotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotController.swift; sourceTree = "<group>"; };
+		5BAA71B31E9F23CC00902529 /* ClubClubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubController.swift; sourceTree = "<group>"; };
+		5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotModel.swift; sourceTree = "<group>"; };
+		5BAA71B71E9F241A00902529 /* ClubHotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotCell.swift; sourceTree = "<group>"; };
+		5BAA71B81E9F241A00902529 /* ClubHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubHotCell.xib; sourceTree = "<group>"; };
 		5BCEE6781E9CB66500D38E34 /* 堆糖.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "堆糖.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEE6801E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BCEE6851E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,6 +132,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BAA71AB1E9F237200902529 /* ClubHot(热门) */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71AC1E9F237200902529 /* Controller */,
+				5BAA71AD1E9F237200902529 /* Model */,
+				5BAA71AE1E9F237200902529 /* View */,
+			);
+			path = "ClubHot(热门)";
+			sourceTree = "<group>";
+		};
+		5BAA71AC1E9F237200902529 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71AF1E9F239A00902529 /* ClubHotController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BAA71AD1E9F237200902529 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BAA71AE1E9F237200902529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71B71E9F241A00902529 /* ClubHotCell.swift */,
+				5BAA71B81E9F241A00902529 /* ClubHotCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BAA71B11E9F23C000902529 /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71B21E9F23C000902529 /* Controller */,
+			);
+			path = Club;
+			sourceTree = "<group>";
+		};
+		5BAA71B21E9F23C000902529 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71B31E9F23CC00902529 /* ClubClubController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BCEE66F1E9CB66500D38E34 = {
 			isa = PBXGroup;
 			children = (
@@ -191,83 +252,17 @@
 		5BCEE6AA1E9CB68B00D38E34 /* Club(Club) */ = {
 			isa = PBXGroup;
 			children = (
-				5BCEE6AB1E9CB68B00D38E34 /* ClubClub() */,
-				5BCEE6AF1E9CB68B00D38E34 /* ClubHot(热门) */,
+				5BAA71B11E9F23C000902529 /* Club */,
+				5BAA71AB1E9F237200902529 /* ClubHot(热门) */,
 				5BCEE6B31E9CB68B00D38E34 /* ClubMain(主界面) */,
-				5BCEE6B81E9CB68B00D38E34 /* ClubMore(更多) */,
-				5BCEE6BC1E9CB68B00D38E34 /* ClubTopic(话题) */,
 			);
 			path = "Club(Club)";
-			sourceTree = "<group>";
-		};
-		5BCEE6AB1E9CB68B00D38E34 /* ClubClub() */ = {
-			isa = PBXGroup;
-			children = (
-				5BCEE6AC1E9CB68B00D38E34 /* Controller */,
-				5BCEE6AD1E9CB68B00D38E34 /* Model */,
-				5BCEE6AE1E9CB68B00D38E34 /* View */,
-			);
-			path = "ClubClub()";
-			sourceTree = "<group>";
-		};
-		5BCEE6AC1E9CB68B00D38E34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6AD1E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6AE1E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5BCEE6AF1E9CB68B00D38E34 /* ClubHot(热门) */ = {
-			isa = PBXGroup;
-			children = (
-				5BCEE6B01E9CB68B00D38E34 /* Controller */,
-				5BCEE6B11E9CB68B00D38E34 /* Model */,
-				5BCEE6B21E9CB68B00D38E34 /* View */,
-			);
-			path = "ClubHot(热门)";
-			sourceTree = "<group>";
-		};
-		5BCEE6B01E9CB68B00D38E34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6B11E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6B21E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5BCEE6B31E9CB68B00D38E34 /* ClubMain(主界面) */ = {
 			isa = PBXGroup;
 			children = (
 				5BCEE6B41E9CB68B00D38E34 /* Controller */,
-				5BCEE6B61E9CB68B00D38E34 /* Model */,
-				5BCEE6B71E9CB68B00D38E34 /* View */,
 			);
 			path = "ClubMain(主界面)";
 			sourceTree = "<group>";
@@ -278,82 +273,6 @@
 				5BCEE6B51E9CB68B00D38E34 /* ClubMainController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6B61E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6B71E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5BCEE6B81E9CB68B00D38E34 /* ClubMore(更多) */ = {
-			isa = PBXGroup;
-			children = (
-				5BCEE6B91E9CB68B00D38E34 /* Controller */,
-				5BCEE6BA1E9CB68B00D38E34 /* Model */,
-				5BCEE6BB1E9CB68B00D38E34 /* View */,
-			);
-			path = "ClubMore(更多)";
-			sourceTree = "<group>";
-		};
-		5BCEE6B91E9CB68B00D38E34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6BA1E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6BB1E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5BCEE6BC1E9CB68B00D38E34 /* ClubTopic(话题) */ = {
-			isa = PBXGroup;
-			children = (
-				5BCEE6BD1E9CB68B00D38E34 /* Controller */,
-				5BCEE6BE1E9CB68B00D38E34 /* Model */,
-				5BCEE6BF1E9CB68B00D38E34 /* View */,
-			);
-			path = "ClubTopic(话题)";
-			sourceTree = "<group>";
-		};
-		5BCEE6BD1E9CB68B00D38E34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5BCEE6BE1E9CB68B00D38E34 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5BCEE6BF1E9CB68B00D38E34 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5BCEE6C01E9CB68B00D38E34 /* Explorer(发现) */ = {
@@ -850,6 +769,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAA71BA1E9F241A00902529 /* ClubHotCell.xib in Resources */,
 				5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */,
 				5BCEE7001E9CB6EB00D38E34 /* Images.xcassets in Resources */,
 				5BCEE6FC1E9CB68B00D38E34 /* Assets.xcassets in Resources */,
@@ -929,6 +849,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCEE7061E9CBA3800D38E34 /* NetWorkTool.swift in Sources */,
+				5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */,
 				5BCEE7251E9CF15C00D38E34 /* ExploreBannerCell.swift in Sources */,
 				5BCEE7021E9CB80400D38E34 /* MainNavigationController.swift in Sources */,
 				5BCEE6FD1E9CB68B00D38E34 /* ViewController.swift in Sources */,
@@ -937,11 +858,14 @@
 				5BCEE6F91E9CB68B00D38E34 /* MeMainBaseController.swift in Sources */,
 				5BCEE7211E9CF13400D38E34 /* ExploreMainCell.swift in Sources */,
 				5BCEE6F71E9CB68B00D38E34 /* HomeMainController.swift in Sources */,
+				5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */,
 				5BCEE6FB1E9CB68B00D38E34 /* AppDelegate.swift in Sources */,
 				5BCEE6FA1E9CB68B00D38E34 /* MeMainController.swift in Sources */,
+				5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */,
 				5BCEE71E1E9CF11D00D38E34 /* ExploreMainModel.swift in Sources */,
 				5BCEE6F81E9CB68B00D38E34 /* MainTabbarViewController.swift in Sources */,
 				5BCEE7281E9CF6AA00D38E34 /* Const.swift in Sources */,
+				5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */,
 				5BCEE6F61E9CB68B00D38E34 /* ExploreMainController.swift in Sources */,
 				5BCEE6F51E9CB68B00D38E34 /* ClubMainController.swift in Sources */,
 			);
