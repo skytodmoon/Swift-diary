@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F7E54DAF138738E008700FD /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6585B057E59BB8FC5F84C9F /* Pods___.framework */; };
+		5B2BA6CD1E9F52310041A0CF /* ClubMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BA6CC1E9F52310041A0CF /* ClubMoreController.swift */; };
 		5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71AF1E9F239A00902529 /* ClubHotController.swift */; };
 		5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B31E9F23CC00902529 /* ClubClubController.swift */; };
 		5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */; };
@@ -18,6 +19,9 @@
 		5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C21E9F27DA00902529 /* RefreshFooter.m */; };
 		5BAA71C51E9F3E5000902529 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C41E9F3E5000902529 /* Extension+String.swift */; };
 		5BAA71C91E9F4BAA00902529 /* ClubTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C81E9F4BAA00902529 /* ClubTopicController.swift */; };
+		5BAA71CD1E9F4F8900902529 /* ClubClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71CC1E9F4F8900902529 /* ClubClubModel.swift */; };
+		5BAA71D01E9F4F9B00902529 /* ClubClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71CE1E9F4F9B00902529 /* ClubClubCell.swift */; };
+		5BAA71D11E9F4F9B00902529 /* ClubClubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA71CF1E9F4F9B00902529 /* ClubClubCell.xib */; };
 		5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE67F1E9CB66500D38E34 /* Main.storyboard */; };
 		5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6841E9CB66500D38E34 /* LaunchScreen.storyboard */; };
 		5BCEE6911E9CB66500D38E34 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE6901E9CB66500D38E34 /* __Tests.swift */; };
@@ -65,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-堆糖.debug.xcconfig"; path = "Pods/Target Support Files/Pods-堆糖/Pods-堆糖.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2BA6CC1E9F52310041A0CF /* ClubMoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubMoreController.swift; sourceTree = "<group>"; };
 		5BAA71AF1E9F239A00902529 /* ClubHotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotController.swift; sourceTree = "<group>"; };
 		5BAA71B31E9F23CC00902529 /* ClubClubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubController.swift; sourceTree = "<group>"; };
 		5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotModel.swift; sourceTree = "<group>"; };
@@ -77,6 +82,9 @@
 		5BAA71C21E9F27DA00902529 /* RefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshFooter.m; sourceTree = "<group>"; };
 		5BAA71C41E9F3E5000902529 /* Extension+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		5BAA71C81E9F4BAA00902529 /* ClubTopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicController.swift; sourceTree = "<group>"; };
+		5BAA71CC1E9F4F8900902529 /* ClubClubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubModel.swift; sourceTree = "<group>"; };
+		5BAA71CE1E9F4F9B00902529 /* ClubClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubCell.swift; sourceTree = "<group>"; };
+		5BAA71CF1E9F4F9B00902529 /* ClubClubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubClubCell.xib; sourceTree = "<group>"; };
 		5BCEE6781E9CB66500D38E34 /* 堆糖.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "堆糖.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEE6801E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BCEE6851E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,6 +152,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2BA6CA1E9F52220041A0CF /* ClubMore(更多) */ = {
+			isa = PBXGroup;
+			children = (
+				5B2BA6CB1E9F52220041A0CF /* Controller */,
+			);
+			path = "ClubMore(更多)";
+			sourceTree = "<group>";
+		};
+		5B2BA6CB1E9F52220041A0CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2BA6CC1E9F52310041A0CF /* ClubMoreController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BAA71AB1E9F237200902529 /* ClubHot(热门) */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +251,7 @@
 		5BAA71CA1E9F4F0700902529 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5BAA71CC1E9F4F8900902529 /* ClubClubModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +259,8 @@
 		5BAA71CB1E9F4F0700902529 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BAA71CE1E9F4F9B00902529 /* ClubClubCell.swift */,
+				5BAA71CF1E9F4F9B00902529 /* ClubClubCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +334,7 @@
 		5BCEE6AA1E9CB68B00D38E34 /* Club(Club) */ = {
 			isa = PBXGroup;
 			children = (
+				5B2BA6CA1E9F52220041A0CF /* ClubMore(更多) */,
 				5BAA71C61E9F4B9A00902529 /* ClubTopic(话题) */,
 				5BAA71B11E9F23C000902529 /* Club */,
 				5BAA71AB1E9F237200902529 /* ClubHot(热门) */,
@@ -793,6 +821,7 @@
 				5BCEE7001E9CB6EB00D38E34 /* Images.xcassets in Resources */,
 				5BCEE6FC1E9CB68B00D38E34 /* Assets.xcassets in Resources */,
 				5BCEE7221E9CF13400D38E34 /* ExploreMainCell.xib in Resources */,
+				5BAA71D11E9F4F9B00902529 /* ClubClubCell.xib in Resources */,
 				5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */,
 				5BCEE7261E9CF15C00D38E34 /* ExploreBannerCell.xib in Resources */,
 			);
@@ -880,17 +909,20 @@
 				5BCEE6F91E9CB68B00D38E34 /* MeMainBaseController.swift in Sources */,
 				5BCEE7211E9CF13400D38E34 /* ExploreMainCell.swift in Sources */,
 				5BCEE6F71E9CB68B00D38E34 /* HomeMainController.swift in Sources */,
+				5BAA71CD1E9F4F8900902529 /* ClubClubModel.swift in Sources */,
 				5BAA71BC1E9F24AE00902529 /* UIBarButtonItem+Extension.swift in Sources */,
 				5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */,
 				5BCEE6FB1E9CB68B00D38E34 /* AppDelegate.swift in Sources */,
 				5BCEE6FA1E9CB68B00D38E34 /* MeMainController.swift in Sources */,
 				5BAA71C91E9F4BAA00902529 /* ClubTopicController.swift in Sources */,
 				5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */,
+				5B2BA6CD1E9F52310041A0CF /* ClubMoreController.swift in Sources */,
 				5BCEE71E1E9CF11D00D38E34 /* ExploreMainModel.swift in Sources */,
 				5BCEE6F81E9CB68B00D38E34 /* MainTabbarViewController.swift in Sources */,
 				5BCEE7281E9CF6AA00D38E34 /* Const.swift in Sources */,
 				5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */,
 				5BCEE6F61E9CB68B00D38E34 /* ExploreMainController.swift in Sources */,
+				5BAA71D01E9F4F9B00902529 /* ClubClubCell.swift in Sources */,
 				5BCEE6F51E9CB68B00D38E34 /* ClubMainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
