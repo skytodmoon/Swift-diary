@@ -49,7 +49,7 @@ class ClubMainController: UIViewController {
     
     @objc private func rightBarButtonClick(){
         
-        navigationController?.pushViewController(MeMainController(), animated: true)
+        navigationController?.pushViewController(ClubTopicController(), animated: true)
     }
     
 
