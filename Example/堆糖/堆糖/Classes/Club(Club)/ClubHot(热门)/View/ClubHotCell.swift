@@ -9,7 +9,34 @@
 import UIKit
 
 class ClubHotCell: UITableViewCell {
-
+    
+    var clubHotModel : ClubHotModel!{
+        didSet{
+            
+            var count = clubHotModel.comment_count!
+            var tempStr = ""
+            if count > 999 {
+                count =  count / 1000
+                tempStr = "\(count)" + "k"
+            }else{
+                tempStr = "\(count)"
+            }
+            
+            comment_countButton.setTitle(tempStr , forState: UIControlState.Normal)
+            photoImageView.yy_imageURL = NSURL(string: clubHotModel.path!)
+            contentLabel.text = clubHotModel.content
+            userInfoLabel.text = clubHotModel.name! + " - " + clubHotModel.username!
+            
+            
+        }
+    }
+    
+    @IBOutlet weak private var comment_countButton: UIButton!
+    @IBOutlet weak private var photoImageView: UIImageView!
+    @IBOutlet weak private var contentLabel: UILabel!
+    @IBOutlet weak private var userInfoLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

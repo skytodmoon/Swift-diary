@@ -16,6 +16,8 @@
 		5BAA71BC1E9F24AE00902529 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71BB1E9F24AE00902529 /* UIBarButtonItem+Extension.swift */; };
 		5BAA71C01E9F27CC00902529 /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */; };
 		5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C21E9F27DA00902529 /* RefreshFooter.m */; };
+		5BAA71C51E9F3E5000902529 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C41E9F3E5000902529 /* Extension+String.swift */; };
+		5BAA71C91E9F4BAA00902529 /* ClubTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71C81E9F4BAA00902529 /* ClubTopicController.swift */; };
 		5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE67F1E9CB66500D38E34 /* Main.storyboard */; };
 		5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCEE6841E9CB66500D38E34 /* LaunchScreen.storyboard */; };
 		5BCEE6911E9CB66500D38E34 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEE6901E9CB66500D38E34 /* __Tests.swift */; };
@@ -73,6 +75,8 @@
 		5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshHeader.m; sourceTree = "<group>"; };
 		5BAA71C11E9F27DA00902529 /* RefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshFooter.h; sourceTree = "<group>"; };
 		5BAA71C21E9F27DA00902529 /* RefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshFooter.m; sourceTree = "<group>"; };
+		5BAA71C41E9F3E5000902529 /* Extension+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		5BAA71C81E9F4BAA00902529 /* ClubTopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicController.swift; sourceTree = "<group>"; };
 		5BCEE6781E9CB66500D38E34 /* 堆糖.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "堆糖.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEE6801E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BCEE6851E9CB66500D38E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				5BAA71B21E9F23C000902529 /* Controller */,
+				5BAA71CA1E9F4F0700902529 /* Model */,
+				5BAA71CB1E9F4F0700902529 /* View */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -198,6 +204,36 @@
 				5BAA71BF1E9F27CC00902529 /* RefreshHeader.m */,
 				5BAA71C11E9F27DA00902529 /* RefreshFooter.h */,
 				5BAA71C21E9F27DA00902529 /* RefreshFooter.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BAA71C61E9F4B9A00902529 /* ClubTopic(话题) */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71C71E9F4B9A00902529 /* Controller */,
+			);
+			path = "ClubTopic(话题)";
+			sourceTree = "<group>";
+		};
+		5BAA71C71E9F4B9A00902529 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA71C81E9F4BAA00902529 /* ClubTopicController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BAA71CA1E9F4F0700902529 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BAA71CB1E9F4F0700902529 /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +307,7 @@
 		5BCEE6AA1E9CB68B00D38E34 /* Club(Club) */ = {
 			isa = PBXGroup;
 			children = (
+				5BAA71C61E9F4B9A00902529 /* ClubTopic(话题) */,
 				5BAA71B11E9F23C000902529 /* Club */,
 				5BAA71AB1E9F237200902529 /* ClubHot(热门) */,
 				5BCEE6B31E9CB68B00D38E34 /* ClubMain(主界面) */,
@@ -578,6 +615,7 @@
 			children = (
 				5BCEE7031E9CB82000D38E34 /* UIColor+Extension.swift */,
 				5BAA71BB1E9F24AE00902529 /* UIBarButtonItem+Extension.swift */,
+				5BAA71C41E9F3E5000902529 /* Extension+String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -837,6 +875,7 @@
 				5BCEE6FD1E9CB68B00D38E34 /* ViewController.swift in Sources */,
 				5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */,
 				5BCEE6FE1E9CB68B00D38E34 /* StoreController.swift in Sources */,
+				5BAA71C51E9F3E5000902529 /* Extension+String.swift in Sources */,
 				5BCEE7041E9CB82000D38E34 /* UIColor+Extension.swift in Sources */,
 				5BCEE6F91E9CB68B00D38E34 /* MeMainBaseController.swift in Sources */,
 				5BCEE7211E9CF13400D38E34 /* ExploreMainCell.swift in Sources */,
@@ -845,6 +884,7 @@
 				5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */,
 				5BCEE6FB1E9CB68B00D38E34 /* AppDelegate.swift in Sources */,
 				5BCEE6FA1E9CB68B00D38E34 /* MeMainController.swift in Sources */,
+				5BAA71C91E9F4BAA00902529 /* ClubTopicController.swift in Sources */,
 				5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */,
 				5BCEE71E1E9CF11D00D38E34 /* ExploreMainModel.swift in Sources */,
 				5BCEE6F81E9CB68B00D38E34 /* MainTabbarViewController.swift in Sources */,

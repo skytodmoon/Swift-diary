@@ -32,6 +32,7 @@ class ClubHotController: UIViewController {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.contentInset.top = 5
         tableView.tableFooterView = UIView()
+        
         view.addSubview(tableView)
         
         tableView.mj_header = RefreshHeader.init(refreshingBlock: { () -> Void in
@@ -51,9 +52,7 @@ class ClubHotController: UIViewController {
             ]
         NetWorkTool.sharedInstance.get("http://www.duitang.com/napi/topic/list/by_tags/", parameters: urlParams, success: { (response) -> () in
             
-
-            
-            print("请求成功")
+            self.models = ClubHotModel.loadCulbHotModels(response!)
             self.tableView.reloadData()
             self.tableView!.mj_header.endRefreshing()
             
@@ -68,10 +67,11 @@ class ClubHotController: UIViewController {
         let urlParams = [
             "start":"0",
             "tags":"精选",
+            "pageCount":"25",
             ]
         NetWorkTool.sharedInstance.get("http://www.duitang.com/napi/topic/list/by_tags/", parameters: urlParams, success: { (response) -> () in
-            
-            print("请求成功")
+            self.models += ClubHotModel.loadCulbHotModels(response!)
+
             self.tableView.reloadData()
             
             self.tableView!.mj_footer.endRefreshing()
@@ -93,22 +93,22 @@ extension ClubHotController: UITableViewDataSource,UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(ClubHotCellID, forIndexPath: indexPath) as! ClubHotCell
-//        cell.clubHotModel = models[indexPath.row]
+        cell.clubHotModel = models[indexPath.row]
         return cell
 
     }
     
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        let clubHotModel = models[indexPath.row]
-////        return clubHotModel.modelHeight
-//    }
-//
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let clubHotModel = models[indexPath.row]
+        return clubHotModel.modelHeight
+    }
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        let model = models[indexPath.row]
-//        let vc = ClubTopicController()
-//        vc.clubTopicModel = model
-//        navigationController?.pushViewController(vc, animated: true)
+        let model = models[indexPath.row]
+        let vc = ClubTopicController()
+        vc.clubTopicModel = model
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
