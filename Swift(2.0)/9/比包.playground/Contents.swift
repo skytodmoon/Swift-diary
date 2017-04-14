@@ -115,10 +115,72 @@ let c2: Int = { (a: Int, b: Int) -> Int in
 print("10 - 5 = \(c2)")
 
 
+//使用尾随闭包
+
+func calculate33(opr: String, funN: (Int, Int) -> Int) {
+    
+    switch (opr) {
+    case "+":
+        print("10 + 5 = \(funN(10, 5))")
+    default:
+        print("10 - 5 = \(funN(10, 5))")
+    }
+}
+
+calculate33("+", funN: { (a: Int, b: Int) -> Int in return a + b })
+calculate33("+") {
+    (a: Int, b: Int) -> Int in return a + b
+}
+calculate33("+") {
+    $0 + $1
+}
+
+calculate33("-") {
+    (a: Int, b: Int) -> Int in
+    return a - b
+}
+
+calculate33("-") {
+    $0 - $1
+}
+
+//捕获上下文中变量和常量
+// 嵌套函数实现
+func makeArray() -> (String)->[String] {
+    
+    var ary:[String] = [String]()
+    
+    func addElement(element:String) -> [String] {
+        ary.append(element)
+        return ary
+    }
+    
+    return addElement
+}
+
+// 闭包实现
+func makeArray2() -> (String)->[String] {
+
+    var ary:[String] = [String]()
+
+    return  { (element:String) -> [String] in
+        ary.append(element)
+        return ary
+    }
+}
 
 
+let f11 = makeArray()
+print("---f11---")
+print(f11("张三"))
+print(f11("李四"))
+print(f11("王五"))
 
-
+print("---f22---")
+let f22 = makeArray()
+print(f22("刘备"))
+print(f22("关羽"))
+print(f22("张飞"))
 
 
 
