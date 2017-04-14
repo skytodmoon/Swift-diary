@@ -221,6 +221,71 @@ print(myAccount.instanceProp)
 
 
 //类静态属性
+class Account4 {
+    
+    var amount : Double = 0.0               // 账户金额
+    var owner : String = ""                 //账户名
+    
+    static let interestRate : Double = 0.0668       //利率
+    
+    // 本例也可以class换成static
+    class var staticProp : Double {
+        return interestRate * 1_000_000
+    }
+    
+    var instanceProp : Double {
+        return Account4.interestRate * self.amount
+    }
+}
 
+//访问静态属性
+print(Account4.staticProp)
+var myAccount4 = Account4()
+//访问实例属性
+myAccount4.amount = 1_000_000
+//访问静态属性
+print(myAccount4.instanceProp)
 
+//使用下标
+struct DoubleDimensionalArray {
+    
+    let rows: Int, columns: Int
+    var grid: [Int]
+    
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(count: rows * columns, repeatedValue: 0)
+    }
+    
+    subscript(row: Int, col: Int) -> Int {
+        
+        get {
+            return grid[(row * columns) + col]
+        }
+        
+        set (newValue1){
+            grid[(row * columns) + col] = newValue1
+        }
+    }
+    
+}
+
+let COL_NUM = 10
+let ROW_NUM = 10
+
+var ary2 = DoubleDimensionalArray(rows: ROW_NUM, columns: COL_NUM)
+
+for i in 0 ..< ROW_NUM {
+    for j in 0 ..< COL_NUM {
+        ary2[i,j] = i * j
+    }
+}
+
+for i in 0 ..< ROW_NUM {
+    for j in 0 ..< COL_NUM {
+        print("\t \(ary2[i,j])", terminator: "")
+    }
+    print("\n")
+}
 
