@@ -179,3 +179,143 @@ dept6.name = "Sales"
 //if dept1 == dept1 {  //编译失败
 //    print("dept1 == dept2")
 //}
+
+//运算符重载
+struct Department22 {
+    var no : Int = 0
+    var name : String = ""
+}
+
+func ==(lhs: Department22, rhs: Department22) -> Bool {
+    return lhs.name == rhs.name && lhs.no == rhs.no
+}
+
+func !=(lhs: Department22, rhs: Department22) -> Bool {
+    if (lhs.name != rhs.name || lhs.no != rhs.no) {
+        return true
+    }
+    return false
+}
+
+
+var dept14 = Department22()
+dept14.no = 10
+dept14.name = "Sales"
+
+var dept24 = Department22()
+dept24.no = 10
+dept24.name = "Sales"
+
+if dept14 != dept14 {  //编译失败
+    print("dept14 != dept24")
+} else {
+    print("dept14 == dept24")
+}
+
+//对象类型嵌套
+/*
+ 
+ class Employee {
+ 
+ var no: Int = 0
+ var name: String = ""
+ var job: String = ""
+ var salary: Double = 0
+ var dept: Department = Department()
+ 
+ var day: WeekDays = WeekDays.Friday
+ 
+ struct Department {
+ var no: Int = 10
+ var name: String = "SALES"
+ }
+ 
+ enum WeekDays {
+ case Monday
+ case Tuesday
+ case Wednesday
+ case Thursday
+ case Friday
+ 
+ struct Day {
+ static var message: String = "Today is..."
+ }
+ 
+ }
+ 
+ }
+
+ var emp = Employee()
+ 
+ print(emp.dept.name)
+ 
+ print(emp.day)
+ 
+ let friday = Employee.WeekDays.Friday
+ 
+ if emp.day == friday {
+ print("相等")
+ }
+ 
+ print(Employee.WeekDays.Day.message)
+ */
+
+
+//可选链1
+class Employee101 {
+    var no: Int = 0
+    var name: String = "Tony"
+    var job: String?
+    var salary: Double = 0
+    var dept: Department101 = Department101()
+}
+
+
+class Department101 {
+    var no: Int = 10
+    var name: String = "SALES"
+    var comp: Company101 = Company101()
+}
+
+class Company101 {
+    var no: Int = 1000
+    var name: String = "EOrient"
+}
+
+let emp101 = Employee101()
+print(emp101.dept.comp.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
