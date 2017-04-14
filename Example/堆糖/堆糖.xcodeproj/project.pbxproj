@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F7E54DAF138738E008700FD /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6585B057E59BB8FC5F84C9F /* Pods___.framework */; };
 		5B2BA6CD1E9F52310041A0CF /* ClubMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BA6CC1E9F52310041A0CF /* ClubMoreController.swift */; };
+		5B90F3211EA068CD00131F27 /* ClubTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F31F1EA068CD00131F27 /* ClubTopicCell.swift */; };
+		5B90F3221EA068CD00131F27 /* ClubTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B90F3201EA068CD00131F27 /* ClubTopicCell.xib */; };
+		5B90F3251EA068EF00131F27 /* ClubTopicHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3231EA068EF00131F27 /* ClubTopicHeaderCell.swift */; };
+		5B90F3261EA068EF00131F27 /* ClubTopicHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B90F3241EA068EF00131F27 /* ClubTopicHeaderCell.xib */; };
+		5B90F3281EA0690900131F27 /* TopicSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3271EA0690900131F27 /* TopicSectionHeader.swift */; };
+		5B90F32A1EA0691700131F27 /* TopicSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */; };
+		5B90F32C1EA06A5000131F27 /* ClubTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F32B1EA06A5000131F27 /* ClubTopicModel.swift */; };
 		5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71AF1E9F239A00902529 /* ClubHotController.swift */; };
 		5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B31E9F23CC00902529 /* ClubClubController.swift */; };
 		5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */; };
@@ -70,6 +77,13 @@
 /* Begin PBXFileReference section */
 		52A968B79CE756A0F69CB195 /* Pods-堆糖.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-堆糖.debug.xcconfig"; path = "Pods/Target Support Files/Pods-堆糖/Pods-堆糖.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2BA6CC1E9F52310041A0CF /* ClubMoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubMoreController.swift; sourceTree = "<group>"; };
+		5B90F31F1EA068CD00131F27 /* ClubTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicCell.swift; sourceTree = "<group>"; };
+		5B90F3201EA068CD00131F27 /* ClubTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubTopicCell.xib; sourceTree = "<group>"; };
+		5B90F3231EA068EF00131F27 /* ClubTopicHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicHeaderCell.swift; sourceTree = "<group>"; };
+		5B90F3241EA068EF00131F27 /* ClubTopicHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubTopicHeaderCell.xib; sourceTree = "<group>"; };
+		5B90F3271EA0690900131F27 /* TopicSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicSectionHeader.swift; sourceTree = "<group>"; };
+		5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicSectionHeader.xib; sourceTree = "<group>"; };
+		5B90F32B1EA06A5000131F27 /* ClubTopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicModel.swift; sourceTree = "<group>"; };
 		5BAA71AF1E9F239A00902529 /* ClubHotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotController.swift; sourceTree = "<group>"; };
 		5BAA71B31E9F23CC00902529 /* ClubClubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubController.swift; sourceTree = "<group>"; };
 		5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotModel.swift; sourceTree = "<group>"; };
@@ -171,6 +185,7 @@
 		5B2BA6CE1E9F58E90041A0CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B90F32B1EA06A5000131F27 /* ClubTopicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +193,12 @@
 		5B2BA6CF1E9F58E90041A0CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B90F31F1EA068CD00131F27 /* ClubTopicCell.swift */,
+				5B90F3201EA068CD00131F27 /* ClubTopicCell.xib */,
+				5B90F3231EA068EF00131F27 /* ClubTopicHeaderCell.swift */,
+				5B90F3241EA068EF00131F27 /* ClubTopicHeaderCell.xib */,
+				5B90F3271EA0690900131F27 /* TopicSectionHeader.swift */,
+				5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,8 +857,11 @@
 				5BCEE6861E9CB66500D38E34 /* LaunchScreen.storyboard in Resources */,
 				5BCEE7001E9CB6EB00D38E34 /* Images.xcassets in Resources */,
 				5BCEE6FC1E9CB68B00D38E34 /* Assets.xcassets in Resources */,
+				5B90F3221EA068CD00131F27 /* ClubTopicCell.xib in Resources */,
 				5BCEE7221E9CF13400D38E34 /* ExploreMainCell.xib in Resources */,
+				5B90F3261EA068EF00131F27 /* ClubTopicHeaderCell.xib in Resources */,
 				5BAA71D11E9F4F9B00902529 /* ClubClubCell.xib in Resources */,
+				5B90F32A1EA0691700131F27 /* TopicSectionHeader.xib in Resources */,
 				5BCEE6811E9CB66500D38E34 /* Main.storyboard in Resources */,
 				5BCEE7261E9CF15C00D38E34 /* ExploreBannerCell.xib in Resources */,
 			);
@@ -917,11 +941,13 @@
 				5BCEE7251E9CF15C00D38E34 /* ExploreBannerCell.swift in Sources */,
 				5BCEE7021E9CB80400D38E34 /* MainNavigationController.swift in Sources */,
 				5BAA71C01E9F27CC00902529 /* RefreshHeader.m in Sources */,
+				5B90F32C1EA06A5000131F27 /* ClubTopicModel.swift in Sources */,
 				5BCEE6FD1E9CB68B00D38E34 /* ViewController.swift in Sources */,
 				5BAA71C31E9F27DA00902529 /* RefreshFooter.m in Sources */,
 				5BCEE6FE1E9CB68B00D38E34 /* StoreController.swift in Sources */,
 				5BAA71C51E9F3E5000902529 /* Extension+String.swift in Sources */,
 				5BCEE7041E9CB82000D38E34 /* UIColor+Extension.swift in Sources */,
+				5B90F3211EA068CD00131F27 /* ClubTopicCell.swift in Sources */,
 				5BCEE6F91E9CB68B00D38E34 /* MeMainBaseController.swift in Sources */,
 				5BCEE7211E9CF13400D38E34 /* ExploreMainCell.swift in Sources */,
 				5BCEE6F71E9CB68B00D38E34 /* HomeMainController.swift in Sources */,
@@ -939,7 +965,9 @@
 				5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */,
 				5BCEE6F61E9CB68B00D38E34 /* ExploreMainController.swift in Sources */,
 				5BAA71D01E9F4F9B00902529 /* ClubClubCell.swift in Sources */,
+				5B90F3251EA068EF00131F27 /* ClubTopicHeaderCell.swift in Sources */,
 				5BCEE6F51E9CB68B00D38E34 /* ClubMainController.swift in Sources */,
+				5B90F3281EA0690900131F27 /* TopicSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
