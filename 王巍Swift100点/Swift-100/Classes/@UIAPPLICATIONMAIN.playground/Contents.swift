@@ -41,7 +41,8 @@ class MyApplication: UIApplication {
         print("Event sent: \(event)");
     }
 }
-*/
+
 UIApplicationMain(Process.argc, Process.unsafeArgv,
                   NSStringFromClass(MyApplication), NSStringFromClass(AppDelegate))
+*/
 //这样每次发送事件 (比如点击按钮) 时，我们都可以监听到这个事件了。
