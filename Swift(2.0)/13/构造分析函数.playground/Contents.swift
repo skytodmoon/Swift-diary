@@ -160,3 +160,96 @@ struct RectangleC {
 
 var rectc = RectangleC(width: 320, height: 480)
 print("长方形C:\(rectc.width) x \(rectc.height)")
+
+
+
+
+//构造函数重载概念
+class Rectangle5 {
+    
+    var width: Double
+    var height: Double
+    
+    init(width: Double, height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    init(W width: Double,H height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    init(length: Double) {
+        self.width   = length
+        self.height  = length
+    }
+    
+    init() {
+        self.width   = 640.0
+        self.height  = 940.0
+    }
+    
+    /*
+    init(width: Double, height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    init(W width: Double,H height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    convenience init(length: Double) {
+        self.init(W: length, H: length)
+    }
+    
+    convenience init() {
+        self.init(width: 640.0, height: 940.0)
+    }
+     */
+}
+
+/*结构体构造函数代理
+struct Rectangle {
+    
+    var width: Double
+    var height: Double
+    
+    init(width: Double, height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    init(W width: Double,H height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+    
+    init(length: Double) {
+        self.init(W: length, H: length)
+    }
+    
+    init() {
+        self.init(width: 640.0, height: 940.0)
+    }
+    
+}
+*/
+
+var rectc11 = Rectangle5(width: 320.0, height: 480.0)
+print("长方形1:\(rectc11.width) x \(rectc11.height)")
+
+var rectc21 = Rectangle5(W: 320.0, H: 480.0)
+print("长方形2:\(rectc21.width) x \(rectc21.height)")
+
+var rectc31 = Rectangle5(length: 500.0)
+print("长方形3:\(rectc31.width) x \(rectc31.height)")
+
+var rectc41 = Rectangle5()
+print("长方形4:\(rectc41.width) x \(rectc41.height)")
+
+
+
+
