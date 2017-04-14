@@ -15,8 +15,8 @@ class MyClass {
 
 //想要调用 method 方法的话，最普通的使用方式是生成 MyClass 的实例，然后用 .method 来调用它：
 
-let object = MyClass()
-let result = object.method(1)
+//let object = MyClass()
+//let result = object.method(1)
 
 // result = 2
 //这就限定了我们只能够在编译的时候就决定 object 实例和对应的方法调用。其实我们还可以使用刚才说到的方法，将上面的例子改写为：
