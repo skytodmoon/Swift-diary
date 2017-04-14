@@ -213,19 +213,18 @@ if dept14 != dept14 {  //编译失败
 }
 
 //对象类型嵌套
-/*
  
- class Employee {
+ class Employee102 {
  
  var no: Int = 0
  var name: String = ""
  var job: String = ""
  var salary: Double = 0
- var dept: Department = Department()
+ var dept: Department102 = Department102()
  
  var day: WeekDays = WeekDays.Friday
  
- struct Department {
+ struct Department102 {
  var no: Int = 10
  var name: String = "SALES"
  }
@@ -245,21 +244,18 @@ if dept14 != dept14 {  //编译失败
  
  }
 
- var emp = Employee()
+ var emp102 = Employee102()
  
- print(emp.dept.name)
+ print(emp102.dept.name)
  
- print(emp.day)
+ print(emp102.day)
  
- let friday = Employee.WeekDays.Friday
+ let friday = Employee102.WeekDays.Friday
  
- if emp.day == friday {
+ if emp102.day == friday {
  print("相等")
  }
- 
- print(Employee.WeekDays.Day.message)
- */
-
+ print(Employee102.WeekDays.Day.message)
 
 //可选链1
 class Employee101 {
@@ -282,19 +278,125 @@ class Company101 {
     var name: String = "EOrient"
 }
 
+
 let emp101 = Employee101()
 print(emp101.dept.comp.name)
 
 
+//可选链2
+class Employee103 {
+    var no: Int = 0
+    var name: String = "Tony"
+    var job: String?
+    var salary: Double = 0
+    var dept: Department103? = Department103()
+}
 
 
+class Department103 {
+    var no: Int = 10
+    var name: String = "SALES"
+    var comp: Company103? = Company103()
+}
+
+class Company103 {
+    var no: Int = 1000
+    var name: String = "EOrient"
+}
+
+let emp103 = Employee103()
+
+print(emp103.dept!.comp!.name) //显示拆包
+print(emp103.dept?.comp?.name) //可选链
+
+//可选链3
+
+class Employee104 {
+    
+    var no: Int = 0
+    var name: String = ""
+    var job: String = ""
+    var salary: Double = 0
+    var dept: Department104? = Department104()
+    
+    struct Department104 {
+        var no: Int = 10
+        var name: String = "SALES"
+    }
+    
+}
+
+let emp104 = Employee104()
+
+print(emp104.dept?.name)
 
 
+//统一性原则-1
+private class Employee105 {
+    var no: Int = 0
+    var name: String = ""
+    var job: String?
+    var salary: Double = 0
+    var dept: Department105?
+}
 
+internal struct Department105 {
+    var no: Int = 0
+    var name: String = ""
+}
 
+/*
+public let emp = Employee()       //编译错误
 
+public var dept = Department()    //编译错误
+ 
+public func getEmpDept(emp: Employee) -> Department? {//错误
+ return emp.dept
+}
 
+*/
 
+//统一性原则-2
+public class Employee106 {
+    var no: Int = 0
+    var name: String = ""
+    var job: String?
+    var salary: Double = 0
+    var dept: Department106?
+}
+
+struct Department106 {
+    var no: Int = 0
+    var name: String = ""
+}
+
+private func getEmpDept(emp: Employee106) -> Department106? {
+    return emp.dept
+}
+
+func getEmpDept106(emp: Employee106) -> Department106? {
+    return emp.dept
+}
+
+//元祖类型
+
+private class Employee110 {
+    var no: Int = 0
+    var name: String = ""
+    var job: String?
+    var salary: Double = 0
+    var dept: Department110?
+}
+
+struct Department110 {
+    var no: Int = 0
+    var name: String = ""
+}
+
+private let emp110 = Employee110()
+var dept110 = Department110()
+
+private var student110 = (dept, emp)
 
 
 
