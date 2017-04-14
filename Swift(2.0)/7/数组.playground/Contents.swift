@@ -112,5 +112,53 @@ if studentList31 == studentList41 {
     print("studentList31 不等于 studentList41")
 }
 
+//可变Set
+var studentList22: Set<String>  = ["张三","李四","王五"]
+print(studentList)
 
+let removeStudent22 = studentList22.removeFirst()
+print(studentList22)
+print(removeStudent22)
+
+studentList22.insert("董六")
+print(studentList22)
+
+let student22 = "张三"
+
+studentList22.remove(student22)
+print(studentList22)
+
+if !studentList22.contains(student22) {
+    print("删除学生:\(student22)成功。")
+} else {
+    print("删除学生:\(student22)失败！")
+}
+
+print("Set集合长度:\(studentList22.count)")
+
+var studentList33: Set<String>  = ["张三","李四","王五"]
+
+for item in studentList33 {
+    print(item)
+}
+
+for (index, value) in studentList33.enumerate() {
+    print("Item \(index + 1 ) : \(value)")
+}
+
+
+//集合运算
+let A: Set<String>  = ["a","b","e","d"]
+let B: Set<String>  = ["d","c","e","f"]
+
+print("A与B交集 = \(A.intersect(B))")
+print("A与B并集 = \(A.union(B).sort())")
+print("A与B异或集合 = \(A.exclusiveOr(B))")
+
+let C = A.subtract(B)
+print("A与B差集 = \(C)")
+
+if C.isSubsetOf(A) {
+    print("C是A的子集")
+}
 
