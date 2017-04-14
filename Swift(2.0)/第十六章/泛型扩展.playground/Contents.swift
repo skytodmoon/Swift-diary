@@ -37,3 +37,18 @@ genericDoubleQueue.queue(7.68)
 
 print(genericDoubleQueue.peek(2)!)
 
+import CoreFoundation
+import Foundation
+
+var cfstr1: CFString = "Hello,World"
+
+var str: String = cfstr1 as String
+
+var cfstr2: CFString = str
+
+let any: CFTypeRef = 234
+
+let number: Int = any as! Int
+
+
+
