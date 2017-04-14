@@ -3,6 +3,7 @@
 //
 
 #import "YYWebImage/YYWebImage.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 #import "RefreshHeader.h"
 #import "RefreshFooter.h"
 #import "MJRefresh/MJRefresh.h"

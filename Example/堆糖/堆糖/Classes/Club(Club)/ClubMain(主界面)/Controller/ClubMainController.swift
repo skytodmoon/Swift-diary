@@ -49,7 +49,7 @@ class ClubMainController: UIViewController {
     
     @objc private func rightBarButtonClick(){
         
-        navigationController?.pushViewController(ClubTopicController(), animated: true)
+        print("点击了话题")
     }
     
 

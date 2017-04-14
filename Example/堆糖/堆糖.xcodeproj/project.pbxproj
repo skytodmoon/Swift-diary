@@ -16,6 +16,10 @@
 		5B90F3281EA0690900131F27 /* TopicSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3271EA0690900131F27 /* TopicSectionHeader.swift */; };
 		5B90F32A1EA0691700131F27 /* TopicSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */; };
 		5B90F32C1EA06A5000131F27 /* ClubTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F32B1EA06A5000131F27 /* ClubTopicModel.swift */; };
+		5B90F3371EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3301EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.m */; };
+		5B90F3381EA06C6400131F27 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3321EA06C6400131F27 /* UITableView+FDKeyedHeightCache.m */; };
+		5B90F3391EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3341EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.m */; };
+		5B90F33A1EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90F3361EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		5BAA71B01E9F239A00902529 /* ClubHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71AF1E9F239A00902529 /* ClubHotController.swift */; };
 		5BAA71B41E9F23CC00902529 /* ClubClubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B31E9F23CC00902529 /* ClubClubController.swift */; };
 		5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */; };
@@ -84,6 +88,14 @@
 		5B90F3271EA0690900131F27 /* TopicSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicSectionHeader.swift; sourceTree = "<group>"; };
 		5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicSectionHeader.xib; sourceTree = "<group>"; };
 		5B90F32B1EA06A5000131F27 /* ClubTopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTopicModel.swift; sourceTree = "<group>"; };
+		5B90F32F1EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		5B90F3301EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		5B90F3311EA06C6400131F27 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		5B90F3321EA06C6400131F27 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		5B90F3331EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		5B90F3341EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		5B90F3351EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		5B90F3361EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		5BAA71AF1E9F239A00902529 /* ClubHotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotController.swift; sourceTree = "<group>"; };
 		5BAA71B31E9F23CC00902529 /* ClubClubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubClubController.swift; sourceTree = "<group>"; };
 		5BAA71B51E9F23FB00902529 /* ClubHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHotModel.swift; sourceTree = "<group>"; };
@@ -201,6 +213,29 @@
 				5B90F3291EA0691700131F27 /* TopicSectionHeader.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B90F32D1EA06C6400131F27 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				5B90F32E1EA06C6400131F27 /* FDTemplateLayoutCell */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		5B90F32E1EA06C6400131F27 /* FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B90F32F1EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.h */,
+				5B90F3301EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.m */,
+				5B90F3311EA06C6400131F27 /* UITableView+FDKeyedHeightCache.h */,
+				5B90F3321EA06C6400131F27 /* UITableView+FDKeyedHeightCache.m */,
+				5B90F3331EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.h */,
+				5B90F3341EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.m */,
+				5B90F3351EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				5B90F3361EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = FDTemplateLayoutCell;
 			sourceTree = "<group>";
 		};
 		5BAA71AB1E9F237200902529 /* ClubHot(热门) */ = {
@@ -647,10 +682,10 @@
 		5BCEE6E81E9CB68B00D38E34 /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				5B90F32D1EA06C6400131F27 /* Lib */,
 				5BCEE6E91E9CB68B00D38E34 /* AppDelegate */,
 				5BCEE6EB1E9CB68B00D38E34 /* Config */,
 				5BCEE6EC1E9CB68B00D38E34 /* Extension */,
-				5BCEE6ED1E9CB68B00D38E34 /* Lib */,
 				5BCEE6EE1E9CB68B00D38E34 /* Resource */,
 				5BCEE6F01E9CB68B00D38E34 /* Tools */,
 				5BCEE6F11E9CB68B00D38E34 /* ViewController.swift */,
@@ -683,13 +718,6 @@
 				5BAA71C41E9F3E5000902529 /* Extension+String.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		5BCEE6ED1E9CB68B00D38E34 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 		5BCEE6EE1E9CB68B00D38E34 /* Resource */ = {
@@ -958,14 +986,18 @@
 				5BCEE6FA1E9CB68B00D38E34 /* MeMainController.swift in Sources */,
 				5BAA71C91E9F4BAA00902529 /* ClubTopicController.swift in Sources */,
 				5BAA71B61E9F23FB00902529 /* ClubHotModel.swift in Sources */,
+				5B90F3381EA06C6400131F27 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				5B2BA6CD1E9F52310041A0CF /* ClubMoreController.swift in Sources */,
 				5BCEE71E1E9CF11D00D38E34 /* ExploreMainModel.swift in Sources */,
 				5BCEE6F81E9CB68B00D38E34 /* MainTabbarViewController.swift in Sources */,
 				5BCEE7281E9CF6AA00D38E34 /* Const.swift in Sources */,
 				5BAA71B91E9F241A00902529 /* ClubHotCell.swift in Sources */,
 				5BCEE6F61E9CB68B00D38E34 /* ExploreMainController.swift in Sources */,
+				5B90F33A1EA06C6400131F27 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
+				5B90F3391EA06C6400131F27 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				5BAA71D01E9F4F9B00902529 /* ClubClubCell.swift in Sources */,
 				5B90F3251EA068EF00131F27 /* ClubTopicHeaderCell.swift in Sources */,
+				5B90F3371EA06C6400131F27 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				5BCEE6F51E9CB68B00D38E34 /* ClubMainController.swift in Sources */,
 				5B90F3281EA0690900131F27 /* TopicSectionHeader.swift in Sources */,
 			);

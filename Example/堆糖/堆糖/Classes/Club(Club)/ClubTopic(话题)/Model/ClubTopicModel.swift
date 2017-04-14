@@ -19,6 +19,9 @@ class ClubTopicModel: NSObject {
     var sender: Sender!
     var replies: Replies!
     
+    override init() {
+        
+    }
     
     class func loadClubTopicModels(data:NSData) -> [[ClubTopicModel]]{
 
