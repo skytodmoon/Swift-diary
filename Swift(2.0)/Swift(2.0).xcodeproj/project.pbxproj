@@ -82,6 +82,14 @@
 		5B9BDE341EA0E9A2002C7993 /* do-try-catch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "do-try-catch.playground"; sourceTree = "<group>"; };
 		5B9BDE351EA0E9F3002C7993 /* ErrorType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorType.playground; sourceTree = "<group>"; };
 		5B9BDE361EA0EA13002C7993 /* CatchError.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CatchError.playground; sourceTree = "<group>"; };
+		5B9BDE371EA0EAB9002C7993 /* Other.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Other.playground; sourceTree = "<group>"; };
+		5B9BDE3A1EA0EBBC002C7993 /* NSNumber与Swift数字类型之间的桥接.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSNumber与Swift数字类型之间的桥接.playground"; sourceTree = "<group>"; };
+		5B9BDE3B1EA0EBBC002C7993 /* NSNumber对象的比较.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSNumber对象的比较.playground"; sourceTree = "<group>"; };
+		5B9BDE3C1EA0EBBC002C7993 /* 数字格式化.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "数字格式化.playground"; sourceTree = "<group>"; };
+		5B9BDE3D1EA0EBBC002C7993 /* 获得NSNumber对象.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "获得NSNumber对象.playground"; sourceTree = "<group>"; };
+		5B9BDE3F1EA0EBFA002C7993 /* NSMutableString类.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSMutableString类.playground"; sourceTree = "<group>"; };
+		5B9BDE401EA0EBFA002C7993 /* NSString与String之间的关系.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSString与String之间的关系.playground"; sourceTree = "<group>"; };
+		5B9BDE411EA0EBFA002C7993 /* NSString类.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "NSString类.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +272,7 @@
 				5B9BDE281EA0E71E002C7993 /* 第十七章 */,
 				5B9BDE2A1EA0E873002C7993 /* 第十八章 */,
 				5B9BDE2B1EA0E873002C7993 /* 第十九章 */,
+				5B9BDE381EA0EB3A002C7993 /* 第二十章 */,
 				5B616FDF1E9F8142001C7421 /* Swift(2.0) */,
 				5B616FDE1E9F8142001C7421 /* Products */,
 			);
@@ -324,8 +333,39 @@
 				5B9BDE341EA0E9A2002C7993 /* do-try-catch.playground */,
 				5B9BDE351EA0E9F3002C7993 /* ErrorType.playground */,
 				5B9BDE361EA0EA13002C7993 /* CatchError.playground */,
+				5B9BDE371EA0EAB9002C7993 /* Other.playground */,
 			);
 			path = "第十九章";
+			sourceTree = "<group>";
+		};
+		5B9BDE381EA0EB3A002C7993 /* 第二十章 */ = {
+			isa = PBXGroup;
+			children = (
+				5B9BDE391EA0EBBC002C7993 /* 第一部分 */,
+				5B9BDE3E1EA0EBFA002C7993 /* 第二部份 */,
+			);
+			path = "第二十章";
+			sourceTree = "<group>";
+		};
+		5B9BDE391EA0EBBC002C7993 /* 第一部分 */ = {
+			isa = PBXGroup;
+			children = (
+				5B9BDE3A1EA0EBBC002C7993 /* NSNumber与Swift数字类型之间的桥接.playground */,
+				5B9BDE3B1EA0EBBC002C7993 /* NSNumber对象的比较.playground */,
+				5B9BDE3C1EA0EBBC002C7993 /* 数字格式化.playground */,
+				5B9BDE3D1EA0EBBC002C7993 /* 获得NSNumber对象.playground */,
+			);
+			path = "第一部分";
+			sourceTree = "<group>";
+		};
+		5B9BDE3E1EA0EBFA002C7993 /* 第二部份 */ = {
+			isa = PBXGroup;
+			children = (
+				5B9BDE3F1EA0EBFA002C7993 /* NSMutableString类.playground */,
+				5B9BDE401EA0EBFA002C7993 /* NSString与String之间的关系.playground */,
+				5B9BDE411EA0EBFA002C7993 /* NSString类.playground */,
+			);
+			path = "第二部份";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
