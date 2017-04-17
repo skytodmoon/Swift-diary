@@ -36,3 +36,4 @@ let data = NSData(bytes: &bytes, length:sizeof(CChar) * bytes.count)
 sizeof(UInt16) sizeof(MyEnum) sizeofValue(MyEnum.A) sizeofValue(MyEnum.A.rawValue)
 
 
+
