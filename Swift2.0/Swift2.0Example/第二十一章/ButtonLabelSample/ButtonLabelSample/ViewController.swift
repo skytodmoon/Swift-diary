@@ -82,5 +82,47 @@ class ViewController: UIViewController {
         NSLog("OK Button onClick2.")
     }
 
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesBegan - touch count = %i", touches.count)
+        for touch in touches {
+            self.logTouchInfo(touch)
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesMoved - touch count = %i", touches.count)
+        for touch in touches {
+            self.logTouchInfo(touch)
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        NSLog("touchesEnded - touch count = %i", touches.count)
+        for touch in touches {
+            self.logTouchInfo(touch)
+        }
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        NSLog("touchesCancelled - touch count = %i", touches!.count)
+        for touch in touches! {
+            self.logTouchInfo(touch)
+        }
+    }
+    
+    func logTouchInfo(touch : UITouch) {
+        
+        let locInSelf = touch.locationInView(self.view)
+        let locInWin = touch.locationInView(nil)
+        
+        NSLog("    touch.locationInView = {%.2f, %.2f}", locInSelf.x.native, locInSelf.y.native)
+        NSLog("    touch.locationInWin = {%.2f, %.2f}", locInWin.x.native, locInWin.y.native)
+        NSLog("    touch.phase = %i", touch.phase.rawValue) //UITouchPhase
+        NSLog("    touch.tapCount = %d", touch.tapCount)
+        
+    }
+
 }
 
