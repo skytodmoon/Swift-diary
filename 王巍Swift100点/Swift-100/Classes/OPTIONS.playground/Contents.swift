@@ -29,7 +29,7 @@ typedef NS_OPTIONS(NSUInteger, UIViewAnimationOptions) {
 }
  */
 //通过一个 typedef 的定义，我们可以使用 NS_OPTIONS 来把 UIViewAnimationOptions 映射为每一位都不同的一组 NSUInteger。不仅是这个动画的选项如此，其他的 Option 值也都遵循着相同的规范映射到整数上。如果我们不需要特殊的什么选项的话，可以使用 kNilOptions 作为输入，它被定义为数字 0。
-
+/*
 enum {
     kNilOptions = 0
 };
@@ -68,4 +68,4 @@ struct YourOption: OptionSetType {
     //...
 }
 
-
+*/
