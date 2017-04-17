@@ -2,7 +2,7 @@
 
 import Foundation
 
-class Employee {
+class Employee: NSObject {
     var no: Int
     var name: String
     var job: String
@@ -32,7 +32,7 @@ class Employee {
     }
 }
 
-class Department {
+class Department: NSObject {
     var no: Int
     var name: String
     //所在地
@@ -69,33 +69,16 @@ let emp13 = Employee(no: 7902, name: "FORD", job: "ANALYST", salary: 3000, hired
 let emp14 = Employee(no: 7934, name: "MILLER", job: "CLERK", salary: 1300, hiredateString: "2001-01-23", dept: dept1)
 
 let arrayEmployees = [emp1,emp2,emp3,emp4,emp5,emp6,emp7,emp8,emp9,emp10,emp11,emp12,emp13,emp14]
-let oldFilteredArray1 = NSMutableArray()
-for emp in arrayEmployees  {
-    if  emp.salary < 1000 {
-        oldFilteredArray1.addObject(emp)
-    }
-}
-print(oldFilteredArray1.count)
+
+let salaryPredicate = NSPredicate(format: "salary < %i", 1000)
+
+let filteredArray = NSMutableArray(array: arrayEmployees)
+filteredArray.filterUsingPredicate(salaryPredicate)
+
 //遍历
-for item in oldFilteredArray1 {
+for item in filteredArray {
     let emp = item as! Employee
     print("no: \(emp.no) name:  \(emp.name) salary: \(emp.salary)")
 }
-
-let oldFilteredArray2 = NSMutableArray()
-for emp in arrayEmployees where emp.salary < 1000 {
-    oldFilteredArray2.addObject(emp)
-}
-
-print(oldFilteredArray2.count)
-//遍历
-for item in oldFilteredArray2 {
-    let emp = item as! Employee
-    print("no: \(emp.no) name:  \(emp.name) salary: \(emp.salary)")
-
-
-
-
-
 
 
