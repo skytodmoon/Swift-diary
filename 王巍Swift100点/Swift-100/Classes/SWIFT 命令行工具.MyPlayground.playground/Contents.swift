@@ -22,7 +22,7 @@ hello
 
 相对于直接用 swift 命令执行，Swift 命令行工具的另一个常用的地方是直接脱离 Xcode 环境进行编译和生成可执行的二进制文件。我们可以使用 swiftc 来进行编译，比如下面的例子：
 */
-
+/*
 // MyClass.swift
 class MyClass {
     let name = "XiaoMing"
@@ -41,7 +41,7 @@ object.hello()
 // 输出：
 // Hello XiaoMing
 //利用这个方法，我们就可以用 Swift 写出一些命令行的程序了。
-
+*/
 //最后想说明的一个 Swift 命令行工具的使用案例是生成汇编级别的代码。有时候我们想要确认经过优化后的汇编代码实际上做了些什么。swiftc 提供了参数来生成 asm 级别的汇编代码：
 
 //swiftc -O hello.swift -o hello.asm

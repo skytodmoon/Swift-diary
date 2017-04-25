@@ -38,14 +38,14 @@ AudioServicesCreateSystemSoundID(fileURL!, &theSoundID)
 // CFGetSomething() -> Unmanaged<Something>
 // CFCreateSomething() -> Unmanaged<Something>
 // 两者都没有进行标注，Create 中进行了创建
-
+/*
 let unmanaged = CFGetSomething()
 let something = unmanaged.takeUnretainedValue()
 // something 的类型是 Something，直接使用就可以了
 
 let unmanaged = CFCreateSomething()
 let something = unmanaged.takeRetainedValue()
-
+*/
 // 使用 something
 
 //  因为在取值时 retain 了，使用完成后进行 release
