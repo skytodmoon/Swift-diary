@@ -8,22 +8,22 @@ import UIKit
 
 //Swift 为我们提供了一系列的 assert 方法来使用断言，其中最常用的一个是：
 
-func assert(@autoclosure condition: () -> Bool,
-                         @autoclosure _ message: () -> String = default,
-    file: StaticString = default,
-    line: UInt = default)
-//如果您对参数的默认值的 default 感兴趣的话，可以看看默认参数一节的内容，有简单介绍。
-//在使用时，最常见的情况是给定条件和一个简单的说明。举一个在温度转换时候的例子， 我们想要把摄氏温度转为开尔文温度的时候，因为绝对零度永远不能达到，所以我们不可能接受一个小于 -273.15 摄氏度的温度作为输入：
-
-func convertToKelvin(# celsius: Double) -> Double {
-assert(celsius > absoluteZeroInCelsius, "输入的摄氏温度不能低于绝对零度")
-return celsius - absoluteZeroInCelsius
-}
-
-let roomTemperature = convertToKelvin(celsius: 27)
-// roomTemperature = 300.15
-
-let tooCold = convertToKelvin(celsius: -300)
+//func assert(@autoclosure condition: () -> Bool,
+//                         @autoclosure _ message: () -> String = default,
+//    file: StaticString = default,
+//    line: UInt = default)
+////如果您对参数的默认值的 default 感兴趣的话，可以看看默认参数一节的内容，有简单介绍。
+////在使用时，最常见的情况是给定条件和一个简单的说明。举一个在温度转换时候的例子， 我们想要把摄氏温度转为开尔文温度的时候，因为绝对零度永远不能达到，所以我们不可能接受一个小于 -273.15 摄氏度的温度作为输入：
+//
+//func convertToKelvin(# celsius: Double) -> Double {
+//assert(celsius > absoluteZeroInCelsius, "输入的摄氏温度不能低于绝对零度")
+//return celsius - absoluteZeroInCelsius
+//}
+//
+//let roomTemperature = convertToKelvin(celsius: 27)
+//// roomTemperature = 300.15
+//
+//let tooCold = convertToKelvin(celsius: -300)
 // 运行时错误:
 // assertion failed:
 // 输入的摄氏温度不能低于绝对零度 : file {YOUR_FILE_PATH}, line {LINE_NUMBER}
