@@ -20,10 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
-        //设置主窗口
+        //MARK: - 设置主窗口
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        //根控制器的判断
+        //MARK: - 根控制器的判断
         window?.rootViewController = defaultContoller()
         window?.makeKeyAndVisible()
         
