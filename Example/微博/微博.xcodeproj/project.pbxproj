@@ -14,6 +14,7 @@
 		5B7143861EB988630029C9B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7143841EB988630029C9B1 /* LaunchScreen.storyboard */; };
 		5B7143911EB988630029C9B1 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7143901EB988630029C9B1 /* __Tests.swift */; };
 		5B71439C1EB988630029C9B1 /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71439B1EB988630029C9B1 /* __UITests.swift */; };
+		5B7143AD1EB9F4370029C9B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7143AC1EB9F4370029C9B1 /* MainViewController.swift */; };
 		B976A56FDD585517666CE2D6 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7370B0E4A6D10078981FB9 /* Pods___.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		5B7143971EB988630029C9B1 /* 微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B71439B1EB988630029C9B1 /* __UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __UITests.swift; sourceTree = "<group>"; };
 		5B71439D1EB988630029C9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7143AC1EB9F4370029C9B1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7111447754C0D89BC24CBF11 /* Pods-微博.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博.release.xcconfig"; path = "Pods/Target Support Files/Pods-微博/Pods-微博.release.xcconfig"; sourceTree = "<group>"; };
 		8B8C7FA0F2E531FA5D52ACE5 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE66DE6E9D3B9D5E7F8C619C /* Pods-微博.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博.debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博/Pods-微博.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +148,17 @@
 		5B7143AA1EB989760029C9B1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5B7143AB1EB9F4220029C9B1 /* Controller */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		5B7143AB1EB9F4220029C9B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7143AC1EB9F4370029C9B1 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B70035B8967093143C64ECD8 /* Frameworks */ = {
@@ -351,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7143AD1EB9F4370029C9B1 /* MainViewController.swift in Sources */,
 				5B71437E1EB988630029C9B1 /* ViewController.swift in Sources */,
 				5B71437C1EB988630029C9B1 /* AppDelegate.swift in Sources */,
 			);
