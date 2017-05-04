@@ -1,0 +1,1734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B14BB911D365AE70024F1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BB901D365AE70024F1B3 /* main.m */; };
+		5B14BB941D365AE70024F1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BB931D365AE70024F1B3 /* AppDelegate.m */; };
+		5B14BB971D365AE70024F1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BB961D365AE70024F1B3 /* ViewController.m */; };
+		5B14BB9A1D365AE70024F1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BB981D365AE70024F1B3 /* Main.storyboard */; };
+		5B14BB9C1D365AE70024F1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BB9B1D365AE70024F1B3 /* Assets.xcassets */; };
+		5B14BB9F1D365AE70024F1B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BB9D1D365AE70024F1B3 /* LaunchScreen.storyboard */; };
+		5B14BBAA1D365AE70024F1B3 /* GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BBA91D365AE70024F1B3 /* GameTests.m */; };
+		5B14BBB51D365AE70024F1B3 /* GameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BBB41D365AE70024F1B3 /* GameUITests.m */; };
+		5B14BBD11D365B9B0024F1B3 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBC51D365B9B0024F1B3 /* arial.ttf */; };
+		5B14BBD21D365B9B0024F1B3 /* Transformers Movie 变形金刚字体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBC61D365B9B0024F1B3 /* Transformers Movie 变形金刚字体.ttf */; };
+		5B14BBD31D365B9B0024F1B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBC81D365B9B0024F1B3 /* Default-568h@2x.png */; };
+		5B14BBD41D365B9B0024F1B3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBC91D365B9B0024F1B3 /* Default.png */; };
+		5B14BBD51D365B9B0024F1B3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBCA1D365B9B0024F1B3 /* Default@2x.png */; };
+		5B14BBD61D365B9B0024F1B3 /* home.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBCC1D365B9B0024F1B3 /* home.plist */; };
+		5B14BBD71D365B9B0024F1B3 /* stages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBCD1D365B9B0024F1B3 /* stages.plist */; };
+		5B14BBD81D365B9B0024F1B3 /* bg_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBCF1D365B9B0024F1B3 /* bg_music.mp3 */; };
+		5B14BBD91D365B9B0024F1B3 /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBD01D365B9B0024F1B3 /* sound.bundle */; };
+		5B14BBDF1D365C350024F1B3 /* QJLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BBDE1D365C350024F1B3 /* QJLRootViewController.m */; };
+		5B14BBE31D365C500024F1B3 /* QJLLaunchAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BBE11D365C500024F1B3 /* QJLLaunchAnimationViewController.m */; };
+		5B14BBE41D365C500024F1B3 /* QJLLaunchAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BBE21D365C500024F1B3 /* QJLLaunchAnimationViewController.xib */; };
+		5B14BBF71D365DEC0024F1B3 /* QJLStageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BBF61D365DEC0024F1B3 /* QJLStageInfo.m */; };
+		5B14BC0D1D3665F40024F1B3 /* QJLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC0C1D3665F40024F1B3 /* QJLSettingViewController.m */; };
+		5B14BC101D3666100024F1B3 /* QJLSelectStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC0F1D3666100024F1B3 /* QJLSelectStageViewController.m */; };
+		5B14BC131D3666690024F1B3 /* QJLStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC121D3666690024F1B3 /* QJLStage.m */; };
+		5B14BC191D3667330024F1B3 /* QJLStageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC181D3667330024F1B3 /* QJLStageListView.m */; };
+		5B14BC1C1D3667460024F1B3 /* QJLStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC1B1D3667460024F1B3 /* QJLStageView.m */; };
+		5B14BC1E1D36675F0024F1B3 /* QJLStageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BC1D1D36675F0024F1B3 /* QJLStageView.xib */; };
+		5B14BC241D366A220024F1B3 /* UIApplication+QJLLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC211D366A220024F1B3 /* UIApplication+QJLLoad.m */; };
+		5B14BC251D366A220024F1B3 /* UIView+QJLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC231D366A220024F1B3 /* UIView+QJLImage.m */; };
+		5B14BC351D366AAD0024F1B3 /* QJLBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC291D366AAD0024F1B3 /* QJLBackViewController.m */; };
+		5B14BC361D366AAD0024F1B3 /* QJLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC2B1D366AAD0024F1B3 /* QJLBaseNavigationController.m */; };
+		5B14BC371D366AAD0024F1B3 /* QJLResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC2D1D366AAD0024F1B3 /* QJLResultViewController.m */; };
+		5B14BC381D366AAD0024F1B3 /* QJLResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B14BC2E1D366AAD0024F1B3 /* QJLResultViewController.xib */; };
+		5B14BC391D366AAD0024F1B3 /* QJLSoundToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC311D366AAD0024F1B3 /* QJLSoundToolManager.m */; };
+		5B14BC3A1D366AAD0024F1B3 /* QJLStageInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC331D366AAD0024F1B3 /* QJLStageInfoManager.m */; };
+		5B14BC3D1D366ADF0024F1B3 /* QJLFullBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B14BC3C1D366ADF0024F1B3 /* QJLFullBackgroundView.m */; };
+		5BB03C741D5DA8AC001203F8 /* QJLStage01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BB41D5DA8AC001203F8 /* QJLStage01ViewController.m */; };
+		5BB03C751D5DA8AC001203F8 /* QJLFeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BB71D5DA8AC001203F8 /* QJLFeatherView.m */; };
+		5BB03C761D5DA8AC001203F8 /* QJLFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BB91D5DA8AC001203F8 /* QJLFootView.m */; };
+		5BB03C771D5DA8AC001203F8 /* QJLStage02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BBD1D5DA8AC001203F8 /* QJLStage02ViewController.m */; };
+		5BB03C781D5DA8AC001203F8 /* QJLCountTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BC01D5DA8AC001203F8 /* QJLCountTimeView.m */; };
+		5BB03C791D5DA8AC001203F8 /* QJLCountTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BC11D5DA8AC001203F8 /* QJLCountTimeView.xib */; };
+		5BB03C7A1D5DA8AC001203F8 /* QJLGuessFingerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BC31D5DA8AC001203F8 /* QJLGuessFingerView.m */; };
+		5BB03C7B1D5DA8AC001203F8 /* QJLStage03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BC71D5DA8AC001203F8 /* QJLStage03ViewController.m */; };
+		5BB03C7C1D5DA8AC001203F8 /* QJLStage03HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BCA1D5DA8AC001203F8 /* QJLStage03HeaderView.m */; };
+		5BB03C7D1D5DA8AC001203F8 /* QJLStage04View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BCD1D5DA8AC001203F8 /* QJLStage04View.m */; };
+		5BB03C7E1D5DA8AC001203F8 /* QJLStage04ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BCF1D5DA8AC001203F8 /* QJLStage04ViewController.m */; };
+		5BB03C7F1D5DA8AC001203F8 /* QJLStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BD11D5DA8AC001203F8 /* QJLStateView.m */; };
+		5BB03C801D5DA8AC001203F8 /* QJLStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BD21D5DA8AC001203F8 /* QJLStateView.xib */; };
+		5BB03C811D5DA8AC001203F8 /* QJLColumnIceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BD51D5DA8AC001203F8 /* QJLColumnIceView.m */; };
+		5BB03C821D5DA8AC001203F8 /* QJLColumnIceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BD61D5DA8AC001203F8 /* QJLColumnIceView.xib */; };
+		5BB03C831D5DA8AC001203F8 /* QJLIceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BD81D5DA8AC001203F8 /* QJLIceView.m */; };
+		5BB03C841D5DA8AC001203F8 /* QJLStage05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BDA1D5DA8AC001203F8 /* QJLStage05ViewController.m */; };
+		5BB03C851D5DA8AC001203F8 /* QJLStage06PeolpeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BDD1D5DA8AC001203F8 /* QJLStage06PeolpeView.m */; };
+		5BB03C861D5DA8AC001203F8 /* QJLStage06PeolpeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BDE1D5DA8AC001203F8 /* QJLStage06PeolpeView.xib */; };
+		5BB03C871D5DA8AC001203F8 /* QJLStage06ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BE01D5DA8AC001203F8 /* QJLStage06ViewController.m */; };
+		5BB03C881D5DA8AC001203F8 /* QJLBreakGlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BE31D5DA8AC001203F8 /* QJLBreakGlassView.m */; };
+		5BB03C891D5DA8AC001203F8 /* QJLBreakGlassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BE41D5DA8AC001203F8 /* QJLBreakGlassView.xib */; };
+		5BB03C8A1D5DA8AC001203F8 /* QJLStage07ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BE61D5DA8AC001203F8 /* QJLStage07ErrorView.m */; };
+		5BB03C8B1D5DA8AC001203F8 /* QJLStage07ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BE71D5DA8AC001203F8 /* QJLStage07ErrorView.xib */; };
+		5BB03C8C1D5DA8AC001203F8 /* QJLStage07View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BE91D5DA8AC001203F8 /* QJLStage07View.m */; };
+		5BB03C8D1D5DA8AC001203F8 /* QJLStage07ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BEB1D5DA8AC001203F8 /* QJLStage07ViewController.m */; };
+		5BB03C8E1D5DA8AC001203F8 /* QJLStage08PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BEE1D5DA8AC001203F8 /* QJLStage08PeopleView.m */; };
+		5BB03C8F1D5DA8AC001203F8 /* QJLStage08PeopleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BEF1D5DA8AC001203F8 /* QJLStage08PeopleView.xib */; };
+		5BB03C901D5DA8AC001203F8 /* QJLStage08ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BF11D5DA8AC001203F8 /* QJLStage08ViewController.m */; };
+		5BB03C911D5DA8AC001203F8 /* QJLBobmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BF41D5DA8AC001203F8 /* QJLBobmView.m */; };
+		5BB03C921D5DA8AC001203F8 /* QJLBobmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BF51D5DA8AC001203F8 /* QJLBobmView.xib */; };
+		5BB03C931D5DA8AC001203F8 /* QJLStage09BobmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BF71D5DA8AC001203F8 /* QJLStage09BobmView.m */; };
+		5BB03C941D5DA8AC001203F8 /* QJLStage09ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BF91D5DA8AC001203F8 /* QJLStage09ResultView.m */; };
+		5BB03C951D5DA8AC001203F8 /* QJLStage09ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03BFA1D5DA8AC001203F8 /* QJLStage09ResultView.xib */; };
+		5BB03C961D5DA8AC001203F8 /* QJLStage09ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BFC1D5DA8AC001203F8 /* QJLStage09ViewController.m */; };
+		5BB03C971D5DA8AC001203F8 /* QJLStage10BottomNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03BFF1D5DA8AC001203F8 /* QJLStage10BottomNumView.m */; };
+		5BB03C981D5DA8AC001203F8 /* QJLStage10View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C011D5DA8AC001203F8 /* QJLStage10View.m */; };
+		5BB03C991D5DA8AC001203F8 /* QJLStage10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C031D5DA8AC001203F8 /* QJLStage10ViewController.m */; };
+		5BB03C9A1D5DA8AC001203F8 /* QJLStage11BottomNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C061D5DA8AC001203F8 /* QJLStage11BottomNumView.m */; };
+		5BB03C9B1D5DA8AC001203F8 /* QJLStage11View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C081D5DA8AC001203F8 /* QJLStage11View.m */; };
+		5BB03C9C1D5DA8AC001203F8 /* QJLStage11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C0A1D5DA8AC001203F8 /* QJLStage11ViewController.m */; };
+		5BB03C9D1D5DA8AC001203F8 /* QJLSubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C0C1D5DA8AC001203F8 /* QJLSubjectView.m */; };
+		5BB03C9E1D5DA8AC001203F8 /* QJLDropEggView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C0F1D5DA8AC001203F8 /* QJLDropEggView.m */; };
+		5BB03C9F1D5DA8AC001203F8 /* QJLStage12BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C111D5DA8AC001203F8 /* QJLStage12BottomView.m */; };
+		5BB03CA01D5DA8AC001203F8 /* QJLStage12EggView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C131D5DA8AC001203F8 /* QJLStage12EggView.m */; };
+		5BB03CA11D5DA8AC001203F8 /* QJLStage12ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C151D5DA8AC001203F8 /* QJLStage12ViewController.m */; };
+		5BB03CA21D5DA8AC001203F8 /* QJLState12ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C171D5DA8AC001203F8 /* QJLState12ResultView.m */; };
+		5BB03CA31D5DA8AC001203F8 /* QJLStage13BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C1A1D5DA8AC001203F8 /* QJLStage13BottomView.m */; };
+		5BB03CA41D5DA8AC001203F8 /* QJLStage13GuessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C1C1D5DA8AC001203F8 /* QJLStage13GuessView.m */; };
+		5BB03CA51D5DA8AC001203F8 /* QJLStage13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C1E1D5DA8AC001203F8 /* QJLStage13ViewController.m */; };
+		5BB03CA61D5DA8AC001203F8 /* QJLStage14DogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C211D5DA8AC001203F8 /* QJLStage14DogView.m */; };
+		5BB03CA71D5DA8AC001203F8 /* QJLStage14DogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C221D5DA8AC001203F8 /* QJLStage14DogView.xib */; };
+		5BB03CA81D5DA8AC001203F8 /* QJLStage14LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C241D5DA8AC001203F8 /* QJLStage14LineView.m */; };
+		5BB03CA91D5DA8AC001203F8 /* QJLStage14LineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C251D5DA8AC001203F8 /* QJLStage14LineView.xib */; };
+		5BB03CAA1D5DA8AC001203F8 /* QJLStage14ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C271D5DA8AC001203F8 /* QJLStage14ViewController.m */; };
+		5BB03CAB1D5DA8AC001203F8 /* QJLStage15RowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C2A1D5DA8AC001203F8 /* QJLStage15RowView.m */; };
+		5BB03CAC1D5DA8AC001203F8 /* QJLStage15RowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C2B1D5DA8AC001203F8 /* QJLStage15RowView.xib */; };
+		5BB03CAD1D5DA8AC001203F8 /* QJLStage15View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C2D1D5DA8AC001203F8 /* QJLStage15View.m */; };
+		5BB03CAE1D5DA8AC001203F8 /* QJLStage15ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C2F1D5DA8AC001203F8 /* QJLStage15ViewController.m */; };
+		5BB03CAF1D5DA8AC001203F8 /* QJLStage16PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C321D5DA8AC001203F8 /* QJLStage16PeopleView.m */; };
+		5BB03CB01D5DA8AC001203F8 /* QJLStage16PeopleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C331D5DA8AC001203F8 /* QJLStage16PeopleView.xib */; };
+		5BB03CB11D5DA8AC001203F8 /* QJLStage16ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C351D5DA8AC001203F8 /* QJLStage16ViewController.m */; };
+		5BB03CB21D5DA8AC001203F8 /* QJLNoseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C381D5DA8AC001203F8 /* QJLNoseView.m */; };
+		5BB03CB31D5DA8AC001203F8 /* QJLNoseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C391D5DA8AC001203F8 /* QJLNoseView.xib */; };
+		5BB03CB41D5DA8AC001203F8 /* QJLPowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C3B1D5DA8AC001203F8 /* QJLPowerView.m */; };
+		5BB03CB51D5DA8AC001203F8 /* QJLPowerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C3C1D5DA8AC001203F8 /* QJLPowerView.xib */; };
+		5BB03CB61D5DA8AC001203F8 /* QJLStage17ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C3E1D5DA8AC001203F8 /* QJLStage17ViewController.m */; };
+		5BB03CB71D5DA8AC001203F8 /* QJLPokerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C411D5DA8AC001203F8 /* QJLPokerView.m */; };
+		5BB03CB81D5DA8AC001203F8 /* QJLPokerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C421D5DA8AC001203F8 /* QJLPokerView.xib */; };
+		5BB03CB91D5DA8AC001203F8 /* QJLStage18PokerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C441D5DA8AC001203F8 /* QJLStage18PokerView.m */; };
+		5BB03CBA1D5DA8AC001203F8 /* QJLStage18PokerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C451D5DA8AC001203F8 /* QJLStage18PokerView.xib */; };
+		5BB03CBB1D5DA8AC001203F8 /* QJLStage18ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C471D5DA8AC001203F8 /* QJLStage18ViewController.m */; };
+		5BB03CBC1D5DA8AC001203F8 /* QJLFishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C4A1D5DA8AC001203F8 /* QJLFishView.m */; };
+		5BB03CBD1D5DA8AC001203F8 /* QJLFishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C4B1D5DA8AC001203F8 /* QJLFishView.xib */; };
+		5BB03CBE1D5DA8AC001203F8 /* QJLStage19FishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C4D1D5DA8AC001203F8 /* QJLStage19FishView.m */; };
+		5BB03CBF1D5DA8AC001203F8 /* QJLStage19ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C4F1D5DA8AC001203F8 /* QJLStage19ViewController.m */; };
+		5BB03CC01D5DA8AC001203F8 /* QJLDiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C521D5DA8AC001203F8 /* QJLDiceView.m */; };
+		5BB03CC11D5DA8AC001203F8 /* QJLDiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C531D5DA8AC001203F8 /* QJLDiceView.xib */; };
+		5BB03CC21D5DA8AC001203F8 /* QJLStage20DiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C551D5DA8AC001203F8 /* QJLStage20DiceView.m */; };
+		5BB03CC31D5DA8AC001203F8 /* QJLStage20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C571D5DA8AC001203F8 /* QJLStage20ViewController.m */; };
+		5BB03CC41D5DA8AC001203F8 /* QJLFractionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C5A1D5DA8AC001203F8 /* QJLFractionView.m */; };
+		5BB03CC51D5DA8AC001203F8 /* QJLStage21FractionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C5C1D5DA8AC001203F8 /* QJLStage21FractionView.m */; };
+		5BB03CC61D5DA8AC001203F8 /* QJLStage21ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C5E1D5DA8AC001203F8 /* QJLStage21ViewController.m */; };
+		5BB03CC71D5DA8AC001203F8 /* QJLStage22PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C611D5DA8AC001203F8 /* QJLStage22PeopleView.m */; };
+		5BB03CC81D5DA8AC001203F8 /* QJLStage22ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C631D5DA8AC001203F8 /* QJLStage22ViewController.m */; };
+		5BB03CC91D5DA8AC001203F8 /* QJLBusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C661D5DA8AC001203F8 /* QJLBusView.m */; };
+		5BB03CCA1D5DA8AC001203F8 /* QJLBusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C671D5DA8AC001203F8 /* QJLBusView.xib */; };
+		5BB03CCB1D5DA8AC001203F8 /* QJLStage23PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C691D5DA8AC001203F8 /* QJLStage23PeopleView.m */; };
+		5BB03CCC1D5DA8AC001203F8 /* QJLStage23ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C6B1D5DA8AC001203F8 /* QJLStage23ViewController.m */; };
+		5BB03CCD1D5DA8AC001203F8 /* QJLCockroachView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C6E1D5DA8AC001203F8 /* QJLCockroachView.m */; };
+		5BB03CCE1D5DA8AC001203F8 /* QJLCockroachView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB03C6F1D5DA8AC001203F8 /* QJLCockroachView.xib */; };
+		5BB03CCF1D5DA8AC001203F8 /* QJLStage24View.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C711D5DA8AC001203F8 /* QJLStage24View.m */; };
+		5BB03CD01D5DA8AC001203F8 /* QJLStage24ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB03C731D5DA8AC001203F8 /* QJLStage24ViewController.m */; };
+		5BE2EE8B1D371B7200651F63 /* QJLPrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EE8A1D371B7200651F63 /* QJLPrepareViewController.m */; };
+		5BE2EE8E1D371B8500651F63 /* QJLRareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EE8D1D371B8500651F63 /* QJLRareViewController.m */; };
+		5BE2EE941D371F4E00651F63 /* QJLPrepareScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EE931D371F4E00651F63 /* QJLPrepareScoreView.m */; };
+		5BE2EE9B1D3721C300651F63 /* QJLBaseGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EE9A1D3721C300651F63 /* QJLBaseGameViewController.m */; };
+		5BE2EE9E1D3721DB00651F63 /* QJLRYBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EE9D1D3721DB00651F63 /* QJLRYBViewController.m */; };
+		5BE2EEAA1D37230F00651F63 /* QJLStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEA91D37230F00651F63 /* QJLStrokeLabel.m */; };
+		5BE2EEAD1D37236200651F63 /* QJLCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEAC1D37236200651F63 /* QJLCountDownLabel.m */; };
+		5BE2EEB51D3723B500651F63 /* QJLScoreboardCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEB31D3723B500651F63 /* QJLScoreboardCountView.m */; };
+		5BE2EEB61D3723B500651F63 /* QJLScoreboardCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2EEB41D3723B500651F63 /* QJLScoreboardCountView.xib */; };
+		5BE2EEB91D37286D00651F63 /* QJLGameControllerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEB81D37286D00651F63 /* QJLGameControllerViewManager.m */; };
+		5BE2EEBC1D372BC900651F63 /* QJLReadyGoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEBB1D372BC900651F63 /* QJLReadyGoView.m */; };
+		5BE2EEC31D372C1500651F63 /* QJLPauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEC11D372C1500651F63 /* QJLPauseViewController.m */; };
+		5BE2EEC41D372C1500651F63 /* QJLPauseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2EEC21D372C1500651F63 /* QJLPauseViewController.xib */; };
+		5BE2EECB1D372D5A00651F63 /* QJLFailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEC91D372D5A00651F63 /* QJLFailView.m */; };
+		5BE2EECC1D372D5A00651F63 /* QJLFailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2EECA1D372D5A00651F63 /* QJLFailView.xib */; };
+		5BE2EED31D372DC500651F63 /* QJLFailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EED11D372DC500651F63 /* QJLFailViewController.m */; };
+		5BE2EED41D372DC500651F63 /* QJLFailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2EED21D372DC500651F63 /* QJLFailViewController.xib */; };
+		5BE2EEF81D37309D00651F63 /* QJLTimeCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEF61D37309D00651F63 /* QJLTimeCountView.m */; };
+		5BE2EEF91D37309D00651F63 /* QJLTimeCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE2EEF71D37309D00651F63 /* QJLTimeCountView.xib */; };
+		5BE2EEFC1D3756ED00651F63 /* UIColor+QJLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEFB1D3756ED00651F63 /* UIColor+QJLColor.m */; };
+		5BE2EEFF1D37584B00651F63 /* QJLResultScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EEFE1D37584B00651F63 /* QJLResultScoreView.m */; };
+		5BE2EF021D37586500651F63 /* QJLHighScroeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EF011D37586500651F63 /* QJLHighScroeTextView.m */; };
+		5BE2EF051D377DED00651F63 /* QJLTwoButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EF041D377DED00651F63 /* QJLTwoButtonViewController.m */; };
+		5BE2EF081D377E3900651F63 /* QJLBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE2EF071D377E3900651F63 /* QJLBackgroundViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B14BBA61D365AE70024F1B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B14BB841D365AE70024F1B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B14BB8B1D365AE70024F1B3;
+			remoteInfo = Game;
+		};
+		5B14BBB11D365AE70024F1B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B14BB841D365AE70024F1B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B14BB8B1D365AE70024F1B3;
+			remoteInfo = Game;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B14BB8C1D365AE70024F1B3 /* 最牛游戏.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "最牛游戏.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B14BB901D365AE70024F1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B14BB921D365AE70024F1B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B14BB931D365AE70024F1B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B14BB951D365AE70024F1B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B14BB961D365AE70024F1B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B14BB991D365AE70024F1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B14BB9B1D365AE70024F1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B14BB9E1D365AE70024F1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B14BBA01D365AE70024F1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B14BBA51D365AE70024F1B3 /* GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B14BBA91D365AE70024F1B3 /* GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameTests.m; sourceTree = "<group>"; };
+		5B14BBAB1D365AE70024F1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B14BBB01D365AE70024F1B3 /* GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B14BBB41D365AE70024F1B3 /* GameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameUITests.m; sourceTree = "<group>"; };
+		5B14BBB61D365AE70024F1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B14BBC51D365B9B0024F1B3 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		5B14BBC61D365B9B0024F1B3 /* Transformers Movie 变形金刚字体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Transformers Movie 变形金刚字体.ttf"; sourceTree = "<group>"; };
+		5B14BBC81D365B9B0024F1B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B14BBC91D365B9B0024F1B3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5B14BBCA1D365B9B0024F1B3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5B14BBCC1D365B9B0024F1B3 /* home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = home.plist; sourceTree = "<group>"; };
+		5B14BBCD1D365B9B0024F1B3 /* stages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stages.plist; sourceTree = "<group>"; };
+		5B14BBCF1D365B9B0024F1B3 /* bg_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_music.mp3; sourceTree = "<group>"; };
+		5B14BBD01D365B9B0024F1B3 /* sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sound.bundle; sourceTree = "<group>"; };
+		5B14BBDD1D365C350024F1B3 /* QJLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLRootViewController.h; sourceTree = "<group>"; };
+		5B14BBDE1D365C350024F1B3 /* QJLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLRootViewController.m; sourceTree = "<group>"; };
+		5B14BBE01D365C500024F1B3 /* QJLLaunchAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLLaunchAnimationViewController.h; sourceTree = "<group>"; };
+		5B14BBE11D365C500024F1B3 /* QJLLaunchAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLLaunchAnimationViewController.m; sourceTree = "<group>"; };
+		5B14BBE21D365C500024F1B3 /* QJLLaunchAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLLaunchAnimationViewController.xib; sourceTree = "<group>"; };
+		5B14BBF51D365DEC0024F1B3 /* QJLStageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStageInfo.h; sourceTree = "<group>"; };
+		5B14BBF61D365DEC0024F1B3 /* QJLStageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStageInfo.m; sourceTree = "<group>"; };
+		5B14BBF81D365E5E0024F1B3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B14BC0B1D3665F40024F1B3 /* QJLSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLSettingViewController.h; sourceTree = "<group>"; };
+		5B14BC0C1D3665F40024F1B3 /* QJLSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLSettingViewController.m; sourceTree = "<group>"; };
+		5B14BC0E1D3666100024F1B3 /* QJLSelectStageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLSelectStageViewController.h; sourceTree = "<group>"; };
+		5B14BC0F1D3666100024F1B3 /* QJLSelectStageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLSelectStageViewController.m; sourceTree = "<group>"; };
+		5B14BC111D3666690024F1B3 /* QJLStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage.h; sourceTree = "<group>"; };
+		5B14BC121D3666690024F1B3 /* QJLStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage.m; sourceTree = "<group>"; };
+		5B14BC171D3667330024F1B3 /* QJLStageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStageListView.h; sourceTree = "<group>"; };
+		5B14BC181D3667330024F1B3 /* QJLStageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStageListView.m; sourceTree = "<group>"; };
+		5B14BC1A1D3667460024F1B3 /* QJLStageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStageView.h; sourceTree = "<group>"; };
+		5B14BC1B1D3667460024F1B3 /* QJLStageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStageView.m; sourceTree = "<group>"; };
+		5B14BC1D1D36675F0024F1B3 /* QJLStageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStageView.xib; sourceTree = "<group>"; };
+		5B14BC201D366A220024F1B3 /* UIApplication+QJLLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+QJLLoad.h"; sourceTree = "<group>"; };
+		5B14BC211D366A220024F1B3 /* UIApplication+QJLLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+QJLLoad.m"; sourceTree = "<group>"; };
+		5B14BC221D366A220024F1B3 /* UIView+QJLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QJLImage.h"; sourceTree = "<group>"; };
+		5B14BC231D366A220024F1B3 /* UIView+QJLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QJLImage.m"; sourceTree = "<group>"; };
+		5B14BC281D366AAD0024F1B3 /* QJLBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBackViewController.h; sourceTree = "<group>"; };
+		5B14BC291D366AAD0024F1B3 /* QJLBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBackViewController.m; sourceTree = "<group>"; };
+		5B14BC2A1D366AAD0024F1B3 /* QJLBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBaseNavigationController.h; sourceTree = "<group>"; };
+		5B14BC2B1D366AAD0024F1B3 /* QJLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBaseNavigationController.m; sourceTree = "<group>"; };
+		5B14BC2C1D366AAD0024F1B3 /* QJLResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLResultViewController.h; sourceTree = "<group>"; };
+		5B14BC2D1D366AAD0024F1B3 /* QJLResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLResultViewController.m; sourceTree = "<group>"; };
+		5B14BC2E1D366AAD0024F1B3 /* QJLResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLResultViewController.xib; sourceTree = "<group>"; };
+		5B14BC301D366AAD0024F1B3 /* QJLSoundToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLSoundToolManager.h; sourceTree = "<group>"; };
+		5B14BC311D366AAD0024F1B3 /* QJLSoundToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLSoundToolManager.m; sourceTree = "<group>"; };
+		5B14BC321D366AAD0024F1B3 /* QJLStageInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStageInfoManager.h; sourceTree = "<group>"; };
+		5B14BC331D366AAD0024F1B3 /* QJLStageInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStageInfoManager.m; sourceTree = "<group>"; };
+		5B14BC341D366AAD0024F1B3 /* SoundNamesHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundNamesHeader.h; sourceTree = "<group>"; };
+		5B14BC3B1D366ADF0024F1B3 /* QJLFullBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFullBackgroundView.h; sourceTree = "<group>"; };
+		5B14BC3C1D366ADF0024F1B3 /* QJLFullBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFullBackgroundView.m; sourceTree = "<group>"; };
+		5BB03BB31D5DA8AC001203F8 /* QJLStage01ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage01ViewController.h; sourceTree = "<group>"; };
+		5BB03BB41D5DA8AC001203F8 /* QJLStage01ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage01ViewController.m; sourceTree = "<group>"; };
+		5BB03BB61D5DA8AC001203F8 /* QJLFeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFeatherView.h; sourceTree = "<group>"; };
+		5BB03BB71D5DA8AC001203F8 /* QJLFeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFeatherView.m; sourceTree = "<group>"; };
+		5BB03BB81D5DA8AC001203F8 /* QJLFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFootView.h; sourceTree = "<group>"; };
+		5BB03BB91D5DA8AC001203F8 /* QJLFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFootView.m; sourceTree = "<group>"; };
+		5BB03BBC1D5DA8AC001203F8 /* QJLStage02ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage02ViewController.h; sourceTree = "<group>"; };
+		5BB03BBD1D5DA8AC001203F8 /* QJLStage02ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage02ViewController.m; sourceTree = "<group>"; };
+		5BB03BBF1D5DA8AC001203F8 /* QJLCountTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLCountTimeView.h; sourceTree = "<group>"; };
+		5BB03BC01D5DA8AC001203F8 /* QJLCountTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLCountTimeView.m; sourceTree = "<group>"; };
+		5BB03BC11D5DA8AC001203F8 /* QJLCountTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLCountTimeView.xib; sourceTree = "<group>"; };
+		5BB03BC21D5DA8AC001203F8 /* QJLGuessFingerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLGuessFingerView.h; sourceTree = "<group>"; };
+		5BB03BC31D5DA8AC001203F8 /* QJLGuessFingerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLGuessFingerView.m; sourceTree = "<group>"; };
+		5BB03BC61D5DA8AC001203F8 /* QJLStage03ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage03ViewController.h; sourceTree = "<group>"; };
+		5BB03BC71D5DA8AC001203F8 /* QJLStage03ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage03ViewController.m; sourceTree = "<group>"; };
+		5BB03BC91D5DA8AC001203F8 /* QJLStage03HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage03HeaderView.h; sourceTree = "<group>"; };
+		5BB03BCA1D5DA8AC001203F8 /* QJLStage03HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage03HeaderView.m; sourceTree = "<group>"; };
+		5BB03BCC1D5DA8AC001203F8 /* QJLStage04View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage04View.h; sourceTree = "<group>"; };
+		5BB03BCD1D5DA8AC001203F8 /* QJLStage04View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage04View.m; sourceTree = "<group>"; };
+		5BB03BCE1D5DA8AC001203F8 /* QJLStage04ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage04ViewController.h; sourceTree = "<group>"; };
+		5BB03BCF1D5DA8AC001203F8 /* QJLStage04ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage04ViewController.m; sourceTree = "<group>"; };
+		5BB03BD01D5DA8AC001203F8 /* QJLStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStateView.h; sourceTree = "<group>"; };
+		5BB03BD11D5DA8AC001203F8 /* QJLStateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStateView.m; sourceTree = "<group>"; };
+		5BB03BD21D5DA8AC001203F8 /* QJLStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStateView.xib; sourceTree = "<group>"; };
+		5BB03BD41D5DA8AC001203F8 /* QJLColumnIceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLColumnIceView.h; sourceTree = "<group>"; };
+		5BB03BD51D5DA8AC001203F8 /* QJLColumnIceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLColumnIceView.m; sourceTree = "<group>"; };
+		5BB03BD61D5DA8AC001203F8 /* QJLColumnIceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLColumnIceView.xib; sourceTree = "<group>"; };
+		5BB03BD71D5DA8AC001203F8 /* QJLIceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLIceView.h; sourceTree = "<group>"; };
+		5BB03BD81D5DA8AC001203F8 /* QJLIceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLIceView.m; sourceTree = "<group>"; };
+		5BB03BD91D5DA8AC001203F8 /* QJLStage05ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage05ViewController.h; sourceTree = "<group>"; };
+		5BB03BDA1D5DA8AC001203F8 /* QJLStage05ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage05ViewController.m; sourceTree = "<group>"; };
+		5BB03BDC1D5DA8AC001203F8 /* QJLStage06PeolpeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage06PeolpeView.h; sourceTree = "<group>"; };
+		5BB03BDD1D5DA8AC001203F8 /* QJLStage06PeolpeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage06PeolpeView.m; sourceTree = "<group>"; };
+		5BB03BDE1D5DA8AC001203F8 /* QJLStage06PeolpeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage06PeolpeView.xib; sourceTree = "<group>"; };
+		5BB03BDF1D5DA8AC001203F8 /* QJLStage06ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage06ViewController.h; sourceTree = "<group>"; };
+		5BB03BE01D5DA8AC001203F8 /* QJLStage06ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage06ViewController.m; sourceTree = "<group>"; };
+		5BB03BE21D5DA8AC001203F8 /* QJLBreakGlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBreakGlassView.h; sourceTree = "<group>"; };
+		5BB03BE31D5DA8AC001203F8 /* QJLBreakGlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBreakGlassView.m; sourceTree = "<group>"; };
+		5BB03BE41D5DA8AC001203F8 /* QJLBreakGlassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLBreakGlassView.xib; sourceTree = "<group>"; };
+		5BB03BE51D5DA8AC001203F8 /* QJLStage07ErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage07ErrorView.h; sourceTree = "<group>"; };
+		5BB03BE61D5DA8AC001203F8 /* QJLStage07ErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage07ErrorView.m; sourceTree = "<group>"; };
+		5BB03BE71D5DA8AC001203F8 /* QJLStage07ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage07ErrorView.xib; sourceTree = "<group>"; };
+		5BB03BE81D5DA8AC001203F8 /* QJLStage07View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage07View.h; sourceTree = "<group>"; };
+		5BB03BE91D5DA8AC001203F8 /* QJLStage07View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage07View.m; sourceTree = "<group>"; };
+		5BB03BEA1D5DA8AC001203F8 /* QJLStage07ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage07ViewController.h; sourceTree = "<group>"; };
+		5BB03BEB1D5DA8AC001203F8 /* QJLStage07ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage07ViewController.m; sourceTree = "<group>"; };
+		5BB03BED1D5DA8AC001203F8 /* QJLStage08PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage08PeopleView.h; sourceTree = "<group>"; };
+		5BB03BEE1D5DA8AC001203F8 /* QJLStage08PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage08PeopleView.m; sourceTree = "<group>"; };
+		5BB03BEF1D5DA8AC001203F8 /* QJLStage08PeopleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage08PeopleView.xib; sourceTree = "<group>"; };
+		5BB03BF01D5DA8AC001203F8 /* QJLStage08ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage08ViewController.h; sourceTree = "<group>"; };
+		5BB03BF11D5DA8AC001203F8 /* QJLStage08ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage08ViewController.m; sourceTree = "<group>"; };
+		5BB03BF31D5DA8AC001203F8 /* QJLBobmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBobmView.h; sourceTree = "<group>"; };
+		5BB03BF41D5DA8AC001203F8 /* QJLBobmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBobmView.m; sourceTree = "<group>"; };
+		5BB03BF51D5DA8AC001203F8 /* QJLBobmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLBobmView.xib; sourceTree = "<group>"; };
+		5BB03BF61D5DA8AC001203F8 /* QJLStage09BobmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage09BobmView.h; sourceTree = "<group>"; };
+		5BB03BF71D5DA8AC001203F8 /* QJLStage09BobmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage09BobmView.m; sourceTree = "<group>"; };
+		5BB03BF81D5DA8AC001203F8 /* QJLStage09ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage09ResultView.h; sourceTree = "<group>"; };
+		5BB03BF91D5DA8AC001203F8 /* QJLStage09ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage09ResultView.m; sourceTree = "<group>"; };
+		5BB03BFA1D5DA8AC001203F8 /* QJLStage09ResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage09ResultView.xib; sourceTree = "<group>"; };
+		5BB03BFB1D5DA8AC001203F8 /* QJLStage09ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage09ViewController.h; sourceTree = "<group>"; };
+		5BB03BFC1D5DA8AC001203F8 /* QJLStage09ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage09ViewController.m; sourceTree = "<group>"; };
+		5BB03BFE1D5DA8AC001203F8 /* QJLStage10BottomNumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage10BottomNumView.h; sourceTree = "<group>"; };
+		5BB03BFF1D5DA8AC001203F8 /* QJLStage10BottomNumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage10BottomNumView.m; sourceTree = "<group>"; };
+		5BB03C001D5DA8AC001203F8 /* QJLStage10View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage10View.h; sourceTree = "<group>"; };
+		5BB03C011D5DA8AC001203F8 /* QJLStage10View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage10View.m; sourceTree = "<group>"; };
+		5BB03C021D5DA8AC001203F8 /* QJLStage10ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage10ViewController.h; sourceTree = "<group>"; };
+		5BB03C031D5DA8AC001203F8 /* QJLStage10ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage10ViewController.m; sourceTree = "<group>"; };
+		5BB03C051D5DA8AC001203F8 /* QJLStage11BottomNumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage11BottomNumView.h; sourceTree = "<group>"; };
+		5BB03C061D5DA8AC001203F8 /* QJLStage11BottomNumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage11BottomNumView.m; sourceTree = "<group>"; };
+		5BB03C071D5DA8AC001203F8 /* QJLStage11View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage11View.h; sourceTree = "<group>"; };
+		5BB03C081D5DA8AC001203F8 /* QJLStage11View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage11View.m; sourceTree = "<group>"; };
+		5BB03C091D5DA8AC001203F8 /* QJLStage11ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage11ViewController.h; sourceTree = "<group>"; };
+		5BB03C0A1D5DA8AC001203F8 /* QJLStage11ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage11ViewController.m; sourceTree = "<group>"; };
+		5BB03C0B1D5DA8AC001203F8 /* QJLSubjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLSubjectView.h; sourceTree = "<group>"; };
+		5BB03C0C1D5DA8AC001203F8 /* QJLSubjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLSubjectView.m; sourceTree = "<group>"; };
+		5BB03C0E1D5DA8AC001203F8 /* QJLDropEggView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLDropEggView.h; sourceTree = "<group>"; };
+		5BB03C0F1D5DA8AC001203F8 /* QJLDropEggView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLDropEggView.m; sourceTree = "<group>"; };
+		5BB03C101D5DA8AC001203F8 /* QJLStage12BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage12BottomView.h; sourceTree = "<group>"; };
+		5BB03C111D5DA8AC001203F8 /* QJLStage12BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage12BottomView.m; sourceTree = "<group>"; };
+		5BB03C121D5DA8AC001203F8 /* QJLStage12EggView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage12EggView.h; sourceTree = "<group>"; };
+		5BB03C131D5DA8AC001203F8 /* QJLStage12EggView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage12EggView.m; sourceTree = "<group>"; };
+		5BB03C141D5DA8AC001203F8 /* QJLStage12ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage12ViewController.h; sourceTree = "<group>"; };
+		5BB03C151D5DA8AC001203F8 /* QJLStage12ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage12ViewController.m; sourceTree = "<group>"; };
+		5BB03C161D5DA8AC001203F8 /* QJLState12ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLState12ResultView.h; sourceTree = "<group>"; };
+		5BB03C171D5DA8AC001203F8 /* QJLState12ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLState12ResultView.m; sourceTree = "<group>"; };
+		5BB03C191D5DA8AC001203F8 /* QJLStage13BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage13BottomView.h; sourceTree = "<group>"; };
+		5BB03C1A1D5DA8AC001203F8 /* QJLStage13BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage13BottomView.m; sourceTree = "<group>"; };
+		5BB03C1B1D5DA8AC001203F8 /* QJLStage13GuessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage13GuessView.h; sourceTree = "<group>"; };
+		5BB03C1C1D5DA8AC001203F8 /* QJLStage13GuessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage13GuessView.m; sourceTree = "<group>"; };
+		5BB03C1D1D5DA8AC001203F8 /* QJLStage13ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage13ViewController.h; sourceTree = "<group>"; };
+		5BB03C1E1D5DA8AC001203F8 /* QJLStage13ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage13ViewController.m; sourceTree = "<group>"; };
+		5BB03C201D5DA8AC001203F8 /* QJLStage14DogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage14DogView.h; sourceTree = "<group>"; };
+		5BB03C211D5DA8AC001203F8 /* QJLStage14DogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage14DogView.m; sourceTree = "<group>"; };
+		5BB03C221D5DA8AC001203F8 /* QJLStage14DogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage14DogView.xib; sourceTree = "<group>"; };
+		5BB03C231D5DA8AC001203F8 /* QJLStage14LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage14LineView.h; sourceTree = "<group>"; };
+		5BB03C241D5DA8AC001203F8 /* QJLStage14LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage14LineView.m; sourceTree = "<group>"; };
+		5BB03C251D5DA8AC001203F8 /* QJLStage14LineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage14LineView.xib; sourceTree = "<group>"; };
+		5BB03C261D5DA8AC001203F8 /* QJLStage14ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage14ViewController.h; sourceTree = "<group>"; };
+		5BB03C271D5DA8AC001203F8 /* QJLStage14ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage14ViewController.m; sourceTree = "<group>"; };
+		5BB03C291D5DA8AC001203F8 /* QJLStage15RowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage15RowView.h; sourceTree = "<group>"; };
+		5BB03C2A1D5DA8AC001203F8 /* QJLStage15RowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage15RowView.m; sourceTree = "<group>"; };
+		5BB03C2B1D5DA8AC001203F8 /* QJLStage15RowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage15RowView.xib; sourceTree = "<group>"; };
+		5BB03C2C1D5DA8AC001203F8 /* QJLStage15View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage15View.h; sourceTree = "<group>"; };
+		5BB03C2D1D5DA8AC001203F8 /* QJLStage15View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage15View.m; sourceTree = "<group>"; };
+		5BB03C2E1D5DA8AC001203F8 /* QJLStage15ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage15ViewController.h; sourceTree = "<group>"; };
+		5BB03C2F1D5DA8AC001203F8 /* QJLStage15ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage15ViewController.m; sourceTree = "<group>"; };
+		5BB03C311D5DA8AC001203F8 /* QJLStage16PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage16PeopleView.h; sourceTree = "<group>"; };
+		5BB03C321D5DA8AC001203F8 /* QJLStage16PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage16PeopleView.m; sourceTree = "<group>"; };
+		5BB03C331D5DA8AC001203F8 /* QJLStage16PeopleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage16PeopleView.xib; sourceTree = "<group>"; };
+		5BB03C341D5DA8AC001203F8 /* QJLStage16ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage16ViewController.h; sourceTree = "<group>"; };
+		5BB03C351D5DA8AC001203F8 /* QJLStage16ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage16ViewController.m; sourceTree = "<group>"; };
+		5BB03C371D5DA8AC001203F8 /* QJLNoseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLNoseView.h; sourceTree = "<group>"; };
+		5BB03C381D5DA8AC001203F8 /* QJLNoseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLNoseView.m; sourceTree = "<group>"; };
+		5BB03C391D5DA8AC001203F8 /* QJLNoseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLNoseView.xib; sourceTree = "<group>"; };
+		5BB03C3A1D5DA8AC001203F8 /* QJLPowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLPowerView.h; sourceTree = "<group>"; };
+		5BB03C3B1D5DA8AC001203F8 /* QJLPowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLPowerView.m; sourceTree = "<group>"; };
+		5BB03C3C1D5DA8AC001203F8 /* QJLPowerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLPowerView.xib; sourceTree = "<group>"; };
+		5BB03C3D1D5DA8AC001203F8 /* QJLStage17ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage17ViewController.h; sourceTree = "<group>"; };
+		5BB03C3E1D5DA8AC001203F8 /* QJLStage17ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage17ViewController.m; sourceTree = "<group>"; };
+		5BB03C401D5DA8AC001203F8 /* QJLPokerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLPokerView.h; sourceTree = "<group>"; };
+		5BB03C411D5DA8AC001203F8 /* QJLPokerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLPokerView.m; sourceTree = "<group>"; };
+		5BB03C421D5DA8AC001203F8 /* QJLPokerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLPokerView.xib; sourceTree = "<group>"; };
+		5BB03C431D5DA8AC001203F8 /* QJLStage18PokerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage18PokerView.h; sourceTree = "<group>"; };
+		5BB03C441D5DA8AC001203F8 /* QJLStage18PokerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage18PokerView.m; sourceTree = "<group>"; };
+		5BB03C451D5DA8AC001203F8 /* QJLStage18PokerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLStage18PokerView.xib; sourceTree = "<group>"; };
+		5BB03C461D5DA8AC001203F8 /* QJLStage18ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage18ViewController.h; sourceTree = "<group>"; };
+		5BB03C471D5DA8AC001203F8 /* QJLStage18ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage18ViewController.m; sourceTree = "<group>"; };
+		5BB03C491D5DA8AC001203F8 /* QJLFishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFishView.h; sourceTree = "<group>"; };
+		5BB03C4A1D5DA8AC001203F8 /* QJLFishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFishView.m; sourceTree = "<group>"; };
+		5BB03C4B1D5DA8AC001203F8 /* QJLFishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLFishView.xib; sourceTree = "<group>"; };
+		5BB03C4C1D5DA8AC001203F8 /* QJLStage19FishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage19FishView.h; sourceTree = "<group>"; };
+		5BB03C4D1D5DA8AC001203F8 /* QJLStage19FishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage19FishView.m; sourceTree = "<group>"; };
+		5BB03C4E1D5DA8AC001203F8 /* QJLStage19ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage19ViewController.h; sourceTree = "<group>"; };
+		5BB03C4F1D5DA8AC001203F8 /* QJLStage19ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage19ViewController.m; sourceTree = "<group>"; };
+		5BB03C511D5DA8AC001203F8 /* QJLDiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLDiceView.h; sourceTree = "<group>"; };
+		5BB03C521D5DA8AC001203F8 /* QJLDiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLDiceView.m; sourceTree = "<group>"; };
+		5BB03C531D5DA8AC001203F8 /* QJLDiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLDiceView.xib; sourceTree = "<group>"; };
+		5BB03C541D5DA8AC001203F8 /* QJLStage20DiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage20DiceView.h; sourceTree = "<group>"; };
+		5BB03C551D5DA8AC001203F8 /* QJLStage20DiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage20DiceView.m; sourceTree = "<group>"; };
+		5BB03C561D5DA8AC001203F8 /* QJLStage20ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage20ViewController.h; sourceTree = "<group>"; };
+		5BB03C571D5DA8AC001203F8 /* QJLStage20ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage20ViewController.m; sourceTree = "<group>"; };
+		5BB03C591D5DA8AC001203F8 /* QJLFractionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFractionView.h; sourceTree = "<group>"; };
+		5BB03C5A1D5DA8AC001203F8 /* QJLFractionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFractionView.m; sourceTree = "<group>"; };
+		5BB03C5B1D5DA8AC001203F8 /* QJLStage21FractionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage21FractionView.h; sourceTree = "<group>"; };
+		5BB03C5C1D5DA8AC001203F8 /* QJLStage21FractionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage21FractionView.m; sourceTree = "<group>"; };
+		5BB03C5D1D5DA8AC001203F8 /* QJLStage21ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage21ViewController.h; sourceTree = "<group>"; };
+		5BB03C5E1D5DA8AC001203F8 /* QJLStage21ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage21ViewController.m; sourceTree = "<group>"; };
+		5BB03C601D5DA8AC001203F8 /* QJLStage22PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage22PeopleView.h; sourceTree = "<group>"; };
+		5BB03C611D5DA8AC001203F8 /* QJLStage22PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage22PeopleView.m; sourceTree = "<group>"; };
+		5BB03C621D5DA8AC001203F8 /* QJLStage22ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage22ViewController.h; sourceTree = "<group>"; };
+		5BB03C631D5DA8AC001203F8 /* QJLStage22ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage22ViewController.m; sourceTree = "<group>"; };
+		5BB03C651D5DA8AC001203F8 /* QJLBusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBusView.h; sourceTree = "<group>"; };
+		5BB03C661D5DA8AC001203F8 /* QJLBusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBusView.m; sourceTree = "<group>"; };
+		5BB03C671D5DA8AC001203F8 /* QJLBusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLBusView.xib; sourceTree = "<group>"; };
+		5BB03C681D5DA8AC001203F8 /* QJLStage23PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage23PeopleView.h; sourceTree = "<group>"; };
+		5BB03C691D5DA8AC001203F8 /* QJLStage23PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage23PeopleView.m; sourceTree = "<group>"; };
+		5BB03C6A1D5DA8AC001203F8 /* QJLStage23ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage23ViewController.h; sourceTree = "<group>"; };
+		5BB03C6B1D5DA8AC001203F8 /* QJLStage23ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage23ViewController.m; sourceTree = "<group>"; };
+		5BB03C6D1D5DA8AC001203F8 /* QJLCockroachView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLCockroachView.h; sourceTree = "<group>"; };
+		5BB03C6E1D5DA8AC001203F8 /* QJLCockroachView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLCockroachView.m; sourceTree = "<group>"; };
+		5BB03C6F1D5DA8AC001203F8 /* QJLCockroachView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLCockroachView.xib; sourceTree = "<group>"; };
+		5BB03C701D5DA8AC001203F8 /* QJLStage24View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage24View.h; sourceTree = "<group>"; };
+		5BB03C711D5DA8AC001203F8 /* QJLStage24View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage24View.m; sourceTree = "<group>"; };
+		5BB03C721D5DA8AC001203F8 /* QJLStage24ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStage24ViewController.h; sourceTree = "<group>"; };
+		5BB03C731D5DA8AC001203F8 /* QJLStage24ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStage24ViewController.m; sourceTree = "<group>"; };
+		5BE2EE891D371B7200651F63 /* QJLPrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLPrepareViewController.h; sourceTree = "<group>"; };
+		5BE2EE8A1D371B7200651F63 /* QJLPrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLPrepareViewController.m; sourceTree = "<group>"; };
+		5BE2EE8C1D371B8500651F63 /* QJLRareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLRareViewController.h; sourceTree = "<group>"; };
+		5BE2EE8D1D371B8500651F63 /* QJLRareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLRareViewController.m; sourceTree = "<group>"; };
+		5BE2EE921D371F4E00651F63 /* QJLPrepareScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLPrepareScoreView.h; sourceTree = "<group>"; };
+		5BE2EE931D371F4E00651F63 /* QJLPrepareScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLPrepareScoreView.m; sourceTree = "<group>"; };
+		5BE2EE991D3721C300651F63 /* QJLBaseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBaseGameViewController.h; sourceTree = "<group>"; };
+		5BE2EE9A1D3721C300651F63 /* QJLBaseGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBaseGameViewController.m; sourceTree = "<group>"; };
+		5BE2EE9C1D3721DB00651F63 /* QJLRYBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLRYBViewController.h; sourceTree = "<group>"; };
+		5BE2EE9D1D3721DB00651F63 /* QJLRYBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLRYBViewController.m; sourceTree = "<group>"; };
+		5BE2EEA81D37230F00651F63 /* QJLStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLStrokeLabel.h; sourceTree = "<group>"; };
+		5BE2EEA91D37230F00651F63 /* QJLStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLStrokeLabel.m; sourceTree = "<group>"; };
+		5BE2EEAB1D37236200651F63 /* QJLCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLCountDownLabel.h; sourceTree = "<group>"; };
+		5BE2EEAC1D37236200651F63 /* QJLCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLCountDownLabel.m; sourceTree = "<group>"; };
+		5BE2EEB21D3723B500651F63 /* QJLScoreboardCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLScoreboardCountView.h; sourceTree = "<group>"; };
+		5BE2EEB31D3723B500651F63 /* QJLScoreboardCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLScoreboardCountView.m; sourceTree = "<group>"; };
+		5BE2EEB41D3723B500651F63 /* QJLScoreboardCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLScoreboardCountView.xib; sourceTree = "<group>"; };
+		5BE2EEB71D37286D00651F63 /* QJLGameControllerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLGameControllerViewManager.h; sourceTree = "<group>"; };
+		5BE2EEB81D37286D00651F63 /* QJLGameControllerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLGameControllerViewManager.m; sourceTree = "<group>"; };
+		5BE2EEBA1D372BC900651F63 /* QJLReadyGoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLReadyGoView.h; sourceTree = "<group>"; };
+		5BE2EEBB1D372BC900651F63 /* QJLReadyGoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLReadyGoView.m; sourceTree = "<group>"; };
+		5BE2EEC01D372C1500651F63 /* QJLPauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLPauseViewController.h; sourceTree = "<group>"; };
+		5BE2EEC11D372C1500651F63 /* QJLPauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLPauseViewController.m; sourceTree = "<group>"; };
+		5BE2EEC21D372C1500651F63 /* QJLPauseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLPauseViewController.xib; sourceTree = "<group>"; };
+		5BE2EEC81D372D5A00651F63 /* QJLFailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFailView.h; sourceTree = "<group>"; };
+		5BE2EEC91D372D5A00651F63 /* QJLFailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFailView.m; sourceTree = "<group>"; };
+		5BE2EECA1D372D5A00651F63 /* QJLFailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLFailView.xib; sourceTree = "<group>"; };
+		5BE2EED01D372DC500651F63 /* QJLFailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLFailViewController.h; sourceTree = "<group>"; };
+		5BE2EED11D372DC500651F63 /* QJLFailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLFailViewController.m; sourceTree = "<group>"; };
+		5BE2EED21D372DC500651F63 /* QJLFailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLFailViewController.xib; sourceTree = "<group>"; };
+		5BE2EEF51D37309D00651F63 /* QJLTimeCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLTimeCountView.h; sourceTree = "<group>"; };
+		5BE2EEF61D37309D00651F63 /* QJLTimeCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLTimeCountView.m; sourceTree = "<group>"; };
+		5BE2EEF71D37309D00651F63 /* QJLTimeCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QJLTimeCountView.xib; sourceTree = "<group>"; };
+		5BE2EEFA1D3756ED00651F63 /* UIColor+QJLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QJLColor.h"; sourceTree = "<group>"; };
+		5BE2EEFB1D3756ED00651F63 /* UIColor+QJLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QJLColor.m"; sourceTree = "<group>"; };
+		5BE2EEFD1D37584B00651F63 /* QJLResultScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLResultScoreView.h; sourceTree = "<group>"; };
+		5BE2EEFE1D37584B00651F63 /* QJLResultScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLResultScoreView.m; sourceTree = "<group>"; };
+		5BE2EF001D37586500651F63 /* QJLHighScroeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLHighScroeTextView.h; sourceTree = "<group>"; };
+		5BE2EF011D37586500651F63 /* QJLHighScroeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLHighScroeTextView.m; sourceTree = "<group>"; };
+		5BE2EF031D377DED00651F63 /* QJLTwoButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLTwoButtonViewController.h; sourceTree = "<group>"; };
+		5BE2EF041D377DED00651F63 /* QJLTwoButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLTwoButtonViewController.m; sourceTree = "<group>"; };
+		5BE2EF061D377E3900651F63 /* QJLBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLBackgroundViewController.h; sourceTree = "<group>"; };
+		5BE2EF071D377E3900651F63 /* QJLBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLBackgroundViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B14BB891D365AE70024F1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBA21D365AE70024F1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBAD1D365AE70024F1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B14BB831D365AE70024F1B3 = {
+			isa = PBXGroup;
+			children = (
+				5B14BB8E1D365AE70024F1B3 /* Game */,
+				5B14BBA81D365AE70024F1B3 /* GameTests */,
+				5B14BBB31D365AE70024F1B3 /* GameUITests */,
+				5B14BB8D1D365AE70024F1B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B14BB8D1D365AE70024F1B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BB8C1D365AE70024F1B3 /* 最牛游戏.app */,
+				5B14BBA51D365AE70024F1B3 /* GameTests.xctest */,
+				5B14BBB01D365AE70024F1B3 /* GameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B14BB8E1D365AE70024F1B3 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBC21D365B9B0024F1B3 /* Classes */,
+				5B14BB921D365AE70024F1B3 /* AppDelegate.h */,
+				5B14BB931D365AE70024F1B3 /* AppDelegate.m */,
+				5B14BB951D365AE70024F1B3 /* ViewController.h */,
+				5B14BB961D365AE70024F1B3 /* ViewController.m */,
+				5B14BB981D365AE70024F1B3 /* Main.storyboard */,
+				5B14BB9B1D365AE70024F1B3 /* Assets.xcassets */,
+				5B14BB9D1D365AE70024F1B3 /* LaunchScreen.storyboard */,
+				5B14BBA01D365AE70024F1B3 /* Info.plist */,
+				5B14BB8F1D365AE70024F1B3 /* Supporting Files */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		5B14BB8F1D365AE70024F1B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBF81D365E5E0024F1B3 /* PrefixHeader.pch */,
+				5B14BB901D365AE70024F1B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B14BBA81D365AE70024F1B3 /* GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBA91D365AE70024F1B3 /* GameTests.m */,
+				5B14BBAB1D365AE70024F1B3 /* Info.plist */,
+			);
+			path = GameTests;
+			sourceTree = "<group>";
+		};
+		5B14BBB31D365AE70024F1B3 /* GameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBB41D365AE70024F1B3 /* GameUITests.m */,
+				5B14BBB61D365AE70024F1B3 /* Info.plist */,
+			);
+			path = GameUITests;
+			sourceTree = "<group>";
+		};
+		5B14BBC21D365B9B0024F1B3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2EE951D37217800651F63 /* Stage */,
+				5B14BC141D36670E0024F1B3 /* View */,
+				5B14BBF41D365DDA0024F1B3 /* Model */,
+				5B14BBE51D365D250024F1B3 /* Common */,
+				5B14BBDA1D365C080024F1B3 /* Controller */,
+				5B14BBC31D365B9B0024F1B3 /* Resources */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B14BBC31D365B9B0024F1B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBC41D365B9B0024F1B3 /* Font */,
+				5B14BBC71D365B9B0024F1B3 /* Images */,
+				5B14BBCB1D365B9B0024F1B3 /* Plist */,
+				5B14BBCE1D365B9B0024F1B3 /* Sound */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B14BBC41D365B9B0024F1B3 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBC51D365B9B0024F1B3 /* arial.ttf */,
+				5B14BBC61D365B9B0024F1B3 /* Transformers Movie 变形金刚字体.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		5B14BBC71D365B9B0024F1B3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBC81D365B9B0024F1B3 /* Default-568h@2x.png */,
+				5B14BBC91D365B9B0024F1B3 /* Default.png */,
+				5B14BBCA1D365B9B0024F1B3 /* Default@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5B14BBCB1D365B9B0024F1B3 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBCC1D365B9B0024F1B3 /* home.plist */,
+				5B14BBCD1D365B9B0024F1B3 /* stages.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		5B14BBCE1D365B9B0024F1B3 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBCF1D365B9B0024F1B3 /* bg_music.mp3 */,
+				5B14BBD01D365B9B0024F1B3 /* sound.bundle */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		5B14BBDA1D365C080024F1B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBDB1D365C080024F1B3 /* MainViewController */,
+				5B14BBDC1D365C080024F1B3 /* RootViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B14BBDB1D365C080024F1B3 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC0B1D3665F40024F1B3 /* QJLSettingViewController.h */,
+				5B14BC0C1D3665F40024F1B3 /* QJLSettingViewController.m */,
+				5B14BC0E1D3666100024F1B3 /* QJLSelectStageViewController.h */,
+				5B14BC0F1D3666100024F1B3 /* QJLSelectStageViewController.m */,
+				5BE2EE891D371B7200651F63 /* QJLPrepareViewController.h */,
+				5BE2EE8A1D371B7200651F63 /* QJLPrepareViewController.m */,
+				5BE2EE8C1D371B8500651F63 /* QJLRareViewController.h */,
+				5BE2EE8D1D371B8500651F63 /* QJLRareViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		5B14BBDC1D365C080024F1B3 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBDD1D365C350024F1B3 /* QJLRootViewController.h */,
+				5B14BBDE1D365C350024F1B3 /* QJLRootViewController.m */,
+				5B14BBE01D365C500024F1B3 /* QJLLaunchAnimationViewController.h */,
+				5B14BBE11D365C500024F1B3 /* QJLLaunchAnimationViewController.m */,
+				5B14BBE21D365C500024F1B3 /* QJLLaunchAnimationViewController.xib */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		5B14BBE51D365D250024F1B3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC261D366AAD0024F1B3 /* BaseView */,
+				5B14BC1F1D366A220024F1B3 /* Categories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B14BBF41D365DDA0024F1B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BBF51D365DEC0024F1B3 /* QJLStageInfo.h */,
+				5B14BBF61D365DEC0024F1B3 /* QJLStageInfo.m */,
+				5B14BC111D3666690024F1B3 /* QJLStage.h */,
+				5B14BC121D3666690024F1B3 /* QJLStage.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B14BC141D36670E0024F1B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC151D36670E0024F1B3 /* PrepareView */,
+				5B14BC161D36670E0024F1B3 /* SelectStageView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B14BC151D36670E0024F1B3 /* PrepareView */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC1D1D36675F0024F1B3 /* QJLStageView.xib */,
+				5B14BC171D3667330024F1B3 /* QJLStageListView.h */,
+				5B14BC181D3667330024F1B3 /* QJLStageListView.m */,
+				5B14BC1A1D3667460024F1B3 /* QJLStageView.h */,
+				5B14BC1B1D3667460024F1B3 /* QJLStageView.m */,
+			);
+			path = PrepareView;
+			sourceTree = "<group>";
+		};
+		5B14BC161D36670E0024F1B3 /* SelectStageView */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2EE921D371F4E00651F63 /* QJLPrepareScoreView.h */,
+				5BE2EE931D371F4E00651F63 /* QJLPrepareScoreView.m */,
+			);
+			path = SelectStageView;
+			sourceTree = "<group>";
+		};
+		5B14BC1F1D366A220024F1B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC201D366A220024F1B3 /* UIApplication+QJLLoad.h */,
+				5B14BC211D366A220024F1B3 /* UIApplication+QJLLoad.m */,
+				5B14BC221D366A220024F1B3 /* UIView+QJLImage.h */,
+				5B14BC231D366A220024F1B3 /* UIView+QJLImage.m */,
+				5BE2EEFA1D3756ED00651F63 /* UIColor+QJLColor.h */,
+				5BE2EEFB1D3756ED00651F63 /* UIColor+QJLColor.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5B14BC261D366AAD0024F1B3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2EEC81D372D5A00651F63 /* QJLFailView.h */,
+				5BE2EEC91D372D5A00651F63 /* QJLFailView.m */,
+				5BE2EECA1D372D5A00651F63 /* QJLFailView.xib */,
+				5BE2EEAE1D37238700651F63 /* ScoreCountView */,
+				5B14BC271D366AAD0024F1B3 /* BaseViewController */,
+				5B14BC2F1D366AAD0024F1B3 /* CommonTools */,
+				5B14BC3B1D366ADF0024F1B3 /* QJLFullBackgroundView.h */,
+				5B14BC3C1D366ADF0024F1B3 /* QJLFullBackgroundView.m */,
+				5BE2EEA81D37230F00651F63 /* QJLStrokeLabel.h */,
+				5BE2EEA91D37230F00651F63 /* QJLStrokeLabel.m */,
+				5BE2EEAB1D37236200651F63 /* QJLCountDownLabel.h */,
+				5BE2EEAC1D37236200651F63 /* QJLCountDownLabel.m */,
+				5BE2EEBA1D372BC900651F63 /* QJLReadyGoView.h */,
+				5BE2EEBB1D372BC900651F63 /* QJLReadyGoView.m */,
+				5BE2EEFD1D37584B00651F63 /* QJLResultScoreView.h */,
+				5BE2EEFE1D37584B00651F63 /* QJLResultScoreView.m */,
+				5BE2EF001D37586500651F63 /* QJLHighScroeTextView.h */,
+				5BE2EF011D37586500651F63 /* QJLHighScroeTextView.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		5B14BC271D366AAD0024F1B3 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2EED01D372DC500651F63 /* QJLFailViewController.h */,
+				5BE2EED11D372DC500651F63 /* QJLFailViewController.m */,
+				5BE2EED21D372DC500651F63 /* QJLFailViewController.xib */,
+				5BE2EEC01D372C1500651F63 /* QJLPauseViewController.h */,
+				5BE2EEC11D372C1500651F63 /* QJLPauseViewController.m */,
+				5BE2EEC21D372C1500651F63 /* QJLPauseViewController.xib */,
+				5B14BC281D366AAD0024F1B3 /* QJLBackViewController.h */,
+				5B14BC291D366AAD0024F1B3 /* QJLBackViewController.m */,
+				5B14BC2A1D366AAD0024F1B3 /* QJLBaseNavigationController.h */,
+				5B14BC2B1D366AAD0024F1B3 /* QJLBaseNavigationController.m */,
+				5B14BC2C1D366AAD0024F1B3 /* QJLResultViewController.h */,
+				5B14BC2D1D366AAD0024F1B3 /* QJLResultViewController.m */,
+				5B14BC2E1D366AAD0024F1B3 /* QJLResultViewController.xib */,
+				5BE2EE991D3721C300651F63 /* QJLBaseGameViewController.h */,
+				5BE2EE9A1D3721C300651F63 /* QJLBaseGameViewController.m */,
+				5BE2EE9C1D3721DB00651F63 /* QJLRYBViewController.h */,
+				5BE2EE9D1D3721DB00651F63 /* QJLRYBViewController.m */,
+				5BE2EF031D377DED00651F63 /* QJLTwoButtonViewController.h */,
+				5BE2EF041D377DED00651F63 /* QJLTwoButtonViewController.m */,
+				5BE2EF061D377E3900651F63 /* QJLBackgroundViewController.h */,
+				5BE2EF071D377E3900651F63 /* QJLBackgroundViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		5B14BC2F1D366AAD0024F1B3 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				5B14BC301D366AAD0024F1B3 /* QJLSoundToolManager.h */,
+				5B14BC311D366AAD0024F1B3 /* QJLSoundToolManager.m */,
+				5B14BC321D366AAD0024F1B3 /* QJLStageInfoManager.h */,
+				5B14BC331D366AAD0024F1B3 /* QJLStageInfoManager.m */,
+				5B14BC341D366AAD0024F1B3 /* SoundNamesHeader.h */,
+				5BE2EEB71D37286D00651F63 /* QJLGameControllerViewManager.h */,
+				5BE2EEB81D37286D00651F63 /* QJLGameControllerViewManager.m */,
+			);
+			path = CommonTools;
+			sourceTree = "<group>";
+		};
+		5BB03BB11D5DA8AC001203F8 /* Stage01 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BB21D5DA8AC001203F8 /* Controller */,
+				5BB03BB51D5DA8AC001203F8 /* View */,
+			);
+			path = Stage01;
+			sourceTree = "<group>";
+		};
+		5BB03BB21D5DA8AC001203F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BB31D5DA8AC001203F8 /* QJLStage01ViewController.h */,
+				5BB03BB41D5DA8AC001203F8 /* QJLStage01ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BB03BB51D5DA8AC001203F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BB61D5DA8AC001203F8 /* QJLFeatherView.h */,
+				5BB03BB71D5DA8AC001203F8 /* QJLFeatherView.m */,
+				5BB03BB81D5DA8AC001203F8 /* QJLFootView.h */,
+				5BB03BB91D5DA8AC001203F8 /* QJLFootView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BB03BBA1D5DA8AC001203F8 /* Stage02 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BBB1D5DA8AC001203F8 /* Controller */,
+				5BB03BBE1D5DA8AC001203F8 /* View */,
+			);
+			path = Stage02;
+			sourceTree = "<group>";
+		};
+		5BB03BBB1D5DA8AC001203F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BBC1D5DA8AC001203F8 /* QJLStage02ViewController.h */,
+				5BB03BBD1D5DA8AC001203F8 /* QJLStage02ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BB03BBE1D5DA8AC001203F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BBF1D5DA8AC001203F8 /* QJLCountTimeView.h */,
+				5BB03BC01D5DA8AC001203F8 /* QJLCountTimeView.m */,
+				5BB03BC11D5DA8AC001203F8 /* QJLCountTimeView.xib */,
+				5BB03BC21D5DA8AC001203F8 /* QJLGuessFingerView.h */,
+				5BB03BC31D5DA8AC001203F8 /* QJLGuessFingerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BB03BC41D5DA8AC001203F8 /* Stage03 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BC51D5DA8AC001203F8 /* Controller */,
+				5BB03BC81D5DA8AC001203F8 /* View */,
+			);
+			path = Stage03;
+			sourceTree = "<group>";
+		};
+		5BB03BC51D5DA8AC001203F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BC61D5DA8AC001203F8 /* QJLStage03ViewController.h */,
+				5BB03BC71D5DA8AC001203F8 /* QJLStage03ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BB03BC81D5DA8AC001203F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BC91D5DA8AC001203F8 /* QJLStage03HeaderView.h */,
+				5BB03BCA1D5DA8AC001203F8 /* QJLStage03HeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BB03BCB1D5DA8AC001203F8 /* Stage04 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BCC1D5DA8AC001203F8 /* QJLStage04View.h */,
+				5BB03BCD1D5DA8AC001203F8 /* QJLStage04View.m */,
+				5BB03BCE1D5DA8AC001203F8 /* QJLStage04ViewController.h */,
+				5BB03BCF1D5DA8AC001203F8 /* QJLStage04ViewController.m */,
+				5BB03BD01D5DA8AC001203F8 /* QJLStateView.h */,
+				5BB03BD11D5DA8AC001203F8 /* QJLStateView.m */,
+				5BB03BD21D5DA8AC001203F8 /* QJLStateView.xib */,
+			);
+			path = Stage04;
+			sourceTree = "<group>";
+		};
+		5BB03BD31D5DA8AC001203F8 /* Stage05 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BD41D5DA8AC001203F8 /* QJLColumnIceView.h */,
+				5BB03BD51D5DA8AC001203F8 /* QJLColumnIceView.m */,
+				5BB03BD61D5DA8AC001203F8 /* QJLColumnIceView.xib */,
+				5BB03BD71D5DA8AC001203F8 /* QJLIceView.h */,
+				5BB03BD81D5DA8AC001203F8 /* QJLIceView.m */,
+				5BB03BD91D5DA8AC001203F8 /* QJLStage05ViewController.h */,
+				5BB03BDA1D5DA8AC001203F8 /* QJLStage05ViewController.m */,
+			);
+			path = Stage05;
+			sourceTree = "<group>";
+		};
+		5BB03BDB1D5DA8AC001203F8 /* Stage06 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BDC1D5DA8AC001203F8 /* QJLStage06PeolpeView.h */,
+				5BB03BDD1D5DA8AC001203F8 /* QJLStage06PeolpeView.m */,
+				5BB03BDE1D5DA8AC001203F8 /* QJLStage06PeolpeView.xib */,
+				5BB03BDF1D5DA8AC001203F8 /* QJLStage06ViewController.h */,
+				5BB03BE01D5DA8AC001203F8 /* QJLStage06ViewController.m */,
+			);
+			path = Stage06;
+			sourceTree = "<group>";
+		};
+		5BB03BE11D5DA8AC001203F8 /* Stage07 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BE21D5DA8AC001203F8 /* QJLBreakGlassView.h */,
+				5BB03BE31D5DA8AC001203F8 /* QJLBreakGlassView.m */,
+				5BB03BE41D5DA8AC001203F8 /* QJLBreakGlassView.xib */,
+				5BB03BE51D5DA8AC001203F8 /* QJLStage07ErrorView.h */,
+				5BB03BE61D5DA8AC001203F8 /* QJLStage07ErrorView.m */,
+				5BB03BE71D5DA8AC001203F8 /* QJLStage07ErrorView.xib */,
+				5BB03BE81D5DA8AC001203F8 /* QJLStage07View.h */,
+				5BB03BE91D5DA8AC001203F8 /* QJLStage07View.m */,
+				5BB03BEA1D5DA8AC001203F8 /* QJLStage07ViewController.h */,
+				5BB03BEB1D5DA8AC001203F8 /* QJLStage07ViewController.m */,
+			);
+			path = Stage07;
+			sourceTree = "<group>";
+		};
+		5BB03BEC1D5DA8AC001203F8 /* Stage08 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BED1D5DA8AC001203F8 /* QJLStage08PeopleView.h */,
+				5BB03BEE1D5DA8AC001203F8 /* QJLStage08PeopleView.m */,
+				5BB03BEF1D5DA8AC001203F8 /* QJLStage08PeopleView.xib */,
+				5BB03BF01D5DA8AC001203F8 /* QJLStage08ViewController.h */,
+				5BB03BF11D5DA8AC001203F8 /* QJLStage08ViewController.m */,
+			);
+			path = Stage08;
+			sourceTree = "<group>";
+		};
+		5BB03BF21D5DA8AC001203F8 /* Stage09 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BF31D5DA8AC001203F8 /* QJLBobmView.h */,
+				5BB03BF41D5DA8AC001203F8 /* QJLBobmView.m */,
+				5BB03BF51D5DA8AC001203F8 /* QJLBobmView.xib */,
+				5BB03BF61D5DA8AC001203F8 /* QJLStage09BobmView.h */,
+				5BB03BF71D5DA8AC001203F8 /* QJLStage09BobmView.m */,
+				5BB03BF81D5DA8AC001203F8 /* QJLStage09ResultView.h */,
+				5BB03BF91D5DA8AC001203F8 /* QJLStage09ResultView.m */,
+				5BB03BFA1D5DA8AC001203F8 /* QJLStage09ResultView.xib */,
+				5BB03BFB1D5DA8AC001203F8 /* QJLStage09ViewController.h */,
+				5BB03BFC1D5DA8AC001203F8 /* QJLStage09ViewController.m */,
+			);
+			path = Stage09;
+			sourceTree = "<group>";
+		};
+		5BB03BFD1D5DA8AC001203F8 /* Stage10 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BFE1D5DA8AC001203F8 /* QJLStage10BottomNumView.h */,
+				5BB03BFF1D5DA8AC001203F8 /* QJLStage10BottomNumView.m */,
+				5BB03C001D5DA8AC001203F8 /* QJLStage10View.h */,
+				5BB03C011D5DA8AC001203F8 /* QJLStage10View.m */,
+				5BB03C021D5DA8AC001203F8 /* QJLStage10ViewController.h */,
+				5BB03C031D5DA8AC001203F8 /* QJLStage10ViewController.m */,
+			);
+			path = Stage10;
+			sourceTree = "<group>";
+		};
+		5BB03C041D5DA8AC001203F8 /* Stage11 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C051D5DA8AC001203F8 /* QJLStage11BottomNumView.h */,
+				5BB03C061D5DA8AC001203F8 /* QJLStage11BottomNumView.m */,
+				5BB03C071D5DA8AC001203F8 /* QJLStage11View.h */,
+				5BB03C081D5DA8AC001203F8 /* QJLStage11View.m */,
+				5BB03C091D5DA8AC001203F8 /* QJLStage11ViewController.h */,
+				5BB03C0A1D5DA8AC001203F8 /* QJLStage11ViewController.m */,
+				5BB03C0B1D5DA8AC001203F8 /* QJLSubjectView.h */,
+				5BB03C0C1D5DA8AC001203F8 /* QJLSubjectView.m */,
+			);
+			path = Stage11;
+			sourceTree = "<group>";
+		};
+		5BB03C0D1D5DA8AC001203F8 /* Stage12 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C0E1D5DA8AC001203F8 /* QJLDropEggView.h */,
+				5BB03C0F1D5DA8AC001203F8 /* QJLDropEggView.m */,
+				5BB03C101D5DA8AC001203F8 /* QJLStage12BottomView.h */,
+				5BB03C111D5DA8AC001203F8 /* QJLStage12BottomView.m */,
+				5BB03C121D5DA8AC001203F8 /* QJLStage12EggView.h */,
+				5BB03C131D5DA8AC001203F8 /* QJLStage12EggView.m */,
+				5BB03C141D5DA8AC001203F8 /* QJLStage12ViewController.h */,
+				5BB03C151D5DA8AC001203F8 /* QJLStage12ViewController.m */,
+				5BB03C161D5DA8AC001203F8 /* QJLState12ResultView.h */,
+				5BB03C171D5DA8AC001203F8 /* QJLState12ResultView.m */,
+			);
+			path = Stage12;
+			sourceTree = "<group>";
+		};
+		5BB03C181D5DA8AC001203F8 /* Stage13 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C191D5DA8AC001203F8 /* QJLStage13BottomView.h */,
+				5BB03C1A1D5DA8AC001203F8 /* QJLStage13BottomView.m */,
+				5BB03C1B1D5DA8AC001203F8 /* QJLStage13GuessView.h */,
+				5BB03C1C1D5DA8AC001203F8 /* QJLStage13GuessView.m */,
+				5BB03C1D1D5DA8AC001203F8 /* QJLStage13ViewController.h */,
+				5BB03C1E1D5DA8AC001203F8 /* QJLStage13ViewController.m */,
+			);
+			path = Stage13;
+			sourceTree = "<group>";
+		};
+		5BB03C1F1D5DA8AC001203F8 /* Stage14 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C201D5DA8AC001203F8 /* QJLStage14DogView.h */,
+				5BB03C211D5DA8AC001203F8 /* QJLStage14DogView.m */,
+				5BB03C221D5DA8AC001203F8 /* QJLStage14DogView.xib */,
+				5BB03C231D5DA8AC001203F8 /* QJLStage14LineView.h */,
+				5BB03C241D5DA8AC001203F8 /* QJLStage14LineView.m */,
+				5BB03C251D5DA8AC001203F8 /* QJLStage14LineView.xib */,
+				5BB03C261D5DA8AC001203F8 /* QJLStage14ViewController.h */,
+				5BB03C271D5DA8AC001203F8 /* QJLStage14ViewController.m */,
+			);
+			path = Stage14;
+			sourceTree = "<group>";
+		};
+		5BB03C281D5DA8AC001203F8 /* Stage15 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C291D5DA8AC001203F8 /* QJLStage15RowView.h */,
+				5BB03C2A1D5DA8AC001203F8 /* QJLStage15RowView.m */,
+				5BB03C2B1D5DA8AC001203F8 /* QJLStage15RowView.xib */,
+				5BB03C2C1D5DA8AC001203F8 /* QJLStage15View.h */,
+				5BB03C2D1D5DA8AC001203F8 /* QJLStage15View.m */,
+				5BB03C2E1D5DA8AC001203F8 /* QJLStage15ViewController.h */,
+				5BB03C2F1D5DA8AC001203F8 /* QJLStage15ViewController.m */,
+			);
+			path = Stage15;
+			sourceTree = "<group>";
+		};
+		5BB03C301D5DA8AC001203F8 /* Stage16 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C311D5DA8AC001203F8 /* QJLStage16PeopleView.h */,
+				5BB03C321D5DA8AC001203F8 /* QJLStage16PeopleView.m */,
+				5BB03C331D5DA8AC001203F8 /* QJLStage16PeopleView.xib */,
+				5BB03C341D5DA8AC001203F8 /* QJLStage16ViewController.h */,
+				5BB03C351D5DA8AC001203F8 /* QJLStage16ViewController.m */,
+			);
+			path = Stage16;
+			sourceTree = "<group>";
+		};
+		5BB03C361D5DA8AC001203F8 /* Stage17 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C371D5DA8AC001203F8 /* QJLNoseView.h */,
+				5BB03C381D5DA8AC001203F8 /* QJLNoseView.m */,
+				5BB03C391D5DA8AC001203F8 /* QJLNoseView.xib */,
+				5BB03C3A1D5DA8AC001203F8 /* QJLPowerView.h */,
+				5BB03C3B1D5DA8AC001203F8 /* QJLPowerView.m */,
+				5BB03C3C1D5DA8AC001203F8 /* QJLPowerView.xib */,
+				5BB03C3D1D5DA8AC001203F8 /* QJLStage17ViewController.h */,
+				5BB03C3E1D5DA8AC001203F8 /* QJLStage17ViewController.m */,
+			);
+			path = Stage17;
+			sourceTree = "<group>";
+		};
+		5BB03C3F1D5DA8AC001203F8 /* Stage18 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C401D5DA8AC001203F8 /* QJLPokerView.h */,
+				5BB03C411D5DA8AC001203F8 /* QJLPokerView.m */,
+				5BB03C421D5DA8AC001203F8 /* QJLPokerView.xib */,
+				5BB03C431D5DA8AC001203F8 /* QJLStage18PokerView.h */,
+				5BB03C441D5DA8AC001203F8 /* QJLStage18PokerView.m */,
+				5BB03C451D5DA8AC001203F8 /* QJLStage18PokerView.xib */,
+				5BB03C461D5DA8AC001203F8 /* QJLStage18ViewController.h */,
+				5BB03C471D5DA8AC001203F8 /* QJLStage18ViewController.m */,
+			);
+			path = Stage18;
+			sourceTree = "<group>";
+		};
+		5BB03C481D5DA8AC001203F8 /* Stage19 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C491D5DA8AC001203F8 /* QJLFishView.h */,
+				5BB03C4A1D5DA8AC001203F8 /* QJLFishView.m */,
+				5BB03C4B1D5DA8AC001203F8 /* QJLFishView.xib */,
+				5BB03C4C1D5DA8AC001203F8 /* QJLStage19FishView.h */,
+				5BB03C4D1D5DA8AC001203F8 /* QJLStage19FishView.m */,
+				5BB03C4E1D5DA8AC001203F8 /* QJLStage19ViewController.h */,
+				5BB03C4F1D5DA8AC001203F8 /* QJLStage19ViewController.m */,
+			);
+			path = Stage19;
+			sourceTree = "<group>";
+		};
+		5BB03C501D5DA8AC001203F8 /* Stage20 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C511D5DA8AC001203F8 /* QJLDiceView.h */,
+				5BB03C521D5DA8AC001203F8 /* QJLDiceView.m */,
+				5BB03C531D5DA8AC001203F8 /* QJLDiceView.xib */,
+				5BB03C541D5DA8AC001203F8 /* QJLStage20DiceView.h */,
+				5BB03C551D5DA8AC001203F8 /* QJLStage20DiceView.m */,
+				5BB03C561D5DA8AC001203F8 /* QJLStage20ViewController.h */,
+				5BB03C571D5DA8AC001203F8 /* QJLStage20ViewController.m */,
+			);
+			path = Stage20;
+			sourceTree = "<group>";
+		};
+		5BB03C581D5DA8AC001203F8 /* Stage21 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C591D5DA8AC001203F8 /* QJLFractionView.h */,
+				5BB03C5A1D5DA8AC001203F8 /* QJLFractionView.m */,
+				5BB03C5B1D5DA8AC001203F8 /* QJLStage21FractionView.h */,
+				5BB03C5C1D5DA8AC001203F8 /* QJLStage21FractionView.m */,
+				5BB03C5D1D5DA8AC001203F8 /* QJLStage21ViewController.h */,
+				5BB03C5E1D5DA8AC001203F8 /* QJLStage21ViewController.m */,
+			);
+			path = Stage21;
+			sourceTree = "<group>";
+		};
+		5BB03C5F1D5DA8AC001203F8 /* Stage22 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C601D5DA8AC001203F8 /* QJLStage22PeopleView.h */,
+				5BB03C611D5DA8AC001203F8 /* QJLStage22PeopleView.m */,
+				5BB03C621D5DA8AC001203F8 /* QJLStage22ViewController.h */,
+				5BB03C631D5DA8AC001203F8 /* QJLStage22ViewController.m */,
+			);
+			path = Stage22;
+			sourceTree = "<group>";
+		};
+		5BB03C641D5DA8AC001203F8 /* Stage23 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C651D5DA8AC001203F8 /* QJLBusView.h */,
+				5BB03C661D5DA8AC001203F8 /* QJLBusView.m */,
+				5BB03C671D5DA8AC001203F8 /* QJLBusView.xib */,
+				5BB03C681D5DA8AC001203F8 /* QJLStage23PeopleView.h */,
+				5BB03C691D5DA8AC001203F8 /* QJLStage23PeopleView.m */,
+				5BB03C6A1D5DA8AC001203F8 /* QJLStage23ViewController.h */,
+				5BB03C6B1D5DA8AC001203F8 /* QJLStage23ViewController.m */,
+			);
+			path = Stage23;
+			sourceTree = "<group>";
+		};
+		5BB03C6C1D5DA8AC001203F8 /* Stage24 */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03C6D1D5DA8AC001203F8 /* QJLCockroachView.h */,
+				5BB03C6E1D5DA8AC001203F8 /* QJLCockroachView.m */,
+				5BB03C6F1D5DA8AC001203F8 /* QJLCockroachView.xib */,
+				5BB03C701D5DA8AC001203F8 /* QJLStage24View.h */,
+				5BB03C711D5DA8AC001203F8 /* QJLStage24View.m */,
+				5BB03C721D5DA8AC001203F8 /* QJLStage24ViewController.h */,
+				5BB03C731D5DA8AC001203F8 /* QJLStage24ViewController.m */,
+			);
+			path = Stage24;
+			sourceTree = "<group>";
+		};
+		5BE2EE951D37217800651F63 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				5BB03BB11D5DA8AC001203F8 /* Stage01 */,
+				5BB03BBA1D5DA8AC001203F8 /* Stage02 */,
+				5BB03BC41D5DA8AC001203F8 /* Stage03 */,
+				5BB03BCB1D5DA8AC001203F8 /* Stage04 */,
+				5BB03BD31D5DA8AC001203F8 /* Stage05 */,
+				5BB03BDB1D5DA8AC001203F8 /* Stage06 */,
+				5BB03BE11D5DA8AC001203F8 /* Stage07 */,
+				5BB03BEC1D5DA8AC001203F8 /* Stage08 */,
+				5BB03BF21D5DA8AC001203F8 /* Stage09 */,
+				5BB03BFD1D5DA8AC001203F8 /* Stage10 */,
+				5BB03C041D5DA8AC001203F8 /* Stage11 */,
+				5BB03C0D1D5DA8AC001203F8 /* Stage12 */,
+				5BB03C181D5DA8AC001203F8 /* Stage13 */,
+				5BB03C1F1D5DA8AC001203F8 /* Stage14 */,
+				5BB03C281D5DA8AC001203F8 /* Stage15 */,
+				5BB03C301D5DA8AC001203F8 /* Stage16 */,
+				5BB03C361D5DA8AC001203F8 /* Stage17 */,
+				5BB03C3F1D5DA8AC001203F8 /* Stage18 */,
+				5BB03C481D5DA8AC001203F8 /* Stage19 */,
+				5BB03C501D5DA8AC001203F8 /* Stage20 */,
+				5BB03C581D5DA8AC001203F8 /* Stage21 */,
+				5BB03C5F1D5DA8AC001203F8 /* Stage22 */,
+				5BB03C641D5DA8AC001203F8 /* Stage23 */,
+				5BB03C6C1D5DA8AC001203F8 /* Stage24 */,
+			);
+			path = Stage;
+			sourceTree = "<group>";
+		};
+		5BE2EEAE1D37238700651F63 /* ScoreCountView */ = {
+			isa = PBXGroup;
+			children = (
+				5BE2EEF51D37309D00651F63 /* QJLTimeCountView.h */,
+				5BE2EEF61D37309D00651F63 /* QJLTimeCountView.m */,
+				5BE2EEF71D37309D00651F63 /* QJLTimeCountView.xib */,
+				5BE2EEB21D3723B500651F63 /* QJLScoreboardCountView.h */,
+				5BE2EEB31D3723B500651F63 /* QJLScoreboardCountView.m */,
+				5BE2EEB41D3723B500651F63 /* QJLScoreboardCountView.xib */,
+			);
+			path = ScoreCountView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B14BB8B1D365AE70024F1B3 /* Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B14BBB91D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "Game" */;
+			buildPhases = (
+				5B14BB881D365AE70024F1B3 /* Sources */,
+				5B14BB891D365AE70024F1B3 /* Frameworks */,
+				5B14BB8A1D365AE70024F1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Game;
+			productName = Game;
+			productReference = 5B14BB8C1D365AE70024F1B3 /* 最牛游戏.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B14BBA41D365AE70024F1B3 /* GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B14BBBC1D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "GameTests" */;
+			buildPhases = (
+				5B14BBA11D365AE70024F1B3 /* Sources */,
+				5B14BBA21D365AE70024F1B3 /* Frameworks */,
+				5B14BBA31D365AE70024F1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B14BBA71D365AE70024F1B3 /* PBXTargetDependency */,
+			);
+			name = GameTests;
+			productName = GameTests;
+			productReference = 5B14BBA51D365AE70024F1B3 /* GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B14BBAF1D365AE70024F1B3 /* GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B14BBBF1D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "GameUITests" */;
+			buildPhases = (
+				5B14BBAC1D365AE70024F1B3 /* Sources */,
+				5B14BBAD1D365AE70024F1B3 /* Frameworks */,
+				5B14BBAE1D365AE70024F1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B14BBB21D365AE70024F1B3 /* PBXTargetDependency */,
+			);
+			name = GameUITests;
+			productName = GameUITests;
+			productReference = 5B14BBB01D365AE70024F1B3 /* GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B14BB841D365AE70024F1B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B14BB8B1D365AE70024F1B3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 33BH72JUXL;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+					5B14BBA41D365AE70024F1B3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B14BB8B1D365AE70024F1B3;
+					};
+					5B14BBAF1D365AE70024F1B3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B14BB8B1D365AE70024F1B3;
+					};
+				};
+			};
+			buildConfigurationList = 5B14BB871D365AE70024F1B3 /* Build configuration list for PBXProject "Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B14BB831D365AE70024F1B3;
+			productRefGroup = 5B14BB8D1D365AE70024F1B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B14BB8B1D365AE70024F1B3 /* Game */,
+				5B14BBA41D365AE70024F1B3 /* GameTests */,
+				5B14BBAF1D365AE70024F1B3 /* GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B14BB8A1D365AE70024F1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE2EECC1D372D5A00651F63 /* QJLFailView.xib in Resources */,
+				5BE2EEF91D37309D00651F63 /* QJLTimeCountView.xib in Resources */,
+				5BE2EED41D372DC500651F63 /* QJLFailViewController.xib in Resources */,
+				5BB03CA71D5DA8AC001203F8 /* QJLStage14DogView.xib in Resources */,
+				5BB03C8B1D5DA8AC001203F8 /* QJLStage07ErrorView.xib in Resources */,
+				5BB03C791D5DA8AC001203F8 /* QJLCountTimeView.xib in Resources */,
+				5BB03C8F1D5DA8AC001203F8 /* QJLStage08PeopleView.xib in Resources */,
+				5BB03CB01D5DA8AC001203F8 /* QJLStage16PeopleView.xib in Resources */,
+				5BB03C821D5DA8AC001203F8 /* QJLColumnIceView.xib in Resources */,
+				5B14BBD51D365B9B0024F1B3 /* Default@2x.png in Resources */,
+				5B14BC381D366AAD0024F1B3 /* QJLResultViewController.xib in Resources */,
+				5B14BB9F1D365AE70024F1B3 /* LaunchScreen.storyboard in Resources */,
+				5B14BB9C1D365AE70024F1B3 /* Assets.xcassets in Resources */,
+				5BE2EEC41D372C1500651F63 /* QJLPauseViewController.xib in Resources */,
+				5B14BBD21D365B9B0024F1B3 /* Transformers Movie 变形金刚字体.ttf in Resources */,
+				5BB03C951D5DA8AC001203F8 /* QJLStage09ResultView.xib in Resources */,
+				5B14BBD11D365B9B0024F1B3 /* arial.ttf in Resources */,
+				5BB03C921D5DA8AC001203F8 /* QJLBobmView.xib in Resources */,
+				5B14BBD81D365B9B0024F1B3 /* bg_music.mp3 in Resources */,
+				5BB03CCA1D5DA8AC001203F8 /* QJLBusView.xib in Resources */,
+				5BB03CB31D5DA8AC001203F8 /* QJLNoseView.xib in Resources */,
+				5B14BBD71D365B9B0024F1B3 /* stages.plist in Resources */,
+				5B14BC1E1D36675F0024F1B3 /* QJLStageView.xib in Resources */,
+				5BB03CB51D5DA8AC001203F8 /* QJLPowerView.xib in Resources */,
+				5B14BBE41D365C500024F1B3 /* QJLLaunchAnimationViewController.xib in Resources */,
+				5BE2EEB61D3723B500651F63 /* QJLScoreboardCountView.xib in Resources */,
+				5B14BBD61D365B9B0024F1B3 /* home.plist in Resources */,
+				5BB03C861D5DA8AC001203F8 /* QJLStage06PeolpeView.xib in Resources */,
+				5B14BBD41D365B9B0024F1B3 /* Default.png in Resources */,
+				5BB03CBD1D5DA8AC001203F8 /* QJLFishView.xib in Resources */,
+				5BB03CA91D5DA8AC001203F8 /* QJLStage14LineView.xib in Resources */,
+				5BB03CAC1D5DA8AC001203F8 /* QJLStage15RowView.xib in Resources */,
+				5BB03C801D5DA8AC001203F8 /* QJLStateView.xib in Resources */,
+				5B14BBD91D365B9B0024F1B3 /* sound.bundle in Resources */,
+				5BB03CB81D5DA8AC001203F8 /* QJLPokerView.xib in Resources */,
+				5BB03CCE1D5DA8AC001203F8 /* QJLCockroachView.xib in Resources */,
+				5BB03CC11D5DA8AC001203F8 /* QJLDiceView.xib in Resources */,
+				5B14BB9A1D365AE70024F1B3 /* Main.storyboard in Resources */,
+				5BB03CBA1D5DA8AC001203F8 /* QJLStage18PokerView.xib in Resources */,
+				5B14BBD31D365B9B0024F1B3 /* Default-568h@2x.png in Resources */,
+				5BB03C891D5DA8AC001203F8 /* QJLBreakGlassView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBA31D365AE70024F1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBAE1D365AE70024F1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B14BB881D365AE70024F1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB03C831D5DA8AC001203F8 /* QJLIceView.m in Sources */,
+				5BB03C941D5DA8AC001203F8 /* QJLStage09ResultView.m in Sources */,
+				5BB03CC51D5DA8AC001203F8 /* QJLStage21FractionView.m in Sources */,
+				5B14BC131D3666690024F1B3 /* QJLStage.m in Sources */,
+				5BB03CCD1D5DA8AC001203F8 /* QJLCockroachView.m in Sources */,
+				5BB03CA61D5DA8AC001203F8 /* QJLStage14DogView.m in Sources */,
+				5BE2EEAD1D37236200651F63 /* QJLCountDownLabel.m in Sources */,
+				5B14BBDF1D365C350024F1B3 /* QJLRootViewController.m in Sources */,
+				5BB03C841D5DA8AC001203F8 /* QJLStage05ViewController.m in Sources */,
+				5BB03CBB1D5DA8AC001203F8 /* QJLStage18ViewController.m in Sources */,
+				5BE2EEAA1D37230F00651F63 /* QJLStrokeLabel.m in Sources */,
+				5B14BC241D366A220024F1B3 /* UIApplication+QJLLoad.m in Sources */,
+				5BB03CC71D5DA8AC001203F8 /* QJLStage22PeopleView.m in Sources */,
+				5BB03C8A1D5DA8AC001203F8 /* QJLStage07ErrorView.m in Sources */,
+				5BB03C9A1D5DA8AC001203F8 /* QJLStage11BottomNumView.m in Sources */,
+				5BB03CC91D5DA8AC001203F8 /* QJLBusView.m in Sources */,
+				5BB03CA51D5DA8AC001203F8 /* QJLStage13ViewController.m in Sources */,
+				5BB03C7F1D5DA8AC001203F8 /* QJLStateView.m in Sources */,
+				5BB03C911D5DA8AC001203F8 /* QJLBobmView.m in Sources */,
+				5B14BC391D366AAD0024F1B3 /* QJLSoundToolManager.m in Sources */,
+				5BE2EE9E1D3721DB00651F63 /* QJLRYBViewController.m in Sources */,
+				5BB03C851D5DA8AC001203F8 /* QJLStage06PeolpeView.m in Sources */,
+				5BB03C7C1D5DA8AC001203F8 /* QJLStage03HeaderView.m in Sources */,
+				5BB03C761D5DA8AC001203F8 /* QJLFootView.m in Sources */,
+				5B14BC351D366AAD0024F1B3 /* QJLBackViewController.m in Sources */,
+				5BB03C881D5DA8AC001203F8 /* QJLBreakGlassView.m in Sources */,
+				5B14BBF71D365DEC0024F1B3 /* QJLStageInfo.m in Sources */,
+				5BB03CB41D5DA8AC001203F8 /* QJLPowerView.m in Sources */,
+				5BB03CA01D5DA8AC001203F8 /* QJLStage12EggView.m in Sources */,
+				5BE2EF081D377E3900651F63 /* QJLBackgroundViewController.m in Sources */,
+				5BB03C9D1D5DA8AC001203F8 /* QJLSubjectView.m in Sources */,
+				5BB03CAE1D5DA8AC001203F8 /* QJLStage15ViewController.m in Sources */,
+				5B14BC101D3666100024F1B3 /* QJLSelectStageViewController.m in Sources */,
+				5BE2EE8E1D371B8500651F63 /* QJLRareViewController.m in Sources */,
+				5BE2EEFF1D37584B00651F63 /* QJLResultScoreView.m in Sources */,
+				5BB03CA11D5DA8AC001203F8 /* QJLStage12ViewController.m in Sources */,
+				5BB03CC41D5DA8AC001203F8 /* QJLFractionView.m in Sources */,
+				5BB03CC81D5DA8AC001203F8 /* QJLStage22ViewController.m in Sources */,
+				5B14BC251D366A220024F1B3 /* UIView+QJLImage.m in Sources */,
+				5BB03CB91D5DA8AC001203F8 /* QJLStage18PokerView.m in Sources */,
+				5BB03CB21D5DA8AC001203F8 /* QJLNoseView.m in Sources */,
+				5BB03C771D5DA8AC001203F8 /* QJLStage02ViewController.m in Sources */,
+				5BB03C901D5DA8AC001203F8 /* QJLStage08ViewController.m in Sources */,
+				5BB03CA81D5DA8AC001203F8 /* QJLStage14LineView.m in Sources */,
+				5B14BC191D3667330024F1B3 /* QJLStageListView.m in Sources */,
+				5BE2EECB1D372D5A00651F63 /* QJLFailView.m in Sources */,
+				5BB03C7E1D5DA8AC001203F8 /* QJLStage04ViewController.m in Sources */,
+				5BE2EEB51D3723B500651F63 /* QJLScoreboardCountView.m in Sources */,
+				5BB03CCB1D5DA8AC001203F8 /* QJLStage23PeopleView.m in Sources */,
+				5BB03CA21D5DA8AC001203F8 /* QJLState12ResultView.m in Sources */,
+				5B14BB971D365AE70024F1B3 /* ViewController.m in Sources */,
+				5BE2EEF81D37309D00651F63 /* QJLTimeCountView.m in Sources */,
+				5BB03CAF1D5DA8AC001203F8 /* QJLStage16PeopleView.m in Sources */,
+				5BE2EE941D371F4E00651F63 /* QJLPrepareScoreView.m in Sources */,
+				5BE2EED31D372DC500651F63 /* QJLFailViewController.m in Sources */,
+				5BB03C9B1D5DA8AC001203F8 /* QJLStage11View.m in Sources */,
+				5BE2EF021D37586500651F63 /* QJLHighScroeTextView.m in Sources */,
+				5BB03CB11D5DA8AC001203F8 /* QJLStage16ViewController.m in Sources */,
+				5BE2EE8B1D371B7200651F63 /* QJLPrepareViewController.m in Sources */,
+				5BE2EE9B1D3721C300651F63 /* QJLBaseGameViewController.m in Sources */,
+				5BB03CAA1D5DA8AC001203F8 /* QJLStage14ViewController.m in Sources */,
+				5B14BC371D366AAD0024F1B3 /* QJLResultViewController.m in Sources */,
+				5BB03C811D5DA8AC001203F8 /* QJLColumnIceView.m in Sources */,
+				5BB03C781D5DA8AC001203F8 /* QJLCountTimeView.m in Sources */,
+				5BB03C871D5DA8AC001203F8 /* QJLStage06ViewController.m in Sources */,
+				5BB03CD01D5DA8AC001203F8 /* QJLStage24ViewController.m in Sources */,
+				5BB03C8E1D5DA8AC001203F8 /* QJLStage08PeopleView.m in Sources */,
+				5BB03C8D1D5DA8AC001203F8 /* QJLStage07ViewController.m in Sources */,
+				5B14BC1C1D3667460024F1B3 /* QJLStageView.m in Sources */,
+				5BB03C981D5DA8AC001203F8 /* QJLStage10View.m in Sources */,
+				5BB03CA41D5DA8AC001203F8 /* QJLStage13GuessView.m in Sources */,
+				5BB03C991D5DA8AC001203F8 /* QJLStage10ViewController.m in Sources */,
+				5BB03CCC1D5DA8AC001203F8 /* QJLStage23ViewController.m in Sources */,
+				5B14BC3D1D366ADF0024F1B3 /* QJLFullBackgroundView.m in Sources */,
+				5B14BC0D1D3665F40024F1B3 /* QJLSettingViewController.m in Sources */,
+				5BB03C7A1D5DA8AC001203F8 /* QJLGuessFingerView.m in Sources */,
+				5BB03C971D5DA8AC001203F8 /* QJLStage10BottomNumView.m in Sources */,
+				5BB03C8C1D5DA8AC001203F8 /* QJLStage07View.m in Sources */,
+				5BB03C7D1D5DA8AC001203F8 /* QJLStage04View.m in Sources */,
+				5BE2EEBC1D372BC900651F63 /* QJLReadyGoView.m in Sources */,
+				5BE2EEFC1D3756ED00651F63 /* UIColor+QJLColor.m in Sources */,
+				5BE2EF051D377DED00651F63 /* QJLTwoButtonViewController.m in Sources */,
+				5B14BBE31D365C500024F1B3 /* QJLLaunchAnimationViewController.m in Sources */,
+				5BB03CC61D5DA8AC001203F8 /* QJLStage21ViewController.m in Sources */,
+				5B14BC3A1D366AAD0024F1B3 /* QJLStageInfoManager.m in Sources */,
+				5BB03CB61D5DA8AC001203F8 /* QJLStage17ViewController.m in Sources */,
+				5BB03CC31D5DA8AC001203F8 /* QJLStage20ViewController.m in Sources */,
+				5BB03C7B1D5DA8AC001203F8 /* QJLStage03ViewController.m in Sources */,
+				5BB03C9E1D5DA8AC001203F8 /* QJLDropEggView.m in Sources */,
+				5BB03C9F1D5DA8AC001203F8 /* QJLStage12BottomView.m in Sources */,
+				5BB03CAD1D5DA8AC001203F8 /* QJLStage15View.m in Sources */,
+				5BB03CBC1D5DA8AC001203F8 /* QJLFishView.m in Sources */,
+				5BB03C741D5DA8AC001203F8 /* QJLStage01ViewController.m in Sources */,
+				5BB03CC21D5DA8AC001203F8 /* QJLStage20DiceView.m in Sources */,
+				5BB03C961D5DA8AC001203F8 /* QJLStage09ViewController.m in Sources */,
+				5BB03CC01D5DA8AC001203F8 /* QJLDiceView.m in Sources */,
+				5B14BB941D365AE70024F1B3 /* AppDelegate.m in Sources */,
+				5BB03C931D5DA8AC001203F8 /* QJLStage09BobmView.m in Sources */,
+				5BB03CBE1D5DA8AC001203F8 /* QJLStage19FishView.m in Sources */,
+				5B14BB911D365AE70024F1B3 /* main.m in Sources */,
+				5BB03CAB1D5DA8AC001203F8 /* QJLStage15RowView.m in Sources */,
+				5BB03C9C1D5DA8AC001203F8 /* QJLStage11ViewController.m in Sources */,
+				5BB03CBF1D5DA8AC001203F8 /* QJLStage19ViewController.m in Sources */,
+				5BB03C751D5DA8AC001203F8 /* QJLFeatherView.m in Sources */,
+				5BB03CB71D5DA8AC001203F8 /* QJLPokerView.m in Sources */,
+				5BE2EEC31D372C1500651F63 /* QJLPauseViewController.m in Sources */,
+				5BE2EEB91D37286D00651F63 /* QJLGameControllerViewManager.m in Sources */,
+				5B14BC361D366AAD0024F1B3 /* QJLBaseNavigationController.m in Sources */,
+				5BB03CA31D5DA8AC001203F8 /* QJLStage13BottomView.m in Sources */,
+				5BB03CCF1D5DA8AC001203F8 /* QJLStage24View.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBA11D365AE70024F1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B14BBAA1D365AE70024F1B3 /* GameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B14BBAC1D365AE70024F1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B14BBB51D365AE70024F1B3 /* GameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B14BBA71D365AE70024F1B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B14BB8B1D365AE70024F1B3 /* Game */;
+			targetProxy = 5B14BBA61D365AE70024F1B3 /* PBXContainerItemProxy */;
+		};
+		5B14BBB21D365AE70024F1B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B14BB8B1D365AE70024F1B3 /* Game */;
+			targetProxy = 5B14BBB11D365AE70024F1B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B14BB981D365AE70024F1B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B14BB991D365AE70024F1B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B14BB9D1D365AE70024F1B3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B14BB9E1D365AE70024F1B3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B14BBB71D365AE70024F1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B14BBB81D365AE70024F1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B14BBBA1D365AE70024F1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Game/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.Game123;
+				PRODUCT_NAME = "最牛游戏";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		5B14BBBB1D365AE70024F1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Game/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.Game123;
+				PRODUCT_NAME = "最牛游戏";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		5B14BBBD1D365AE70024F1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.GameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game.app/Game";
+			};
+			name = Debug;
+		};
+		5B14BBBE1D365AE70024F1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.GameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game.app/Game";
+			};
+			name = Release;
+		};
+		5B14BBC01D365AE70024F1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.GameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Game;
+			};
+			name = Debug;
+		};
+		5B14BBC11D365AE70024F1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.GameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Game;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B14BB871D365AE70024F1B3 /* Build configuration list for PBXProject "Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B14BBB71D365AE70024F1B3 /* Debug */,
+				5B14BBB81D365AE70024F1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B14BBB91D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B14BBBA1D365AE70024F1B3 /* Debug */,
+				5B14BBBB1D365AE70024F1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B14BBBC1D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B14BBBD1D365AE70024F1B3 /* Debug */,
+				5B14BBBE1D365AE70024F1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B14BBBF1D365AE70024F1B3 /* Build configuration list for PBXNativeTarget "GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B14BBC01D365AE70024F1B3 /* Debug */,
+				5B14BBC11D365AE70024F1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B14BB841D365AE70024F1B3 /* Project object */;
+}
