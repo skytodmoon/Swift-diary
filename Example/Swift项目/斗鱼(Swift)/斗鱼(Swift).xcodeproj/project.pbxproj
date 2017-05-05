@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		025228154DFCB9E8E6691A9A /* Pods____Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40505A1E382B0C46EBDA9927 /* Pods____Swift_Tests.framework */; };
+		1D916B951EBCD2B200220AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916B941EBCD2B200220AC6 /* AppDelegate.swift */; };
+		1D916B971EBCD2B200220AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916B961EBCD2B200220AC6 /* ViewController.swift */; };
+		1D916B9A1EBCD2B200220AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D916B981EBCD2B200220AC6 /* Main.storyboard */; };
+		1D916B9C1EBCD2B200220AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D916B9B1EBCD2B200220AC6 /* Assets.xcassets */; };
+		1D916B9F1EBCD2B200220AC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D916B9D1EBCD2B200220AC6 /* LaunchScreen.storyboard */; };
+		1D916BAA1EBCD2B200220AC6 /* ___Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916BA91EBCD2B200220AC6 /* ___Swift_Tests.swift */; };
+		1D916BB51EBCD2B200220AC6 /* ___Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916BB41EBCD2B200220AC6 /* ___Swift_UITests.swift */; };
+		782AAF8823883C77D98AF1DA /* Pods____Swift_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5CB0B5EB0FC8E816F8AD12 /* Pods____Swift_UITests.framework */; };
+		A1EBB2ED34ECFC9B860EF56D /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54D00E8AE6BE383DB143F41 /* Pods____Swift_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D916BA61EBCD2B200220AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D916B891EBCD2B200220AC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D916B901EBCD2B200220AC6;
+			remoteInfo = "斗鱼(Swift)";
+		};
+		1D916BB11EBCD2B200220AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D916B891EBCD2B200220AC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D916B901EBCD2B200220AC6;
+			remoteInfo = "斗鱼(Swift)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1871401B37C7273C2EADDC7E /* Pods-斗鱼(Swift)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1D916B911EBCD2B200220AC6 /* 斗鱼(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D916B941EBCD2B200220AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D916B961EBCD2B200220AC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D916B991EBCD2B200220AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D916B9B1EBCD2B200220AC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D916B9E1EBCD2B200220AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D916BA01EBCD2B200220AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D916BA51EBCD2B200220AC6 /* 斗鱼(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D916BA91EBCD2B200220AC6 /* ___Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ___Swift_Tests.swift; sourceTree = "<group>"; };
+		1D916BAB1EBCD2B200220AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D916BB01EBCD2B200220AC6 /* 斗鱼(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D916BB41EBCD2B200220AC6 /* ___Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ___Swift_UITests.swift; sourceTree = "<group>"; };
+		1D916BB61EBCD2B200220AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40505A1E382B0C46EBDA9927 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods____Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6095F4EDAACBDCDA9B24FB02 /* Pods-斗鱼(Swift)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E2045BD751444CD64745BF1 /* Pods-斗鱼(Swift)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3A89D01345DE4F7BF27121 /* Pods-斗鱼(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).release.xcconfig"; sourceTree = "<group>"; };
+		9B89886A452EC3D927796D78 /* Pods-斗鱼(Swift)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C54D00E8AE6BE383DB143F41 /* Pods____Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods____Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5E2457835A3A8DE2EEC842 /* Pods-斗鱼(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).debug.xcconfig"; sourceTree = "<group>"; };
+		EF5CB0B5EB0FC8E816F8AD12 /* Pods____Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods____Swift_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D916B8E1EBCD2B200220AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EBB2ED34ECFC9B860EF56D /* Pods____Swift_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BA21EBCD2B200220AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025228154DFCB9E8E6691A9A /* Pods____Swift_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BAD1EBCD2B200220AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782AAF8823883C77D98AF1DA /* Pods____Swift_UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D916B881EBCD2B200220AC6 = {
+			isa = PBXGroup;
+			children = (
+				1D916B931EBCD2B200220AC6 /* 斗鱼(Swift) */,
+				1D916BA81EBCD2B200220AC6 /* 斗鱼(Swift)Tests */,
+				1D916BB31EBCD2B200220AC6 /* 斗鱼(Swift)UITests */,
+				1D916B921EBCD2B200220AC6 /* Products */,
+				D65016F37F4ABBA67492D293 /* Pods */,
+				BD2F12AA08F773403DB4F175 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1D916B921EBCD2B200220AC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D916B911EBCD2B200220AC6 /* 斗鱼(Swift).app */,
+				1D916BA51EBCD2B200220AC6 /* 斗鱼(Swift)Tests.xctest */,
+				1D916BB01EBCD2B200220AC6 /* 斗鱼(Swift)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D916B931EBCD2B200220AC6 /* 斗鱼(Swift) */ = {
+			isa = PBXGroup;
+			children = (
+				1D916B941EBCD2B200220AC6 /* AppDelegate.swift */,
+				1D916B961EBCD2B200220AC6 /* ViewController.swift */,
+				1D916B981EBCD2B200220AC6 /* Main.storyboard */,
+				1D916B9B1EBCD2B200220AC6 /* Assets.xcassets */,
+				1D916B9D1EBCD2B200220AC6 /* LaunchScreen.storyboard */,
+				1D916BA01EBCD2B200220AC6 /* Info.plist */,
+			);
+			path = "斗鱼(Swift)";
+			sourceTree = "<group>";
+		};
+		1D916BA81EBCD2B200220AC6 /* 斗鱼(Swift)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D916BA91EBCD2B200220AC6 /* ___Swift_Tests.swift */,
+				1D916BAB1EBCD2B200220AC6 /* Info.plist */,
+			);
+			path = "斗鱼(Swift)Tests";
+			sourceTree = "<group>";
+		};
+		1D916BB31EBCD2B200220AC6 /* 斗鱼(Swift)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D916BB41EBCD2B200220AC6 /* ___Swift_UITests.swift */,
+				1D916BB61EBCD2B200220AC6 /* Info.plist */,
+			);
+			path = "斗鱼(Swift)UITests";
+			sourceTree = "<group>";
+		};
+		BD2F12AA08F773403DB4F175 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C54D00E8AE6BE383DB143F41 /* Pods____Swift_.framework */,
+				40505A1E382B0C46EBDA9927 /* Pods____Swift_Tests.framework */,
+				EF5CB0B5EB0FC8E816F8AD12 /* Pods____Swift_UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D65016F37F4ABBA67492D293 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC5E2457835A3A8DE2EEC842 /* Pods-斗鱼(Swift).debug.xcconfig */,
+				9A3A89D01345DE4F7BF27121 /* Pods-斗鱼(Swift).release.xcconfig */,
+				9B89886A452EC3D927796D78 /* Pods-斗鱼(Swift)Tests.debug.xcconfig */,
+				1871401B37C7273C2EADDC7E /* Pods-斗鱼(Swift)Tests.release.xcconfig */,
+				8E2045BD751444CD64745BF1 /* Pods-斗鱼(Swift)UITests.debug.xcconfig */,
+				6095F4EDAACBDCDA9B24FB02 /* Pods-斗鱼(Swift)UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D916B901EBCD2B200220AC6 /* 斗鱼(Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D916BB91EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)" */;
+			buildPhases = (
+				70994061834C95308D0F36EC /* [CP] Check Pods Manifest.lock */,
+				1D916B8D1EBCD2B200220AC6 /* Sources */,
+				1D916B8E1EBCD2B200220AC6 /* Frameworks */,
+				1D916B8F1EBCD2B200220AC6 /* Resources */,
+				E3EF5D48C4A72BAE4D270A29 /* [CP] Embed Pods Frameworks */,
+				A051B960BB828C31AC9802B4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "斗鱼(Swift)";
+			productName = "斗鱼(Swift)";
+			productReference = 1D916B911EBCD2B200220AC6 /* 斗鱼(Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D916BA41EBCD2B200220AC6 /* 斗鱼(Swift)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D916BBC1EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)Tests" */;
+			buildPhases = (
+				F1918B7B098A6C5D5629EC7D /* [CP] Check Pods Manifest.lock */,
+				1D916BA11EBCD2B200220AC6 /* Sources */,
+				1D916BA21EBCD2B200220AC6 /* Frameworks */,
+				1D916BA31EBCD2B200220AC6 /* Resources */,
+				FD19BCC7999B7034E85F52BC /* [CP] Embed Pods Frameworks */,
+				A8CD825A1431042EE2145086 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D916BA71EBCD2B200220AC6 /* PBXTargetDependency */,
+			);
+			name = "斗鱼(Swift)Tests";
+			productName = "斗鱼(Swift)Tests";
+			productReference = 1D916BA51EBCD2B200220AC6 /* 斗鱼(Swift)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D916BAF1EBCD2B200220AC6 /* 斗鱼(Swift)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D916BBF1EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)UITests" */;
+			buildPhases = (
+				EB7D3E93266F159CC600071F /* [CP] Check Pods Manifest.lock */,
+				1D916BAC1EBCD2B200220AC6 /* Sources */,
+				1D916BAD1EBCD2B200220AC6 /* Frameworks */,
+				1D916BAE1EBCD2B200220AC6 /* Resources */,
+				C3C377923AB879DDB032A31B /* [CP] Embed Pods Frameworks */,
+				FC2F6F6DC4A5670D6D16331C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D916BB21EBCD2B200220AC6 /* PBXTargetDependency */,
+			);
+			name = "斗鱼(Swift)UITests";
+			productName = "斗鱼(Swift)UITests";
+			productReference = 1D916BB01EBCD2B200220AC6 /* 斗鱼(Swift)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D916B891EBCD2B200220AC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					1D916B901EBCD2B200220AC6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = C4R9UP276A;
+						ProvisioningStyle = Automatic;
+					};
+					1D916BA41EBCD2B200220AC6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = C4R9UP276A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D916B901EBCD2B200220AC6;
+					};
+					1D916BAF1EBCD2B200220AC6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = C4R9UP276A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D916B901EBCD2B200220AC6;
+					};
+				};
+			};
+			buildConfigurationList = 1D916B8C1EBCD2B200220AC6 /* Build configuration list for PBXProject "斗鱼(Swift)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D916B881EBCD2B200220AC6;
+			productRefGroup = 1D916B921EBCD2B200220AC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D916B901EBCD2B200220AC6 /* 斗鱼(Swift) */,
+				1D916BA41EBCD2B200220AC6 /* 斗鱼(Swift)Tests */,
+				1D916BAF1EBCD2B200220AC6 /* 斗鱼(Swift)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D916B8F1EBCD2B200220AC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D916B9F1EBCD2B200220AC6 /* LaunchScreen.storyboard in Resources */,
+				1D916B9C1EBCD2B200220AC6 /* Assets.xcassets in Resources */,
+				1D916B9A1EBCD2B200220AC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BA31EBCD2B200220AC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BAE1EBCD2B200220AC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70994061834C95308D0F36EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A051B960BB828C31AC9802B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8CD825A1431042EE2145086 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C377923AB879DDB032A31B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3EF5D48C4A72BAE4D270A29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB7D3E93266F159CC600071F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1918B7B098A6C5D5629EC7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC2F6F6DC4A5670D6D16331C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD19BCC7999B7034E85F52BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D916B8D1EBCD2B200220AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D916B971EBCD2B200220AC6 /* ViewController.swift in Sources */,
+				1D916B951EBCD2B200220AC6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BA11EBCD2B200220AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D916BAA1EBCD2B200220AC6 /* ___Swift_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D916BAC1EBCD2B200220AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D916BB51EBCD2B200220AC6 /* ___Swift_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D916BA71EBCD2B200220AC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D916B901EBCD2B200220AC6 /* 斗鱼(Swift) */;
+			targetProxy = 1D916BA61EBCD2B200220AC6 /* PBXContainerItemProxy */;
+		};
+		1D916BB21EBCD2B200220AC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D916B901EBCD2B200220AC6 /* 斗鱼(Swift) */;
+			targetProxy = 1D916BB11EBCD2B200220AC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D916B981EBCD2B200220AC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D916B991EBCD2B200220AC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D916B9D1EBCD2B200220AC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D916B9E1EBCD2B200220AC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D916BB71EBCD2B200220AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D916BB81EBCD2B200220AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D916BBA1EBCD2B200220AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5E2457835A3A8DE2EEC842 /* Pods-斗鱼(Swift).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1D916BBB1EBCD2B200220AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A3A89D01345DE4F7BF27121 /* Pods-斗鱼(Swift).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1D916BBD1EBCD2B200220AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B89886A452EC3D927796D78 /* Pods-斗鱼(Swift)Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/斗鱼(Swift).app/斗鱼(Swift)";
+			};
+			name = Debug;
+		};
+		1D916BBE1EBCD2B200220AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1871401B37C7273C2EADDC7E /* Pods-斗鱼(Swift)Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/斗鱼(Swift).app/斗鱼(Swift)";
+			};
+			name = Release;
+		};
+		1D916BC01EBCD2B200220AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2045BD751444CD64745BF1 /* Pods-斗鱼(Swift)UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "斗鱼(Swift)";
+			};
+			name = Debug;
+		};
+		1D916BC11EBCD2B200220AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6095F4EDAACBDCDA9B24FB02 /* Pods-斗鱼(Swift)UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = C4R9UP276A;
+				INFOPLIST_FILE = "斗鱼(Swift)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "斗鱼(Swift)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D916B8C1EBCD2B200220AC6 /* Build configuration list for PBXProject "斗鱼(Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D916BB71EBCD2B200220AC6 /* Debug */,
+				1D916BB81EBCD2B200220AC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D916BB91EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D916BBA1EBCD2B200220AC6 /* Debug */,
+				1D916BBB1EBCD2B200220AC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D916BBC1EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D916BBD1EBCD2B200220AC6 /* Debug */,
+				1D916BBE1EBCD2B200220AC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D916BBF1EBCD2B200220AC6 /* Build configuration list for PBXNativeTarget "斗鱼(Swift)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D916BC01EBCD2B200220AC6 /* Debug */,
+				1D916BC11EBCD2B200220AC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D916B891EBCD2B200220AC6 /* Project object */;
+}
