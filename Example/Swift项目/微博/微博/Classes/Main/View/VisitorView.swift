@@ -18,7 +18,7 @@ protocol VisitorViewDelegate:NSObjectProtocol {
 
 class VisitorView: UIView {
     
-    weak var delegate: VisitorViewDelegate
+    weak var delegate: VisitorViewDelegate?
 
     
     //MARK: - 访客界面配置，是否有首页，图片名，文字信息
@@ -57,13 +57,47 @@ class VisitorView: UIView {
         return label
     }()
     
+    //MAKR: - 登录按钮
+    private lazy var loginButton: UIButton = {
+       let loginButton = UIButton()
+       loginButton.setTitle("登录", forState: .Normal)
+       loginButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+       loginButton.addTarget(self, action: #selector(VisitorView.loginButtonClick), forControlEvents: .TouchUpInside)
+       loginButton.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: .Normal)
+        return loginButton
+    }()
     
+    //MAKR: - 注册按钮
+    private lazy var registerButton: UIButton = {
+        let registerButton = UIButton()
+        registerButton.setTitle("注册", forState: .Normal)
+        registerButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        registerButton.addTarget(self, action: #selector(VisitorView.registerButtonClick), forControlEvents: .TouchUpInside)
+        registerButton.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: .Normal)
+        return registerButton
+    }()
     
-    func loginBtnDidClick() {
+    //MARK: - 图片
+    private lazy var maskBackgroundView: UIImageView = {
+        let maskView = UIImageView(image: UIImage(named: "visitordiscover_feed_mask_smallicon"))
+        return maskView
+    }()
     
+    //MARK: - 设置动画
+    private func StartAnimation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.toValue = M_PI * 2
+        animation.duration = 20
+        animation.repeatCount = MAXFLOAT
+        animation.removedOnCompletion = false
+        iconView.layer.addAnimation(animation, forKey: nil)
     }
     
-    func registerBtnClick() {
+    func loginButtonClick() {
+        delegate?.registerBtnClick()
+    }
     
+    func registerButtonClick() {
+        delegate?.loginBtnDidClick()
     }
 }
