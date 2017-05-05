@@ -41,6 +41,9 @@ class HomeViewController: BaseTableViewController {
         
     }
     func titltBtnClick(btn:TitleButton){
+        let popoverVC = PopoverViewController()
+      
         
+        presentViewController(popoverVC, animated: true, completion: nil)
     }
 }
