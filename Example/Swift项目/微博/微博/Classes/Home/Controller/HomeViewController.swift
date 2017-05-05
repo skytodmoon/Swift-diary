@@ -24,6 +24,6 @@ class HomeViewController: UIViewController {
     
     //MARK: - 设置导航的左右按钮
     private func setupNav() {
-        
+
     }
 }
