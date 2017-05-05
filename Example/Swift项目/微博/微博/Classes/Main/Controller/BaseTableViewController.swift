@@ -12,6 +12,11 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate {
     
     var visitorView = VisitorView()
     
+    override func loadView() {
+        
+        setupVisitorView()
+    }
+    
     //MARK: - 设置用户没有登录的时候加载旋转动画
     private func setupVisitorView() {
         visitorView.delegate = self

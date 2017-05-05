@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 //MARK: - 设置代理方法
 protocol VisitorViewDelegate:NSObjectProtocol {
@@ -24,11 +25,51 @@ class VisitorView: UIView {
     //MARK: - 访客界面配置，是否有首页，图片名，文字信息
     func setupVisitorInfo(isHome: Bool, imageName: String, message: String) {
         
+        iconView.hidden = !isHome
+        homeIcon.image = UIImage(named: imageName)
+        messageLable.text = message
+        StartAnimation()
     }
     
     //MARK: - 初始化视图
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        addSubview(iconView)
+        addSubview(maskBackgroundView)
+        addSubview(homeIcon)
+        addSubview(messageLable)
+        addSubview(loginButton)
+        addSubview(registerButton)
+        
+        
+        //MARK: - SnapKit自动布局子控件
+        iconView.snp_makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        homeIcon.snp_makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        messageLable.snp_makeConstraints { (make) in
+            make.top.equalTo(iconView.snp_bottom)
+            make.centerX.equalTo(self)
+            make.width.equalTo(220)
+        }
+        registerButton.snp_makeConstraints { (make) in
+            make.top.equalTo(messageLable.snp_bottom)
+            make.left.equalTo(messageLable.snp_left)
+            make.height.equalTo(30)
+            make.width.equalTo(100)
+        }
+        loginButton.snp_makeConstraints { (make) in
+            make.top.equalTo(messageLable.snp_bottom)
+            make.right.equalTo(messageLable.snp_right)
+            make.height.equalTo(30)
+            make.width.equalTo(100)
+        }
+        maskBackgroundView.snp_makeConstraints { (make) in
+            make.left.right.top.bottom.equalTo(self)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,7 +91,7 @@ class VisitorView: UIView {
     //MARK: - 文本
     private lazy var messageLable: UILabel = {
         let label = UILabel()
-        label.text = "我是醉看红尘这场梦,这是我仿写的新浪微博项目,用来学习Swift2.0"
+        label.text = "我是醉看红尘这场梦,这是我仿写的新浪微博项目"
         label.textColor = UIColor.grayColor()
         label.numberOfLines = 0
         label.textAlignment = .Center
