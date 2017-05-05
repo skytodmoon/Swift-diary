@@ -10,6 +10,8 @@
 		5B4677621EBC3B5F004A6625 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4677611EBC3B5F004A6625 /* ComposeViewController.swift */; };
 		5B4677641EBC3DC1004A6625 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4677631EBC3DC1004A6625 /* String+Extension.swift */; };
 		5B4677661EBC4C23004A6625 /* UIButtton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4677651EBC4C23004A6625 /* UIButtton+Extension.swift */; };
+		5B4677681EBC4DA7004A6625 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4677671EBC4DA7004A6625 /* BaseTableViewController.swift */; };
+		5B46776B1EBC4DE8004A6625 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46776A1EBC4DE8004A6625 /* VisitorView.swift */; };
 		5B71437C1EB988630029C9B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71437B1EB988630029C9B1 /* AppDelegate.swift */; };
 		5B71437E1EB988630029C9B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71437D1EB988630029C9B1 /* ViewController.swift */; };
 		5B7143811EB988630029C9B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B71437F1EB988630029C9B1 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		5B4677611EBC3B5F004A6625 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		5B4677631EBC3DC1004A6625 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5B4677651EBC4C23004A6625 /* UIButtton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButtton+Extension.swift"; sourceTree = "<group>"; };
+		5B4677671EBC4DA7004A6625 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		5B46776A1EBC4DE8004A6625 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		5B7143781EB988630029C9B1 /* 微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B71437B1EB988630029C9B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B71437D1EB988630029C9B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,14 @@
 				5B4677611EBC3B5F004A6625 /* ComposeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B4677691EBC4DD9004A6625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B46776A1EBC4DE8004A6625 /* VisitorView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B71436F1EB988630029C9B1 = {
@@ -220,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				5B7143C71EB9F8B60029C9B1 /* Controller */,
+				5B4677691EBC4DD9004A6625 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				5B7143C81EB9F8B60029C9B1 /* MainViewController.swift */,
+				5B4677671EBC4DA7004A6625 /* BaseTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,12 +516,14 @@
 				5B7143DE1EB9F8FF0029C9B1 /* EmoticonViewController.swift in Sources */,
 				5B7143D01EB9F8B60029C9B1 /* DiscoverViewController.swift in Sources */,
 				5B71437E1EB988630029C9B1 /* ViewController.swift in Sources */,
+				5B46776B1EBC4DE8004A6625 /* VisitorView.swift in Sources */,
 				5B4677661EBC4C23004A6625 /* UIButtton+Extension.swift in Sources */,
 				5B7143DB1EB9F8FF0029C9B1 /* EmoticonPackage.swift in Sources */,
 				5B4677621EBC3B5F004A6625 /* ComposeViewController.swift in Sources */,
 				5B7143DD1EB9F8FF0029C9B1 /* EmoticonTextAttachment.swift in Sources */,
 				5B71437C1EB988630029C9B1 /* AppDelegate.swift in Sources */,
 				5B4677641EBC3DC1004A6625 /* String+Extension.swift in Sources */,
+				5B4677681EBC4DA7004A6625 /* BaseTableViewController.swift in Sources */,
 				5B7143D11EB9F8B60029C9B1 /* HomeViewController.swift in Sources */,
 				5B7143E21EB9F9870029C9B1 /* UILabel+Extension.swift in Sources */,
 				5B7143D41EB9F8B60029C9B1 /* ProfileViewController.swift in Sources */,
