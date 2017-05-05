@@ -24,6 +24,13 @@ class HomeViewController: UIViewController {
     
     //MARK: - 设置导航的左右按钮
     private func setupNav() {
-
+        navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_friendattention", target: self, action: #selector(HomeViewController.leftItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_pop", target: self, action: #selector(HomeViewController.rightItemClick))
+    }
+    @objc private func leftItemClick (){
+        
+    }
+    @objc private func rightItemClick () {
+        
     }
 }
