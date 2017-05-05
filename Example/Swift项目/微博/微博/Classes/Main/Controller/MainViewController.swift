@@ -27,7 +27,7 @@ class MainViewController: UITabBarController {
         
         addChildViewController(HomeViewController(), title: "首页", imageName: "tabbar_home")
         addChildViewController(MessageViewController(), title: "消息", imageName: "tabbar_message_center")
-        
+        addChildViewController(UIViewController())
         addChildViewController(MessageViewController(), title: "发现", imageName: "tabbar_discover")
         addChildViewController(MessageViewController(), title: "我的", imageName: "tabbar_profile")
     }
@@ -40,5 +40,29 @@ class MainViewController: UITabBarController {
             childController.title = title
             let nav = UINavigationController(rootViewController: childController)
             addChildViewController(nav)
+    }
+    //MARK: - 计算中间按钮的frame
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let width = UIScreen.mainScreen().bounds.size.width / CGFloat(viewControllers!.count)
+        let rect = CGRect(x: 0, y: 0, width: width, height: 49)
+        composeButton.frame = CGRectOffset(rect, width * 2, 0)
+    }
+    //MARK: - 懒加载中间的按钮
+    private var composeButton: UIButton {
+        let button = UIButton()
+        button.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
+        button.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
+        button.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
+        button.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
+        button.addTarget(self, action: #selector(MainViewController.composeBtnClick), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(MainViewController.composeBtnClick), forControlEvents: .TouchUpInside)
+        self.tabBar.addSubview(button)
+        return button
+    }
+    @objc private func composeBtnClick(){
+        let composeVC = ComposeViewController()
+        let nav = UINavigationController(rootViewController: composeVC)
+        presentViewController(nav, animated: true, completion: nil)
     }
 }
