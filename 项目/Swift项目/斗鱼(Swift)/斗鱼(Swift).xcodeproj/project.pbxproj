@@ -15,6 +15,11 @@
 		1D916BAA1EBCD2B200220AC6 /* ___Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916BA91EBCD2B200220AC6 /* ___Swift_Tests.swift */; };
 		1D916BB51EBCD2B200220AC6 /* ___Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D916BB41EBCD2B200220AC6 /* ___Swift_UITests.swift */; };
 		1DBF716B1EBF3EB500E81710 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF716A1EBF3EB500E81710 /* MainViewController.swift */; };
+		1DBF71721EBF3FF900E81710 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF71711EBF3FF900E81710 /* HomeViewController.swift */; };
+		1DBF71751EBF401000E81710 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF71741EBF401000E81710 /* LiveViewController.swift */; };
+		1DBF71781EBF402D00E81710 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF71771EBF402D00E81710 /* ProfileViewController.swift */; };
+		1DBF717A1EBF404B00E81710 /* RommViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF71791EBF404B00E81710 /* RommViewController.swift */; };
+		1DBF717C1EBF40C300E81710 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF717B1EBF40C300E81710 /* MainNavController.swift */; };
 		A1EBB2ED34ECFC9B860EF56D /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54D00E8AE6BE383DB143F41 /* Pods____Swift_.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,11 @@
 		1D916BB61EBCD2B200220AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DBF71661EBF3E9B00E81710 /* 斗鱼(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "斗鱼(Swift)-Bridging-Header.h"; path = "Classes/Main/Controller/斗鱼(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		1DBF716A1EBF3EB500E81710 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1DBF71711EBF3FF900E81710 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1DBF71741EBF401000E81710 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		1DBF71771EBF402D00E81710 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1DBF71791EBF404B00E81710 /* RommViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RommViewController.swift; sourceTree = "<group>"; };
+		1DBF717B1EBF40C300E81710 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		40505A1E382B0C46EBDA9927 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3A89D01345DE4F7BF27121 /* Pods-斗鱼(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).release.xcconfig"; sourceTree = "<group>"; };
 		C54D00E8AE6BE383DB143F41 /* Pods____Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +152,10 @@
 		1DBF71631EBF3E7B00E81710 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DBF716C1EBF3FCC00E81710 /* Home */,
+				1DBF716D1EBF3FCC00E81710 /* Live */,
+				1DBF716E1EBF3FCC00E81710 /* Profile */,
+				1DBF716F1EBF3FCC00E81710 /* Room */,
 				1DBF71641EBF3E7B00E81710 /* Main */,
 			);
 			path = Classes;
@@ -159,6 +173,63 @@
 			isa = PBXGroup;
 			children = (
 				1DBF716A1EBF3EB500E81710 /* MainViewController.swift */,
+				1DBF717B1EBF40C300E81710 /* MainNavController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DBF716C1EBF3FCC00E81710 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71701EBF3FE800E81710 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1DBF716D1EBF3FCC00E81710 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71731EBF400800E81710 /* Controller */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		1DBF716E1EBF3FCC00E81710 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71761EBF401C00E81710 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1DBF716F1EBF3FCC00E81710 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71791EBF404B00E81710 /* RommViewController.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		1DBF71701EBF3FE800E81710 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71711EBF3FF900E81710 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DBF71731EBF400800E81710 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71741EBF401000E81710 /* LiveViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DBF71761EBF401C00E81710 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DBF71771EBF402D00E81710 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,9 +442,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBF717C1EBF40C300E81710 /* MainNavController.swift in Sources */,
+				1DBF717A1EBF404B00E81710 /* RommViewController.swift in Sources */,
+				1DBF71781EBF402D00E81710 /* ProfileViewController.swift in Sources */,
 				1DBF716B1EBF3EB500E81710 /* MainViewController.swift in Sources */,
 				1D916B971EBCD2B200220AC6 /* ViewController.swift in Sources */,
 				1D916B951EBCD2B200220AC6 /* AppDelegate.swift in Sources */,
+				1DBF71721EBF3FF900E81710 /* HomeViewController.swift in Sources */,
+				1DBF71751EBF401000E81710 /* LiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
