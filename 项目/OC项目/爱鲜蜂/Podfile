@@ -7,14 +7,12 @@ target '爱鲜蜂' do
 
   # Pods for 爱鲜蜂
 
-  target '爱鲜蜂Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'SVProgressHUD'
+    pod 'SDWebImage'
+    pod 'AFNetworking'
+    pod 'MJExtension'
+    pod 'MJRefresh'
+    pod 'Masonry'
 
-  target '爱鲜蜂UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end

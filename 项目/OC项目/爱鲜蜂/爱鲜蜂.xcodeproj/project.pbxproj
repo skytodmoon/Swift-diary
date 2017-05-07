@@ -15,9 +15,7 @@
 		1D0FDEED1EBF0F6D00B774EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0FDEEB1EBF0F6D00B774EE /* LaunchScreen.storyboard */; };
 		1D0FDEF81EBF0F6D00B774EE /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FDEF71EBF0F6D00B774EE /* ___Tests.m */; };
 		1D0FDF031EBF0F6D00B774EE /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0FDF021EBF0F6D00B774EE /* ___UITests.m */; };
-		8B34B0296A14BBB4A57D0A55 /* libPods-爱鲜蜂Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED383F40D795C62ECBDEB3C9 /* libPods-爱鲜蜂Tests.a */; };
 		B01B67348D2AC349C5008EE3 /* libPods-爱鲜蜂.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AB813D1D0A007B0AE21D8F /* libPods-爱鲜蜂.a */; };
-		ED3D839B9AF9E767A0104CE3 /* libPods-爱鲜蜂UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDF3C2713D028E0A457564A /* libPods-爱鲜蜂UITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +54,8 @@
 		1D0FDEFE1EBF0F6D00B774EE /* 爱鲜蜂UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱鲜蜂UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0FDF021EBF0F6D00B774EE /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ___UITests.m; sourceTree = "<group>"; };
 		1D0FDF041EBF0F6D00B774EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F72D6D6FD694A7A72E1B8BB /* Pods-爱鲜蜂Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂Tests/Pods-爱鲜蜂Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2E2C3D43E1E7CF34FC08B863 /* Pods-爱鲜蜂.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂/Pods-爱鲜蜂.debug.xcconfig"; sourceTree = "<group>"; };
-		49EF1F28A04FC93B34F4B30A /* Pods-爱鲜蜂UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂UITests/Pods-爱鲜蜂UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		75428C293522409D09A2487E /* Pods-爱鲜蜂Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂Tests/Pods-爱鲜蜂Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		78AB813D1D0A007B0AE21D8F /* libPods-爱鲜蜂.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA0CD1E4A14732514866B6F /* Pods-爱鲜蜂UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂UITests/Pods-爱鲜蜂UITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED383F40D795C62ECBDEB3C9 /* libPods-爱鲜蜂Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B34B0296A14BBB4A57D0A55 /* libPods-爱鲜蜂Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED3D839B9AF9E767A0104CE3 /* libPods-爱鲜蜂UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +164,6 @@
 			children = (
 				2E2C3D43E1E7CF34FC08B863 /* Pods-爱鲜蜂.debug.xcconfig */,
 				01566B4DF8829BC92960A95E /* Pods-爱鲜蜂.release.xcconfig */,
-				75428C293522409D09A2487E /* Pods-爱鲜蜂Tests.debug.xcconfig */,
-				1F72D6D6FD694A7A72E1B8BB /* Pods-爱鲜蜂Tests.release.xcconfig */,
-				49EF1F28A04FC93B34F4B30A /* Pods-爱鲜蜂UITests.debug.xcconfig */,
-				EAA0CD1E4A14732514866B6F /* Pods-爱鲜蜂UITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -207,12 +195,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0FDF0A1EBF0F6D00B774EE /* Build configuration list for PBXNativeTarget "爱鲜蜂Tests" */;
 			buildPhases = (
-				83F4EE3D0088A6E794686133 /* [CP] Check Pods Manifest.lock */,
 				1D0FDEEF1EBF0F6D00B774EE /* Sources */,
 				1D0FDEF01EBF0F6D00B774EE /* Frameworks */,
 				1D0FDEF11EBF0F6D00B774EE /* Resources */,
-				7DF2CAE34C7C90D9233E7C98 /* [CP] Embed Pods Frameworks */,
-				0413B8E0D80CB5E5BC03FAAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,12 +213,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0FDF0D1EBF0F6D00B774EE /* Build configuration list for PBXNativeTarget "爱鲜蜂UITests" */;
 			buildPhases = (
-				ACFF36A41F9F1DEB901A7520 /* [CP] Check Pods Manifest.lock */,
 				1D0FDEFA1EBF0F6D00B774EE /* Sources */,
 				1D0FDEFB1EBF0F6D00B774EE /* Frameworks */,
 				1D0FDEFC1EBF0F6D00B774EE /* Resources */,
-				483AACFAC2ABF73E284EC373 /* [CP] Embed Pods Frameworks */,
-				0B8224BABB7F28CB98C0248F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,51 +303,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0413B8E0D80CB5E5BC03FAAB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-爱鲜蜂Tests/Pods-爱鲜蜂Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0B8224BABB7F28CB98C0248F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-爱鲜蜂UITests/Pods-爱鲜蜂UITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		483AACFAC2ABF73E284EC373 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-爱鲜蜂UITests/Pods-爱鲜蜂UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5BDB965E15F14E9FCCEE90C3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,52 +318,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-爱鲜蜂/Pods-爱鲜蜂-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DF2CAE34C7C90D9233E7C98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-爱鲜蜂Tests/Pods-爱鲜蜂Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		83F4EE3D0088A6E794686133 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		995979D7C55691D3B59DFC51 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ACFF36A41F9F1DEB901A7520 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -640,7 +532,6 @@
 		};
 		1D0FDF0B1EBF0F6D00B774EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75428C293522409D09A2487E /* Pods-爱鲜蜂Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = C4R9UP276A;
@@ -654,7 +545,6 @@
 		};
 		1D0FDF0C1EBF0F6D00B774EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F72D6D6FD694A7A72E1B8BB /* Pods-爱鲜蜂Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = C4R9UP276A;
@@ -668,7 +558,6 @@
 		};
 		1D0FDF0E1EBF0F6D00B774EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49EF1F28A04FC93B34F4B30A /* Pods-爱鲜蜂UITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = C4R9UP276A;
 				INFOPLIST_FILE = "爱鲜蜂UITests/Info.plist";
@@ -681,7 +570,6 @@
 		};
 		1D0FDF0F1EBF0F6D00B774EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAA0CD1E4A14732514866B6F /* Pods-爱鲜蜂UITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = C4R9UP276A;
 				INFOPLIST_FILE = "爱鲜蜂UITests/Info.plist";
