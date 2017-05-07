@@ -13,9 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //MARK: - 懒加载主控制器
+    fileprivate lazy var tabBarVC:MainViewController = MainViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //MARK: - 设置主窗口
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible()
         return true
     }
 
