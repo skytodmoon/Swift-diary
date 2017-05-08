@@ -10,12 +10,46 @@ import UIKit
 
 class StatusTableViewBottomView: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupUI()
     }
-    */
+    //MARK: - 设置UI界面
+    private func setupUI(){
+        backgroundColor = UIColor(white: 0.902, alpha: 0.5)
+        
+        addSubview(retweetBtn)
+        addSubview(unlikeBtn)
+        addSubview(commonBtn)
+        
+        retweetBtn.snp_makeConstraints { (make) -> Void in
+            make.left.top.equalTo(self)
+            make.height.equalTo(self).offset(-3)
+            make.width.equalTo(unlikeBtn.snp_width)
+        }
+        commonBtn.snp_makeConstraints { (make) -> Void in
+            make.height.width.top.equalTo(retweetBtn)
+            make.left.equalTo(retweetBtn.snp_right)
+        }
+        unlikeBtn.snp_makeConstraints { (make) -> Void in
+            make.height.width.top.equalTo(commonBtn)
+            make.left.equalTo(commonBtn.snp_right)
+            make.right.equalTo(self)
+        }
 
+    }
+
+    //MARK: - 懒加载三个按钮
+    private lazy var retweetBtn: UIButton = UIButton.createButton("timeline_icon_retweet", title: "转发")
+    
+    private lazy var unlikeBtn: UIButton = UIButton.createButton("timeline_icon_unlike", title: "赞")
+    
+    private lazy var commonBtn: UIButton = UIButton.createButton("timeline_icon_comment", title: "评论")
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
 }

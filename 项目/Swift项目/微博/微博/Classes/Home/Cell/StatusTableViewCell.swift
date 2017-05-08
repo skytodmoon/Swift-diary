@@ -25,6 +25,15 @@ class StatusTableViewCell: UITableViewCell {
     
     var status: Status?{
         didSet{
+            topView.status = status
+            contentLabel.text = status?.text
+//            pictureView.status = status?.retweeted_status != nil ? status?.retweeted_status :  status
+//            pictureSize = pictureView.calculateImageSize()
+            pictureView.snp_updateConstraints { (make) -> Void in
+                make.height.equalTo(pictureSize.height)
+                make.width.equalTo(pictureSize.width)
+            }
+
         }
     }
 
