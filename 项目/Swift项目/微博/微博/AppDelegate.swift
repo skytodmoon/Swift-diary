@@ -8,6 +8,8 @@
 
 import UIKit
 
+let SwitchRootViewControllerKey = "SwitchRootViewControllerKey"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

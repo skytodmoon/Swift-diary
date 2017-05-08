@@ -32,12 +32,14 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate {
     
     func loginBtnDidClick() {
         
-        let nav = UINavigationController(rootViewController: OAuthViewController())
-        presentViewController(nav, animated: true, completion: nil)
+        print("点击了注册")
     }
     
     func registerBtnClick() {
-        
+
+        let nav = UINavigationController(rootViewController: OAuthViewController())
+        presentViewController(nav, animated: true, completion: nil)
+        print("点击了授权登录")
     }
 }
 
