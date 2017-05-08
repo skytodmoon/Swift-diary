@@ -10,9 +10,12 @@ import UIKit
 
 class StatusNormalTableViewCell: StatusTableViewCell {
     
-//    override func setupUI() {
-//        super.setupUI()
-//        
-//    }
+    override func setupUI() {
+        super.setupUI()
+        pictureView.snp_makeConstraints { (make) in
+            make.top.equalTo(contentLabel.snp_bottom).offset(10)
+            make.left.equalTo(contentLabel.snp_left)
+        }
+    }
 
 }
