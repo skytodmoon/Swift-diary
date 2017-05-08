@@ -135,10 +135,10 @@ class VisitorView: UIView {
     }
     
     func loginButtonClick() {
-        delegate?.registerBtnClick()
+        delegate?.loginBtnDidClick()
     }
     
     func registerButtonClick() {
-        delegate?.loginBtnDidClick()
+        delegate?.registerBtnClick()
     }
 }
