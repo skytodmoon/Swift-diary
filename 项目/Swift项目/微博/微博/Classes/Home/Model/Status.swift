@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class Status: NSObject {
-
+    
+    //MARK: - 微博创建时间
+    var created_at: String?{
+        didSet{
+        }
+    }
 }

@@ -26,17 +26,20 @@ class HomeViewController: BaseTableViewController {
         }
         setupNav()
         
-        
+        //MARK: - 通知代理方法
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorDismissNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.presentPhotoBrowserView(_:)), name: StatusPictureViewSelected, object: nil)
-        
+        /*
         //MARK: - 注册tableviewcell
         tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.separatorStyle = .None
+        */
+        refreshControl = HomeRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(HomeViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         
-        
+        loadData()
         // Do any additional setup after loading the view.
     }
 
@@ -77,4 +80,13 @@ class HomeViewController: BaseTableViewController {
         
         presentViewController(popoverVC, animated: true, completion: nil)
     }
+    
+    func loadData() {
+        
+    }
+}
+
+//MARK: - 设置TableViewDelegate，TableVideDataSource
+extension HomeViewController {
+    
 }
