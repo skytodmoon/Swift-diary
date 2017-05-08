@@ -19,3 +19,10 @@ class StatusPictureView: UICollectionView {
     */
 
 }
+
+
+let StatusPictureViewSelected = "StatusPictureViewSelected"
+/// 当前选中图片的索引
+let StatusPictureViewIndexKey = "StatusPictureViewIndexKey"
+/// 本条所有大图的数组
+let StatusPictureViewURLsKey = "StatusPictureViewURLsKey"

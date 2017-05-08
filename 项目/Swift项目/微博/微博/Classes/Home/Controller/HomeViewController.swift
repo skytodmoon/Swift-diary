@@ -9,6 +9,12 @@
 import UIKit
 
 class HomeViewController: BaseTableViewController {
+    
+    var statuess: [Status]? {
+        didSet{
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +25,34 @@ class HomeViewController: BaseTableViewController {
         visitorView.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
         }
         setupNav()
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorDismissNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.presentPhotoBrowserView(_:)), name: StatusPictureViewSelected, object: nil)
+        
+        //MARK: - 注册tableviewcell
+        tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
+        tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
+        tableView.separatorStyle = .None
+        
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func change(){
+        let titleBtn = navigationItem.titleView as! TitleButton
+        titleBtn.selected = !titleBtn.selected
+    }
+    
+    func presentPhotoBrowserView(notify: NSNotification){
+        
     }
     
     //MARK: - 设置导航的左右按钮和中间的按钮

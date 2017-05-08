@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum StatusTableViewCellIdentifier: String {
+    case NormalCell  = "NormalCell"
+    case ForwardCell = "ForwardCell"
+//    static func cellID(status: Status) -> String{
+//    }
+}
+
 class StatusTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
