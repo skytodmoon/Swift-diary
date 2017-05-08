@@ -11,8 +11,9 @@ import UIKit
 enum StatusTableViewCellIdentifier: String {
     case NormalCell  = "NormalCell"
     case ForwardCell = "ForwardCell"
-//    static func cellID(status: Status) -> String{
-//    }
+    static func cellID(status: Status) -> String{
+        return status.retweeted_status != nil ? ForwardCell.rawValue : NormalCell.rawValue
+    }
 }
 
 class StatusTableViewCell: UITableViewCell {

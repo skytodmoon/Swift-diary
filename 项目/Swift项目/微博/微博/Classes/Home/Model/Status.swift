@@ -61,9 +61,9 @@ class Status: NSObject {
     //MARK: 用户信息
     var user: User?
     //MARK: 转发微博
-    var reteeted_status: Status?
+    var retweeted_status: Status?
     //MARK: 配置URL数组
     var pictureURL:[NSURL]?{
-        return reteeted_status != nil ? reteeted_status?.storedPicURLS : storedPicURLS
+        return retweeted_status != nil ? retweeted_status?.storedPicURLS : storedPicURLS
     }
 }
