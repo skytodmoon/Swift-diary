@@ -26,20 +26,18 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate {
         visitorView.delegate = self
         view = visitorView
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: #selector(BaseTableViewController.registerBtnClick))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: .Plain, target: self, action: #selector(BaseTableViewController.loginBtnDidClick))
-    }
-    
-    func loginBtnDidClick() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: .Plain, target: self, action: #selector(BaseTableViewController.registerBtnClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: #selector(BaseTableViewController.loginBtnDidClick))
         
-        print("点击了注册")
     }
     
-    func registerBtnClick() {
-
+    func loginBtnDidClick(){
         let nav = UINavigationController(rootViewController: OAuthViewController())
         presentViewController(nav, animated: true, completion: nil)
-        print("点击了授权登录")
+    }
+    
+    func registerBtnClick(){
+        print(#function)
     }
 }
 

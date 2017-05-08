@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: - 通知
 let SwitchRootViewControllerKey = "SwitchRootViewControllerKey"
 
 @UIApplicationMain
@@ -32,9 +33,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func defaultContoller () -> UIViewController {
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    //MARK: - 通知中心，判断时候进入引导页
+    func switchRootViewController(notify: NSNotification){
+        if notify.object as! Bool
+        {
+            window?.rootViewController = MainViewController()
+        }else
+        {
+            window?.rootViewController = WelcomeViewController()
+        }
+    }
+    //MARK: - 用户登入之后进入引导页
+    private func defaultContoller() ->UIViewController
+    {
+        if UserAccount.userLogin(){
+            return isNewupdate() ? NewfeatureCollectionViewController() : WelcomeViewController()
+        }
+        return MainViewController()
+    }
+    //MARK: - 版本更新判断
+    private func isNewupdate() -> Bool{
         
-        return MainViewController ()
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        let sandboxVersion =  NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? "1.0"
+        
+        if currentVersion.compare(sandboxVersion) == NSComparisonResult.OrderedDescending
+        {
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
+            return true
+        }
+        
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -48,9 +48,9 @@ import Alamofire
 
 class OAuthViewController: UIViewController {
     
-    let App_key = "1234171392"
+    let App_Key = "1234171392"
     let App_Secret = "0cf8bc17a50102cd755c4cd85684c4a1"
-    let App_Redirect_Url = "www.baidu.com"
+    let App_Redirect_Uri = "http://www.baidu.com"
     
     override func loadView() {
         view = webView
@@ -61,7 +61,7 @@ class OAuthViewController: UIViewController {
         navigationItem.title = "醉看红尘这场梦"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "关闭",style: .Plain, target: self,action: #selector(OAuthViewController.close))
         //MARK: - 拼接授权地址
-        let urlStr = "https://api.weibo.com/oauth2/authorize?client_id=\(App_key)&redirect_uri=\(App_Redirect_Url)"
+        let urlStr = "https://api.weibo.com/oauth2/authorize?client_id=\(App_Key)&redirect_uri=\(App_Redirect_Uri)"
         let url = NSURL(string: urlStr)
         let request = NSURLRequest(URL: url!)
         
@@ -86,7 +86,7 @@ class OAuthViewController: UIViewController {
 extension OAuthViewController: UIWebViewDelegate {
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if request.URL!.absoluteString.hasPrefix(App_Redirect_Url+"/?code="){
+        if request.URL!.absoluteString.hasPrefix(App_Redirect_Uri+"/?code="){
             let arr = request.URL?.query?.componentsSeparatedByString("=")
             loadAccessToken(arr!.last!)
             return false
@@ -127,11 +127,12 @@ extension OAuthViewController: UIWebViewDelegate {
      uid	string	授权用户的UID，本字段只是为了方便开发者，减少一次user/show接口调用而返回的，第三方应用不能用此字段作为用户登录状态的识别，只有access_token才是用户授权的唯一票据。
      */
     //MARK: - 获取授权	oauth2/access_token	获取授权过的Access Token
+    
+    
+    
     private func loadAccessToken(code: String) {
-        
-        let parameters = ["client_id" : App_key, "client_secret" : App_Secret, "grant_type" : "authorization_code", "code" : "code", "redirect_uri" : App_Redirect_Url]
+        let parameters = ["client_id":App_Key,"client_secret":App_Secret,"grant_type":"authorization_code","code":code,"redirect_uri":App_Redirect_Uri]
         Alamofire.request(.POST, "https://api.weibo.com/oauth2/access_token", parameters: parameters, encoding: .URL, headers: nil).responseJSON { (Response) -> Void in
-
             let account = UserAccount(dict:Response.result.value as! [String: AnyObject])
             account.loadUserInfo { (account, error) -> () in
                 if account != nil
