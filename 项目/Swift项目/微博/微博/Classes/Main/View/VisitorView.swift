@@ -112,7 +112,7 @@ class VisitorView: UIView {
     private lazy var registerButton: UIButton = {
         let registerButton = UIButton()
         registerButton.setTitle("注册", forState: .Normal)
-        registerButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        registerButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
         registerButton.addTarget(self, action: #selector(VisitorView.registerButtonClick), forControlEvents: .TouchUpInside)
         registerButton.setBackgroundImage(UIImage(named: "common_button_white_disable"), forState: .Normal)
         return registerButton

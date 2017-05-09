@@ -15,9 +15,7 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate {
     var visitorView = VisitorView()
     
     override func loadView() {
-        
         userIsLogin ? super.loadView() : setupVisitorView()
-        
     }
     
     //MARK: - 设置用户没有登录的时候加载旋转动画

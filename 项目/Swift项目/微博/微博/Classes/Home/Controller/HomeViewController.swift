@@ -161,7 +161,7 @@ class HomeViewController: BaseTableViewController {
         print(#function)
         print(UserAccount.loadAccount())
     }
-
+    
     var rowCache: [Int: CGFloat] = [Int: CGFloat]()
     
     override func didReceiveMemoryWarning() {
@@ -202,7 +202,6 @@ extension HomeViewController {
         }
         
         let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status)) as! StatusTableViewCell
-        
         //MARK: - 拿到对应行的行高
         let rowHeight = cell.rowHeight(status)
         rowCache[status.id] = rowHeight
