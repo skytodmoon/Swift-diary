@@ -11,7 +11,7 @@ import UIKit
 extension UIBarButtonItem {
     
     //MARK - 抽取导航栏按钮
-    class func createBarButtonItem(imageName: String,target:AnyObject?,action: Selector) ->UIBarButtonItem {
+    class func creatBarButtonItem(imageName:String,target:AnyObject?,action:Selector) ->UIBarButtonItem {
         let btn = UIButton()
         btn.setImage(UIImage(named: imageName), forState: .Normal)
         btn.setImage(UIImage(named: imageName + "_highlighted"), forState: .Highlighted)

@@ -10,41 +10,38 @@ import UIKit
 
 class HomeViewController: BaseTableViewController {
     
-    var statuses: [Status]? {
+    var statuses: [Status]?
+        {
         didSet{
             tableView.reloadData()
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //MARK: - 判断用户是否登录
-        if !userIsLogin {
+        if !userIsLogin
+        {
             visitorView.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
             return;
         }
         setupNav()
         
-        //MARK: - 通知代理方法
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorDismissNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.presentPhotoBrowserView(_:)), name: StatusPictureViewSelected, object: nil)
-
-        //MARK: - 注册tableviewcell
+        
         tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
-        tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
+        tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.ForwardCell.rawValue)
         tableView.separatorStyle = .None
+        
         refreshControl = HomeRefreshControl()
         refreshControl?.addTarget(self, action: #selector(HomeViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         
         loadData()
-        // Do any additional setup after loading the view.
     }
     
-    func presentPhotoBrowserView(notify: NSNotification){
-        
+    func presentPhotoBrowserView(notify: NSNotification)
+    {
         guard let indexPath = notify.userInfo![StatusPictureViewIndexKey] as? NSIndexPath else
         {
             print("indexPath为空")
@@ -57,22 +54,21 @@ class HomeViewController: BaseTableViewController {
             return
         }
         
-        //MARK: - 创建图片浏览器
+        // 1.创建图片浏览器
         let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
         
-        //MARK: - 显示图片浏览器
+        // 2.显示图片浏览器
         presentViewController(vc, animated: true, completion: nil)
-        
     }
+    
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    //MARK: - 设置导航的左右按钮和中间的按钮
-    private func setupNav() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_friendattention", target: self, action: #selector(HomeViewController.leftItemClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem.createBarButtonItem("navigationbar_pop", target: self, action: #selector(HomeViewController.rightItemClick))
-        //点击中间按钮
+    private func setupNav(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_friendattention", target: self, action: #selector(HomeViewController.leftItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_pop", target: self, action: #selector(HomeViewController.rightItemClick))
+        
         let titleBtn = TitleButton()
         titleBtn.setTitle("醉看红尘这场梦", forState: .Normal)
         titleBtn .addTarget(self, action: #selector(HomeViewController.titltBtnClick(_:)), forControlEvents: .TouchUpInside)
@@ -80,27 +76,34 @@ class HomeViewController: BaseTableViewController {
     }
     
     lazy var pullupRefreshFlag:Bool = false
-
     
-    func loadData() {
-        
+    func loadData()
+    {
         var since_id = statuses?.first?.id ?? 0
+        
         var max_id = 0
-        if pullupRefreshFlag{
+        if pullupRefreshFlag
+        {
             since_id = 0
             max_id = statuses?.last?.id ?? 0
         }
         
         Status.loadStatuses(since_id,max_id: max_id) { (models, error) -> () in
+            
             self.refreshControl?.endRefreshing()
-            if error != nil{
+            
+            if error != nil
+            {
                 return
             }
-            if since_id > 0{
+            if since_id > 0
+            {
                 self.statuses = models! + self.statuses!
                 self.showNewStatusCount(models?.count ?? 0)
             }else if max_id > 0{
                 self.statuses = self.statuses! + models!
+                //                print("加载更多")
+                
             }else{
                 self.statuses = models
             }
@@ -114,18 +117,19 @@ class HomeViewController: BaseTableViewController {
         }
         newStatusLabel.hidden = false
         newStatusLabel.text = "\(count)条新微博"
-
+        
         UIView.animateWithDuration(1, animations: { () -> Void in
             self.newStatusLabel.transform = CGAffineTransformMakeTranslation(0, self.newStatusLabel.frame.height)
-                }) { (_) -> Void in
-                        UIView.animateWithDuration(1, animations: { () -> Void in
-                        self.newStatusLabel.transform = CGAffineTransformIdentity
+            
+        }) { (_) -> Void in
+            UIView.animateWithDuration(1, animations: { () -> Void in
+                self.newStatusLabel.transform = CGAffineTransformIdentity
                 }, completion: { (_) -> Void in
                     self.newStatusLabel.hidden = true
             })
         }
     }
-
+    
     func change(){
         let titleBtn = navigationItem.titleView as! TitleButton
         titleBtn.selected = !titleBtn.selected
@@ -133,31 +137,36 @@ class HomeViewController: BaseTableViewController {
     
     func titltBtnClick(btn:TitleButton){
         let popoverVC = PopoverViewController()
+        
         popoverVC.transitioningDelegate = popoverAnimator
         popoverVC.modalPresentationStyle = .Custom
+        
+        
         presentViewController(popoverVC, animated: true, completion: nil)
     }
     
-    //MARK: - 菜单栏动画
+    /// 菜单栏动画
     private lazy var popoverAnimator = PopoverAnimator()
     
-    //MARK: - 下拉刷新提醒
-    private lazy var newStatusLabel: UILabel = {
-        let label = UILabel()
-        let height: CGFloat = 44
-        label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
-        label.backgroundColor = UIColor.orangeColor()
-        label.textColor = UIColor.whiteColor()
-        label.textAlignment = NSTextAlignment.Center
-        self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
-        label.hidden = true
-        return label
+    /// 下拉刷新提醒
+    private lazy var newStatusLabel: UILabel =
+        {
+            let label = UILabel()
+            let height: CGFloat = 44
+            label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
+            label.backgroundColor = UIColor.orangeColor()
+            label.textColor = UIColor.whiteColor()
+            label.textAlignment = NSTextAlignment.Center
+            self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
+            label.hidden = true
+            return label
     }()
-
-    @objc private func leftItemClick (){
+    
+    func leftItemClick(){
         print(#function)
     }
-    @objc private func rightItemClick () {
+    
+    func rightItemClick(){
         print(#function)
         print(UserAccount.loadAccount())
     }
@@ -169,12 +178,14 @@ class HomeViewController: BaseTableViewController {
     }
 }
 
-//MARK: - 设置TableViewDelegate，TableVideDataSource
-extension HomeViewController {
-    
+
+
+extension HomeViewController
+{
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return statuses?.count ?? 0
     }
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -185,7 +196,7 @@ extension HomeViewController {
         let count = statuses?.count ?? 0
         if indexPath.row == (count - 5)
         {
-            //MARK: - 滚动即将触底时,加载更多数据
+            // 滚动即将触底时,加载更多数据
             pullupRefreshFlag = true
             loadData()
         }
@@ -200,12 +211,10 @@ extension HomeViewController {
         {
             return height
         }
-        
         let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status)) as! StatusTableViewCell
-        //MARK: - 拿到对应行的行高
+        // 4.拿到对应行的行高
         let rowHeight = cell.rowHeight(status)
         rowCache[status.id] = rowHeight
         return rowHeight
     }
-
 }

@@ -11,61 +11,73 @@ import Alamofire
 import Kingfisher
 
 class Status: NSObject {
-    
-    //MARK: - 微博创建时间
-    var created_at: String?{
+    /// 微博创建时间
+    var created_at: String?
+        {
         didSet{
             let createdDate = NSDate.dateWithStr(created_at!)
             created_at = createdDate.descDate
         }
     }
-    //MARK: - 微博id
+    /// 微博ID
     var id: Int = 0
-    //MARK: 微博内容
+    /// 微博内容
     var text: String?
-    //MARK: 微博来源
-    var source: String?{
+    /// 微博来源
+    var source: String?
+        {
         didSet{
-            //MARK: - 截取字符串
-            if let str = source{
-                if str == ""{
+            // 1.截取字符串
+            if let str = source
+            {
+                if str == ""
+                {
                     return
                 }
-                //MARK: - 获取开始截取的位置
+                
+                // 1.1获取开始截取的位置
                 let startLocation = (str as NSString).rangeOfString(">").location + 1
-                //MARK: - 获取截取的长度
-                let length = (str as NSString).rangeOfString("<",options: NSStringCompareOptions.BackwardsSearch).location - startLocation
-                //MARK: 截取字符串
+                // 1.2获取截取的长度
+                let length = (str as NSString).rangeOfString("<", options: NSStringCompareOptions.BackwardsSearch).location - startLocation
+                // 1.3截取字符串
                 source = "来自:" + (str as NSString).substringWithRange(NSMakeRange(startLocation, length))
             }
         }
     }
-    //MARK: - 配图数组
-    var pic_urls: [[String: AnyObject]]?{
+    /// 配图数组
+    var pic_urls: [[String: AnyObject]]?
+        {
         didSet{
             storedPicURLS = [NSURL]()
             storedLargePicURLS = [NSURL]()
-            for dict in pic_urls!{
-                if let urlStr = dict["thumbnail_pic"]{
+            for dict in pic_urls!
+            {
+                if let urlStr = dict["thumbnail_pic"]
+                {
+                    storedPicURLS?.append(NSURL(string: urlStr as! String)!)
+                    
                     let largeURLStr = urlStr.stringByReplacingOccurrencesOfString("thumbnail", withString: "large")
                     storedLargePicURLS!.append(NSURL(string: largeURLStr)!)
                 }
             }
         }
     }
-    
-    //MARK: 配图的URL
+    /// 配图的URL
     var storedPicURLS: [NSURL]?
-    //MARK: 配图最大的URL
+    
+    /// 配图的大图URL
     var storedLargePicURLS: [NSURL]?
-    //MARK: 用户信息
+    
+    /// 用户信息
     var user: User?
-    //MARK: 转发微博
+    /// 转发微博
     var retweeted_status: Status?
-    //MARK: 配置URL数组
-    var pictureURLS:[NSURL]?{
+    /// 配图的URL数组
+    var pictureURLS:[NSURL]?
+    {
         return retweeted_status != nil ? retweeted_status?.storedPicURLS : storedPicURLS
     }
+    
     class func loadStatuses(since_id: Int,max_id:Int, finished: (models:[Status]?, error:NSError?)->()){
         var params = ["access_token": UserAccount.loadAccount()!.access_token!]
         
@@ -86,6 +98,7 @@ class Status: NSObject {
                 
                 let models = dictToModel(resultDic["statuses"] as! [[String: AnyObject]])
                 cacheStatusImages(models, finished:finished )
+                print("获取首页数据成功")
                 print(Response)
             }
         }
@@ -95,24 +108,30 @@ class Status: NSObject {
     class func cacheStatusImages(list: [Status], finished: (models:[Status]?, error:NSError?)->()) {
         
         let group = dispatch_group_create()
+        
         for status in list
         {
             guard let _ = status.pictureURLS else
             {
                 continue
             }
+            
             for url in status.pictureURLS!
             {
                 dispatch_group_enter(group)
+                
                 let downloader = KingfisherManager.sharedManager.downloader
+                
                 downloader.downloadImageWithURL(url, progressBlock: nil, completionHandler: { (image, error, imageURL, originalData) -> () in
                     if let image = image,imageURL = imageURL{
                         ImageCache.defaultCache.storeImage(image, forKey: imageURL.absoluteString)
                     }
+                    
                     dispatch_group_leave(group)
                 })
             }
         }
+        
         dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
             finished(models: list, error: nil)
         }
