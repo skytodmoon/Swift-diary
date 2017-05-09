@@ -107,16 +107,38 @@ class PhotoBrowserController: UIViewController {
     
 }
 //MARK: - UICollectionViewDelegate,UICollectionViewDataSource
-extension PhotoBrowserController: UICollectionViewDelegate,UICollectionViewDataSource{
+extension PhotoBrowserController: UICollectionViewDelegate,UICollectionViewDataSource,PhotoBrowserCellDelegate{
     
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pictureURLs?.count ?? 0
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoBrowserCellReuseIdentifier, forIndexPath: indexPath) as! PhotoBrowserCell
+        
+        cell.imageURL = pictureURLs![indexPath.item]
+        cell.photoBrowserCellDelegate = self
+        return cell
+    }
     
+    func photoBrowserCellDidClose(cell: PhotoBrowserCell) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 //MARK: - UICollectionViewLayout
-class PhotoBrowserLayout: UICollectionViewLayout {
+class PhotoBrowserLayout: UICollectionViewFlowLayout {
     
     override func prepareLayout() {
         
         itemSize = UIScreen.mainScreen().bounds.size
+        minimumInteritemSpacing = 0
+        minimumLineSpacing = 0
+        scrollDirection = UICollectionViewScrollDirection.Horizontal
+        
+        collectionView?.showsHorizontalScrollIndicator = false
+        collectionView?.pagingEnabled = true
+        collectionView?.bounces =  false
         
     }
 }
