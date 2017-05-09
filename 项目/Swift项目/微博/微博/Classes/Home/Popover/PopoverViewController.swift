@@ -7,29 +7,55 @@
 //
 
 import UIKit
+import SnapKit
 
-class PopoverViewController: UIViewController {
-
+class PopoverViewController: UIViewController ,UITableViewDataSource{
+    
+    var tabbleView = UITableView()
+    let identifer:String = "customCell"
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.addSubview(backgroundImageView)
+        view.addSubview(tabbleView)
+        tabbleView.backgroundColor = UIColor.clearColor()
+        tabbleView.separatorStyle = .None
+        tabbleView.dataSource = self
+        tabbleView.registerClass(UITableViewCell.self, forCellReuseIdentifier: identifer)
+        tabbleView.rowHeight = 30
+        
+        backgroundImageView.snp_makeConstraints { (make) -> Void in
+            make.top.bottom.left.right.equalTo(view)
+        }
+        tabbleView.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(view.snp_left).offset(5)
+            make.right.equalTo(view.snp_right).offset(-5)
+            make.top.equalTo(view.snp_top).offset(15)
+            make.bottom.equalTo(view.snp_bottom).offset(-10)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    lazy private var backgroundImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "popover_background"))
+        return imageView
+    }()
+    
+    
+    // MARK: - UITableViewDataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friendGroup.count
     }
-    */
-
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifer)!
+        cell.textLabel!.text = friendGroup[indexPath.row]
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.clearColor()
+        return cell
+    }
+    
+    // MARK: - 好友分组
+    lazy var friendGroup: [String] = {
+        return ["首页", "好友圈", "群微博", "我的微博","特别关注","我关注的iOS大牛"];
+    }()
 }

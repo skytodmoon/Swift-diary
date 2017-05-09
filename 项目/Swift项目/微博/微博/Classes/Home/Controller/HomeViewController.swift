@@ -43,7 +43,27 @@ class HomeViewController: BaseTableViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    func presentPhotoBrowserView(notify: NSNotification){
+        
+        guard let indexPath = notify.userInfo![StatusPictureViewIndexKey] as? NSIndexPath else
+        {
+            print("indexPath为空")
+            return
+        }
+        
+        guard let urls = notify.userInfo![StatusPictureViewURLsKey] as? [NSURL] else
+        {
+            print("配图为空")
+            return
+        }
+        
+        //MARK: - 创建图片浏览器
+        let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
+        
+        //MARK: - 显示图片浏览器
+        presentViewController(vc, animated: true, completion: nil)
+        
+    }
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
@@ -58,6 +78,8 @@ class HomeViewController: BaseTableViewController {
         titleBtn .addTarget(self, action: #selector(HomeViewController.titltBtnClick(_:)), forControlEvents: .TouchUpInside)
         navigationItem.titleView = titleBtn
     }
+    
+    lazy var pullupRefreshFlag:Bool = false
 
     
     func loadData() {
@@ -104,47 +126,15 @@ class HomeViewController: BaseTableViewController {
         }
     }
 
-    
     func change(){
         let titleBtn = navigationItem.titleView as! TitleButton
         titleBtn.selected = !titleBtn.selected
     }
     
-    func presentPhotoBrowserView(notify: NSNotification){
-        
-        guard let indexPath = notify.userInfo![StatusPictureViewIndexKey] as? NSIndexPath else
-        {
-            print("indexPath为空")
-            return
-        }
-        
-        guard let urls = notify.userInfo![StatusPictureViewURLsKey] as? [NSURL] else
-        {
-            print("配图为空")
-            return
-        }
-        
-        //MARK: - 创建图片浏览器
-        let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
-        
-        //MARK: - 显示图片浏览器
-        presentViewController(vc, animated: true, completion: nil)
-
-    }
-    
-    lazy var pullupRefreshFlag:Bool = false
-    
-    @objc private func leftItemClick (){
-        print(#function)
-    }
-    @objc private func rightItemClick () {
-        print(#function)
-        print(UserAccount.loadAccount())
-    }
     func titltBtnClick(btn:TitleButton){
         let popoverVC = PopoverViewController()
-        
-        
+        popoverVC.transitioningDelegate = popoverAnimator
+        popoverVC.modalPresentationStyle = .Custom
         presentViewController(popoverVC, animated: true, completion: nil)
     }
     
@@ -152,19 +142,26 @@ class HomeViewController: BaseTableViewController {
     private lazy var popoverAnimator = PopoverAnimator()
     
     //MARK: - 下拉刷新提醒
-    private lazy var newStatusLabel: UILabel =
-        {
-            let label = UILabel()
-            let height: CGFloat = 44
-            label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
-            label.backgroundColor = UIColor.orangeColor()
-            label.textColor = UIColor.whiteColor()
-            label.textAlignment = NSTextAlignment.Center
-            self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
-            label.hidden = true
-            return label
+    private lazy var newStatusLabel: UILabel = {
+        let label = UILabel()
+        let height: CGFloat = 44
+        label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
+        label.backgroundColor = UIColor.orangeColor()
+        label.textColor = UIColor.whiteColor()
+        label.textAlignment = NSTextAlignment.Center
+        self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
+        label.hidden = true
+        return label
     }()
-    
+
+    @objc private func leftItemClick (){
+        print(#function)
+    }
+    @objc private func rightItemClick () {
+        print(#function)
+        print(UserAccount.loadAccount())
+    }
+
     var rowCache: [Int: CGFloat] = [Int: CGFloat]()
     
     override func didReceiveMemoryWarning() {

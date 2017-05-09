@@ -18,7 +18,6 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate {
         
         userIsLogin ? super.loadView() : setupVisitorView()
         
-        setupVisitorView()
     }
     
     //MARK: - 设置用户没有登录的时候加载旋转动画
