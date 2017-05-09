@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseTableViewController {
     
-    var statuess: [Status]? {
+    var statuses: [Status]? {
         didSet{
             tableView.reloadData()
         }
@@ -41,12 +41,6 @@ class HomeViewController: BaseTableViewController {
         loadData()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func change(){
         let titleBtn = navigationItem.titleView as! TitleButton
@@ -67,25 +61,90 @@ class HomeViewController: BaseTableViewController {
         titleBtn .addTarget(self, action: #selector(HomeViewController.titltBtnClick(_:)), forControlEvents: .TouchUpInside)
         navigationItem.titleView = titleBtn
     }
-    @objc private func leftItemClick (){
+
+    
+    func loadData() {
         
     }
+    
+    lazy var pullupRefreshFlag:Bool = false
+    
+    @objc private func leftItemClick (){
+        print(#function)
+    }
     @objc private func rightItemClick () {
-        
+        print(#function)
+        print(UserAccount.loadAccount())
     }
     func titltBtnClick(btn:TitleButton){
         let popoverVC = PopoverViewController()
-      
+        
         
         presentViewController(popoverVC, animated: true, completion: nil)
     }
     
-    func loadData() {
-        
+    //MARK: - 菜单栏动画
+    private lazy var popoverAnimator = PopoverAnimator()
+    
+    //MARK: - 下拉刷新提醒
+    private lazy var newStatusLabel: UILabel =
+        {
+            let label = UILabel()
+            let height: CGFloat = 44
+            label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
+            label.backgroundColor = UIColor.orangeColor()
+            label.textColor = UIColor.whiteColor()
+            label.textAlignment = NSTextAlignment.Center
+            self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
+            label.hidden = true
+            return label
+    }()
+    
+    var rowCache: [Int: CGFloat] = [Int: CGFloat]()
+    
+    override func didReceiveMemoryWarning() {
+        rowCache.removeAll()
     }
 }
 
 //MARK: - 设置TableViewDelegate，TableVideDataSource
 extension HomeViewController {
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses?.count ?? 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let status = statuses![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status), forIndexPath: indexPath) as! StatusTableViewCell
+        cell.status = status
+        
+        let count = statuses?.count ?? 0
+        if indexPath.row == (count - 5)
+        {
+            //MARK: - 滚动即将触底时,加载更多数据
+            pullupRefreshFlag = true
+            loadData()
+        }
+        return cell
+    }
+    
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let status = statuses![indexPath.row]
+        
+        if let height = rowCache[status.id]
+        {
+            return height
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status)) as! StatusTableViewCell
+        
+        //MARK: - 拿到对应行的行高
+        let rowHeight = cell.rowHeight(status)
+        rowCache[status.id] = rowHeight
+        return rowHeight
+    }
+
 }

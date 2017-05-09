@@ -52,17 +52,17 @@ class StatusTableViewCell: UITableViewCell {
         contentView.addSubview(footerView)
         
         let width = UIScreen.mainScreen().bounds.width
-        topView.snp_makeConstraints { (make) in
+        topView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(contentView)
             make.left.equalTo(contentView)
             make.width.equalTo(width)
             make.height.equalTo(60)
         }
-        contentLabel.snp_makeConstraints { (make) in
+        contentLabel.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(topView.snp_bottom).offset(10)
             make.left.equalTo(topView.snp_left).offset(10)
         }
-        footerView.snp_makeConstraints { (make) in
+        footerView.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(width)
             make.top.equalTo(pictureView.snp_bottom).offset(10)
             make.height.equalTo(44)
