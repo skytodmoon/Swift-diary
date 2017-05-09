@@ -23,10 +23,7 @@ class PopoverAnimator: NSObject , UIViewControllerTransitioningDelegate, UIViewC
         pc.presentFrame = presentFrame
         return pc
     }
-    
-    /**
-     返回负责提供 Modal 动画对象
-     */
+    //MARK: - 返回负责提供 Modal 动画对象
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         isPresent = true
@@ -34,9 +31,8 @@ class PopoverAnimator: NSObject , UIViewControllerTransitioningDelegate, UIViewC
         return self
     }
     
-    /**
-     返回负责 dismiss 动画对象
-     */
+
+    //MARK: - 返回负责 dismiss 动画对象
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         isPresent = false
@@ -44,23 +40,12 @@ class PopoverAnimator: NSObject , UIViewControllerTransitioningDelegate, UIViewC
         return self
     }
     
-    // MARK: - UIViewControllerAnimatedTransitioning
-    /**
-     返回动画时长
-     
-     :param: transitionContext 转场上下文, 提供了转场需要的参数
-     
-     :returns: 动画时长
-     */
+    // MARK: - UIViewControllerAnimatedTransitioning返回动画时长 :param: transitionContext 转场上下文, 提供了转场需要的参数 :returns: 动画时长
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval{
         return 0.5
     }
     
-    /**
-     转场动画实现
-     
-     :param: transitionContext 转场上下文, 提供了转场需要的参数
-     */
+    //MARK: - 转场动画实现 :param: transitionContext 转场上下文, 提供了转场需要的参数
     func animateTransition(transitionContext: UIViewControllerContextTransitioning){
         if isPresent
         {
