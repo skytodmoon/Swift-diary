@@ -8,87 +8,120 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let newfeatureCellIdentifier = "NewfeatureCellIdentifier"
 
 class NewfeatureCollectionViewController: UICollectionViewController {
-
+    private let  pageCount = 4
+    private var layout: UICollectionViewFlowLayout = NewfeatureLayout()
+    init(){
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
+        collectionView?.registerClass(NewfeatureCell.self, forCellWithReuseIdentifier: newfeatureCellIdentifier)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
+    
+    
+    // MARK: - UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return pageCount
     }
-
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(newfeatureCellIdentifier, forIndexPath: indexPath) as! NewfeatureCell
+        
+        cell.imageIndex = indexPath.item
+        
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
     
+    override func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let path = collectionView.indexPathsForVisibleItems().last!
+        if path.item == (pageCount - 1)
+        {
+            let cell = collectionView.cellForItemAtIndexPath(path) as! NewfeatureCell
+            cell.startBtnAnimation()
+        }
     }
-    */
+}
 
+class NewfeatureCell: UICollectionViewCell
+{
+    private var imageIndex:Int? {
+        didSet{
+            iconView.image = UIImage(named: "new_feature_\(imageIndex! + 1)")
+        }
+    }
+    
+    func startBtnAnimation(){
+        startButton.hidden = false
+        
+        startButton.transform = CGAffineTransformMakeScale(0.0, 0.0)
+        startButton.userInteractionEnabled = false
+        
+        UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: UIViewAnimationOptions(rawValue: 0), animations: { () -> Void in
+            self.startButton.transform = CGAffineTransformIdentity
+            }, completion: { (_) -> Void in
+                self.startButton.userInteractionEnabled = true
+        })
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func customBtnClick()
+    {
+        NSNotificationCenter.defaultCenter().postNotificationName(SwitchRootViewControllerKey, object: true)
+    }
+    
+    private func setupUI(){
+        contentView.addSubview(iconView)
+        contentView.addSubview(startButton)
+        
+        iconView.snp_makeConstraints { (make) -> Void in
+            make.size.equalTo(contentView)
+            make.center.equalTo(contentView)
+        }
+        startButton.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(contentView)
+            make.bottom.equalTo(contentView.snp_bottom).offset(-160)
+        }
+    }
+    
+    private lazy var iconView = UIImageView()
+    private lazy var startButton: UIButton = {
+        let btn = UIButton()
+        btn.setBackgroundImage(UIImage(named: "new_feature_button"), forState: UIControlState.Normal)
+        btn.setBackgroundImage(UIImage(named: "new_feature_button_highlighted"), forState: UIControlState.Highlighted)
+        btn.hidden = true
+        btn.addTarget(self, action: #selector(NewfeatureCell.customBtnClick), forControlEvents: UIControlEvents.TouchUpInside)
+        return btn
+    }()
+    
+}
+
+private class NewfeatureLayout: UICollectionViewFlowLayout {
+    
+    override func prepareLayout(){
+        itemSize = UIScreen.mainScreen().bounds.size
+        minimumInteritemSpacing = 0
+        minimumLineSpacing = 0
+        scrollDirection = UICollectionViewScrollDirection.Horizontal
+        collectionView?.showsHorizontalScrollIndicator = false
+        collectionView?.bounces = false
+        collectionView?.pagingEnabled = true
+    }
 }
