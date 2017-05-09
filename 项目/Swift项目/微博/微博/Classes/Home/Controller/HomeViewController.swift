@@ -30,11 +30,12 @@ class HomeViewController: BaseTableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorDismissNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.presentPhotoBrowserView(_:)), name: StatusPictureViewSelected, object: nil)
-    
+        /*
         //MARK: - 注册tableviewcell
         tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.separatorStyle = .None
+         */
         refreshControl = HomeRefreshControl()
         refreshControl?.addTarget(self, action: #selector(HomeViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         
@@ -42,13 +43,9 @@ class HomeViewController: BaseTableViewController {
         // Do any additional setup after loading the view.
     }
     
-    func change(){
-        let titleBtn = navigationItem.titleView as! TitleButton
-        titleBtn.selected = !titleBtn.selected
-    }
     
-    func presentPhotoBrowserView(notify: NSNotification){
-        
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     //MARK: - 设置导航的左右按钮和中间的按钮
@@ -65,6 +62,33 @@ class HomeViewController: BaseTableViewController {
     
     func loadData() {
         
+    }
+    
+    func change(){
+        let titleBtn = navigationItem.titleView as! TitleButton
+        titleBtn.selected = !titleBtn.selected
+    }
+    
+    func presentPhotoBrowserView(notify: NSNotification){
+        
+        guard let indexPath = notify.userInfo![StatusPictureViewIndexKey] as? NSIndexPath else
+        {
+            print("indexPath为空")
+            return
+        }
+        
+        guard let urls = notify.userInfo![StatusPictureViewURLsKey] as? [NSURL] else
+        {
+            print("配图为空")
+            return
+        }
+        
+//        //MARK: - 创建图片浏览器
+//        let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
+//        
+//        //MARK: - 显示图片浏览器
+//        presentViewController(vc, animated: true, completion: nil)
+
     }
     
     lazy var pullupRefreshFlag:Bool = false
