@@ -86,6 +86,7 @@ class Status: NSObject {
                 
                 let models = dictToModel(resultDic["statuses"] as! [[String: AnyObject]])
                 cacheStatusImages(models, finished:finished )
+                print(Response)
             }
         }
         
