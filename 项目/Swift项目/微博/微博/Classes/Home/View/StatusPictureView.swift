@@ -10,16 +10,16 @@ import UIKit
 import Kingfisher
 
 class StatusPictureView: UICollectionView {
-
-    var status: Status?{
+    var status: Status?
+        {
         didSet{
             reloadData()
         }
     }
     
-    private var pictureLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    
-    init(){
+    private var pictureLayout: UICollectionViewFlowLayout =  UICollectionViewFlowLayout()
+    init()
+    {
         super.init(frame: CGRectZero, collectionViewLayout: pictureLayout)
         
         registerClass(PictureViewCell.self, forCellWithReuseIdentifier: PictureViewCellReuseIdentifier)
@@ -30,8 +30,9 @@ class StatusPictureView: UICollectionView {
         backgroundColor = UIColor.clearColor()
     }
     
-    func calculateImageSize() -> CGSize {
-        
+    
+    func calculateImageSize() -> CGSize
+    {
         let count = status?.storedPicURLS?.count
         if count == 0 || count == nil
         {
@@ -65,9 +66,11 @@ class StatusPictureView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     private class PictureViewCell: UICollectionViewCell {
         
-        var imageURL: NSURL?{
+        var imageURL: NSURL?
+            {
             didSet{
                 iconImageView.kf_setImageWithURL(imageURL!)
                 
@@ -75,54 +78,55 @@ class StatusPictureView: UICollectionView {
                 {
                     gifView.hidden = false
                 }
-
             }
         }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    private func setupUI(){
         
-        contentView.clipsToBounds = true
-        contentView.addSubview(iconImageView)
-        contentView.addSubview(gifView)
-        iconImageView.snp_makeConstraints { (make) -> Void in
-            make.top.bottom.equalTo(contentView)
-            make.right.left.equalTo(contentView)
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            setupUI()
         }
         
-        gifView.snp_makeConstraints { (make) -> Void in
-            make.right.equalTo(iconImageView.snp_right)
-            make.bottom.equalTo(iconImageView.snp_bottom)
-            make.height.equalTo(10)
-            make.width.equalTo(20)
+        private func setupUI()
+        {
+            contentView.clipsToBounds = true
+            contentView.addSubview(iconImageView)
+            contentView.addSubview(gifView)
+            iconImageView.snp_makeConstraints { (make) -> Void in
+                make.top.bottom.equalTo(contentView)
+                make.right.left.equalTo(contentView)
+            }
+            
+            gifView.snp_makeConstraints { (make) -> Void in
+                make.right.equalTo(iconImageView.snp_right)
+                make.bottom.equalTo(iconImageView.snp_bottom)
+                make.height.equalTo(10)
+                make.width.equalTo(20)
+            }
         }
-
+        
+        private lazy var iconImageView:UIImageView = {
+            let imageView = UIImageView()
+            imageView.contentMode = .ScaleAspectFill
+            return imageView
+        }()
+        private lazy var gifView: UILabel = {
+            let gifView = UILabel()
+            gifView.backgroundColor = UIColor ( red: 0.3406, green: 0.7527, blue: 0.9988, alpha: 0.729544974662162 )
+            gifView.textColor = UIColor.whiteColor()
+            gifView.text = "GIF"
+            gifView.textAlignment = .Center
+            gifView.font = UIFont.systemFontOfSize(8)
+            gifView.hidden = true
+            return gifView
+        }()
+        
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
     }
     
-    private lazy var iconImageView:UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .ScaleAspectFill
-        return imageView
-    }()
-    
-    private lazy var gifView: UILabel = {
-        let gifView = UILabel()
-        gifView.backgroundColor = UIColor ( red: 0.3406, green: 0.7527, blue: 0.9988, alpha: 0.729544974662162 )
-        gifView.textColor = UIColor.whiteColor()
-        gifView.text = "GIF"
-        gifView.textAlignment = .Center
-        gifView.font = UIFont.systemFontOfSize(8)
-        gifView.hidden = true
-        return gifView
-    }()
-
 }
-
 
 let StatusPictureViewSelected = "StatusPictureViewSelected"
 //MARK: - 当前选中图片的索引
@@ -131,8 +135,8 @@ let StatusPictureViewIndexKey = "StatusPictureViewIndexKey"
 let StatusPictureViewURLsKey = "StatusPictureViewURLsKey"
 
 //MARK: - UICollectionViewDataSource,UICollectionViewDelegate
-extension StatusPictureView: UICollectionViewDataSource,UICollectionViewDelegate{
-    
+extension StatusPictureView: UICollectionViewDataSource ,UICollectionViewDelegate
+{
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return status?.storedPicURLS?.count ?? 0
     }
@@ -148,5 +152,5 @@ extension StatusPictureView: UICollectionViewDataSource,UICollectionViewDelegate
         let info = [StatusPictureViewIndexKey : indexPath, StatusPictureViewURLsKey : status!.storedLargePicURLS!]
         NSNotificationCenter.defaultCenter().postNotificationName(StatusPictureViewSelected, object: self, userInfo: info)
     }
-
+    
 }
