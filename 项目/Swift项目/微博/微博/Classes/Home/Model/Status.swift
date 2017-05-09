@@ -11,7 +11,7 @@ import Alamofire
 import Kingfisher
 
 class Status: NSObject {
-    /// 微博创建时间
+    //MARK: - 微博创建时间
     var created_at: String?
         {
         didSet{
@@ -19,15 +19,15 @@ class Status: NSObject {
             created_at = createdDate.descDate
         }
     }
-    /// 微博ID
+    //MARK: -  微博ID
     var id: Int = 0
-    /// 微博内容
+    //MARK: -  微博内容
     var text: String?
-    /// 微博来源
+    //MARK: -  微博来源
     var source: String?
         {
         didSet{
-            // 1.截取字符串
+            //MARK: - 截取字符串
             if let str = source
             {
                 if str == ""
@@ -35,16 +35,16 @@ class Status: NSObject {
                     return
                 }
                 
-                // 1.1获取开始截取的位置
+                //MARK: - 获取开始截取的位置
                 let startLocation = (str as NSString).rangeOfString(">").location + 1
-                // 1.2获取截取的长度
+                //MARK: - 获取截取的长度
                 let length = (str as NSString).rangeOfString("<", options: NSStringCompareOptions.BackwardsSearch).location - startLocation
-                // 1.3截取字符串
+                //MARK: - 截取字符串
                 source = "来自:" + (str as NSString).substringWithRange(NSMakeRange(startLocation, length))
             }
         }
     }
-    /// 配图数组
+    //MARK: -  配图数组
     var pic_urls: [[String: AnyObject]]?
         {
         didSet{
@@ -62,17 +62,17 @@ class Status: NSObject {
             }
         }
     }
-    /// 配图的URL
+    //MARK: -  配图的URL
     var storedPicURLS: [NSURL]?
     
-    /// 配图的大图URL
+    //MARK: -  配图的大图URL
     var storedLargePicURLS: [NSURL]?
     
-    /// 用户信息
+    //MARK: -  用户信息
     var user: User?
-    /// 转发微博
+    //MARK: -  转发微博
     var retweeted_status: Status?
-    /// 配图的URL数组
+    //MARK: -  配图的URL数组
     var pictureURLS:[NSURL]?
     {
         return retweeted_status != nil ? retweeted_status?.storedPicURLS : storedPicURLS
@@ -104,7 +104,7 @@ class Status: NSObject {
         }
         
     }
-    /// 缓存配图
+    //MARK: -  缓存配图
     class func cacheStatusImages(list: [Status], finished: (models:[Status]?, error:NSError?)->()) {
         
         let group = dispatch_group_create()
