@@ -30,12 +30,11 @@ class HomeViewController: BaseTableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.change), name: PopoverAnimatorDismissNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.presentPhotoBrowserView(_:)), name: StatusPictureViewSelected, object: nil)
-        /*
+
         //MARK: - 注册tableviewcell
         tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
         tableView.separatorStyle = .None
-         */
         refreshControl = HomeRefreshControl()
         refreshControl?.addTarget(self, action: #selector(HomeViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
         
@@ -62,8 +61,48 @@ class HomeViewController: BaseTableViewController {
     
     func loadData() {
         
+        var since_id = statuses?.first?.id ?? 0
+        var max_id = 0
+        if pullupRefreshFlag{
+            since_id = 0
+            max_id = statuses?.last?.id ?? 0
+        }
+        
+        Status.loadStatuses(since_id,max_id: max_id) { (models, error) -> () in
+            self.refreshControl?.endRefreshing()
+            if error != nil{
+                return
+            }
+            if since_id > 0{
+                self.statuses = models! + self.statuses!
+                self.showNewStatusCount(models?.count ?? 0)
+            }else if max_id > 0{
+                self.statuses = self.statuses! + models!
+            }else{
+                self.statuses = models
+            }
+        }
     }
     
+    private func showNewStatusCount(count : Int)
+    {
+        if count == 0{
+            return;
+        }
+        newStatusLabel.hidden = false
+        newStatusLabel.text = "\(count)条新微博"
+
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.newStatusLabel.transform = CGAffineTransformMakeTranslation(0, self.newStatusLabel.frame.height)
+                }) { (_) -> Void in
+                        UIView.animateWithDuration(1, animations: { () -> Void in
+                        self.newStatusLabel.transform = CGAffineTransformIdentity
+                }, completion: { (_) -> Void in
+                    self.newStatusLabel.hidden = true
+            })
+        }
+    }
+
     func change(){
         let titleBtn = navigationItem.titleView as! TitleButton
         titleBtn.selected = !titleBtn.selected
@@ -83,11 +122,11 @@ class HomeViewController: BaseTableViewController {
             return
         }
         
-//        //MARK: - 创建图片浏览器
-//        let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
-//        
-//        //MARK: - 显示图片浏览器
-//        presentViewController(vc, animated: true, completion: nil)
+        //MARK: - 创建图片浏览器
+        let vc = PhotoBrowserController(index: indexPath.item, urls: urls)
+        
+        //MARK: - 显示图片浏览器
+        presentViewController(vc, animated: true, completion: nil)
 
     }
     

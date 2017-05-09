@@ -69,8 +69,6 @@ class UserAccount: NSObject {
                 self.screen_name = dic["screen_name"] as? String
                 self.avatar_large = dic["avatar_large"] as? String
                 finished(account: self, error: nil)
-                print("请求用户授权接口成功")
-                print(Response)
                 return
                     } else {
                 finished(account: nil, error: Response.result.error)

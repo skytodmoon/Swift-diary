@@ -63,7 +63,99 @@ class Status: NSObject {
     //MARK: 转发微博
     var retweeted_status: Status?
     //MARK: 配置URL数组
-    var pictureURL:[NSURL]?{
+    var pictureURLS:[NSURL]?{
         return retweeted_status != nil ? retweeted_status?.storedPicURLS : storedPicURLS
+    }
+    class func loadStatuses(since_id: Int,max_id:Int, finished: (models:[Status]?, error:NSError?)->()){
+        var params = ["access_token": UserAccount.loadAccount()!.access_token!]
+        
+        if since_id > 0 {
+            params["since_id"] = "\(since_id)"
+        }
+        
+        if max_id > 0
+        {
+            params["max_id"] = "\(max_id - 1)"
+        }
+        
+        Alamofire.request(.GET, "https://api.weibo.com/2/statuses/home_timeline.json", parameters:params, encoding: .URL, headers: nil).responseJSON { (
+            Response
+            ) -> Void in
+            if (Response.result.value != nil){
+                let resultDic = Response.result.value as! [String:AnyObject]
+                
+                let models = dictToModel(resultDic["statuses"] as! [[String: AnyObject]])
+                cacheStatusImages(models, finished:finished )
+            }
+        }
+        
+    }
+    /// 缓存配图
+    class func cacheStatusImages(list: [Status], finished: (models:[Status]?, error:NSError?)->()) {
+        
+        let group = dispatch_group_create()
+        for status in list
+        {
+            guard let _ = status.pictureURLS else
+            {
+                continue
+            }
+            for url in status.pictureURLS!
+            {
+                dispatch_group_enter(group)
+                let downloader = KingfisherManager.sharedManager.downloader
+                downloader.downloadImageWithURL(url, progressBlock: nil, completionHandler: { (image, error, imageURL, originalData) -> () in
+                    if let image = image,imageURL = imageURL{
+                        ImageCache.defaultCache.storeImage(image, forKey: imageURL.absoluteString)
+                    }
+                    dispatch_group_leave(group)
+                })
+            }
+        }
+        dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
+            finished(models: list, error: nil)
+        }
+    }
+    
+    class func dictToModel(list: [[String: AnyObject]]) -> [Status] {
+        var models = [Status]()
+        for dict in list
+        {
+            models.append(Status(dict: dict))
+        }
+        return models
+    }
+    
+    init(dict: [String: AnyObject])
+    {
+        super.init()
+        setValuesForKeysWithDictionary(dict)
+    }
+    
+    override func setValue(value: AnyObject?, forKey key: String) {
+        
+        if "user" == key
+        {
+            user = User(dict: value as! [String : AnyObject])
+            return
+        }
+        
+        if "retweeted_status" == key
+        {
+            retweeted_status = Status(dict: value as! [String : AnyObject])
+            return
+        }
+        
+        super.setValue(value, forKey: key)
+    }
+    
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        
+    }
+    
+    var properties = ["created_at", "id", "text", "source", "pic_urls"]
+    override var description: String {
+        let dict = dictionaryWithValuesForKeys(properties)
+        return "\(dict)"
     }
 }
