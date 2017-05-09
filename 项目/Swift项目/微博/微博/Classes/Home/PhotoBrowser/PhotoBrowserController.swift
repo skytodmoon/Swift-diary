@@ -34,6 +34,26 @@ class PhotoBrowserController: UIViewController {
     
     private func setupUI(){
         
+        view.addSubview(collectionView)
+        view.addSubview(closeBtn)
+        view.addSubview(saveBtn)
+        
+        closeBtn.snp_makeConstraints { (make) in
+            make.right.equalTo(view).offset(-10)
+            make.bottom.equalTo(view).offset(-10)
+            make.height.equalTo(35)
+            make.width.equalTo(100)
+        }
+        
+        saveBtn.snp_makeConstraints { (make) in
+            make.size.equalTo(closeBtn)
+            make.left.equalTo(view).offset(10)
+            make.bottom.equalTo(view).offset(-10)
+        }
+        
+        collectionView.frame = UIScreen.mainScreen().bounds
+        collectionView.dataSource = self
+        collectionView.registerClass(PhotoBrowserCell.self, forCellWithReuseIdentifier: PhotoBrowserCellReuseIdentifier)
     }
     
     
@@ -43,7 +63,27 @@ class PhotoBrowserController: UIViewController {
     
     func save() {
         
+        let index = collectionView.indexPathsForVisibleItems().last!
+        let cell = collectionView.cellForItemAtIndexPath(index) as! PhotoBrowserCell
+        let image = cell.iconView.image
+        UIImageWriteToSavedPhotosAlbum(image!, self, #selector(PhotoBrowserController.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
     }
+    
+    func image(image:UIImage, didFinishSavingWithError error:NSError?, contextInfo:AnyObject){
+        if error != nil
+        {
+            // TODO
+            print("保存失败")
+            
+        }else
+        {
+            
+            print("保存成功")
+        }
+    }
+    
+    
     //MARK: - 懒加载关闭按钮
     private lazy var closeBtn: UIButton = {
         let btn = UIButton()
@@ -75,6 +115,8 @@ extension PhotoBrowserController: UICollectionViewDelegate,UICollectionViewDataS
 class PhotoBrowserLayout: UICollectionViewLayout {
     
     override func prepareLayout() {
+        
+        itemSize = UIScreen.mainScreen().bounds.size
         
     }
 }
