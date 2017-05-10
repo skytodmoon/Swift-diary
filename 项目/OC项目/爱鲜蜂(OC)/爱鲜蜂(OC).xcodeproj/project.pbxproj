@@ -33,6 +33,8 @@
 		5B90BCB91EC314D9003E40F2 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BCA71EC314D9003E40F2 /* 系统消息 */; };
 		5B90BCBA1EC314D9003E40F2 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BCA81EC314D9003E40F2 /* 首页新鲜热卖 */; };
 		5B90BCBB1EC314D9003E40F2 /* 首页热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BCA91EC314D9003E40F2 /* 首页热卖 */; };
+		5B90BCC21EC316EA003E40F2 /* AppConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BCC11EC316EA003E40F2 /* AppConst.m */; };
+		5B90BCC71EC3174B003E40F2 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BCC61EC3174B003E40F2 /* MainTabBarController.m */; };
 		B2223A0A344428DF95C8D55D /* libPods-爱鲜蜂(OC).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA719B839C4F12EA5ADDAD /* libPods-爱鲜蜂(OC).a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,10 @@
 		5B90BCA81EC314D9003E40F2 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
 		5B90BCA91EC314D9003E40F2 /* 首页热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页热卖"; sourceTree = "<group>"; };
 		5B90BCBD1EC315D1003E40F2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B90BCC01EC316EA003E40F2 /* AppConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConst.h; sourceTree = "<group>"; };
+		5B90BCC11EC316EA003E40F2 /* AppConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConst.m; sourceTree = "<group>"; };
+		5B90BCC51EC3174B003E40F2 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		5B90BCC61EC3174B003E40F2 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		82BA719B839C4F12EA5ADDAD /* libPods-爱鲜蜂(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB73125484C1AAD222B14F5D /* Pods-爱鲜蜂(OC).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(OC).debug.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(OC)/Pods-爱鲜蜂(OC).debug.xcconfig"; sourceTree = "<group>"; };
 		ECFBF712079A4E65F8705B50 /* libPods-爱鲜蜂(OC)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂(OC)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +197,8 @@
 		5B90BC961EC314C7003E40F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B90BCC31EC31739003E40F2 /* Main */,
+				5B90BCBE1EC316B0003E40F2 /* Other */,
 				5B90BC971EC314D9003E40F2 /* Resouce(资源) */,
 			);
 			path = Classes;
@@ -219,6 +227,40 @@
 				5B90BCA91EC314D9003E40F2 /* 首页热卖 */,
 			);
 			path = "Resouce(资源)";
+			sourceTree = "<group>";
+		};
+		5B90BCBE1EC316B0003E40F2 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BCBF1EC316C8003E40F2 /* Conts */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5B90BCBF1EC316C8003E40F2 /* Conts */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BCC01EC316EA003E40F2 /* AppConst.h */,
+				5B90BCC11EC316EA003E40F2 /* AppConst.m */,
+			);
+			path = Conts;
+			sourceTree = "<group>";
+		};
+		5B90BCC31EC31739003E40F2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BCC41EC31739003E40F2 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B90BCC41EC31739003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BCC51EC3174B003E40F2 /* MainTabBarController.h */,
+				5B90BCC61EC3174B003E40F2 /* MainTabBarController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		9CA34D868111FB33A64A3E8D /* Pods */ = {
@@ -440,6 +482,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1706BA1EC2A2EB00834927 /* ViewController.m in Sources */,
+				5B90BCC71EC3174B003E40F2 /* MainTabBarController.m in Sources */,
+				5B90BCC21EC316EA003E40F2 /* AppConst.m in Sources */,
 				5B1706B71EC2A2EB00834927 /* AppDelegate.m in Sources */,
 				5B1706B41EC2A2EB00834927 /* main.m in Sources */,
 			);

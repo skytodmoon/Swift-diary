@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AppConst.h"
+#import "MainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +19,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setAppStyle];
+    [self buildKeyWindow];
+    
     return YES;
 }
+
+- (void)buildKeyWindow{
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    NSString *isFirestOpenApp = [[NSUserDefaults standardUserDefaults]objectForKey:IsFirstOpenApp];
+    if (isFirestOpenApp == nil) {
+        //MARK: - 这里正常是跳入到版本新特新界面
+        [self showMainTabBarController];
+        [[NSUserDefaults standardUserDefaults]setObject:IsFirstOpenApp forKey:IsFirstOpenApp];
+    }else{
+        [self showMainTabBarController];
+    }
+}
+
+- (void)setAppStyle{
+    UITabBar *item = [UITabBar appearance];
+    item.tintColor = [UIColor orangeColor];
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.translucent = NO;
+}
+
+- (void)showMainTabBarController
+{
+    self.window.rootViewController = [[MainTabBarController alloc]init];
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
