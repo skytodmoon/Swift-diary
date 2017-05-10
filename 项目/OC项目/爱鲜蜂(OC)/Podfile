@@ -7,14 +7,11 @@ target '爱鲜蜂(OC)' do
 
   # Pods for 爱鲜蜂(OC)
 
-  target '爱鲜蜂(OC)Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '爱鲜蜂(OC)UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+pod 'SVProgressHUD'
+pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'Masonry'
 
 end
