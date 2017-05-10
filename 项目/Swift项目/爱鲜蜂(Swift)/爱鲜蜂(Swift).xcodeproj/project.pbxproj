@@ -43,6 +43,8 @@
 		5BAFD6931EC2BAC4002E753D /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD67B1EC2BAC4002E753D /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5BAFD6941EC2BAC4002E753D /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAFD67E1EC2BAC4002E753D /* libSocialWechat.a */; };
 		5BAFD6951EC2BAC4002E753D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAFD67F1EC2BAC4002E753D /* libWeChatSDK.a */; };
+		5BAFD69E1EC2CEA2002E753D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD69D1EC2CEA2002E753D /* BaseViewController.swift */; };
+		5BAFD6A01EC2CEC4002E753D /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD69F1EC2CEC4002E753D /* RefreshHeader.swift */; };
 		5BE8709A1EC2A8C60076FA18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE870991EC2A8C60076FA18 /* AppDelegate.swift */; };
 		5BE8709C1EC2A8C60076FA18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8709B1EC2A8C60076FA18 /* ViewController.swift */; };
 		5BE8709F1EC2A8C60076FA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8709D1EC2A8C60076FA18 /* Main.storyboard */; };
@@ -71,9 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EBE8D0ED8C37452024CFD03 /* Pods_____Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Swift_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EBE8D0ED8C37452024CFD03 /* Pods_____Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Swift_UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0807DAC4277B687BC00E61 /* Pods-爱鲜蜂(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(Swift)/Pods-爱鲜蜂(Swift).debug.xcconfig"; sourceTree = "<group>"; };
-		2098A1643B4ABA3B9F8AB6BB /* Pods_____Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2098A1643B4ABA3B9F8AB6BB /* Pods_____Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Swift_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAFD6201EC2AD98002E753D /* 爱鲜蜂(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "爱鲜蜂(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BAFD6261EC2ADD8002E753D /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
 		5BAFD6271EC2ADD8002E753D /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
@@ -138,6 +140,8 @@
 		5BAFD6801EC2BAC4002E753D /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		5BAFD6811EC2BAC4002E753D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		5BAFD6821EC2BAC4002E753D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5BAFD69D1EC2CEA2002E753D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5BAFD69F1EC2CEC4002E753D /* RefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshHeader.swift; sourceTree = "<group>"; };
 		5BE870961EC2A8C60076FA18 /* 爱鲜蜂(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE870991EC2A8C60076FA18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE8709B1EC2A8C60076FA18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,13 +150,13 @@
 		5BE870A31EC2A8C60076FA18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE870A51EC2A8C60076FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE870AA1EC2A8C60076FA18 /* 爱鲜蜂(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱鲜蜂(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE870AE1EC2A8C60076FA18 /* ____Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Swift_Tests.swift; sourceTree = "<group>"; };
+		5BE870AE1EC2A8C60076FA18 /* ____Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Swift_Tests.swift"; sourceTree = "<group>"; };
 		5BE870B01EC2A8C60076FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE870B51EC2A8C60076FA18 /* 爱鲜蜂(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱鲜蜂(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE870B91EC2A8C60076FA18 /* ____Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Swift_UITests.swift; sourceTree = "<group>"; };
+		5BE870B91EC2A8C60076FA18 /* ____Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Swift_UITests.swift"; sourceTree = "<group>"; };
 		5BE870BB1EC2A8C60076FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61B7BB5242F66F2CA0BBD518 /* Pods-爱鲜蜂(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(Swift)/Pods-爱鲜蜂(Swift).release.xcconfig"; sourceTree = "<group>"; };
-		B60967DBB17FEFCBFE8BDC91 /* Pods_____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60967DBB17FEFCBFE8BDC91 /* Pods_____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 		5BAFD6241EC2ADBB002E753D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BAFD6961EC2CE1C002E753D /* Other */,
 				5BAFD64B1EC2BAB2002E753D /* Vender */,
 				5BAFD6251EC2ADD8002E753D /* Resouce */,
 			);
@@ -345,6 +350,39 @@
 				5BAFD6821EC2BAC4002E753D /* WXApiObject.h */,
 			);
 			path = Wechat;
+			sourceTree = "<group>";
+		};
+		5BAFD6961EC2CE1C002E753D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD6971EC2CE66002E753D /* Common */,
+				5BAFD6981EC2CE66002E753D /* Extension */,
+				5BAFD6991EC2CE66002E753D /* Refresh */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5BAFD6971EC2CE66002E753D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD69D1EC2CEA2002E753D /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5BAFD6981EC2CE66002E753D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5BAFD6991EC2CE66002E753D /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD69F1EC2CEC4002E753D /* RefreshHeader.swift */,
+			);
+			path = Refresh;
 			sourceTree = "<group>";
 		};
 		5BE8708D1EC2A8C60076FA18 = {
@@ -625,6 +663,8 @@
 			files = (
 				5BE8709C1EC2A8C60076FA18 /* ViewController.swift in Sources */,
 				5BE8709A1EC2A8C60076FA18 /* AppDelegate.swift in Sources */,
+				5BAFD6A01EC2CEC4002E753D /* RefreshHeader.swift in Sources */,
+				5BAFD69E1EC2CEA2002E753D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
