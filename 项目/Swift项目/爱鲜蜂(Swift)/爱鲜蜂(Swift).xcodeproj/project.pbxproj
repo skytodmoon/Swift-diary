@@ -11,6 +11,8 @@
 		5B90BC601EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC5F1EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift */; };
 		5B90BC621EC2D606003E40F2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC611EC2D606003E40F2 /* String+Extension.swift */; };
 		5B90BC641EC2D63C003E40F2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC631EC2D63C003E40F2 /* UIImage+Extension.swift */; };
+		5B90BC681EC2EF80003E40F2 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC671EC2EF80003E40F2 /* ADViewController.swift */; };
+		5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */; };
 		5BAFD6371EC2ADD8002E753D /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6261EC2ADD8002E753D /* AD */; };
 		5BAFD6381EC2ADD8002E753D /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6271EC2ADD8002E753D /* FocusURL.plist */; };
 		5BAFD6391EC2ADD8002E753D /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6281EC2ADD8002E753D /* HelpPlist.plist */; };
@@ -87,6 +89,8 @@
 		5B90BC5F1EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5B90BC611EC2D606003E40F2 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5B90BC631EC2D63C003E40F2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		5B90BC671EC2EF80003E40F2 /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		5BAFD6201EC2AD98002E753D /* 爱鲜蜂(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "爱鲜蜂(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BAFD6261EC2ADD8002E753D /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
 		5BAFD6271EC2ADD8002E753D /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
@@ -216,9 +220,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B90BC651EC2EF4B003E40F2 /* Lunach */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC661EC2EF56003E40F2 /* AD */,
+			);
+			path = Lunach;
+			sourceTree = "<group>";
+		};
+		5B90BC661EC2EF56003E40F2 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC671EC2EF80003E40F2 /* ADViewController.swift */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		5B90BC691EC2F14B003E40F2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC6A1EC2F159003E40F2 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B90BC6A1EC2F159003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BAFD6241EC2ADBB002E753D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B90BC691EC2F14B003E40F2 /* Main */,
+				5B90BC651EC2EF4B003E40F2 /* Lunach */,
 				5BAFD6961EC2CE1C002E753D /* Other */,
 				5BAFD64B1EC2BAB2002E753D /* Vender */,
 				5BAFD6251EC2ADD8002E753D /* Resouce */,
@@ -683,6 +721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BE8709C1EC2A8C60076FA18 /* ViewController.swift in Sources */,
+				5B90BC681EC2EF80003E40F2 /* ADViewController.swift in Sources */,
 				5B90BC5E1EC2D5C0003E40F2 /* UIDevice+Extension.swift in Sources */,
 				5BAFD6A61EC2D419002E753D /* UIView+Extension.swift in Sources */,
 				5BAFD6A41EC2D28D002E753D /* Color+Extension.swift in Sources */,
@@ -692,6 +731,7 @@
 				5B90BC601EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B90BC621EC2D606003E40F2 /* String+Extension.swift in Sources */,
 				5B90BC641EC2D63C003E40F2 /* UIImage+Extension.swift in Sources */,
+				5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */,
 				5BAFD69E1EC2CEA2002E753D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
