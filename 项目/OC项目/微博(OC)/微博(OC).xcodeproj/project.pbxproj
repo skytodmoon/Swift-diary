@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B27332322095C7DBAF8F84E /* libPods-微博(OC)Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */; };
+		5B90BD3E1EC34013003E40F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD3D1EC34013003E40F2 /* main.m */; };
+		5B90BD411EC34013003E40F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD401EC34013003E40F2 /* AppDelegate.m */; };
+		5B90BD441EC34013003E40F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD431EC34013003E40F2 /* ViewController.m */; };
+		5B90BD471EC34013003E40F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BD451EC34013003E40F2 /* Main.storyboard */; };
+		5B90BD491EC34013003E40F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BD481EC34013003E40F2 /* Assets.xcassets */; };
+		5B90BD4C1EC34013003E40F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BD4A1EC34013003E40F2 /* LaunchScreen.storyboard */; };
+		5B90BD571EC34013003E40F2 /* ___OC_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD561EC34013003E40F2 /* ___OC_Tests.m */; };
+		5B90BD621EC34013003E40F2 /* ___OC_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD611EC34013003E40F2 /* ___OC_UITests.m */; };
+		7CC8E767260FA00B81808EAA /* libPods-微博(OC)UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */; };
+		DEB856D9ECCDBED844C49B61 /* libPods-微博(OC).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B90BD531EC34013003E40F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B90BD311EC34013003E40F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B90BD381EC34013003E40F2;
+			remoteInfo = "微博(OC)";
+		};
+		5B90BD5E1EC34013003E40F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B90BD311EC34013003E40F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B90BD381EC34013003E40F2;
+			remoteInfo = "微博(OC)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1239A4BCB39150A4BDF232 /* Pods-微博(OC).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).debug.xcconfig"; sourceTree = "<group>"; };
+		44A3B61DB8E70431834EB1C3 /* Pods-微博(OC).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).release.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).release.xcconfig"; sourceTree = "<group>"; };
+		5B90BD391EC34013003E40F2 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B90BD3D1EC34013003E40F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B90BD3F1EC34013003E40F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B90BD401EC34013003E40F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B90BD421EC34013003E40F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B90BD431EC34013003E40F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B90BD461EC34013003E40F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B90BD481EC34013003E40F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B90BD4B1EC34013003E40F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B90BD4D1EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B90BD521EC34013003E40F2 /* 微博(OC)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博(OC)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B90BD561EC34013003E40F2 /* ___OC_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ___OC_Tests.m; sourceTree = "<group>"; };
+		5B90BD581EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B90BD5D1EC34013003E40F2 /* 微博(OC)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博(OC)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B90BD611EC34013003E40F2 /* ___OC_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ___OC_UITests.m; sourceTree = "<group>"; };
+		5B90BD631EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		948D9EEA5D8F1F42125A1845 /* Pods-微博(OC)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)UITests/Pods-微博(OC)UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD9440ED21529E74C90190D /* Pods-微博(OC)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)Tests/Pods-微博(OC)Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B3EA1215C7BE946DDD21804F /* Pods-微博(OC)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)UITests/Pods-微博(OC)UITests.release.xcconfig"; sourceTree = "<group>"; };
+		D84FE4854D4A61E81E6B1D54 /* Pods-微博(OC)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)Tests/Pods-微博(OC)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B90BD361EC34013003E40F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB856D9ECCDBED844C49B61 /* libPods-微博(OC).a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD4F1EC34013003E40F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B27332322095C7DBAF8F84E /* libPods-微博(OC)Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD5A1EC34013003E40F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CC8E767260FA00B81808EAA /* libPods-微博(OC)UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B90BD301EC34013003E40F2 = {
+			isa = PBXGroup;
+			children = (
+				5B90BD3B1EC34013003E40F2 /* 微博(OC) */,
+				5B90BD551EC34013003E40F2 /* 微博(OC)Tests */,
+				5B90BD601EC34013003E40F2 /* 微博(OC)UITests */,
+				5B90BD3A1EC34013003E40F2 /* Products */,
+				D21C9D16C8D630659BE40B87 /* Pods */,
+				EE86FEF6358761C84DF01A35 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B90BD3A1EC34013003E40F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BD391EC34013003E40F2 /* 微博(OC).app */,
+				5B90BD521EC34013003E40F2 /* 微博(OC)Tests.xctest */,
+				5B90BD5D1EC34013003E40F2 /* 微博(OC)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B90BD3B1EC34013003E40F2 /* 微博(OC) */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BD3F1EC34013003E40F2 /* AppDelegate.h */,
+				5B90BD401EC34013003E40F2 /* AppDelegate.m */,
+				5B90BD421EC34013003E40F2 /* ViewController.h */,
+				5B90BD431EC34013003E40F2 /* ViewController.m */,
+				5B90BD451EC34013003E40F2 /* Main.storyboard */,
+				5B90BD481EC34013003E40F2 /* Assets.xcassets */,
+				5B90BD4A1EC34013003E40F2 /* LaunchScreen.storyboard */,
+				5B90BD4D1EC34013003E40F2 /* Info.plist */,
+				5B90BD3C1EC34013003E40F2 /* Supporting Files */,
+			);
+			path = "微博(OC)";
+			sourceTree = "<group>";
+		};
+		5B90BD3C1EC34013003E40F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BD3D1EC34013003E40F2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B90BD551EC34013003E40F2 /* 微博(OC)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BD561EC34013003E40F2 /* ___OC_Tests.m */,
+				5B90BD581EC34013003E40F2 /* Info.plist */,
+			);
+			path = "微博(OC)Tests";
+			sourceTree = "<group>";
+		};
+		5B90BD601EC34013003E40F2 /* 微博(OC)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BD611EC34013003E40F2 /* ___OC_UITests.m */,
+				5B90BD631EC34013003E40F2 /* Info.plist */,
+			);
+			path = "微博(OC)UITests";
+			sourceTree = "<group>";
+		};
+		D21C9D16C8D630659BE40B87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D1239A4BCB39150A4BDF232 /* Pods-微博(OC).debug.xcconfig */,
+				44A3B61DB8E70431834EB1C3 /* Pods-微博(OC).release.xcconfig */,
+				D84FE4854D4A61E81E6B1D54 /* Pods-微博(OC)Tests.debug.xcconfig */,
+				ABD9440ED21529E74C90190D /* Pods-微博(OC)Tests.release.xcconfig */,
+				948D9EEA5D8F1F42125A1845 /* Pods-微博(OC)UITests.debug.xcconfig */,
+				B3EA1215C7BE946DDD21804F /* Pods-微博(OC)UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE86FEF6358761C84DF01A35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */,
+				6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */,
+				99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B90BD381EC34013003E40F2 /* 微博(OC) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B90BD661EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)" */;
+			buildPhases = (
+				D3C93DFD6B0F061B2501A554 /* [CP] Check Pods Manifest.lock */,
+				5B90BD351EC34013003E40F2 /* Sources */,
+				5B90BD361EC34013003E40F2 /* Frameworks */,
+				5B90BD371EC34013003E40F2 /* Resources */,
+				902B1FF7C28C9CFC890B9023 /* [CP] Embed Pods Frameworks */,
+				2CAF127BC40FF9D233F9B33C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "微博(OC)";
+			productName = "微博(OC)";
+			productReference = 5B90BD391EC34013003E40F2 /* 微博(OC).app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B90BD511EC34013003E40F2 /* 微博(OC)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B90BD691EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)Tests" */;
+			buildPhases = (
+				4C2B998124193202D9DFEB29 /* [CP] Check Pods Manifest.lock */,
+				5B90BD4E1EC34013003E40F2 /* Sources */,
+				5B90BD4F1EC34013003E40F2 /* Frameworks */,
+				5B90BD501EC34013003E40F2 /* Resources */,
+				C2E087BDBA9D7C8DBDDE36EB /* [CP] Embed Pods Frameworks */,
+				CF0A106F20F8CB4BE137C17E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B90BD541EC34013003E40F2 /* PBXTargetDependency */,
+			);
+			name = "微博(OC)Tests";
+			productName = "微博(OC)Tests";
+			productReference = 5B90BD521EC34013003E40F2 /* 微博(OC)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B90BD5C1EC34013003E40F2 /* 微博(OC)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B90BD6C1EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)UITests" */;
+			buildPhases = (
+				C5EC7CF7D99ECCBBB74BC9AD /* [CP] Check Pods Manifest.lock */,
+				5B90BD591EC34013003E40F2 /* Sources */,
+				5B90BD5A1EC34013003E40F2 /* Frameworks */,
+				5B90BD5B1EC34013003E40F2 /* Resources */,
+				27D8E690C278A4532114E05F /* [CP] Embed Pods Frameworks */,
+				2119333BCE252013C54E0837 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B90BD5F1EC34013003E40F2 /* PBXTargetDependency */,
+			);
+			name = "微博(OC)UITests";
+			productName = "微博(OC)UITests";
+			productReference = 5B90BD5D1EC34013003E40F2 /* 微博(OC)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B90BD311EC34013003E40F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B90BD381EC34013003E40F2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5B90BD511EC34013003E40F2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B90BD381EC34013003E40F2;
+					};
+					5B90BD5C1EC34013003E40F2 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B90BD381EC34013003E40F2;
+					};
+				};
+			};
+			buildConfigurationList = 5B90BD341EC34013003E40F2 /* Build configuration list for PBXProject "微博(OC)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B90BD301EC34013003E40F2;
+			productRefGroup = 5B90BD3A1EC34013003E40F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B90BD381EC34013003E40F2 /* 微博(OC) */,
+				5B90BD511EC34013003E40F2 /* 微博(OC)Tests */,
+				5B90BD5C1EC34013003E40F2 /* 微博(OC)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B90BD371EC34013003E40F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B90BD4C1EC34013003E40F2 /* LaunchScreen.storyboard in Resources */,
+				5B90BD491EC34013003E40F2 /* Assets.xcassets in Resources */,
+				5B90BD471EC34013003E40F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD501EC34013003E40F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD5B1EC34013003E40F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2119333BCE252013C54E0837 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)UITests/Pods-微博(OC)UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27D8E690C278A4532114E05F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)UITests/Pods-微博(OC)UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAF127BC40FF9D233F9B33C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C2B998124193202D9DFEB29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		902B1FF7C28C9CFC890B9023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E087BDBA9D7C8DBDDE36EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)Tests/Pods-微博(OC)Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5EC7CF7D99ECCBBB74BC9AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0A106F20F8CB4BE137C17E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-微博(OC)Tests/Pods-微博(OC)Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C93DFD6B0F061B2501A554 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B90BD351EC34013003E40F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B90BD441EC34013003E40F2 /* ViewController.m in Sources */,
+				5B90BD411EC34013003E40F2 /* AppDelegate.m in Sources */,
+				5B90BD3E1EC34013003E40F2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD4E1EC34013003E40F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B90BD571EC34013003E40F2 /* ___OC_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B90BD591EC34013003E40F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B90BD621EC34013003E40F2 /* ___OC_UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B90BD541EC34013003E40F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B90BD381EC34013003E40F2 /* 微博(OC) */;
+			targetProxy = 5B90BD531EC34013003E40F2 /* PBXContainerItemProxy */;
+		};
+		5B90BD5F1EC34013003E40F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B90BD381EC34013003E40F2 /* 微博(OC) */;
+			targetProxy = 5B90BD5E1EC34013003E40F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B90BD451EC34013003E40F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B90BD461EC34013003E40F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B90BD4A1EC34013003E40F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B90BD4B1EC34013003E40F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B90BD641EC34013003E40F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B90BD651EC34013003E40F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B90BD671EC34013003E40F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1239A4BCB39150A4BDF232 /* Pods-微博(OC).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博(OC)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B90BD681EC34013003E40F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A3B61DB8E70431834EB1C3 /* Pods-微博(OC).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博(OC)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B90BD6A1EC34013003E40F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D84FE4854D4A61E81E6B1D54 /* Pods-微博(OC)Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博(OC)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博(OC).app/微博(OC)";
+			};
+			name = Debug;
+		};
+		5B90BD6B1EC34013003E40F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD9440ED21529E74C90190D /* Pods-微博(OC)Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博(OC)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博(OC).app/微博(OC)";
+			};
+			name = Release;
+		};
+		5B90BD6D1EC34013003E40F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948D9EEA5D8F1F42125A1845 /* Pods-微博(OC)UITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "微博(OC)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博(OC)";
+			};
+			name = Debug;
+		};
+		5B90BD6E1EC34013003E40F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3EA1215C7BE946DDD21804F /* Pods-微博(OC)UITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "微博(OC)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---OC-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博(OC)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B90BD341EC34013003E40F2 /* Build configuration list for PBXProject "微博(OC)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B90BD641EC34013003E40F2 /* Debug */,
+				5B90BD651EC34013003E40F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B90BD661EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B90BD671EC34013003E40F2 /* Debug */,
+				5B90BD681EC34013003E40F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B90BD691EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B90BD6A1EC34013003E40F2 /* Debug */,
+				5B90BD6B1EC34013003E40F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B90BD6C1EC34013003E40F2 /* Build configuration list for PBXNativeTarget "微博(OC)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B90BD6D1EC34013003E40F2 /* Debug */,
+				5B90BD6E1EC34013003E40F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B90BD311EC34013003E40F2 /* Project object */;
+}
