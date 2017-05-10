@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA2FF4A1EC35FC8008642BA /* MineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2FF491EC35FC8008642BA /* MineHeadView.m */; };
+		1DA2FF4D1EC360E5008642BA /* MyOrderStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2FF4C1EC360E5008642BA /* MyOrderStatusView.m */; };
+		1DA2FF501EC360F2008642BA /* MyOrderMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2FF4F1EC360F2008642BA /* MyOrderMenuView.m */; };
 		5B1706B41EC2A2EB00834927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B31EC2A2EB00834927 /* main.m */; };
 		5B1706B71EC2A2EB00834927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B61EC2A2EB00834927 /* AppDelegate.m */; };
 		5B1706BA1EC2A2EB00834927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B91EC2A2EB00834927 /* ViewController.m */; };
@@ -68,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DA2FF481EC35FC8008642BA /* MineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeadView.h; sourceTree = "<group>"; };
+		1DA2FF491EC35FC8008642BA /* MineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeadView.m; sourceTree = "<group>"; };
+		1DA2FF4B1EC360E5008642BA /* MyOrderStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderStatusView.h; sourceTree = "<group>"; };
+		1DA2FF4C1EC360E5008642BA /* MyOrderStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderStatusView.m; sourceTree = "<group>"; };
+		1DA2FF4E1EC360F2008642BA /* MyOrderMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderMenuView.h; sourceTree = "<group>"; };
+		1DA2FF4F1EC360F2008642BA /* MyOrderMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderMenuView.m; sourceTree = "<group>"; };
 		22E67AA1887DF3AA8259E556 /* libPods-爱鲜蜂(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		271B9885680A196F9ABC4994 /* Pods-爱鲜蜂(OC).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(OC).release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(OC)/Pods-爱鲜蜂(OC).release.xcconfig"; sourceTree = "<group>"; };
 		5B1706AF1EC2A2EB00834927 /* 爱鲜蜂(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +173,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DA2FF471EC35F8F008642BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2FF481EC35FC8008642BA /* MineHeadView.h */,
+				1DA2FF491EC35FC8008642BA /* MineHeadView.m */,
+				1DA2FF4B1EC360E5008642BA /* MyOrderStatusView.h */,
+				1DA2FF4C1EC360E5008642BA /* MyOrderStatusView.m */,
+				1DA2FF4E1EC360F2008642BA /* MyOrderMenuView.h */,
+				1DA2FF4F1EC360F2008642BA /* MyOrderMenuView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B1706A61EC2A2EB00834927 = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				5B90BCE31EC318B0003E40F2 /* Controller */,
+				1DA2FF471EC35F8F008642BA /* View */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -623,6 +646,7 @@
 			files = (
 				5B90BCFD1EC318B0003E40F2 /* BaseNavigationController.m in Sources */,
 				5B90BCFE1EC318B0003E40F2 /* BaseViewController.m in Sources */,
+				1DA2FF4D1EC360E5008642BA /* MyOrderStatusView.m in Sources */,
 				5B90BCFF1EC318B0003E40F2 /* MainTabBarController.m in Sources */,
 				5B1706BA1EC2A2EB00834927 /* ViewController.m in Sources */,
 				5B90BD1C1EC31907003E40F2 /* ShoppingViewController.m in Sources */,
@@ -634,6 +658,8 @@
 				5B90BD161EC318DC003E40F2 /* HomeViewController.m in Sources */,
 				5B90BD291EC31B8C003E40F2 /* NSString+Extension.m in Sources */,
 				5B90BD261EC31B46003E40F2 /* UIView+Extension.m in Sources */,
+				1DA2FF501EC360F2008642BA /* MyOrderMenuView.m in Sources */,
+				1DA2FF4A1EC35FC8008642BA /* MineHeadView.m in Sources */,
 				5B90BD2C1EC31BBA003E40F2 /* UIBarButtonItem+Extension.m in Sources */,
 				5B90BD011EC318B0003E40F2 /* AppConst.m in Sources */,
 				5B1706B71EC2A2EB00834927 /* AppDelegate.m in Sources */,

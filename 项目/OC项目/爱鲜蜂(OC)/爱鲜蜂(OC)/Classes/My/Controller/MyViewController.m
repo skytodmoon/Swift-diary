@@ -7,15 +7,21 @@
 //
 
 #import "MyViewController.h"
+#import "MineHeadView.h"
 
 @interface MyViewController ()
-
+@property (nonatomic,strong) NSArray *orderMenus;
+@property (nonatomic,strong) NSArray *mineMenus;
+@property (nonatomic,strong) UIScrollView *mainScrollView;
+@property (nonatomic,strong) MineHeadView *mineHeadView;
+@property (nonatomic,strong) UIView *footerView;
 @end
 
 @implementation MyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self buildHeadViews];
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +30,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)buildHeadViews{
+    
+    self.mineHeadView = [[MineHeadView alloc]init];
+    [self.view addSubview:self.mineHeadView];
+    
+    [self.mineHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.trailing.equalTo(self.view);
+        make.height.mas_equalTo(160);
+    }];
 }
-*/
 
 @end
