@@ -42,16 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UMSocialConfig.hiddenNotInstallPlatforms([UMShareToWechatSession, UMShareToQzone, UMShareToQQ, UMShareToSina, UMShareToWechatTimeline])
     }
     
-    //MARK: - 设置主题
-    private func setAppSubject(){
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.backgroundColor = UIColor.whiteColor()
-        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
-        let navBarnAppearance = UINavigationBar.appearance()
-        navBarnAppearance.translucent = false
-    }
-    
     //MARK: - 通知
     private func addNotification(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.showMainTabbarControllerSucess(_:)), name: ADImageLoadSecussed, object: nil)
@@ -94,5 +84,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = MainTabBarController()
     }
 
+    
+    //MARK: - 设置主题
+    private func setAppSubject(){
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.backgroundColor = UIColor.whiteColor()
+        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        
+        let navBarnAppearance = UINavigationBar.appearance()
+        navBarnAppearance.translucent = false
+    }
 }
 

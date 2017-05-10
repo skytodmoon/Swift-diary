@@ -47,10 +47,10 @@ class MainTabBarController: AnimationTabBarController,UITabBarControllerDelegate
     }
     
     private func tabBarControllerAddChildViewController(childView: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
-//        let vcItem = RAMAnimatedTabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
-//        vcItem.tag = tag
-//        vcItem.animation = RAMBounceAnimation()
-//        childView.tabBarItem = vcItem
+        let vcItem = RAMAnimatedTabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
+        vcItem.tag = tag
+        vcItem.animation = RAMBounceAnimation()
+        childView.tabBarItem = vcItem
         
         let navigationVC = BaseNavigationController(rootViewController:childView)
         addChildViewController(navigationVC)
