@@ -1,0 +1,36 @@
+//
+//  UIView+Extension.h
+//  爱鲜蜂(OC)
+//
+//  Created by 金亮齐 on 2017/5/10.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface UIView (Extension)
+@property (nonatomic, assign) CGFloat x;
+@property (nonatomic, assign) CGFloat y;
+@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat centerY;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGPoint origin;
+
+@property CGFloat top;
+@property CGFloat left;
+
+@property CGFloat bottom;
+@property CGFloat right;
+
+- (void) moveBy: (CGPoint) delta;
+- (void) scaleBy: (CGFloat) scaleFactor;
+- (void) fitInSize: (CGSize) aSize;
+/** UIView的最大X值 */
+@property (assign, nonatomic) CGFloat maxX;
+/** UIView的最大Y值 */
+@property (assign, nonatomic) CGFloat maxY;
++ (instancetype)viewFromXib;
++ (instancetype)viewFirstXib;
+@end

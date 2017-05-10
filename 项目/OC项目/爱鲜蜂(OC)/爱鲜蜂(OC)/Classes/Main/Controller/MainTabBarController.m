@@ -12,6 +12,7 @@
 #import "ShoppingViewController.h"
 #import "MyViewController.h"
 #import "BaseNavigationController.h"
+#import "UserShopCarTool.h"
 
 @interface MainTabBarController ()
 
@@ -26,9 +27,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)addMainTabBarController
-{
-    
+- (void)addMainTabBarController{
     
     [self setupChildViewController:@"首页" viewController:[HomeViewController new] image:@"v2_home" selectedImage:@"v2_home_r"];
     [self setupChildViewController:@"闪电超市" viewController:[FlashViewController new] image:@"v2_order" selectedImage:@"v2_order_r"];
@@ -40,14 +39,15 @@
     [Notification addObserver:self selector:@selector(IncreaseShoppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
 }
 - (void)IncreaseShoppingCart{
-    UIViewController *shoppingVC = self.childViewControllers[2];
-    NSInteger shoppingIndex = [[UserShopCarTool sharedInstance]getShopCarGoodsNumber];
-    if (shoppingIndex == 0) {
-        shoppingVC.tabBarItem.badgeValue = nil;
-        return;
-    }
-    shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd",shoppingIndex];
+//    UIViewController *shoppingVC = self.childViewControllers[2];
+//    NSInteger shoppingIndex = [[UserShopCarTool sharedInstance]getShopCarGoodsNumber];
+//    if (shoppingIndex == 0) {
+//        shoppingVC.tabBarItem.badgeValue = nil;
+//        return;
+//    }
+//    shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd",shoppingIndex];
 }
+
 - (void)dealloc{
     [Notification removeObserver:self];
 }
