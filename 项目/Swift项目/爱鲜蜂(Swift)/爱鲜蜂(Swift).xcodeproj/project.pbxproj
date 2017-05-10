@@ -15,6 +15,11 @@
 		5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */; };
 		5B90BC6E1EC2F230003E40F2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */; };
 		5B90BC701EC2F276003E40F2 /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */; };
+		5B90BC741EC2F571003E40F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC731EC2F571003E40F2 /* HomeViewController.swift */; };
+		5B90BC781EC2F59D003E40F2 /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC771EC2F59D003E40F2 /* SupermarketViewController.swift */; };
+		5B90BC7C1EC2F5D2003E40F2 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC7B1EC2F5D2003E40F2 /* ShopCartViewController.swift */; };
+		5B90BC801EC2F5FE003E40F2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC7F1EC2F5FE003E40F2 /* MineViewController.swift */; };
+		5B90BC821EC2F637003E40F2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC811EC2F637003E40F2 /* BaseNavigationController.swift */; };
 		5BAFD6371EC2ADD8002E753D /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6261EC2ADD8002E753D /* AD */; };
 		5BAFD6381EC2ADD8002E753D /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6271EC2ADD8002E753D /* FocusURL.plist */; };
 		5BAFD6391EC2ADD8002E753D /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6281EC2ADD8002E753D /* HelpPlist.plist */; };
@@ -95,6 +100,11 @@
 		5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
+		5B90BC731EC2F571003E40F2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5B90BC771EC2F59D003E40F2 /* SupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermarketViewController.swift; sourceTree = "<group>"; };
+		5B90BC7B1EC2F5D2003E40F2 /* ShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCartViewController.swift; sourceTree = "<group>"; };
+		5B90BC7F1EC2F5FE003E40F2 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		5B90BC811EC2F637003E40F2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5BAFD6201EC2AD98002E753D /* 爱鲜蜂(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "爱鲜蜂(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BAFD6261EC2ADD8002E753D /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
 		5BAFD6271EC2ADD8002E753D /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
@@ -254,6 +264,71 @@
 				5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */,
 				5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */,
 				5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */,
+				5B90BC811EC2F637003E40F2 /* BaseNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B90BC711EC2F559003E40F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC721EC2F559003E40F2 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B90BC721EC2F559003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC731EC2F571003E40F2 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B90BC751EC2F592003E40F2 /* Supermark */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC761EC2F592003E40F2 /* Controller */,
+			);
+			path = Supermark;
+			sourceTree = "<group>";
+		};
+		5B90BC761EC2F592003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC771EC2F59D003E40F2 /* SupermarketViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B90BC791EC2F5C8003E40F2 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC7A1EC2F5C8003E40F2 /* Controller */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		5B90BC7A1EC2F5C8003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC7B1EC2F5D2003E40F2 /* ShopCartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B90BC7D1EC2F5F2003E40F2 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC7E1EC2F5F2003E40F2 /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5B90BC7E1EC2F5F2003E40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B90BC7F1EC2F5FE003E40F2 /* MineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +336,10 @@
 		5BAFD6241EC2ADBB002E753D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B90BC7D1EC2F5F2003E40F2 /* Mine */,
+				5B90BC791EC2F5C8003E40F2 /* Shop */,
+				5B90BC751EC2F592003E40F2 /* Supermark */,
+				5B90BC711EC2F559003E40F2 /* Home */,
 				5B90BC691EC2F14B003E40F2 /* Main */,
 				5B90BC651EC2EF4B003E40F2 /* Lunach */,
 				5BAFD6961EC2CE1C002E753D /* Other */,
@@ -732,12 +811,17 @@
 				5B90BC701EC2F276003E40F2 /* AnimationTabBarController.swift in Sources */,
 				5BAFD6A61EC2D419002E753D /* UIView+Extension.swift in Sources */,
 				5BAFD6A41EC2D28D002E753D /* Color+Extension.swift in Sources */,
+				5B90BC7C1EC2F5D2003E40F2 /* ShopCartViewController.swift in Sources */,
 				5BE8709A1EC2A8C60076FA18 /* AppDelegate.swift in Sources */,
+				5B90BC821EC2F637003E40F2 /* BaseNavigationController.swift in Sources */,
 				5BAFD6A21EC2D16B002E753D /* Theme.swift in Sources */,
 				5BAFD6A01EC2CEC4002E753D /* RefreshHeader.swift in Sources */,
+				5B90BC781EC2F59D003E40F2 /* SupermarketViewController.swift in Sources */,
 				5B90BC601EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B90BC621EC2D606003E40F2 /* String+Extension.swift in Sources */,
+				5B90BC741EC2F571003E40F2 /* HomeViewController.swift in Sources */,
 				5B90BC6E1EC2F230003E40F2 /* MainTabBarController.swift in Sources */,
+				5B90BC801EC2F5FE003E40F2 /* MineViewController.swift in Sources */,
 				5B90BC641EC2D63C003E40F2 /* UIImage+Extension.swift in Sources */,
 				5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */,
 				5BAFD69E1EC2CEA2002E753D /* BaseViewController.swift in Sources */,
