@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlashViewController : UIViewController
+@interface FlashViewController : BaseViewController
 
 @end
