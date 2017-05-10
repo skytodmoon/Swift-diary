@@ -7,14 +7,11 @@ target '微博(OC)' do
 
   # Pods for 微博(OC)
 
-  target '微博(OC)Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '微博(OC)UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'MJRefresh'
+    pod 'SVProgressHUD'
+    pod 'SDWebImage'
+    pod 'MJExtension'
+    pod 'AFNetworking'
+    pod 'MJPhotoBrowser'
 
 end
