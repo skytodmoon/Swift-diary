@@ -69,10 +69,7 @@ extension GuideViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
         return cell
     }
-    
-
-    
-    
+ 
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         if scrollView.contentOffset.x == ScreenWidth * CGFloat(imageNames.count - 1) {
             let cell = collectionView!.cellForItemAtIndexPath(NSIndexPath(forRow: imageNames.count - 1, inSection: 0)) as! GuideCell
