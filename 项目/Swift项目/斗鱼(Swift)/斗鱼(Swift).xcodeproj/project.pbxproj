@@ -78,12 +78,11 @@
 		1D916BB01EBCD2B200220AC6 /* 斗鱼(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D916BB41EBCD2B200220AC6 /* ___Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___Swift_UITests.swift"; sourceTree = "<group>"; };
 		1D916BB61EBCD2B200220AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DBF71661EBF3E9B00E81710 /* 斗鱼(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "斗鱼(Swift)-Bridging-Header.h"; path = "Classes/Main/Controller/斗鱼(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
+		1DA2FF611EC3651D008642BA /* 斗鱼(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "斗鱼(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		1DBF71801EBF46E000E81710 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1DBF71831EBF46E000E81710 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		1DBF71861EBF46E000E81710 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		1DBF71871EBF46E000E81710 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		1DBF71881EBF46E000E81710 /* 斗鱼(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "斗鱼(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		1DBF718B1EBF46E000E81710 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
 		1DBF718C1EBF46E000E81710 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
 		1DBF718E1EBF46E000E81710 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
@@ -194,11 +193,11 @@
 				1DBF717D1EBF46E000E81710 /* Classes */,
 				1D916B941EBCD2B200220AC6 /* AppDelegate.swift */,
 				1D916B961EBCD2B200220AC6 /* ViewController.swift */,
+				1DA2FF611EC3651D008642BA /* 斗鱼(Swift)-Bridging-Header.h */,
 				1D916B981EBCD2B200220AC6 /* Main.storyboard */,
 				1D916B9B1EBCD2B200220AC6 /* Assets.xcassets */,
 				1D916B9D1EBCD2B200220AC6 /* LaunchScreen.storyboard */,
 				1D916BA01EBCD2B200220AC6 /* Info.plist */,
-				1DBF71661EBF3E9B00E81710 /* 斗鱼(Swift)-Bridging-Header.h */,
 			);
 			path = "斗鱼(Swift)";
 			sourceTree = "<group>";
@@ -279,7 +278,6 @@
 			children = (
 				1DBF71861EBF46E000E81710 /* MainNavController.swift */,
 				1DBF71871EBF46E000E81710 /* MainViewController.swift */,
-				1DBF71881EBF46E000E81710 /* 斗鱼(Swift)-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -857,7 +855,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "斗鱼(Swift)/Classes/Main/Controller/斗鱼(Swift)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "斗鱼(Swift)/斗鱼(Swift)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -875,7 +873,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "斗鱼(Swift)/Classes/Main/Controller/斗鱼(Swift)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "斗鱼(Swift)/斗鱼(Swift)-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
