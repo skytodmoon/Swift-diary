@@ -52,9 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBarnAppearance.translucent = false
     }
     
-    //MARK: - 
+    //MARK: - 通知
     private func addNotification(){
-    
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.showMainTabbarControllerSucess(_:)), name: ADImageLoadSecussed, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.showMainTabbarControllerFale), name: ADImageLoadFail, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.shoMainTabBarController), name: GuideViewControllerDidFinish, object: nil)
     }
     
     //MARK: - 
@@ -71,9 +73,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             loadADRootViewController()
         }
     }
-    //MARK: - 加载控制器
+    //MARK: - 加载控制器和广告
     private func loadADRootViewController(){
         
+    }
+    
+    // MARK: - 通知主控制器
+    func showMainTabbarControllerSucess(noti: NSNotification) {
+        let adImage = noti.object as! UIImage
+        let mainTabBar = MainTabBarController()
+        mainTabBar.adImage = adImage
+        window?.rootViewController = mainTabBar
+    }
+    
+    func showMainTabbarControllerFale() {
+        window!.rootViewController = MainTabBarController()
+    }
+    
+    func shoMainTabBarController() {
+        window!.rootViewController = MainTabBarController()
     }
 
 }

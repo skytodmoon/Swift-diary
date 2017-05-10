@@ -13,6 +13,8 @@
 		5B90BC641EC2D63C003E40F2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC631EC2D63C003E40F2 /* UIImage+Extension.swift */; };
 		5B90BC681EC2EF80003E40F2 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC671EC2EF80003E40F2 /* ADViewController.swift */; };
 		5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */; };
+		5B90BC6E1EC2F230003E40F2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */; };
+		5B90BC701EC2F276003E40F2 /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */; };
 		5BAFD6371EC2ADD8002E753D /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6261EC2ADD8002E753D /* AD */; };
 		5BAFD6381EC2ADD8002E753D /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6271EC2ADD8002E753D /* FocusURL.plist */; };
 		5BAFD6391EC2ADD8002E753D /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD6281EC2ADD8002E753D /* HelpPlist.plist */; };
@@ -91,6 +93,8 @@
 		5B90BC631EC2D63C003E40F2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5B90BC671EC2EF80003E40F2 /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
 		5BAFD6201EC2AD98002E753D /* 爱鲜蜂(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "爱鲜蜂(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BAFD6261EC2ADD8002E753D /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
 		5BAFD6271EC2ADD8002E753D /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				5B90BC6B1EC2F166003E40F2 /* GuideViewController.swift */,
+				5B90BC6D1EC2F230003E40F2 /* MainTabBarController.swift */,
+				5B90BC6F1EC2F276003E40F2 /* AnimationTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -723,6 +729,7 @@
 				5BE8709C1EC2A8C60076FA18 /* ViewController.swift in Sources */,
 				5B90BC681EC2EF80003E40F2 /* ADViewController.swift in Sources */,
 				5B90BC5E1EC2D5C0003E40F2 /* UIDevice+Extension.swift in Sources */,
+				5B90BC701EC2F276003E40F2 /* AnimationTabBarController.swift in Sources */,
 				5BAFD6A61EC2D419002E753D /* UIView+Extension.swift in Sources */,
 				5BAFD6A41EC2D28D002E753D /* Color+Extension.swift in Sources */,
 				5BE8709A1EC2A8C60076FA18 /* AppDelegate.swift in Sources */,
@@ -730,6 +737,7 @@
 				5BAFD6A01EC2CEC4002E753D /* RefreshHeader.swift in Sources */,
 				5B90BC601EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B90BC621EC2D606003E40F2 /* String+Extension.swift in Sources */,
+				5B90BC6E1EC2F230003E40F2 /* MainTabBarController.swift in Sources */,
 				5B90BC641EC2D63C003E40F2 /* UIImage+Extension.swift in Sources */,
 				5B90BC6C1EC2F166003E40F2 /* GuideViewController.swift in Sources */,
 				5BAFD69E1EC2CEA2002E753D /* BaseViewController.swift in Sources */,
