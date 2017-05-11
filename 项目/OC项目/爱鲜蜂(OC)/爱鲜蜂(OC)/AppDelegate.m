@@ -39,6 +39,18 @@
     }
 }
 
+- (void)addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainTabarController) name:GuideViewControllerDidFinish object:nil];
+}
+
+- (void)loadAdRootController {
+    self.window.rootViewController = [MainTabBarController new];
+}
+
+- (void)showMainTabarController {
+    self.window.rootViewController = [MainTabBarController new];
+}
+
 - (void)setAppStyle{
     UITabBar *item = [UITabBar appearance];
     item.tintColor = [UIColor orangeColor];

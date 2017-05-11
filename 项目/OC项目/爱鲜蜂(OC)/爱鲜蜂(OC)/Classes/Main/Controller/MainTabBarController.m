@@ -39,13 +39,13 @@
     [Notification addObserver:self selector:@selector(IncreaseShoppingCart) name:LFBShopCarBuyNumberDidChangeNotification object:nil];
 }
 - (void)IncreaseShoppingCart{
-//    UIViewController *shoppingVC = self.childViewControllers[2];
-//    NSInteger shoppingIndex = [[UserShopCarTool sharedInstance]getShopCarGoodsNumber];
-//    if (shoppingIndex == 0) {
-//        shoppingVC.tabBarItem.badgeValue = nil;
-//        return;
-//    }
-//    shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd",shoppingIndex];
+    UIViewController *shoppingVC = self.childViewControllers[2];
+    NSInteger shoppingIndex = [[UserShopCarTool sharedInstance]getShopCarGoodsNumber];
+    if (shoppingIndex == 0) {
+        shoppingVC.tabBarItem.badgeValue = nil;
+        return;
+    }
+    shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd",shoppingIndex];
 }
 
 - (void)dealloc{
