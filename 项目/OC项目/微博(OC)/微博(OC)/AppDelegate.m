@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "AccountTool.h"
+#import "Account.h"
+#import "WeiboTool.h"
+#import "OAuthViewController.h"
+#import "MainNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -16,14 +21,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
+    // 判断是否登录过
+    Account *account = [AccountTool account];
+    if (account) { // 有登录账号(登录过)
+        [WeiboTool chooseRootViewController];
+    } else { // 没有登录账号
+        OAuthViewController *oauth = [[OAuthViewController alloc] init];
+        self.window.rootViewController = [[MainNavigationController alloc] initWithRootViewController:oauth];
+    }
+    
+    return YES;
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    // 清除内存中的图片缓存
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager cancelAll];
+    [manager.imageCache clearMemory];
 }
+
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
