@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B692B631EC45F87006F864A /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B621EC45F87006F864A /* Status.m */; };
+		5B692B661EC45FF7006F864A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B651EC45FF7006F864A /* User.m */; };
+		5B692B691EC4601D006F864A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B681EC4601D006F864A /* Photo.m */; };
+		5B692B6C1EC46083006F864A /* StatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6B1EC46083006F864A /* StatusFrame.m */; };
+		5B692B6F1EC460D6006F864A /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6E1EC460D6006F864A /* PhotosView.m */; };
 		5B7A694E1EC402AD00A48213 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A69181EC402AD00A48213 /* DiscoverViewController.m */; };
 		5B7A694F1EC402AD00A48213 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A691C1EC402AD00A48213 /* HomeViewController.m */; };
 		5B7A69501EC402AD00A48213 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A69201EC402AD00A48213 /* MainNavigationController.m */; };
@@ -58,6 +63,16 @@
 		05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1239A4BCB39150A4BDF232 /* Pods-微博(OC).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).debug.xcconfig"; sourceTree = "<group>"; };
 		44A3B61DB8E70431834EB1C3 /* Pods-微博(OC).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).release.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).release.xcconfig"; sourceTree = "<group>"; };
+		5B692B611EC45F87006F864A /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		5B692B621EC45F87006F864A /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		5B692B641EC45FF7006F864A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5B692B651EC45FF7006F864A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5B692B671EC4601D006F864A /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		5B692B681EC4601D006F864A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		5B692B6A1EC46083006F864A /* StatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusFrame.h; sourceTree = "<group>"; };
+		5B692B6B1EC46083006F864A /* StatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusFrame.m; sourceTree = "<group>"; };
+		5B692B6D1EC460D6006F864A /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
+		5B692B6E1EC460D6006F864A /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
 		5B7A68C31EC3EEDF00A48213 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B7A69171EC402AD00A48213 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		5B7A69181EC402AD00A48213 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
@@ -143,6 +158,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B692B5F1EC45F74006F864A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B692B611EC45F87006F864A /* Status.h */,
+				5B692B621EC45F87006F864A /* Status.m */,
+				5B692B641EC45FF7006F864A /* User.h */,
+				5B692B651EC45FF7006F864A /* User.m */,
+				5B692B671EC4601D006F864A /* Photo.h */,
+				5B692B681EC4601D006F864A /* Photo.m */,
+				5B692B6A1EC46083006F864A /* StatusFrame.h */,
+				5B692B6B1EC46083006F864A /* StatusFrame.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B692B601EC45F74006F864A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B692B6D1EC460D6006F864A /* PhotosView.h */,
+				5B692B6E1EC460D6006F864A /* PhotosView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B7A69141EC402AD00A48213 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +217,8 @@
 		5B7A69191EC402AD00A48213 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B692B5F1EC45F74006F864A /* Model */,
+				5B692B601EC45F74006F864A /* View */,
 				5B7A691A1EC402AD00A48213 /* Controller */,
 			);
 			path = Home;
@@ -622,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B692B6F1EC460D6006F864A /* PhotosView.m in Sources */,
 				5B7A69581EC402AD00A48213 /* Checkbox.m in Sources */,
 				5B7A695A1EC402AD00A48213 /* Account.m in Sources */,
 				5B7A69541EC402AD00A48213 /* TabBarView.m in Sources */,
@@ -629,10 +671,13 @@
 				5B7A694E1EC402AD00A48213 /* DiscoverViewController.m in Sources */,
 				5B7A69501EC402AD00A48213 /* MainNavigationController.m in Sources */,
 				5B90BD411EC34013003E40F2 /* AppDelegate.m in Sources */,
+				5B692B631EC45F87006F864A /* Status.m in Sources */,
+				5B692B661EC45FF7006F864A /* User.m in Sources */,
 				5B7A69621EC402E300A48213 /* UIButton+Extension.m in Sources */,
 				5B7A695B1EC402AD00A48213 /* AccountTool.m in Sources */,
 				5B7A695C1EC402AD00A48213 /* WeiboTool.m in Sources */,
 				5B7A69531EC402AD00A48213 /* TabBarButton.m in Sources */,
+				5B692B691EC4601D006F864A /* Photo.m in Sources */,
 				5B7A69561EC402AD00A48213 /* MessageViewController.m in Sources */,
 				5B7A69511EC402AD00A48213 /* MainViewController.m in Sources */,
 				5B7A69591EC402AD00A48213 /* OAuthViewController.m in Sources */,
@@ -644,6 +689,7 @@
 				5B7A69551EC402AD00A48213 /* MeViewController.m in Sources */,
 				5B7A69521EC402AD00A48213 /* BadgeButton.m in Sources */,
 				5B7A695F1EC402AD00A48213 /* SendStatusViewController.m in Sources */,
+				5B692B6C1EC46083006F864A /* StatusFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
