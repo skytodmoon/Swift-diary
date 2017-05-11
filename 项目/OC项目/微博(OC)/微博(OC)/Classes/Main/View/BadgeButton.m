@@ -31,14 +31,13 @@
     self.hidden = !(BOOL)self.badgeValue;
     
     if (self.badgeValue) {
-        // 设置数据
+
         [self setTitle:badgeValue forState:UIControlStateNormal];
         
-        // 设置frame
         CGRect frame = self.frame;
         CGFloat badgeW = self.currentBackgroundImage.size.width;
         CGFloat badgeH = self.currentBackgroundImage.size.height;
-        // 文字尺寸
+
         CGSize titleSize = [badgeValue sizeWithFont:[UIFont systemFontOfSize:BadgeButtonTitleSize]];
         frame.size.width = MAX(badgeW, titleSize.width + 10);
         frame.size.height = badgeH;

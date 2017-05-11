@@ -31,7 +31,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // 添加加号按钮
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [button setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
@@ -44,10 +43,7 @@
     }
     return self;
 }
-
-/**
- *  发微博
- */
+//MARK: -   发微博
 - (void)sendStatus
 {
     if ([self.delegate respondsToSelector:@selector(tabBarViewSendStatus:)]) {
@@ -55,47 +51,31 @@
     }
 }
 
-/**
- *  添加内部按钮
- */
+//MARK: - 添加内部按钮
 - (void)addTabBarButtonWithItem:(UITabBarItem *)item
 {
     TabBarButton *button = [TabBarButton buttonWithType:UIButtonTypeCustom];
-    
-    // 设置数据
     button.item = item;
-    
-    // 添加点击事件
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchDown];
-    
     [self addSubview:button];
     [self.tabBarButtons addObject:button];
-    
-    // 默认选中第0个按钮
     if (self.tabBarButtons.count == 1) {
         [self buttonClick:button];
     }
 }
 
-/**
- *  监听按钮点击
- */
+//MARK: - 监听按钮点击
 - (void)buttonClick:(TabBarButton *)button
 {
-    // 通知代理
     if ([self.delegate respondsToSelector:@selector(tabBarView:didSelectedButtonFrom:to:)]) {
         [self.delegate tabBarView:self didSelectedButtonFrom:(int)self.selectedButton.tag to:(int)button.tag];
     }
-    
-    // 修改选中状态
     self.selectedButton.selected = NO;
     self.selectedButton = button;
     self.selectedButton.selected = YES;
 }
 
-/**
- *  设置frame
- */
+//MARK: -   设置frame
 - (void)layoutSubviews
 {
     [super layoutSubviews];

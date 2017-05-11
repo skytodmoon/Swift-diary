@@ -27,16 +27,13 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
-    // 自定义tabBarView
     [self setupTabBarView];
-    // 初始化所有子控制器
+
     [self setupAllChildViewControllers];
     // Do any additional setup after loading the view.
 }
 
-/**
- *  自定义tabBarView
- */
+//MARK: -   自定义tabBarView
 - (void)setupTabBarView
 {
     TabBarView *tabBarView = [[TabBarView alloc] init];
@@ -46,11 +43,10 @@
     self.tabBarView = tabBarView;
 }
 
-#pragma mark - TabBarViewDelegate method
-
+//MARK: -  - TabBarViewDelegate
 - (void)tabBarView:(TabBarView *)tabBarView didSelectedButtonFrom:(int)from to:(int)to
 {
-    // 切换控制器
+
     self.selectedIndex = to;
 }
 
@@ -62,11 +58,7 @@
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-#pragma mark -
-
-/**
- *  删除自带按钮
- */
+//MARK: -   删除自带按钮
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -79,9 +71,7 @@
 }
 
 
-/**
- *  初始化所有子控制器
- */
+//MARK: -  初始化所有子控制器
 - (void)setupAllChildViewControllers
 {
     HomeViewController *home = [[HomeViewController alloc] init];
@@ -124,16 +114,12 @@
  */
 - (void)setupChildViewController:(UIViewController *)VC title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName
 {
-    // 给tabBarItem设置数据
+
     VC.title = title;
     VC.tabBarItem.image = [UIImage imageNamed:imageName];
     VC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    // 初始化导航控制器
     MainNavigationController *nav = [[MainNavigationController alloc] initWithRootViewController:VC];
     [self addChildViewController:nav];
-    
-    // 添加tabBarView内部按钮
     [self.tabBarView addTabBarButtonWithItem:VC.tabBarItem];
 }
 

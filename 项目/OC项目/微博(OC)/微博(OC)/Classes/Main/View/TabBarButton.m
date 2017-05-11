@@ -9,19 +9,17 @@
 #import "TabBarButton.h"
 #import "BadgeButton.h"
 
-// 内部图片所占比例
+//MARK: -  内部图片所占比例
 #define TabBarButtonImageRatio 0.7
-// 内部文字大小
+//MARK: -  内部文字大小
 #define TabBarButtonTitleSize 10.0
 
-// 文字颜色
+//MARK: -  文字颜色
 #define TabBarButtonTitleColor Color(117, 117, 117)
 #define TabBarButtonTitleSelColor Color(234, 103, 7)
 
 @interface TabBarButton ()
-/**
- *  提醒数字按钮
- */
+//MARK: -   提醒数字按钮
 @property (nonatomic, strong) BadgeButton *badgeButton;
 
 @end
@@ -40,14 +38,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // 设置内部图片和文字格式
+
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = [UIFont systemFontOfSize:TabBarButtonTitleSize];
         [self setTitleColor:TabBarButtonTitleColor forState:UIControlStateNormal];
         [self setTitleColor:TabBarButtonTitleSelColor forState:UIControlStateSelected];
         
-        // 添加提醒数字按钮
         BadgeButton *badgeButton = [[BadgeButton alloc] init];
         badgeButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
         [self addSubview:badgeButton];
@@ -60,7 +57,6 @@
 {
     _item = item;
     
-    // KVO 监听item属性的改变
     [item addObserver:self forKeyPath:@"badgeValue" options:0 context:nil];
     [item addObserver:self forKeyPath:@"title" options:0 context:nil];
     [item addObserver:self forKeyPath:@"image" options:0 context:nil];
@@ -82,10 +78,8 @@
     [self setImage:self.item.image forState:UIControlStateNormal];
     [self setImage:self.item.selectedImage forState:UIControlStateSelected];
     
-    // 设置badgeValue
     self.badgeButton.badgeValue = self.item.badgeValue;
     
-    // 设置提醒数字按钮frame
     CGRect frame = self.badgeButton.frame;
     CGFloat badgeX = self.frame.size.width - frame.size.width - 3;
     CGFloat badgeY = 2;
@@ -96,10 +90,10 @@
 
 #pragma mark - 重置按钮格式
 
-// 去除按钮高亮状态
+//MARK: -  去除按钮高亮状态
 - (void)setHighlighted:(BOOL)highlighted {}
 
-// 重写内部图片frame
+//MARK: -  重写内部图片frame
 - (CGRect)imageRectForContentRect:(CGRect)contentRect
 {
     CGFloat imageX = 0;
@@ -109,7 +103,7 @@
     return CGRectMake(imageX, imageY, imageW, imageH);
 }
 
-// 重写内部文字frame
+//MARK: -  重写内部文字frame
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
     CGFloat titleX = 0;

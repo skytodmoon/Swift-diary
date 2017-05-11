@@ -24,10 +24,7 @@
 
 @property (nonatomic, weak) id<TabBarViewDelegate> delegate;
 
-/**
- *  添加按钮
- */
+//MARK: -   添加按钮
 - (void)addTabBarButtonWithItem:(UITabBarItem *)item;
-
 
 @end
