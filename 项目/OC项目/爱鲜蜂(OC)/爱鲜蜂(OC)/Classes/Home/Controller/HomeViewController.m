@@ -16,7 +16,6 @@
 #import "HomeCategoryCell.h"
 #import "LFBRefreshHeader.h"
 #import "WebViewController.h"
-#import "HomeFooterCell.h"
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic,strong) HomeHeadView *headView;
@@ -117,12 +116,12 @@ static NSString *headerCellId = @"headerCellId";
     
     if (indexPath.section == 0) {
         HomeCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCategoryCellId forIndexPath:indexPath];
-//        cell.actRow = self.homeHeadData.category.act_rows[indexPath.row];
+        cell.actRow = self.homeHeadData.category.act_rows[indexPath.row];
         return cell;
     }
     
     HomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCellId forIndexPath:indexPath];
-//    cell.goods = self.freshHots[indexPath.row];
+    cell.goods = self.freshHots[indexPath.row];
     
     return cell;
 }
@@ -154,9 +153,9 @@ static NSString *headerCellId = @"headerCellId";
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         HomeHeaderCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerCellId forIndexPath:indexPath];
         if (indexPath.section == 0) {
-//            [cell showTitleLable:NO];
+            [cell showTitleLable:NO];
         }else{
-//            [cell showTitleLable:YES];
+            [cell showTitleLable:YES];
         }
         return cell;
     }

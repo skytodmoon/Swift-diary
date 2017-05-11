@@ -10,4 +10,9 @@
 
 @interface HomeHeaderCell : UICollectionReusableView
 
+- (void)showTitleLable:(BOOL)show;
+@end
+
+@interface HomeFooterCell : UICollectionReusableView
+
 @end

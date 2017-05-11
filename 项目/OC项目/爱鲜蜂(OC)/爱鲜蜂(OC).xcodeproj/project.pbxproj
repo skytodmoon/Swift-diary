@@ -24,7 +24,7 @@
 		1D48DACE1EC4AE1F0002305C /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48DACD1EC4AE1F0002305C /* PageScrollView.m */; };
 		1D48DAD11EC4AF9A0002305C /* IconImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48DAD01EC4AF9A0002305C /* IconImageTextView.m */; };
 		1D48DAD41EC4B2640002305C /* HomeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48DAD31EC4B2640002305C /* HomeHeaderCell.m */; };
-		1D48DAD71EC4B29B0002305C /* HomeFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48DAD61EC4B29B0002305C /* HomeFooterCell.m */; };
+		1D48DADA1EC4B5770002305C /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48DAD91EC4B5770002305C /* UIColor+Extension.m */; };
 		5B1706B41EC2A2EB00834927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B31EC2A2EB00834927 /* main.m */; };
 		5B1706B71EC2A2EB00834927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B61EC2A2EB00834927 /* AppDelegate.m */; };
 		5B1706BA1EC2A2EB00834927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706B91EC2A2EB00834927 /* ViewController.m */; };
@@ -144,8 +144,8 @@
 		1D48DAD01EC4AF9A0002305C /* IconImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconImageTextView.m; sourceTree = "<group>"; };
 		1D48DAD21EC4B2640002305C /* HomeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderCell.h; sourceTree = "<group>"; };
 		1D48DAD31EC4B2640002305C /* HomeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderCell.m; sourceTree = "<group>"; };
-		1D48DAD51EC4B29B0002305C /* HomeFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFooterCell.h; sourceTree = "<group>"; };
-		1D48DAD61EC4B29B0002305C /* HomeFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFooterCell.m; sourceTree = "<group>"; };
+		1D48DAD81EC4B5770002305C /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		1D48DAD91EC4B5770002305C /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		22E67AA1887DF3AA8259E556 /* libPods-爱鲜蜂(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-爱鲜蜂(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		271B9885680A196F9ABC4994 /* Pods-爱鲜蜂(OC).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(OC).release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(OC)/Pods-爱鲜蜂(OC).release.xcconfig"; sourceTree = "<group>"; };
 		5B1706AF1EC2A2EB00834927 /* 爱鲜蜂(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "爱鲜蜂(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,8 +480,6 @@
 				1D48DACD1EC4AE1F0002305C /* PageScrollView.m */,
 				1D48DAD21EC4B2640002305C /* HomeHeaderCell.h */,
 				1D48DAD31EC4B2640002305C /* HomeHeaderCell.m */,
-				1D48DAD51EC4B29B0002305C /* HomeFooterCell.h */,
-				1D48DAD61EC4B29B0002305C /* HomeFooterCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +590,8 @@
 				5BCAE2021EC480D2003F6DED /* UIView+Extension.m */,
 				5BCAE2031EC480D2003F6DED /* UserShopCarTool.h */,
 				5BCAE2041EC480D2003F6DED /* UserShopCarTool.m */,
+				1D48DAD81EC4B5770002305C /* UIColor+Extension.h */,
+				1D48DAD91EC4B5770002305C /* UIColor+Extension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -923,9 +923,9 @@
 				1D48DAD41EC4B2640002305C /* HomeHeaderCell.m in Sources */,
 				5BCAE23B1EC480D3003F6DED /* MyOrderStatusView.m in Sources */,
 				5BCAE2431EC480D3003F6DED /* UserShopCarTool.m in Sources */,
-				1D48DAD71EC4B29B0002305C /* HomeFooterCell.m in Sources */,
 				5BCAE2441EC480D3003F6DED /* ProgressHUDManager.m in Sources */,
 				1D48DAB31EC4ABC50002305C /* HeadlineContentView.m in Sources */,
+				1D48DADA1EC4B5770002305C /* UIColor+Extension.m in Sources */,
 				5B1706B41EC2A2EB00834927 /* main.m in Sources */,
 				5BCAE2591EC480D3003F6DED /* DefaultView.m in Sources */,
 				5BCAE25B1EC480D3003F6DED /* ShoppingCell.m in Sources */,

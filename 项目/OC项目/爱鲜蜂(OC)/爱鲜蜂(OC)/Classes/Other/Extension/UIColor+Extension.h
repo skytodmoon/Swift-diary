@@ -1,5 +1,5 @@
 //
-//  HomeFooterCell.h
+//  UIColor+Extension.h
 //  爱鲜蜂(OC)
 //
 //  Created by 金亮齐 on 2017/5/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeFooterCell : UICollectionReusableView
-
+@interface UIColor (Extension)
++ (UIColor *) getColor:(NSString *)hexColor;
 @end

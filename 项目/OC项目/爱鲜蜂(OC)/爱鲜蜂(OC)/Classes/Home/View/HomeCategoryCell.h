@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HomeHeadData.h"
 @interface HomeCategoryCell : UICollectionViewCell
+
+@property (nonatomic,strong) ActRow *actRow;
 
 @end

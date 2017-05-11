@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeHeadData.h"
 
 @interface HomeCellGoodsView : UIView
+
+@property (nonatomic,strong) ActRow *actRow;
 
 @end
