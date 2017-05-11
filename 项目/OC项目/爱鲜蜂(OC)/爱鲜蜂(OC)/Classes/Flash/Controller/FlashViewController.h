@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectedAdressViewController.h"
 
-@interface FlashViewController : BaseViewController
+@protocol FlashViewControllerDelegate <NSObject>
+
+- (void)didTableView:(UITableView *)tableView clickIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+@interface FlashViewController : SelectedAdressViewController
+@property (nonatomic, weak) id<FlashViewControllerDelegate>delegate;
 
 @end

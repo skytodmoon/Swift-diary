@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "SupermarketSource.h"
+#import "FlashViewController.h"
 
-@interface ProductsViewController : BaseViewController
+@interface ProductsViewController : BaseViewController<FlashViewControllerDelegate>
+@property (nonatomic, strong) SuperMarketData *supermarketSouce;
 
 @end

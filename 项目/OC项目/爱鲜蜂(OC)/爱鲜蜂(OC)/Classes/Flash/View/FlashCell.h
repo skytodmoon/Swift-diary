@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SupermarketSource.h"
 
 @interface FlashCell : UITableViewCell
+
+@property (nonatomic, strong) ProductCategory *categoryData;
++ (instancetype)cellWithTable:(UITableView *)tableView;
 
 @end
