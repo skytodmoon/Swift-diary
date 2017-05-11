@@ -39,19 +39,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self setupRefresh];
     [self setupNavigationBar];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = Color(226, 226, 226);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, StatusPadding * 0.5, 0);
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  设置刷新
+ */
+- (void)setupRefresh
+{
+
 }
 
 // 设置NavigationBar
-- (void)setupNavigationBar
-{
+- (void)setupNavigationBar{
     // 设置左右item
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) imageName:@"navigationbar_friendsearch" highlightedImageName:@"navigationbar_friendsearch_highlighted"];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) imageName:@"navigationbar_pop" highlightedImageName:@"navigationbar_pop_highlighted"];
