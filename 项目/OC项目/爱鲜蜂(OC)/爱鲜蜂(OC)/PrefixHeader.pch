@@ -21,6 +21,16 @@
 #import "Masonry.h"
 #import "BaseViewController.h"
 
+typedef NS_ENUM(NSInteger ,HeadViewItemType){
+    HeadViewItemTypePage,
+    HeadViewItemTypeHot,
+    HeadViewItemTypeHeadLine,
+    HeadViewItemTypeBrand,
+    HeadViewItemTypeScene
+};
+typedef void (^CompleteBlock)(id data,NSError *error);
+typedef void(^ClikedCallback) (HeadViewItemType type,NSInteger tag);
+
 #define Width  [[UIScreen mainScreen] bounds].size.width
 #define Height [[UIScreen mainScreen] bounds].size.height
 #define Notification   [NSNotificationCenter defaultCenter]

@@ -23,6 +23,7 @@
 		5B1706C21EC2A2EB00834927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1706C01EC2A2EB00834927 /* LaunchScreen.storyboard */; };
 		5B1706CD1EC2A2EB00834927 /* ____OC_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706CC1EC2A2EB00834927 /* ____OC_Tests.m */; };
 		5B1706D81EC2A2EB00834927 /* ____OC_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1706D71EC2A2EB00834927 /* ____OC_UITests.m */; };
+		5B7A68C71EC3EFE500A48213 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A68C61EC3EFE500A48213 /* Activity.m */; };
 		5B90BCFD1EC318B0003E40F2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BCDA1EC318B0003E40F2 /* BaseNavigationController.m */; };
 		5B90BCFE1EC318B0003E40F2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BCDC1EC318B0003E40F2 /* BaseViewController.m */; };
 		5B90BCFF1EC318B0003E40F2 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BCDE1EC318B0003E40F2 /* MainTabBarController.m */; };
@@ -110,6 +111,8 @@
 		5B1706D31EC2A2EB00834927 /* 爱鲜蜂(OC)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱鲜蜂(OC)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1706D71EC2A2EB00834927 /* ____OC_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____OC_UITests.m"; sourceTree = "<group>"; };
 		5B1706D91EC2A2EB00834927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7A68C51EC3EFE500A48213 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		5B7A68C61EC3EFE500A48213 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		5B90BCBD1EC315D1003E40F2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B90BCD91EC318B0003E40F2 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		5B90BCDA1EC318B0003E40F2 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -277,6 +280,15 @@
 			path = "爱鲜蜂(OC)UITests";
 			sourceTree = "<group>";
 		};
+		5B7A68C41EC3EFD100A48213 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A68C51EC3EFE500A48213 /* Activity.h */,
+				5B7A68C61EC3EFE500A48213 /* Activity.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B90BCD21EC318B0003E40F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				5B90BCD61EC318B0003E40F2 /* Controller */,
+				5B7A68C41EC3EFD100A48213 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -685,6 +698,7 @@
 				5B90BD231EC31A79003E40F2 /* UserShopCarTool.m in Sources */,
 				5B90BD191EC318F5003E40F2 /* FlashViewController.m in Sources */,
 				5B90BD161EC318DC003E40F2 /* HomeViewController.m in Sources */,
+				5B7A68C71EC3EFE500A48213 /* Activity.m in Sources */,
 				5B90BD291EC31B8C003E40F2 /* NSString+Extension.m in Sources */,
 				5B90BD261EC31B46003E40F2 /* UIView+Extension.m in Sources */,
 				1DA2FF501EC360F2008642BA /* MyOrderMenuView.m in Sources */,

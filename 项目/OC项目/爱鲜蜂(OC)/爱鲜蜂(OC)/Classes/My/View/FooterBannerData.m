@@ -10,12 +10,18 @@
 
 @implementation FooterBannerData
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (void)loadFootBannerData:(CompleteBlock)comple{
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"footerBanner" ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    FooterBannerData *footerData = [FooterBannerData mj_objectWithKeyValues:dict];
+    comple(footerData.data,nil);
 }
-*/
+
++ (NSDictionary *)mj_objectClassInArray{
+    return @{
+             @"data": NSStringFromClass([Activity class])
+             };
+}
 
 @end

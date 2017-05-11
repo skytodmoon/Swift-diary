@@ -39,6 +39,7 @@
 		05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1239A4BCB39150A4BDF232 /* Pods-微博(OC).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).debug.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).debug.xcconfig"; sourceTree = "<group>"; };
 		44A3B61DB8E70431834EB1C3 /* Pods-微博(OC).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-微博(OC).release.xcconfig"; path = "Pods/Target Support Files/Pods-微博(OC)/Pods-微博(OC).release.xcconfig"; sourceTree = "<group>"; };
+		5B7A68C31EC3EEDF00A48213 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B90BD391EC34013003E40F2 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B90BD3D1EC34013003E40F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B90BD3F1EC34013003E40F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,10 +51,10 @@
 		5B90BD4B1EC34013003E40F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B90BD4D1EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B90BD521EC34013003E40F2 /* 微博(OC)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博(OC)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B90BD561EC34013003E40F2 /* ___OC_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ___OC_Tests.m; sourceTree = "<group>"; };
+		5B90BD561EC34013003E40F2 /* ___OC_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___OC_Tests.m"; sourceTree = "<group>"; };
 		5B90BD581EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B90BD5D1EC34013003E40F2 /* 微博(OC)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博(OC)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B90BD611EC34013003E40F2 /* ___OC_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ___OC_UITests.m; sourceTree = "<group>"; };
+		5B90BD611EC34013003E40F2 /* ___OC_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___OC_UITests.m"; sourceTree = "<group>"; };
 		5B90BD631EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +120,7 @@
 				5B90BD4A1EC34013003E40F2 /* LaunchScreen.storyboard */,
 				5B90BD4D1EC34013003E40F2 /* Info.plist */,
 				5B90BD3C1EC34013003E40F2 /* Supporting Files */,
+				5B7A68C31EC3EEDF00A48213 /* PrefixHeader.pch */,
 			);
 			path = "微博(OC)";
 			sourceTree = "<group>";

@@ -61,6 +61,7 @@
     [super viewDidLoad];
     [self buildHeadViews];
     [self buildScrollView];
+    [self buildFooterView];
     // Do any additional setup after loading the view.
 }
 
@@ -144,6 +145,11 @@
     }];
     
 }
+
+- (void)buildFooterView{
+
+}
+
 
 - (void)loadView {
     [super loadView];

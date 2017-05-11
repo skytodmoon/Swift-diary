@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Activity.h"
 
 @interface FooterBannerData : UIView
-
+@property (nonatomic,copy) NSString *code;
+@property (nonatomic,copy) NSString *msg;
+@property (nonatomic,copy) NSArray<Activity *> *data;
++ (void)loadFootBannerData:(CompleteBlock)comple;
 @end
