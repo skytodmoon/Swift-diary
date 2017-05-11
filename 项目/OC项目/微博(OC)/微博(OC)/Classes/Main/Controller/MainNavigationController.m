@@ -14,24 +14,28 @@
 
 @implementation MainNavigationController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
++ (void)initialize
+{
+    // 设置BarButtonItem
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    NSMutableDictionary *normal = [NSMutableDictionary dictionary];
+    normal[NSForegroundColorAttributeName] = Color(239, 116, 8);
+    normal[NSFontAttributeName] = [UIFont systemFontOfSize:15.0];
+    [item setTitleTextAttributes:normal forState:UIControlStateNormal];
+    
+    NSMutableDictionary *disabled = [NSMutableDictionary dictionary];
+    disabled[NSForegroundColorAttributeName] = Color(111, 111, 111);
+    disabled[NSFontAttributeName] = [UIFont systemFontOfSize:15.0];
+    [item setTitleTextAttributes:disabled forState:UIControlStateDisabled];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

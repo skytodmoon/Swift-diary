@@ -17,6 +17,7 @@
 		5B7A68ED1EC3F7B000A48213 /* WeiboTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A68EC1EC3F7B000A48213 /* WeiboTool.m */; };
 		5B7A68F01EC3F7FF00A48213 /* NewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A68EF1EC3F7FF00A48213 /* NewfeatureViewController.m */; };
 		5B7A68F31EC3F83A00A48213 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A68F21EC3F83A00A48213 /* OAuthViewController.m */; };
+		5B7A68F71EC3FB6D00A48213 /* FailLoadBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A68F61EC3FB6D00A48213 /* FailLoadBtn.m */; };
 		5B90BD3E1EC34013003E40F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD3D1EC34013003E40F2 /* main.m */; };
 		5B90BD411EC34013003E40F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD401EC34013003E40F2 /* AppDelegate.m */; };
 		5B90BD441EC34013003E40F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD431EC34013003E40F2 /* ViewController.m */; };
@@ -70,6 +71,8 @@
 		5B7A68EF1EC3F7FF00A48213 /* NewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewfeatureViewController.m; sourceTree = "<group>"; };
 		5B7A68F11EC3F83A00A48213 /* OAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthViewController.h; sourceTree = "<group>"; };
 		5B7A68F21EC3F83A00A48213 /* OAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthViewController.m; sourceTree = "<group>"; };
+		5B7A68F51EC3FB6D00A48213 /* FailLoadBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailLoadBtn.h; sourceTree = "<group>"; };
+		5B7A68F61EC3FB6D00A48213 /* FailLoadBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailLoadBtn.m; sourceTree = "<group>"; };
 		5B90BD391EC34013003E40F2 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B90BD3D1EC34013003E40F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B90BD3F1EC34013003E40F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -219,6 +222,7 @@
 		5B7A68D31EC3F5B800A48213 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				5B7A68F41EC3FB5E00A48213 /* View */,
 				5B7A68E31EC3F65300A48213 /* Controller */,
 				5B7A68E41EC3F65300A48213 /* Model */,
 			);
@@ -245,6 +249,15 @@
 				5B7A68EC1EC3F7B000A48213 /* WeiboTool.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5B7A68F41EC3FB5E00A48213 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A68F51EC3FB6D00A48213 /* FailLoadBtn.h */,
+				5B7A68F61EC3FB6D00A48213 /* FailLoadBtn.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B90BD301EC34013003E40F2 = {
@@ -525,6 +538,7 @@
 				5B90BD3E1EC34013003E40F2 /* main.m in Sources */,
 				5B7A68D91EC3F5E200A48213 /* MainViewController.m in Sources */,
 				5B7A68ED1EC3F7B000A48213 /* WeiboTool.m in Sources */,
+				5B7A68F71EC3FB6D00A48213 /* FailLoadBtn.m in Sources */,
 				5B7A68D61EC3F5CC00A48213 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,4 +15,23 @@
 #import  <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
 
+// 系统版本
+#define iOS7 ([UIDevice currentDevice].systemVersion.doubleValue >= 7.0)
+
+// 自定义打印
+#define Log(...) NSLog(__VA_ARGS__)
+
+// 获取RGB颜色
+#define Color(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 首页微博接口
+#define HomeStatus @"https://api.weibo.com/2/statuses/home_timeline.json"
+
+// 发送微博接口
+#define UpdateStatus @"https://api.weibo.com/2/statuses/update.json"
+
+// OAuth2认证相关
+#define OAuthAuthorizeURL @"https://api.weibo.com/oauth2/authorize?client_id=1234171392&redirect_uri=http://www.baidu.com"
+#define OAuthAccessTokenURL @"https://api.weibo.com/oauth2/access_token"
+
 #endif /* PrefixHeader_pch */

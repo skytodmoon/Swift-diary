@@ -35,7 +35,6 @@
     }
     
     return YES;
-    return YES;
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
