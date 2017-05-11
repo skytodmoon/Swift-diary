@@ -12,6 +12,10 @@
 		5B692B691EC4601D006F864A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B681EC4601D006F864A /* Photo.m */; };
 		5B692B6C1EC46083006F864A /* StatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6B1EC46083006F864A /* StatusFrame.m */; };
 		5B692B6F1EC460D6006F864A /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6E1EC460D6006F864A /* PhotosView.m */; };
+		5B692B721EC46292006F864A /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B711EC46292006F864A /* TitleButton.m */; };
+		5B692B751EC462C1006F864A /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B741EC462C1006F864A /* StatusCell.m */; };
+		5B692B781EC462F9006F864A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B771EC462F9006F864A /* UIBarButtonItem+Extension.m */; };
+		5B692B7B1EC46375006F864A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B7A1EC46375006F864A /* NSString+Extension.m */; };
 		5B7A694E1EC402AD00A48213 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A69181EC402AD00A48213 /* DiscoverViewController.m */; };
 		5B7A694F1EC402AD00A48213 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A691C1EC402AD00A48213 /* HomeViewController.m */; };
 		5B7A69501EC402AD00A48213 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A69201EC402AD00A48213 /* MainNavigationController.m */; };
@@ -73,6 +77,14 @@
 		5B692B6B1EC46083006F864A /* StatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusFrame.m; sourceTree = "<group>"; };
 		5B692B6D1EC460D6006F864A /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
 		5B692B6E1EC460D6006F864A /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
+		5B692B701EC46292006F864A /* TitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleButton.h; sourceTree = "<group>"; };
+		5B692B711EC46292006F864A /* TitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleButton.m; sourceTree = "<group>"; };
+		5B692B731EC462C1006F864A /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
+		5B692B741EC462C1006F864A /* StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCell.m; sourceTree = "<group>"; };
+		5B692B761EC462F9006F864A /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		5B692B771EC462F9006F864A /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		5B692B791EC46375006F864A /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		5B692B7A1EC46375006F864A /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		5B7A68C31EC3EEDF00A48213 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B7A69171EC402AD00A48213 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		5B7A69181EC402AD00A48213 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
@@ -178,6 +190,10 @@
 			children = (
 				5B692B6D1EC460D6006F864A /* PhotosView.h */,
 				5B692B6E1EC460D6006F864A /* PhotosView.m */,
+				5B692B701EC46292006F864A /* TitleButton.h */,
+				5B692B711EC46292006F864A /* TitleButton.m */,
+				5B692B731EC462C1006F864A /* StatusCell.h */,
+				5B692B741EC462C1006F864A /* StatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +400,10 @@
 				5B7A694A1EC402AD00A48213 /* UIImage+Extension.m */,
 				5B7A69601EC402E300A48213 /* UIButton+Extension.h */,
 				5B7A69611EC402E300A48213 /* UIButton+Extension.m */,
+				5B692B761EC462F9006F864A /* UIBarButtonItem+Extension.h */,
+				5B692B771EC462F9006F864A /* UIBarButtonItem+Extension.m */,
+				5B692B791EC46375006F864A /* NSString+Extension.h */,
+				5B692B7A1EC46375006F864A /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -682,9 +702,13 @@
 				5B7A69511EC402AD00A48213 /* MainViewController.m in Sources */,
 				5B7A69591EC402AD00A48213 /* OAuthViewController.m in Sources */,
 				5B7A695D1EC402AD00A48213 /* FailLoadBtn.m in Sources */,
+				5B692B751EC462C1006F864A /* StatusCell.m in Sources */,
 				5B7A694F1EC402AD00A48213 /* HomeViewController.m in Sources */,
+				5B692B7B1EC46375006F864A /* NSString+Extension.m in Sources */,
 				5B7A695E1EC402AD00A48213 /* UIImage+Extension.m in Sources */,
 				5B90BD3E1EC34013003E40F2 /* main.m in Sources */,
+				5B692B721EC46292006F864A /* TitleButton.m in Sources */,
+				5B692B781EC462F9006F864A /* UIBarButtonItem+Extension.m in Sources */,
 				5B7A69571EC402AD00A48213 /* NewfeatureViewController.m in Sources */,
 				5B7A69551EC402AD00A48213 /* MeViewController.m in Sources */,
 				5B7A69521EC402AD00A48213 /* BadgeButton.m in Sources */,

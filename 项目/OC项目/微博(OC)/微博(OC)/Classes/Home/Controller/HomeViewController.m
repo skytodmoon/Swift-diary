@@ -10,6 +10,17 @@
 #import "Account.h"
 #import "AccountTool.h"
 #import "Status.h"
+#import "TitleButton.h"
+#import "MJExtension.h"
+#import "AFNetworking.h"
+#import "AccountTool.h"
+#import "Account.h"
+#import "Status.h"
+#import "User.h"
+#import "StatusCell.h"
+#import "StatusFrame.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
 
 @interface HomeViewController ()
 @property (nonatomic, assign, getter = isTitleOpen) BOOL titleOpen;
@@ -28,7 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self headerRereshing];
+
+    [self setupNavigationBar];
     // Do any additional setup after loading the view.
 }
 
@@ -37,6 +49,46 @@
     // Dispose of any resources that can be recreated.
 }
 
+// 设置NavigationBar
+- (void)setupNavigationBar
+{
+    // 设置左右item
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) imageName:@"navigationbar_friendsearch" highlightedImageName:@"navigationbar_friendsearch_highlighted"];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) imageName:@"navigationbar_pop" highlightedImageName:@"navigationbar_pop_highlighted"];
+    
+    // 设置中间button
+    TitleButton *titleButton = [TitleButton titleButton];
+    NSString *title = @"小小微博";
+    [titleButton setTitle:title forState:UIControlStateNormal];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    
+    CGSize titleSize = [title sizeWithFontSize:TitleButtonSize];
+    titleButton.bounds = CGRectMake(0, 0, titleSize.width + titleButton.imageView.bounds.size.width + 5, 30);
+    [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = titleButton;
+}
+
+// 查找好友
+- (void)friendSearch
+{
+    Log(@"小小微博--friendSearch");
+}
+
+// 扫一扫
+- (void)pop
+{
+    Log(@"小小微博--pop");
+}
+
+
+// 监听中间标题按钮的点击
+- (void)titleButtonClick:(TitleButton *)button
+{
+    self.titleOpen = !self.isTitleOpen;
+    
+    UIImage *image = [UIImage imageNamed:self.isTitleOpen ? @"navigationbar_arrow_up" : @"navigationbar_arrow_down"];
+    [button setImage:image forState:UIControlStateNormal];
+}
 
 //MARK: - 下拉刷新
 
