@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeHeadData.h"
 
 @interface HeadlineView : UIView
+@property (nonatomic,strong) ActInfo *headline;
+@property (nonatomic,copy) ClikedCallback callback;
 
 @end

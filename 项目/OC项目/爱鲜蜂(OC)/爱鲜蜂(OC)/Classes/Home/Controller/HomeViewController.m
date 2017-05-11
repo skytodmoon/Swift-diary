@@ -45,6 +45,13 @@ static NSString *headerCellId = @"headerCellId";
 - (void)shopCarBuyNumberDidChange {
     [self.collectionView reloadData];
 }
+- (void)homeTableHeadViewHeightDidChange:(NSNotification *)notification {
+    CGFloat height = [(NSNumber *)notification.object floatValue];
+    self.collectionView.mj_header.ignoredScrollViewContentInsetTop = height;
+    self.homeHeadView.frame = CGRectMake(0, -height, Width, height);
+    self.collectionView.contentInset = UIEdgeInsetsMake(height, 0, 0, 0);
+    self.collectionView.contentOffset = CGPointMake(0, -height);
+}
 - (void)buildTableHeadView {
     __weak typeof(self) wself = self;
     [HomeHeadData loadHeadData:^(HomeHeadData *homeHeadData, NSError *error) {
