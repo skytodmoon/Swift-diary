@@ -13,6 +13,7 @@
 #import "TitileIconAction.h"
 #import "MenuView.h"
 #import "FooterBannerData.h"
+#import "ScrollerPageView.h"
 
 @interface MyViewController ()
 @property (nonatomic,strong) NSArray *orderMenus;
@@ -147,7 +148,24 @@
 }
 
 - (void)buildFooterView{
-
+    [FooterBannerData loadFootBannerData:^(id data, NSError *error) {
+        NSMutableArray *imageUrl = [NSMutableArray array];
+        [data enumerateObjectsUsingBlock:^(Activity * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [imageUrl addObject:obj.img];
+        }];
+        ScrollerPageView *page = [ScrollerPageView pageScroller:imageUrl placeHolderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
+        [self.footerView addSubview:page];
+        
+        [page mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.footerView);
+            make.leading.equalTo(self.footerView).offset(10);
+            make.trailing.equalTo(self.footerView).offset(-10);
+            make.centerY.equalTo(self.footerView);
+            make.height.mas_equalTo(self.footerView.mas_width).multipliedBy(0.37);
+            
+        }];
+        
+    }];
 }
 
 
