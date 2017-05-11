@@ -38,12 +38,12 @@
     
 }
 
-//- (void)IncreaseShoppingCart{
-//    self.footView.sumMoney = [[UserShopCarTool sharedInstance]getShopCarGoodsPrice];
-//}
-//- (void)didRemoveGoods{
-//    self.footView.sumMoney = [[UserShopCarTool sharedInstance]getShopCarGoodsPrice];
-//}
+- (void)IncreaseShoppingCart{
+    self.footView.sumMoney = [[UserShopCarTool sharedInstance]getShopCarGoodsPrice];
+}
+- (void)didRemoveGoods{
+    self.footView.sumMoney = [[UserShopCarTool sharedInstance]getShopCarGoodsPrice];
+}
 
 - (void)bulidTableView{
     self.tableView = ({

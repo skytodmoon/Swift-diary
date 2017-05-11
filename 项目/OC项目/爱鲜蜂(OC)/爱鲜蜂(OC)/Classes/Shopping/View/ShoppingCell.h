@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SupermarketSource.h"
 
 @interface ShoppingCell : UITableViewCell
 
+@property (nonatomic, strong) Goods *goods;
 @end
