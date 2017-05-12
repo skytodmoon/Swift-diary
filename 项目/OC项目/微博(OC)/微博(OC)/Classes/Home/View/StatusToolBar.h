@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Status;
+
 @interface StatusToolBar : UIImageView
+
+@property (nonatomic, strong) Status *status;
 
 @end

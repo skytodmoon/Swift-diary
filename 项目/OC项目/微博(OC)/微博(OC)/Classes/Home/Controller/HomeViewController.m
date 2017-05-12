@@ -107,10 +107,10 @@
     NSMutableDictionary *pars = [NSMutableDictionary dictionary];
     pars[@"access_token"] = [AccountTool account].access_token; // 用户token
     pars[@"count"] = @20; // 每页微博个数
-//    if (self.statusFrames.count) {
-//        Status *status = [self.statusFrames[0] status];
-//        pars[@"since_id"] = status.idstr; // 加载ID比since_id大的微博
-//    }
+    if (self.statusFrames.count) {
+        Status *status = [self.statusFrames[0] status];
+        pars[@"since_id"] = status.idstr; // 加载ID比since_id大的微博
+    }
     [manager POST:HomeStatus parameters:pars progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

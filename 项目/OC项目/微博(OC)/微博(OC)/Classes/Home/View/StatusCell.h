@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class StatusFrame;
+
 @interface StatusCell : UITableViewCell
 
+@property (nonatomic, strong) StatusFrame *statusFrame;
+
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class StatusFrame;
+
 @interface RetweetStatusView : UIImageView
+
+@property (nonatomic, strong) StatusFrame *statusFrame;
 
 @end

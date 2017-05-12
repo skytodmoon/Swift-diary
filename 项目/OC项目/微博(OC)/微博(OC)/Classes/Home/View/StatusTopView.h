@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class StatusFrame;
+
 @interface StatusTopView : UIImageView
+
+@property (nonatomic, strong) StatusFrame *statusFrame;
 
 @end
