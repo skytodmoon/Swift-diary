@@ -19,6 +19,9 @@
 		5B2EFAE01EC5AE09005DA288 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFADF1EC5AE09005DA288 /* DiscoverViewController.m */; };
 		5B2EFAE31EC5AE1B005DA288 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAE21EC5AE1B005DA288 /* MessageViewController.m */; };
 		5B2EFAE61EC5AE2B005DA288 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAE51EC5AE2B005DA288 /* HomeViewController.m */; };
+		5B2EFAEA1EC5AF09005DA288 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAE91EC5AF09005DA288 /* TabBar.m */; };
+		5B2EFAEE1EC5AF62005DA288 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAED1EC5AF61005DA288 /* FXBlurView.m */; };
+		5B2EFAF31EC5AFCB005DA288 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAF21EC5AFCB005DA288 /* ComposeViewController.m */; };
 		5BEEA0881EC5934A004E9784 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA0871EC5934A004E9784 /* main.m */; };
 		5BEEA08B1EC5934A004E9784 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08A1EC5934A004E9784 /* AppDelegate.m */; };
 		5BEEA08E1EC5934A004E9784 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08D1EC5934A004E9784 /* ViewController.m */; };
@@ -302,6 +305,12 @@
 		5B2EFAE21EC5AE1B005DA288 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		5B2EFAE41EC5AE2B005DA288 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5B2EFAE51EC5AE2B005DA288 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5B2EFAE81EC5AF09005DA288 /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		5B2EFAE91EC5AF09005DA288 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		5B2EFAEC1EC5AF61005DA288 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		5B2EFAED1EC5AF61005DA288 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		5B2EFAF11EC5AFCB005DA288 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		5B2EFAF21EC5AFCB005DA288 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		5BEEA0831EC5934A004E9784 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEEA0871EC5934A004E9784 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEEA0891EC5934A004E9784 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -654,6 +663,41 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		5B2EFAE71EC5AEF9005DA288 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAE81EC5AF09005DA288 /* TabBar.h */,
+				5B2EFAE91EC5AF09005DA288 /* TabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B2EFAEB1EC5AF61005DA288 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAEC1EC5AF61005DA288 /* FXBlurView.h */,
+				5B2EFAED1EC5AF61005DA288 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		5B2EFAEF1EC5AFB1005DA288 /* Commpose */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAF01EC5AFBC005DA288 /* Controller */,
+			);
+			path = Commpose;
+			sourceTree = "<group>";
+		};
+		5B2EFAF01EC5AFBC005DA288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAF11EC5AFCB005DA288 /* ComposeViewController.h */,
+				5B2EFAF21EC5AFCB005DA288 /* ComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BEEA07A1EC5934A004E9784 = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +766,7 @@
 		5BEEA0BB1EC59555004E9784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFAEF1EC5AFB1005DA288 /* Commpose */,
 				5B2EFAD31EC5ADD5005DA288 /* Discover */,
 				5B2EFAD51EC5ADD5005DA288 /* Home */,
 				5B2EFAD71EC5ADD5005DA288 /* Me */,
@@ -1039,6 +1084,7 @@
 		5BEEA28F1EC597F4004E9784 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFAEB1EC5AF61005DA288 /* FXBlurView */,
 				5BEEA2901EC597F4004E9784 /* Extension */,
 			);
 			path = Other;
@@ -1068,6 +1114,7 @@
 		5BEEA2941EC59856004E9784 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFAE71EC5AEF9005DA288 /* View */,
 				5BEEA2951EC59856004E9784 /* Controller */,
 			);
 			path = Main;
@@ -1531,6 +1578,7 @@
 				5BEEA08E1EC5934A004E9784 /* ViewController.m in Sources */,
 				5B2EFAE61EC5AE2B005DA288 /* HomeViewController.m in Sources */,
 				5B2EFACB1EC5ACD0005DA288 /* NSDate+Extension.m in Sources */,
+				5B2EFAEE1EC5AF62005DA288 /* FXBlurView.m in Sources */,
 				5BEEA2931EC59804004E9784 /* UIWindow+Extension.m in Sources */,
 				5BEEA2861EC59717004E9784 /* Account.m in Sources */,
 				5B2EFAD21EC5AD59005DA288 /* NavigationController.m in Sources */,
@@ -1544,7 +1592,9 @@
 				5BEEA29A1EC59870004E9784 /* TabBarViewController.m in Sources */,
 				5BEEA28A1EC5973E004E9784 /* OAuthController.m in Sources */,
 				5BEEA29D1EC5988F004E9784 /* NewFeatureController.m in Sources */,
+				5B2EFAEA1EC5AF09005DA288 /* TabBar.m in Sources */,
 				5BEEA0881EC5934A004E9784 /* main.m in Sources */,
+				5B2EFAF31EC5AFCB005DA288 /* ComposeViewController.m in Sources */,
 				5BEEA28E1EC59799004E9784 /* AccountTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
