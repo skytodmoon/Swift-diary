@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		2EFF5E3377CEAD3D5BA00C2C /* libPods-微博(OC).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E9BADC4545B1DCB075597E /* libPods-微博(OC).a */; };
 		5B2EFAC01EC5ABBC005DA288 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFABF1EC5ABBC005DA288 /* UIView+Extension.m */; };
+		5B2EFACB1EC5ACD0005DA288 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAC21EC5ACD0005DA288 /* NSDate+Extension.m */; };
+		5B2EFACC1EC5ACD0005DA288 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAC41EC5ACD0005DA288 /* NSString+Emoji.m */; };
+		5B2EFACD1EC5ACD0005DA288 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAC61EC5ACD0005DA288 /* NSString+Extension.m */; };
+		5B2EFACE1EC5ACD0005DA288 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAC81EC5ACD0005DA288 /* UIBarButtonItem+Extension.m */; };
+		5B2EFACF1EC5ACD0005DA288 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFACA1EC5ACD0005DA288 /* UITextView+Extension.m */; };
+		5B2EFAD21EC5AD59005DA288 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAD11EC5AD59005DA288 /* NavigationController.m */; };
+		5B2EFADD1EC5ADF2005DA288 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFADC1EC5ADF2005DA288 /* ProfileViewController.m */; };
+		5B2EFAE01EC5AE09005DA288 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFADF1EC5AE09005DA288 /* DiscoverViewController.m */; };
+		5B2EFAE31EC5AE1B005DA288 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAE21EC5AE1B005DA288 /* MessageViewController.m */; };
+		5B2EFAE61EC5AE2B005DA288 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFAE51EC5AE2B005DA288 /* HomeViewController.m */; };
 		5BEEA0881EC5934A004E9784 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA0871EC5934A004E9784 /* main.m */; };
 		5BEEA08B1EC5934A004E9784 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08A1EC5934A004E9784 /* AppDelegate.m */; };
 		5BEEA08E1EC5934A004E9784 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08D1EC5934A004E9784 /* ViewController.m */; };
@@ -272,6 +282,26 @@
 		48E9BADC4545B1DCB075597E /* libPods-微博(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2EFABE1EC5ABBC005DA288 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5B2EFABF1EC5ABBC005DA288 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		5B2EFAC11EC5ACD0005DA288 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		5B2EFAC21EC5ACD0005DA288 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		5B2EFAC31EC5ACD0005DA288 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		5B2EFAC41EC5ACD0005DA288 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		5B2EFAC51EC5ACD0005DA288 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		5B2EFAC61EC5ACD0005DA288 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		5B2EFAC71EC5ACD0005DA288 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		5B2EFAC81EC5ACD0005DA288 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		5B2EFAC91EC5ACD0005DA288 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		5B2EFACA1EC5ACD0005DA288 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
+		5B2EFAD01EC5AD59005DA288 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		5B2EFAD11EC5AD59005DA288 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		5B2EFADB1EC5ADF2005DA288 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		5B2EFADC1EC5ADF2005DA288 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		5B2EFADE1EC5AE09005DA288 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		5B2EFADF1EC5AE09005DA288 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		5B2EFAE11EC5AE1B005DA288 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		5B2EFAE21EC5AE1B005DA288 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		5B2EFAE41EC5AE2B005DA288 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B2EFAE51EC5AE2B005DA288 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5BEEA0831EC5934A004E9784 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEEA0871EC5934A004E9784 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEEA0891EC5934A004E9784 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -556,6 +586,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2EFAD31EC5ADD5005DA288 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAD41EC5ADD5005DA288 /* Controller */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		5B2EFAD41EC5ADD5005DA288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFADE1EC5AE09005DA288 /* DiscoverViewController.h */,
+				5B2EFADF1EC5AE09005DA288 /* DiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B2EFAD51EC5ADD5005DA288 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAD61EC5ADD5005DA288 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B2EFAD61EC5ADD5005DA288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAE41EC5AE2B005DA288 /* HomeViewController.h */,
+				5B2EFAE51EC5AE2B005DA288 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B2EFAD71EC5ADD5005DA288 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAD81EC5ADD5005DA288 /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		5B2EFAD81EC5ADD5005DA288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFADB1EC5ADF2005DA288 /* ProfileViewController.h */,
+				5B2EFADC1EC5ADF2005DA288 /* ProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B2EFAD91EC5ADD5005DA288 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFADA1EC5ADD5005DA288 /* Controller */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		5B2EFADA1EC5ADD5005DA288 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2EFAE11EC5AE1B005DA288 /* MessageViewController.h */,
+				5B2EFAE21EC5AE1B005DA288 /* MessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BEEA07A1EC5934A004E9784 = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +722,10 @@
 		5BEEA0BB1EC59555004E9784 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFAD31EC5ADD5005DA288 /* Discover */,
+				5B2EFAD51EC5ADD5005DA288 /* Home */,
+				5B2EFAD71EC5ADD5005DA288 /* Me */,
+				5B2EFAD91EC5ADD5005DA288 /* Message */,
 				5BEEA2941EC59856004E9784 /* Main */,
 				5BEEA2961EC59856004E9784 /* NewFeature */,
 				5BEEA28F1EC597F4004E9784 /* Other */,
@@ -945,6 +1047,16 @@
 		5BEEA2901EC597F4004E9784 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFAC11EC5ACD0005DA288 /* NSDate+Extension.h */,
+				5B2EFAC21EC5ACD0005DA288 /* NSDate+Extension.m */,
+				5B2EFAC31EC5ACD0005DA288 /* NSString+Emoji.h */,
+				5B2EFAC41EC5ACD0005DA288 /* NSString+Emoji.m */,
+				5B2EFAC51EC5ACD0005DA288 /* NSString+Extension.h */,
+				5B2EFAC61EC5ACD0005DA288 /* NSString+Extension.m */,
+				5B2EFAC71EC5ACD0005DA288 /* UIBarButtonItem+Extension.h */,
+				5B2EFAC81EC5ACD0005DA288 /* UIBarButtonItem+Extension.m */,
+				5B2EFAC91EC5ACD0005DA288 /* UITextView+Extension.h */,
+				5B2EFACA1EC5ACD0005DA288 /* UITextView+Extension.m */,
 				5B2EFABE1EC5ABBC005DA288 /* UIView+Extension.h */,
 				5B2EFABF1EC5ABBC005DA288 /* UIView+Extension.m */,
 				5BEEA2911EC59804004E9784 /* UIWindow+Extension.h */,
@@ -966,6 +1078,8 @@
 			children = (
 				5BEEA2981EC59870004E9784 /* TabBarViewController.h */,
 				5BEEA2991EC59870004E9784 /* TabBarViewController.m */,
+				5B2EFAD01EC5AD59005DA288 /* NavigationController.h */,
+				5B2EFAD11EC5AD59005DA288 /* NavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1413,10 +1527,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B2EFAC01EC5ABBC005DA288 /* UIView+Extension.m in Sources */,
+				5B2EFAE01EC5AE09005DA288 /* DiscoverViewController.m in Sources */,
 				5BEEA08E1EC5934A004E9784 /* ViewController.m in Sources */,
+				5B2EFAE61EC5AE2B005DA288 /* HomeViewController.m in Sources */,
+				5B2EFACB1EC5ACD0005DA288 /* NSDate+Extension.m in Sources */,
 				5BEEA2931EC59804004E9784 /* UIWindow+Extension.m in Sources */,
 				5BEEA2861EC59717004E9784 /* Account.m in Sources */,
+				5B2EFAD21EC5AD59005DA288 /* NavigationController.m in Sources */,
 				5BEEA08B1EC5934A004E9784 /* AppDelegate.m in Sources */,
+				5B2EFACD1EC5ACD0005DA288 /* NSString+Extension.m in Sources */,
+				5B2EFACF1EC5ACD0005DA288 /* UITextView+Extension.m in Sources */,
+				5B2EFAE31EC5AE1B005DA288 /* MessageViewController.m in Sources */,
+				5B2EFADD1EC5ADF2005DA288 /* ProfileViewController.m in Sources */,
+				5B2EFACC1EC5ACD0005DA288 /* NSString+Emoji.m in Sources */,
+				5B2EFACE1EC5ACD0005DA288 /* UIBarButtonItem+Extension.m in Sources */,
 				5BEEA29A1EC59870004E9784 /* TabBarViewController.m in Sources */,
 				5BEEA28A1EC5973E004E9784 /* OAuthController.m in Sources */,
 				5BEEA29D1EC5988F004E9784 /* NewFeatureController.m in Sources */,
