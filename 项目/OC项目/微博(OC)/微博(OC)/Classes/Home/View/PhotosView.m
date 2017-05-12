@@ -2,11 +2,12 @@
 //  PhotosView.m
 //  微博(OC)
 //
-//  Created by 金亮齐 on 2017/5/11.
+//  Created by 金亮齐 on 2017/5/12.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 #import "PhotosView.h"
+#import "PhotoView.h"
 #import "Photo.h"
 #import "MJPhotoBrowser.h"
 #import "MJPhoto.h"
@@ -23,7 +24,7 @@
     if (self) {
         // 初始化9个子控件
         for (int index = 0; index < 9; index++) {
-            PhotosView *photoView = [[PhotosView alloc] init];
+            PhotoView *photoView = [[PhotoView alloc] init];
             photoView.tag = index; // tag
             photoView.userInteractionEnabled = YES;
             [photoView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)]];
@@ -67,13 +68,13 @@
     _photos = photos;
     
     for (int index = 0; index < self.subviews.count; index++) {
-        PhotosView *photoView = self.subviews[index];
+        PhotoView *photoView = self.subviews[index];
         
         if (index < photos.count) {
             photoView.hidden = NO;
             
             // 传递模型
-            photoView.photos = photos[index];
+            photoView.photo = photos[index];
             
             // 设置frame
             int maxColumns = (photos.count == 4) ? 2 : 3;
@@ -96,7 +97,6 @@
     }
 }
 
-
 + (CGSize)sizeWithPhotosCount:(int)count
 {
     // 一行最多3列
@@ -114,5 +114,6 @@
     
     return CGSizeMake(photosW, photosH);
 }
+
 
 @end

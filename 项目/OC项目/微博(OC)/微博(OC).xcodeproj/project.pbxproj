@@ -11,7 +11,6 @@
 		5B692B661EC45FF7006F864A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B651EC45FF7006F864A /* User.m */; };
 		5B692B691EC4601D006F864A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B681EC4601D006F864A /* Photo.m */; };
 		5B692B6C1EC46083006F864A /* StatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6B1EC46083006F864A /* StatusFrame.m */; };
-		5B692B6F1EC460D6006F864A /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B6E1EC460D6006F864A /* PhotosView.m */; };
 		5B692B721EC46292006F864A /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B711EC46292006F864A /* TitleButton.m */; };
 		5B692B751EC462C1006F864A /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B741EC462C1006F864A /* StatusCell.m */; };
 		5B692B781EC462F9006F864A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B692B771EC462F9006F864A /* UIBarButtonItem+Extension.m */; };
@@ -43,6 +42,11 @@
 		5B90BD4C1EC34013003E40F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B90BD4A1EC34013003E40F2 /* LaunchScreen.storyboard */; };
 		5B90BD571EC34013003E40F2 /* ___OC_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD561EC34013003E40F2 /* ___OC_Tests.m */; };
 		5B90BD621EC34013003E40F2 /* ___OC_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B90BD611EC34013003E40F2 /* ___OC_UITests.m */; };
+		5BEE9CAD1EC540C4004E9784 /* StatusTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CAC1EC540C4004E9784 /* StatusTopView.m */; };
+		5BEE9CB01EC540D7004E9784 /* RetweetStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CAF1EC540D7004E9784 /* RetweetStatusView.m */; };
+		5BEE9CB31EC540E6004E9784 /* StatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB21EC540E6004E9784 /* StatusToolBar.m */; };
+		5BEE9CB61EC540F3004E9784 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB51EC540F3004E9784 /* PhotoView.m */; };
+		5BEE9CB91EC54105004E9784 /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB81EC54105004E9784 /* PhotosView.m */; };
 		DEB856D9ECCDBED844C49B61 /* libPods-微博(OC).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +79,6 @@
 		5B692B681EC4601D006F864A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		5B692B6A1EC46083006F864A /* StatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusFrame.h; sourceTree = "<group>"; };
 		5B692B6B1EC46083006F864A /* StatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusFrame.m; sourceTree = "<group>"; };
-		5B692B6D1EC460D6006F864A /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
-		5B692B6E1EC460D6006F864A /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
 		5B692B701EC46292006F864A /* TitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleButton.h; sourceTree = "<group>"; };
 		5B692B711EC46292006F864A /* TitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleButton.m; sourceTree = "<group>"; };
 		5B692B731EC462C1006F864A /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCell.h; sourceTree = "<group>"; };
@@ -140,6 +142,16 @@
 		5B90BD5D1EC34013003E40F2 /* 微博(OC)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博(OC)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B90BD611EC34013003E40F2 /* ___OC_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___OC_UITests.m"; sourceTree = "<group>"; };
 		5B90BD631EC34013003E40F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BEE9CAB1EC540C4004E9784 /* StatusTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTopView.h; sourceTree = "<group>"; };
+		5BEE9CAC1EC540C4004E9784 /* StatusTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTopView.m; sourceTree = "<group>"; };
+		5BEE9CAE1EC540D7004E9784 /* RetweetStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetweetStatusView.h; sourceTree = "<group>"; };
+		5BEE9CAF1EC540D7004E9784 /* RetweetStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetweetStatusView.m; sourceTree = "<group>"; };
+		5BEE9CB11EC540E6004E9784 /* StatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusToolBar.h; sourceTree = "<group>"; };
+		5BEE9CB21EC540E6004E9784 /* StatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusToolBar.m; sourceTree = "<group>"; };
+		5BEE9CB41EC540F3004E9784 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		5BEE9CB51EC540F3004E9784 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
+		5BEE9CB71EC54105004E9784 /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
+		5BEE9CB81EC54105004E9784 /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
 		6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,12 +200,20 @@
 		5B692B601EC45F74006F864A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B692B6D1EC460D6006F864A /* PhotosView.h */,
-				5B692B6E1EC460D6006F864A /* PhotosView.m */,
 				5B692B701EC46292006F864A /* TitleButton.h */,
 				5B692B711EC46292006F864A /* TitleButton.m */,
 				5B692B731EC462C1006F864A /* StatusCell.h */,
 				5B692B741EC462C1006F864A /* StatusCell.m */,
+				5BEE9CAB1EC540C4004E9784 /* StatusTopView.h */,
+				5BEE9CAC1EC540C4004E9784 /* StatusTopView.m */,
+				5BEE9CAE1EC540D7004E9784 /* RetweetStatusView.h */,
+				5BEE9CAF1EC540D7004E9784 /* RetweetStatusView.m */,
+				5BEE9CB11EC540E6004E9784 /* StatusToolBar.h */,
+				5BEE9CB21EC540E6004E9784 /* StatusToolBar.m */,
+				5BEE9CB41EC540F3004E9784 /* PhotoView.h */,
+				5BEE9CB51EC540F3004E9784 /* PhotoView.m */,
+				5BEE9CB71EC54105004E9784 /* PhotosView.h */,
+				5BEE9CB81EC54105004E9784 /* PhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -683,20 +703,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B692B6F1EC460D6006F864A /* PhotosView.m in Sources */,
 				5B7A69581EC402AD00A48213 /* Checkbox.m in Sources */,
 				5B7A695A1EC402AD00A48213 /* Account.m in Sources */,
 				5B7A69541EC402AD00A48213 /* TabBarView.m in Sources */,
 				5B90BD441EC34013003E40F2 /* ViewController.m in Sources */,
 				5B7A694E1EC402AD00A48213 /* DiscoverViewController.m in Sources */,
+				5BEE9CB01EC540D7004E9784 /* RetweetStatusView.m in Sources */,
 				5B7A69501EC402AD00A48213 /* MainNavigationController.m in Sources */,
 				5B90BD411EC34013003E40F2 /* AppDelegate.m in Sources */,
+				5BEE9CB31EC540E6004E9784 /* StatusToolBar.m in Sources */,
 				5B692B631EC45F87006F864A /* Status.m in Sources */,
 				5B692B661EC45FF7006F864A /* User.m in Sources */,
 				5B7A69621EC402E300A48213 /* UIButton+Extension.m in Sources */,
 				5B7A695B1EC402AD00A48213 /* AccountTool.m in Sources */,
 				5B7A695C1EC402AD00A48213 /* WeiboTool.m in Sources */,
 				5B7A69531EC402AD00A48213 /* TabBarButton.m in Sources */,
+				5BEE9CB61EC540F3004E9784 /* PhotoView.m in Sources */,
 				5B692B691EC4601D006F864A /* Photo.m in Sources */,
 				5B7A69561EC402AD00A48213 /* MessageViewController.m in Sources */,
 				5B7A69511EC402AD00A48213 /* MainViewController.m in Sources */,
@@ -705,12 +727,14 @@
 				5B692B751EC462C1006F864A /* StatusCell.m in Sources */,
 				5B7A694F1EC402AD00A48213 /* HomeViewController.m in Sources */,
 				5B692B7B1EC46375006F864A /* NSString+Extension.m in Sources */,
+				5BEE9CB91EC54105004E9784 /* PhotosView.m in Sources */,
 				5B7A695E1EC402AD00A48213 /* UIImage+Extension.m in Sources */,
 				5B90BD3E1EC34013003E40F2 /* main.m in Sources */,
 				5B692B721EC46292006F864A /* TitleButton.m in Sources */,
 				5B692B781EC462F9006F864A /* UIBarButtonItem+Extension.m in Sources */,
 				5B7A69571EC402AD00A48213 /* NewfeatureViewController.m in Sources */,
 				5B7A69551EC402AD00A48213 /* MeViewController.m in Sources */,
+				5BEE9CAD1EC540C4004E9784 /* StatusTopView.m in Sources */,
 				5B7A69521EC402AD00A48213 /* BadgeButton.m in Sources */,
 				5B7A695F1EC402AD00A48213 /* SendStatusViewController.m in Sources */,
 				5B692B6C1EC46083006F864A /* StatusFrame.m in Sources */,
