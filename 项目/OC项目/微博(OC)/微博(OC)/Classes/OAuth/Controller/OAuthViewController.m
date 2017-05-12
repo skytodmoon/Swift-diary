@@ -122,7 +122,6 @@
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:30];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
     NSMutableDictionary *paramenters = [NSMutableDictionary dictionary];
     paramenters[@"client_id"] = @"1234171392";
     paramenters[@"client_secret"] = @"0cf8bc17a50102cd755c4cd85684c4a1";

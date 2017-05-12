@@ -101,7 +101,6 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:30];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
     NSMutableDictionary *pars = [NSMutableDictionary dictionary];
     pars[@"access_token"] = [AccountTool account].access_token;
     pars[@"status"] = newStatus;

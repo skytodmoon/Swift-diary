@@ -47,6 +47,7 @@
 		5BEE9CB31EC540E6004E9784 /* StatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB21EC540E6004E9784 /* StatusToolBar.m */; };
 		5BEE9CB61EC540F3004E9784 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB51EC540F3004E9784 /* PhotoView.m */; };
 		5BEE9CB91EC54105004E9784 /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CB81EC54105004E9784 /* PhotosView.m */; };
+		5BEE9CBC1EC5436F004E9784 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CBB1EC5436F004E9784 /* NSDate+Extension.m */; };
 		DEB856D9ECCDBED844C49B61 /* libPods-微博(OC).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F4C3CFDA0ACE747921F1F6 /* libPods-微博(OC).a */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +153,8 @@
 		5BEE9CB51EC540F3004E9784 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		5BEE9CB71EC54105004E9784 /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
 		5BEE9CB81EC54105004E9784 /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
+		5BEE9CBA1EC5436F004E9784 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		5BEE9CBB1EC5436F004E9784 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		6D166384E8AD0E031B60BB17 /* libPods-微博(OC)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E9094E68B3C097BD13C4F7 /* libPods-微博(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-微博(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -424,6 +427,8 @@
 				5B692B771EC462F9006F864A /* UIBarButtonItem+Extension.m */,
 				5B692B791EC46375006F864A /* NSString+Extension.h */,
 				5B692B7A1EC46375006F864A /* NSString+Extension.m */,
+				5BEE9CBA1EC5436F004E9784 /* NSDate+Extension.h */,
+				5BEE9CBB1EC5436F004E9784 /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				5B7A695C1EC402AD00A48213 /* WeiboTool.m in Sources */,
 				5B7A69531EC402AD00A48213 /* TabBarButton.m in Sources */,
 				5BEE9CB61EC540F3004E9784 /* PhotoView.m in Sources */,
+				5BEE9CBC1EC5436F004E9784 /* NSDate+Extension.m in Sources */,
 				5B692B691EC4601D006F864A /* Photo.m in Sources */,
 				5B7A69561EC402AD00A48213 /* MessageViewController.m in Sources */,
 				5B7A69511EC402AD00A48213 /* MainViewController.m in Sources */,

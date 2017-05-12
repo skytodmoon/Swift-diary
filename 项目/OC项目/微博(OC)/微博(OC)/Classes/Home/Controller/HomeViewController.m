@@ -52,7 +52,96 @@
  */
 - (void)setupRefresh
 {
+    // 下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
+    [self.tableView.mj_header beginRefreshing];
 
+    // 上拉加载
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRereshing)];
+
+}
+
+/**
+ *  上拉加载
+ */
+- (void)footerRereshing
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager.requestSerializer setTimeoutInterval:30];
+    NSMutableDictionary *pars = [NSMutableDictionary dictionary];
+    pars[@"access_token"] = [AccountTool account].access_token; // 用户token
+    pars[@"count"] = @20; // 每页微博个数
+    if (self.statusFrames.count) {
+        Status *status = [[self.statusFrames lastObject] status];
+        long long maxId = [status.idstr longLongValue] - 1;
+        pars[@"max_id"] = @(maxId);
+    }
+    
+    [manager GET:HomeStatus parameters:pars progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.tableView.mj_footer endRefreshing];
+        
+        NSArray *statusArray = [Status mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        NSMutableArray *statusFrameArray = [NSMutableArray array];
+        for (Status *status in statusArray) {
+            StatusFrame *statusFrame = [[StatusFrame alloc] init];
+            statusFrame.status = status;
+            [statusFrameArray addObject:statusFrame];
+        }
+        
+        [self.statusFrames addObjectsFromArray:statusFrameArray];
+        
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"网络连接失败"];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.tableView.mj_footer endRefreshing];
+        
+        Log(@"error: %@", error.localizedDescription);
+    }];
+    
+}
+
+// 显示新微博数量
+- (void)showNewStatusCount:(int)count
+{
+    UIButton *btn = [[UIButton alloc] init];
+    btn.userInteractionEnabled = NO;
+    [btn setBackgroundImage:[UIImage resizedImageWithName:@"timeline_new_status_background"] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+    NSString *title = nil;
+    if (count) {
+        title = [NSString stringWithFormat:@"%d条新微博", count];
+        [btn setTitle:title forState:UIControlStateNormal];
+    } else {
+        [btn setTitle:@"没有新微博" forState:UIControlStateNormal];
+    }
+    
+    CGFloat btnX = 0;
+    CGFloat btnH = 30;
+    CGFloat btnW = self.view.bounds.size.width;
+    CGFloat btnY = 64 - btnH;
+    btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
+    [self.navigationController.view insertSubview:btn belowSubview:self.navigationController.navigationBar];
+    
+    [UIView animateWithDuration:0.7 animations:^{
+        btn.transform = CGAffineTransformMakeTranslation(0, btnH);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.7
+                              delay:1
+                            options:UIViewAnimationOptionCurveLinear
+                         animations:^{
+                             btn.transform = CGAffineTransformIdentity;
+                         }
+                         completion:^(BOOL finished) {
+                             [btn removeFromSuperview];
+                         }];
+    }];
 }
 
 // 设置NavigationBar
@@ -99,11 +188,8 @@
 
 - (void)headerRereshing{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:30];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html", @"application/json", nil];
     NSMutableDictionary *pars = [NSMutableDictionary dictionary];
     pars[@"access_token"] = [AccountTool account].access_token; // 用户token
     pars[@"count"] = @20; // 每页微博个数
@@ -116,14 +202,63 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD showSuccessWithStatus:@"刷新成功"];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.tableView.mj_header beginRefreshing];
+        
+        NSArray *statusArray = [Status mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        NSMutableArray *statusFrameArray = [NSMutableArray array];
+        for (Status *status in statusArray) {
+            StatusFrame *statusFrame = [[StatusFrame alloc] init];
+            statusFrame.status = status;
+            [statusFrameArray addObject:statusFrame];
+        }
+        
+        NSMutableArray *tempArray = [NSMutableArray array];
+        [tempArray addObjectsFromArray:statusFrameArray];
+        [tempArray addObjectsFromArray:self.statusFrames];
+        self.statusFrames = tempArray;
+        
+        [self.tableView reloadData];
+        if (statusFrameArray.count) {
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+        
+        // 显示新微博数量
+        [self showNewStatusCount:(int)statusFrameArray.count];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"网络连接失败"];
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
+        [self.tableView.mj_header endRefreshing];
         Log(@"请求失败: %@", error);
     }];
 
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.statusFrames.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StatusCell *cell = [StatusCell cellWithTableView:tableView];
+    
+    cell.statusFrame = self.statusFrames[indexPath.row];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.statusFrames[indexPath.row] cellHeight];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

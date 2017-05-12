@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UITableViewController
+/**
+ *  下拉刷新
+ */
+- (void)headerRereshing;
 
 @end
