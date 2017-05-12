@@ -1,4 +1,3 @@
-
 //
 //  ScrollerPageView.m
 //  爱鲜蜂(OC)
@@ -17,6 +16,7 @@ static const NSInteger MaxImageViewCount = 3;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) UIImage *placeImage;
 @end
+
 @implementation ScrollerPageView
 
 + (instancetype)pageScroller:(NSArray <NSString *>*)images placeHolderImage:(UIImage *)placeHolderImage{
@@ -147,6 +147,23 @@ static const NSInteger MaxImageViewCount = 3;
 - (void)next{
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * 2, 0) animated:YES];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

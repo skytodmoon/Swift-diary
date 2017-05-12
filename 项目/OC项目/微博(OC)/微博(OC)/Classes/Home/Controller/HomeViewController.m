@@ -69,6 +69,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setTimeoutInterval:30];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     NSMutableDictionary *pars = [NSMutableDictionary dictionary];
     pars[@"access_token"] = [AccountTool account].access_token; // 用户token
     pars[@"count"] = @20; // 每页微博个数
@@ -189,6 +190,8 @@
 - (void)headerRereshing{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer]; //申明返回的结果是json类型
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"]; //如果报接受类型不一致请替换一致text / html或其他的
     [manager.requestSerializer setTimeoutInterval:30];
     NSMutableDictionary *pars = [NSMutableDictionary dictionary];
     pars[@"access_token"] = [AccountTool account].access_token; // 用户token

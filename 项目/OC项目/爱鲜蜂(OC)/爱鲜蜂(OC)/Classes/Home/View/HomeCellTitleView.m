@@ -7,61 +7,65 @@
 //
 
 #import "HomeCellTitleView.h"
-#import "UIColor+Extension.h"
-@interface HomeCellTitleView()
-
-@property (nonatomic,strong) UIView *rectangleView;
-@property (nonatomic,strong) UILabel *titleLabel;
-@property (nonatomic,strong) UILabel *moreLabel;
 
 
+@interface HomeCellTitleView ()
+@property (nonatomic, strong) UIView *lineView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *moreLable;
 @end
-
 @implementation HomeCellTitleView
 
--(instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        _rectangleView = [[UIView alloc]init];
+        self.backgroundColor = [UIColor whiteColor];
+        _lineView = [[UIView alloc]init];
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.text = @"优选水果";
         _titleLabel.font = [UIFont systemFontOfSize:15];
         [_titleLabel sizeToFit];
-        UILabel *moreLabel = [[UILabel alloc]init];
-        moreLabel.text = @"更多 >";
-        moreLabel.font = [UIFont systemFontOfSize:13];
-        [moreLabel sizeToFit];
-        moreLabel.textAlignment = NSTextAlignmentRight;
-        moreLabel.textColor = [UIColor colorWithRed:150/255.0 green:150/255.0  blue:150/255.0  alpha:1.0];
-        [self addSubview:_rectangleView];
+        _moreLable = [[UILabel alloc]init];
+        _moreLable.font = [UIFont systemFontOfSize:12];
+        _moreLable.textAlignment = NSTextAlignmentRight;
+        _moreLable.text = @"更多 >";
+        [_moreLable sizeToFit];
+        [self addSubview:_lineView];
         [self addSubview:_titleLabel];
-        [self addSubview:moreLabel];
+        [self addSubview:_moreLable];
         
-        [_rectangleView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(self).offset(10);
-            make.width.mas_equalTo(5);
+        [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(3);
             make.height.mas_equalTo(15);
+            make.leading.equalTo(self).offset(10);
             make.centerY.equalTo(self);
         }];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(_rectangleView.mas_trailing).offset(5);
-            make.width.mas_equalTo(Width / 2);
-            make.centerY.equalTo(self);
+            make.centerY.equalTo(_lineView);
+            make.leading.equalTo(_lineView).offset(10);
+            make.height.mas_equalTo(15);
         }];
-        
-        [moreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(_titleLabel.mas_trailing);
-            make.trailing.equalTo(self).offset(-10);
-            make.centerY.equalTo(self);
+        [_moreLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.trailing.equalTo(self).offset(10);
+            make.centerY.equalTo(_lineView);
+            make.height.mas_equalTo(15);
         }];
-        
     }
     return self;
 }
-- (void)setActRow:(ActRow *)actRow {
+- (void)layoutSubviews{
+    [super layoutSubviews];
+
+}
+- (void)setActRow:(ActRow *)actRow{
+    NSLog(@"_titleLabel.text = actRow.category_detail.name= %@",actRow.category_detail.name);
+    NSLog(@"titleViewInfo.category_detail.category_color = %@",actRow.category_detail.category_color);
     UIColor *color = [UIColor getColor:actRow.category_detail.category_color];
-    self.rectangleView.backgroundColor = color;
-    self.titleLabel.textColor = color;
-    self.titleLabel.text = actRow.category_detail.name;
+    _lineView.backgroundColor = color;
+    _titleLabel.textColor = color;
+    _titleLabel.text = actRow.category_detail.name;
+}
+- (void)setTitleViewInfo:(ActRow *)titleViewInfo{
+
 }
 
 @end

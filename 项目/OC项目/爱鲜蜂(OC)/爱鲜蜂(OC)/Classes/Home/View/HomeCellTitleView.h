@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "HomeHeadData.h"
+
 @interface HomeCellTitleView : UIView
-
-@property (nonatomic,strong) ActRow *actRow;
+@property (nonatomic, strong) ActRow *actRow;
 @end
-

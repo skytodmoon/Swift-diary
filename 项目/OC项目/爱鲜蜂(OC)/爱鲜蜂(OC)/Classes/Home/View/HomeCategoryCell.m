@@ -7,53 +7,54 @@
 //
 
 #import "HomeCategoryCell.h"
-#import "HomeCellTitleView.h"
-#import "HomeCellGoodsView.h"
 
-@interface HomeCategoryCell()
-@property (nonatomic,strong) HomeCellTitleView *titleView;
-@property (nonatomic,strong) HomeCellGoodsView *goodsView;
-@property (nonatomic,strong) UIImageView *brandImageView;
 
+@interface HomeCategoryCell ()
+@property (nonatomic, strong) HomeCellTitleView *titleView;
+@property (nonatomic, strong) UIImageView *sortImage;
+@property (nonatomic, strong) HomeCellGoodsView *goodsView;
 @end
 
 @implementation HomeCategoryCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
         _titleView = [[HomeCellTitleView alloc]init];
         [self addSubview:_titleView];
-        _brandImageView = [[UIImageView alloc]init];
-        [self addSubview:_brandImageView];
+        _sortImage = [[UIImageView alloc]init];
+        [self addSubview:_sortImage];
         _goodsView = [[HomeCellGoodsView alloc]init];
         [self addSubview:_goodsView];
         
         [_titleView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self);
-            make.leading.equalTo(self);
-            make.width.equalTo(self);
-            make.height.mas_equalTo(40);
+            make.top.leading.trailing.equalTo(self);
+            make.height.mas_offset(30);
         }];
-        [_brandImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_sortImage mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_titleView.mas_bottom);
             make.leading.equalTo(self).offset(10);
             make.trailing.equalTo(self).offset(-10);
-            make.top.equalTo(_titleView.mas_bottom);
-            make.height.mas_equalTo(80);
+            make.height.equalTo(@100);
         }];
         [_goodsView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(self);
-            make.top.equalTo(_brandImageView.mas_bottom);
-            make.trailing.equalTo(self);
-            make.height.mas_equalTo(200);
+            make.top.equalTo(_sortImage.mas_bottom);
+            make.leading.trailing.equalTo(self);
+            make.bottom.equalTo(self);
         }];
     }
     return self;
 }
 
-- (void)setActRow:(ActRow *)actRow {
-    self.titleView.actRow = actRow;
-    [self.brandImageView sd_setImageWithURL:[NSURL URLWithString:actRow.activity.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_full_size"]];
-    self.goodsView.actRow = actRow;
+
+- (void)setCellInfo:(ActRow *)cellInfo{
+    NSLog(@"actRow.activity.img = %@  --= %@",cellInfo.activity.img,cellInfo.category_detail.name);
+    self.titleView.actRow = cellInfo;
+    self.goodsView.actRow = cellInfo;
+    [self.sortImage sd_setImageWithURL:[NSURL URLWithString:cellInfo.activity.img] placeholderImage:[UIImage imageNamed:cellInfo.category_detail.name]];
+}
+- (void)setCellback:(ClikedCellback)cellback{
+    _cellback = cellback;
+    self.goodsView.cellback = cellback;
 }
 @end

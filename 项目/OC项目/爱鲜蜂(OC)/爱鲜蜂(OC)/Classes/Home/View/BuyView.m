@@ -137,7 +137,7 @@
     if (self.goodsIndex <= 0) {
         return;
     }
-    
+
     self.goodsIndex--;
     self.goods.userBuyNumber = self.goodsIndex;
     if (self.goodsIndex == 0) {
