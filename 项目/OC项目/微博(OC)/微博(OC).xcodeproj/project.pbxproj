@@ -265,6 +265,8 @@
 		5B2EFD2F1EC5B22A005DA288 /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFD2E1EC5B22A005DA288 /* IconView.m */; };
 		5B2EFD321EC5B3AE005DA288 /* TitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFD311EC5B3AE005DA288 /* TitleMenuViewController.m */; };
 		5B2EFD351EC5B403005DA288 /* DropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFD341EC5B403005DA288 /* DropdownView.m */; };
+		5B2EFD3A1EC5BA9A005DA288 /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFD371EC5BA9A005DA288 /* SearchBar.m */; };
+		5B2EFD3B1EC5BA9A005DA288 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EFD391EC5BA9A005DA288 /* TextView.m */; };
 		5BEEA0881EC5934A004E9784 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA0871EC5934A004E9784 /* main.m */; };
 		5BEEA08B1EC5934A004E9784 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08A1EC5934A004E9784 /* AppDelegate.m */; };
 		5BEEA08E1EC5934A004E9784 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEEA08D1EC5934A004E9784 /* ViewController.m */; };
@@ -586,6 +588,10 @@
 		5B2EFD311EC5B3AE005DA288 /* TitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleMenuViewController.m; sourceTree = "<group>"; };
 		5B2EFD331EC5B403005DA288 /* DropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownView.h; sourceTree = "<group>"; };
 		5B2EFD341EC5B403005DA288 /* DropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownView.m; sourceTree = "<group>"; };
+		5B2EFD361EC5BA9A005DA288 /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
+		5B2EFD371EC5BA9A005DA288 /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
+		5B2EFD381EC5BA9A005DA288 /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
+		5B2EFD391EC5BA9A005DA288 /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView.m; sourceTree = "<group>"; };
 		5BEEA0831EC5934A004E9784 /* 微博(OC).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博(OC).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEEA0871EC5934A004E9784 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEEA0891EC5934A004E9784 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -729,6 +735,10 @@
 		5B2EFB071EC5B072005DA288 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B2EFD361EC5BA9A005DA288 /* SearchBar.h */,
+				5B2EFD371EC5BA9A005DA288 /* SearchBar.m */,
+				5B2EFD381EC5BA9A005DA288 /* TextView.h */,
+				5B2EFD391EC5BA9A005DA288 /* TextView.m */,
 				5B2EFD331EC5B403005DA288 /* DropdownView.h */,
 				5B2EFD341EC5B403005DA288 /* DropdownView.m */,
 				5B2EFD2D1EC5B22A005DA288 /* IconView.h */,
@@ -1666,6 +1676,7 @@
 				5B2EFD2B1EC5B168005DA288 /* StatusViewCell.m in Sources */,
 				5B2EFC2C1EC5B073005DA288 /* FXBlurView.m in Sources */,
 				5B2EFD2C1EC5B168005DA288 /* TitleButton.m in Sources */,
+				5B2EFD3B1EC5BA9A005DA288 /* TextView.m in Sources */,
 				5B2EFC241EC5B073005DA288 /* AccountTool.m in Sources */,
 				5B2EFC291EC5B073005DA288 /* UITextView+Extension.m in Sources */,
 				5B2EFC271EC5B073005DA288 /* NSString+Extension.m in Sources */,
@@ -1684,6 +1695,7 @@
 				5B2EFC1D1EC5B073005DA288 /* TabBarViewController.m in Sources */,
 				5B2EFD2F1EC5B22A005DA288 /* IconView.m in Sources */,
 				5B2EFC191EC5B073005DA288 /* ComposeViewController.m in Sources */,
+				5B2EFD3A1EC5BA9A005DA288 /* SearchBar.m in Sources */,
 				5B2EFC231EC5B073005DA288 /* Account.m in Sources */,
 				5B2EFC1B1EC5B073005DA288 /* HomeViewController.m in Sources */,
 				5B2EFC1C1EC5B073005DA288 /* NavigationController.m in Sources */,
