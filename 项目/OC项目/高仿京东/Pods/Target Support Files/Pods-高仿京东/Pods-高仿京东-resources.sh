@@ -79,6 +79,38 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
+  install_resource "KINWebBrowser/Assets/backbutton.png"
+  install_resource "KINWebBrowser/Assets/backbutton@2x.png"
+  install_resource "KINWebBrowser/Assets/backbutton@3x.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton@2x.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton@3x.png"
+  install_resource "SSKeychain/Support/SSKeychain.bundle"
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/TUSafariActivity/TUSafariActivity.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png"
+  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
+  install_resource "KINWebBrowser/Assets/backbutton.png"
+  install_resource "KINWebBrowser/Assets/backbutton@2x.png"
+  install_resource "KINWebBrowser/Assets/backbutton@3x.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton@2x.png"
+  install_resource "KINWebBrowser/Assets/forwardbutton@3x.png"
+  install_resource "SSKeychain/Support/SSKeychain.bundle"
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/TUSafariActivity/TUSafariActivity.bundle"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

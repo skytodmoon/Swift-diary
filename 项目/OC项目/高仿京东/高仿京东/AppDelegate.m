@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarController.h"
+#import "GuideViewController.h"
+#import <SMS_SDK/SMSSDK.h>
+
+#define appKey @"1900961e9a8b0"
+#define appSecret @"cd192a22389ce3d1018558edd99a9b02"
 
 @interface AppDelegate ()
 
@@ -16,6 +22,40 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:appKey
+             withSecret:appSecret];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //判断是不是第一次启动应用
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        NSLog(@"第一次启动");
+        //如果是第一次启动的话进入用户引导页面
+        
+        /**
+         这个引导页不是本人写的，觉得普通引导页没有看头，自己去论坛找了一个比较牛X的引导页
+         有兴趣的同学可以去看看代码，我是没有认真去看，数学没有过关，这个引导页难度比较高
+         **/
+        
+        GuideViewController *userGuideViewController = [[GuideViewController alloc] init];
+        
+        self.window.rootViewController = userGuideViewController;
+        
+        [userGuideViewController release];
+    }else{
+        NSLog(@"不是第一次启动");
+        self.window.rootViewController = [[CommonColorTabBarController alloc] init];
+        //这里最好释放一下内存
+        [CommonColorTabBarController release];
+        
+    }
+    
+    self.window.backgroundColor=[UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

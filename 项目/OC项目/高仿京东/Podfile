@@ -6,15 +6,11 @@ target '高仿京东' do
   # use_frameworks!
 
   # Pods for 高仿京东
-
-  target '高仿京东Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '高仿京东UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'FMDB'
+  pod 'AFNetworking'
+  pod 'KINWebBrowser'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'SSKeychain'
 end
