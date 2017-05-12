@@ -22,4 +22,13 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UITextView+Extension.h"
 
+// RGB颜色
+#define Color(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// cell的边框宽度
+#define StatusCellBorderW 10
+#define StatusCellBorderH 5
+#define StatusMargin 10
+// 随机色
+#define RandomColor Color(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
 #endif /* PrefixHeader_pch */
