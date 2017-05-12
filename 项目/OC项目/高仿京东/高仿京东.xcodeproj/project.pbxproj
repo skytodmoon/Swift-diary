@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A175E7F64C404C77436644 /* libPods-高仿京东.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBEA548AD0E804D41E86151 /* libPods-高仿京东.a */; };
+		2D1FCD5D70CBD81ECF0F12DB /* libPods-高仿京东Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F59402A0B7D3F1BB9A7A23 /* libPods-高仿京东Tests.a */; };
 		5BEE9D0C1EC56313004E9784 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9D0B1EC56313004E9784 /* main.m */; };
 		5BEE9D0F1EC56313004E9784 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9D0E1EC56313004E9784 /* AppDelegate.m */; };
 		5BEE9D121EC56313004E9784 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9D111EC56313004E9784 /* ViewController.m */; };
@@ -16,6 +18,7 @@
 		5BEE9D251EC56313004E9784 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9D241EC56313004E9784 /* ____Tests.m */; };
 		5BEE9D301EC56313004E9784 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9D2F1EC56313004E9784 /* ____UITests.m */; };
 		5BEE9D3F1EC563A3004E9784 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEE9D3E1EC563A3004E9784 /* Images.xcassets */; };
+		C17EB1CBA84B634CB6171026 /* libPods-高仿京东UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C42CA2401B2D38B0A9FA5D27 /* libPods-高仿京东UITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27DD017743C96A7A01577FD2 /* Pods-高仿京东.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东/Pods-高仿京东.debug.xcconfig"; sourceTree = "<group>"; };
+		2C36F3B3CA010DED4F9D176B /* Pods-高仿京东Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东Tests/Pods-高仿京东Tests.release.xcconfig"; sourceTree = "<group>"; };
+		43F59402A0B7D3F1BB9A7A23 /* libPods-高仿京东Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿京东Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEE9D071EC56313004E9784 /* 高仿京东.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高仿京东.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEE9D0B1EC56313004E9784 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEE9D0D1EC56313004E9784 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,12 +53,18 @@
 		5BEE9D191EC56313004E9784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BEE9D1B1EC56313004E9784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEE9D201EC56313004E9784 /* 高仿京东Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "高仿京东Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BEE9D241EC56313004E9784 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		5BEE9D241EC56313004E9784 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____Tests.m; sourceTree = "<group>"; };
 		5BEE9D261EC56313004E9784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEE9D2B1EC56313004E9784 /* 高仿京东UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "高仿京东UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BEE9D2F1EC56313004E9784 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
+		5BEE9D2F1EC56313004E9784 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ____UITests.m; sourceTree = "<group>"; };
 		5BEE9D311EC56313004E9784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEE9D3E1EC563A3004E9784 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		746D105FC63500CCBCB8E132 /* Pods-高仿京东.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东/Pods-高仿京东.release.xcconfig"; sourceTree = "<group>"; };
+		8CAC4D24DB040D109476EFAC /* Pods-高仿京东Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东Tests/Pods-高仿京东Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		992CF2E8BDD9F709BC00AB58 /* Pods-高仿京东UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东UITests/Pods-高仿京东UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BCFB67B816540B605691549 /* Pods-高仿京东UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿京东UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-高仿京东UITests/Pods-高仿京东UITests.release.xcconfig"; sourceTree = "<group>"; };
+		BCBEA548AD0E804D41E86151 /* libPods-高仿京东.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿京东.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42CA2401B2D38B0A9FA5D27 /* libPods-高仿京东UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿京东UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A175E7F64C404C77436644 /* libPods-高仿京东.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1FCD5D70CBD81ECF0F12DB /* libPods-高仿京东Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17EB1CBA84B634CB6171026 /* libPods-高仿京东UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4804A88B8464E4F7BAA62600 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27DD017743C96A7A01577FD2 /* Pods-高仿京东.debug.xcconfig */,
+				746D105FC63500CCBCB8E132 /* Pods-高仿京东.release.xcconfig */,
+				8CAC4D24DB040D109476EFAC /* Pods-高仿京东Tests.debug.xcconfig */,
+				2C36F3B3CA010DED4F9D176B /* Pods-高仿京东Tests.release.xcconfig */,
+				992CF2E8BDD9F709BC00AB58 /* Pods-高仿京东UITests.debug.xcconfig */,
+				9BCFB67B816540B605691549 /* Pods-高仿京东UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5BEE9CFE1EC56313004E9784 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,8 @@
 				5BEE9D231EC56313004E9784 /* 高仿京东Tests */,
 				5BEE9D2E1EC56313004E9784 /* 高仿京东UITests */,
 				5BEE9D081EC56313004E9784 /* Products */,
+				4804A88B8464E4F7BAA62600 /* Pods */,
+				807DC077673757E68FF4D90C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +173,16 @@
 			path = "高仿京东UITests";
 			sourceTree = "<group>";
 		};
+		807DC077673757E68FF4D90C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCBEA548AD0E804D41E86151 /* libPods-高仿京东.a */,
+				43F59402A0B7D3F1BB9A7A23 /* libPods-高仿京东Tests.a */,
+				C42CA2401B2D38B0A9FA5D27 /* libPods-高仿京东UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BEE9D341EC56313004E9784 /* Build configuration list for PBXNativeTarget "高仿京东" */;
 			buildPhases = (
+				47A804AEBE27E14505E7334C /* [CP] Check Pods Manifest.lock */,
 				5BEE9D031EC56313004E9784 /* Sources */,
 				5BEE9D041EC56313004E9784 /* Frameworks */,
 				5BEE9D051EC56313004E9784 /* Resources */,
+				89826E7DA9DC59308A432053 /* [CP] Embed Pods Frameworks */,
+				DC5B9495507C83065D96EE17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BEE9D371EC56313004E9784 /* Build configuration list for PBXNativeTarget "高仿京东Tests" */;
 			buildPhases = (
+				BB4C8F0A46E07563C08EEE56 /* [CP] Check Pods Manifest.lock */,
 				5BEE9D1C1EC56313004E9784 /* Sources */,
 				5BEE9D1D1EC56313004E9784 /* Frameworks */,
 				5BEE9D1E1EC56313004E9784 /* Resources */,
+				7149C41E97DF52F57573E5A7 /* [CP] Embed Pods Frameworks */,
+				67F6132A1E84F53D5044E309 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BEE9D3A1EC56313004E9784 /* Build configuration list for PBXNativeTarget "高仿京东UITests" */;
 			buildPhases = (
+				2D8D659AD1FB32E836D98984 /* [CP] Check Pods Manifest.lock */,
 				5BEE9D271EC56313004E9784 /* Sources */,
 				5BEE9D281EC56313004E9784 /* Frameworks */,
 				5BEE9D291EC56313004E9784 /* Resources */,
+				93A00FD0CBDEAB5116450FDC /* [CP] Embed Pods Frameworks */,
+				9DEBB6B58788AB8B27633196 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +317,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8D659AD1FB32E836D98984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47A804AEBE27E14505E7334C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67F6132A1E84F53D5044E309 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东Tests/Pods-高仿京东Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7149C41E97DF52F57573E5A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东Tests/Pods-高仿京东Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89826E7DA9DC59308A432053 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东/Pods-高仿京东-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A00FD0CBDEAB5116450FDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东UITests/Pods-高仿京东UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DEBB6B58788AB8B27633196 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东UITests/Pods-高仿京东UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB4C8F0A46E07563C08EEE56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5B9495507C83065D96EE17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高仿京东/Pods-高仿京东-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BEE9D031EC56313004E9784 /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		5BEE9D351EC56313004E9784 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27DD017743C96A7A01577FD2 /* Pods-高仿京东.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -427,6 +615,7 @@
 		};
 		5BEE9D361EC56313004E9784 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746D105FC63500CCBCB8E132 /* Pods-高仿京东.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -439,6 +628,7 @@
 		};
 		5BEE9D381EC56313004E9784 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CAC4D24DB040D109476EFAC /* Pods-高仿京东Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "高仿京东Tests/Info.plist";
@@ -451,6 +641,7 @@
 		};
 		5BEE9D391EC56313004E9784 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C36F3B3CA010DED4F9D176B /* Pods-高仿京东Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "高仿京东Tests/Info.plist";
@@ -463,6 +654,7 @@
 		};
 		5BEE9D3B1EC56313004E9784 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992CF2E8BDD9F709BC00AB58 /* Pods-高仿京东UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "高仿京东UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -474,6 +666,7 @@
 		};
 		5BEE9D3C1EC56313004E9784 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BCFB67B816540B605691549 /* Pods-高仿京东UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "高仿京东UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
