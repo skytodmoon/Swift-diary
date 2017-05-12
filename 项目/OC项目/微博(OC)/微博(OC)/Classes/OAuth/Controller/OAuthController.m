@@ -83,18 +83,21 @@
     
         NSString *url = @"https://api.weibo.com/oauth2/access_token";
         AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-        //拼接请求参数
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"client_id"] = @"1234171392";
-        params[@"client_secret"] = @"0cf8bc17a50102cd755c4cd85684c4a1";
-        params[@"grant_type"] = @"authorization_code";
-        params[@"redirect_uri"] = @"http://www.baidu.com";
-        params[@"code"] = code;
+    mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"text/json",@"application/json",@"text/javascript",@"text/html", @"application/javascript", @"application/x-javascript",@"text/js", nil];
+    //拼接请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"client_id"] = @"1234171392";
+    params[@"client_secret"] = @"0cf8bc17a50102cd755c4cd85684c4a1";
+    params[@"grant_type"] = @"authorization_code";
+    params[@"redirect_uri"] = @"http://www.baidu.com";
+    params[@"code"] = code;
     
-        [mgr GET:url parameters:mgr progress:^(NSProgress * _Nonnull downloadProgress) {
+        [mgr POST:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
+
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"请求成功");
+            //请求成功
+            NSLog(@"请求成功：%@",responseObject);
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             
             // 将返回的账号字典数据 --> 模型，存进沙盒
