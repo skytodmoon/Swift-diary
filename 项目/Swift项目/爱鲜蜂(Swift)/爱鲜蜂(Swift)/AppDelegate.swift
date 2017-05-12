@@ -66,6 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - 加载控制器和广告
     private func loadADRootViewController(){
         
+        adViewController = ADViewController()
+        
+        weak var tmpSelf = self
+        MainAD.loadADData { (data, error) -> Void in
+            if data?.data?.img_name != nil {
+                tmpSelf!.adViewController!.imageName = data!.data!.img_name
+                tmpSelf!.window?.rootViewController = self.adViewController
+            }
+        }
     }
     
     // MARK: - 通知主控制器

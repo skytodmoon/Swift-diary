@@ -77,6 +77,10 @@
 		5BE870A41EC2A8C60076FA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE870A21EC2A8C60076FA18 /* LaunchScreen.storyboard */; };
 		5BE870AF1EC2A8C60076FA18 /* ____Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE870AE1EC2A8C60076FA18 /* ____Swift_Tests.swift */; };
 		5BE870BA1EC2A8C60076FA18 /* ____Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE870B91EC2A8C60076FA18 /* ____Swift_UITests.swift */; };
+		5BEE9CF41EC558E1004E9784 /* MainAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CF31EC558E1004E9784 /* MainAD.swift */; };
+		5BEE9CF71EC55929004E9784 /* DictModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CF61EC55929004E9784 /* DictModelProtocol.swift */; };
+		5BEE9CFB1EC55AEC004E9784 /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CF91EC55AEC004E9784 /* LeftImageRightTextButton.swift */; };
+		5BEE9CFC1EC55AEC004E9784 /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE9CFA1EC55AEC004E9784 /* UpImageDownTextButton.swift */; };
 		8CEC897D4A256F7E0A41B31A /* Pods_____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2098A1643B4ABA3B9F8AB6BB /* Pods_____Swift_.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +209,10 @@
 		5BE870B51EC2A8C60076FA18 /* 爱鲜蜂(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "爱鲜蜂(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE870B91EC2A8C60076FA18 /* ____Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Swift_UITests.swift"; sourceTree = "<group>"; };
 		5BE870BB1EC2A8C60076FA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BEE9CF31EC558E1004E9784 /* MainAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAD.swift; sourceTree = "<group>"; };
+		5BEE9CF61EC55929004E9784 /* DictModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictModelProtocol.swift; sourceTree = "<group>"; };
+		5BEE9CF91EC55AEC004E9784 /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftImageRightTextButton.swift; sourceTree = "<group>"; };
+		5BEE9CFA1EC55AEC004E9784 /* UpImageDownTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpImageDownTextButton.swift; sourceTree = "<group>"; };
 		61B7BB5242F66F2CA0BBD518 /* Pods-爱鲜蜂(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-爱鲜蜂(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-爱鲜蜂(Swift)/Pods-爱鲜蜂(Swift).release.xcconfig"; sourceTree = "<group>"; };
 		B60967DBB17FEFCBFE8BDC91 /* Pods_____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				5B90BC671EC2EF80003E40F2 /* ADViewController.swift */,
+				5BEE9CF31EC558E1004E9784 /* MainAD.swift */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -535,6 +544,8 @@
 		5BAFD6961EC2CE1C002E753D /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5BEE9CF81EC55AD6004E9784 /* View */,
+				5BEE9CF51EC5591A004E9784 /* Tool */,
 				5BAFD6971EC2CE66002E753D /* Common */,
 				5BAFD6981EC2CE66002E753D /* Extension */,
 				5BAFD6991EC2CE66002E753D /* Refresh */,
@@ -625,6 +636,23 @@
 				5BE870BB1EC2A8C60076FA18 /* Info.plist */,
 			);
 			path = "爱鲜蜂(Swift)UITests";
+			sourceTree = "<group>";
+		};
+		5BEE9CF51EC5591A004E9784 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5BEE9CF61EC55929004E9784 /* DictModelProtocol.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		5BEE9CF81EC55AD6004E9784 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BEE9CF91EC55AEC004E9784 /* LeftImageRightTextButton.swift */,
+				5BEE9CFA1EC55AEC004E9784 /* UpImageDownTextButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F33F5EAF6E524497F5A95AA4 /* Pods */ = {
@@ -850,16 +878,20 @@
 			files = (
 				5BE8709C1EC2A8C60076FA18 /* ViewController.swift in Sources */,
 				5B90BC681EC2EF80003E40F2 /* ADViewController.swift in Sources */,
+				5BEE9CFC1EC55AEC004E9784 /* UpImageDownTextButton.swift in Sources */,
 				5B90BC5E1EC2D5C0003E40F2 /* UIDevice+Extension.swift in Sources */,
+				5BEE9CF41EC558E1004E9784 /* MainAD.swift in Sources */,
 				5B90BC701EC2F276003E40F2 /* AnimationTabBarController.swift in Sources */,
 				5BAFD6A61EC2D419002E753D /* UIView+Extension.swift in Sources */,
 				5BAFD6A41EC2D28D002E753D /* Color+Extension.swift in Sources */,
 				5B90BC7C1EC2F5D2003E40F2 /* ShopCartViewController.swift in Sources */,
+				5BEE9CF71EC55929004E9784 /* DictModelProtocol.swift in Sources */,
 				5BE8709A1EC2A8C60076FA18 /* AppDelegate.swift in Sources */,
 				5B90BC821EC2F637003E40F2 /* BaseNavigationController.swift in Sources */,
 				5BAFD6A21EC2D16B002E753D /* Theme.swift in Sources */,
 				5BAFD6A01EC2CEC4002E753D /* RefreshHeader.swift in Sources */,
 				5B90BC781EC2F59D003E40F2 /* SupermarketViewController.swift in Sources */,
+				5BEE9CFB1EC55AEC004E9784 /* LeftImageRightTextButton.swift in Sources */,
 				5B90BC601EC2D5E4003E40F2 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B90BC621EC2D606003E40F2 /* String+Extension.swift in Sources */,
 				5B90BC741EC2F571003E40F2 /* HomeViewController.swift in Sources */,
