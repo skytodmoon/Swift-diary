@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Account.h"
+#import "OAuthController.h"
+#import "AccountTool.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 创建窗口
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    //设置根控制器
+    Account *account = [AccountTool account];
+    
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
+    if (account) {
+        
+        [self.window switchRootViewController];
+        
+    } else{
+        
+        self.window.rootViewController = [[OAuthController alloc]init];
+    }
+    
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
