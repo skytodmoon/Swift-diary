@@ -35,9 +35,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    //[NSThread sleepForTimeInterval:2.0];
-//    self.tableView.dataSource = self;
-//    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     self.tableView.backgroundColor = Color(211, 211, 211);
     //设置主题
@@ -45,9 +44,9 @@
     //设置昵称
     [self setupUserInfo];
     //刷新数据
-//    [self refreshData];
+    [self refreshData];
     //上拉刷新,获取更多数据
-//    [self refreshUpData];
+    [self refreshUpData];
     //获取未读数
     NSTimer *timer = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(setupUnreadCount) userInfo:nil repeats:YES];
     // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
