@@ -1,5 +1,5 @@
 //
-//  HeadlineView.h
+//  HeadLineView.h
 //  爱鲜蜂(OC)
 //
 //  Created by 金亮齐 on 2017/5/11.
@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HomeHeadData.h"
 
-@interface HeadlineView : UIView
-@property (nonatomic,strong) ActInfo *headline;
-@property (nonatomic,copy) ClikedCallback callback;
-
+@interface HeadLineView : UIView
+@property (nonatomic, strong) ActInfo *headline;
+@property (nonatomic, copy) ClikedCallback callback;
 @end

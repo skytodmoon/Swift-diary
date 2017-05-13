@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "Goods.h"
 
 @interface BuyView : UIView

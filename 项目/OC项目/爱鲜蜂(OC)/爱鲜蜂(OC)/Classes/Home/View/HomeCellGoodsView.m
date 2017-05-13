@@ -7,36 +7,58 @@
 //
 
 #import "HomeCellGoodsView.h"
-#import "HomeCell.h"
+
+
+#define maxCount 3
 @implementation HomeCellGoodsView
 
-- (instancetype)init {
+- (instancetype)initWithFrame:(CGRect)frame{
+    if ([super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
+
+- (instancetype)init{
     if (self = [super init]) {
-        for (NSInteger i = 0; i < 3; i++) {
-            HomeCell *homecell = [[HomeCell alloc]init];
-            homecell.layer.borderColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0].CGColor;
-            homecell.layer.borderWidth = 0.5;
-            [self addSubview:homecell];
+        for (int i = 0; i < maxCount; ++i) {
+            HomeCell *homeCell = [[HomeCell alloc]init];
+            homeCell.layer.borderWidth = 0.5;
+            homeCell.layer.borderColor = GrayColor.CGColor;
+            [self addSubview:homeCell];
         }
     }
     return self;
 }
-- (void)layoutSubviews {
+
+- (void)layoutSubviews{
     [super layoutSubviews];
-    CGFloat cellHeight = 200;
-    CGFloat cellWidth = Width / 3;
-    for (NSInteger i = 0; i < self.subviews.count; i++) {
-        HomeCell *cell = self.subviews[i];
-        cell.frame = CGRectMake(i * cellWidth, 0, cellWidth, cellHeight);
+    CGFloat cellHeight = self.frame.size.height;
+    CGFloat cellWidth = self.frame.size.width / 3;
+    CGFloat index = 0;
+    for (HomeCell *cell in self.subviews) {
+        cell.frame = CGRectMake(cellWidth * index, 0, cellWidth, cellHeight);
+        index ++;
     }
 }
 
-- (void)setActRow:(ActRow *)actRow {
-    for (NSInteger i = 0; i < self.subviews.count; i++) {
+- (void)setActRow:(ActRow *)actRow{
+    for (int i = 0; i < self.subviews.count; ++i) {
+        // 设置数据
         HomeCell *cell = self.subviews[i];
-        cell.buyViewShowZear = YES;
+        cell.zearNeverShow = YES;
         cell.goods = actRow.category_detail.goods[i];
+        
     }
 }
+- (void)setCellback:(ClikedCellback)cellback{
+    _cellback = cellback;
+    for (int i = 0; i < self.subviews.count; ++i) {
+        // 设置数据
+        HomeCell *cell = self.subviews[i];
+        cell.cellback = cellback;
+    }
+}
+
 
 @end

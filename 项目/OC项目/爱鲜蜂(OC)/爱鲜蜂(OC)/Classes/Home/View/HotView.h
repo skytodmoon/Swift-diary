@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Activity.h"
-@class HotView;
-
 
 @interface HotView : UIView
-
 - (instancetype)initWithImages:(NSArray<NSString *> *)images title:(NSArray *)titles placeHolder:(UIImage *)image;
-@property (nonatomic,copy) ClikedCallback callback;
+@property (nonatomic, copy) ClikedCallback callback;
 
 @end

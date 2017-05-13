@@ -10,7 +10,5 @@
 #import "HomeHeadData.h"
 
 @interface HeadlineContentView : UIView
-
-@property (nonatomic,strong) ActRow *actRow;
-
+@property (nonatomic, strong) ActRow *actRow;
 @end

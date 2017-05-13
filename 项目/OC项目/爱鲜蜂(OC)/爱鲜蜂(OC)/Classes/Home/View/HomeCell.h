@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Activity.h"
 #import "Goods.h"
+typedef void(^ClikedCellback) (Goods *goods);
 
-typedef NS_ENUM(NSInteger, HomeCellType) {
-    HomeCellTypeVertical,
-    HomeCellTypeHorizontal
-};
+typedef enum : NSUInteger {
+    HomeCellTypeVerticalScreen,
+    HomeCellTypeCrossScreen
+} HomeCellType;
+
 @interface HomeCell : UICollectionViewCell
-@property (nonatomic,strong) Goods *goods;
-@property (nonatomic,strong) Activity *activity;
-@property (nonatomic) BOOL buyViewShowZear;
-
+@property (nonatomic, strong) Goods *goods;
+/*
+ * 不显示减号
+ */
+@property (nonatomic, assign) BOOL zearNeverShow;
+@property (nonatomic, copy) ClikedCellback cellback;
 @end

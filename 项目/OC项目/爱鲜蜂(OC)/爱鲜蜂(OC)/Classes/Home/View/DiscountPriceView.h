@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Goods.h"
+
+#import "HomeHeadData.h"
 
 @interface DiscountPriceView : UIView
 
-@property (nonatomic,strong) Goods *goods;
-
+@property (nonatomic, strong) Goods *goods;
 @end

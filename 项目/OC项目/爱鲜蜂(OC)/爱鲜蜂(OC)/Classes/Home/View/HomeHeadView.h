@@ -6,25 +6,21 @@
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
+#include "HomeHeadData.h"
+#import "ScrollerPageView.h"
+#import "HeadLineView.h"
 #import "HotView.h"
-#import "PageScrollView.h"
-#import "HomeHeadData.h"
-#import "BrandView.h"
-#import "HeadlineView.h"
 
 @interface HomeHeadView : UIView
-
-//@property (nonatomic,strong) HeadData *headData;
-@property (nonatomic,strong) HotView *hotView;
-@property (nonatomic,strong) PageScrollView *pageView;
-@property (nonatomic,strong) BrandView *brandView;
-@property (nonatomic,strong) BrandView *sceneView;
-@property (nonatomic,strong) HeadlineView *headlineView;
+@property (nonatomic, strong) ScrollerPageView *scrollerView;
+@property (nonatomic, strong) HotView *hotView;
+@property (nonatomic, strong) HeadLineView *headlineView;
+@property (nonatomic, assign) CGFloat height;
 
 - (instancetype)initWithHeadData:(HomeHeadData *)headData;
-@property (nonatomic,assign) CGFloat height;
-@property (nonatomic,copy) ClikedCallback callback;
+@property (nonatomic, copy) ClikedCallback callback;
+
+
 
 @end

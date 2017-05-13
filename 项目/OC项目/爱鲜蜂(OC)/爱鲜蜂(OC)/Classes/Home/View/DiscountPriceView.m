@@ -7,62 +7,62 @@
 //
 
 #import "DiscountPriceView.h"
-#import "NSString+Extension.h"
 
-@interface DiscountPriceView()
-
-@property (nonatomic,strong) UILabel *marketPriceLabel;
-@property (nonatomic,strong) UILabel *priceLabel;
-@property (nonatomic,strong) UIView *lineView;
-@property (nonatomic) BOOL hasMarketPrice;
-
+@interface DiscountPriceView ()
+@property (nonatomic, strong) UILabel *moneyLabel;
+@property (nonatomic, strong) UILabel *discountLabel;
+@property (nonatomic, strong) UIView *lines;
 @end
 
 @implementation DiscountPriceView
 
 - (instancetype)init{
     if (self = [super init]) {
-        _marketPriceLabel = [[UILabel alloc]init];
-        _marketPriceLabel.font = [UIFont systemFontOfSize:13];
-        [self addSubview:_marketPriceLabel];
-        _priceLabel = [[UILabel alloc]init];
-        _priceLabel.textColor = [UIColor redColor];
-        _priceLabel.font = [UIFont systemFontOfSize:13];
-        [self addSubview:_priceLabel];
-        _lineView = [[UIView alloc]init];
-        _lineView.backgroundColor = [UIColor blackColor];
-        [self addSubview:_lineView];
+        _moneyLabel = [[UILabel alloc]init];
+        _moneyLabel.font = [UIFont systemFontOfSize:13];
+        _moneyLabel.textColor = [UIColor redColor];
+        [self addSubview:_moneyLabel];
         
-        [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(self);
+        _discountLabel = [[UILabel alloc]init];
+        _discountLabel.font = [UIFont systemFontOfSize:12];
+        _discountLabel.textColor = [UIColor grayColor];
+        [self addSubview:_discountLabel];
+        
+        _lines = [[UIView alloc]init];
+        _lines.backgroundColor = [UIColor grayColor];
+        [self addSubview:_lines];
+        
+        [_moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(self).offset(5);
             make.centerY.equalTo(self);
         }];
-        [_marketPriceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(_priceLabel.mas_trailing).offset(3);
+        [_discountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(_moneyLabel.mas_trailing).offset(1);
             make.centerY.equalTo(self);
         }];
-        [_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(_marketPriceLabel.mas_width);
-            make.height.mas_equalTo(1);
-            make.leading.equalTo(_marketPriceLabel);
-            make.centerY.equalTo(_marketPriceLabel);
+        [_lines mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(_discountLabel);
+            make.height.equalTo(@1);
+            make.leading.equalTo(_discountLabel);
+            make.centerY.equalTo(self);
         }];
-        
     }
     return self;
 }
 
--(void)setGoods:(Goods *)goods {
-    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",[goods.price cleanDecimalPointZear]];
-    self.marketPriceLabel.text = [NSString stringWithFormat:@"￥%@",[goods.market_price cleanDecimalPointZear]];
-    [self.priceLabel sizeToFit];
-    [self.marketPriceLabel sizeToFit];
+- (void)setGoods:(Goods *)goods{
+    _goods = goods;
+    self.moneyLabel.text = [NSString stringWithFormat:@"￥%@",goods.price];
+    self.discountLabel.text = [NSString stringWithFormat:@"￥%@",goods.market_price];;
+    [self.moneyLabel sizeToFit];
+    [self.discountLabel sizeToFit];
     if ([goods.price isEqualToString:goods.market_price]) {
-        self.marketPriceLabel.hidden = YES;
-        self.lineView.hidden = YES;
+        self.discountLabel.hidden = YES;
+        self.lines.hidden = YES;
     }else{
-        self.marketPriceLabel.hidden = NO;
-        self.lineView.hidden = NO;
+        self.discountLabel.hidden = NO;
+        self.lines.hidden = NO;
     }
 }
+
 @end

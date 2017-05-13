@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeHeadData.h"
-@interface HomeCategoryCell : UICollectionViewCell
+#import "HomeCellTitleView.h"
+#import "HomeCellGoodsView.h"
 
-@property (nonatomic,strong) ActRow *actRow;
+@interface HomeCategoryCell : UICollectionViewCell
+@property (nonatomic, strong) ActRow *cellInfo;
+@property (nonatomic, copy) ClikedCellback cellback;
 
 @end
