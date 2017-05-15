@@ -117,6 +117,13 @@
 		1D800F2F1EA5053F00C2B352 /* 算术赋值运算符.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "算术赋值运算符.playground"; sourceTree = "<group>"; };
 		1D800F301EA5053F00C2B352 /* 位运算符.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "位运算符.playground"; sourceTree = "<group>"; };
 		1D800F311EA5053F00C2B352 /* 一元算数运算符.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "一元算数运算符.playground"; sourceTree = "<group>"; };
+		1D88C0981EC9F4FA00534520 /* Memory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memory.playground; sourceTree = "<group>"; };
+		1D88C0991EC9F4FA00534520 /* Memory2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memory2.playground; sourceTree = "<group>"; };
+		1D88C09A1EC9F4FA00534520 /* Memory3弱引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Memory3弱引用.playground"; sourceTree = "<group>"; };
+		1D88C09B1EC9F4FA00534520 /* Memory4无主引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Memory4无主引用.playground"; sourceTree = "<group>"; };
+		1D88C09C1EC9F4FA00534520 /* Memory5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memory5.playground; sourceTree = "<group>"; };
+		1D88C09E1EC9F50C00534520 /* CatchError.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CatchError.playground; sourceTree = "<group>"; };
+		1D88C09F1EC9F50C00534520 /* CocoaError.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CocoaError.playground; sourceTree = "<group>"; };
 		1D9391921EC0AB8A00FF7EF1 /* 可变方法.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "可变方法.playground"; sourceTree = "<group>"; };
 		1D9391931EC0AB8A00FF7EF1 /* 实例方法.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "实例方法.playground"; sourceTree = "<group>"; };
 		1D9391941EC0AB8A00FF7EF1 /* 枚举静态方法.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举静态方法.playground"; sourceTree = "<group>"; };
@@ -321,6 +328,8 @@
 		1D800F0E1EA5039000C2B352 = {
 			isa = PBXGroup;
 			children = (
+				1D88C09D1EC9F50C00534520 /* 第十九章 */,
+				1D88C0971EC9F4FA00534520 /* 第十八章 */,
 				1DB981F11EC767FC0003CE45 /* 第十七章 */,
 				1DDB3B751EC6F50C00B80A2B /* 第十六章 */,
 				1D48DA9D1EC4A8750002305C /* 第十五章 */,
@@ -392,6 +401,27 @@
 				1D800F311EA5053F00C2B352 /* 一元算数运算符.playground */,
 			);
 			path = "第三章";
+			sourceTree = "<group>";
+		};
+		1D88C0971EC9F4FA00534520 /* 第十八章 */ = {
+			isa = PBXGroup;
+			children = (
+				1D88C0981EC9F4FA00534520 /* Memory.playground */,
+				1D88C0991EC9F4FA00534520 /* Memory2.playground */,
+				1D88C09A1EC9F4FA00534520 /* Memory3弱引用.playground */,
+				1D88C09B1EC9F4FA00534520 /* Memory4无主引用.playground */,
+				1D88C09C1EC9F4FA00534520 /* Memory5.playground */,
+			);
+			path = "第十八章";
+			sourceTree = "<group>";
+		};
+		1D88C09D1EC9F50C00534520 /* 第十九章 */ = {
+			isa = PBXGroup;
+			children = (
+				1D88C09E1EC9F50C00534520 /* CatchError.playground */,
+				1D88C09F1EC9F50C00534520 /* CocoaError.playground */,
+			);
+			path = "第十九章";
 			sourceTree = "<group>";
 		};
 		1D9391911EC0AB8A00FF7EF1 /* 第十二章 */ = {
