@@ -120,8 +120,8 @@ static NSString *const CommentURL = @"http://api.budejie.com/api/api_open.php?a=
 - (void)setupLoadRefresh
 {
     //下拉刷新
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewsComment)];
-    //设置这个可以一进入页面就刷新
+    AnimationRefreshHeader *header = [AnimationRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewsComment)];
+    self.tableView.mj_header = header;
     [self.tableView.mj_header beginRefreshing];
     
     //上啦刷新加载之前的数据

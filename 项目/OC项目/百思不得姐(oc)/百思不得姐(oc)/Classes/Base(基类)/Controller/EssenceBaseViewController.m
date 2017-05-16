@@ -86,7 +86,9 @@ static NSString *const ID = @"cell";
 - (void)setupRefresh
 {
     //下拉刷新
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+
+    AnimationRefreshHeader *header = [AnimationRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_header = header;
     
     //根据下拉的距离提示符自动改变透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
