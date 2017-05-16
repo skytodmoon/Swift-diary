@@ -49,6 +49,12 @@
 		5BF033E71ECA9B1800BA0664 /* LoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033E41ECA9B1800BA0664 /* LoginRegisterTextField.m */; };
 		5BF033E81ECA9B1800BA0664 /* QuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033E61ECA9B1800BA0664 /* QuickLoginButton.m */; };
 		5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033EA1ECA9C3E00BA0664 /* UIView+SYCategory.m */; };
+		5BF033F01ECA9F9600BA0664 /* MeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033EF1ECA9F9600BA0664 /* MeItem.m */; };
+		5BF033F41ECA9FAF00BA0664 /* MeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033F21ECA9FAF00BA0664 /* MeCell.m */; };
+		5BF033F51ECA9FAF00BA0664 /* MeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033F31ECA9FAF00BA0664 /* MeCell.xib */; };
+		5BF033F91ECAA15600BA0664 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033F71ECAA15600BA0664 /* WebViewController.m */; };
+		5BF033FA1ECAA15600BA0664 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033F81ECAA15600BA0664 /* WebViewController.xib */; };
+		5BF034021ECAA26C00BA0664 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF034011ECAA26C00BA0664 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +146,16 @@
 		5BF033E61ECA9B1800BA0664 /* QuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLoginButton.m; sourceTree = "<group>"; };
 		5BF033E91ECA9C3E00BA0664 /* UIView+SYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYCategory.h"; sourceTree = "<group>"; };
 		5BF033EA1ECA9C3E00BA0664 /* UIView+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYCategory.m"; sourceTree = "<group>"; };
+		5BF033EE1ECA9F9600BA0664 /* MeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeItem.h; sourceTree = "<group>"; };
+		5BF033EF1ECA9F9600BA0664 /* MeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeItem.m; sourceTree = "<group>"; };
+		5BF033F11ECA9FAF00BA0664 /* MeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCell.h; sourceTree = "<group>"; };
+		5BF033F21ECA9FAF00BA0664 /* MeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCell.m; sourceTree = "<group>"; };
+		5BF033F31ECA9FAF00BA0664 /* MeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeCell.xib; sourceTree = "<group>"; };
+		5BF033F61ECAA15600BA0664 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5BF033F71ECAA15600BA0664 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5BF033F81ECAA15600BA0664 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		5BF034001ECAA26C00BA0664 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		5BF034011ECAA26C00BA0664 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		DD8A8208E0D075E676404EDA /* libPods-百思不得姐(oc)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CCF3C4F78D0394C7AFC2FD /* libPods-百思不得姐(oc)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,7 +452,10 @@
 		5BF033CE1ECA96C800BA0664 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
+				5BF033FB1ECAA24A00BA0664 /* Setting(设置) */,
 				5BF033CF1ECA96D300BA0664 /* Controller */,
+				5BF033EC1ECA9F7B00BA0664 /* Model */,
+				5BF033ED1ECA9F7B00BA0664 /* View */,
 			);
 			path = "Me(我)";
 			sourceTree = "<group>";
@@ -447,6 +466,9 @@
 				5BF033D01ECA96E500BA0664 /* MeViewController.h */,
 				5BF033D11ECA96E500BA0664 /* MeViewController.m */,
 				5BF033D31ECA96F600BA0664 /* MeViewController.storyboard */,
+				5BF033F61ECAA15600BA0664 /* WebViewController.h */,
+				5BF033F71ECAA15600BA0664 /* WebViewController.m */,
+				5BF033F81ECAA15600BA0664 /* WebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,6 +500,42 @@
 				5BF033DE1ECA9A3400BA0664 /* PublishViewController.h */,
 				5BF033DF1ECA9A3400BA0664 /* PublishViewController.m */,
 				5BF033E01ECA9A3400BA0664 /* PublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BF033EC1ECA9F7B00BA0664 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033EE1ECA9F9600BA0664 /* MeItem.h */,
+				5BF033EF1ECA9F9600BA0664 /* MeItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BF033ED1ECA9F7B00BA0664 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033F11ECA9FAF00BA0664 /* MeCell.h */,
+				5BF033F21ECA9FAF00BA0664 /* MeCell.m */,
+				5BF033F31ECA9FAF00BA0664 /* MeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BF033FB1ECAA24A00BA0664 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033FC1ECAA24A00BA0664 /* Controller */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		5BF033FC1ECAA24A00BA0664 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BF034001ECAA26C00BA0664 /* SettingViewController.h */,
+				5BF034011ECAA26C00BA0664 /* SettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -600,6 +658,7 @@
 				5BF033E21ECA9A3400BA0664 /* PublishViewController.xib in Resources */,
 				5BF0333D1ECA85A600BA0664 /* LaunchScreen.storyboard in Resources */,
 				5BF033AB1ECA911100BA0664 /* LoginRegisterViewController.xib in Resources */,
+				5BF033FA1ECAA15600BA0664 /* WebViewController.xib in Resources */,
 				5BF0338F1ECA8AD600BA0664 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				5BF033B61ECA92E200BA0664 /* ADViewController.xib in Resources */,
 				5BF0333A1ECA85A600BA0664 /* Assets.xcassets in Resources */,
@@ -612,6 +671,7 @@
 				5BF033381ECA85A600BA0664 /* Main.storyboard in Resources */,
 				5BF0338D1ECA8AD600BA0664 /* LaunchImage-700@2x.png in Resources */,
 				5BF033921ECA8AD600BA0664 /* member_ diamond_iconN.gif in Resources */,
+				5BF033F51ECA9FAF00BA0664 /* MeCell.xib in Resources */,
 				5BF0338A1ECA8AD600BA0664 /* dropdown_anim__0001.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,7 +748,9 @@
 				5BF033AA1ECA911100BA0664 /* LoginRegisterViewController.m in Sources */,
 				5BF033E81ECA9B1800BA0664 /* QuickLoginButton.m in Sources */,
 				5BF0339D1ECA8F9700BA0664 /* UITabBarItem+Category.m in Sources */,
+				5BF033F41ECA9FAF00BA0664 /* MeCell.m in Sources */,
 				5BF033A31ECA90AF00BA0664 /* MainController.m in Sources */,
+				5BF034021ECAA26C00BA0664 /* SettingViewController.m in Sources */,
 				5BF033B11ECA92DA00BA0664 /* ADItem.m in Sources */,
 				5BF033A61ECA90C400BA0664 /* NavigationViewController.m in Sources */,
 				5BF033BB1ECA95E600BA0664 /* BaseViewController.m in Sources */,
@@ -697,11 +759,13 @@
 				5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */,
 				5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
+				5BF033F01ECA9F9600BA0664 /* MeItem.m in Sources */,
 				5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */,
 				5BF033B51ECA92E200BA0664 /* ADViewController.m in Sources */,
 				5BF033BE1ECA95F700BA0664 /* EssenceBaseViewController.m in Sources */,
 				5BF033D21ECA96E500BA0664 /* MeViewController.m in Sources */,
 				5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */,
+				5BF033F91ECAA15600BA0664 /* WebViewController.m in Sources */,
 				5BF033D81ECA980000BA0664 /* TabBar.m in Sources */,
 				5BF033C81ECA967800BA0664 /* NewViewController.m in Sources */,
 				5BF033E11ECA9A3400BA0664 /* PublishViewController.m in Sources */,
