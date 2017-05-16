@@ -51,10 +51,10 @@
 		5BF0333C1ECA85A600BA0664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF0333E1ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF033431ECA85A600BA0664 /* 百思不得姐(oc)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(oc)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF033471ECA85A600BA0664 /* ______oc_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______oc_Tests.m; sourceTree = "<group>"; };
+		5BF033471ECA85A600BA0664 /* ______oc_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______oc_Tests.m"; sourceTree = "<group>"; };
 		5BF033491ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF0334E1ECA85A600BA0664 /* 百思不得姐(oc)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(oc)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF033521ECA85A600BA0664 /* ______oc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______oc_UITests.m; sourceTree = "<group>"; };
+		5BF033521ECA85A600BA0664 /* ______oc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______oc_UITests.m"; sourceTree = "<group>"; };
 		5BF033541ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B203C0F6659A40902302D49 /* Pods-百思不得姐(oc)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(oc)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(oc)UITests/Pods-百思不得姐(oc)UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		843D62425D905657568EBF34 /* Pods-百思不得姐(oc)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(oc)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(oc)Tests/Pods-百思不得姐(oc)Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -601,6 +601,7 @@
 			baseConfigurationReference = 149ED0461ECF053E572C3905 /* Pods-百思不得姐(oc).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "百思不得姐(oc)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.------oc-";
@@ -613,6 +614,7 @@
 			baseConfigurationReference = 49A3631EA56FAC2EECC8A016 /* Pods-百思不得姐(oc).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "百思不得姐(oc)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.------oc-";
@@ -689,6 +691,7 @@
 				5BF033591ECA85A600BA0664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BF0335A1ECA85A600BA0664 /* Build configuration list for PBXNativeTarget "百思不得姐(oc)Tests" */ = {
 			isa = XCConfigurationList;
@@ -697,6 +700,7 @@
 				5BF0335C1ECA85A600BA0664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BF0335D1ECA85A600BA0664 /* Build configuration list for PBXNativeTarget "百思不得姐(oc)UITests" */ = {
 			isa = XCConfigurationList;
@@ -705,6 +709,7 @@
 				5BF0335F1ECA85A600BA0664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
