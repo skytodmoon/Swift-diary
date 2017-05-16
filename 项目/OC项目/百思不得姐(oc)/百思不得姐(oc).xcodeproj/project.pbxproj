@@ -55,6 +55,12 @@
 		5BF033F91ECAA15600BA0664 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033F71ECAA15600BA0664 /* WebViewController.m */; };
 		5BF033FA1ECAA15600BA0664 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033F81ECAA15600BA0664 /* WebViewController.xib */; };
 		5BF034021ECAA26C00BA0664 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF034011ECAA26C00BA0664 /* SettingViewController.m */; };
+		5BF034161ECAA40800BA0664 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF034151ECAA40800BA0664 /* SettingCell.m */; };
+		5BF034211ECAA44500BA0664 /* ArrowSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF034181ECAA44500BA0664 /* ArrowSettingItem.m */; };
+		5BF034221ECAA44500BA0664 /* SegmentedSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0341A1ECAA44500BA0664 /* SegmentedSettingItem.m */; };
+		5BF034231ECAA44500BA0664 /* SettingGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0341C1ECAA44500BA0664 /* SettingGroupItem.m */; };
+		5BF034241ECAA44500BA0664 /* SettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0341E1ECAA44500BA0664 /* SettingItem.m */; };
+		5BF034251ECAA44500BA0664 /* SwitchSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF034201ECAA44500BA0664 /* SwitchSettingItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +162,18 @@
 		5BF033F81ECAA15600BA0664 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		5BF034001ECAA26C00BA0664 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		5BF034011ECAA26C00BA0664 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		5BF034141ECAA40800BA0664 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		5BF034151ECAA40800BA0664 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		5BF034171ECAA44500BA0664 /* ArrowSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowSettingItem.h; sourceTree = "<group>"; };
+		5BF034181ECAA44500BA0664 /* ArrowSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowSettingItem.m; sourceTree = "<group>"; };
+		5BF034191ECAA44500BA0664 /* SegmentedSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedSettingItem.h; sourceTree = "<group>"; };
+		5BF0341A1ECAA44500BA0664 /* SegmentedSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedSettingItem.m; sourceTree = "<group>"; };
+		5BF0341B1ECAA44500BA0664 /* SettingGroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingGroupItem.h; sourceTree = "<group>"; };
+		5BF0341C1ECAA44500BA0664 /* SettingGroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingGroupItem.m; sourceTree = "<group>"; };
+		5BF0341D1ECAA44500BA0664 /* SettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingItem.h; sourceTree = "<group>"; };
+		5BF0341E1ECAA44500BA0664 /* SettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingItem.m; sourceTree = "<group>"; };
+		5BF0341F1ECAA44500BA0664 /* SwitchSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchSettingItem.h; sourceTree = "<group>"; };
+		5BF034201ECAA44500BA0664 /* SwitchSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchSettingItem.m; sourceTree = "<group>"; };
 		DD8A8208E0D075E676404EDA /* libPods-百思不得姐(oc)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CCF3C4F78D0394C7AFC2FD /* libPods-百思不得姐(oc)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -527,6 +545,8 @@
 			isa = PBXGroup;
 			children = (
 				5BF033FC1ECAA24A00BA0664 /* Controller */,
+				5BF034031ECAA3E900BA0664 /* Model */,
+				5BF0340E1ECAA3E900BA0664 /* View */,
 			);
 			path = "Setting(设置)";
 			sourceTree = "<group>";
@@ -538,6 +558,32 @@
 				5BF034011ECAA26C00BA0664 /* SettingViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BF034031ECAA3E900BA0664 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BF034171ECAA44500BA0664 /* ArrowSettingItem.h */,
+				5BF034181ECAA44500BA0664 /* ArrowSettingItem.m */,
+				5BF034191ECAA44500BA0664 /* SegmentedSettingItem.h */,
+				5BF0341A1ECAA44500BA0664 /* SegmentedSettingItem.m */,
+				5BF0341B1ECAA44500BA0664 /* SettingGroupItem.h */,
+				5BF0341C1ECAA44500BA0664 /* SettingGroupItem.m */,
+				5BF0341D1ECAA44500BA0664 /* SettingItem.h */,
+				5BF0341E1ECAA44500BA0664 /* SettingItem.m */,
+				5BF0341F1ECAA44500BA0664 /* SwitchSettingItem.h */,
+				5BF034201ECAA44500BA0664 /* SwitchSettingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BF0340E1ECAA3E900BA0664 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BF034141ECAA40800BA0664 /* SettingCell.h */,
+				5BF034151ECAA40800BA0664 /* SettingCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5C0CCF77D59E831B1F088BF1 /* Pods */ = {
@@ -751,17 +797,23 @@
 				5BF033F41ECA9FAF00BA0664 /* MeCell.m in Sources */,
 				5BF033A31ECA90AF00BA0664 /* MainController.m in Sources */,
 				5BF034021ECAA26C00BA0664 /* SettingViewController.m in Sources */,
+				5BF034211ECAA44500BA0664 /* ArrowSettingItem.m in Sources */,
 				5BF033B11ECA92DA00BA0664 /* ADItem.m in Sources */,
+				5BF034161ECAA40800BA0664 /* SettingCell.m in Sources */,
+				5BF034251ECAA44500BA0664 /* SwitchSettingItem.m in Sources */,
 				5BF033A61ECA90C400BA0664 /* NavigationViewController.m in Sources */,
 				5BF033BB1ECA95E600BA0664 /* BaseViewController.m in Sources */,
 				5BF033351ECA85A600BA0664 /* ViewController.m in Sources */,
 				5BF033C31ECA964100BA0664 /* EssenceViewController.m in Sources */,
 				5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */,
+				5BF034221ECAA44500BA0664 /* SegmentedSettingItem.m in Sources */,
 				5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
 				5BF033F01ECA9F9600BA0664 /* MeItem.m in Sources */,
+				5BF034231ECAA44500BA0664 /* SettingGroupItem.m in Sources */,
 				5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */,
 				5BF033B51ECA92E200BA0664 /* ADViewController.m in Sources */,
+				5BF034241ECAA44500BA0664 /* SettingItem.m in Sources */,
 				5BF033BE1ECA95F700BA0664 /* EssenceBaseViewController.m in Sources */,
 				5BF033D21ECA96E500BA0664 /* MeViewController.m in Sources */,
 				5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */,
