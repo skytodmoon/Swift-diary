@@ -16,6 +16,7 @@
 		5BF0333D1ECA85A600BA0664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF0333B1ECA85A600BA0664 /* LaunchScreen.storyboard */; };
 		5BF033481ECA85A600BA0664 /* ______oc_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033471ECA85A600BA0664 /* ______oc_Tests.m */; };
 		5BF033531ECA85A600BA0664 /* ______oc_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033521ECA85A600BA0664 /* ______oc_UITests.m */; };
+		5BF0336B1ECA89C500BA0664 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0336A1ECA89C500BA0664 /* Networking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +50,13 @@
 		5BF0333C1ECA85A600BA0664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF0333E1ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF033431ECA85A600BA0664 /* 百思不得姐(oc)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(oc)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF033471ECA85A600BA0664 /* ______oc_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______oc_Tests.m; sourceTree = "<group>"; };
+		5BF033471ECA85A600BA0664 /* ______oc_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______oc_Tests.m"; sourceTree = "<group>"; };
 		5BF033491ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF0334E1ECA85A600BA0664 /* 百思不得姐(oc)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(oc)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF033521ECA85A600BA0664 /* ______oc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______oc_UITests.m; sourceTree = "<group>"; };
+		5BF033521ECA85A600BA0664 /* ______oc_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______oc_UITests.m"; sourceTree = "<group>"; };
 		5BF033541ECA85A600BA0664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF033691ECA89C500BA0664 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		5BF0336A1ECA89C500BA0664 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		DD8A8208E0D075E676404EDA /* libPods-百思不得姐(oc)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CCF3C4F78D0394C7AFC2FD /* libPods-百思不得姐(oc)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +123,7 @@
 		5BF0332C1ECA85A600BA0664 /* 百思不得姐(oc) */ = {
 			isa = PBXGroup;
 			children = (
+				5BF033621ECA898000BA0664 /* Classes */,
 				5BF033301ECA85A600BA0664 /* AppDelegate.h */,
 				5BF033311ECA85A600BA0664 /* AppDelegate.m */,
 				5BF033331ECA85A600BA0664 /* ViewController.h */,
@@ -157,6 +161,31 @@
 				5BF033541ECA85A600BA0664 /* Info.plist */,
 			);
 			path = "百思不得姐(oc)UITests";
+			sourceTree = "<group>";
+		};
+		5BF033621ECA898000BA0664 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033671ECA89C500BA0664 /* Tool(工具) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5BF033671ECA89C500BA0664 /* Tool(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033681ECA89C500BA0664 /* Networking(网络封装) */,
+			);
+			path = "Tool(工具)";
+			sourceTree = "<group>";
+		};
+		5BF033681ECA89C500BA0664 /* Networking(网络封装) */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033691ECA89C500BA0664 /* Networking.h */,
+				5BF0336A1ECA89C500BA0664 /* Networking.m */,
+			);
+			path = "Networking(网络封装)";
 			sourceTree = "<group>";
 		};
 		5C0CCF77D59E831B1F088BF1 /* Pods */ = {
@@ -352,6 +381,7 @@
 				5BF033351ECA85A600BA0664 /* ViewController.m in Sources */,
 				5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
+				5BF0336B1ECA89C500BA0664 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
