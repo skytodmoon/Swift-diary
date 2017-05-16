@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐(oc)
+//
+//  Created by 金亮齐 on 2017/5/16.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Networking.h"
+
+
+
+
+
+
+
+#ifdef DEBUG
+#define Log(...) NSLog(__VA_ARGS__)
+#else
+#define Log(...)
+#endif
+
+
+#define LogFunc Log(@"%s", __func__);
+
+
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+
+#define iPhone6P (ScreenH == 736)
+#define iPhone6 (ScreenH == 667)
+#define iPhone5 (ScreenH == 568)
+#define iPhone4 (ScreenH == 480)
+
+
+
+#define ColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define Color(r, g, b) ColorA((r), (g), (b), 255)
+#define RandomColor Color(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define rayColor(v) Color((v), (v), (v))
+#define CommonBgColor rayColor(240)
+
+#endif /* PrefixHeader_pch */
