@@ -14,6 +14,7 @@
 		1D0C1EC91ECB40750078E568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0C1EC71ECB40750078E568 /* LaunchScreen.storyboard */; };
 		1D0C1ED41ECB40750078E568 /* ______Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C1ED31ECB40750078E568 /* ______Swift_Tests.swift */; };
 		1D0C1EDF1ECB40750078E568 /* ______Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C1EDE1ECB40750078E568 /* ______Swift_UITests.swift */; };
+		2683072D3DFA1209309C6659 /* Pods_______Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DE5DA72EC44B655957624D /* Pods_______Swift_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,16 @@
 		1D0C1EC81ECB40750078E568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D0C1ECA1ECB40750078E568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0C1ECF1ECB40750078E568 /* 百思不得姐(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D0C1ED31ECB40750078E568 /* ______Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______Swift_Tests.swift"; sourceTree = "<group>"; };
+		1D0C1ED31ECB40750078E568 /* ______Swift_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ______Swift_Tests.swift; sourceTree = "<group>"; };
 		1D0C1ED51ECB40750078E568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0C1EDA1ECB40750078E568 /* 百思不得姐(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D0C1EDE1ECB40750078E568 /* ______Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______Swift_UITests.swift"; sourceTree = "<group>"; };
+		1D0C1EDE1ECB40750078E568 /* ______Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ______Swift_UITests.swift; sourceTree = "<group>"; };
 		1D0C1EE01ECB40750078E568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54DE5DA72EC44B655957624D /* Pods_______Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_______Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC859710BD0CEDC6A1BD43D /* Pods_______Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_______Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6221E0E556B31E8E83473088 /* Pods-百思不得姐(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(Swift)/Pods-百思不得姐(Swift).debug.xcconfig"; sourceTree = "<group>"; };
+		A4BADE484586EC9CD75B3AFE /* Pods_______Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_______Swift_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00B740895710A8090C5014B /* Pods-百思不得姐(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(Swift)/Pods-百思不得姐(Swift).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2683072D3DFA1209309C6659 /* Pods_______Swift_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				1D0C1ED21ECB40750078E568 /* 百思不得姐(Swift)Tests */,
 				1D0C1EDD1ECB40750078E568 /* 百思不得姐(Swift)UITests */,
 				1D0C1EBC1ECB40750078E568 /* Products */,
+				94DCE5049F91E33383B715D0 /* Pods */,
+				903A26877DB939B8C1EAEB99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +134,25 @@
 			path = "百思不得姐(Swift)UITests";
 			sourceTree = "<group>";
 		};
+		903A26877DB939B8C1EAEB99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54DE5DA72EC44B655957624D /* Pods_______Swift_.framework */,
+				5BC859710BD0CEDC6A1BD43D /* Pods_______Swift_Tests.framework */,
+				A4BADE484586EC9CD75B3AFE /* Pods_______Swift_UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94DCE5049F91E33383B715D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6221E0E556B31E8E83473088 /* Pods-百思不得姐(Swift).debug.xcconfig */,
+				B00B740895710A8090C5014B /* Pods-百思不得姐(Swift).release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0C1EE31ECB40750078E568 /* Build configuration list for PBXNativeTarget "百思不得姐(Swift)" */;
 			buildPhases = (
+				90E15877EF4DCFBE7914A32D /* [CP] Check Pods Manifest.lock */,
 				1D0C1EB71ECB40750078E568 /* Sources */,
 				1D0C1EB81ECB40750078E568 /* Frameworks */,
 				1D0C1EB91ECB40750078E568 /* Resources */,
+				4AD36D567701CF9BF6C22D7E /* [CP] Embed Pods Frameworks */,
+				B56441CB54F056FFD8893EB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +287,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AD36D567701CF9BF6C22D7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐(Swift)/Pods-百思不得姐(Swift)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90E15877EF4DCFBE7914A32D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B56441CB54F056FFD8893EB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐(Swift)/Pods-百思不得姐(Swift)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D0C1EB71ECB40750078E568 /* Sources */ = {
@@ -413,6 +492,7 @@
 		};
 		1D0C1EE41ECB40750078E568 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6221E0E556B31E8E83473088 /* Pods-百思不得姐(Swift).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -427,6 +507,7 @@
 		};
 		1D0C1EE51ECB40750078E568 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B00B740895710A8090C5014B /* Pods-百思不得姐(Swift).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
