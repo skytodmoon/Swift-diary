@@ -51,7 +51,7 @@
         [button setTitle:@"注册账号" forState:UIControlStateNormal];
     }else
     {
-        self.leftLayout.constant = -self.view.width;
+        self.leftLayout.constant = -self.view.sy_width;
         button.selected = YES;
         [button setTitle:@"已有账号？" forState:UIControlStateNormal];
     }

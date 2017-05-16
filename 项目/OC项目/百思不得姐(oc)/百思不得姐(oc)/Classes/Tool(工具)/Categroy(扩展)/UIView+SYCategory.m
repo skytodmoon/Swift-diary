@@ -1,117 +1,119 @@
 //
-//  UIView+Category.m
+//  UIView+SYCategory.m
 //  百思不得姐(oc)
 //
 //  Created by 金亮齐 on 2017/5/16.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
-#import "UIView+Category.h"
+#import "UIView+SYCategory.h"
 
-@implementation UIView (Category)
+@implementation UIView (SYCategory)
 
-- (CGSize)size
+- (CGSize)sy_size
 {
     return self.frame.size;
 }
 
-- (void)setsize:(CGSize)size
+- (void)setSy_size:(CGSize)sy_size
 {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = sy_size;
     self.frame = frame;
 }
 
-- (CGFloat)width
+- (CGFloat)sy_width
 {
     return self.frame.size.width;
 }
 
-- (CGFloat)height
+- (CGFloat)sy_height
 {
     return self.frame.size.height;
 }
 
-- (void)setwidth:(CGFloat)width
+- (void)setSy_width:(CGFloat)sy_width
 {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = sy_width;
     self.frame = frame;
 }
 
-- (void)setheight:(CGFloat)height
+- (void)setSy_height:(CGFloat)sy_height
 {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = sy_height;
     self.frame = frame;
 }
 
-- (CGFloat)x
+- (CGFloat)sy_x
 {
     return self.frame.origin.x;
 }
 
-- (void)setx:(CGFloat)x
+- (void)setSy_x:(CGFloat)sy_x
 {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = sy_x;
     self.frame = frame;
 }
 
-- (CGFloat)y
+- (CGFloat)sy_y
 {
     return self.frame.origin.y;
 }
 
-- (void)sety:(CGFloat)y
+- (void)setSy_y:(CGFloat)sy_y
 {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = sy_y;
     self.frame = frame;
 }
 
-- (CGFloat)centerX
+- (CGFloat)sy_centerX
 {
     return self.center.x;
 }
 
-- (void)setcenterX:(CGFloat)centerX
+- (void)setSy_centerX:(CGFloat)sy_centerX
 {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = sy_centerX;
     self.center = center;
 }
 
-- (CGFloat)centerY
+- (CGFloat)sy_centerY
 {
     return self.center.y;
 }
 
-- (void)setcenterY:(CGFloat)centerY
+- (void)setSy_centerY:(CGFloat)sy_centerY
 {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = sy_centerY;
     self.center = center;
 }
 
-- (CGFloat)right
+- (CGFloat)sy_right
 {
+    //    return self.sy_x + self.sy_width;
     return CGRectGetMaxX(self.frame);
 }
 
-- (CGFloat)bottom
+- (CGFloat)sy_bottom
 {
+    //    return self.sy_y + self.sy_height;
     return CGRectGetMaxY(self.frame);
 }
 
-- (void)setright:(CGFloat)right
+- (void)setSy_right:(CGFloat)sy_right
 {
-    self.x = right - self.width;
+    self.sy_x = sy_right - self.sy_width;
 }
 
-- (void)setbottom:(CGFloat)bottom
+- (void)setSy_bottom:(CGFloat)sy_bottom
 {
-    self.y = bottom - self.height;
+    self.sy_y = sy_bottom - self.sy_height;
 }
 
 - (BOOL)isShowingOnKeyWindow

@@ -12,6 +12,7 @@
 #import "EssenceViewController.h"
 #import "NewViewController.h"
 #import "NavigationViewController.h"
+#import "TabBar.h"
 
 @interface MainController ()
 
@@ -39,6 +40,9 @@
     
     //设置底部控制器
     [self setupChildViewController];
+    
+    //替换系统原有的tabBar
+    [self setupTabBar];
     // Do any additional setup after loading the view.
 }
 
@@ -78,5 +82,10 @@
     [self addChildViewController:nav];
 }
 
+//因为tabBar属于私有属性不能直接修改，所以采取用KVC的办法修改里面的TabBar
+- (void)setupTabBar
+{
+    [self setValue:[[TabBar alloc]init] forKey:@"tabBar"];
+}
 
 @end

@@ -29,7 +29,6 @@
 		5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033931ECA8F0E00BA0664 /* 输出框打印中文.m */; };
 		5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */; };
 		5BF0339D1ECA8F9700BA0664 /* UITabBarItem+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */; };
-		5BF0339E1ECA8F9700BA0664 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */; };
 		5BF033A31ECA90AF00BA0664 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033A21ECA90AF00BA0664 /* MainController.m */; };
 		5BF033A61ECA90C400BA0664 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033A51ECA90C400BA0664 /* NavigationViewController.m */; };
 		5BF033AA1ECA911100BA0664 /* LoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033A81ECA911100BA0664 /* LoginRegisterViewController.m */; };
@@ -44,6 +43,12 @@
 		5BF033CD1ECA96AB00BA0664 /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033CC1ECA96AB00BA0664 /* FollowViewController.m */; };
 		5BF033D21ECA96E500BA0664 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033D11ECA96E500BA0664 /* MeViewController.m */; };
 		5BF033D41ECA96F600BA0664 /* MeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033D31ECA96F600BA0664 /* MeViewController.storyboard */; };
+		5BF033D81ECA980000BA0664 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033D71ECA980000BA0664 /* TabBar.m */; };
+		5BF033E11ECA9A3400BA0664 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033DF1ECA9A3400BA0664 /* PublishViewController.m */; };
+		5BF033E21ECA9A3400BA0664 /* PublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033E01ECA9A3400BA0664 /* PublishViewController.xib */; };
+		5BF033E71ECA9B1800BA0664 /* LoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033E41ECA9B1800BA0664 /* LoginRegisterTextField.m */; };
+		5BF033E81ECA9B1800BA0664 /* QuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033E61ECA9B1800BA0664 /* QuickLoginButton.m */; };
+		5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033EA1ECA9C3E00BA0664 /* UIView+SYCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +104,6 @@
 		5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		5BF033981ECA8F9700BA0664 /* UITabBarItem+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Category.h"; sourceTree = "<group>"; };
 		5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Category.m"; sourceTree = "<group>"; };
-		5BF0339A1ECA8F9700BA0664 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
-		5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		5BF033A11ECA90AF00BA0664 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		5BF033A21ECA90AF00BA0664 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		5BF033A41ECA90C400BA0664 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
@@ -126,6 +129,17 @@
 		5BF033D01ECA96E500BA0664 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		5BF033D11ECA96E500BA0664 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		5BF033D31ECA96F600BA0664 /* MeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeViewController.storyboard; sourceTree = "<group>"; };
+		5BF033D61ECA980000BA0664 /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		5BF033D71ECA980000BA0664 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		5BF033DE1ECA9A3400BA0664 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
+		5BF033DF1ECA9A3400BA0664 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
+		5BF033E01ECA9A3400BA0664 /* PublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishViewController.xib; sourceTree = "<group>"; };
+		5BF033E31ECA9B1800BA0664 /* LoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRegisterTextField.h; sourceTree = "<group>"; };
+		5BF033E41ECA9B1800BA0664 /* LoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRegisterTextField.m; sourceTree = "<group>"; };
+		5BF033E51ECA9B1800BA0664 /* QuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLoginButton.h; sourceTree = "<group>"; };
+		5BF033E61ECA9B1800BA0664 /* QuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLoginButton.m; sourceTree = "<group>"; };
+		5BF033E91ECA9C3E00BA0664 /* UIView+SYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYCategory.h"; sourceTree = "<group>"; };
+		5BF033EA1ECA9C3E00BA0664 /* UIView+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYCategory.m"; sourceTree = "<group>"; };
 		DD8A8208E0D075E676404EDA /* libPods-百思不得姐(oc)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CCF3C4F78D0394C7AFC2FD /* libPods-百思不得姐(oc)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +259,7 @@
 				5BF0339F1ECA909800BA0664 /* Main(主控制器) */,
 				5BF033CE1ECA96C800BA0664 /* Me(我) */,
 				5BF033C41ECA966D00BA0664 /* New(新帖) */,
+				5BF033D91ECA984400BA0664 /* Pubilsh(发布) */,
 				5BF033671ECA89C500BA0664 /* Tool(工具) */,
 			);
 			path = Classes;
@@ -287,12 +302,12 @@
 		5BF033951ECA8F9700BA0664 /* Categroy(扩展) */ = {
 			isa = PBXGroup;
 			children = (
+				5BF033E91ECA9C3E00BA0664 /* UIView+SYCategory.h */,
+				5BF033EA1ECA9C3E00BA0664 /* UIView+SYCategory.m */,
 				5BF033961ECA8F9700BA0664 /* NSDate+Extension.h */,
 				5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */,
 				5BF033981ECA8F9700BA0664 /* UITabBarItem+Category.h */,
 				5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */,
-				5BF0339A1ECA8F9700BA0664 /* UIView+Category.h */,
-				5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */,
 			);
 			path = "Categroy(扩展)";
 			sourceTree = "<group>";
@@ -301,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF033A01ECA909800BA0664 /* Controller */,
+				5BF033D51ECA980000BA0664 /* View */,
 			);
 			path = "Main(主控制器)";
 			sourceTree = "<group>";
@@ -435,6 +451,37 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		5BF033D51ECA980000BA0664 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033E31ECA9B1800BA0664 /* LoginRegisterTextField.h */,
+				5BF033E41ECA9B1800BA0664 /* LoginRegisterTextField.m */,
+				5BF033E51ECA9B1800BA0664 /* QuickLoginButton.h */,
+				5BF033E61ECA9B1800BA0664 /* QuickLoginButton.m */,
+				5BF033D61ECA980000BA0664 /* TabBar.h */,
+				5BF033D71ECA980000BA0664 /* TabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BF033D91ECA984400BA0664 /* Pubilsh(发布) */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033DA1ECA984400BA0664 /* Controller */,
+			);
+			path = "Pubilsh(发布)";
+			sourceTree = "<group>";
+		};
+		5BF033DA1ECA984400BA0664 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033DE1ECA9A3400BA0664 /* PublishViewController.h */,
+				5BF033DF1ECA9A3400BA0664 /* PublishViewController.m */,
+				5BF033E01ECA9A3400BA0664 /* PublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5C0CCF77D59E831B1F088BF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF033E21ECA9A3400BA0664 /* PublishViewController.xib in Resources */,
 				5BF0333D1ECA85A600BA0664 /* LaunchScreen.storyboard in Resources */,
 				5BF033AB1ECA911100BA0664 /* LoginRegisterViewController.xib in Resources */,
 				5BF0338F1ECA8AD600BA0664 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -638,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF033AA1ECA911100BA0664 /* LoginRegisterViewController.m in Sources */,
+				5BF033E81ECA9B1800BA0664 /* QuickLoginButton.m in Sources */,
 				5BF0339D1ECA8F9700BA0664 /* UITabBarItem+Category.m in Sources */,
 				5BF033A31ECA90AF00BA0664 /* MainController.m in Sources */,
 				5BF033B11ECA92DA00BA0664 /* ADItem.m in Sources */,
@@ -648,13 +697,16 @@
 				5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */,
 				5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
+				5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */,
 				5BF033B51ECA92E200BA0664 /* ADViewController.m in Sources */,
 				5BF033BE1ECA95F700BA0664 /* EssenceBaseViewController.m in Sources */,
 				5BF033D21ECA96E500BA0664 /* MeViewController.m in Sources */,
 				5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */,
+				5BF033D81ECA980000BA0664 /* TabBar.m in Sources */,
 				5BF033C81ECA967800BA0664 /* NewViewController.m in Sources */,
-				5BF0339E1ECA8F9700BA0664 /* UIView+Category.m in Sources */,
+				5BF033E11ECA9A3400BA0664 /* PublishViewController.m in Sources */,
 				5BF0336B1ECA89C500BA0664 /* Networking.m in Sources */,
+				5BF033E71ECA9B1800BA0664 /* LoginRegisterTextField.m in Sources */,
 				5BF033CD1ECA96AB00BA0664 /* FollowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
