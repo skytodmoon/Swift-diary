@@ -158,7 +158,6 @@ static CGFloat const margin = 10;
     _textContent.numberOfLines = 0; //设置行数为0
     [_textContent setText:textItems.text];
     _textContent.textAlignment = NSTextAlignmentLeft;
-    _textContent.backgroundColor = [UIColor redColor];
     [_textContent sizeToFit];
     
     
