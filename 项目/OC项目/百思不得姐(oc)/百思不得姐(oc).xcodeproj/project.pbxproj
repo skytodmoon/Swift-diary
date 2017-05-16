@@ -27,6 +27,9 @@
 		5BF033911ECA8AD600BA0664 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033881ECA8AD600BA0664 /* LaunchImage@2x.png */; };
 		5BF033921ECA8AD600BA0664 /* member_ diamond_iconN.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5BF033891ECA8AD600BA0664 /* member_ diamond_iconN.gif */; };
 		5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033931ECA8F0E00BA0664 /* 输出框打印中文.m */; };
+		5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */; };
+		5BF0339D1ECA8F9700BA0664 /* UITabBarItem+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */; };
+		5BF0339E1ECA8F9700BA0664 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,12 @@
 		5BF033881ECA8AD600BA0664 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		5BF033891ECA8AD600BA0664 /* member_ diamond_iconN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "member_ diamond_iconN.gif"; sourceTree = "<group>"; };
 		5BF033931ECA8F0E00BA0664 /* 输出框打印中文.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "输出框打印中文.m"; sourceTree = "<group>"; };
+		5BF033961ECA8F9700BA0664 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		5BF033981ECA8F9700BA0664 /* UITabBarItem+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Category.h"; sourceTree = "<group>"; };
+		5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Category.m"; sourceTree = "<group>"; };
+		5BF0339A1ECA8F9700BA0664 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		DD8A8208E0D075E676404EDA /* libPods-百思不得姐(oc)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CCF3C4F78D0394C7AFC2FD /* libPods-百思不得姐(oc)Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐(oc)Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +207,7 @@
 		5BF033671ECA89C500BA0664 /* Tool(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				5BF033951ECA8F9700BA0664 /* Categroy(扩展) */,
 				5BF033681ECA89C500BA0664 /* Networking(网络封装) */,
 			);
 			path = "Tool(工具)";
@@ -226,6 +236,19 @@
 				5BF033891ECA8AD600BA0664 /* member_ diamond_iconN.gif */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5BF033951ECA8F9700BA0664 /* Categroy(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				5BF033961ECA8F9700BA0664 /* NSDate+Extension.h */,
+				5BF033971ECA8F9700BA0664 /* NSDate+Extension.m */,
+				5BF033981ECA8F9700BA0664 /* UITabBarItem+Category.h */,
+				5BF033991ECA8F9700BA0664 /* UITabBarItem+Category.m */,
+				5BF0339A1ECA8F9700BA0664 /* UIView+Category.h */,
+				5BF0339B1ECA8F9700BA0664 /* UIView+Category.m */,
+			);
+			path = "Categroy(扩展)";
 			sourceTree = "<group>";
 		};
 		5C0CCF77D59E831B1F088BF1 /* Pods */ = {
@@ -427,10 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF0339D1ECA8F9700BA0664 /* UITabBarItem+Category.m in Sources */,
 				5BF033351ECA85A600BA0664 /* ViewController.m in Sources */,
 				5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */,
+				5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
 				5BF033941ECA8F0E00BA0664 /* 输出框打印中文.m in Sources */,
+				5BF0339E1ECA8F9700BA0664 /* UIView+Category.m in Sources */,
 				5BF0336B1ECA89C500BA0664 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
