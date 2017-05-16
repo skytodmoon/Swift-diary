@@ -140,8 +140,8 @@ static NSString *const userID = @"userID";
 - (void)setupRefresh
 {
     //下拉时刷新数据
-    self.userView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUser)];
-    
+    AnimationRefreshHeader *header = [AnimationRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUser)];
+    _userView.mj_header = header;
     //上拉时刷新数据
     self.userView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
     

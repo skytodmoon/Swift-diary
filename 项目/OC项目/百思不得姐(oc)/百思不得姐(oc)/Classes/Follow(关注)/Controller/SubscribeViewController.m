@@ -44,14 +44,9 @@ static NSString *const ID = @"cell";
     //取消TableView侧滑栏
     self.tableView.showsVerticalScrollIndicator = NO;
     
-    //设置蒙版 防止加载时其他控件可点击
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    [SVProgressHUD showWithStatus:@"正在加载数据。。。"];
 
-//    UIView *view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    view.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:view];
+    //添加刷新控件
+    [self setupRefresh];
     //加载数据
     [self loadWeb];
     
@@ -66,14 +61,17 @@ static NSString *const ID = @"cell";
 }
 
 
+//添加刷新控件，
+- (void)setupRefresh
+{
+    //下拉时刷新数据
+    AnimationRefreshHeader *header = [AnimationRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadWeb)];
+    self.tableView.mj_header = header;
+}
+
 //加载数据
 - (void)loadWeb
 {
-    
-    //自定义SVProgressHUD显示时背景颜色
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-    [SVProgressHUD setBackgroundColor:[UIColor lightGrayColor]];
-    
     
     [Networking GET:@"http://d.api.budejie.com/tag/subscribe/bs0315-iphone-4.2.json?appname=bs0315&asid=4D9488FE-E59B-41A2-9323-AC3934759456&client=iphone&device=ios%20device&from=ios&jbk=0&mac=&market=&openudid=e3ddce7325bff40f8bb8b2851653e15c03c366c2&udid=&ver=4.2" baseURL:nil params:nil success:^(NSURLSessionDataTask *task, id responseObject) {
 
@@ -84,12 +82,15 @@ static NSString *const ID = @"cell";
         _recommendItem = [RecommendItem mj_objectArrayWithKeyValuesArray:responseObject[@"rec_tags"]];
         //必须刷新一下页面才会显示数据
         [self.tableView reloadData];
-
+        //结束下拉刷新
+        [self.tableView.mj_header endRefreshing];
         NSLog(@"请求订阅数据成功%@",responseObject);
         
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
         //请求失败
-        NSLog(@"%@",error);
+        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
+        // 结束刷新
+        [self.tableView.mj_footer endRefreshing];
     }];
     
 
