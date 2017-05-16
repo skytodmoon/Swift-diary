@@ -1,13 +1,12 @@
 //
-//  BaseViewController.h
+//  ProgressView.h
 //  百思不得姐(oc)
 //
 //  Created by 金亮齐 on 2017/5/16.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DALabeledCircularProgressView.h"
 
-@interface BaseViewController : UIViewController
-@property (nonatomic,assign) int topTitleBtn;
+@interface ProgressView : DALabeledCircularProgressView
 @end

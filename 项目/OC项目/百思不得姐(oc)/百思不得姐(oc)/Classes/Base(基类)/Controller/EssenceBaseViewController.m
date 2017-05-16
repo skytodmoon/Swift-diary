@@ -6,93 +6,226 @@
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
+/****** 精华内容公共基类 ******/
+
 #import "EssenceBaseViewController.h"
+#import "TextItem.h"
+#import "WholeCell.h"
+#import "CommentViewController.h"
+
+static NSString *const ID = @"cell";
+//NSString *const TabBarDidSelectNotification = @"TabBarDidSelectNotification";
 
 @interface EssenceBaseViewController ()
+//帖子数据
+@property (nonatomic,strong) NSMutableArray *textItems;
+//当前页码
+@property (nonatomic,assign) NSInteger page;
+//当加载下一页数据是需要这个参数
+@property (nonatomic,copy) NSNumber *np;
+//上一次请求
+@property (nonatomic,strong) NSDictionary *params;
+
+//上次选中的索引(或者控制器)
+@property (nonatomic,assign) NSInteger lastSelectedIndex;
 
 @end
 
 @implementation EssenceBaseViewController
 
+//懒加载
+- (NSMutableArray *)textItems
+{
+    if (_textItems == nil) {
+        _textItems = [NSMutableArray array];
+    }
+    return _textItems;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //初始化控件
+    [self setupNavigationStyles];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //添加刷新控件
+    [self setupRefresh];
     
-    // Configure the cell...
+    
+}
+- (void)setupNavigationStyles
+{
+    //设置内容的TableView的尺寸在滚动栏下
+    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, self.tabBarController.tabBar.sy_height, 0);
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    //取消TablevView的分隔栏
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    //背景颜色
+    self.view.backgroundColor = CommonBgColor;
+    
+    //注册Xib
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WholeCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    //
+    //监听tabbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelected) name:@"TabBarDidSelectNotification" object:nil];
+}
+
+- (void)tabBarSelected{
+    //如果是连续选中两次，直接刷新
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    //记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+}
+//添加刷新控件
+- (void)setupRefresh
+{
+    //下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    //根据下拉的距离提示符自动改变透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    //当已进入页面时自动下拉刷新
+    [self.tableView.mj_header beginRefreshing];
+    
+    //上拉加载以前的数据
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+    
+}
+
+
+//加载新的数据
+- (void)loadNewData
+{
+    //开始刷新
+    [self.tableView.mj_footer endRefreshing];
+    
+    //设置请求方式
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    self.params = params;
+    
+    [manager GET:_URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (self.params != params) return;
+        // 存储np
+        self.np = responseObject[@"info"][@"np"];
+        // 字典 -> 模型
+        self.textItems = [TextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+        // 清空页码
+        self.page = 0;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (self.params != params) return;
+        
+        [self.tableView.mj_header endRefreshing];
+        
+    }];
+    
+}
+
+- (void)loadMoreData
+{
+    
+    [self.tableView.mj_header endRefreshing];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSMutableDictionary *paramas = [NSMutableDictionary dictionary];
+    NSInteger page = self.page + 1;
+    paramas[@"page"] = @(page);
+    paramas[@"np"] = self.np;
+    self.params = paramas;
+    
+    /*
+     一直头痛的Bug总结
+     因为这个项目的URL都是通过青花瓷抓取下来的，所以URL的格式有所不同，这个时候就需要仔细观察，看看URL之间有没有联系，或者有没有相同的地方。
+     经过仔细对比和通过不同的抓取URL会发现在这个URL中改变数据的内容是通过-20之前那串数字，所以这个时候就可以运用字符串的拼接，首先截距变化前的内容然后在截取后面的内容，把中间改变的数值通过变量传进去，最后进行拼接即可。
+     示例：
+     
+     http://d.api.budejie.com/topic/list/chuanyue/31/bs0315-iphone-4.2/0-20.json
+     
+     首先截取数字串到4.2/
+     然后中间0属于变量，即通过 paramas[@"np"] 传入
+     最后-20.json 属于共有的，所以最后拼接上即可
+     
+     */
+    NSRange range = [_URL rangeOfString:@"4.2/"];
+    NSString *preUrl = [_URL substringToIndex:range.location + 4];
+    NSString *lastUrl = @"-20.json";
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",preUrl,self.np,lastUrl];
+    
+    
+    [manager GET:url parameters:paramas progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (self.params != paramas) return;
+        
+        self.np = responseObject[@"info"][@"np"];
+        
+        NSArray *newTopics = [TextItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [self.textItems addObjectsFromArray:newTopics];
+        
+        [self.tableView reloadData];
+        
+        [self.tableView.mj_footer endRefreshing];
+        
+        self.page = page;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (self.params != paramas) return;
+        
+        [self.tableView.mj_footer endRefreshing];
+        
+    }];
+    
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    self.tableView.mj_footer.hidden = (self.textItems.count == 0);
+    return self.textItems.count;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WholeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    cell.textItems = self.textItems[indexPath.row];
+    
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TextItem *textItem = self.textItems[indexPath.row];
+    NSLog(@"=======%.2f",textItem.cellHeight);
+    return textItem.cellHeight;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CommentViewController *commentView = [[CommentViewController alloc]init];
+    commentView.items = self.textItems[indexPath.row];
+    [self.navigationController pushViewController:commentView animated:YES];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

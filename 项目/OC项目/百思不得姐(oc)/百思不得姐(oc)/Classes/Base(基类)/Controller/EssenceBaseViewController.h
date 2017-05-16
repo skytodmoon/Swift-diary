@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EssenceBaseViewController : UITableViewController
-
+@property (nonatomic,strong) NSString *URL;
 @end

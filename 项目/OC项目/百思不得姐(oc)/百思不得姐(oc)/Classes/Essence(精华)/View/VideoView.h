@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  VideoView.h
 //  百思不得姐(oc)
 //
 //  Created by 金亮齐 on 2017/5/16.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TextItem;
 
-@interface BaseViewController : UIViewController
-@property (nonatomic,assign) int topTitleBtn;
+@interface VideoView : UIView
+@property (nonatomic,strong) TextItem *textItem;
+
++ (instancetype)videoView;
 @end

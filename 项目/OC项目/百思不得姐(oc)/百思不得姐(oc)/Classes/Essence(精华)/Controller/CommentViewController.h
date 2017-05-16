@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  CommentViewController.h
 //  百思不得姐(oc)
 //
 //  Created by 金亮齐 on 2017/5/16.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TextItem;
+@interface CommentViewController : UIViewController
 
-@interface BaseViewController : UIViewController
-@property (nonatomic,assign) int topTitleBtn;
+@property (nonatomic,strong) TextItem *items;
+
 @end
