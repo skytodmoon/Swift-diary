@@ -39,24 +39,27 @@ static NSString *const ID = @"redStars";
 }
 
 - (void)reloadRefreshing{
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadData)];
+    AnimationRefreshHeader *header = [AnimationRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadData)];
+    self.tableView.mj_header = header;
     [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)reloadData{
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET: RedStartURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //        [responseObject writeToFile:@"/Users/sunhaichao/Desktop/.plist" atomically:YES];
+    [Networking GET:RedStartURL baseURL:nil params:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
         self.redStarts = [RedStartItems mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
         
         [self.tableView.mj_header endRefreshing];
+        NSLog(@"请求贡献榜数据成功%@",responseObject);
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } fail:^(NSURLSessionDataTask *task, NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
+
+    
     
 }
 

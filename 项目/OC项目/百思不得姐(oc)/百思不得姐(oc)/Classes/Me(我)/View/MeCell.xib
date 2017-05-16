@@ -19,9 +19,12 @@
                             <constraint firstAttribute="height" constant="50" id="hSD-cL-j12"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Xc-ifk">
-                        <rect key="frame" x="30.5" y="70" width="39.5" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Xc-ifk">
+                        <rect key="frame" x="10" y="65" width="80" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19.5" id="Xt4-lU-xVb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -30,12 +33,23 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="WEd-Xc-ifk" secondAttribute="bottom" constant="10.5" id="5bf-iO-sHE"/>
+                <constraint firstItem="WEd-Xc-ifk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="5wT-dS-sUw"/>
                 <constraint firstItem="7ao-Fm-4Hr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="K4A-mV-mTT"/>
+                <constraint firstAttribute="trailing" secondItem="WEd-Xc-ifk" secondAttribute="trailing" constant="10" id="Sd2-b3-akW"/>
                 <constraint firstItem="WEd-Xc-ifk" firstAttribute="top" secondItem="7ao-Fm-4Hr" secondAttribute="bottom" constant="10" id="U41-TP-oYM"/>
                 <constraint firstItem="7ao-Fm-4Hr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="dPi-0f-OKu"/>
                 <constraint firstAttribute="trailing" secondItem="7ao-Fm-4Hr" secondAttribute="trailing" constant="25" id="fYY-jE-p9w"/>
+                <constraint firstItem="WEd-Xc-ifk" firstAttribute="top" secondItem="7ao-Fm-4Hr" secondAttribute="bottom" constant="5" id="tHg-4T-WmU"/>
                 <constraint firstItem="WEd-Xc-ifk" firstAttribute="centerX" secondItem="7ao-Fm-4Hr" secondAttribute="centerX" id="uNW-A2-PBH"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5bf-iO-sHE"/>
+                    <exclude reference="U41-TP-oYM"/>
+                    <exclude reference="uNW-A2-PBH"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="iconView" destination="7ao-Fm-4Hr" id="8Ck-3M-efP"/>
                 <outlet property="nameView" destination="WEd-Xc-ifk" id="yio-nn-V71"/>
