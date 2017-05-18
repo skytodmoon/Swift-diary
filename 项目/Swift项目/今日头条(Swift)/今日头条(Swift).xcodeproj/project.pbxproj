@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4954BD1ECD3D73007E8D22 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954BC1ECD3D73007E8D22 /* TabBarController.swift */; };
+		5B4954BF1ECD3D82007E8D22 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954BE1ECD3D82007E8D22 /* NavigationController.swift */; };
+		5B4954C11ECD3E0A007E8D22 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954C01ECD3E0A007E8D22 /* BaseViewController.swift */; };
 		5B900AC41ECBF2F200683843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC31ECBF2F200683843 /* AppDelegate.swift */; };
 		5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC51ECBF2F200683843 /* ViewController.swift */; };
 		5B900AC91ECBF2F200683843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B900AC71ECBF2F200683843 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		10D5DE68A553A8A501FEA7A5 /* Pods______Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Swift_UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		370DDA181B5344413BA49B00 /* Pods-今日头条(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条(Swift)/Pods-今日头条(Swift).release.xcconfig"; sourceTree = "<group>"; };
 		4CEE936FB13B15E7FCD70277 /* Pods-今日头条(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条(Swift)/Pods-今日头条(Swift).debug.xcconfig"; sourceTree = "<group>"; };
+		5B4954BC1ECD3D73007E8D22 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5B4954BE1ECD3D82007E8D22 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		5B4954C01ECD3E0A007E8D22 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B900AC01ECBF2F200683843 /* 今日头条(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "今日头条(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B900AC31ECBF2F200683843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B900AC51ECBF2F200683843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B4954BA1ECD3D55007E8D22 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B4954BB1ECD3D55007E8D22 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B4954BB1ECD3D55007E8D22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B4954BC1ECD3D73007E8D22 /* TabBarController.swift */,
+				5B4954BE1ECD3D82007E8D22 /* NavigationController.swift */,
+				5B4954C01ECD3E0A007E8D22 /* BaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5B900AB71ECBF2F200683843 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +184,7 @@
 		5B900AF31ECBFA0700683843 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B4954BA1ECD3D55007E8D22 /* Main */,
 				5B900AF41ECBFA3400683843 /* Other */,
 			);
 			path = Classes;
@@ -387,10 +412,13 @@
 			files = (
 				5B900AFE1ECBFA7300683843 /* UIImageView+Extension.swift in Sources */,
 				5B900AF81ECBFA4800683843 /* UIView+Extension.swift in Sources */,
+				5B4954C11ECD3E0A007E8D22 /* BaseViewController.swift in Sources */,
 				5B900B001ECBFA8B00683843 /* NetworkingTools.swift in Sources */,
+				5B4954BD1ECD3D73007E8D22 /* TabBarController.swift in Sources */,
 				5B900AFC1ECBFA6000683843 /* NSString+Extension.swift in Sources */,
 				5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */,
 				5B900B021ECBFAED00683843 /* Const.swift in Sources */,
+				5B4954BF1ECD3D82007E8D22 /* NavigationController.swift in Sources */,
 				5B900AC41ECBF2F200683843 /* AppDelegate.swift in Sources */,
 				5B900AFA1ECBFA5500683843 /* UIImage+Extension.swift in Sources */,
 			);
