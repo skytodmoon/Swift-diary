@@ -20,6 +20,10 @@
 		5B4954E51ECD3EDC007E8D22 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954E41ECD3EDC007E8D22 /* VideoViewController.swift */; };
 		5B4954E71ECD3EF7007E8D22 /* NewCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954E61ECD3EF7007E8D22 /* NewCareViewController.swift */; };
 		5B4954E91ECD3F15007E8D22 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954E81ECD3F15007E8D22 /* MineViewController.swift */; };
+		5B4954F01ECD712D007E8D22 /* FirstIntroduceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954EC1ECD712D007E8D22 /* FirstIntroduceController.swift */; };
+		5B4954F11ECD712D007E8D22 /* FirstIntroduceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4954ED1ECD712D007E8D22 /* FirstIntroduceController.xib */; };
+		5B4954F21ECD712D007E8D22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954EE1ECD712D007E8D22 /* LoginViewController.swift */; };
+		5B4954F31ECD712D007E8D22 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4954EF1ECD712D007E8D22 /* LoginViewController.xib */; };
 		5B900AC41ECBF2F200683843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC31ECBF2F200683843 /* AppDelegate.swift */; };
 		5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC51ECBF2F200683843 /* ViewController.swift */; };
 		5B900AC91ECBF2F200683843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B900AC71ECBF2F200683843 /* Main.storyboard */; };
@@ -64,6 +68,10 @@
 		5B4954E41ECD3EDC007E8D22 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		5B4954E61ECD3EF7007E8D22 /* NewCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCareViewController.swift; sourceTree = "<group>"; };
 		5B4954E81ECD3F15007E8D22 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		5B4954EC1ECD712D007E8D22 /* FirstIntroduceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstIntroduceController.swift; sourceTree = "<group>"; };
+		5B4954ED1ECD712D007E8D22 /* FirstIntroduceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstIntroduceController.xib; sourceTree = "<group>"; };
+		5B4954EE1ECD712D007E8D22 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5B4954EF1ECD712D007E8D22 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5B900AC01ECBF2F200683843 /* 今日头条(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "今日头条(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B900AC31ECBF2F200683843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B900AC51ECBF2F200683843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 		5B4954C21ECD3EAA007E8D22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B4954EA1ECD711C007E8D22 /* Login */,
 				5B4954C31ECD3EAA007E8D22 /* Home */,
 				5B4954C51ECD3EAA007E8D22 /* Main */,
 				5B4954CA1ECD3EAA007E8D22 /* Mine */,
@@ -237,6 +246,25 @@
 			isa = PBXGroup;
 			children = (
 				5B4954E41ECD3EDC007E8D22 /* VideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B4954EA1ECD711C007E8D22 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5B4954EB1ECD711C007E8D22 /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5B4954EB1ECD711C007E8D22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B4954EC1ECD712D007E8D22 /* FirstIntroduceController.swift */,
+				5B4954ED1ECD712D007E8D22 /* FirstIntroduceController.xib */,
+				5B4954EE1ECD712D007E8D22 /* LoginViewController.swift */,
+				5B4954EF1ECD712D007E8D22 /* LoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,8 +439,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4954F31ECD712D007E8D22 /* LoginViewController.xib in Resources */,
 				5B900ACE1ECBF2F200683843 /* LaunchScreen.storyboard in Resources */,
 				5B900ACB1ECBF2F200683843 /* Assets.xcassets in Resources */,
+				5B4954F11ECD712D007E8D22 /* FirstIntroduceController.xib in Resources */,
 				5B900AC91ECBF2F200683843 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +518,7 @@
 			files = (
 				5B4954E71ECD3EF7007E8D22 /* NewCareViewController.swift in Sources */,
 				5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */,
+				5B4954F01ECD712D007E8D22 /* FirstIntroduceController.swift in Sources */,
 				5B4954DD1ECD3EAA007E8D22 /* UIImage+Extension.swift in Sources */,
 				5B4954E11ECD3EAA007E8D22 /* NetworkingTools.swift in Sources */,
 				5B4954DE1ECD3EAA007E8D22 /* UIImageView+Extension.swift in Sources */,
@@ -498,6 +529,7 @@
 				5B4954DC1ECD3EAA007E8D22 /* NSString+Extension.swift in Sources */,
 				5B4954DB1ECD3EAA007E8D22 /* TabBarController.swift in Sources */,
 				5B4954D91ECD3EAA007E8D22 /* BaseViewController.swift in Sources */,
+				5B4954F21ECD712D007E8D22 /* LoginViewController.swift in Sources */,
 				5B4954E01ECD3EAA007E8D22 /* Const.swift in Sources */,
 				5B4954E31ECD3EC8007E8D22 /* HomeViewController.swift in Sources */,
 				5B4954E91ECD3F15007E8D22 /* MineViewController.swift in Sources */,

@@ -16,12 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UITabBarControllerDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let tabBarController = TabBarController()
-        tabBarController.delegate = self
-        window?.rootViewController = tabBarController
+        if !NSUserDefaults.standardUserDefaults().boolForKey(FirstLaunch) {
+            //MARK: -  是第一次启动
+            window?.rootViewController = FirstIntroduceController()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: FirstLaunch)
+        } else {
+            let tabBarController = TabBarController()
+            tabBarController.delegate = self
+            window?.rootViewController = tabBarController
+        }
         window?.makeKeyAndVisible()
-        // Override point for customization after application launch.
+        
         return true
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
