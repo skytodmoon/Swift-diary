@@ -24,6 +24,7 @@
 		5B4954F11ECD712D007E8D22 /* FirstIntroduceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4954ED1ECD712D007E8D22 /* FirstIntroduceController.xib */; };
 		5B4954F21ECD712D007E8D22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4954EE1ECD712D007E8D22 /* LoginViewController.swift */; };
 		5B4954F31ECD712D007E8D22 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4954EF1ECD712D007E8D22 /* LoginViewController.xib */; };
+		5B4955071ECEA52B007E8D22 /* SearchContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4955061ECEA52B007E8D22 /* SearchContentViewController.swift */; };
 		5B900AC41ECBF2F200683843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC31ECBF2F200683843 /* AppDelegate.swift */; };
 		5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AC51ECBF2F200683843 /* ViewController.swift */; };
 		5B900AC91ECBF2F200683843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B900AC71ECBF2F200683843 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		5B4954ED1ECD712D007E8D22 /* FirstIntroduceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstIntroduceController.xib; sourceTree = "<group>"; };
 		5B4954EE1ECD712D007E8D22 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B4954EF1ECD712D007E8D22 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5B4955061ECEA52B007E8D22 /* SearchContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContentViewController.swift; sourceTree = "<group>"; };
 		5B900AC01ECBF2F200683843 /* 今日头条(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "今日头条(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B900AC31ECBF2F200683843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B900AC51ECBF2F200683843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		5B4954CD1ECD3EAA007E8D22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B4955061ECEA52B007E8D22 /* SearchContentViewController.swift */,
 				5B4954E61ECD3EF7007E8D22 /* NewCareViewController.swift */,
 			);
 			path = Controller;
@@ -532,6 +535,7 @@
 				5B4954F21ECD712D007E8D22 /* LoginViewController.swift in Sources */,
 				5B4954E01ECD3EAA007E8D22 /* Const.swift in Sources */,
 				5B4954E31ECD3EC8007E8D22 /* HomeViewController.swift in Sources */,
+				5B4955071ECEA52B007E8D22 /* SearchContentViewController.swift in Sources */,
 				5B4954E91ECD3F15007E8D22 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
