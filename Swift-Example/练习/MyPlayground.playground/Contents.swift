@@ -2,6 +2,8 @@
 
 import UIKit
 
+
+//=========================简单值======================
 //使用let声明常量，使用var声明变量
 var myVariable = 42
 myVariable = 50
