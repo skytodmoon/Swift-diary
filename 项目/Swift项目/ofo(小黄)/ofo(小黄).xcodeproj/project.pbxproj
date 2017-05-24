@@ -16,6 +16,7 @@
 		1DE3FA751ED5CA23002EC094 /* ofo____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA741ED5CA23002EC094 /* ofo____UITests.swift */; };
 		1DE3FA831ED5D02C002EC094 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE3FA821ED5D02C002EC094 /* MapKit.framework */; };
 		1DE3FA871ED5D28F002EC094 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA861ED5D28F002EC094 /* webViewController.swift */; };
+		1DE3FA891ED5DD4B002EC094 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA881ED5DD4B002EC094 /* MenuTableViewController.swift */; };
 		6E0B2A40E96D5D6CB5EC3094 /* Pods_ofo____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C03C6757562CD515D05FA69 /* Pods_ofo____Tests.framework */; };
 		87E1EF92F9921E054A086F40 /* Pods_ofo____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0808F14E69C816E8206957DF /* Pods_ofo____UITests.framework */; };
 		F3CCFDD4EA7F04D9FFB214C1 /* Pods_ofo____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1255E7F0E8795AE57BC86F64 /* Pods_ofo____.framework */; };
@@ -56,6 +57,7 @@
 		1DE3FA761ED5CA23002EC094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE3FA821ED5D02C002EC094 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1DE3FA861ED5D28F002EC094 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		1DE3FA881ED5DD4B002EC094 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		482FD639473EECF2B1FBBFB7 /* Pods-ofo(小黄).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄).release.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)/Pods-ofo(小黄).release.xcconfig"; sourceTree = "<group>"; };
 		68C7588B0D2B0881506F41C7 /* Pods-ofo(小黄)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)Tests/Pods-ofo(小黄)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		89370B46411B511461E75DBE /* Pods-ofo(小黄).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄).debug.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)/Pods-ofo(小黄).debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				1DE3FA5D1ED5CA23002EC094 /* LaunchScreen.storyboard */,
 				1DE3FA601ED5CA23002EC094 /* Info.plist */,
 				1DE3FA861ED5D28F002EC094 /* webViewController.swift */,
+				1DE3FA881ED5DD4B002EC094 /* MenuTableViewController.swift */,
 			);
 			path = "ofo(小黄)";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE3FA891ED5DD4B002EC094 /* MenuTableViewController.swift in Sources */,
 				1DE3FA571ED5CA23002EC094 /* ViewController.swift in Sources */,
 				1DE3FA551ED5CA23002EC094 /* AppDelegate.swift in Sources */,
 				1DE3FA871ED5D28F002EC094 /* webViewController.swift in Sources */,
