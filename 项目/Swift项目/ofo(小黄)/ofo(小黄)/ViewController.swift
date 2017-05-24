@@ -12,9 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNav()
+        setupUI()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    //MARK: - 设置导航栏
+    private func setNav(){
+    
+        self.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "ofoLogo"))
+        self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "leftTopImage").withRenderingMode(.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem?.image = #imageLiteral(resourceName: "rightTopImage").withRenderingMode(.alwaysOriginal)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 
+    private func setupUI(){
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

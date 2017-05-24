@@ -14,6 +14,8 @@
 		1DE3FA5F1ED5CA23002EC094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE3FA5D1ED5CA23002EC094 /* LaunchScreen.storyboard */; };
 		1DE3FA6A1ED5CA23002EC094 /* ofo____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA691ED5CA23002EC094 /* ofo____Tests.swift */; };
 		1DE3FA751ED5CA23002EC094 /* ofo____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA741ED5CA23002EC094 /* ofo____UITests.swift */; };
+		1DE3FA831ED5D02C002EC094 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE3FA821ED5D02C002EC094 /* MapKit.framework */; };
+		1DE3FA871ED5D28F002EC094 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE3FA861ED5D28F002EC094 /* webViewController.swift */; };
 		6E0B2A40E96D5D6CB5EC3094 /* Pods_ofo____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C03C6757562CD515D05FA69 /* Pods_ofo____Tests.framework */; };
 		87E1EF92F9921E054A086F40 /* Pods_ofo____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0808F14E69C816E8206957DF /* Pods_ofo____UITests.framework */; };
 		F3CCFDD4EA7F04D9FFB214C1 /* Pods_ofo____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1255E7F0E8795AE57BC86F64 /* Pods_ofo____.framework */; };
@@ -37,8 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0808F14E69C816E8206957DF /* Pods_ofo____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofo____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1255E7F0E8795AE57BC86F64 /* Pods_ofo____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofo____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0808F14E69C816E8206957DF /* Pods_ofo____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ofo____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1255E7F0E8795AE57BC86F64 /* Pods_ofo____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ofo____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE3FA511ED5CA23002EC094 /* ofo(小黄).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ofo(小黄).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE3FA541ED5CA23002EC094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DE3FA561ED5CA23002EC094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,15 +49,17 @@
 		1DE3FA5E1ED5CA23002EC094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DE3FA601ED5CA23002EC094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE3FA651ED5CA23002EC094 /* ofo(小黄)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ofo(小黄)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DE3FA691ED5CA23002EC094 /* ofo____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ofo____Tests.swift; sourceTree = "<group>"; };
+		1DE3FA691ED5CA23002EC094 /* ofo____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ofo____Tests.swift"; sourceTree = "<group>"; };
 		1DE3FA6B1ED5CA23002EC094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE3FA701ED5CA23002EC094 /* ofo(小黄)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ofo(小黄)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DE3FA741ED5CA23002EC094 /* ofo____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ofo____UITests.swift; sourceTree = "<group>"; };
+		1DE3FA741ED5CA23002EC094 /* ofo____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ofo____UITests.swift"; sourceTree = "<group>"; };
 		1DE3FA761ED5CA23002EC094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE3FA821ED5D02C002EC094 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1DE3FA861ED5D28F002EC094 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		482FD639473EECF2B1FBBFB7 /* Pods-ofo(小黄).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄).release.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)/Pods-ofo(小黄).release.xcconfig"; sourceTree = "<group>"; };
 		68C7588B0D2B0881506F41C7 /* Pods-ofo(小黄)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)Tests/Pods-ofo(小黄)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		89370B46411B511461E75DBE /* Pods-ofo(小黄).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄).debug.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)/Pods-ofo(小黄).debug.xcconfig"; sourceTree = "<group>"; };
-		8C03C6757562CD515D05FA69 /* Pods_ofo____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ofo____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C03C6757562CD515D05FA69 /* Pods_ofo____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ofo____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADA60BF128A87E5FA8CC556 /* Pods-ofo(小黄)UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄)UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)UITests/Pods-ofo(小黄)UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9C48F0130E097F6AD1A760F /* Pods-ofo(小黄)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄)Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)Tests/Pods-ofo(小黄)Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E66293C5FC24DE0E98385D57 /* Pods-ofo(小黄)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ofo(小黄)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ofo(小黄)UITests/Pods-ofo(小黄)UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE3FA831ED5D02C002EC094 /* MapKit.framework in Frameworks */,
 				F3CCFDD4EA7F04D9FFB214C1 /* Pods_ofo____.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +138,7 @@
 				1DE3FA5B1ED5CA23002EC094 /* Assets.xcassets */,
 				1DE3FA5D1ED5CA23002EC094 /* LaunchScreen.storyboard */,
 				1DE3FA601ED5CA23002EC094 /* Info.plist */,
+				1DE3FA861ED5D28F002EC094 /* webViewController.swift */,
 			);
 			path = "ofo(小黄)";
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 		ECD8261671CD3B43CF65D0DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DE3FA821ED5D02C002EC094 /* MapKit.framework */,
 				1255E7F0E8795AE57BC86F64 /* Pods_ofo____.framework */,
 				8C03C6757562CD515D05FA69 /* Pods_ofo____Tests.framework */,
 				0808F14E69C816E8206957DF /* Pods_ofo____UITests.framework */,
@@ -244,6 +251,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = C4R9UP276A;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1DE3FA641ED5CA23002EC094 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -451,6 +463,7 @@
 			files = (
 				1DE3FA571ED5CA23002EC094 /* ViewController.swift in Sources */,
 				1DE3FA551ED5CA23002EC094 /* AppDelegate.swift in Sources */,
+				1DE3FA871ED5D28F002EC094 /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +722,7 @@
 				1DE3FA7B1ED5CA23002EC094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DE3FA7C1ED5CA23002EC094 /* Build configuration list for PBXNativeTarget "ofo(小黄)Tests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +731,7 @@
 				1DE3FA7E1ED5CA23002EC094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DE3FA7F1ED5CA23002EC094 /* Build configuration list for PBXNativeTarget "ofo(小黄)UITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +740,7 @@
 				1DE3FA811ED5CA23002EC094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
