@@ -7,14 +7,6 @@ target 'ofo(小黄)' do
 
   # Pods for ofo(小黄)
 
-  target 'ofo(小黄)Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'ofo(小黄)UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'SWRevealViewController'
 
 end

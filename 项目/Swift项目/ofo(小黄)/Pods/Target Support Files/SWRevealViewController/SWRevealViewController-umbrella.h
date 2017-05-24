@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "SWRevealViewController.h"
 
-FOUNDATION_EXPORT double Pods_ofo____UITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ofo____UITestsVersionString[];
+FOUNDATION_EXPORT double SWRevealViewControllerVersionNumber;
+FOUNDATION_EXPORT const unsigned char SWRevealViewControllerVersionString[];
 
