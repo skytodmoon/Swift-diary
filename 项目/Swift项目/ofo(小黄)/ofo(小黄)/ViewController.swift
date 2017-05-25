@@ -15,6 +15,7 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
     var search: AMapSearchAPI!
     var pin: MyPinAnnotation!
     var pinView: MAAnnotationView!
+    var nearBySearch = true
     
     @IBOutlet weak var panelView: UIView!
 
@@ -35,6 +36,45 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
         
         search.aMapPOIAroundSearch(request)
     }
+    
+    //MARK: - 大头针动画
+    func pinAnimation(){
+        let endFrame = pinView.frame
+        pinView.frame = endFrame.offsetBy(dx: 0, dy: -15)
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, animations: { 
+            self.pinView.frame = endFrame
+        }, completion: nil)
+    }
+    
+    //MARK: - 动画
+    func mapView(_ mapView: MAMapView!, didAddAnnotationViews views: [Any]!) {
+        
+        let aViews = views as! [MAAnnotationView]
+        
+        for aView in aViews {
+            guard aView.annotation is MAPointAnnotation else {
+                continue
+            }
+            aView.transform = CGAffineTransform(scaleX: 0, y: 0)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: [], animations: {
+                aView.transform = .identity
+            }, completion: nil)
+        
+        }
+    }
+    
+    //MARK: - 用户移动交互
+    func mapView(_ mapView: MAMapView!, mapDidMoveByUser wasUserAction: Bool) {
+        if wasUserAction{
+            pin.isLockedToScreen = true
+            pinAnimation()
+            searchCustomLocation(mapView.centerCoordinate)
+        }
+    }
+    
+    
     //MARK: - 地图初始化
     func mapInitComplete(_ mapView: MAMapView!) {
         pin = MyPinAnnotation()
@@ -107,7 +147,11 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
         }
         
         mapView.addAnnotations(annotations)
-        mapView.showAnnotations(annotations, animated: true)
+        if nearBySearch {
+            mapView.showAnnotations(annotations, animated: true)
+            nearBySearch = !nearBySearch
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
