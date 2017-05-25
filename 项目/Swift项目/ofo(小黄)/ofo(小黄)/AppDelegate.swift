@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AMapServices.shared().apiKey = "ef6563a190c787d7ead4600224d8313a"
+        AMapServices.shared().enableHTTPS = true
         return true
     }
 

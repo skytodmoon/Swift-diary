@@ -9,7 +9,10 @@
 import UIKit
 import SWRevealViewController
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,MAMapViewDelegate {
+    
+    var mapView: MAMapView!
+    
     @IBOutlet weak var panelView: UIView!
 
     @IBAction func locationBtnTap(_ sender: UIButton) {
@@ -17,6 +20,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView = MAMapView(frame: view.bounds)
+        view.addSubview(mapView)
+        view.bringSubview(toFront: panelView)
+        
+        mapView.delegate = self
+        
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+
         setNav()
         setupUI()
         // Do any additional setup after loading the view, typically from a nib.
