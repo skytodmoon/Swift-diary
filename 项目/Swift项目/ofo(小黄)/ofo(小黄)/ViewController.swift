@@ -8,18 +8,22 @@
 
 import UIKit
 import SWRevealViewController
+import FTIndicator
 
-class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
+class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate,AMapNaviWalkManagerDelegate {
     
     var mapView: MAMapView!
     var search: AMapSearchAPI!
     var pin: MyPinAnnotation!
     var pinView: MAAnnotationView!
     var nearBySearch = true
+    var start,end : CLLocationCoordinate2D!
+    var walkManager : AMapNaviWalkManager!
     
     @IBOutlet weak var panelView: UIView!
 
     @IBAction func locationBtnTap(_ sender: UIButton) {
+        nearBySearch = true
         searchBikeNearby()
     }
     
@@ -35,6 +39,71 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
         request.requireExtension = true
         
         search.aMapPOIAroundSearch(request)
+    }
+    
+
+    func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
+        start = pin.coordinate
+        end = view.annotation.coordinate
+        
+        let startPoint = AMapNaviPoint.location(withLatitude: CGFloat(start.latitude), longitude: CGFloat(end.longitude))!
+        let endPoint = AMapNaviPoint.location(withLatitude: CGFloat(end.latitude), longitude: CGFloat(end.longitude))!
+        
+        walkManager.calculateWalkRoute(withStart: [startPoint], end: [endPoint])
+    }
+    
+    //MARK : -AMapNaviWalkManagerDelegate
+    func walkManager(onCalculateRouteSuccess walkManager: AMapNaviWalkManager) {
+        print("步行成功")
+        
+        mapView.removeOverlays(mapView.overlays)
+        
+        var coordinates = walkManager.naviRoute!.routeCoordinates!.map {
+            return  CLLocationCoordinate2D(latitude: CLLocationDegrees($0.latitude), longitude:
+                CLLocationDegrees($0.longitude))
+        }
+        
+        let polyline = MAPolyline(coordinates: &coordinates, count: UInt(coordinates.count))
+        mapView.add(polyline)
+        
+        //提示用户距离和用时
+        let walkMinute = walkManager.naviRoute!.routeTime / 60
+        
+        var timeDesc = "一分钟以内"
+        
+        if walkMinute > 0{
+            timeDesc = walkMinute.description + "分钟"
+        }
+        
+        let hinTitle = "步行" + timeDesc
+        let hinSubtitle = "距离" + walkManager.naviRoute!.routeLength.description + "米"
+        
+        FTIndicator.setIndicatorStyle(.dark)
+        FTIndicator.showNotification(with: #imageLiteral(resourceName: "clock"), title: hinTitle, message: hinSubtitle)
+        
+        /*系统自带的提示*/
+//        let ac = UIAlertController(title: hinTitle, message: hinSubtitle, preferredStyle: .alert)
+//        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
+//        ac.addAction(action)
+//        self.present(ac, animated: true, completion: nil)
+    }
+    
+    func walkManager(_ walkManager: AMapNaviWalkManager, onCalculateRouteFailure error: Error) {
+        print("路线失败",error)
+    }
+    
+    func mapView(_ mapView: MAMapView!, rendererFor overlay: MAOverlay!) -> MAOverlayRenderer! {
+        
+        if overlay is MAPolyline {
+            pin.isLockedToScreen = false
+            mapView.visibleMapRect = overlay.boundingMapRect
+            let renderer = MAPolylineRenderer(overlay: overlay)
+            renderer?.lineWidth = 8.0
+            renderer?.strokeColor = UIColor.blue
+            
+            return renderer
+        }
+        return nil
     }
     
     //MARK: - 大头针动画
@@ -84,6 +153,8 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
         
         mapView.addAnnotation(pin)
         mapView.showAnnotations([pin], animated: true)
+        
+        searchBikeNearby()
     }
     
     
@@ -192,6 +263,8 @@ class ViewController: UIViewController,MAMapViewDelegate,AMapSearchDelegate {
 
     private func setupUI(){
         
+        walkManager = AMapNaviWalkManager()
+        walkManager.delegate = self
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
