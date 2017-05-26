@@ -59,6 +59,9 @@
                                                 <state key="normal" title="立即用车" backgroundImage="userBikeImage">
                                                     <color key="titleColor" red="1" green="1" blue="0.31858258928571431" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="diG-sV-gZ7" kind="show" id="mVh-b9-ADd"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-RC-8SB">
                                                 <rect key="frame" x="255" y="46.5" width="60" height="74.5"/>
@@ -118,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="175"/>
+            <point key="canvasLocation" x="1350" y="187"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="TQv-PA-k0z">
@@ -136,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEU-mm-myN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="175"/>
+            <point key="canvasLocation" x="2162" y="175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c5e-ZU-zec">
@@ -457,7 +460,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGz-OH-cle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="856"/>
+            <point key="canvasLocation" x="135" y="822"/>
         </scene>
         <!--About Us Controller-->
         <scene sceneID="ipn-cZ-4nE">
@@ -487,7 +490,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAe-hB-AZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185" y="876"/>
+            <point key="canvasLocation" x="1391" y="822"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="cfH-E1-9ax">
+            <objects>
+                <viewController id="diG-sV-gZ7" customClass="ScanViewController" customModule="ofo_小黄_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ajh-lr-ffM"/>
+                        <viewControllerLayoutGuide type="bottom" id="bRz-WM-lzY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MWd-ag-zGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-xm-IYI" userLabel="PaneView">
+                                <rect key="frame" x="0.0" y="533.5" width="375" height="133.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RdC-TA-xWl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-V7-OPx">
+                                                <rect key="frame" x="0.0" y="48.5" width="187.5" height="36.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ng-Kt-Elz">
+                                                        <rect key="frame" x="88" y="0.0" width="12" height="22"/>
+                                                        <state key="normal" image="inputBlikeNo"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手动输入车牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-87-7W1">
+                                                        <rect key="frame" x="57" y="22" width="74" height="14.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-P7-dqb">
+                                                <rect key="frame" x="187.5" y="48.5" width="187.5" height="36.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZh-XO-I5q">
+                                                        <rect key="frame" x="88" y="0.0" width="12" height="22"/>
+                                                        <state key="normal" image="btn_unenableTorch_w"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手电筒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBs-qc-zhC">
+                                                        <rect key="frame" x="75.5" y="22" width="37" height="14.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RdC-TA-xWl" secondAttribute="bottom" id="PkS-IP-4oO"/>
+                                    <constraint firstAttribute="trailing" secondItem="RdC-TA-xWl" secondAttribute="trailing" id="Q2W-6Y-HzZ"/>
+                                    <constraint firstItem="RdC-TA-xWl" firstAttribute="top" secondItem="VIq-xm-IYI" secondAttribute="top" id="ST6-bg-EGp"/>
+                                    <constraint firstItem="RdC-TA-xWl" firstAttribute="leading" secondItem="VIq-xm-IYI" secondAttribute="leading" id="tCo-MM-1Zr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VIq-xm-IYI" secondAttribute="trailing" id="7Rh-i4-CT5"/>
+                            <constraint firstItem="VIq-xm-IYI" firstAttribute="leading" secondItem="MWd-ag-zGK" secondAttribute="leading" id="Mjj-hM-Obb"/>
+                            <constraint firstItem="bRz-WM-lzY" firstAttribute="top" secondItem="VIq-xm-IYI" secondAttribute="bottom" id="dZ8-ff-Dih"/>
+                            <constraint firstItem="VIq-xm-IYI" firstAttribute="height" secondItem="MWd-ag-zGK" secondAttribute="height" multiplier="0.2" id="nQb-vO-fKZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOc-if-6vP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="834"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hem-3n-33S">
@@ -557,7 +633,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nJ-iS-8Nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="875.71214392803608"/>
+            <point key="canvasLocation" x="759" y="822"/>
         </scene>
     </scenes>
     <resources>
@@ -570,6 +646,8 @@
         <image name="HomePage_UserGuide" width="20" height="20"/>
         <image name="RedPacketBike" width="340" height="135"/>
         <image name="UserInfo_defaultIcon" width="120" height="120"/>
+        <image name="btn_unenableTorch_w" width="12" height="19"/>
+        <image name="inputBlikeNo" width="12" height="19"/>
         <image name="leftBottomImage" width="40" height="40"/>
         <image name="rightBottomImage" width="40" height="40"/>
         <image name="userBikeImage" width="100" height="100"/>
