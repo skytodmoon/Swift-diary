@@ -1,12 +1,13 @@
 
-# ios 二维码、条形码 swift 版本
+# iOS 二维码、条形码 Swift 版本 Swift 2.2, Swift 2.3, Swift 3.0
 
 
 ###objective-c Version <img src="https://github.com/MxABC/LBXScan/blob/master/DemoTests/objectiveCIcon.jpg" height="55" width="40">
 对应的Objective-c版本: **[LBXScan](https://github.com/MxABC/LBXScan)**
 
 ### xcode
-测试程序 xcode版本号：xcode7.1 
+测试程序 xcode版本号：Xcode7.1 、Xcode 8
+
 
 ## 介绍
 **swift封装系统自带扫码及识别图片功能**
@@ -35,15 +36,30 @@
 ### CocoaPods安装
 
 
+
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 pod 'swiftScan'
 ```
+Swift 2.3
+```ruby
+ pod 'swiftScan', :git => 'https://github.com/CNKCQ/swiftScan.git'
+```
+
+Swift 3.0
+```ruby
+ pod 'swiftScan', :git => 'https://github.com/CNKCQ/swiftScan.git', :branch => 'Swift3.0'
+```
 
 ### 手动安装 
 下载后将Source文件夹copy到工程即可
+
+
+### 版本
+#### v1.0.8
+修改适应cocoapods安装后，编译报错bug
 
 
 ## 界面效果
