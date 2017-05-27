@@ -49,6 +49,7 @@ class ScanViewController: LBXScanViewController {
         
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.tintColor = UIColor.black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target:nil, action: nil)
     }
     
     override func viewDidLoad() {

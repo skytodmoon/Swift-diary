@@ -40,10 +40,20 @@ class InputController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "车辆解锁"
+        
         inputTextField.layer.borderWidth = 2
         inputTextField.layer.borderColor = UIColor.ofo.cgColor
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "扫码用车", style: .plain, target:self, action: #selector(backScan))
         // Do any additional setup after loading the view.
     }
+    
+    func backScan(){
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
