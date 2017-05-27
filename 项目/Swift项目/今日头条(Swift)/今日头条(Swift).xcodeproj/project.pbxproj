@@ -32,6 +32,8 @@
 		5B900ACE1ECBF2F200683843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B900ACC1ECBF2F200683843 /* LaunchScreen.storyboard */; };
 		5B900AD91ECBF2F200683843 /* _____Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AD81ECBF2F200683843 /* _____Swift_Tests.swift */; };
 		5B900AE41ECBF2F200683843 /* _____Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B900AE31ECBF2F200683843 /* _____Swift_UITests.swift */; };
+		5BC4E9401ED9975A0072407B /* Concern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4E93E1ED9975A0072407B /* Concern.swift */; };
+		5BC4E9411ED9975A0072407B /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4E93F1ED9975A0072407B /* Keyword.swift */; };
 		6E26A17BF73096FA04F1B576 /* Pods______Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A2259D040AC52238862BFB /* Pods______Swift_.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		5B900ADF1ECBF2F200683843 /* 今日头条(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B900AE31ECBF2F200683843 /* _____Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____Swift_UITests.swift"; sourceTree = "<group>"; };
 		5B900AE51ECBF2F200683843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC4E93E1ED9975A0072407B /* Concern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concern.swift; sourceTree = "<group>"; };
+		5BC4E93F1ED9975A0072407B /* Keyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
 		D3A2259D040AC52238862BFB /* Pods______Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Swift_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10D36A12B1F3F37B7138D47 /* Pods______Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				5B4954CD1ECD3EAA007E8D22 /* Controller */,
+				5BC4E93C1ED997450072407B /* Model */,
+				5BC4E93D1ED997450072407B /* View */,
 			);
 			path = NewCare;
 			sourceTree = "<group>";
@@ -324,6 +330,22 @@
 				5B900AE51ECBF2F200683843 /* Info.plist */,
 			);
 			path = "今日头条(Swift)UITests";
+			sourceTree = "<group>";
+		};
+		5BC4E93C1ED997450072407B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BC4E93E1ED9975A0072407B /* Concern.swift */,
+				5BC4E93F1ED9975A0072407B /* Keyword.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BC4E93D1ED997450072407B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BD3394BEBA5F15C46B84B5C0 /* Pods */ = {
@@ -523,6 +545,7 @@
 				5B900AC61ECBF2F200683843 /* ViewController.swift in Sources */,
 				5B4954F01ECD712D007E8D22 /* FirstIntroduceController.swift in Sources */,
 				5B4954DD1ECD3EAA007E8D22 /* UIImage+Extension.swift in Sources */,
+				5BC4E9401ED9975A0072407B /* Concern.swift in Sources */,
 				5B4954E11ECD3EAA007E8D22 /* NetworkingTools.swift in Sources */,
 				5B4954DE1ECD3EAA007E8D22 /* UIImageView+Extension.swift in Sources */,
 				5B4954DF1ECD3EAA007E8D22 /* UIView+Extension.swift in Sources */,
@@ -531,6 +554,7 @@
 				5B900AC41ECBF2F200683843 /* AppDelegate.swift in Sources */,
 				5B4954DC1ECD3EAA007E8D22 /* NSString+Extension.swift in Sources */,
 				5B4954DB1ECD3EAA007E8D22 /* TabBarController.swift in Sources */,
+				5BC4E9411ED9975A0072407B /* Keyword.swift in Sources */,
 				5B4954D91ECD3EAA007E8D22 /* BaseViewController.swift in Sources */,
 				5B4954F21ECD712D007E8D22 /* LoginViewController.swift in Sources */,
 				5B4954E01ECD3EAA007E8D22 /* Const.swift in Sources */,
