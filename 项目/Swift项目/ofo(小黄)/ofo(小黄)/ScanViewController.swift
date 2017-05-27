@@ -8,6 +8,7 @@
 
 import UIKit
 import swiftScan
+import FTIndicator
 
 class ScanViewController: LBXScanViewController {
     
@@ -28,7 +29,16 @@ class ScanViewController: LBXScanViewController {
     }
     @IBOutlet weak var panelView: UIView!
     
-
+    //MARK: - 重写扫描的结果处理
+    override func handleCodeResult(arrayResult: [LBXScanResult]) {
+        if let result  = arrayResult.first {
+            let msg = result.strScanned
+            
+            FTIndicator.setIndicatorStyle(.dark)
+            FTIndicator.showToastMessage(msg)
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         view.bringSubview(toFront: panelView)
