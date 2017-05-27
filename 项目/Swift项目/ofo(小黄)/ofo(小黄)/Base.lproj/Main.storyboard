@@ -593,14 +593,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputPageImage" translatesAutoresizingMaskIntoConstraints="NO" id="oj0-E6-feO">
                                         <rect key="frame" x="10" y="0.0" width="339" height="117"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-J3-aS1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-J3-aS1">
                                         <rect key="frame" x="10" y="151.5" width="339" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车牌号" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLV-w5-fdi">
-                                                <rect key="frame" x="0.0" y="0.0" width="289" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="285" height="50"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMt-K3-fo0">
                                                 <rect key="frame" x="289" y="0.0" width="50" height="50"/>
@@ -702,6 +702,7 @@
                     </view>
                     <connections>
                         <outlet property="flashBtn" destination="Pv5-mh-SpT" id="yUf-J1-dSH"/>
+                        <outlet property="goBtn" destination="UMt-K3-fo0" id="ZZm-XC-PCj"/>
                         <outlet property="inputTextField" destination="CLV-w5-fdi" id="FaB-0O-1jG"/>
                         <outlet property="voiceBtn" destination="7ur-73-nyC" id="ugO-sd-xKO"/>
                     </connections>

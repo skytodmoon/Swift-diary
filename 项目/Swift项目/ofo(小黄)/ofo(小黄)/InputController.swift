@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import APNumberPad
 
-class InputController: UIViewController {
+class InputController: UIViewController,APNumberPadDelegate,UITextFieldDelegate {
     var isFlashOn = false
     var isVoiceOn = true
     
+   
     @IBAction func flashBtnTap(_ sender: UIButton) {
         isFlashOn = !isFlashOn
         if isFlashOn {
@@ -36,7 +38,7 @@ class InputController: UIViewController {
     @IBOutlet weak var voiceBtn: UIButton!
     @IBOutlet weak var flashBtn: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
-
+    @IBOutlet weak var goBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +49,14 @@ class InputController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "扫码用车", style: .plain, target:self, action: #selector(backScan))
         // Do any additional setup after loading the view.
+        let numberPad = APNumberPad(delegate: self)
+        numberPad.leftFunctionButton.setTitle("确定", for: .normal)
+        inputTextField.inputView = numberPad
+        inputTextField.delegate = self
+    }
+    
+    func numberPad(_ numberPad: APNumberPad, functionButtonAction functionButton: UIButton, textInput: UIResponder) {
+        print("点击了确定了")
     }
     
     func backScan(){
@@ -60,15 +70,21 @@ class InputController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else {
+            return true
+        }
+        let newLength = text.characters.count + string.characters.count - range.length
+        
+        if newLength > 0 {
+            goBtn.setImage(#imageLiteral(resourceName: "nextArrow_enable"), for: .normal)
+            goBtn.backgroundColor = UIColor.ofo
+        }else {
+            goBtn.setImage(#imageLiteral(resourceName: "nextArrow_unenable"), for: .normal)
+            goBtn.backgroundColor = UIColor.groupTableViewBackground
+        }
+        
+        return newLength <= 8
     }
-    */
 
 }
