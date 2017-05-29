@@ -86,3 +86,144 @@ case let x where x.hasSuffix("pepper"):
 default:
     print("Everything tastes good in soup")
 }
+
+//运行switch中匹配的字句之后，程序会退出switch语句，并不会
+//向下运行for-in来遍历字典，需要两个变量表示每个键值对
+let interestingNumbers = [
+    "Prime":[2,3,4,5,11,13],
+    "Fibonace":[1,1,2,3,5,5],
+    "Square":[1,4,9,16,25],
+]
+var largest = 0
+for(kind,numbers)in interestingNumbers{
+    for numbers in numbers {
+        if numbers > largest {
+            largest = numbers
+        }
+    }
+}
+print(largest)
+
+//使用while来重复运行一段代码直到不满足条件，循环条件也可以结尾
+var n = 2
+while n < 100 {
+    n = n * 2
+}
+print(n)
+
+var m = 2
+repeat {
+    m = m * 2
+}while m < 100
+    print(m)
+
+//..<来表示范围
+var total = 0
+for i in 0..<4 {
+    total += i
+}
+print(total)
+
+//=========================函数和闭包======================
+//使用func来声明一个函数，使用名字和参数来调用函数，使用->来指定函数的返回值
+func greet(person:String,day:String) ->String{
+    return "Hello\(person),today is \(day)."
+}
+greet(person: "Bob",day: "Tuesday")
+
+
+//元祖来让一个函数返回多个值，该元祖的元素可以用名称或数字来表示
+func calculateStatistics(scores:[Int]) ->(min: Int, max: Int, sum: Int){
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score > max {
+            max = score
+        }else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    return(min,max,sum)
+}
+
+let statistics = calculateStatistics(scores: [5,3,100,3,9])
+print(statistics.sum)
+print(statistics.2)
+
+//函数可以带有一个可变个数的参数，这些参数在函数内表现为数组的形式
+func sumOf(numbers: Int...) -> Int {
+    var sum = 0
+    for number in numbers {
+        sum += number
+    }
+    return sum
+}
+sumOf()
+sumOf(numbers: 43,597,12)
+
+//函数可以嵌套
+func returnFifteen() -> Int {
+    var y = 10
+    func add(){
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+
+//函数是第一等类型，这意味着函数可以作为另一个函数的返回值
+func makeIncerementer() -> ((Int) -> Int){
+    func addOne(number: Int) -> Int {
+        return 1 + number
+    }
+    return addOne
+}
+var increment = makeIncerementer()
+increment(7)
+
+
+//函数也可以当做参数传入另一个函数
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool)-> Bool{
+    for item in list {
+        if condition(item){
+            return true
+        }
+    }
+    return false
+}
+    
+func lessThanThe(number: Int) -> Bool {
+        return number < 10
+}
+var numbers = [20,19,7,12]
+hasAnyMatches(list: numbers, condition: lessThanThe)
+
+
+//函数实际上是一种特殊的闭包:
+//它是一段能之后被调取的代码。闭包中的代码能访问闭包所建作用域中能得到的变量和函数，
+//即使闭包是在一个不同的作用域被执行的 - 你已经在嵌套函数例子中所看到。
+//你可以使用{}来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离
+numbers.map({
+    (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+//有很多种创建更简洁的闭包的方法。
+//如果一个闭包的类型已知，比如作为一个回调函数，
+//你可以忽略参数的类型和返回值。单个语句闭包会把它语句的值当做结果返回。
+
+let mappedNumbers = numbers.map({number in 3 * number})
+print(mappedNumbers)
+
+let sortedNumbers = numbers.sort{$0 > $1}
+print(sortedNumbers)
+
+//=========================对象和类======================
+//使用class和类名来创建一个类。类中属性的声明和常量、变量声明一样，
+//唯一的区别就是它们的上下文是类。同样，方法和函数声明也一样。
+
+
