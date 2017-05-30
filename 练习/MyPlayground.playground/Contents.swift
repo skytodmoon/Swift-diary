@@ -225,5 +225,35 @@ print(sortedNumbers)
 //=========================对象和类======================
 //使用class和类名来创建一个类。类中属性的声明和常量、变量声明一样，
 //唯一的区别就是它们的上下文是类。同样，方法和函数声明也一样。
+class Shape {
+    var numberOfSide = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numbers)sides."
+    }
+}
+//要创建一个类的实例，在类名后面加上括号。使用点语法来访问实例的属性和方法
+var shape = Shape()
+shape.numberOfSide = 7
+var shapeDescription = shape.simpleDescription()
 
+//一个构造函数来初始化类实例。使用init来创建一个构造器
+class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    func simpleDescription() -> String {
+        return "A shape with\(numbers)sides"
+    }
+}
+
+//例子总结
+/*
+ 注意self被用来区别实例变量。当你创建实例的时候，像传入函数参数一样给类传入构造器的参数。每个属性都需要赋值——无论是通过声明（就像numberOfSides）还是通过构造器（就像name）
+ 子类的定义方法是在它们的类名后面加上父类的名字，用冒号分割。创建类的时候并不需要一个标准的根类，所以你可以忽略父类。
+ 
+ 子类如果要重写父类的方法的话，需要用override标记——如果没有添加override就重写父类方法的话编译器会报错。编译器同样会检测override标记的方法是否确实在父类中。
+ */
 
