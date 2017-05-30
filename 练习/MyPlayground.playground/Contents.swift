@@ -345,3 +345,58 @@ print(triangleAndSquare.triangle.sideLength)
 
 
 //=========================枚举和结构体======================
+//使用enum来创建一个枚举。就像类和其他所有命名类型一样，枚举可以包含方法
+
+enum Rank: Int {
+    case Ace = 1
+    case Two,Thress,Four,Five,Six,Seven,Eight,Nine,Ten
+    case Jack,Queen,King
+    func simpleDescription() -> String {
+        switch self {
+        case .Ace:
+            return "ace"
+        case.Jack:
+            return "jack"
+        case.Queen:
+            return "queen"
+        case.King:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+let ace = Rank.Ace
+let accRawValue = ace.rawValue
+
+//枚举的成员值是实际值，并不是原始值的另一种表达方法。实际上，如果没有比较有意义的原始值，你就不需要提供原始值。
+
+enum Suit {
+    case Spades,Hearts,Diamonds,Clubs
+    func simpleDescription() -> String {
+    switch self{
+    case.Spades:
+        return "spades"
+    case.Hearts:
+        return "hearts"
+    case.Diamonds:
+        return "dimonds"
+    case.Clubs:
+        return "clubs"
+        }
+    }
+}
+
+let hearts = Suit.Hearts
+let heartsDesctiption = hearts.simpleDescription()
+
+//例子总结
+/*
+ 注意，有两种方式可以引用Hearts成员：给hearts常量赋值时，枚举成员Suit.Hearts需要用全名来引用，因为常量没有显式指定类型。在switch里，枚举成员使用缩写.Hearts来引用，因为self的值已经知道是一个suit。已知变量类型的情况下你可以使用缩写。
+ 
+ 一个枚举成员的实例可以有实例值。相同枚举成员的实例可以有不同的值。创建实例的时候传入值即可。实例值和原始值是不同的：枚举成员的原始值对于所有实例都是相同的，而且你是在定义枚举的时候设置原始值。
+ 
+ 例如，考虑从服务器获取日出和日落的时间。服务器会返回正常结果或者错误信息。
+ */
+
+
