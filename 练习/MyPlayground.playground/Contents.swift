@@ -219,8 +219,8 @@ numbers.map({
 let mappedNumbers = numbers.map({number in 3 * number})
 print(mappedNumbers)
 
-let sortedNumbers = numbers.sort{$0 > $1}
-print(sortedNumbers)
+
+
 
 //=========================对象和类======================
 //使用class和类名来创建一个类。类中属性的声明和常量、变量声明一样，
@@ -257,3 +257,91 @@ class NamedShape {
  子类如果要重写父类的方法的话，需要用override标记——如果没有添加override就重写父类方法的话编译器会报错。编译器同样会检测override标记的方法是否确实在父类中。
  */
 
+class Square: NamedShape {
+    var sideLength: Double
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+    
+    func area() -> Double {
+        return sideLength * sideLength
+    }
+    
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)."
+    }
+}
+let test = Square(sideLength: 5.2, name: "my texy square")
+test.area()
+test.simpleDescription()
+
+
+//除了储存简单的属性之外，属性可以有 getter 和 setter
+class EquilateralTriangle: NamedShape {
+    
+    var sideLength: Double = 0.0
+    
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 3
+    }
+    
+    var perimeter: Double {
+        get {
+            return 3.0 * sideLength
+        }
+        set {
+            sideLength = newValue / 3.0
+        }
+    }
+    
+    override func simpleDescription() -> String {
+        return "An equilateral triagle whit sides of length \(sideLength)"
+    }
+}
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+print(triangle.perimeter)
+triangle.perimeter = 9.9
+print(triangle.sideLength)
+
+//例子总结
+/*
+ 在perimeter的 setter 中，新值的名字是newValue。你可以在set之后显式的设置一个名字。
+ 注意EquilateralTriangle类的构造器执行了三步：
+ 
+ 设置子类声明的属性值
+ 调用父类的构造器
+ 改变父类定义的属性值。其他的工作比如调用方法、getters 和 setters 也可以在这个阶段完成。
+ 如果你不需要计算属性，但是仍然需要在设置一个新值之前或者之后运行代码，使用willSet和didSet。
+ */
+
+//下面的类确保三角形的边长总是和正方形的边长相同
+class TriangleAndSquare {
+    var triangle: EquilateralTriangle {
+        willSet{
+            square.sideLength = newValue.sideLength
+        }
+    }
+    var square: Square {
+        willSet{
+            triangle.sideLength = newValue.sideLength
+        }
+    }
+    init(size: Double, name: String) {
+        square = Square(sideLength: size, name: name)
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+    }
+}
+
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "another text shape")
+print(triangleAndSquare.square.sideLength)
+print(triangleAndSquare.triangle.sideLength)
+triangleAndSquare.square = Square(sideLength: 50, name: "large square")
+print(triangleAndSquare.triangle.sideLength)
+
+
+//=========================枚举和结构体======================
