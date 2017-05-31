@@ -20,6 +20,7 @@
 		5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D71EDE68C1004C32AE /* Main.storyboard */; };
 		5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */; };
 		5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */; };
+		5BD6A1E81EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */; };
 		7A5E2D40FB85162CDD0156C0 /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E357C06E3058C0275B51DD85 /* Pods____Swift_.framework */; };
 		81C16930B6404243D0B3500B /* Pods____Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */; };
 		FADABCBBB4E4B7E5867AF013 /* Pods____Swift_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295DE89F5ABE9B243155949E /* Pods____Swift_UITests.framework */; };
@@ -66,6 +67,7 @@
 		5BD6A1D71EDE68C1004C32AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		87F8702A7A2E6366478B4BDD /* Pods-斗鱼(Swift)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BAAEA24C5CA65D040B02A338 /* Pods-斗鱼(Swift)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 		5BD6A1CA1EDE68C1004C32AE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BD6A1E51EDE6E37004C32AE /* Tools */,
 				5BD6A1CB1EDE68C1004C32AE /* Follow */,
 				5BD6A1CE1EDE68C1004C32AE /* Home */,
 				5BD6A1D21EDE68C1004C32AE /* Live */,
@@ -186,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				5BD6A1CF1EDE68C1004C32AE /* Controller */,
+				5BD6A1E31EDE6E21004C32AE /* Model */,
+				5BD6A1E41EDE6E21004C32AE /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -246,6 +251,36 @@
 				5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BD6A1E31EDE6E21004C32AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BD6A1E41EDE6E21004C32AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BD6A1E51EDE6E37004C32AE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1E61EDE6E37004C32AE /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5BD6A1E61EDE6E37004C32AE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8630D3D0FDCD585165CB8AB8 /* Pods */ = {
@@ -555,6 +590,7 @@
 			files = (
 				5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */,
 				5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */,
+				5BD6A1E81EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift in Sources */,
 				5BD6A1DE1EDE68C1004C32AE /* HomeViewController.swift in Sources */,
 				5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */,
 			);

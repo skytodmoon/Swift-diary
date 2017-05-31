@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //设置UI界面
+        setupUI()
         // Do any additional setup after loading the view.
     }
 
@@ -20,16 +22,23 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+//MARK: - 设置UI界面
+extension HomeViewController {
+    private func setupUI() {
+        setupNavigationBar()
     }
-    */
-
+    
+    private func setupNavigationBar(){
+        //创建左侧Item
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
+        //创建右侧Item
+        let size = CGSize(width: 40, height: 40)
+        let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
+        let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
+        let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
+        
+        navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
+    }
 }
