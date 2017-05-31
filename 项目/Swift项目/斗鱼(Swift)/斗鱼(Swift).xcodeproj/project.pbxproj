@@ -30,6 +30,8 @@
 		5BD6A1F91EDEC49A004C32AE /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1F81EDEC49A004C32AE /* CollectionHeaderView.xib */; };
 		5BD6A1FC1EDEC79D004C32AE /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */; };
 		5BD6A1FD1EDEC79D004C32AE /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FB1EDEC79D004C32AE /* CollectionNormalCell.xib */; };
+		5BD6A2001EDEC9C8004C32AE /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FE1EDEC9C8004C32AE /* CollectionPrettyCell.swift */; };
+		5BD6A2011EDEC9C8004C32AE /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */; };
 		7A5E2D40FB85162CDD0156C0 /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E357C06E3058C0275B51DD85 /* Pods____Swift_.framework */; };
 		81C16930B6404243D0B3500B /* Pods____Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */; };
 		FADABCBBB4E4B7E5867AF013 /* Pods____Swift_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295DE89F5ABE9B243155949E /* Pods____Swift_UITests.framework */; };
@@ -86,6 +88,8 @@
 		5BD6A1F81EDEC49A004C32AE /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		5BD6A1FB1EDEC79D004C32AE /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		5BD6A1FE1EDEC9C8004C32AE /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		87F8702A7A2E6366478B4BDD /* Pods-斗鱼(Swift)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BAAEA24C5CA65D040B02A338 /* Pods-斗鱼(Swift)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +318,8 @@
 				5BD6A1EE1EDE842E004C32AE /* PageContentView.swift */,
 				5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */,
 				5BD6A1FB1EDEC79D004C32AE /* CollectionNormalCell.xib */,
+				5BD6A1FE1EDEC9C8004C32AE /* CollectionPrettyCell.swift */,
+				5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */,
 				5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */,
 				5BD6A1F91EDEC49A004C32AE /* CollectionHeaderView.xib in Resources */,
+				5BD6A2011EDEC9C8004C32AE /* CollectionPrettyCell.xib in Resources */,
 				5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */,
 				5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */,
 			);
@@ -635,6 +642,7 @@
 				5BD6A1DE1EDE68C1004C32AE /* HomeViewController.swift in Sources */,
 				5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */,
 				5BD6A1ED1EDE7426004C32AE /* Common.swift in Sources */,
+				5BD6A2001EDEC9C8004C32AE /* CollectionPrettyCell.swift in Sources */,
 				5BD6A1FC1EDEC79D004C32AE /* CollectionNormalCell.swift in Sources */,
 				5BD6A1F31EDEBD61004C32AE /* RecommendViewController.swift in Sources */,
 			);
