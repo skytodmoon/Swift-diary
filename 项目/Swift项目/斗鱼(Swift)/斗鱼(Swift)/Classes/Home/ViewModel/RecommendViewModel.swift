@@ -9,14 +9,28 @@
 import UIKit
 
 class RecommendViewModel{
-    
+    private lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
 }
 
 //MARK : - 发送网络请求
 extension RecommendViewModel{
     func requestData(){
         NetworkTools.requestData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: ["limit" : "4", "offset" : "0", "time" : NSDate.getCurrentTime()]) { (result) in
-            print(result)
+            
+            guard let resultDict = result as? [String : NSObject] else { return }
+            
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
+            
+            for dict in dataArray {
+                let group = AnchorGroup(dict: dict)
+                self.anchorGroups.append(group)
+            }
+            for group in self.anchorGroups {
+                for anchor in group.anchors {
+                    print(anchor.nickName)
+                }
+                print("---------")
+            }
         }
         
         //请求推荐数据
