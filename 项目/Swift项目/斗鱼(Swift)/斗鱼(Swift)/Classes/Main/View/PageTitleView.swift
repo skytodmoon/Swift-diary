@@ -133,3 +133,19 @@ extension PageTitleView {
         delegate?.pageTitleView(self, selectedIndex: currentIndex)
     }
 }
+//MARK : - 控制暴露方法
+extension PageTitleView {
+    func setTitleWithProgress(progress : CGFloat, sourceIndex : Int, targetIndex : Int){
+        //取出sourceLabel和targetLabel
+        let sourceLabel = titleLables[sourceIndex]
+        let targetLabel = titleLables[targetIndex]
+        
+        //处理滑块的逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //颜色渐变
+        
+    }
+}
