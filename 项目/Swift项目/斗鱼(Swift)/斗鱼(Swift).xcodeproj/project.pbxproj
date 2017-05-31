@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1811EDE60A6004C32AE /* AppDelegate.swift */; };
 		5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1831EDE60A6004C32AE /* ViewController.swift */; };
-		5BD6A1871EDE60A6004C32AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1851EDE60A6004C32AE /* Main.storyboard */; };
 		5BD6A1891EDE60A6004C32AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1881EDE60A6004C32AE /* Assets.xcassets */; };
 		5BD6A18C1EDE60A6004C32AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A18A1EDE60A6004C32AE /* LaunchScreen.storyboard */; };
 		5BD6A1971EDE60A7004C32AE /* ___Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1961EDE60A7004C32AE /* ___Swift_Tests.swift */; };
 		5BD6A1A21EDE60A7004C32AE /* ___Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1A11EDE60A7004C32AE /* ___Swift_UITests.swift */; };
+		5BD6A1DC1EDE68C1004C32AE /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1CD1EDE68C1004C32AE /* Follow.storyboard */; };
+		5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D01EDE68C1004C32AE /* Home.storyboard */; };
+		5BD6A1DE1EDE68C1004C32AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D11EDE68C1004C32AE /* HomeViewController.swift */; };
+		5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D41EDE68C1004C32AE /* Live.storyboard */; };
+		5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D71EDE68C1004C32AE /* Main.storyboard */; };
+		5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */; };
+		5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */; };
 		7A5E2D40FB85162CDD0156C0 /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E357C06E3058C0275B51DD85 /* Pods____Swift_.framework */; };
 		81C16930B6404243D0B3500B /* Pods____Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */; };
 		FADABCBBB4E4B7E5867AF013 /* Pods____Swift_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295DE89F5ABE9B243155949E /* Pods____Swift_UITests.framework */; };
@@ -44,7 +50,6 @@
 		5BD6A17E1EDE60A6004C32AE /* 斗鱼(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD6A1811EDE60A6004C32AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD6A1831EDE60A6004C32AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BD6A1861EDE60A6004C32AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BD6A1881EDE60A6004C32AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD6A18B1EDE60A6004C32AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BD6A18D1EDE60A6004C32AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +59,13 @@
 		5BD6A19D1EDE60A7004C32AE /* 斗鱼(Swift)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼(Swift)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD6A1A11EDE60A7004C32AE /* ___Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___Swift_UITests.swift"; sourceTree = "<group>"; };
 		5BD6A1A31EDE60A7004C32AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD6A1CD1EDE68C1004C32AE /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
+		5BD6A1D01EDE68C1004C32AE /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		5BD6A1D11EDE68C1004C32AE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BD6A1D41EDE68C1004C32AE /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		5BD6A1D71EDE68C1004C32AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		87F8702A7A2E6366478B4BDD /* Pods-斗鱼(Swift)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)Tests/Pods-斗鱼(Swift)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BAAEA24C5CA65D040B02A338 /* Pods-斗鱼(Swift)UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift)UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)UITests/Pods-斗鱼(Swift)UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +126,9 @@
 		5BD6A1801EDE60A6004C32AE /* 斗鱼(Swift) */ = {
 			isa = PBXGroup;
 			children = (
+				5BD6A1CA1EDE68C1004C32AE /* Classes */,
 				5BD6A1811EDE60A6004C32AE /* AppDelegate.swift */,
 				5BD6A1831EDE60A6004C32AE /* ViewController.swift */,
-				5BD6A1851EDE60A6004C32AE /* Main.storyboard */,
 				5BD6A1881EDE60A6004C32AE /* Assets.xcassets */,
 				5BD6A18A1EDE60A6004C32AE /* LaunchScreen.storyboard */,
 				5BD6A18D1EDE60A6004C32AE /* Info.plist */,
@@ -140,6 +152,100 @@
 				5BD6A1A31EDE60A7004C32AE /* Info.plist */,
 			);
 			path = "斗鱼(Swift)UITests";
+			sourceTree = "<group>";
+		};
+		5BD6A1CA1EDE68C1004C32AE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1CB1EDE68C1004C32AE /* Follow */,
+				5BD6A1CE1EDE68C1004C32AE /* Home */,
+				5BD6A1D21EDE68C1004C32AE /* Live */,
+				5BD6A1D51EDE68C1004C32AE /* Main */,
+				5BD6A1D91EDE68C1004C32AE /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5BD6A1CB1EDE68C1004C32AE /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1CC1EDE68C1004C32AE /* Controller */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		5BD6A1CC1EDE68C1004C32AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1CD1EDE68C1004C32AE /* Follow.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BD6A1CE1EDE68C1004C32AE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1CF1EDE68C1004C32AE /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5BD6A1CF1EDE68C1004C32AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1D01EDE68C1004C32AE /* Home.storyboard */,
+				5BD6A1D11EDE68C1004C32AE /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BD6A1D21EDE68C1004C32AE /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1D31EDE68C1004C32AE /* Controller */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		5BD6A1D31EDE68C1004C32AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1D41EDE68C1004C32AE /* Live.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BD6A1D51EDE68C1004C32AE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1D61EDE68C1004C32AE /* Contorller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5BD6A1D61EDE68C1004C32AE /* Contorller */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1D71EDE68C1004C32AE /* Main.storyboard */,
+				5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */,
+			);
+			path = Contorller;
+			sourceTree = "<group>";
+		};
+		5BD6A1D91EDE68C1004C32AE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1DA1EDE68C1004C32AE /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5BD6A1DA1EDE68C1004C32AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8630D3D0FDCD585165CB8AB8 /* Pods */ = {
@@ -280,7 +386,11 @@
 			files = (
 				5BD6A18C1EDE60A6004C32AE /* LaunchScreen.storyboard in Resources */,
 				5BD6A1891EDE60A6004C32AE /* Assets.xcassets in Resources */,
-				5BD6A1871EDE60A6004C32AE /* Main.storyboard in Resources */,
+				5BD6A1DC1EDE68C1004C32AE /* Follow.storyboard in Resources */,
+				5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */,
+				5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */,
+				5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */,
+				5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +555,8 @@
 			files = (
 				5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */,
 				5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */,
+				5BD6A1DE1EDE68C1004C32AE /* HomeViewController.swift in Sources */,
+				5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,14 +592,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5BD6A1851EDE60A6004C32AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BD6A1861EDE60A6004C32AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BD6A18A1EDE60A6004C32AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -588,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
@@ -601,6 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.---Swift-";
