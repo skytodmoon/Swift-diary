@@ -14,8 +14,8 @@ protocol PageTitleViewDelegate : class {
 }
 //MARK: - 定义常量
 private let kscrollLineH : CGFloat = 2
-private let kNormalColor : (CGFloat, CGFloat,CGFloat) = (05,05,05)
-private let kSelectColor : (CGFloat, CGFloat,CGFloat) = (255,120,0)
+private let kNormalColor : (CGFloat, CGFloat,CGFloat) = (85, 85, 85)
+private let kSelectColor : (CGFloat, CGFloat,CGFloat) = (255, 128 ,0)
 //MARK: - 定义PageTitleView类
 class PageTitleView: UIView {
 
@@ -149,6 +149,13 @@ extension PageTitleView {
         scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
         
         //颜色渐变
+        let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
         
+        //变化sourceLabel
+        sourceLabel.textColor =  UIColor(r: kSelectColor.0 - colorDelta.0 * progress,g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        
+        //变化targetLabel
+        targetLabel.textColor =  UIColor(r: kNormalColor.0 + colorDelta.0 * progress,g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        currentIndex = targetIndex
     }
 }
