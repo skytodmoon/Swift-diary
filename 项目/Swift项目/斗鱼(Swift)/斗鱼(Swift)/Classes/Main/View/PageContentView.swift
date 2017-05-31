@@ -128,7 +128,7 @@ extension PageContentView : UICollectionViewDataSource,UICollectionViewDelegate 
             }
         }
         delegate?.pageContentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
-        print("progress: \(progress) sourceIndex: \(sourceIndex) targetIndex: \(targetIndex)")
+//        print("progress: \(progress) sourceIndex: \(sourceIndex) targetIndex: \(targetIndex)")
     }
 }
 
