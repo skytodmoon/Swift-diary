@@ -8,12 +8,15 @@
 
 import UIKit
 
+//MARK: - 定义协议
 protocol PageTitleViewDelegate : class {
     func pageTitleView(titleView : PageTitleView, selectedIndex index : Int)
 }
-
+//MARK: - 定义常量
 private let kscrollLineH : CGFloat = 2
-
+private let kNormalColor : (CGFloat, CGFloat,CGFloat) = (05,05,05)
+private let kSelectColor : (CGFloat, CGFloat,CGFloat) = (255,120,0)
+//MARK: - 定义PageTitleView类
 class PageTitleView: UIView {
 
     //MARK: - 定义属性
@@ -78,7 +81,7 @@ extension PageTitleView {
         label.text = title
         label.tag = index
         label.font = UIFont.systemFontOfSize(16.0)
-        label.textColor = UIColor.darkGrayColor()
+        label.textColor = UIColor(r: kNormalColor.0,g: kNormalColor.1,b: kNormalColor.2)
         label.textAlignment = .Center
         //将lable添加到scrollView
         let labelX : CGFloat = lableW * CGFloat(index)
@@ -101,7 +104,7 @@ extension PageTitleView {
         addSubview(buttomLine)
         
         guard let firstLable = titleLables.first else {return}
-        firstLable.textColor = UIColor.orangeColor()
+        firstLable.textColor = UIColor(r: kSelectColor.0,g: kSelectColor.1,b: kSelectColor.2)
         
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x:firstLable.frame.origin.x, y: frame.height - kscrollLineH,width: firstLable.frame.width,height: kscrollLineH)
@@ -118,8 +121,8 @@ extension PageTitleView {
         let oldLabel = titleLables[currentIndex]
         
         //切换文字的颜色
-        currentLabel.textColor = UIColor.orangeColor()
-        oldLabel.textColor = UIColor.darkGrayColor()
+        currentLabel.textColor = UIColor(r: kSelectColor.0,g: kSelectColor.1,b: kSelectColor.2)
+        oldLabel.textColor = UIColor(r: kNormalColor.0,g: kNormalColor.1,b: kNormalColor.2)
         
         //保存最新的label
         currentIndex = currentLabel.tag
