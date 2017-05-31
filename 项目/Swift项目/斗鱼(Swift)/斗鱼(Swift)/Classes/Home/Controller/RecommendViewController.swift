@@ -10,18 +10,22 @@ import UIKit
 
 private let kItemMargin : CGFloat = 10
 private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kItemH = kItemW * 3 / 4
+private let kNormalItemH = kItemW * 3 / 4
+private let kPrettyItemH = kItemW * 4 / 3
+
 private let kNormalCellID = "kNormalCellID"
 private let kHeaderViewID = "kHeaderViewID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderViewH : CGFloat = 50
 
 class RecommendViewController: UIViewController {
+    //MARK: - 懒加载属性
+    private lazy var recommedVM : RecommendViewModel = RecommendViewModel()
     //懒加载属性
     private lazy var collectionView: UICollectionView = {[unowned self] in
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW,height: kItemH)
+        layout.itemSize = CGSize(width: kItemW,height: kPrettyItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
         layout.headerReferenceSize = CGSize(width: kItemW,height: kHeaderViewH)
@@ -31,7 +35,7 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds,collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.dataSource = self
-//        collectionView.delegate = self
+        collectionView.delegate = self
         collectionView.autoresizingMask = [.FlexibleWidth,.FlexibleHeight]
         collectionView.registerNib(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.registerNib(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
@@ -43,10 +47,13 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置UI界面
-
         setupUI()
+        
+        //发送网络请求
+        loadData()
     }
 }
+
 
 //MARK : - 设置UI界面内容
 extension RecommendViewController {
@@ -55,8 +62,17 @@ extension RecommendViewController {
         view.addSubview(collectionView)
     }
 }
+
+//MARK: - 发送网络请求
+extension RecommendViewController {
+    private func loadData(){
+        recommedVM.requestData()
+    }
+}
+
+
 //MARK : - UICollectionViewDataSource
-extension RecommendViewController : UICollectionViewDataSource {
+extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 12
@@ -82,5 +98,11 @@ extension RecommendViewController : UICollectionViewDataSource {
         
         let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: kHeaderViewID, forIndexPath: indexPath)
         return headerView
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        if indexPath.section == 1{
+            return CGSize(width: kItemW,height: kPrettyItemH)
+        }
+            return CGSize(width: kItemW,height: kNormalItemH)
     }
 }

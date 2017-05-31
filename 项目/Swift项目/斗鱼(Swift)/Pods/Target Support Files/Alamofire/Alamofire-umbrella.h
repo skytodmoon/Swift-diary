@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods____Swift_UITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods____Swift_UITestsVersionString[];
+FOUNDATION_EXPORT double AlamofireVersionNumber;
+FOUNDATION_EXPORT const unsigned char AlamofireVersionString[];
 

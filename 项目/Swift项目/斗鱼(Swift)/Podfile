@@ -6,15 +6,6 @@ target '斗鱼(Swift)' do
   use_frameworks!
 
   # Pods for 斗鱼(Swift)
-
-  target '斗鱼(Swift)Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '斗鱼(Swift)UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'Alamofire', '~> 3.4.0'
 
 end
