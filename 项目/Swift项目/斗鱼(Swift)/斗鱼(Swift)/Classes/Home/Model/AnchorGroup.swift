@@ -12,7 +12,7 @@ class AnchorGroup: NSObject {
     
     var room_list : [[String : NSObject]]? {
         didSet {
-            guard let room_list = room_list else { return }
+            guard let room_list = room_list else {return}
             for dict in room_list {
                 anchors.append(AnchorModel(dict: dict))
             }
@@ -25,6 +25,11 @@ class AnchorGroup: NSObject {
     
     lazy var anchors : [AnchorModel] = [AnchorModel]()
     
+    override init() {
+        
+    }
+    
+    
     init(dict : [String : NSObject]) {
         super.init()
         
@@ -34,4 +39,14 @@ class AnchorGroup: NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
+    
+//    override func setValue(value: AnyObject?, forKey key: String) {
+//        if key == "room_list" {
+//            if let dataArray = value as? [[String : NSObject]] {
+//                for dict in dataArray {
+//                    anchors.append(AnchorModel(dict: dict))
+//                }
+//            }
+//        }
+//    }
 }

@@ -53,6 +53,11 @@
                 <constraint firstItem="Jht-TM-iTk" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="gZQ-4J-kBd"/>
                 <constraint firstItem="OFb-pz-Tbe" firstAttribute="leading" secondItem="O4Y-Ec-hyq" secondAttribute="trailing" constant="5" id="nqq-pI-AKd"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="O4Y-Ec-hyq" id="E62-3r-pmD"/>
+                <outlet property="moreBtn" destination="z94-Te-vfm" id="mlJ-O6-0UL"/>
+                <outlet property="titleLabel" destination="OFb-pz-Tbe" id="nmg-Xn-GLe"/>
+            </connections>
             <point key="canvasLocation" x="9" y="55"/>
         </collectionReusableView>
     </objects>

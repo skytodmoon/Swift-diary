@@ -31,12 +31,12 @@
 		5BD6A1FC1EDEC79D004C32AE /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */; };
 		5BD6A1FD1EDEC79D004C32AE /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FB1EDEC79D004C32AE /* CollectionNormalCell.xib */; };
 		5BD6A2001EDEC9C8004C32AE /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FE1EDEC9C8004C32AE /* CollectionPrettyCell.swift */; };
-		5BD6A2011EDEC9C8004C32AE /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */; };
 		5BD6A2031EDED540004C32AE /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A2021EDED540004C32AE /* NetworkTools.swift */; };
 		5BD6A2061EDED85B004C32AE /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A2051EDED85B004C32AE /* RecommendViewModel.swift */; };
 		5BD6A2081EDED969004C32AE /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A2071EDED969004C32AE /* NSData+Extension.swift */; };
 		5BD6A20A1EDEDBA8004C32AE /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A2091EDEDBA8004C32AE /* AnchorGroup.swift */; };
 		5BD6A20C1EDEDD4F004C32AE /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A20B1EDEDD4F004C32AE /* AnchorModel.swift */; };
+		5BD6A2101EDFB7E7004C32AE /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A20F1EDFB7E7004C32AE /* CollectionPrettyCell.xib */; };
 		7A5E2D40FB85162CDD0156C0 /* Pods____Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E357C06E3058C0275B51DD85 /* Pods____Swift_.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,12 +90,12 @@
 		5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		5BD6A1FB1EDEC79D004C32AE /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		5BD6A1FE1EDEC9C8004C32AE /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
-		5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionPrettyCell.xib; path = ../../Main/View/CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		5BD6A2021EDED540004C32AE /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		5BD6A2051EDED85B004C32AE /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		5BD6A2071EDED969004C32AE /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		5BD6A2091EDEDBA8004C32AE /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		5BD6A20B1EDEDD4F004C32AE /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		5BD6A20F1EDFB7E7004C32AE /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		C7EB237970CD1EB503014168 /* Pods____Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E357C06E3058C0275B51DD85 /* Pods____Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB52B5DE8C477AA53ADD7CB8 /* Pods-斗鱼(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).release.xcconfig"; sourceTree = "<group>"; };
@@ -292,7 +292,6 @@
 		5BD6A1E41EDE6E21004C32AE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5BD6A1FF1EDEC9C8004C32AE /* CollectionPrettyCell.xib */,
 				5BD6A1F41EDEC474004C32AE /* CollectionHeaderView.swift */,
 				5BD6A1F81EDEC49A004C32AE /* CollectionHeaderView.xib */,
 			);
@@ -322,6 +321,7 @@
 		5BD6A1E91EDE7291004C32AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BD6A20F1EDFB7E7004C32AE /* CollectionPrettyCell.xib */,
 				5BD6A1EA1EDE72A9004C32AE /* PageTitleView.swift */,
 				5BD6A1EE1EDE842E004C32AE /* PageContentView.swift */,
 				5BD6A1FA1EDEC79D004C32AE /* CollectionNormalCell.swift */,
@@ -472,7 +472,7 @@
 				5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */,
 				5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */,
 				5BD6A1F91EDEC49A004C32AE /* CollectionHeaderView.xib in Resources */,
-				5BD6A2011EDEC9C8004C32AE /* CollectionPrettyCell.xib in Resources */,
+				5BD6A2101EDFB7E7004C32AE /* CollectionPrettyCell.xib in Resources */,
 				5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */,
 				5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */,
 			);
