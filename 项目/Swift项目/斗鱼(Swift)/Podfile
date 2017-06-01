@@ -6,6 +6,10 @@ target '斗鱼(Swift)' do
   use_frameworks!
 
   # Pods for 斗鱼(Swift)
-    pod 'Alamofire', '~> 3.4.0'
-    pod 'Kingfisher','~> 2.4.1'
+  # pod 'Just', '~> 0.5.7'
+  pod 'Alamofire', '~> 4.2.0'           # 网络请求
+  pod 'Kingfisher', '~> 3.2.1'          # 图片加载
+  pod 'SnapKit', '~> 3.0.2'             # 约束布局
+  pod 'pop', '~> 1.0.9'
+  pod 'JHPullToRefreshKit', '~> 1.0.1'  #  刷新框架 https://cocoapods.org/pods/PullToRefreshKit
 end
