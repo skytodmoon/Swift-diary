@@ -13,7 +13,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-TM-iTk">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
-                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" id="stf-sU-6vk"/>
                     </constraints>
@@ -21,13 +21,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="O4Y-Ec-hyq">
                     <rect key="frame" x="10" y="21" width="18" height="18"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="18" id="8NS-Qk-sBF"/>
                         <constraint firstAttribute="height" constant="18" id="va6-o3-fYA"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFb-pz-Tbe">
                     <rect key="frame" x="33" y="20" width="32" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z94-Te-vfm">
@@ -36,11 +37,11 @@
                         <constraint firstAttribute="width" constant="60" id="AO4-3A-Tvb"/>
                     </constraints>
                     <state key="normal" title="更多 &gt;">
-                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="z94-Te-vfm" firstAttribute="top" secondItem="Jht-TM-iTk" secondAttribute="bottom" constant="5" id="3bI-m3-IBo"/>
                 <constraint firstItem="O4Y-Ec-hyq" firstAttribute="top" secondItem="Jht-TM-iTk" secondAttribute="bottom" constant="11" id="B4C-cg-KEv"/>
@@ -55,10 +56,8 @@
             </constraints>
             <connections>
                 <outlet property="iconImageView" destination="O4Y-Ec-hyq" id="E62-3r-pmD"/>
-                <outlet property="moreBtn" destination="z94-Te-vfm" id="mlJ-O6-0UL"/>
                 <outlet property="titleLabel" destination="OFb-pz-Tbe" id="nmg-Xn-GLe"/>
             </connections>
-            <point key="canvasLocation" x="9" y="55"/>
         </collectionReusableView>
     </objects>
     <resources>
