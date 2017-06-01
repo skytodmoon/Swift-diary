@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DisplayViewController.h"
 
-@interface LiveViewController : UIViewController
+@interface LiveViewController : DisplayViewController
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HomeViewController : UIViewController
+#import "DisplayViewController.h"
+@interface HomeViewController : DisplayViewController
 
 @end

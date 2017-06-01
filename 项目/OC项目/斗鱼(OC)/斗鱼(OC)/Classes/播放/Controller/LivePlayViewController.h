@@ -10,4 +10,10 @@
 
 @interface LivePlayViewController : UIViewController
 
+/***  直播的地址 */
+@property (nonatomic,copy) NSString *liveUrl;
+
+/***  是否锁屏 */
+@property (nonatomic,assign,readonly) BOOL isLock;
+
 @end

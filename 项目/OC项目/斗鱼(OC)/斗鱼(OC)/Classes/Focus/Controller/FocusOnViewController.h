@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DisplayViewController.h"
 
-@interface FocusOnViewController : UIViewController
+@interface FocusOnViewController : DisplayViewController
 
 @end
