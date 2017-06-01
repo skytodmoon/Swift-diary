@@ -28,7 +28,7 @@ extension RecommendViewModel {
     // 请求推荐数据
     func requestData(finishCallback : () -> ()) {
         // 1.定义参数
-        let parameters = ["limit" : "4", "offset" : "0", "time" : NSDate.getCurrentTime()]
+        let parameters = ["limit" : "20", "offset" : "0", "time" : NSDate.getCurrentTime()]
         
         // 2.创建Group
         let dGroup = dispatch_group_create()
