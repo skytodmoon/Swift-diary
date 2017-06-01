@@ -7,14 +7,9 @@ target '斗鱼(OC)' do
 
   # Pods for 斗鱼(OC)
 
-  target '斗鱼(OC)Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '斗鱼(OC)UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod  'MJRefresh'
+    pod  'MJExtension'
+    pod  'SDWebImage'
+    pod  'Masonry'
 
 end
