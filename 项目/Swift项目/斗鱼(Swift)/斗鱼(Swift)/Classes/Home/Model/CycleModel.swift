@@ -5,7 +5,6 @@
 //  Created by 金亮齐 on 2017/5/31.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
-
 import UIKit
 
 class CycleModel: NSObject {
@@ -25,10 +24,11 @@ class CycleModel: NSObject {
     
     
     // MARK:- 自定义构造函数
-    init(dict : [String : NSObject]) {
+    init(dict:[String: Any]) {
         super.init()
         
-        setValuesForKeysWithDictionary(dict)
+        setValuesForKeys(dict)
     }
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) { }
 }
