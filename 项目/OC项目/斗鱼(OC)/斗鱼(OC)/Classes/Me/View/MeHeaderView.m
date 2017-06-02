@@ -96,6 +96,7 @@
     // 3.头像
     UIImageView *iconView = [[UIImageView alloc] init];
     iconView.image = [UIImage imageNamed:@"dy015"];
+    iconView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:iconView];
     self.iconView = iconView;
     self.iconView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
@@ -179,16 +180,16 @@
     [self.messageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(30);
         make.left.equalTo(self.mas_left).offset(10);
-        make.width.offset(20);
-        make.height.offset(20);
+        make.width.offset(35);
+        make.height.offset(35);
     }];
     
     // 编辑个人信息按钮约束
     [self.myInfoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(30);
         make.right.equalTo(self.mas_right).offset(-10);
-        make.width.offset(20);
-        make.height.offset(20);
+        make.width.offset(35);
+        make.height.offset(35);
     }];
     
     // 头像约束
@@ -201,7 +202,7 @@
     
     // 等级图片
     [self.levelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.iconView.mas_top).offset(5);
+        make.top.equalTo(self.iconView.mas_top).offset(65);
         make.right.equalTo(self.iconView.mas_right);
         make.width.offset(30);
         make.height.offset(15);
