@@ -57,6 +57,11 @@
 		1D7C87771EE1A2FE00AF8E30 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */; };
 		1D7C87791EE1A33C00AF8E30 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */; };
 		1D7C877B1EE1A3B900AF8E30 /* UIBUtton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */; };
+		1D7C877E1EE1A6B200AF8E30 /* MGNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C877C1EE1A6B200AF8E30 /* MGNavController.swift */; };
+		1D7C877F1EE1A6B200AF8E30 /* MGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C877D1EE1A6B200AF8E30 /* MGTabBarController.swift */; };
+		1D7C87811EE1A72D00AF8E30 /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87801EE1A72D00AF8E30 /* SaveTools.swift */; };
+		1D7C87831EE1A75B00AF8E30 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87821EE1A75B00AF8E30 /* ProfileViewController.swift */; };
+		1D7C87851EE1A76800AF8E30 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87841EE1A76800AF8E30 /* LiveViewController.swift */; };
 		5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1811EDE60A6004C32AE /* AppDelegate.swift */; };
 		5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1831EDE60A6004C32AE /* ViewController.swift */; };
 		5BD6A1891EDE60A6004C32AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1881EDE60A6004C32AE /* Assets.xcassets */; };
@@ -64,11 +69,6 @@
 		5BD6A1971EDE60A7004C32AE /* ___Swift_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1961EDE60A7004C32AE /* ___Swift_Tests.swift */; };
 		5BD6A1A21EDE60A7004C32AE /* ___Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1A11EDE60A7004C32AE /* ___Swift_UITests.swift */; };
 		5BD6A1DC1EDE68C1004C32AE /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1CD1EDE68C1004C32AE /* Follow.storyboard */; };
-		5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D01EDE68C1004C32AE /* Home.storyboard */; };
-		5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D41EDE68C1004C32AE /* Live.storyboard */; };
-		5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D71EDE68C1004C32AE /* Main.storyboard */; };
-		5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */; };
-		5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */; };
 		5BD6A1E81EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */; };
 		5BD6A1ED1EDE7426004C32AE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1EC1EDE7426004C32AE /* Common.swift */; };
 		5BD6A1F11EDE851B004C32AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1F01EDE851B004C32AE /* UIColor+Extension.swift */; };
@@ -152,6 +152,11 @@
 		1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBUtton+Extension.swift"; sourceTree = "<group>"; };
+		1D7C877C1EE1A6B200AF8E30 /* MGNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGNavController.swift; sourceTree = "<group>"; };
+		1D7C877D1EE1A6B200AF8E30 /* MGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGTabBarController.swift; sourceTree = "<group>"; };
+		1D7C87801EE1A72D00AF8E30 /* SaveTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTools.swift; sourceTree = "<group>"; };
+		1D7C87821EE1A75B00AF8E30 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1D7C87841EE1A76800AF8E30 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		295DE89F5ABE9B243155949E /* Pods____Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAC6FE428044C67A77A49EB /* Pods-斗鱼(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).debug.xcconfig"; sourceTree = "<group>"; };
 		5BD6A17E1EDE60A6004C32AE /* 斗鱼(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,11 +172,6 @@
 		5BD6A1A11EDE60A7004C32AE /* ___Swift_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___Swift_UITests.swift"; sourceTree = "<group>"; };
 		5BD6A1A31EDE60A7004C32AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BD6A1CD1EDE68C1004C32AE /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
-		5BD6A1D01EDE68C1004C32AE /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		5BD6A1D41EDE68C1004C32AE /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
-		5BD6A1D71EDE68C1004C32AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5BD6A1EC1EDE7426004C32AE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5BD6A1F01EDE851B004C32AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -390,7 +390,6 @@
 				1D7C87361EE19F9600AF8E30 /* AmuseViewController.swift */,
 				1D7C87371EE19F9600AF8E30 /* FunnyViewController.swift */,
 				1D7C87381EE19F9600AF8E30 /* GameViewController.swift */,
-				5BD6A1D01EDE68C1004C32AE /* Home.storyboard */,
 				5BD6A22B1EDFD1FB004C32AE /* HomeViewController.swift */,
 				5BD6A22D1EDFD27F004C32AE /* RecommendViewController.swift */,
 			);
@@ -408,7 +407,7 @@
 		5BD6A1D31EDE68C1004C32AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5BD6A1D41EDE68C1004C32AE /* Live.storyboard */,
+				1D7C87841EE1A76800AF8E30 /* LiveViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -426,11 +425,11 @@
 		5BD6A1D61EDE68C1004C32AE /* Contorller */ = {
 			isa = PBXGroup;
 			children = (
+				1D7C877C1EE1A6B200AF8E30 /* MGNavController.swift */,
+				1D7C877D1EE1A6B200AF8E30 /* MGTabBarController.swift */,
 				1D7C873C1EE1A01C00AF8E30 /* BaseViewController.swift */,
 				1D7C873D1EE1A01C00AF8E30 /* WebViewController.swift */,
 				1D7C873E1EE1A01C00AF8E30 /* WKWebViewController.swift */,
-				5BD6A1D71EDE68C1004C32AE /* Main.storyboard */,
-				5BD6A1D81EDE68C1004C32AE /* MainViewController.swift */,
 			);
 			path = Contorller;
 			sourceTree = "<group>";
@@ -446,8 +445,8 @@
 		5BD6A1DA1EDE68C1004C32AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */,
 				1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */,
+				1D7C87821EE1A75B00AF8E30 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -486,6 +485,7 @@
 		5BD6A1E61EDE6E37004C32AE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1D7C87801EE1A72D00AF8E30 /* SaveTools.swift */,
 				1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */,
 				1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */,
 				1D7C874A1EE1A1CF00AF8E30 /* UIView+Extension.swift */,
@@ -673,13 +673,9 @@
 				1D7C87211EE19BFD00AF8E30 /* CollectionNormalCell.xib in Resources */,
 				5BD6A1DC1EDE68C1004C32AE /* Follow.storyboard in Resources */,
 				1D7C875B1EE1A27500AF8E30 /* MGCodeScan.bundle in Resources */,
-				5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */,
-				5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */,
 				1D7C871F1EE19BFD00AF8E30 /* CollectionHeaderView.xib in Resources */,
 				1D7C871D1EE19BFD00AF8E30 /* CollectionGameCell.xib in Resources */,
 				1D7C87231EE19BFD00AF8E30 /* CollectionPrettyCell.xib in Resources */,
-				5BD6A1E21EDE68C1004C32AE /* Profile.storyboard in Resources */,
-				5BD6A1DD1EDE68C1004C32AE /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,14 +748,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7C87851EE1A76800AF8E30 /* LiveViewController.swift in Sources */,
 				1D7C87391EE19F9600AF8E30 /* AmuseViewController.swift in Sources */,
 				1D7C870D1EE19B9F00AF8E30 /* MGScrollTopWindow.swift in Sources */,
 				1D744E2B1EE057D000425EA6 /* CycleModel.swift in Sources */,
 				1D7C875E1EE1A27500AF8E30 /* LBXScanNetAnimation.swift in Sources */,
 				5BD6A2031EDED540004C32AE /* NetworkTools.swift in Sources */,
 				1D7C87241EE19BFD00AF8E30 /* HomeContentView.swift in Sources */,
+				1D7C877E1EE1A6B200AF8E30 /* MGNavController.swift in Sources */,
 				1D7C87221EE19BFD00AF8E30 /* CollectionPrettyCell.swift in Sources */,
 				1D7C87341EE19DE700AF8E30 /* UIView+LYMExtension.m in Sources */,
+				1D7C87831EE1A75B00AF8E30 /* ProfileViewController.swift in Sources */,
 				1D744E1F1EE0577800425EA6 /* BaseViewModel.swift in Sources */,
 				1D7C874B1EE1A1CF00AF8E30 /* UIView+Extension.swift in Sources */,
 				1D744E211EE0577800425EA6 /* GameViewModel.swift in Sources */,
@@ -785,11 +784,13 @@
 				1D7C87271EE19BFD00AF8E30 /* RecommendGameView.swift in Sources */,
 				1D744E201EE0577800425EA6 /* FunnyViewModel.swift in Sources */,
 				5BD6A1E81EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift in Sources */,
+				1D7C87811EE1A72D00AF8E30 /* SaveTools.swift in Sources */,
 				1D7C873F1EE1A01C00AF8E30 /* BaseViewController.swift in Sources */,
 				1D7C87771EE1A2FE00AF8E30 /* QRCodeViewController.swift in Sources */,
 				1D7C873A1EE19F9600AF8E30 /* FunnyViewController.swift in Sources */,
 				1D744E2C1EE057D000425EA6 /* GameModel.swift in Sources */,
 				5BD6A22C1EDFD1FB004C32AE /* HomeViewController.swift in Sources */,
+				1D7C877F1EE1A6B200AF8E30 /* MGTabBarController.swift in Sources */,
 				1D7C875D1EE1A27500AF8E30 /* LBXScanLineAnimation.swift in Sources */,
 				1D7C871C1EE19BFD00AF8E30 /* CollectionGameCell.swift in Sources */,
 				1D7C875F1EE1A27500AF8E30 /* LBXScanView.swift in Sources */,
@@ -802,7 +803,6 @@
 				1D7C873B1EE19F9600AF8E30 /* GameViewController.swift in Sources */,
 				1D7C87411EE1A01C00AF8E30 /* WKWebViewController.swift in Sources */,
 				1D7C875A1EE1A27500AF8E30 /* QQScanViewController.swift in Sources */,
-				5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */,
 				1D744E1E1EE0577800425EA6 /* AmuseViewModel.swift in Sources */,
 				1D7C87401EE1A01C00AF8E30 /* WebViewController.swift in Sources */,
 				5BD6A1ED1EDE7426004C32AE /* Common.swift in Sources */,
