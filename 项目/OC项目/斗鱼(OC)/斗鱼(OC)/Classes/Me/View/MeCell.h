@@ -1,5 +1,5 @@
 //
-//  MeViewController.h
+//  MeCell.h
 //  斗鱼(OC)
 //
 //  Created by 金亮齐 on 2017/6/2.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeViewController : UITableViewController
+@interface MeCell : UITableViewCell
 
+@property (nonatomic,strong) NSDictionary *dict;
 
+@property (nonatomic,strong) Class targetClass;
 @end

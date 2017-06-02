@@ -1,5 +1,5 @@
 //
-//  MeViewController.h
+//  SettingViewController.h
 //  斗鱼(OC)
 //
 //  Created by 金亮齐 on 2017/6/2.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeViewController : UITableViewController
-
+@interface SettingViewController : UITableViewController
 
 @end
