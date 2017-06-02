@@ -34,7 +34,6 @@
 		1D7C87271EE19BFD00AF8E30 /* RecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C871A1EE19BFD00AF8E30 /* RecommendGameView.swift */; };
 		1D7C872C1EE19D7400AF8E30 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7C87291EE19D7400AF8E30 /* placeholder.png */; };
 		1D7C872D1EE19D7400AF8E30 /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C872B1EE19D7400AF8E30 /* XRCarouselView.m */; };
-		1D7C87331EE19DE700AF8E30 /* MGTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87301EE19DE700AF8E30 /* MGTopWindow.m */; };
 		1D7C87341EE19DE700AF8E30 /* UIView+LYMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87321EE19DE700AF8E30 /* UIView+LYMExtension.m */; };
 		1D7C87391EE19F9600AF8E30 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87361EE19F9600AF8E30 /* AmuseViewController.swift */; };
 		1D7C873A1EE19F9600AF8E30 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87371EE19F9600AF8E30 /* FunnyViewController.swift */; };
@@ -45,6 +44,19 @@
 		1D7C87481EE1A0E600AF8E30 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87441EE1A0E600AF8E30 /* DeformationButton.m */; };
 		1D7C87491EE1A0E600AF8E30 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87471EE1A0E600AF8E30 /* MMMaterialDesignSpinner.m */; };
 		1D7C874B1EE1A1CF00AF8E30 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C874A1EE1A1CF00AF8E30 /* UIView+Extension.swift */; };
+		1D7C875A1EE1A27500AF8E30 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C874E1EE1A27500AF8E30 /* QQScanViewController.swift */; };
+		1D7C875B1EE1A27500AF8E30 /* MGCodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D7C874F1EE1A27500AF8E30 /* MGCodeScan.bundle */; };
+		1D7C875C1EE1A27500AF8E30 /* LBXPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87511EE1A27500AF8E30 /* LBXPermissions.swift */; };
+		1D7C875D1EE1A27500AF8E30 /* LBXScanLineAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87521EE1A27500AF8E30 /* LBXScanLineAnimation.swift */; };
+		1D7C875E1EE1A27500AF8E30 /* LBXScanNetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87531EE1A27500AF8E30 /* LBXScanNetAnimation.swift */; };
+		1D7C875F1EE1A27500AF8E30 /* LBXScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87541EE1A27500AF8E30 /* LBXScanView.swift */; };
+		1D7C87601EE1A27500AF8E30 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87551EE1A27500AF8E30 /* LBXScanViewController.swift */; };
+		1D7C87611EE1A27500AF8E30 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87561EE1A27500AF8E30 /* LBXScanViewStyle.swift */; };
+		1D7C87621EE1A27500AF8E30 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87571EE1A27500AF8E30 /* LBXScanWrapper.swift */; };
+		1D7C87631EE1A27500AF8E30 /* ScanBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87591EE1A27500AF8E30 /* ScanBottomView.swift */; };
+		1D7C87771EE1A2FE00AF8E30 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */; };
+		1D7C87791EE1A33C00AF8E30 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */; };
+		1D7C877B1EE1A3B900AF8E30 /* UIBUtton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */; };
 		5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1811EDE60A6004C32AE /* AppDelegate.swift */; };
 		5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A1831EDE60A6004C32AE /* ViewController.swift */; };
 		5BD6A1891EDE60A6004C32AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6A1881EDE60A6004C32AE /* Assets.xcassets */; };
@@ -113,8 +125,6 @@
 		1D7C87291EE19D7400AF8E30 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		1D7C872A1EE19D7400AF8E30 /* XRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCarouselView.h; sourceTree = "<group>"; };
 		1D7C872B1EE19D7400AF8E30 /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
-		1D7C872F1EE19DE700AF8E30 /* MGTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTopWindow.h; sourceTree = "<group>"; };
-		1D7C87301EE19DE700AF8E30 /* MGTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTopWindow.m; sourceTree = "<group>"; };
 		1D7C87311EE19DE700AF8E30 /* UIView+LYMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYMExtension.h"; sourceTree = "<group>"; };
 		1D7C87321EE19DE700AF8E30 /* UIView+LYMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYMExtension.m"; sourceTree = "<group>"; };
 		1D7C87351EE19E3500AF8E30 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
@@ -129,6 +139,19 @@
 		1D7C87461EE1A0E600AF8E30 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
 		1D7C87471EE1A0E600AF8E30 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		1D7C874A1EE1A1CF00AF8E30 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1D7C874E1EE1A27500AF8E30 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
+		1D7C874F1EE1A27500AF8E30 /* MGCodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MGCodeScan.bundle; sourceTree = "<group>"; };
+		1D7C87511EE1A27500AF8E30 /* LBXPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXPermissions.swift; sourceTree = "<group>"; };
+		1D7C87521EE1A27500AF8E30 /* LBXScanLineAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanLineAnimation.swift; sourceTree = "<group>"; };
+		1D7C87531EE1A27500AF8E30 /* LBXScanNetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanNetAnimation.swift; sourceTree = "<group>"; };
+		1D7C87541EE1A27500AF8E30 /* LBXScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanView.swift; sourceTree = "<group>"; };
+		1D7C87551EE1A27500AF8E30 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
+		1D7C87561EE1A27500AF8E30 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
+		1D7C87571EE1A27500AF8E30 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
+		1D7C87591EE1A27500AF8E30 /* ScanBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanBottomView.swift; sourceTree = "<group>"; };
+		1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBUtton+Extension.swift"; sourceTree = "<group>"; };
 		295DE89F5ABE9B243155949E /* Pods____Swift_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Swift_UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAC6FE428044C67A77A49EB /* Pods-斗鱼(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼(Swift)/Pods-斗鱼(Swift).debug.xcconfig"; sourceTree = "<group>"; };
 		5BD6A17E1EDE60A6004C32AE /* 斗鱼(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,8 +223,6 @@
 		1D7C872E1EE19DE700AF8E30 /* ScrollToTop */ = {
 			isa = PBXGroup;
 			children = (
-				1D7C872F1EE19DE700AF8E30 /* MGTopWindow.h */,
-				1D7C87301EE19DE700AF8E30 /* MGTopWindow.m */,
 				1D7C87311EE19DE700AF8E30 /* UIView+LYMExtension.h */,
 				1D7C87321EE19DE700AF8E30 /* UIView+LYMExtension.m */,
 			);
@@ -225,6 +246,47 @@
 				1D7C87471EE1A0E600AF8E30 /* MMMaterialDesignSpinner.m */,
 			);
 			path = "MMMaterialDesignSpinner-master";
+			sourceTree = "<group>";
+		};
+		1D7C874C1EE1A27500AF8E30 /* 扫一扫 */ = {
+			isa = PBXGroup;
+			children = (
+				1D7C874D1EE1A27500AF8E30 /* Controller */,
+				1D7C874F1EE1A27500AF8E30 /* MGCodeScan.bundle */,
+				1D7C87501EE1A27500AF8E30 /* Source */,
+				1D7C87581EE1A27500AF8E30 /* View */,
+			);
+			path = "扫一扫";
+			sourceTree = "<group>";
+		};
+		1D7C874D1EE1A27500AF8E30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D7C874E1EE1A27500AF8E30 /* QQScanViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D7C87501EE1A27500AF8E30 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1D7C87511EE1A27500AF8E30 /* LBXPermissions.swift */,
+				1D7C87521EE1A27500AF8E30 /* LBXScanLineAnimation.swift */,
+				1D7C87531EE1A27500AF8E30 /* LBXScanNetAnimation.swift */,
+				1D7C87541EE1A27500AF8E30 /* LBXScanView.swift */,
+				1D7C87551EE1A27500AF8E30 /* LBXScanViewController.swift */,
+				1D7C87561EE1A27500AF8E30 /* LBXScanViewStyle.swift */,
+				1D7C87571EE1A27500AF8E30 /* LBXScanWrapper.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1D7C87581EE1A27500AF8E30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7C87591EE1A27500AF8E30 /* ScanBottomView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BD6A1751EDE60A6004C32AE = {
@@ -313,6 +375,7 @@
 		5BD6A1CE1EDE68C1004C32AE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1D7C874C1EE1A27500AF8E30 /* 扫一扫 */,
 				5BD6A2261EDFD0C4004C32AE /* Model */,
 				5BD6A2041EDED83E004C32AE /* ViewModel */,
 				5BD6A1CF1EDE68C1004C32AE /* Controller */,
@@ -384,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				5BD6A1DB1EDE68C1004C32AE /* Profile.storyboard */,
+				1D7C87761EE1A2FE00AF8E30 /* QRCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +486,8 @@
 		5BD6A1E61EDE6E37004C32AE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1D7C877A1EE1A3B900AF8E30 /* UIBUtton+Extension.swift */,
+				1D7C87781EE1A33C00AF8E30 /* NSObject+Extension.swift */,
 				1D7C874A1EE1A1CF00AF8E30 /* UIView+Extension.swift */,
 				5BD6A1E71EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift */,
 				5BD6A1EC1EDE7426004C32AE /* Common.swift */,
@@ -606,6 +672,7 @@
 				5BD6A1891EDE60A6004C32AE /* Assets.xcassets in Resources */,
 				1D7C87211EE19BFD00AF8E30 /* CollectionNormalCell.xib in Resources */,
 				5BD6A1DC1EDE68C1004C32AE /* Follow.storyboard in Resources */,
+				1D7C875B1EE1A27500AF8E30 /* MGCodeScan.bundle in Resources */,
 				5BD6A1E01EDE68C1004C32AE /* Main.storyboard in Resources */,
 				5BD6A1DF1EDE68C1004C32AE /* Live.storyboard in Resources */,
 				1D7C871F1EE19BFD00AF8E30 /* CollectionHeaderView.xib in Resources */,
@@ -688,6 +755,7 @@
 				1D7C87391EE19F9600AF8E30 /* AmuseViewController.swift in Sources */,
 				1D7C870D1EE19B9F00AF8E30 /* MGScrollTopWindow.swift in Sources */,
 				1D744E2B1EE057D000425EA6 /* CycleModel.swift in Sources */,
+				1D7C875E1EE1A27500AF8E30 /* LBXScanNetAnimation.swift in Sources */,
 				5BD6A2031EDED540004C32AE /* NetworkTools.swift in Sources */,
 				1D7C87241EE19BFD00AF8E30 /* HomeContentView.swift in Sources */,
 				1D7C87221EE19BFD00AF8E30 /* CollectionPrettyCell.swift in Sources */,
@@ -695,16 +763,22 @@
 				1D744E1F1EE0577800425EA6 /* BaseViewModel.swift in Sources */,
 				1D7C874B1EE1A1CF00AF8E30 /* UIView+Extension.swift in Sources */,
 				1D744E211EE0577800425EA6 /* GameViewModel.swift in Sources */,
+				1D7C87791EE1A33C00AF8E30 /* NSObject+Extension.swift in Sources */,
 				5BD6A22E1EDFD27F004C32AE /* RecommendViewController.swift in Sources */,
 				1D7C87491EE1A0E600AF8E30 /* MMMaterialDesignSpinner.m in Sources */,
+				1D7C87601EE1A27500AF8E30 /* LBXScanViewController.swift in Sources */,
 				1D7C87481EE1A0E600AF8E30 /* DeformationButton.m in Sources */,
 				5BD6A1841EDE60A6004C32AE /* ViewController.swift in Sources */,
 				1D7C87251EE19BFD00AF8E30 /* HomeTitlesView.swift in Sources */,
 				5BD6A2081EDED969004C32AE /* NSData+Extension.swift in Sources */,
 				1D7C87201EE19BFD00AF8E30 /* CollectionNormalCell.swift in Sources */,
 				1D744E221EE0577800425EA6 /* RecommendViewModel.swift in Sources */,
+				1D7C877B1EE1A3B900AF8E30 /* UIBUtton+Extension.swift in Sources */,
 				5BD6A1821EDE60A6004C32AE /* AppDelegate.swift in Sources */,
 				1D7C872D1EE19D7400AF8E30 /* XRCarouselView.m in Sources */,
+				1D7C87621EE1A27500AF8E30 /* LBXScanWrapper.swift in Sources */,
+				1D7C87611EE1A27500AF8E30 /* LBXScanViewStyle.swift in Sources */,
+				1D7C87631EE1A27500AF8E30 /* ScanBottomView.swift in Sources */,
 				5BD6A1F11EDE851B004C32AE /* UIColor+Extension.swift in Sources */,
 				1D744E291EE057D000425EA6 /* AnchorModel.swift in Sources */,
 				1D7C870C1EE19B9F00AF8E30 /* GuardScrollView.swift in Sources */,
@@ -712,18 +786,22 @@
 				1D744E201EE0577800425EA6 /* FunnyViewModel.swift in Sources */,
 				5BD6A1E81EDE6E4F004C32AE /* UIBarButtonItem+Extension.swift in Sources */,
 				1D7C873F1EE1A01C00AF8E30 /* BaseViewController.swift in Sources */,
+				1D7C87771EE1A2FE00AF8E30 /* QRCodeViewController.swift in Sources */,
 				1D7C873A1EE19F9600AF8E30 /* FunnyViewController.swift in Sources */,
 				1D744E2C1EE057D000425EA6 /* GameModel.swift in Sources */,
 				5BD6A22C1EDFD1FB004C32AE /* HomeViewController.swift in Sources */,
+				1D7C875D1EE1A27500AF8E30 /* LBXScanLineAnimation.swift in Sources */,
 				1D7C871C1EE19BFD00AF8E30 /* CollectionGameCell.swift in Sources */,
-				1D7C87331EE19DE700AF8E30 /* MGTopWindow.m in Sources */,
+				1D7C875F1EE1A27500AF8E30 /* LBXScanView.swift in Sources */,
 				1D7C871B1EE19BFD00AF8E30 /* CollectionBaseCell.swift in Sources */,
 				1D744E2A1EE057D000425EA6 /* BaseGameModel.swift in Sources */,
 				1D744E281EE057D000425EA6 /* AnchorGroup.swift in Sources */,
 				1D7C871E1EE19BFD00AF8E30 /* CollectionHeaderView.swift in Sources */,
 				1D7C87261EE19BFD00AF8E30 /* RecommendCycleView.swift in Sources */,
+				1D7C875C1EE1A27500AF8E30 /* LBXPermissions.swift in Sources */,
 				1D7C873B1EE19F9600AF8E30 /* GameViewController.swift in Sources */,
 				1D7C87411EE1A01C00AF8E30 /* WKWebViewController.swift in Sources */,
+				1D7C875A1EE1A27500AF8E30 /* QQScanViewController.swift in Sources */,
 				5BD6A1E11EDE68C1004C32AE /* MainViewController.swift in Sources */,
 				1D744E1E1EE0577800425EA6 /* AmuseViewModel.swift in Sources */,
 				1D7C87401EE1A01C00AF8E30 /* WebViewController.swift in Sources */,
@@ -867,7 +945,7 @@
 			baseConfigurationReference = 2EAC6FE428044C67A77A49EB /* Pods-斗鱼(Swift).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -883,7 +961,7 @@
 			baseConfigurationReference = FB52B5DE8C477AA53ADD7CB8 /* Pods-斗鱼(Swift).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAssets;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "斗鱼(Swift)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
