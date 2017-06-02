@@ -22,4 +22,7 @@
 @property (weak, nonatomic, readonly) UILabel *stateLabel;
 /** 设置state状态下的文字 */
 - (void)setTitle:(NSString *)title forState:(MJRefreshState)state;
+
+#warning 修改mj_refresh
+- (void)setTimeLabelHidden:(BOOL)isHidden forState:(MJRefreshState)state;
 @end

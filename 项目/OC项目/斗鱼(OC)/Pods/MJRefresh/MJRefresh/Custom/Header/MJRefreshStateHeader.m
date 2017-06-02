@@ -17,6 +17,12 @@
 }
 /** 所有状态对应的文字 */
 @property (strong, nonatomic) NSMutableDictionary *stateTitles;
+
+#warning 修改的地方
+/**
+ *  所有状态是否需要隐藏时间Label
+ */
+@property (nonatomic,strong) NSMutableDictionary *stateTimeLabelHiddens;
 @end
 
 @implementation MJRefreshStateHeader
@@ -27,6 +33,13 @@
         self.stateTitles = [NSMutableDictionary dictionary];
     }
     return _stateTitles;
+}
+
+- (NSMutableDictionary *)stateTimeLabelHiddens {
+    if (!_stateTimeLabelHiddens) {
+        _stateTimeLabelHiddens = [NSMutableDictionary dictionary];
+    }
+    return _stateTimeLabelHiddens;
 }
 
 - (UILabel *)stateLabel
@@ -51,6 +64,16 @@
     if (title == nil) return;
     self.stateTitles[@(state)] = title;
     self.stateLabel.text = self.stateTitles[@(self.state)];
+}
+
+#warning 修改的地方
+- (void)setTimeLabelHidden:(BOOL)isHidden forState:(MJRefreshState)state {
+    if (isHidden) {
+        self.stateTimeLabelHiddens[@(state)] = @"YES";
+    } else {
+        
+        self.stateTimeLabelHiddens[@(state)] = @"NO";
+    }
 }
 
 #pragma mark - 日历获取在9.x之后的系统使用currentCalendar会出异常。在8.0之后使用系统新API。
@@ -142,7 +165,13 @@
             self.stateLabel.mj_y = 0;
             self.stateLabel.mj_w = self.mj_w;
             self.stateLabel.mj_h = stateLabelH;
-        }
+        } else {
+            // 状态
+            self.stateLabel.mj_x = self.mj_w / 2 - 30;
+            self.stateLabel.mj_y = self.mj_h * 0.5 * 0.3;
+            self.stateLabel.mj_w = self.mj_w / 2;
+            self.stateLabel.mj_h = self.mj_h * 0.5 * 0.7;
+        
         
         // 更新时间
         if (self.lastUpdatedTimeLabel.constraints.count == 0) {
@@ -151,8 +180,11 @@
             self.lastUpdatedTimeLabel.mj_w = self.mj_w;
             self.lastUpdatedTimeLabel.mj_h = self.mj_h - self.lastUpdatedTimeLabel.mj_y;
         }
+        }
     }
 }
+
+
 
 - (void)setState:(MJRefreshState)state
 {
@@ -163,5 +195,16 @@
     
     // 重新设置key（重新显示时间）
     self.lastUpdatedTimeKey = self.lastUpdatedTimeKey;
+    
+#warning 修改的地方
+    _stateLabel.textAlignment = NSTextAlignmentLeft;
+    _lastUpdatedTimeLabel.textAlignment = NSTextAlignmentLeft;
+    self.lastUpdatedTimeLabel.hidden = [self.stateTimeLabelHiddens[@(state)] isEqualToString:@"YES"];
+    self.stateLabel.hidden = [self.stateTimeLabelHiddens[@(state)] isEqualToString:@"YES"];
+    
+    // 重新设置key（重新显示时间）
+    self.lastUpdatedTimeKey = self.lastUpdatedTimeKey;
 }
+
+
 @end

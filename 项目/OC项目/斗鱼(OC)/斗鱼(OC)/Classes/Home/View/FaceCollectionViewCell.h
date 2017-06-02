@@ -1,5 +1,5 @@
 //
-//  LiveViewController.h
+//  FaceCollectionViewCell.h
 //  斗鱼(OC)
 //
 //  Created by 金亮齐 on 2017/6/2.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DisplayViewController.h"
+#import "Room.h"
 
-@interface LiveViewController : DisplayViewController
+@interface FaceCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic,strong) Room *room;
 
 @end

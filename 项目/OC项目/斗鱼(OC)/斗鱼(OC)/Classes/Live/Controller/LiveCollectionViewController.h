@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Room.h"
+#import "CollectionViewCell.h"
+#import "FaceCollectionViewCell.h"
+
+typedef enum {
+    LiveCellTypeNormal,
+    LiveCellTypeFaceLevel
+} LiveCellType;
 
 @interface LiveCollectionViewController : UICollectionViewController
+
+@property (nonatomic,assign) LiveCellType cellType;
+
+@property (nonatomic,strong) NSMutableArray *rooms;
+
+@property (nonatomic,assign) int ofset;
+
+@property (nonatomic,copy) NSString *lastUrl;
 
 @end
