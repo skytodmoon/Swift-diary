@@ -46,31 +46,37 @@
     __block NSString *url = [NSString stringWithFormat:@"http://capi.douyucdn.cn/api/v1/live?aid=ios&client_sys=ios&limit=20&offset=%d&time=1468894680&auth=848c60f9ab96f0ee866a8ab588f2e2b6", self.ofset];
     self.lastUrl = url;
     [self.collectionView.mj_footer resetNoMoreData];
-//    [[HttpManager sharedInstance] GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, NSData *responseObject) {
-//        if (![self.lastUrl isEqualToString:url]) {
-//            return ;
-//        }
-//        // 删除之前的所有元素
-//        [self.rooms removeAllObjects];
-//        
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject.mj_JSONData options:NSJSONReadingMutableContainers error:nil];
-//        NSArray *roomsDict = dict[@"data"];
-//        NSArray *rooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
-//        
-//        if(rooms.count == 0) {
-//            return;
-//        }
-//        [self.rooms addObjectsFromArray:rooms];
-//        
-//        // 额外添加一个广告的模型
-//        [self.rooms insertObject:self.ad atIndex:6];
-//        
-//        [self.collectionView reloadData];
-//        [self.collectionView.mj_header endRefreshing];
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        
-//        [self.collectionView.mj_header endRefreshing];
-//    }];
+    
+    [[HttpManager sharedInstance] GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (![self.lastUrl isEqualToString:url]) {
+            return ;
+        }
+        // 删除之前的所有元素
+        [self.rooms removeAllObjects];
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        NSArray *roomsDict = dict[@"data"];
+        NSArray *rooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
+
+        if(rooms.count == 0) {
+            return;
+        }
+        [self.rooms addObjectsFromArray:rooms];
+
+        // 额外添加一个广告的模型
+        [self.rooms insertObject:self.ad atIndex:6];
+
+        [self.collectionView reloadData];
+        [self.collectionView.mj_header endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.collectionView.mj_header endRefreshing];
+    }];
+    
 }
 
 - (void)loadMoreData {
@@ -78,24 +84,29 @@
     __block NSString *url = [NSString stringWithFormat:@"http://capi.douyucdn.cn/api/v1/live?aid=ios&client_sys=ios&limit=20&offset=%d&time=1468894680&auth=848c60f9ab96f0ee866a8ab588f2e2b6", self.ofset];
     self.lastUrl = url;
     
-//    [[HttpManager sharedInstance] GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, NSData *responseObject) {
-//        if (![self.lastUrl isEqualToString:url]) {
-//            return ;
-//        }
-//        
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject.mj_JSONData options:NSJSONReadingMutableContainers error:nil];
-//        NSArray *roomsDict = dict[@"data"];
-//        NSArray *newRooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
-//        [self.rooms addObjectsFromArray:newRooms];
-//        [self.collectionView reloadData];
-//        if (newRooms.count == 0) {
-//            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-//        }
-//        [self.collectionView.mj_footer endRefreshing];
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        self.ofset -= 20;
-//        [self.collectionView.mj_footer endRefreshing];
-//    }];
+    
+    [[HttpManager sharedInstance] GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (![self.lastUrl isEqualToString:url]) {
+            return ;
+        }
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *roomsDict = dict[@"data"];
+        NSArray *newRooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
+        [self.rooms addObjectsFromArray:newRooms];
+        [self.collectionView reloadData];
+        if (newRooms.count == 0) {
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        }
+        [self.collectionView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        self.ofset -= 20;
+        [self.collectionView.mj_footer endRefreshing];
+    }];
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

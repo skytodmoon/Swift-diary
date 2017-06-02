@@ -58,69 +58,83 @@
     __block NSString *url = self.url;
     self.lastUrl = url;
     [self.collectionView.mj_footer resetNoMoreData];
-//    [[HttpManager sharedInstance] GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, NSData *responseObject) {
-//        if (![self.lastUrl isEqualToString:url]) {
-//            return ;
-//        }
-//        // 删除之前的所有元素
-//        [self.rooms removeAllObjects];
-//        
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject.mj_JSONData options:NSJSONReadingMutableContainers error:nil];
-//        NSArray *roomsDict = dict[@"data"];
-//        NSArray *rooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
-//        [self.rooms addObjectsFromArray:rooms];
-//        
-//        [self.collectionView reloadData];
-//        [self.collectionView.mj_header endRefreshing];
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        
-//        [self.collectionView.mj_header endRefreshing];
-//    }];
+    
+    
+    [[HttpManager sharedInstance] GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (![self.lastUrl isEqualToString:url]) {
+            return ;
+        }
+        // 删除之前的所有元素
+        [self.rooms removeAllObjects];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *roomsDict = dict[@"data"];
+        NSArray *rooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
+        [self.rooms addObjectsFromArray:rooms];
+
+        [self.collectionView reloadData];
+        [self.collectionView.mj_header endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.collectionView.mj_footer endRefreshing];
+    }];
+
 }
 
 - (void)loadMoreData {
     self.ofset += 20;
     __block NSString *url = self.url;
     self.lastUrl = url;
-//    
-//    [[HttpManager sharedInstance] GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, NSData *responseObject) {
-//        if (![self.lastUrl isEqualToString:url]) {
-//            return ;
-//        }
-//        
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject.mj_JSONData options:NSJSONReadingMutableContainers error:nil];
-//        NSArray *roomsDict = dict[@"data"];
-//        NSArray *newRooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
-//        [self.rooms addObjectsFromArray:newRooms];
-//        [self.collectionView reloadData];
-//        if (newRooms.count == 0) {
-//            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-//        }
-//        [self.collectionView.mj_footer endRefreshing];
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        self.ofset -= 20;
-//        [self.collectionView.mj_footer endRefreshing];
-//    }];
+    
+    
+    [[HttpManager sharedInstance] GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (![self.lastUrl isEqualToString:url]) {
+            return ;
+        }
+
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *roomsDict = dict[@"data"];
+        NSArray *newRooms = [Room mj_objectArrayWithKeyValuesArray:roomsDict];
+        [self.rooms addObjectsFromArray:newRooms];
+        [self.collectionView reloadData];
+        if (newRooms.count == 0) {
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        }
+        [self.collectionView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        self.ofset -= 20;
+        [self.collectionView.mj_footer endRefreshing];
+    }];
 }
 
 - (void)loadAllGameData {
-//    [[HttpManager sharedInstance] GET:@"http://capi.douyucdn.cn/api/v1/getHotRoom/3?aid=ios&client_sys=ios&time=1468825800&auth=94d0ae945c16542cc6dee7fe031f1316" parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, NSData *responseObject) {
-//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject.mj_JSONData options:NSJSONReadingMutableContainers error:nil];
-//        NSArray *tagsDict = dict[@"data"];
-//        // 删除最热的标签
-//        NSMutableArray *array = [NSMutableArray arrayWithArray:[Tag mj_objectArrayWithKeyValuesArray:tagsDict]];
-//        [array removeObjectAtIndex:0];
-//        // 添加顶部的scrollView
-//        LiveTopView *topView = [[LiveTopView alloc] init];
-//        topView.delegate = self;
-//        topView.frame = CGRectMake(0, 0, self.view.width, 50);
-//        [self.view addSubview:topView];
-//        self.topView = topView;
-//        
-//        self.topView.tags = array;
-//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-//        
-//    }];
+    
+    [[HttpManager sharedInstance] GET:@"http://capi.douyucdn.cn/api/v1/getHotRoom/3?aid=ios&client_sys=ios&time=1468825800&auth=94d0ae945c16542cc6dee7fe031f1316" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *tagsDict = dict[@"data"];
+        // 删除最热的标签
+        NSMutableArray *array = [NSMutableArray arrayWithArray:[Tag mj_objectArrayWithKeyValuesArray:tagsDict]];
+        [array removeObjectAtIndex:0];
+        // 添加顶部的scrollView
+        LiveTopView *topView = [[LiveTopView alloc] init];
+        topView.delegate = self;
+        topView.frame = CGRectMake(0, 0, self.view.width, 50);
+        [self.view addSubview:topView];
+        self.topView = topView;
+        
+        self.topView.tags = array;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
 }
 
 
