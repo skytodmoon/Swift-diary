@@ -1,5 +1,5 @@
 //
-//  CollectionBaseCell.swift
+//  CollectionNormalCell.swift
 //  斗鱼(Swift)
 //
 //  Created by 金亮齐 on 2017/5/31.
@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
-class CollectionBaseCell: UICollectionViewCell {
-    // MARK:- 控件属性
+class CollectionNormalCell: UICollectionViewCell {
+
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var onlineBtn: UIButton!
-    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var nickNameBtn: UIButton!
+    @IBOutlet weak var roomNameLabel: UILabel!
     
     // MARK:- 定义模型
     var anchor : AnchorModel? {
@@ -22,20 +24,30 @@ class CollectionBaseCell: UICollectionViewCell {
             
             // 1.取出在线人数显示的文字
             var onlineStr : String = ""
-            if anchor.online >= 10000 {
-                onlineStr = "\(Int(anchor.online / 10000))万在线"
+            if Int(anchor.online) >= 10000 {
+                onlineStr = "\(Int(anchor.online)/10000)万人在线"
             } else {
-                onlineStr = "\(anchor.online)在线"
+                onlineStr = "\(anchor.online)人在线"
             }
             onlineBtn.setTitle(onlineStr, for: UIControlState())
+            onlineBtn.sizeToFit()
             
             // 2.昵称的显示
-            nickNameLabel.text = anchor.nickname
+            nickNameBtn.setTitle(anchor.nickname, for: UIControlState())
             
-            // 3.设置封面图片
+            // 3.设置房间名称
+            roomNameLabel.text = anchor.room_name
+            
+            // 4.设置封面图片
             guard let iconURL = URL(string: anchor.vertical_src) else { return }
             iconImageView.kf.setImage(with: iconURL)
+            
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        iconImageView.layer.cornerRadius = 6
+        iconImageView.clipsToBounds = true
+    }
 }

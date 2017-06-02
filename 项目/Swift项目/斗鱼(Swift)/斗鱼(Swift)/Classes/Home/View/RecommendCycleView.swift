@@ -5,124 +5,73 @@
 //  Created by 金亮齐 on 2017/5/31.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
-
 import UIKit
-
-
-private let kCycleCellID = "kCycleCellID"
 
 class RecommendCycleView: UIView {
     
-    // MARK: 定义属性
-    var cycleTimer : Timer?
-    var cycleModels : [CycleModel]? {
+    // MARK: - lazy属性
+    fileprivate lazy var carouselView: XRCarouselView = { [weak self] in
+        let carouselView = XRCarouselView()
+        carouselView.time = 2.0
+        carouselView.pagePosition = PositionBottomCenter
+        carouselView.setPageImage(UIImage(named: "other"), andCurrentImage: UIImage(named: "current"))
+        carouselView.delegate = self
+        return carouselView
+    }()
+    
+    // MARK: - 模型数组
+    var cycleModels:[CycleModel]? {
         didSet {
-            // 1.刷新collectionView
-            collectionView.reloadData()
+            guard let cycleModels = cycleModels else { return }
             
-            // 2.设置pageControl个数
-            pageControl.numberOfPages = cycleModels?.count ?? 0
-            
-            // 3.默认滚动到中间某一个位置
-            let indexPath = IndexPath(item: (cycleModels?.count ?? 0) * 10, section: 0)
-            collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
-            
-            // 4.添加定时器
-            removeCycleTimer()
-            addCycleTimer()
+            var titlesArr = [String]()
+            var picURLArr = [String]()
+            for model in cycleModels {
+                titlesArr.append(model.title)
+                picURLArr.append(model.pic_url)
+            }
+            carouselView.imageArray = picURLArr
+            carouselView.describeArray = titlesArr
         }
     }
+
     
-    // MARK: 控件属性
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    
-    
-    // MARK: 系统回调函数
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        // 设置该控件不随着父控件的拉伸而拉伸
-        autoresizingMask = UIViewAutoresizing()
-        
-        // 注册Cell
-        collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
+        setUpMainView()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        // 设置collectionView的layout
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = collectionView.bounds.size
+        carouselView.frame = self.bounds
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 }
 
-
-// MARK:- 提供一个快速创建View的类方法
+// MARK: - 初始化UI
 extension RecommendCycleView {
-    class func recommendCycleView() -> RecommendCycleView {
-        return Bundle.main.loadNibNamed("RecommendCycleView", owner: nil, options: nil)!.first as! RecommendCycleView
+    fileprivate func setUpMainView() {
+        addSubview(carouselView)
     }
 }
 
 
-// MARK:- 遵守UICollectionView的数据源协议
-extension RecommendCycleView : UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (cycleModels?.count ?? 0) * 10000
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! CollectionCycleCell
+// MARK: - XRCarouselViewDelegate
+extension RecommendCycleView: XRCarouselViewDelegate {
+    func carouselView(_ carouselView: XRCarouselView!, didClickImage index: Int) {
+        if cycleModels?.count == 0 {
+            return
+        }
+        let cycleModel = cycleModels![index]
+        // 1.创建NormalRoomVc
+        let webVC = WebViewController(navigationTitle: cycleModel.title, urlStr: cycleModel.anchor!.jumpUrl!)
         
-        cell.cycleModel = cycleModels![indexPath.item % cycleModels!.count]
-        
-        return cell
-    }
-}
-
-
-// MARK:- 遵守UICollectionView的代理协议
-extension RecommendCycleView : UICollectionViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // 1.获取滚动的偏移量
-        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
-        
-        // 2.计算pageControl的currentIndex
-        pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
-    }
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        removeCycleTimer()
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        addCycleTimer()
-    }
-}
-
-
-
-
-// MARK:- 对定时器的操作方法
-extension RecommendCycleView {
-    fileprivate func addCycleTimer() {
-        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
-        RunLoop.main.add(cycleTimer!, forMode: RunLoopMode.commonModes)
-    }
-    
-    fileprivate func removeCycleTimer() {
-        cycleTimer?.invalidate() // 从运行循环中移除
-        cycleTimer = nil
-    }
-    
-    @objc fileprivate func scrollToNext() {
-        // 1.获取滚动的偏移量
-        let currentOffsetX = collectionView.contentOffset.x
-        let offsetX = currentOffsetX + collectionView.bounds.width
-        
-        // 2.滚动该位置
-        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        // 2.以Push方式弹出
+        topViewController()!.navigationController?.pushViewController(webVC, animated: true)
     }
 }

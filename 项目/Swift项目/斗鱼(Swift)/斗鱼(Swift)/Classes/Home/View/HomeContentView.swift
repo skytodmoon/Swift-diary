@@ -1,5 +1,5 @@
 //
-//  PageContentView.swift
+//  HomeContentView.swift
 //  斗鱼(Swift)
 //
 //  Created by 金亮齐 on 2017/5/31.
@@ -8,21 +8,19 @@
 
 import UIKit
 
-
-protocol PageContentViewDelegate : class {
-    func pageContentView(_ contentView : PageContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+protocol HomeContentViewDelegate : class {
+    func HomeContentViewDidScroll(_ contentView : HomeContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
 }
 
 private let ContentCellID = "ContentCellID"
 
-class PageContentView: UIView {
-    
+class HomeContentView: UIView {
     // MARK:- 定义属性
     fileprivate var childVcs : [UIViewController]
-    fileprivate weak var parentViewController : UIViewController?
+    weak var parentViewController : UIViewController? /** 当前显示的父控制器 */
     fileprivate var startOffsetX : CGFloat = 0
     fileprivate var isForbidScrollDelegate : Bool = false
-    weak var delegate : PageContentViewDelegate?
+    weak var delegate : HomeContentViewDelegate?
     
     // MARK:- 懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[weak self] in
@@ -38,34 +36,30 @@ class PageContentView: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
+        collectionView.scrollsToTop = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.scrollsToTop = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
-        
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: ContentCellID)
         return collectionView
     }()
-    
+
     // MARK:- 自定义构造函数
-    init(frame: CGRect, childVcs : [UIViewController], parentViewController : UIViewController?) {
+    init(frame: CGRect, childVcs: [UIViewController], parentViewController : UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentViewController
-        
         super.init(frame: frame)
         
-        // 设置UI
-        setupUI()
+        setUpMainView()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
-// MARK:- 设置UI界面
-extension PageContentView {
-    fileprivate func setupUI() {
+// MARK:- 初始化UI
+extension HomeContentView {
+    fileprivate func setUpMainView() {
         // 1.将所有的子控制器添加父控制器中
         for childVc in childVcs {
             parentViewController?.addChildViewController(childVc)
@@ -77,24 +71,31 @@ extension PageContentView {
     }
 }
 
-
-// MARK:- 遵守UICollectionViewDataSource
-extension PageContentView : UICollectionViewDataSource {
+// MARK:- UICollectionViewDataSource
+extension HomeContentView: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
     }
     
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 1.创建Cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentCellID, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentCellID, for: indexPath) as UICollectionViewCell
+
         // 2.给Cell设置内容
         for view in cell.contentView.subviews {
             view.removeFromSuperview()
         }
-        
-        let childVc = childVcs[indexPath.item]
+
+        let childVc = childVcs[(indexPath as NSIndexPath).item]
         childVc.view.frame = cell.contentView.bounds
+        childVc.view.backgroundColor = UIColor.randomColor()
         cell.contentView.addSubview(childVc.view)
         
         return cell
@@ -102,7 +103,7 @@ extension PageContentView : UICollectionViewDataSource {
 }
 
 // MARK:- 遵守UICollectionViewDelegate
-extension PageContentView : UICollectionViewDelegate {
+extension HomeContentView : UICollectionViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
@@ -157,13 +158,12 @@ extension PageContentView : UICollectionViewDelegate {
         }
         
         // 3.将progress/sourceIndex/targetIndex传递给titleView
-        delegate?.pageContentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+        delegate?.HomeContentViewDidScroll(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
 
-
 // MARK:- 对外暴露的方法
-extension PageContentView {
+extension HomeContentView {
     func setCurrentIndex(_ currentIndex : Int) {
         
         // 1.记录需要进制执行代理方法
@@ -174,3 +174,4 @@ extension PageContentView {
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
     }
 }
+

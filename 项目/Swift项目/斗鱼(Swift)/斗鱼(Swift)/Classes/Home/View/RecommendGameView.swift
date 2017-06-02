@@ -10,49 +10,55 @@ import UIKit
 
 private let kGameCellID = "kGameCellID"
 private let kEdgeInsetMargin : CGFloat = 10
+private let kGameItemW : CGFloat = 80
+private let kGameItemH : CGFloat = 90
 
 class RecommendGameView: UIView {
-    
     // MARK: 定义数据的属性
-    var groups : [AnchorGroup]? {
+    var groups : [BaseGameModel]? {
         didSet {
-            // 1.移除前两组数据
-            groups?.removeFirst()
-            groups?.removeFirst()
-            
-            // 2.添加更多组
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
-            
-            // 2.刷新表格
+            // 刷新表格
             collectionView.reloadData()
         }
     }
     
-    // MARK: 控件属性
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    // MARK: 系统回调
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
+        // 1.创建layout
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: kGameItemW, height: kGameItemH)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: kEdgeInsetMargin, bottom: 0, right: kEdgeInsetMargin)
         
+        // 2.创建UICollectionView
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.white
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.scrollsToTop = false
+        collectionView.dataSource = self
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // 3.注册
+        collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+
+        return collectionView
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         // 让控件不随着父控件的拉伸而拉伸
         autoresizingMask = UIViewAutoresizing()
-        
-        // 注册Cell
-        collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
-        
-        // 给collectionView添加内边距
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: kEdgeInsetMargin, bottom: 0, right: kEdgeInsetMargin)
+        addSubview(collectionView)
     }
-}
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.frame = self.bounds
+    }
 
-
-// MARK:- 提供快速创建的类方法
-extension RecommendGameView {
-    class func recommendGameView() -> RecommendGameView {
-        return Bundle.main.loadNibNamed("RecommendGameView", owner: nil, options: nil)!.first as! RecommendGameView
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -64,10 +70,15 @@ extension RecommendGameView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)as! CollectionGameCell
         
-        cell.group = groups![indexPath.item]
+        cell.baseGame = groups![(indexPath as NSIndexPath).item]
         
         return cell
     }
 }
+
+
+
+
+
