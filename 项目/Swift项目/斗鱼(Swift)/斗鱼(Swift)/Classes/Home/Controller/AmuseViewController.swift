@@ -1,11 +1,10 @@
 //
 //  AmuseViewController.swift
-//  MGDYZB
+//  斗鱼(Swift)
 //
-//  Created by ming on 16/10/25.
-//  Copyright © 2016年 ming. All rights reserved.
+//  Created by 金亮齐 on 2017/5/31.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
-
 import UIKit
 import SafariServices
 

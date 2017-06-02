@@ -1,8 +1,10 @@
 //
 //  XRCarouselView.h
 //
-//  Created by 肖睿 on 16/3/17.
-//  Copyright © 2016年 肖睿. All rights reserved.
+//  斗鱼(Swift)
+//
+//  Created by 金亮齐 on 2017/5/31.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

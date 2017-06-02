@@ -1,9 +1,9 @@
 //
 //  MGTopWindow.h
-//  MGMiaoBo
+//  斗鱼(Swift)
 //
-//  Created by ming on 16/9/10.
-//  Copyright © 2016年 ming. All rights reserved.
+//  Created by 金亮齐 on 2017/5/31.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

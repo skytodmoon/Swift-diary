@@ -1,9 +1,10 @@
 //
 //  UIView+LYMExtension.m
-//  UIView+LYMExtension.h
+//  斗鱼(Swift)
 //
-//  Created by ming on 13/12/10.
-//  Copyright © 2013年 ming. All rights reserved.
+//  Created by 金亮齐 on 2017/5/31.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
 /**
     此类不仅封装了控件的Frame，还封装了快速从XIB创建View的方法(仅限于XIB中只有一个View的时候)
     此外，还封装了两个View是否有重叠的方法
