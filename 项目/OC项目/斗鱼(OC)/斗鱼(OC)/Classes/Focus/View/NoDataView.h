@@ -1,5 +1,5 @@
 //
-//  FocusOnViewController.h
+//  NoDataView.h
 //  斗鱼(OC)
 //
 //  Created by 金亮齐 on 2017/6/1.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DisplayViewController.h"
 
-@interface FocusOnViewController : DisplayViewController
+@interface NoDataView : UIView
 
-
++ (instancetype)noDataView;
 
 @end
