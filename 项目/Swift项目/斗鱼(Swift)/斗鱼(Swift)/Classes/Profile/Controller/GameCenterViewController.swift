@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 private let KGameCenterCellID = "KGameCenterCellID"
 
@@ -55,7 +56,7 @@ extension GameCenterViewController {
             if err == nil {
                 self.collectionView.reloadData()
             }else {
-                debugPrint(err)
+                
             }
             self.loadDataFinished()
         }
@@ -63,14 +64,14 @@ extension GameCenterViewController {
     
     fileprivate func setUpRefresh() {
         // MARK: - 下拉
-        self.collectionView.header = MJRefreshGifHeader(refreshingBlock: { [weak self]() -> Void in
+        self.collectionView.mj_header = MJRefreshGifHeader(refreshingBlock: { [weak self]() -> Void in
             self!.gameCenterVM.gameCenterMmodels.removeAll()
             self?.loadData()
-            self!.collectionView.header.endRefreshing()
-            self?.collectionView.footer.endRefreshing()
+            self!.collectionView.mj_header.endRefreshing()
+            self?.collectionView.mj_footer.endRefreshing()
         })
-        self.collectionView.header.isAutoChangeAlpha = true
-        self.collectionView.header.beginRefreshing()
+        self.collectionView.mj_header.isAutomaticallyChangeAlpha = true
+        self.collectionView.mj_header.beginRefreshing()
     }
 }
 
