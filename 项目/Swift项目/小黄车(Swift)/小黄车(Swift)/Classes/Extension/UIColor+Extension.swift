@@ -5,7 +5,6 @@
 //  Created by 金亮齐 on 2017/5/31.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
-
 /*
  1. 关键字static和class的区别:
     在方法的func关键字之前加上关键字static或者class都可以用于指定类方法.
