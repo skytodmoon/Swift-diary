@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6736871EE530A80027247F /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736841EE530A80027247F /* RecommendCell.m */; };
+		5B6736881EE530A80027247F /* RecommendHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736861EE530A80027247F /* RecommendHeaderView.m */; };
+		5B67368F1EE530FB0027247F /* GameVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67368A1EE530FB0027247F /* GameVerticalButton.m */; };
+		5B6736901EE530FB0027247F /* MoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67368C1EE530FB0027247F /* MoreButton.m */; };
+		5B6736911EE530FB0027247F /* VerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67368E1EE530FB0027247F /* VerticalButton.m */; };
 		5B9F51BD1EE11C850050E8AF /* GameCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AB1EE11C850050E8AF /* GameCenterViewController.m */; };
 		5B9F51BE1EE11C850050E8AF /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AD1EE11C850050E8AF /* MeViewController.m */; };
 		5B9F51BF1EE11C850050E8AF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AF1EE11C850050E8AF /* SettingViewController.m */; };
@@ -98,6 +103,16 @@
 /* Begin PBXFileReference section */
 		015F5ED65D2D4B7C1474BFB4 /* libPods-斗鱼(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-斗鱼(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18510028C3C6D7B6A1715782 /* libPods-斗鱼(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-斗鱼(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6736831EE530A80027247F /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		5B6736841EE530A80027247F /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
+		5B6736851EE530A80027247F /* RecommendHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendHeaderView.h; sourceTree = "<group>"; };
+		5B6736861EE530A80027247F /* RecommendHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendHeaderView.m; sourceTree = "<group>"; };
+		5B6736891EE530FB0027247F /* GameVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVerticalButton.h; sourceTree = "<group>"; };
+		5B67368A1EE530FB0027247F /* GameVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameVerticalButton.m; sourceTree = "<group>"; };
+		5B67368B1EE530FB0027247F /* MoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreButton.h; sourceTree = "<group>"; };
+		5B67368C1EE530FB0027247F /* MoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreButton.m; sourceTree = "<group>"; };
+		5B67368D1EE530FB0027247F /* VerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalButton.h; sourceTree = "<group>"; };
+		5B67368E1EE530FB0027247F /* VerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalButton.m; sourceTree = "<group>"; };
 		5B9F51AA1EE11C850050E8AF /* GameCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterViewController.h; sourceTree = "<group>"; };
 		5B9F51AB1EE11C850050E8AF /* GameCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterViewController.m; sourceTree = "<group>"; };
 		5B9F51AC1EE11C850050E8AF /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -483,6 +498,16 @@
 		5B9F523C1EE127800050E8AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B6736891EE530FB0027247F /* GameVerticalButton.h */,
+				5B67368A1EE530FB0027247F /* GameVerticalButton.m */,
+				5B67368B1EE530FB0027247F /* MoreButton.h */,
+				5B67368C1EE530FB0027247F /* MoreButton.m */,
+				5B67368D1EE530FB0027247F /* VerticalButton.h */,
+				5B67368E1EE530FB0027247F /* VerticalButton.m */,
+				5B6736831EE530A80027247F /* RecommendCell.h */,
+				5B6736841EE530A80027247F /* RecommendCell.m */,
+				5B6736851EE530A80027247F /* RecommendHeaderView.h */,
+				5B6736861EE530A80027247F /* RecommendHeaderView.m */,
 				5B9F52421EE127E70050E8AF /* FaceCollectionViewCell.h */,
 				5B9F52431EE127E70050E8AF /* FaceCollectionViewCell.m */,
 				5B9F52441EE127E70050E8AF /* FaceCollectionViewCell.xib */,
@@ -929,12 +954,14 @@
 				5B9F51F81EE1254F0050E8AF /* LiveDownView.m in Sources */,
 				5B9F51C41EE11C850050E8AF /* MeCell.m in Sources */,
 				5B9F51E71EE124F80050E8AF /* NJKWebViewProgress.m in Sources */,
+				5B67368F1EE530FB0027247F /* GameVerticalButton.m in Sources */,
 				5B9F51D51EE122B20050E8AF /* FocusOnViewController.m in Sources */,
 				5B9F52321EE126E50050E8AF /* LiveFishShowViewController.m in Sources */,
 				5B9F522D1EE126E50050E8AF /* PhoneGameViewController.m in Sources */,
 				5B9F51F61EE1254F0050E8AF /* LiveDownButtonView.m in Sources */,
 				5B9F522B1EE126E50050E8AF /* LiveAllViewController.m in Sources */,
 				5B9F52081EE125C90050E8AF /* ScrollModel.m in Sources */,
+				5B6736871EE530A80027247F /* RecommendCell.m in Sources */,
 				5B9F51BD1EE11C850050E8AF /* GameCenterViewController.m in Sources */,
 				5BE909AF1EDFFFAA00FF0BD7 /* DisplayTitleLabel.m in Sources */,
 				5B9F51DD1EE124880050E8AF /* HttpManager.m in Sources */,
@@ -952,6 +979,7 @@
 				5B9F51CF1EE122830050E8AF /* HasNotStartedCollectionViewController.m in Sources */,
 				5BE909B51EDFFFAA00FF0BD7 /* TabBarViewController.m in Sources */,
 				5B9F51F91EE1254F0050E8AF /* LiveTopView.m in Sources */,
+				5B6736911EE530FB0027247F /* VerticalButton.m in Sources */,
 				5BE909211EDFF55700FF0BD7 /* AppDelegate.m in Sources */,
 				5B9F522E1EE126E50050E8AF /* FaceLevelViewController.m in Sources */,
 				5B9F522F1EE126E50050E8AF /* LiveMovieViewController.m in Sources */,
@@ -971,6 +999,7 @@
 				5B9F523B1EE127070050E8AF /* LiveViewController.m in Sources */,
 				5B9F52291EE126E50050E8AF /* InCommonUseViewController.m in Sources */,
 				5B9F51F41EE1254F0050E8AF /* AdCollectionViewCell.m in Sources */,
+				5B6736881EE530A80027247F /* RecommendHeaderView.m in Sources */,
 				5B9F51D21EE122960050E8AF /* OnLiveCollectionViewController.m in Sources */,
 				5B9F51E11EE124D40050E8AF /* AdModel.m in Sources */,
 				5B9F51C61EE11C850050E8AF /* MeHeaderView.m in Sources */,
@@ -979,6 +1008,7 @@
 				5BE909AE1EDFFFAA00FF0BD7 /* HomeViewController.m in Sources */,
 				5BE9091E1EDFF55700FF0BD7 /* main.m in Sources */,
 				5BE909BF1EDFFFC700FF0BD7 /* NSString+Extension.m in Sources */,
+				5B6736901EE530FB0027247F /* MoreButton.m in Sources */,
 				5B9F52091EE125C90050E8AF /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
