@@ -19,6 +19,10 @@
 		5B6736A61EE531A30027247F /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67369D1EE531A30027247F /* SDCollectionViewCell.m */; };
 		5B6736A71EE531A30027247F /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67369F1EE531A30027247F /* SDCycleScrollView.m */; };
 		5B6736A81EE531A30027247F /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736A11EE531A30027247F /* UIView+SDExtension.m */; };
+		5B6736B31EE532AA0027247F /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736B21EE532AA0027247F /* RecommendViewController.m */; };
+		5B6736B61EE532BC0027247F /* EntainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736B51EE532BC0027247F /* EntainmentViewController.m */; };
+		5B6736B91EE532C70027247F /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736B81EE532C70027247F /* GameViewController.m */; };
+		5B6736BC1EE532E10027247F /* FunToPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736BB1EE532E10027247F /* FunToPlayViewController.m */; };
 		5B9F51BD1EE11C850050E8AF /* GameCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AB1EE11C850050E8AF /* GameCenterViewController.m */; };
 		5B9F51BE1EE11C850050E8AF /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AD1EE11C850050E8AF /* MeViewController.m */; };
 		5B9F51BF1EE11C850050E8AF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F51AF1EE11C850050E8AF /* SettingViewController.m */; };
@@ -134,6 +138,14 @@
 		5B67369F1EE531A30027247F /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		5B6736A01EE531A30027247F /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		5B6736A11EE531A30027247F /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		5B6736B11EE532AA0027247F /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		5B6736B21EE532AA0027247F /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		5B6736B41EE532BC0027247F /* EntainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntainmentViewController.h; sourceTree = "<group>"; };
+		5B6736B51EE532BC0027247F /* EntainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntainmentViewController.m; sourceTree = "<group>"; };
+		5B6736B71EE532C70027247F /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		5B6736B81EE532C70027247F /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		5B6736BA1EE532E10027247F /* FunToPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunToPlayViewController.h; sourceTree = "<group>"; };
+		5B6736BB1EE532E10027247F /* FunToPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunToPlayViewController.m; sourceTree = "<group>"; };
 		5B9F51AA1EE11C850050E8AF /* GameCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterViewController.h; sourceTree = "<group>"; };
 		5B9F51AB1EE11C850050E8AF /* GameCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterViewController.m; sourceTree = "<group>"; };
 		5B9F51AC1EE11C850050E8AF /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -331,6 +343,74 @@
 				5B67369B1EE531A30027247F /* TAPageControl.m */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		5B6736A91EE532910027247F /* 趣玩 */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736AA1EE532910027247F /* Controller */,
+			);
+			path = "趣玩";
+			sourceTree = "<group>";
+		};
+		5B6736AA1EE532910027247F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736BA1EE532E10027247F /* FunToPlayViewController.h */,
+				5B6736BB1EE532E10027247F /* FunToPlayViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B6736AB1EE532910027247F /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736AC1EE532910027247F /* Controller */,
+			);
+			path = "推荐";
+			sourceTree = "<group>";
+		};
+		5B6736AC1EE532910027247F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736B11EE532AA0027247F /* RecommendViewController.h */,
+				5B6736B21EE532AA0027247F /* RecommendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B6736AD1EE532910027247F /* 游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736AE1EE532910027247F /* Controller */,
+			);
+			path = "游戏";
+			sourceTree = "<group>";
+		};
+		5B6736AE1EE532910027247F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736B71EE532C70027247F /* GameViewController.h */,
+				5B6736B81EE532C70027247F /* GameViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B6736AF1EE532910027247F /* 娱乐 */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736B01EE532910027247F /* Controller */,
+			);
+			path = "娱乐";
+			sourceTree = "<group>";
+		};
+		5B6736B01EE532910027247F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B6736B41EE532BC0027247F /* EntainmentViewController.h */,
+				5B6736B51EE532BC0027247F /* EntainmentViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5B9F51A91EE11C850050E8AF /* Controller */ = {
@@ -702,6 +782,10 @@
 		5BE9098D1EDFFFAA00FF0BD7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B6736A91EE532910027247F /* 趣玩 */,
+				5B6736AB1EE532910027247F /* 推荐 */,
+				5B6736AD1EE532910027247F /* 游戏 */,
+				5B6736AF1EE532910027247F /* 娱乐 */,
 				5BE9098E1EDFFFAA00FF0BD7 /* HomeViewController.h */,
 				5BE9098F1EDFFFAA00FF0BD7 /* HomeViewController.m */,
 			);
@@ -1035,6 +1119,7 @@
 				5BE909B51EDFFFAA00FF0BD7 /* TabBarViewController.m in Sources */,
 				5B9F51F91EE1254F0050E8AF /* LiveTopView.m in Sources */,
 				5B6736911EE530FB0027247F /* VerticalButton.m in Sources */,
+				5B6736B61EE532BC0027247F /* EntainmentViewController.m in Sources */,
 				5B6736A51EE531A30027247F /* TAPageControl.m in Sources */,
 				5BE909211EDFF55700FF0BD7 /* AppDelegate.m in Sources */,
 				5B9F522E1EE126E50050E8AF /* FaceLevelViewController.m in Sources */,
@@ -1044,6 +1129,7 @@
 				5B9F52451EE127E70050E8AF /* FaceCollectionViewCell.m in Sources */,
 				5BE909B21EDFFFAA00FF0BD7 /* UIView+Frame.m in Sources */,
 				5BE909B01EDFFFAA00FF0BD7 /* DisplayViewController.m in Sources */,
+				5B6736B31EE532AA0027247F /* RecommendViewController.m in Sources */,
 				5B9F52051EE125C90050E8AF /* Cdsn.m in Sources */,
 				5B9F51BE1EE11C850050E8AF /* MeViewController.m in Sources */,
 				5BE909BE1EDFFFC700FF0BD7 /* NSDate+Extension.m in Sources */,
@@ -1059,7 +1145,9 @@
 				5B6736881EE530A80027247F /* RecommendHeaderView.m in Sources */,
 				5B9F51D21EE122960050E8AF /* OnLiveCollectionViewController.m in Sources */,
 				5B9F51E11EE124D40050E8AF /* AdModel.m in Sources */,
+				5B6736BC1EE532E10027247F /* FunToPlayViewController.m in Sources */,
 				5B9F51C61EE11C850050E8AF /* MeHeaderView.m in Sources */,
+				5B6736B91EE532C70027247F /* GameViewController.m in Sources */,
 				5B9F51BF1EE11C850050E8AF /* SettingViewController.m in Sources */,
 				5B9F523A1EE127070050E8AF /* LiveCollectionViewController.m in Sources */,
 				5BE909AE1EDFFFAA00FF0BD7 /* HomeViewController.m in Sources */,
