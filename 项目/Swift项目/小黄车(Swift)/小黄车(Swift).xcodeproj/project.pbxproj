@@ -31,6 +31,12 @@
 		1D912FBF1EDF13280009CE60 /* 骑行结束_LH.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1D912FB01EDF13280009CE60 /* 骑行结束_LH.m4a */; };
 		1D912FC11EDF13340009CE60 /* MGCodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D912FC01EDF13340009CE60 /* MGCodeScan.bundle */; };
 		1D912FC71EDF142D0009CE60 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D912FC61EDF142D0009CE60 /* Constant.swift */; };
+		1DABFF1A1EE6EBAF0088A770 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABFF191EE6EBAF0088A770 /* UserHeaderView.swift */; };
+		1DABFF1F1EE6EBDE0088A770 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABFF1B1EE6EBDE0088A770 /* AboutUsViewController.swift */; };
+		1DABFF201EE6EBDE0088A770 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABFF1C1EE6EBDE0088A770 /* MyWalletViewController.swift */; };
+		1DABFF211EE6EBDE0088A770 /* MyWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DABFF1D1EE6EBDE0088A770 /* MyWalletViewController.xib */; };
+		1DABFF221EE6EBDE0088A770 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABFF1E1EE6EBDE0088A770 /* SideViewController.swift */; };
+		1DABFF261EE6ED520088A770 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DABFF251EE6ED520088A770 /* WKWebViewController.swift */; };
 		1DBFA1621EE2E8860086CE49 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFA15C1EE2E8860086CE49 /* NetWorkTools.swift */; };
 		1DBFA1631EE2E8860086CE49 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFA15E1EE2E8860086CE49 /* Reachability.m */; };
 		1DBFA1641EE2E8860086CE49 /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFA15F1EE2E8860086CE49 /* SaveTools.swift */; };
@@ -101,6 +107,12 @@
 		1D912FC01EDF13340009CE60 /* MGCodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MGCodeScan.bundle; sourceTree = "<group>"; };
 		1D912FC21EDF13480009CE60 /* 小黄车(Swift)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "小黄车(Swift)-Bridging-Header.h"; sourceTree = "<group>"; };
 		1D912FC61EDF142D0009CE60 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1DABFF191EE6EBAF0088A770 /* UserHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		1DABFF1B1EE6EBDE0088A770 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		1DABFF1C1EE6EBDE0088A770 /* MyWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
+		1DABFF1D1EE6EBDE0088A770 /* MyWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyWalletViewController.xib; sourceTree = "<group>"; };
+		1DABFF1E1EE6EBDE0088A770 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		1DABFF251EE6ED520088A770 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		1DBFA15C1EE2E8860086CE49 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		1DBFA15D1EE2E8860086CE49 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1DBFA15E1EE2E8860086CE49 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -218,6 +230,8 @@
 		1D912FA01EDF130E0009CE60 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DABFF231EE6ED460088A770 /* Home */,
+				1DABFF141EE6EB6F0088A770 /* Side(侧边栏) */,
 				1DBFA15B1EE2E86C0086CE49 /* Tools */,
 				1D912FC81EDF14690009CE60 /* Extension */,
 				1D912FA11EDF13280009CE60 /* Resource */,
@@ -266,6 +280,50 @@
 				1DBFA1721EE2E8E60086CE49 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1DABFF141EE6EB6F0088A770 /* Side(侧边栏) */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFF151EE6EB900088A770 /* Controller */,
+				1DABFF171EE6EB900088A770 /* View */,
+			);
+			path = "Side(侧边栏)";
+			sourceTree = "<group>";
+		};
+		1DABFF151EE6EB900088A770 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFF1B1EE6EBDE0088A770 /* AboutUsViewController.swift */,
+				1DABFF1C1EE6EBDE0088A770 /* MyWalletViewController.swift */,
+				1DABFF1D1EE6EBDE0088A770 /* MyWalletViewController.xib */,
+				1DABFF1E1EE6EBDE0088A770 /* SideViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DABFF171EE6EB900088A770 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFF191EE6EBAF0088A770 /* UserHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DABFF231EE6ED460088A770 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFF241EE6ED460088A770 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1DABFF241EE6ED460088A770 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DABFF251EE6ED520088A770 /* WKWebViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		1DBFA15B1EE2E86C0086CE49 /* Tools */ = {
@@ -406,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D912FB31EDF13280009CE60 /* 2_D.m4a in Resources */,
+				1DABFF211EE6EBDE0088A770 /* MyWalletViewController.xib in Resources */,
 				1D912FBA1EDF13280009CE60 /* 9_D.m4a in Resources */,
 				1D912F7B1EDF0A2B0009CE60 /* LaunchScreen.storyboard in Resources */,
 				1D912FB21EDF13280009CE60 /* 1_D.m4a in Resources */,
@@ -498,24 +557,29 @@
 			files = (
 				1DBFA1661EE2E8860086CE49 /* UpdateTool.swift in Sources */,
 				1DBFA1751EE2E8E60086CE49 /* String+Extension.swift in Sources */,
+				1DABFF201EE6EBDE0088A770 /* MyWalletViewController.swift in Sources */,
 				1D912F731EDF0A2B0009CE60 /* ViewController.swift in Sources */,
 				1D912F711EDF0A2B0009CE60 /* AppDelegate.swift in Sources */,
 				1DBFA1641EE2E8860086CE49 /* SaveTools.swift in Sources */,
 				1DBFA1621EE2E8860086CE49 /* NetWorkTools.swift in Sources */,
 				1DBFA1741EE2E8E60086CE49 /* NSObject+Extension.swift in Sources */,
+				1DABFF1A1EE6EBAF0088A770 /* UserHeaderView.swift in Sources */,
 				1DBFA1631EE2E8860086CE49 /* Reachability.m in Sources */,
 				1DBFA17E1EE2E8E60086CE49 /* UIViewController+Extension.swift in Sources */,
 				1DBFA17C1EE2E8E60086CE49 /* UILabel+Extension.swift in Sources */,
 				1D912FC71EDF142D0009CE60 /* Constant.swift in Sources */,
 				1DBFA1791EE2E8E60086CE49 /* UIColor+Extension.swift in Sources */,
 				1DBFA1731EE2E8E60086CE49 /* MoreButton.swift in Sources */,
+				1DABFF261EE6ED520088A770 /* WKWebViewController.swift in Sources */,
 				1DBFA17D1EE2E8E60086CE49 /* UIView+Extension.swift in Sources */,
 				1DBFA17A1EE2E8E60086CE49 /* UIImage+Extension.swift in Sources */,
 				1DBFA1651EE2E8860086CE49 /* SysNetWorkTools.swift in Sources */,
 				1DBFA1761EE2E8E60086CE49 /* UIAlertView+Extension.swift in Sources */,
 				1DBFA1771EE2E8E60086CE49 /* UIBarButtonItem+Extension.swift in Sources */,
 				1DBFA17B1EE2E8E60086CE49 /* UIImageView+Extension.swift in Sources */,
+				1DABFF1F1EE6EBDE0088A770 /* AboutUsViewController.swift in Sources */,
 				1DBFA1781EE2E8E60086CE49 /* UIBUtton+Extension.swift in Sources */,
+				1DABFF221EE6EBDE0088A770 /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
