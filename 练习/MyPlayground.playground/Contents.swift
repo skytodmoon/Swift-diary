@@ -95,7 +95,7 @@ let interestingNumbers = [
     "Square":[1,4,9,16,25],
 ]
 var largest = 0
-for(kind,numbers)in interestingNumbers{
+for(_,numbers)in interestingNumbers{
     for numbers in numbers {
         if numbers > largest {
             largest = numbers
@@ -395,8 +395,26 @@ let heartsDesctiption = hearts.simpleDescription()
  注意，有两种方式可以引用Hearts成员：给hearts常量赋值时，枚举成员Suit.Hearts需要用全名来引用，因为常量没有显式指定类型。在switch里，枚举成员使用缩写.Hearts来引用，因为self的值已经知道是一个suit。已知变量类型的情况下你可以使用缩写。
  
  一个枚举成员的实例可以有实例值。相同枚举成员的实例可以有不同的值。创建实例的时候传入值即可。实例值和原始值是不同的：枚举成员的原始值对于所有实例都是相同的，而且你是在定义枚举的时候设置原始值。
- 
- 例如，考虑从服务器获取日出和日落的时间。服务器会返回正常结果或者错误信息。
  */
+// 例如，考虑从服务器获取日出和日落的时间。服务器会返回正常结果或者错误信息。
+
+enum ServerResponse {
+        case Result(String,String)
+        case Failure(String)
+}
+
+let success = ServerResponse.Result("6:00 am", "8:09 pm")
+let failure = ServerResponse.Failure("Out of cheese.")
+
+switch success {
+    
+case let .Result(sunrise,sunset):
+    let serverResponse = "Sunrise is at \(sunrise) and sunset is at \(sunset)."
+case let .Failure(message):
+    print("Failure... \(message)")
+}
+
+//使用struct来创建一个结构体。结构体和类有很多相同的地方，比如方法和构造器。它们之间最大的一个区别就是结构体是传值，类是传引用。
+
 
 
