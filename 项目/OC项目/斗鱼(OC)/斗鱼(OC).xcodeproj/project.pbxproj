@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5523081EE8E30B00923EEC /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5523071EE8E30B00923EEC /* GameCell.m */; };
 		5B6736871EE530A80027247F /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736841EE530A80027247F /* RecommendCell.m */; };
 		5B6736881EE530A80027247F /* RecommendHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6736861EE530A80027247F /* RecommendHeaderView.m */; };
 		5B67368F1EE530FB0027247F /* GameVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B67368A1EE530FB0027247F /* GameVerticalButton.m */; };
@@ -114,6 +115,8 @@
 /* Begin PBXFileReference section */
 		015F5ED65D2D4B7C1474BFB4 /* libPods-斗鱼(OC)UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-斗鱼(OC)UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18510028C3C6D7B6A1715782 /* libPods-斗鱼(OC).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-斗鱼(OC).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5523061EE8E30B00923EEC /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCell.h; sourceTree = "<group>"; };
+		5B5523071EE8E30B00923EEC /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCell.m; sourceTree = "<group>"; };
 		5B6736831EE530A80027247F /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
 		5B6736841EE530A80027247F /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		5B6736851EE530A80027247F /* RecommendHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendHeaderView.h; sourceTree = "<group>"; };
@@ -316,6 +319,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B5523051EE8E30B00923EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B5523061EE8E30B00923EEC /* GameCell.h */,
+				5B5523071EE8E30B00923EEC /* GameCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B6736921EE531A30027247F /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +394,7 @@
 		5B6736AD1EE532910027247F /* 游戏 */ = {
 			isa = PBXGroup;
 			children = (
+				5B5523051EE8E30B00923EEC /* View */,
 				5B6736AE1EE532910027247F /* Controller */,
 			);
 			path = "游戏";
@@ -1131,6 +1144,7 @@
 				5BE909B01EDFFFAA00FF0BD7 /* DisplayViewController.m in Sources */,
 				5B6736B31EE532AA0027247F /* RecommendViewController.m in Sources */,
 				5B9F52051EE125C90050E8AF /* Cdsn.m in Sources */,
+				5B5523081EE8E30B00923EEC /* GameCell.m in Sources */,
 				5B9F51BE1EE11C850050E8AF /* MeViewController.m in Sources */,
 				5BE909BE1EDFFFC700FF0BD7 /* NSDate+Extension.m in Sources */,
 				5B9F52391EE127070050E8AF /* LiveAllFlowLayout.m in Sources */,

@@ -7,92 +7,196 @@
 //
 
 #import "EntainmentViewController.h"
+#import "Room.h"
+#import "Tag.h"
+#import "RoomGroup.h"
+#import "RecommendCell.h"
+#import "RecommendHeaderView.h"
+#import "GameVerticalButton.h"
+#import "LivePlayViewController.h"
 
-@interface EntainmentViewController ()
+@interface EntainmentViewController ()<UIScrollViewDelegate>
+
+@property (nonatomic,weak) UIScrollView *topScrollView;
+
+@property (nonatomic,strong) NSMutableArray *tags;
+
+@property (nonatomic,weak) UIPageControl *pageControl;
 
 @end
 
 @implementation EntainmentViewController
 
+- (NSMutableArray *)tags {
+    if (!_tags) {
+        _tags = [NSMutableArray array];
+    }
+    return _tags;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UIView *baseView = [[UIView alloc] init];
+    baseView.frame = CGRectMake(0, 0, self.view.width, 210);
+    baseView.backgroundColor = Color(233, 233, 233);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIScrollView *topScrollView = [[UIScrollView alloc] init];
+    topScrollView.pagingEnabled = YES;
+    topScrollView.showsHorizontalScrollIndicator = NO;
+    topScrollView.backgroundColor = [UIColor whiteColor];
+    topScrollView.frame = CGRectMake(0, 0, self.view.width, 200);
+    topScrollView.delegate = self;
+    [baseView addSubview:topScrollView];
+    self.topScrollView = topScrollView;
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
+    pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    pageControl.frame = CGRectMake(0, 185, self.view.width, 10);
+    [baseView addSubview:pageControl];
+    self.pageControl = pageControl;
+    
+    self.tableView.tableHeaderView = baseView;
+    
+    [self setupRefresh];
+    
+    [self.tableView registerClass:[RecommendCell class] forCellReuseIdentifier:@"recommendCell"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, -10, 0);
+    
+    [self.tableView.mj_header beginRefreshing];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupRefresh {
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    [header setImages:@[[UIImage imageNamed:@"dyla_img_mj_stateIdle_64x66_"]] forState:MJRefreshStateIdle];
+    [header setImages:@[[UIImage imageNamed:@"dyla_img_mj_statePulling_64x66_"]] forState:MJRefreshStatePulling];
+    [header setImages:@[[UIImage imageNamed:@"dyla_img_mj_stateRefreshing_01_135x66_"],
+                        [UIImage imageNamed:@"dyla_img_mj_stateRefreshing_02_135x66_"],
+                        [UIImage imageNamed:@"dyla_img_mj_stateRefreshing_03_135x66_"],
+                        [UIImage imageNamed:@"dyla_img_mj_stateRefreshing_04_135x66_"]] duration:0.5 forState:MJRefreshStateRefreshing];
+    [header setTimeLabelHidden:YES forState:MJRefreshStateRefreshing];
+    self.tableView.mj_header = header;
 }
+
+- (void)refreshData {
+    [self loadAllData];
+}
+
+- (void)loadAllData {
+    [[HttpManager sharedInstance] GET:@"http://capi.douyucdn.cn/api/v1/getHotRoom/2?aid=ios&client_sys=ios&time=1468825800&auth=94d0ae945c16542cc6dee7fe031f1316" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.tags removeAllObjects];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *roomsDict = dict[@"data"];
+        NSArray *tags = [Tag mj_objectArrayWithKeyValuesArray:roomsDict];
+        
+        for (int i = 0; i < tags.count; i++) {
+            Tag *tag = tags[i];
+            if ([tag.tag_name isEqualToString:@"最热"]) {
+                tag.groupImageName = @"home_header_hot_18x18_";
+            } else {
+                tag.groupImageName = @"home_header_normal_18x18_";
+            }
+            [self.tags addObject:tag];
+        }
+        
+        [self setupScrollViewData];
+        
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+}
+
+- (void)setupScrollViewData {
+    CGFloat btnW = 70;
+    CGFloat btnH = 80;
+    CGFloat leftMargin = 10;
+    CGFloat btnMargin = (self.view.width - 4 * btnW - 2 * leftMargin) / 3;
+    NSArray *newTags = [self.tags subarrayWithRange:NSMakeRange(1, self.tags.count - 1)];
+    for (int i = 0; i < newTags.count; i++) {
+        Tag *tag = newTags[i];
+        int j = i / 8;
+        GameVerticalButton *btn = [[GameVerticalButton alloc] init];
+        CGFloat btnX = j * self.view.width + 10 + (i % 4 * (btnW + btnMargin));
+        CGFloat btnY = 10 + (i / 4 * (btnH + 10)) - j * 2 * (btnH + 10);
+        btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
+        [btn setTitle:tag.tag_name forState:UIControlStateNormal];
+        [btn sd_setImageWithURL:[NSURL URLWithString:tag.icon_url] forState:UIControlStateNormal];
+        [self.topScrollView addSubview:btn];
+    }
+    
+    self.pageControl.numberOfPages = (newTags.count + 8 - 1) / 8;
+    self.pageControl.currentPage = 0;
+    
+    self.topScrollView.contentSize = CGSizeMake(self.view.width * ((newTags.count + 8 - 1) / 8), 0);
+}
+
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return self.tags.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommendCell"];
+    cell.rooms = [self.tags[indexPath.section] room_list];
+    // 用来判断是不是颜值分组
+    cell.groupName = [self.tags[indexPath.section] groupImageName];
+    __weak EntainmentViewController *weakSelf = self;
+    // 播放视频
+    cell.block = ^(Room *room) {
+        LivePlayViewController *playVc = [[LivePlayViewController alloc] init];
+        [weakSelf.navigationController pushViewController:playVc animated:YES];
+    };
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+/**
+ *  必须返回高度，headerInsection方法才会调用
+ */
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    RecommendHeaderView *view = [[RecommendHeaderView alloc] init];
+    view.tagName = [self.tags[section] tag_name];
+    view.imageName = [self.tags[section] groupImageName];
+    return view;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 房间的总数量
+    int count = (int)[self.tags[indexPath.section] room_list].count;
+    // 判断有多少行
+    int rols = (count + 2 - 1) / 2;
+    // cell的高度
+    CGFloat height = 0;
+    height = rols * NormalItemH + (rols) * ItemMargin + 5;
+    return height;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark UIScrolViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat scrolW = scrollView.frame.size.width;
+    int page = (scrollView.contentOffset.x + scrolW * 0.5) / scrolW;
+    self.pageControl.currentPage = page;
 }
-*/
 
 @end
