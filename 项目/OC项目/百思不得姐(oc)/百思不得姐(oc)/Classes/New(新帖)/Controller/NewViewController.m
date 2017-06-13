@@ -8,7 +8,7 @@
 
 #import "NewViewController.h"
 #import "LoginRegisterViewController.h"
-#import "EssenceBaseViewController.h"
+#import "EssenceViewController.h"
 #import "ContributionViewController.h"
 #import "FansCountViewController.h"
 #import "FansFastestViewController.h"
@@ -68,25 +68,26 @@
     [self.view addSubview:self.segmentBarVC.view];
     NSArray *items = @[@"全部", @"视频", @"图片", @"段子",@"互动区",@"相册",@"网红",@"投票",@"美女",@"冷知识",@"游戏",@"声音"];
     NSMutableArray* childVCs = [NSMutableArray array];
-    [childVCs addObject:[[ContributionViewController alloc] init]];
-    [childVCs addObject:[[FansCountViewController alloc] init]];
-    [childVCs addObject:[[FansFastestViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
-    [childVCs addObject:[[EssenceBaseViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[FansCountViewController alloc] init]];
+//    [childVCs addObject:[[FansFastestViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
+//    [childVCs addObject:[[EssenceViewController alloc] init]];
     
     [self.segmentBarVC setupWithItems:items childVCs:childVCs];
     
     [self.segmentBarVC.segmentBar updateViewWithConfig:^(TGSegmentConfig *config) {
         config.selectedColor([UIColor lightTextColor])
         .normalColor([UIColor lightTextColor])
-        .selectedFont([UIFont systemFontOfSize:14])//选中字体大于其他正常标签的字体的情况下，根据情况稍微调大margin（默认8），以免选中的字体变大后挡住其他正常标签的内容
+        //选中字体大于其他正常标签的字体的情况下，根据情况稍微调大margin（默认8），以免选中的字体变大后挡住其他正常标签的内容
+        .selectedFont([UIFont systemFontOfSize:14])
         .normalFont([UIFont systemFontOfSize:13])
         .indicateExtraW(8)
         .indicateH(2)
