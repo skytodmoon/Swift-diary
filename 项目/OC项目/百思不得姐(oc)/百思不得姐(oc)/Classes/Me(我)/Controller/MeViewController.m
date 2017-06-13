@@ -45,9 +45,10 @@ static CGFloat const onemargin = 1;
 
 //加载数据
 - (void)loadData{
-    
-    
-    [Networking GET:@"http://d.api.budejie.com/op/square/bs0315-iphone-4.2/0-100.json" baseURL:nil params:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"square";
+    parameters[@"c"] = @"topic";
+    [Networking GET:@"http://api.budejie.com/api/api_open.php" baseURL:nil params:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSArray *dictArr = responseObject[@"square_list"];
         
@@ -129,7 +130,7 @@ static CGFloat const onemargin = 1;
 {
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 10;
-    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(10 - 35, 0, 0, 0);
 }
 
 //设置底部的View
