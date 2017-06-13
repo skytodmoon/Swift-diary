@@ -74,9 +74,17 @@
 - (void)addOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selected:(NSString *)selecetedImage
 {
     vc.tabBarItem.title = title;
-    //    vc.view.backgroundColor = [UIColor redColor];
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selecetedImage];
+    /*** 取消选中时的背景色 */
+    vc.tabBarItem.selectedImage = [vc.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /*** 设置字体颜色 */
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor],NSForegroundColorAttributeName, nil];
+    [vc.tabBarItem setTitleTextAttributes:dict forState:UIControlStateNormal];
+    NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],
+                           NSForegroundColorAttributeName,nil];
+    [vc.tabBarItem setTitleTextAttributes:dict2 forState:UIControlStateSelected];
+    
     //自定义NavigationViewController用来包装
     NavigationViewController *nav = [[NavigationViewController alloc]initWithRootViewController:vc];
     [self addChildViewController:nav];

@@ -14,14 +14,14 @@
 #import "MeCell.h"
 
 
+static NSString * const ID = @"cell";
 static NSInteger const cols = 4;
-static CGFloat const margin = 1;
-static NSString *const ID = @"cell";
-#define cellH ((ScreenW - (cols - 1) * margin) / cols)
+static CGFloat const onemargin = 1;
+#define itemWH (ScreenW - (cols - 1) * onemargin) / cols
 
 @interface MeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong) NSMutableArray *squareItems;
-@property (nonatomic,weak) UICollectionView *collectionView ;
+@property (nonatomic,weak) UICollectionView *collectionView;
 @end
 
 @implementation MeViewController
@@ -32,13 +32,15 @@ static NSString *const ID = @"cell";
     //设置Navigation的样式
     [self setupNavigation];
     
+    [self setupTableViewSpacing];
+    
     //设置底部View
     [self setupFootView];
     
     //加载数据
     [self loadData];
     
-
+    
 }
 
 //加载数据
@@ -51,16 +53,15 @@ static NSString *const ID = @"cell";
         
         _squareItems = [MeItem mj_objectArrayWithKeyValuesArray:dictArr];
         
-        NSUInteger rows = (_squareItems.count - 1) / cols + 1;
-        CGFloat h = (rows * cellH) + (rows - 1) * margin;
-        self.collectionView.sy_height = h;
-        
-        self.tableView.tableFooterView = self.collectionView;
-        
         [self resolveData];
         
+        NSInteger count = _squareItems.count;
+        NSInteger rows = (count - 1) / cols + 1;
+        self.collectionView.sy_height = rows * itemWH;
+        self.tableView.tableFooterView = self.collectionView;
+        self.tableView.tableFooterView = self.collectionView;
+        
         [self.collectionView reloadData];
-        NSLog(@"请求数据成功%@",responseObject);
         
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
         //请求失败
@@ -87,17 +88,14 @@ static NSString *const ID = @"cell";
     
 }
 
+
 - (void)resolveData
 {
-    NSInteger count = _squareItems.count;
-    NSInteger extre = count % cols;
-    
-    if (extre) {
-        extre = cols - extre;
-        
-        for (int i = 0; i < extre; i++) {
-            MeItem *item = [[MeItem alloc] init];
-            [_squareItems addObject:item];
+    NSInteger exter = self.squareItems.count % cols;
+    if (exter) {
+        exter = cols - exter;
+        for (int i = 0; i < exter; i++) {
+            [self.squareItems addObject:[[MeItem alloc] init]];
         }
     }
 }
@@ -139,19 +137,19 @@ static NSString *const ID = @"cell";
 - (void)setupFootView
 {
     //利用流水布局创建底部九宫格
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc]init];
-    flow.itemSize = CGSizeMake(cellH, cellH);
-    flow.minimumInteritemSpacing = margin;
-    flow.minimumLineSpacing = margin;
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(itemWH, itemWH);
+    layout.minimumInteritemSpacing = onemargin;
+    layout.minimumLineSpacing = onemargin;
     
     //创建UICollectionView
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, 0, 300) collectionViewLayout:flow];
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, 0, 1) collectionViewLayout:layout];
     collectionView.backgroundColor = CommonBgColor;
     _collectionView = collectionView;
-    
+    self.tableView.tableFooterView = collectionView;
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    
+    collectionView.scrollEnabled = NO;
     [collectionView registerNib:[UINib nibWithNibName:@"MeCell" bundle:nil] forCellWithReuseIdentifier:ID];
     
     self.tableView.tableFooterView = collectionView;
@@ -159,7 +157,7 @@ static NSString *const ID = @"cell";
 }
 
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - UICollectionViewDataSource,UICollectionViewDelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -174,8 +172,6 @@ static NSString *const ID = @"cell";
     
     return cell;
 }
-
-#pragma mark - UICollectionViewDelegate
 
 //点击选中某一个Item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -204,17 +200,5 @@ static NSString *const ID = @"cell";
         return;
     }
 }
-
-/* 定义每个UICollectionView 的大小 */
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(100, 100);
-}
-/* 定义每个UICollectionView 的边缘 */
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 5, 0, 5);//上 左 下 右
-}
-
 
 @end
