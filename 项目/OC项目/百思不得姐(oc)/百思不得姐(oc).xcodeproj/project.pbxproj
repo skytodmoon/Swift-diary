@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		28EAC51CCDBDE4536C248AB5 /* libPods-百思不得姐(oc).a in Frameworks */ = {isa = PBXBuildFile; fileRef = E097527C5529CCDE7B95EC36 /* libPods-百思不得姐(oc).a */; };
+		5B84457E1EEF913800C1C706 /* TGMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B84456E1EEF913800C1C706 /* TGMoreCell.m */; };
+		5B84457F1EEF913800C1C706 /* TGMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B84456F1EEF913800C1C706 /* TGMoreCell.xib */; };
+		5B8445801EEF913800C1C706 /* TGMoreLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8445711EEF913800C1C706 /* TGMoreLayout.m */; };
+		5B8445811EEF913800C1C706 /* TGSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8445731EEF913800C1C706 /* TGSegmentBar.m */; };
+		5B8445821EEF913800C1C706 /* TGSegmentConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8445751EEF913800C1C706 /* TGSegmentConfig.m */; };
+		5B8445831EEF913800C1C706 /* TGSegmentMoreBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8445771EEF913800C1C706 /* TGSegmentMoreBtn.m */; };
+		5B8445841EEF913800C1C706 /* TGSementBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8445791EEF913800C1C706 /* TGSementBarVC.m */; };
+		5B8445851EEF913800C1C706 /* TGShowMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B84457B1EEF913800C1C706 /* TGShowMoreVC.m */; };
+		5B8445861EEF913800C1C706 /* UIView+TGSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B84457D1EEF913800C1C706 /* UIView+TGSegment.m */; };
 		5BF0332F1ECA85A600BA0664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0332E1ECA85A600BA0664 /* main.m */; };
 		5BF033321ECA85A600BA0664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033311ECA85A600BA0664 /* AppDelegate.m */; };
 		5BF033351ECA85A600BA0664 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF033341ECA85A600BA0664 /* ViewController.m */; };
@@ -139,6 +148,23 @@
 /* Begin PBXFileReference section */
 		149ED0461ECF053E572C3905 /* Pods-百思不得姐(oc).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(oc).debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(oc)/Pods-百思不得姐(oc).debug.xcconfig"; sourceTree = "<group>"; };
 		49A3631EA56FAC2EECC8A016 /* Pods-百思不得姐(oc).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐(oc).release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐(oc)/Pods-百思不得姐(oc).release.xcconfig"; sourceTree = "<group>"; };
+		5B84456D1EEF913800C1C706 /* TGMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMoreCell.h; sourceTree = "<group>"; };
+		5B84456E1EEF913800C1C706 /* TGMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMoreCell.m; sourceTree = "<group>"; };
+		5B84456F1EEF913800C1C706 /* TGMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGMoreCell.xib; sourceTree = "<group>"; };
+		5B8445701EEF913800C1C706 /* TGMoreLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMoreLayout.h; sourceTree = "<group>"; };
+		5B8445711EEF913800C1C706 /* TGMoreLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMoreLayout.m; sourceTree = "<group>"; };
+		5B8445721EEF913800C1C706 /* TGSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSegmentBar.h; sourceTree = "<group>"; };
+		5B8445731EEF913800C1C706 /* TGSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSegmentBar.m; sourceTree = "<group>"; };
+		5B8445741EEF913800C1C706 /* TGSegmentConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSegmentConfig.h; sourceTree = "<group>"; };
+		5B8445751EEF913800C1C706 /* TGSegmentConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSegmentConfig.m; sourceTree = "<group>"; };
+		5B8445761EEF913800C1C706 /* TGSegmentMoreBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSegmentMoreBtn.h; sourceTree = "<group>"; };
+		5B8445771EEF913800C1C706 /* TGSegmentMoreBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSegmentMoreBtn.m; sourceTree = "<group>"; };
+		5B8445781EEF913800C1C706 /* TGSementBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSementBarVC.h; sourceTree = "<group>"; };
+		5B8445791EEF913800C1C706 /* TGSementBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSementBarVC.m; sourceTree = "<group>"; };
+		5B84457A1EEF913800C1C706 /* TGShowMoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGShowMoreVC.h; sourceTree = "<group>"; };
+		5B84457B1EEF913800C1C706 /* TGShowMoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGShowMoreVC.m; sourceTree = "<group>"; };
+		5B84457C1EEF913800C1C706 /* UIView+TGSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TGSegment.h"; sourceTree = "<group>"; };
+		5B84457D1EEF913800C1C706 /* UIView+TGSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TGSegment.m"; sourceTree = "<group>"; };
 		5BF0332A1ECA85A600BA0664 /* 百思不得姐(oc).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐(oc).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF0332E1ECA85A600BA0664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BF033301ECA85A600BA0664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -367,6 +393,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B84456C1EEF913800C1C706 /* TGSegment */ = {
+			isa = PBXGroup;
+			children = (
+				5B84456D1EEF913800C1C706 /* TGMoreCell.h */,
+				5B84456E1EEF913800C1C706 /* TGMoreCell.m */,
+				5B84456F1EEF913800C1C706 /* TGMoreCell.xib */,
+				5B8445701EEF913800C1C706 /* TGMoreLayout.h */,
+				5B8445711EEF913800C1C706 /* TGMoreLayout.m */,
+				5B8445721EEF913800C1C706 /* TGSegmentBar.h */,
+				5B8445731EEF913800C1C706 /* TGSegmentBar.m */,
+				5B8445741EEF913800C1C706 /* TGSegmentConfig.h */,
+				5B8445751EEF913800C1C706 /* TGSegmentConfig.m */,
+				5B8445761EEF913800C1C706 /* TGSegmentMoreBtn.h */,
+				5B8445771EEF913800C1C706 /* TGSegmentMoreBtn.m */,
+				5B8445781EEF913800C1C706 /* TGSementBarVC.h */,
+				5B8445791EEF913800C1C706 /* TGSementBarVC.m */,
+				5B84457A1EEF913800C1C706 /* TGShowMoreVC.h */,
+				5B84457B1EEF913800C1C706 /* TGShowMoreVC.m */,
+				5B84457C1EEF913800C1C706 /* UIView+TGSegment.h */,
+				5B84457D1EEF913800C1C706 /* UIView+TGSegment.m */,
+			);
+			path = TGSegment;
+			sourceTree = "<group>";
+		};
 		5BF033211ECA85A600BA0664 = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +504,7 @@
 		5BF033671ECA89C500BA0664 /* Tool(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				5B84456C1EEF913800C1C706 /* TGSegment */,
 				5BF033951ECA8F9700BA0664 /* Categroy(扩展) */,
 				5BF033681ECA89C500BA0664 /* Networking(网络封装) */,
 			);
@@ -1019,6 +1070,7 @@
 				5BF034B21ECABECE00BA0664 /* FansCountViewCell.xib in Resources */,
 				5BF0338E1ECA8AD600BA0664 /* LaunchImage-800-667h@2x.png in Resources */,
 				5BF033D41ECA96F600BA0664 /* MeViewController.storyboard in Resources */,
+				5B84457F1EEF913800C1C706 /* TGMoreCell.xib in Resources */,
 				5BF034941ECAB2FE00BA0664 /* AllPictureView.xib in Resources */,
 				5BF0338B1ECA8AD600BA0664 /* LaunchImage-568h@2x.png in Resources */,
 				5BF033901ECA8AD600BA0664 /* LaunchImage.png in Resources */,
@@ -1116,9 +1168,11 @@
 				5BF034211ECAA44500BA0664 /* ArrowSettingItem.m in Sources */,
 				5BF0343A1ECAA64B00BA0664 /* CaregroyCell.m in Sources */,
 				5BF0342F1ECAA5E500BA0664 /* RecommendItem.m in Sources */,
+				5B8445821EEF913800C1C706 /* TGSegmentConfig.m in Sources */,
 				5BF034701ECAAFE700BA0664 /* GIFItem.m in Sources */,
 				5BF033B11ECA92DA00BA0664 /* ADItem.m in Sources */,
 				5BF034B31ECABECE00BA0664 /* FansFastestCell.m in Sources */,
+				5B8445851EEF913800C1C706 /* TGShowMoreVC.m in Sources */,
 				5BF034C21ECABF7800BA0664 /* FansFastestViewController.m in Sources */,
 				5BF034511ECAA76400BA0664 /* SubscribeViewController.m in Sources */,
 				5BF034161ECAA40800BA0664 /* SettingCell.m in Sources */,
@@ -1127,6 +1181,7 @@
 				5BF033A61ECA90C400BA0664 /* NavigationViewController.m in Sources */,
 				5BF034541ECAABC400BA0664 /* AnimationRefreshHeader.m in Sources */,
 				5BF033BB1ECA95E600BA0664 /* BaseViewController.m in Sources */,
+				5B8445841EEF913800C1C706 /* TGSementBarVC.m in Sources */,
 				5BF034A61ECABDA600BA0664 /* CrossViewController.m in Sources */,
 				5BF034A31ECABD8A00BA0664 /* StarViewController.m in Sources */,
 				5BF033351ECA85A600BA0664 /* ViewController.m in Sources */,
@@ -1136,8 +1191,10 @@
 				5BF034721ECAAFE700BA0664 /* RedStartItems.m in Sources */,
 				5BF034221ECAA44500BA0664 /* SegmentedSettingItem.m in Sources */,
 				5BF034751ECAAFE700BA0664 /* UItem.m in Sources */,
+				5B8445801EEF913800C1C706 /* TGMoreLayout.m in Sources */,
 				5BF0349A1ECAB2FE00BA0664 /* VideoView.m in Sources */,
 				5BF0342E1ECAA5E500BA0664 /* CategoryItem.m in Sources */,
+				5B8445811EEF913800C1C706 /* TGSegmentBar.m in Sources */,
 				5BF0339C1ECA8F9700BA0664 /* NSDate+Extension.m in Sources */,
 				5BF0332F1ECA85A600BA0664 /* main.m in Sources */,
 				5BF0347E1ECAB24600BA0664 /* WholeCell.m in Sources */,
@@ -1146,6 +1203,7 @@
 				5BF034231ECAA44500BA0664 /* SettingGroupItem.m in Sources */,
 				5BF033EB1ECA9C3E00BA0664 /* UIView+SYCategory.m in Sources */,
 				5BF033B51ECA92E200BA0664 /* ADViewController.m in Sources */,
+				5B84457E1EEF913800C1C706 /* TGMoreCell.m in Sources */,
 				5BF034731ECAAFE700BA0664 /* TextItem.m in Sources */,
 				5BF0343E1ECAA64B00BA0664 /* UserCell.m in Sources */,
 				5BF034241ECAA44500BA0664 /* SettingItem.m in Sources */,
@@ -1163,6 +1221,7 @@
 				5BF033D81ECA980000BA0664 /* TabBar.m in Sources */,
 				5BF0344B1ECAA76400BA0664 /* AttentionViewController.m in Sources */,
 				5BF034B11ECABECE00BA0664 /* FansCountViewCell.m in Sources */,
+				5B8445831EEF913800C1C706 /* TGSegmentMoreBtn.m in Sources */,
 				5BF033C81ECA967800BA0664 /* NewViewController.m in Sources */,
 				5BF0346E1ECAAFE700BA0664 /* FansCountItem.m in Sources */,
 				5BF033E11ECA9A3400BA0664 /* PublishViewController.m in Sources */,
@@ -1173,6 +1232,7 @@
 				5BF034741ECAAFE700BA0664 /* TopCommentItem.m in Sources */,
 				5BF033E71ECA9B1800BA0664 /* LoginRegisterTextField.m in Sources */,
 				5BF033CD1ECA96AB00BA0664 /* FollowViewController.m in Sources */,
+				5B8445861EEF913800C1C706 /* UIView+TGSegment.m in Sources */,
 				5BF034301ECAA5E500BA0664 /* UserItem.m in Sources */,
 				5BF034C11ECABF7800BA0664 /* FansCountViewController.m in Sources */,
 				5BF034761ECAAFE700BA0664 /* UserItems.m in Sources */,
