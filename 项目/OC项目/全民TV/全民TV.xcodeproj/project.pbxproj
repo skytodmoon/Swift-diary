@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D6A0709B9400A7620265096 /* libPods-全民TVUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A142F3BE701224A56AC6820E /* libPods-全民TVUITests.a */; };
 		5B83AFE21EF3B55100697AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE11EF3B55100697AB8 /* main.m */; };
 		5B83AFE51EF3B55100697AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE41EF3B55100697AB8 /* AppDelegate.m */; };
 		5B83AFE81EF3B55100697AB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE71EF3B55100697AB8 /* ViewController.m */; };
@@ -16,7 +15,12 @@
 		5B83AFF01EF3B55100697AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83AFEE1EF3B55100697AB8 /* LaunchScreen.storyboard */; };
 		5B83AFFB1EF3B55100697AB8 /* __TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFFA1EF3B55100697AB8 /* __TVTests.m */; };
 		5B83B0061EF3B55100697AB8 /* __TVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0051EF3B55100697AB8 /* __TVUITests.m */; };
-		B8A48778296DA712BB21906A /* libPods-全民TVTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AA24561A8353ED376FA7F0 /* libPods-全民TVTests.a */; };
+		5B83B01F1EF3B99800697AB8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B01E1EF3B99800697AB8 /* MainViewController.m */; };
+		5B83B0221EF3BA1100697AB8 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */; };
+		5B83B02E1EF3BB4000697AB8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */; };
+		5B83B0311EF3BB4B00697AB8 /* ColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */; };
+		5B83B0341EF3BB5500697AB8 /* LiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */; };
+		5B83B0371EF3BB5F00697AB8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */; };
 		E3B1B50D713BF36DDA7F8DE5 /* libPods-全民TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DDADC38EA94C4A6F9822C55 /* Pods-全民TVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TVUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-全民TVUITests/Pods-全民TVUITests.release.xcconfig"; sourceTree = "<group>"; };
 		110C99189C25D56D3F0C014C /* Pods-全民TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.debug.xcconfig"; sourceTree = "<group>"; };
-		170C21EE9E73F7FB0D8A393F /* Pods-全民TVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TVTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-全民TVTests/Pods-全民TVTests.release.xcconfig"; sourceTree = "<group>"; };
-		3B49F18DE3D7C1FB2C26FE78 /* Pods-全民TVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TVUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民TVUITests/Pods-全民TVUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40AA24561A8353ED376FA7F0 /* libPods-全民TVTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B7642B6E5E63D484DEA525 /* Pods-全民TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.release.xcconfig"; sourceTree = "<group>"; };
 		5B83AFDD1EF3B55100697AB8 /* 全民TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全民TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +61,20 @@
 		5B83B0011EF3B55100697AB8 /* 全民TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全民TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B83B0051EF3B55100697AB8 /* __TVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TVUITests.m; sourceTree = "<group>"; };
 		5B83B0071EF3B55100697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B01D1EF3B99800697AB8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5B83B01E1EF3B99800697AB8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5B83B0201EF3BA1100697AB8 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		5B83B0231EF3BA4700697AB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B83B02C1EF3BB4000697AB8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5B83B02F1EF3BB4B00697AB8 /* ColumnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnViewController.h; sourceTree = "<group>"; };
+		5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnViewController.m; sourceTree = "<group>"; };
+		5B83B0321EF3BB5500697AB8 /* LiveListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListViewController.h; sourceTree = "<group>"; };
+		5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewController.m; sourceTree = "<group>"; };
+		5B83B0351EF3BB5F00697AB8 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A142F3BE701224A56AC6820E /* libPods-全民TVUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC99E46C2C4734AC68DA8413 /* Pods-全民TVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TVTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民TVTests/Pods-全民TVTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A48778296DA712BB21906A /* libPods-全民TVTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D6A0709B9400A7620265096 /* libPods-全民TVUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +109,6 @@
 			children = (
 				110C99189C25D56D3F0C014C /* Pods-全民TV.debug.xcconfig */,
 				58B7642B6E5E63D484DEA525 /* Pods-全民TV.release.xcconfig */,
-				DC99E46C2C4734AC68DA8413 /* Pods-全民TVTests.debug.xcconfig */,
-				170C21EE9E73F7FB0D8A393F /* Pods-全民TVTests.release.xcconfig */,
-				3B49F18DE3D7C1FB2C26FE78 /* Pods-全民TVUITests.debug.xcconfig */,
-				0DDADC38EA94C4A6F9822C55 /* Pods-全民TVUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 		5B83AFDF1EF3B55100697AB8 /* 全民TV */ = {
 			isa = PBXGroup;
 			children = (
+				5B83B0161EF3B8DF00697AB8 /* Classes */,
 				5B83AFE31EF3B55100697AB8 /* AppDelegate.h */,
 				5B83AFE41EF3B55100697AB8 /* AppDelegate.m */,
 				5B83AFE61EF3B55100697AB8 /* ViewController.h */,
@@ -170,6 +178,114 @@
 			path = "全民TVUITests";
 			sourceTree = "<group>";
 		};
+		5B83B0161EF3B8DF00697AB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0241EF3BB2F00697AB8 /* Column */,
+				5B83B0261EF3BB2F00697AB8 /* Home */,
+				5B83B0281EF3BB2F00697AB8 /* Live */,
+				5B83B02A1EF3BB2F00697AB8 /* Pfofile */,
+				5B83B0191EF3B93A00697AB8 /* Base */,
+				5B83B0171EF3B8F800697AB8 /* Main */,
+				5B83B0231EF3BA4700697AB8 /* PrefixHeader.pch */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B83B0171EF3B8F800697AB8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0181EF3B8F800697AB8 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B83B0181EF3B8F800697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B01D1EF3B99800697AB8 /* MainViewController.h */,
+				5B83B01E1EF3B99800697AB8 /* MainViewController.m */,
+				5B83B0201EF3BA1100697AB8 /* NavigationViewController.h */,
+				5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0191EF3B93A00697AB8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5B83B0241EF3BB2F00697AB8 /* Column */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0251EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Column;
+			sourceTree = "<group>";
+		};
+		5B83B0251EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02F1EF3BB4B00697AB8 /* ColumnViewController.h */,
+				5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0261EF3BB2F00697AB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0271EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B83B0271EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02C1EF3BB4000697AB8 /* HomeViewController.h */,
+				5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0281EF3BB2F00697AB8 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0291EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		5B83B0291EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0321EF3BB5500697AB8 /* LiveListViewController.h */,
+				5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B02A1EF3BB2F00697AB8 /* Pfofile */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02B1EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Pfofile;
+			sourceTree = "<group>";
+		};
+		5B83B02B1EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0351EF3BB5F00697AB8 /* ProfileViewController.h */,
+				5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		65B29F5025D3871C9D295269 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,12 +323,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B83B00D1EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVTests" */;
 			buildPhases = (
-				87CEA43E087DD8DF33E88A80 /* [CP] Check Pods Manifest.lock */,
 				5B83AFF21EF3B55100697AB8 /* Sources */,
 				5B83AFF31EF3B55100697AB8 /* Frameworks */,
 				5B83AFF41EF3B55100697AB8 /* Resources */,
-				6958699C6367D5E6145E50A1 /* [CP] Embed Pods Frameworks */,
-				C659FB77935ADFF9FD80F3CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,12 +341,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B83B0101EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVUITests" */;
 			buildPhases = (
-				342E5BC9C2A81B46694F2F32 /* [CP] Check Pods Manifest.lock */,
 				5B83AFFD1EF3B55100697AB8 /* Sources */,
 				5B83AFFE1EF3B55100697AB8 /* Frameworks */,
 				5B83AFFF1EF3B55100697AB8 /* Resources */,
-				D09E44ADF5EC76834EDD4178 /* [CP] Embed Pods Frameworks */,
-				0BB09CB442A15CEC4D851AA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,21 +425,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BB09CB442A15CEC4D851AA5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TVUITests/Pods-全民TVUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		161E53C41C03BD9DF6283AF1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,81 +455,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		342E5BC9C2A81B46694F2F32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6958699C6367D5E6145E50A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TVTests/Pods-全民TVTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87CEA43E087DD8DF33E88A80 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C659FB77935ADFF9FD80F3CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TVTests/Pods-全民TVTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D09E44ADF5EC76834EDD4178 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TVUITests/Pods-全民TVUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D8FA5C4AA14008FCE731BD49 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,8 +478,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B83AFE81EF3B55100697AB8 /* ViewController.m in Sources */,
+				5B83B0371EF3BB5F00697AB8 /* ProfileViewController.m in Sources */,
+				5B83B0221EF3BA1100697AB8 /* NavigationViewController.m in Sources */,
 				5B83AFE51EF3B55100697AB8 /* AppDelegate.m in Sources */,
+				5B83B01F1EF3B99800697AB8 /* MainViewController.m in Sources */,
+				5B83B0311EF3BB4B00697AB8 /* ColumnViewController.m in Sources */,
 				5B83AFE21EF3B55100697AB8 /* main.m in Sources */,
+				5B83B0341EF3BB5500697AB8 /* LiveListViewController.m in Sources */,
+				5B83B02E1EF3BB4000697AB8 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "全民TV/Classes/PrefixHeader.pch";
 				INFOPLIST_FILE = "全民TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
@@ -615,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "全民TV/Classes/PrefixHeader.pch";
 				INFOPLIST_FILE = "全民TV/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
@@ -624,7 +652,6 @@
 		};
 		5B83B00E1EF3B55100697AB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC99E46C2C4734AC68DA8413 /* Pods-全民TVTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "全民TVTests/Info.plist";
@@ -637,7 +664,6 @@
 		};
 		5B83B00F1EF3B55100697AB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 170C21EE9E73F7FB0D8A393F /* Pods-全民TVTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "全民TVTests/Info.plist";
@@ -650,7 +676,6 @@
 		};
 		5B83B0111EF3B55100697AB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B49F18DE3D7C1FB2C26FE78 /* Pods-全民TVUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "全民TVUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -662,7 +687,6 @@
 		};
 		5B83B0121EF3B55100697AB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DDADC38EA94C4A6F9822C55 /* Pods-全民TVUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "全民TVUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
