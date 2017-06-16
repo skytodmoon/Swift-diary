@@ -24,11 +24,9 @@
     // Do any additional setup after loading the view.
     [self setup];
     
-//    [self.tabBar setBackgroundImage:[UIImage imageWithColor:HexRGB(0xffffff)]];
+    [self settabbar];
     
-    [[UITabBarItem appearanceWhenContainedIn:[MainViewController class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithRed:253/255.0 green:198/255.0 blue:199/255.0 alpha:1.0] } forState:UIControlStateNormal];
-    
-    [[UITabBarItem appearanceWhenContainedIn:[MainViewController class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithRed:252/255.0 green:84/255.0 blue:88/255.0 alpha:1.0] } forState:UIControlStateSelected];
+
 }
 - (void)setup
 {
@@ -39,6 +37,15 @@
     [self addChildViewController:[[LiveListViewController alloc]init] title:@"直播" normalImageNamed:@"btn_tabbar_zhibo_normal_25x25_" selectedImageName:@"btn_tabbar_zhibo_selected_25x25_"];
     
     [self addChildViewController:[[ProfileViewController alloc]init] title:@"我的" normalImageNamed:@"btn_tabbar_wode_normal_25x25_" selectedImageName:@"btn_tabbar_wode_selected_25x25_"];
+}
+
+-(void)settabbar{
+
+    [self.tabBar setBackgroundImage:[UIImage imageWithColor:HexRGB(0xffffff)]];
+    
+    [[UITabBarItem appearanceWhenContainedIn:[MainViewController class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithRed:253/255.0 green:198/255.0 blue:199/255.0 alpha:1.0] } forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearanceWhenContainedIn:[MainViewController class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithRed:252/255.0 green:84/255.0 blue:88/255.0 alpha:1.0] } forState:UIControlStateSelected];
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString*)title normalImageNamed:(NSString *)imageName selectedImageName:(NSString*)selectedImageName
