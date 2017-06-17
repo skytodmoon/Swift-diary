@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B83AFE21EF3B55100697AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE11EF3B55100697AB8 /* main.m */; };
+		5B83AFE51EF3B55100697AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE41EF3B55100697AB8 /* AppDelegate.m */; };
+		5B83AFE81EF3B55100697AB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFE71EF3B55100697AB8 /* ViewController.m */; };
+		5B83AFEB1EF3B55100697AB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83AFE91EF3B55100697AB8 /* Main.storyboard */; };
+		5B83AFED1EF3B55100697AB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B83AFEC1EF3B55100697AB8 /* Assets.xcassets */; };
+		5B83AFF01EF3B55100697AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83AFEE1EF3B55100697AB8 /* LaunchScreen.storyboard */; };
+		5B83AFFB1EF3B55100697AB8 /* __TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83AFFA1EF3B55100697AB8 /* __TVTests.m */; };
+		5B83B0061EF3B55100697AB8 /* __TVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0051EF3B55100697AB8 /* __TVUITests.m */; };
+		5B83B01F1EF3B99800697AB8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B01E1EF3B99800697AB8 /* MainViewController.m */; };
+		5B83B0221EF3BA1100697AB8 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */; };
+		5B83B02E1EF3BB4000697AB8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */; };
+		5B83B0311EF3BB4B00697AB8 /* ColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */; };
+		5B83B0341EF3BB5500697AB8 /* LiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */; };
+		5B83B0371EF3BB5F00697AB8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */; };
+		5B83B0471EF3CB5200697AB8 /* TYPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B03F1EF3CB5200697AB8 /* TYPagerController.m */; };
+		5B83B0481EF3CB5200697AB8 /* TYTabButtonPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0411EF3CB5200697AB8 /* TYTabButtonPagerController.m */; };
+		5B83B0491EF3CB5200697AB8 /* TYTabPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0431EF3CB5200697AB8 /* TYTabPagerController.m */; };
+		5B83B04A1EF3CB5200697AB8 /* TYTabTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0461EF3CB5200697AB8 /* TYTabTitleViewCell.m */; };
+		5B83B0561EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0541EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m */; };
+		5B83B0591EF3CCE300697AB8 /* RefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */; };
+		E3B1B50D713BF36DDA7F8DE5 /* libPods-全民TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B83AFF71EF3B55100697AB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B83AFD51EF3B55100697AB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B83AFDC1EF3B55100697AB8;
+			remoteInfo = "全民TV";
+		};
+		5B83B0021EF3B55100697AB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B83AFD51EF3B55100697AB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B83AFDC1EF3B55100697AB8;
+			remoteInfo = "全民TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		110C99189C25D56D3F0C014C /* Pods-全民TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.debug.xcconfig"; sourceTree = "<group>"; };
+		40AA24561A8353ED376FA7F0 /* libPods-全民TVTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58B7642B6E5E63D484DEA525 /* Pods-全民TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.release.xcconfig"; sourceTree = "<group>"; };
+		5B83AFDD1EF3B55100697AB8 /* 全民TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全民TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83AFE11EF3B55100697AB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B83AFE31EF3B55100697AB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B83AFE41EF3B55100697AB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B83AFE61EF3B55100697AB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B83AFE71EF3B55100697AB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B83AFEA1EF3B55100697AB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B83AFEC1EF3B55100697AB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B83AFEF1EF3B55100697AB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B83AFF11EF3B55100697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83AFF61EF3B55100697AB8 /* 全民TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全民TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83AFFA1EF3B55100697AB8 /* __TVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TVTests.m; sourceTree = "<group>"; };
+		5B83AFFC1EF3B55100697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B0011EF3B55100697AB8 /* 全民TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全民TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83B0051EF3B55100697AB8 /* __TVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TVUITests.m; sourceTree = "<group>"; };
+		5B83B0071EF3B55100697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B01D1EF3B99800697AB8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5B83B01E1EF3B99800697AB8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5B83B0201EF3BA1100697AB8 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		5B83B0231EF3BA4700697AB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B83B02C1EF3BB4000697AB8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5B83B02F1EF3BB4B00697AB8 /* ColumnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnViewController.h; sourceTree = "<group>"; };
+		5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnViewController.m; sourceTree = "<group>"; };
+		5B83B0321EF3BB5500697AB8 /* LiveListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListViewController.h; sourceTree = "<group>"; };
+		5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewController.m; sourceTree = "<group>"; };
+		5B83B0351EF3BB5F00697AB8 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		5B83B03E1EF3CB5200697AB8 /* TYPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerController.h; sourceTree = "<group>"; };
+		5B83B03F1EF3CB5200697AB8 /* TYPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerController.m; sourceTree = "<group>"; };
+		5B83B0401EF3CB5200697AB8 /* TYTabButtonPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabButtonPagerController.h; sourceTree = "<group>"; };
+		5B83B0411EF3CB5200697AB8 /* TYTabButtonPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabButtonPagerController.m; sourceTree = "<group>"; };
+		5B83B0421EF3CB5200697AB8 /* TYTabPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerController.h; sourceTree = "<group>"; };
+		5B83B0431EF3CB5200697AB8 /* TYTabPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerController.m; sourceTree = "<group>"; };
+		5B83B0441EF3CB5200697AB8 /* TYTabTitleCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabTitleCellProtocol.h; sourceTree = "<group>"; };
+		5B83B0451EF3CB5200697AB8 /* TYTabTitleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabTitleViewCell.h; sourceTree = "<group>"; };
+		5B83B0461EF3CB5200697AB8 /* TYTabTitleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabTitleViewCell.m; sourceTree = "<group>"; };
+		5B83B0531EF3CCCA00697AB8 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		5B83B0541EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		5B83B0571EF3CCE300697AB8 /* RefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshGifHeader.h; sourceTree = "<group>"; };
+		5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshGifHeader.m; sourceTree = "<group>"; };
+		A142F3BE701224A56AC6820E /* libPods-全民TVUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B83AFDA1EF3B55100697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3B1B50D713BF36DDA7F8DE5 /* libPods-全民TV.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFF31EF3B55100697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFFE1EF3B55100697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08BE2CF59A62F7B2E371C18C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				110C99189C25D56D3F0C014C /* Pods-全民TV.debug.xcconfig */,
+				58B7642B6E5E63D484DEA525 /* Pods-全民TV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B83AFD41EF3B55100697AB8 = {
+			isa = PBXGroup;
+			children = (
+				5B83AFDF1EF3B55100697AB8 /* 全民TV */,
+				5B83AFF91EF3B55100697AB8 /* 全民TVTests */,
+				5B83B0041EF3B55100697AB8 /* 全民TVUITests */,
+				5B83AFDE1EF3B55100697AB8 /* Products */,
+				08BE2CF59A62F7B2E371C18C /* Pods */,
+				65B29F5025D3871C9D295269 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B83AFDE1EF3B55100697AB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B83AFDD1EF3B55100697AB8 /* 全民TV.app */,
+				5B83AFF61EF3B55100697AB8 /* 全民TVTests.xctest */,
+				5B83B0011EF3B55100697AB8 /* 全民TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B83AFDF1EF3B55100697AB8 /* 全民TV */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0161EF3B8DF00697AB8 /* Classes */,
+				5B83AFE31EF3B55100697AB8 /* AppDelegate.h */,
+				5B83AFE41EF3B55100697AB8 /* AppDelegate.m */,
+				5B83AFE61EF3B55100697AB8 /* ViewController.h */,
+				5B83AFE71EF3B55100697AB8 /* ViewController.m */,
+				5B83AFE91EF3B55100697AB8 /* Main.storyboard */,
+				5B83AFEC1EF3B55100697AB8 /* Assets.xcassets */,
+				5B83AFEE1EF3B55100697AB8 /* LaunchScreen.storyboard */,
+				5B83AFF11EF3B55100697AB8 /* Info.plist */,
+				5B83AFE01EF3B55100697AB8 /* Supporting Files */,
+			);
+			path = "全民TV";
+			sourceTree = "<group>";
+		};
+		5B83AFE01EF3B55100697AB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B83AFE11EF3B55100697AB8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B83AFF91EF3B55100697AB8 /* 全民TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B83AFFA1EF3B55100697AB8 /* __TVTests.m */,
+				5B83AFFC1EF3B55100697AB8 /* Info.plist */,
+			);
+			path = "全民TVTests";
+			sourceTree = "<group>";
+		};
+		5B83B0041EF3B55100697AB8 /* 全民TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0051EF3B55100697AB8 /* __TVUITests.m */,
+				5B83B0071EF3B55100697AB8 /* Info.plist */,
+			);
+			path = "全民TVUITests";
+			sourceTree = "<group>";
+		};
+		5B83B0161EF3B8DF00697AB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B03C1EF3CB5200697AB8 /* Vendors */,
+				5B83B0241EF3BB2F00697AB8 /* Column */,
+				5B83B0261EF3BB2F00697AB8 /* Home */,
+				5B83B0281EF3BB2F00697AB8 /* Live */,
+				5B83B02A1EF3BB2F00697AB8 /* Pfofile */,
+				5B83B0191EF3B93A00697AB8 /* Base */,
+				5B83B0171EF3B8F800697AB8 /* Main */,
+				5B83B0231EF3BA4700697AB8 /* PrefixHeader.pch */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B83B0171EF3B8F800697AB8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0181EF3B8F800697AB8 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B83B0181EF3B8F800697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B01D1EF3B99800697AB8 /* MainViewController.h */,
+				5B83B01E1EF3B99800697AB8 /* MainViewController.m */,
+				5B83B0201EF3BA1100697AB8 /* NavigationViewController.h */,
+				5B83B0211EF3BA1100697AB8 /* NavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0191EF3B93A00697AB8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5B83B0241EF3BB2F00697AB8 /* Column */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0251EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Column;
+			sourceTree = "<group>";
+		};
+		5B83B0251EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02F1EF3BB4B00697AB8 /* ColumnViewController.h */,
+				5B83B0301EF3BB4B00697AB8 /* ColumnViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0261EF3BB2F00697AB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0271EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B83B0271EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02C1EF3BB4000697AB8 /* HomeViewController.h */,
+				5B83B02D1EF3BB4000697AB8 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0281EF3BB2F00697AB8 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0291EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		5B83B0291EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0321EF3BB5500697AB8 /* LiveListViewController.h */,
+				5B83B0331EF3BB5500697AB8 /* LiveListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B02A1EF3BB2F00697AB8 /* Pfofile */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B02B1EF3BB2F00697AB8 /* Controller */,
+			);
+			path = Pfofile;
+			sourceTree = "<group>";
+		};
+		5B83B02B1EF3BB2F00697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0351EF3BB5F00697AB8 /* ProfileViewController.h */,
+				5B83B0361EF3BB5F00697AB8 /* ProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B03C1EF3CB5200697AB8 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0521EF3CCCA00697AB8 /* Extension */,
+				5B83B0551EF3CCCA00697AB8 /* Refresh */,
+				5B83B03D1EF3CB5200697AB8 /* TYPagerController */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		5B83B03D1EF3CB5200697AB8 /* TYPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B03E1EF3CB5200697AB8 /* TYPagerController.h */,
+				5B83B03F1EF3CB5200697AB8 /* TYPagerController.m */,
+				5B83B0401EF3CB5200697AB8 /* TYTabButtonPagerController.h */,
+				5B83B0411EF3CB5200697AB8 /* TYTabButtonPagerController.m */,
+				5B83B0421EF3CB5200697AB8 /* TYTabPagerController.h */,
+				5B83B0431EF3CB5200697AB8 /* TYTabPagerController.m */,
+				5B83B0441EF3CB5200697AB8 /* TYTabTitleCellProtocol.h */,
+				5B83B0451EF3CB5200697AB8 /* TYTabTitleViewCell.h */,
+				5B83B0461EF3CB5200697AB8 /* TYTabTitleViewCell.m */,
+			);
+			path = TYPagerController;
+			sourceTree = "<group>";
+		};
+		5B83B0521EF3CCCA00697AB8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0531EF3CCCA00697AB8 /* UIBarButtonItem+Extension.h */,
+				5B83B0541EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5B83B0551EF3CCCA00697AB8 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0571EF3CCE300697AB8 /* RefreshGifHeader.h */,
+				5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		65B29F5025D3871C9D295269 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */,
+				40AA24561A8353ED376FA7F0 /* libPods-全民TVTests.a */,
+				A142F3BE701224A56AC6820E /* libPods-全民TVUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B83AFDC1EF3B55100697AB8 /* 全民TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B00A1EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TV" */;
+			buildPhases = (
+				23145891D329B72A789FF062 /* [CP] Check Pods Manifest.lock */,
+				5B83AFD91EF3B55100697AB8 /* Sources */,
+				5B83AFDA1EF3B55100697AB8 /* Frameworks */,
+				5B83AFDB1EF3B55100697AB8 /* Resources */,
+				D8FA5C4AA14008FCE731BD49 /* [CP] Embed Pods Frameworks */,
+				161E53C41C03BD9DF6283AF1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "全民TV";
+			productName = "全民TV";
+			productReference = 5B83AFDD1EF3B55100697AB8 /* 全民TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B83AFF51EF3B55100697AB8 /* 全民TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B00D1EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVTests" */;
+			buildPhases = (
+				5B83AFF21EF3B55100697AB8 /* Sources */,
+				5B83AFF31EF3B55100697AB8 /* Frameworks */,
+				5B83AFF41EF3B55100697AB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B83AFF81EF3B55100697AB8 /* PBXTargetDependency */,
+			);
+			name = "全民TVTests";
+			productName = "全民TVTests";
+			productReference = 5B83AFF61EF3B55100697AB8 /* 全民TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B83B0001EF3B55100697AB8 /* 全民TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B0101EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVUITests" */;
+			buildPhases = (
+				5B83AFFD1EF3B55100697AB8 /* Sources */,
+				5B83AFFE1EF3B55100697AB8 /* Frameworks */,
+				5B83AFFF1EF3B55100697AB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B83B0031EF3B55100697AB8 /* PBXTargetDependency */,
+			);
+			name = "全民TVUITests";
+			productName = "全民TVUITests";
+			productReference = 5B83B0011EF3B55100697AB8 /* 全民TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B83AFD51EF3B55100697AB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B83AFDC1EF3B55100697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5B83AFF51EF3B55100697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B83AFDC1EF3B55100697AB8;
+					};
+					5B83B0001EF3B55100697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B83AFDC1EF3B55100697AB8;
+					};
+				};
+			};
+			buildConfigurationList = 5B83AFD81EF3B55100697AB8 /* Build configuration list for PBXProject "全民TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B83AFD41EF3B55100697AB8;
+			productRefGroup = 5B83AFDE1EF3B55100697AB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B83AFDC1EF3B55100697AB8 /* 全民TV */,
+				5B83AFF51EF3B55100697AB8 /* 全民TVTests */,
+				5B83B0001EF3B55100697AB8 /* 全民TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B83AFDB1EF3B55100697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83AFF01EF3B55100697AB8 /* LaunchScreen.storyboard in Resources */,
+				5B83AFED1EF3B55100697AB8 /* Assets.xcassets in Resources */,
+				5B83AFEB1EF3B55100697AB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFF41EF3B55100697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFFF1EF3B55100697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		161E53C41C03BD9DF6283AF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TV/Pods-全民TV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23145891D329B72A789FF062 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8FA5C4AA14008FCE731BD49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TV/Pods-全民TV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B83AFD91EF3B55100697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83AFE81EF3B55100697AB8 /* ViewController.m in Sources */,
+				5B83B0371EF3BB5F00697AB8 /* ProfileViewController.m in Sources */,
+				5B83B0481EF3CB5200697AB8 /* TYTabButtonPagerController.m in Sources */,
+				5B83B0471EF3CB5200697AB8 /* TYPagerController.m in Sources */,
+				5B83B04A1EF3CB5200697AB8 /* TYTabTitleViewCell.m in Sources */,
+				5B83B0221EF3BA1100697AB8 /* NavigationViewController.m in Sources */,
+				5B83AFE51EF3B55100697AB8 /* AppDelegate.m in Sources */,
+				5B83B0591EF3CCE300697AB8 /* RefreshGifHeader.m in Sources */,
+				5B83B01F1EF3B99800697AB8 /* MainViewController.m in Sources */,
+				5B83B0561EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m in Sources */,
+				5B83B0491EF3CB5200697AB8 /* TYTabPagerController.m in Sources */,
+				5B83B0311EF3BB4B00697AB8 /* ColumnViewController.m in Sources */,
+				5B83AFE21EF3B55100697AB8 /* main.m in Sources */,
+				5B83B0341EF3BB5500697AB8 /* LiveListViewController.m in Sources */,
+				5B83B02E1EF3BB4000697AB8 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFF21EF3B55100697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83AFFB1EF3B55100697AB8 /* __TVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83AFFD1EF3B55100697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83B0061EF3B55100697AB8 /* __TVUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B83AFF81EF3B55100697AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B83AFDC1EF3B55100697AB8 /* 全民TV */;
+			targetProxy = 5B83AFF71EF3B55100697AB8 /* PBXContainerItemProxy */;
+		};
+		5B83B0031EF3B55100697AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B83AFDC1EF3B55100697AB8 /* 全民TV */;
+			targetProxy = 5B83B0021EF3B55100697AB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B83AFE91EF3B55100697AB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B83AFEA1EF3B55100697AB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B83AFEE1EF3B55100697AB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B83AFEF1EF3B55100697AB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B83B0081EF3B55100697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B83B0091EF3B55100697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B83B00B1EF3B55100697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110C99189C25D56D3F0C014C /* Pods-全民TV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "全民TV/Classes/PrefixHeader.pch";
+				INFOPLIST_FILE = "全民TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B83B00C1EF3B55100697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B7642B6E5E63D484DEA525 /* Pods-全民TV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "全民TV/Classes/PrefixHeader.pch";
+				INFOPLIST_FILE = "全民TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B83B00E1EF3B55100697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "全民TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/全民TV.app/全民TV";
+			};
+			name = Debug;
+		};
+		5B83B00F1EF3B55100697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "全民TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/全民TV.app/全民TV";
+			};
+			name = Release;
+		};
+		5B83B0111EF3B55100697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "全民TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "全民TV";
+			};
+			name = Debug;
+		};
+		5B83B0121EF3B55100697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "全民TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "全民TV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B83AFD81EF3B55100697AB8 /* Build configuration list for PBXProject "全民TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0081EF3B55100697AB8 /* Debug */,
+				5B83B0091EF3B55100697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B83B00A1EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B00B1EF3B55100697AB8 /* Debug */,
+				5B83B00C1EF3B55100697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B83B00D1EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B00E1EF3B55100697AB8 /* Debug */,
+				5B83B00F1EF3B55100697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B83B0101EF3B55100697AB8 /* Build configuration list for PBXNativeTarget "全民TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0111EF3B55100697AB8 /* Debug */,
+				5B83B0121EF3B55100697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B83AFD51EF3B55100697AB8 /* Project object */;
+}
