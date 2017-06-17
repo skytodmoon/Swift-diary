@@ -481,4 +481,28 @@ print(protocolValue.simpleDescription)
 //即使protocolValue变量运行时的类型是simpleClass，编译器会把它的类型当做ExampleProtocol。这表示
 //=========================错误处理======================
 
+enum PrinterError: Error {
+    case OutOfPaper
+    case NoToner
+    case OnFire
+}
+
+//使用throw来抛出一个错误并使用throws来表示一个可以抛出错误的函数。如果在函数中抛出一个错误，这个函数会立刻返回并且调用该函数的代码会进行错误处理。
+
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner"{
+        throw PrinterError.NoToner
+    }
+    return "Job sent"
+}
+
+//有多种方式可以用来进行错误处理。一种方式是使用do-catch。在do代码块中，使用try来标记可以抛出错误的代码。在catch代码块中，除非你另外命名，否则错误会自动命名为error。
+
+do {
+    let printResponse = try send(job: 1040, toPrinter: "Bi Shen")
+    print(printResponse)
+}catch{
+    print(error)
+}
+
 
