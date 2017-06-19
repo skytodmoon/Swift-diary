@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B83B0811EF7B0F700697AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0801EF7B0F700697AB8 /* main.m */; };
+		5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0831EF7B0F700697AB8 /* AppDelegate.m */; };
+		5B83B0871EF7B0F700697AB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0861EF7B0F700697AB8 /* ViewController.m */; };
+		5B83B08A1EF7B0F700697AB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B0881EF7B0F700697AB8 /* Main.storyboard */; };
+		5B83B08C1EF7B0F700697AB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B08B1EF7B0F700697AB8 /* Assets.xcassets */; };
+		5B83B08F1EF7B0F700697AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B08D1EF7B0F700697AB8 /* LaunchScreen.storyboard */; };
+		5B83B09A1EF7B0F800697AB8 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0991EF7B0F800697AB8 /* __Tests.m */; };
+		5B83B0A51EF7B0F800697AB8 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0A41EF7B0F800697AB8 /* __UITests.m */; };
+		B320AC10B262061334EDC3A4 /* libPods-京东.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */; };
+		DFF8BFC01DC669B22AC45E67 /* libPods-京东Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD09137887A17656CCCC67E6 /* libPods-京东Tests.a */; };
+		E6AB3F5FFA6636B5A3BC34A7 /* libPods-京东UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5177CF3DE5C1858B17BEE6 /* libPods-京东UITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B83B0961EF7B0F800697AB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B83B0741EF7B0F700697AB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B83B07B1EF7B0F700697AB8;
+			remoteInfo = "京东";
+		};
+		5B83B0A11EF7B0F800697AB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B83B0741EF7B0F700697AB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B83B07B1EF7B0F700697AB8;
+			remoteInfo = "京东";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A080EBE0149FE9ED7A04BCA /* Pods-京东Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-京东Tests/Pods-京东Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B83B07C1EF7B0F700697AB8 /* 京东.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "京东.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83B0801EF7B0F700697AB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B83B0821EF7B0F700697AB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B83B0831EF7B0F700697AB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B83B0851EF7B0F700697AB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B83B0861EF7B0F700697AB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B83B0891EF7B0F700697AB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B83B08B1EF7B0F700697AB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B83B08E1EF7B0F700697AB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B83B0901EF7B0F700697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B0951EF7B0F800697AB8 /* 京东Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "京东Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83B0991EF7B0F800697AB8 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		5B83B09B1EF7B0F800697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B0A01EF7B0F800697AB8 /* 京东UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "京东UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B83B0A41EF7B0F800697AB8 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
+		5B83B0A61EF7B0F800697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-京东.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B6B3607407B54DFF1842D5 /* Pods-京东.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.release.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.release.xcconfig"; sourceTree = "<group>"; };
+		71AA6333CD46772885647540 /* Pods-京东UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-京东UITests/Pods-京东UITests.release.xcconfig"; sourceTree = "<group>"; };
+		7450174FEB9F0B793DAC3C0F /* Pods-京东.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.debug.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.debug.xcconfig"; sourceTree = "<group>"; };
+		7F3AD3F4C844AAB2DDB119C4 /* Pods-京东Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-京东Tests/Pods-京东Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BD09137887A17656CCCC67E6 /* libPods-京东Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-京东Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BF49209D53B3B12B15FDD2 /* Pods-京东UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-京东UITests/Pods-京东UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB5177CF3DE5C1858B17BEE6 /* libPods-京东UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-京东UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B83B0791EF7B0F700697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B320AC10B262061334EDC3A4 /* libPods-京东.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B0921EF7B0F800697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF8BFC01DC669B22AC45E67 /* libPods-京东Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B09D1EF7B0F800697AB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6AB3F5FFA6636B5A3BC34A7 /* libPods-京东UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B83B0731EF7B0F700697AB8 = {
+			isa = PBXGroup;
+			children = (
+				5B83B07E1EF7B0F700697AB8 /* 京东 */,
+				5B83B0981EF7B0F800697AB8 /* 京东Tests */,
+				5B83B0A31EF7B0F800697AB8 /* 京东UITests */,
+				5B83B07D1EF7B0F700697AB8 /* Products */,
+				E3F3E8FB49F89C881A6F9C50 /* Pods */,
+				6C1A38601C9CE730863396BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B83B07D1EF7B0F700697AB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B07C1EF7B0F700697AB8 /* 京东.app */,
+				5B83B0951EF7B0F800697AB8 /* 京东Tests.xctest */,
+				5B83B0A01EF7B0F800697AB8 /* 京东UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B83B07E1EF7B0F700697AB8 /* 京东 */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0821EF7B0F700697AB8 /* AppDelegate.h */,
+				5B83B0831EF7B0F700697AB8 /* AppDelegate.m */,
+				5B83B0851EF7B0F700697AB8 /* ViewController.h */,
+				5B83B0861EF7B0F700697AB8 /* ViewController.m */,
+				5B83B0881EF7B0F700697AB8 /* Main.storyboard */,
+				5B83B08B1EF7B0F700697AB8 /* Assets.xcassets */,
+				5B83B08D1EF7B0F700697AB8 /* LaunchScreen.storyboard */,
+				5B83B0901EF7B0F700697AB8 /* Info.plist */,
+				5B83B07F1EF7B0F700697AB8 /* Supporting Files */,
+			);
+			path = "京东";
+			sourceTree = "<group>";
+		};
+		5B83B07F1EF7B0F700697AB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0801EF7B0F700697AB8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B83B0981EF7B0F800697AB8 /* 京东Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0991EF7B0F800697AB8 /* __Tests.m */,
+				5B83B09B1EF7B0F800697AB8 /* Info.plist */,
+			);
+			path = "京东Tests";
+			sourceTree = "<group>";
+		};
+		5B83B0A31EF7B0F800697AB8 /* 京东UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0A41EF7B0F800697AB8 /* __UITests.m */,
+				5B83B0A61EF7B0F800697AB8 /* Info.plist */,
+			);
+			path = "京东UITests";
+			sourceTree = "<group>";
+		};
+		6C1A38601C9CE730863396BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */,
+				BD09137887A17656CCCC67E6 /* libPods-京东Tests.a */,
+				FB5177CF3DE5C1858B17BEE6 /* libPods-京东UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3F3E8FB49F89C881A6F9C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7450174FEB9F0B793DAC3C0F /* Pods-京东.debug.xcconfig */,
+				64B6B3607407B54DFF1842D5 /* Pods-京东.release.xcconfig */,
+				3A080EBE0149FE9ED7A04BCA /* Pods-京东Tests.debug.xcconfig */,
+				7F3AD3F4C844AAB2DDB119C4 /* Pods-京东Tests.release.xcconfig */,
+				D3BF49209D53B3B12B15FDD2 /* Pods-京东UITests.debug.xcconfig */,
+				71AA6333CD46772885647540 /* Pods-京东UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B83B07B1EF7B0F700697AB8 /* 京东 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B0A91EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东" */;
+			buildPhases = (
+				8EC0D0E2CF07DEBED9044558 /* [CP] Check Pods Manifest.lock */,
+				5B83B0781EF7B0F700697AB8 /* Sources */,
+				5B83B0791EF7B0F700697AB8 /* Frameworks */,
+				5B83B07A1EF7B0F700697AB8 /* Resources */,
+				3E1A842669108E0844638071 /* [CP] Embed Pods Frameworks */,
+				4D4237965A4B908220376D41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "京东";
+			productName = "京东";
+			productReference = 5B83B07C1EF7B0F700697AB8 /* 京东.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B83B0941EF7B0F800697AB8 /* 京东Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B0AC1EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东Tests" */;
+			buildPhases = (
+				FA64B6F84AF4F0B7A489C1D5 /* [CP] Check Pods Manifest.lock */,
+				5B83B0911EF7B0F800697AB8 /* Sources */,
+				5B83B0921EF7B0F800697AB8 /* Frameworks */,
+				5B83B0931EF7B0F800697AB8 /* Resources */,
+				A42686FD9D0256185BEA9952 /* [CP] Embed Pods Frameworks */,
+				C5958325E0DC7B5610BC92CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B83B0971EF7B0F800697AB8 /* PBXTargetDependency */,
+			);
+			name = "京东Tests";
+			productName = "京东Tests";
+			productReference = 5B83B0951EF7B0F800697AB8 /* 京东Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B83B09F1EF7B0F800697AB8 /* 京东UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B83B0AF1EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东UITests" */;
+			buildPhases = (
+				ABE19BE2480B0B0AF0B9D54A /* [CP] Check Pods Manifest.lock */,
+				5B83B09C1EF7B0F800697AB8 /* Sources */,
+				5B83B09D1EF7B0F800697AB8 /* Frameworks */,
+				5B83B09E1EF7B0F800697AB8 /* Resources */,
+				1663D021275718771BE07B2F /* [CP] Embed Pods Frameworks */,
+				1BAC3D409DEC635B4071FD5F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B83B0A21EF7B0F800697AB8 /* PBXTargetDependency */,
+			);
+			name = "京东UITests";
+			productName = "京东UITests";
+			productReference = 5B83B0A01EF7B0F800697AB8 /* 京东UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B83B0741EF7B0F700697AB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B83B07B1EF7B0F700697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5B83B0941EF7B0F800697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B83B07B1EF7B0F700697AB8;
+					};
+					5B83B09F1EF7B0F800697AB8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B83B07B1EF7B0F700697AB8;
+					};
+				};
+			};
+			buildConfigurationList = 5B83B0771EF7B0F700697AB8 /* Build configuration list for PBXProject "京东" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B83B0731EF7B0F700697AB8;
+			productRefGroup = 5B83B07D1EF7B0F700697AB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B83B07B1EF7B0F700697AB8 /* 京东 */,
+				5B83B0941EF7B0F800697AB8 /* 京东Tests */,
+				5B83B09F1EF7B0F800697AB8 /* 京东UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B83B07A1EF7B0F700697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83B08F1EF7B0F700697AB8 /* LaunchScreen.storyboard in Resources */,
+				5B83B08C1EF7B0F700697AB8 /* Assets.xcassets in Resources */,
+				5B83B08A1EF7B0F700697AB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B0931EF7B0F800697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B09E1EF7B0F800697AB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1663D021275718771BE07B2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东UITests/Pods-京东UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BAC3D409DEC635B4071FD5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东UITests/Pods-京东UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E1A842669108E0844638071 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东/Pods-京东-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D4237965A4B908220376D41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东/Pods-京东-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC0D0E2CF07DEBED9044558 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A42686FD9D0256185BEA9952 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东Tests/Pods-京东Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE19BE2480B0B0AF0B9D54A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5958325E0DC7B5610BC92CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-京东Tests/Pods-京东Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA64B6F84AF4F0B7A489C1D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B83B0781EF7B0F700697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83B0871EF7B0F700697AB8 /* ViewController.m in Sources */,
+				5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */,
+				5B83B0811EF7B0F700697AB8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B0911EF7B0F800697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83B09A1EF7B0F800697AB8 /* __Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B83B09C1EF7B0F800697AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B83B0A51EF7B0F800697AB8 /* __UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B83B0971EF7B0F800697AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B83B07B1EF7B0F700697AB8 /* 京东 */;
+			targetProxy = 5B83B0961EF7B0F800697AB8 /* PBXContainerItemProxy */;
+		};
+		5B83B0A21EF7B0F800697AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B83B07B1EF7B0F700697AB8 /* 京东 */;
+			targetProxy = 5B83B0A11EF7B0F800697AB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B83B0881EF7B0F700697AB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B83B0891EF7B0F700697AB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B83B08D1EF7B0F700697AB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B83B08E1EF7B0F700697AB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B83B0A71EF7B0F800697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B83B0A81EF7B0F800697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B83B0AA1EF7B0F800697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7450174FEB9F0B793DAC3C0F /* Pods-京东.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "京东/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B83B0AB1EF7B0F800697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64B6B3607407B54DFF1842D5 /* Pods-京东.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "京东/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B83B0AD1EF7B0F800697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A080EBE0149FE9ED7A04BCA /* Pods-京东Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "京东Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/京东.app/京东";
+			};
+			name = Debug;
+		};
+		5B83B0AE1EF7B0F800697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F3AD3F4C844AAB2DDB119C4 /* Pods-京东Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "京东Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/京东.app/京东";
+			};
+			name = Release;
+		};
+		5B83B0B01EF7B0F800697AB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3BF49209D53B3B12B15FDD2 /* Pods-京东UITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "京东UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "京东";
+			};
+			name = Debug;
+		};
+		5B83B0B11EF7B0F800697AB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71AA6333CD46772885647540 /* Pods-京东UITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "京东UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "京东";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B83B0771EF7B0F700697AB8 /* Build configuration list for PBXProject "京东" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0A71EF7B0F800697AB8 /* Debug */,
+				5B83B0A81EF7B0F800697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B83B0A91EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0AA1EF7B0F800697AB8 /* Debug */,
+				5B83B0AB1EF7B0F800697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B83B0AC1EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0AD1EF7B0F800697AB8 /* Debug */,
+				5B83B0AE1EF7B0F800697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B83B0AF1EF7B0F800697AB8 /* Build configuration list for PBXNativeTarget "京东UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B83B0B01EF7B0F800697AB8 /* Debug */,
+				5B83B0B11EF7B0F800697AB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B83B0741EF7B0F700697AB8 /* Project object */;
+}
