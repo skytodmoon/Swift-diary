@@ -18,6 +18,10 @@
 		5B83B0B91EF7C52500697AB8 /* QJLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0B81EF7C52500697AB8 /* QJLTabBarController.m */; };
 		5B83B0BC1EF7C53A00697AB8 /* QJLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */; };
 		5B83B0C21EF7C99D00697AB8 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */; };
+		5B83B0D21EF7D0D900697AB8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0D11EF7D0D900697AB8 /* HomeViewController.m */; };
+		5B83B0D51EF7D0F000697AB8 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0D41EF7D0F000697AB8 /* CategoryViewController.m */; };
+		5B83B0D81EF7D10400697AB8 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0D71EF7D10400697AB8 /* CartViewController.m */; };
+		5B83B0DB1EF7D11C00697AB8 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0DA1EF7D11C00697AB8 /* MyViewController.m */; };
 		B320AC10B262061334EDC3A4 /* libPods-京东.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,14 @@
 		5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLNavigationController.m; sourceTree = "<group>"; };
 		5B83B0C01EF7C99D00697AB8 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		5B83B0D01EF7D0D900697AB8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B83B0D11EF7D0D900697AB8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5B83B0D31EF7D0F000697AB8 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		5B83B0D41EF7D0F000697AB8 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		5B83B0D61EF7D10400697AB8 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		5B83B0D71EF7D10400697AB8 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		5B83B0D91EF7D11C00697AB8 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		5B83B0DA1EF7D11C00697AB8 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-京东.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B6B3607407B54DFF1842D5 /* Pods-京东.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.release.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.release.xcconfig"; sourceTree = "<group>"; };
 		7450174FEB9F0B793DAC3C0F /* Pods-京东.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.debug.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +176,10 @@
 		5B83B0B41EF7C4EC00697AB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B83B0C81EF7D0C300697AB8 /* Cart */,
+				5B83B0CA1EF7D0C300697AB8 /* Category */,
+				5B83B0CC1EF7D0C300697AB8 /* Home */,
+				5B83B0CE1EF7D0C300697AB8 /* My */,
 				5B83B0B51EF7C50500697AB8 /* Mian */,
 			);
 			path = Classes;
@@ -186,6 +202,74 @@
 				5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */,
 				5B83B0C01EF7C99D00697AB8 /* GuideViewController.h */,
 				5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0C81EF7D0C300697AB8 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0C91EF7D0C300697AB8 /* Controller */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		5B83B0C91EF7D0C300697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0D61EF7D10400697AB8 /* CartViewController.h */,
+				5B83B0D71EF7D10400697AB8 /* CartViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0CA1EF7D0C300697AB8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0CB1EF7D0C300697AB8 /* Controller */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5B83B0CB1EF7D0C300697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0D31EF7D0F000697AB8 /* CategoryViewController.h */,
+				5B83B0D41EF7D0F000697AB8 /* CategoryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0CC1EF7D0C300697AB8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0CD1EF7D0C300697AB8 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B83B0CD1EF7D0C300697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0D01EF7D0D900697AB8 /* HomeViewController.h */,
+				5B83B0D11EF7D0D900697AB8 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B83B0CE1EF7D0C300697AB8 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0CF1EF7D0C300697AB8 /* Controller */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		5B83B0CF1EF7D0C300697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0D91EF7D11C00697AB8 /* MyViewController.h */,
+				5B83B0DA1EF7D11C00697AB8 /* MyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,11 +474,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B83B0D51EF7D0F000697AB8 /* CategoryViewController.m in Sources */,
 				5B83B0871EF7B0F700697AB8 /* ViewController.m in Sources */,
 				5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */,
 				5B83B0BC1EF7C53A00697AB8 /* QJLNavigationController.m in Sources */,
+				5B83B0DB1EF7D11C00697AB8 /* MyViewController.m in Sources */,
 				5B83B0811EF7B0F700697AB8 /* main.m in Sources */,
 				5B83B0B91EF7C52500697AB8 /* QJLTabBarController.m in Sources */,
+				5B83B0D21EF7D0D900697AB8 /* HomeViewController.m in Sources */,
+				5B83B0D81EF7D10400697AB8 /* CartViewController.m in Sources */,
 				5B83B0C21EF7C99D00697AB8 /* GuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
