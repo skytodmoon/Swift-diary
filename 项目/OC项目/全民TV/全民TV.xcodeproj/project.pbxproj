@@ -27,6 +27,10 @@
 		5B83B04A1EF3CB5200697AB8 /* TYTabTitleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0461EF3CB5200697AB8 /* TYTabTitleViewCell.m */; };
 		5B83B0561EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0541EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m */; };
 		5B83B0591EF3CCE300697AB8 /* RefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */; };
+		5B83B05D1EF75C7E00697AB8 /* UIDevice+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B05C1EF75C7E00697AB8 /* UIDevice+Extension.m */; };
+		5B83B0611EF75CB600697AB8 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0601EF75CB600697AB8 /* UIImageView+Extension.m */; };
+		5B83B0651EF75D7800697AB8 /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0641EF75D7800697AB8 /* NSObject+HUD.m */; };
+		5B83B0681EF75D8100697AB8 /* NSObject+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0671EF75D8100697AB8 /* NSObject+Toast.m */; };
 		E3B1B50D713BF36DDA7F8DE5 /* libPods-全民TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +97,14 @@
 		5B83B0541EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		5B83B0571EF3CCE300697AB8 /* RefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshGifHeader.h; sourceTree = "<group>"; };
 		5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshGifHeader.m; sourceTree = "<group>"; };
+		5B83B05B1EF75C7E00697AB8 /* UIDevice+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extension.h"; sourceTree = "<group>"; };
+		5B83B05C1EF75C7E00697AB8 /* UIDevice+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extension.m"; sourceTree = "<group>"; };
+		5B83B05F1EF75CB600697AB8 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		5B83B0601EF75CB600697AB8 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		5B83B0631EF75D7800697AB8 /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
+		5B83B0641EF75D7800697AB8 /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		5B83B0661EF75D8100697AB8 /* NSObject+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Toast.h"; sourceTree = "<group>"; };
+		5B83B0671EF75D8100697AB8 /* NSObject+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Toast.m"; sourceTree = "<group>"; };
 		A142F3BE701224A56AC6820E /* libPods-全民TVUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FEDAD774BD44CCD77527EE /* libPods-全民TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -309,6 +321,9 @@
 		5B83B03C1EF3CB5200697AB8 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				5B83B0621EF75D6800697AB8 /* HUD+Toast */,
+				5B83B05E1EF75CA100697AB8 /* ImageView */,
+				5B83B05A1EF75C6B00697AB8 /* Device */,
 				5B83B0521EF3CCCA00697AB8 /* Extension */,
 				5B83B0551EF3CCCA00697AB8 /* Refresh */,
 				5B83B03D1EF3CB5200697AB8 /* TYPagerController */,
@@ -348,6 +363,35 @@
 				5B83B0581EF3CCE300697AB8 /* RefreshGifHeader.m */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		5B83B05A1EF75C6B00697AB8 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B05B1EF75C7E00697AB8 /* UIDevice+Extension.h */,
+				5B83B05C1EF75C7E00697AB8 /* UIDevice+Extension.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		5B83B05E1EF75CA100697AB8 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B05F1EF75CB600697AB8 /* UIImageView+Extension.h */,
+				5B83B0601EF75CB600697AB8 /* UIImageView+Extension.m */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		5B83B0621EF75D6800697AB8 /* HUD+Toast */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0631EF75D7800697AB8 /* NSObject+HUD.h */,
+				5B83B0641EF75D7800697AB8 /* NSObject+HUD.m */,
+				5B83B0661EF75D8100697AB8 /* NSObject+Toast.h */,
+				5B83B0671EF75D8100697AB8 /* NSObject+Toast.m */,
+			);
+			path = "HUD+Toast";
 			sourceTree = "<group>";
 		};
 		65B29F5025D3871C9D295269 /* Frameworks */ = {
@@ -546,12 +590,16 @@
 				5B83B0481EF3CB5200697AB8 /* TYTabButtonPagerController.m in Sources */,
 				5B83B0471EF3CB5200697AB8 /* TYPagerController.m in Sources */,
 				5B83B04A1EF3CB5200697AB8 /* TYTabTitleViewCell.m in Sources */,
+				5B83B05D1EF75C7E00697AB8 /* UIDevice+Extension.m in Sources */,
 				5B83B0221EF3BA1100697AB8 /* NavigationViewController.m in Sources */,
 				5B83AFE51EF3B55100697AB8 /* AppDelegate.m in Sources */,
 				5B83B0591EF3CCE300697AB8 /* RefreshGifHeader.m in Sources */,
+				5B83B0651EF75D7800697AB8 /* NSObject+HUD.m in Sources */,
 				5B83B01F1EF3B99800697AB8 /* MainViewController.m in Sources */,
 				5B83B0561EF3CCCA00697AB8 /* UIBarButtonItem+Extension.m in Sources */,
 				5B83B0491EF3CB5200697AB8 /* TYTabPagerController.m in Sources */,
+				5B83B0611EF75CB600697AB8 /* UIImageView+Extension.m in Sources */,
+				5B83B0681EF75D8100697AB8 /* NSObject+Toast.m in Sources */,
 				5B83B0311EF3BB4B00697AB8 /* ColumnViewController.m in Sources */,
 				5B83AFE21EF3B55100697AB8 /* main.m in Sources */,
 				5B83B0341EF3BB5500697AB8 /* LiveListViewController.m in Sources */,
