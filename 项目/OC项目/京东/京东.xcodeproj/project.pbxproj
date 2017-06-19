@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B83B0811EF7B0F700697AB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0801EF7B0F700697AB8 /* main.m */; };
-		5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0831EF7B0F700697AB8 /* AppDelegate.m */; };
+		5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0831EF7B0F700697AB8 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5B83B0871EF7B0F700697AB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0861EF7B0F700697AB8 /* ViewController.m */; };
 		5B83B08A1EF7B0F700697AB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B0881EF7B0F700697AB8 /* Main.storyboard */; };
 		5B83B08C1EF7B0F700697AB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B08B1EF7B0F700697AB8 /* Assets.xcassets */; };
 		5B83B08F1EF7B0F700697AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B83B08D1EF7B0F700697AB8 /* LaunchScreen.storyboard */; };
 		5B83B09A1EF7B0F800697AB8 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0991EF7B0F800697AB8 /* __Tests.m */; };
 		5B83B0A51EF7B0F800697AB8 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0A41EF7B0F800697AB8 /* __UITests.m */; };
+		5B83B0B91EF7C52500697AB8 /* QJLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0B81EF7C52500697AB8 /* QJLTabBarController.m */; };
+		5B83B0BC1EF7C53A00697AB8 /* QJLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */; };
+		5B83B0C21EF7C99D00697AB8 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */; };
 		B320AC10B262061334EDC3A4 /* libPods-京东.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,13 @@
 		5B83B0A01EF7B0F800697AB8 /* 京东UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "京东UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B83B0A41EF7B0F800697AB8 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		5B83B0A61EF7B0F800697AB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B83B0B31EF7C44D00697AB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B83B0B71EF7C52500697AB8 /* QJLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLTabBarController.h; sourceTree = "<group>"; };
+		5B83B0B81EF7C52500697AB8 /* QJLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLTabBarController.m; sourceTree = "<group>"; };
+		5B83B0BA1EF7C53A00697AB8 /* QJLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QJLNavigationController.h; sourceTree = "<group>"; };
+		5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QJLNavigationController.m; sourceTree = "<group>"; };
+		5B83B0C01EF7C99D00697AB8 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		5CFADC762BDFAEE1CCEA224D /* libPods-京东.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-京东.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B6B3607407B54DFF1842D5 /* Pods-京东.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.release.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.release.xcconfig"; sourceTree = "<group>"; };
 		7450174FEB9F0B793DAC3C0F /* Pods-京东.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-京东.debug.xcconfig"; path = "Pods/Target Support Files/Pods-京东/Pods-京东.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 		5B83B07E1EF7B0F700697AB8 /* 京东 */ = {
 			isa = PBXGroup;
 			children = (
+				5B83B0B41EF7C4EC00697AB8 /* Classes */,
 				5B83B0821EF7B0F700697AB8 /* AppDelegate.h */,
 				5B83B0831EF7B0F700697AB8 /* AppDelegate.m */,
 				5B83B0851EF7B0F700697AB8 /* ViewController.h */,
@@ -119,6 +130,7 @@
 				5B83B08D1EF7B0F700697AB8 /* LaunchScreen.storyboard */,
 				5B83B0901EF7B0F700697AB8 /* Info.plist */,
 				5B83B07F1EF7B0F700697AB8 /* Supporting Files */,
+				5B83B0B31EF7C44D00697AB8 /* PrefixHeader.pch */,
 			);
 			path = "京东";
 			sourceTree = "<group>";
@@ -147,6 +159,35 @@
 				5B83B0A61EF7B0F800697AB8 /* Info.plist */,
 			);
 			path = "京东UITests";
+			sourceTree = "<group>";
+		};
+		5B83B0B41EF7C4EC00697AB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0B51EF7C50500697AB8 /* Mian */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B83B0B51EF7C50500697AB8 /* Mian */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0B61EF7C50500697AB8 /* Controller */,
+			);
+			path = Mian;
+			sourceTree = "<group>";
+		};
+		5B83B0B61EF7C50500697AB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B83B0B71EF7C52500697AB8 /* QJLTabBarController.h */,
+				5B83B0B81EF7C52500697AB8 /* QJLTabBarController.m */,
+				5B83B0BA1EF7C53A00697AB8 /* QJLNavigationController.h */,
+				5B83B0BB1EF7C53A00697AB8 /* QJLNavigationController.m */,
+				5B83B0C01EF7C99D00697AB8 /* GuideViewController.h */,
+				5B83B0C11EF7C99D00697AB8 /* GuideViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		6C1A38601C9CE730863396BB /* Frameworks */ = {
@@ -351,7 +392,10 @@
 			files = (
 				5B83B0871EF7B0F700697AB8 /* ViewController.m in Sources */,
 				5B83B0841EF7B0F700697AB8 /* AppDelegate.m in Sources */,
+				5B83B0BC1EF7C53A00697AB8 /* QJLNavigationController.m in Sources */,
 				5B83B0811EF7B0F700697AB8 /* main.m in Sources */,
+				5B83B0B91EF7C52500697AB8 /* QJLTabBarController.m in Sources */,
+				5B83B0C21EF7C99D00697AB8 /* GuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "京东/PrefixHeader.pch";
 				INFOPLIST_FILE = "京东/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";
@@ -507,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "京东/PrefixHeader.pch";
 				INFOPLIST_FILE = "京东/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";

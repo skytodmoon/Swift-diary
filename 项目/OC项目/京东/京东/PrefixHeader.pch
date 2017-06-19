@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  京东
+//
+//  Created by 金亮齐 on 2017/6/19.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+#import <SMS_SDK/SMSSDK.h>
+
+
+
+//app的高度
+#define AppWidth ([UIScreen mainScreen].bounds.size.width)
+//app的宽度
+#define AppHeight ([UIScreen mainScreen].bounds.size.height)
+
+
+#endif /* PrefixHeader_pch */
