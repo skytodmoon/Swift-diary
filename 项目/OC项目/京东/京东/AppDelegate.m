@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "QJLTabBarController.h"
-#import "GuideViewController.h"
+#import "WelcomeViewController.h"
 
 #define appKey @"1900961e9a8b0"
 #define appSecret @"cd192a22389ce3d1018558edd99a9b02"
@@ -30,23 +30,19 @@
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
     {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
-
         //MARK: - 如果是第一次启动的话进入用户引导页面
-        GuideViewController *userGuideViewController = [[GuideViewController alloc] init];
-        
+        WelcomeViewController *userGuideViewController = [[WelcomeViewController alloc] init];
         self.window.rootViewController = userGuideViewController;
-        
         [userGuideViewController release];
+        
     }else{
 
         self.window.rootViewController = [[QJLTabBarController alloc] init];
-        //MARK: - 这里最好释放一下内存
         [QJLTabBarController release];
         
     }
     
     self.window.backgroundColor=[UIColor whiteColor];
-    
     [self.window makeKeyAndVisible];
 
     return YES;
