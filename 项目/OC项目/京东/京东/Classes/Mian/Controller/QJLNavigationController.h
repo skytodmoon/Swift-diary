@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface QJLNavigationController : UINavigationController
-
+- (void)showRightMenu;
 @end
