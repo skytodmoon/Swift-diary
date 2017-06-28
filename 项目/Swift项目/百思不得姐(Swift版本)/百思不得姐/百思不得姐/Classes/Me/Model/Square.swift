@@ -18,6 +18,7 @@ class Square: NSObject {
     /**  链接  */
     var url:String = ""
     
+    
     init(dic: JSON) {
         self.icon = dic["icon"].stringValue
         self.name = dic["name"].stringValue
