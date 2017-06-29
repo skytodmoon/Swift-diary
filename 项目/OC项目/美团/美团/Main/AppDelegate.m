@@ -17,9 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-
+    
+    [self initRootVC];
     
     return YES;
+}
+//MARK: - 设置根控制器
+-(void)initRootVC{
+    HomeViewController *home = [[HomeViewController alloc]init];
+    UINavigationController *homenav = [[UINavigationController alloc]initWithRootViewController:home];
+    home.title =@"团购";
+    
+    NSArray *viewCtrs = @[homenav];
+    
+    self.rootTabbarCtr = [[UITabBarController alloc]init];
+    
+    [self.rootTabbarCtr setViewControllers:viewCtrs animated:YES];
+    
+    self.window.rootViewController = self.rootTabbarCtr;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
