@@ -1,24 +1,21 @@
 //
-//  MerchantViewController.m
+//  MineViewController.m
 //  美团
 //
 //  Created by 金亮齐 on 2017/6/30.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
-#import "MerchantViewController.h"
+#import "MineViewController.h"
 
-@interface MerchantViewController ()
+@interface MineViewController ()
 
 @end
 
-@implementation MerchantViewController
+@implementation MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationController.navigationBarHidden = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 

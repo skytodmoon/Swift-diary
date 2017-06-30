@@ -36,22 +36,25 @@
     MerchantViewController *mearch = [[MerchantViewController alloc]init];
     UINavigationController *mearchnav = [[UINavigationController alloc]initWithRootViewController:mearch];
     
+    MineViewController *mine = [[MineViewController alloc]init];
+    UINavigationController *minenav = [[UINavigationController alloc]initWithRootViewController:mine];
+    
     home.title =@"团购";
     onsite.title=@"上门";
     mearch.title = @"商家";
+    mine.title = @"我的";
     
-    NSArray *viewCtrs = @[homenav,onsitenav,mearchnav];
+    NSArray *viewCtrs = @[homenav,onsitenav,mearchnav,minenav];
     
     self.rootTabbarCtr = [[UITabBarController alloc]init];
-    
     [self.rootTabbarCtr setViewControllers:viewCtrs animated:YES];
-    
     self.window.rootViewController = self.rootTabbarCtr;
     
     UITabBar *tabbar = self.rootTabbarCtr.tabBar;
     UITabBarItem *item1 = [tabbar.items objectAtIndex:0];
     UITabBarItem *item2 = [tabbar.items objectAtIndex:1];
     UITabBarItem *item3 = [tabbar.items objectAtIndex:2];
+    UITabBarItem *item4 = [tabbar.items objectAtIndex:3];
     
     item1.selectedImage = [[UIImage imageNamed:@"icon_tabbar_homepage_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item1.image = [[UIImage imageNamed:@"icon_tabbar_homepage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -62,7 +65,8 @@
     item3.selectedImage = [[UIImage imageNamed:@"icon_tabbar_merchant_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item3.image = [[UIImage imageNamed:@"icon_tabbar_merchant_normal"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    
+    item4.selectedImage = [[UIImage imageNamed:@"icon_tabbar_mine_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item4.image = [[UIImage imageNamed:@"icon_tabbar_mine"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB(54,185,175), UITextAttributeTextColor,nil] forState:UIControlStateSelected];
     
