@@ -24,17 +24,51 @@
 }
 //MARK: - 设置根控制器
 -(void)initRootVC{
+    
+    self.window.hidden = NO;
+    
     HomeViewController *home = [[HomeViewController alloc]init];
     UINavigationController *homenav = [[UINavigationController alloc]initWithRootViewController:home];
-    home.title =@"团购";
     
-    NSArray *viewCtrs = @[homenav];
+    OnSiteViewController *onsite = [[OnSiteViewController alloc]init];
+    UINavigationController *onsitenav = [[UINavigationController alloc]initWithRootViewController:onsite];
+    
+    MerchantViewController *mearch = [[MerchantViewController alloc]init];
+    UINavigationController *mearchnav = [[UINavigationController alloc]initWithRootViewController:mearch];
+    
+    home.title =@"团购";
+    onsite.title=@"上门";
+    mearch.title = @"商家";
+    
+    NSArray *viewCtrs = @[homenav,onsitenav,mearchnav];
     
     self.rootTabbarCtr = [[UITabBarController alloc]init];
     
     [self.rootTabbarCtr setViewControllers:viewCtrs animated:YES];
     
     self.window.rootViewController = self.rootTabbarCtr;
+    
+    UITabBar *tabbar = self.rootTabbarCtr.tabBar;
+    UITabBarItem *item1 = [tabbar.items objectAtIndex:0];
+    UITabBarItem *item2 = [tabbar.items objectAtIndex:1];
+    UITabBarItem *item3 = [tabbar.items objectAtIndex:2];
+    
+    item1.selectedImage = [[UIImage imageNamed:@"icon_tabbar_homepage_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.image = [[UIImage imageNamed:@"icon_tabbar_homepage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item2.selectedImage = [[UIImage imageNamed:@"icon_tabbar_onsite_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.image = [[UIImage imageNamed:@"icon_tabbar_onsite"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    item3.selectedImage = [[UIImage imageNamed:@"icon_tabbar_merchant_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.image = [[UIImage imageNamed:@"icon_tabbar_merchant_normal"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB(54,185,175), UITextAttributeTextColor,nil] forState:UIControlStateSelected];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
