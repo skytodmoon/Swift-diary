@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<CLLocationManagerDelegate>{
+    //定位
+    CLLocationManager *_locationManager;
+    CLLocation *_checkLoaction;
+}
 
 @end
 
@@ -17,10 +22,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
+    [self setupLoactionManager];
     [self initRootVC];
     
     return YES;
+}
+
+//MARK: - 设置定位
+-(void)setupLoactionManager{
+    _latitude = LATITUDE_DEFAULT;
+    _longitude = LONGITUDE_DEFAULT;
+    _locationManager = [[CLLocationManager alloc]init];
+    
+    if ([CLLocationManager locationServicesEnabled]) {
+        NSLog(@"开始定位");
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = 200.0;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        
+        if (IOS_VERSION >=8.0) {
+            [_locationManager requestWhenInUseAuthorization];
+            [_locationManager requestAlwaysAuthorization];
+        }
+        [_locationManager startUpdatingHeading];
+    }else{
+        NSLog(@"定位失败");
+    }
 }
 //MARK: - 设置根控制器
 -(void)initRootVC{

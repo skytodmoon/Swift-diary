@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+@property (assign,nonatomic) double latitude;
+@property (assign,nonatomic) double longitude;
+
 @property (strong, nonatomic) UITabBarController *rootTabbarCtr;
 
 @end

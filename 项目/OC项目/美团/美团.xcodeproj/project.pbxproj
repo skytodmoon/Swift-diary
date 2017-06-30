@@ -14,6 +14,8 @@
 		5BDEF16F1F063A8500F2F90F /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1611F063A8500F2F90F /* RefreshHeader.m */; };
 		5BDEF1701F063A8500F2F90F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1641F063A8500F2F90F /* AppDelegate.m */; };
 		5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1661F063A8500F2F90F /* ViewController.m */; };
+		5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1731F063BBC00F2F90F /* NetworkSingleton.m */; };
+		5BDEF1761F06415B00F2F90F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDEF1751F06415B00F2F90F /* CoreLocation.framework */; };
 		5BFC74951F0336A6001ACDEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFC74941F0336A6001ACDEF /* main.m */; };
 		5BFC749E1F0336A6001ACDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BFC749C1F0336A6001ACDEF /* Main.storyboard */; };
 		5BFC74A01F0336A6001ACDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BFC749F1F0336A6001ACDEF /* Assets.xcassets */; };
@@ -59,6 +61,9 @@
 		5BDEF1641F063A8500F2F90F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BDEF1651F063A8500F2F90F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5BDEF1661F063A8500F2F90F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BDEF1721F063BBC00F2F90F /* NetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSingleton.h; sourceTree = "<group>"; };
+		5BDEF1731F063BBC00F2F90F /* NetworkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSingleton.m; sourceTree = "<group>"; };
+		5BDEF1751F06415B00F2F90F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5BFC74901F0336A6001ACDEF /* 美团.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "美团.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFC74941F0336A6001ACDEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BFC749D1F0336A6001ACDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDEF1761F06415B00F2F90F /* CoreLocation.framework in Frameworks */,
 				CDCCF02F8B84B3AB63383C34 /* libPods-美团.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +230,8 @@
 		5BDEF1681F063A8500F2F90F /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				5BDEF1721F063BBC00F2F90F /* NetworkSingleton.h */,
+				5BDEF1731F063BBC00F2F90F /* NetworkSingleton.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 		D16AFB6135BDBB2BFB4DA080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BDEF1751F06415B00F2F90F /* CoreLocation.framework */,
 				8DB58190064DB4D262D38950 /* libPods-美团.a */,
 				2F7BB383BFEDA2A5A2BE31FC /* libPods-美团Tests.a */,
 				143048F83846F8037BFA301B /* libPods-美团UITests.a */,
@@ -501,6 +510,7 @@
 				5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */,
 				5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */,
 				5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */,
+				5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */,
 				5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */,
 				5BDEF16E1F063A8500F2F90F /* OnSiteViewController.m in Sources */,
 				5BDEF1701F063A8500F2F90F /* AppDelegate.m in Sources */,
