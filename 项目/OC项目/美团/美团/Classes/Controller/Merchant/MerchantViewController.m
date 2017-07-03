@@ -210,8 +210,7 @@
     __weak __typeof(self) weakself = self;
     [[NetworkSingleton sharedManager] getMerchantListResult:nil url:urlStr successBlock:^(id responseBody) {
         NSLog(@"获取商家数据列表成功");
-        
-        
+    
         [weakself.tableView.mj_header endRefreshing];
         [weakself.tableView.mj_footer endRefreshing];
     } failureBlock:^(NSString *error) {

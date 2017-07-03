@@ -15,7 +15,7 @@
 
 @property (assign,nonatomic) double latitude;
 @property (assign,nonatomic) double longitude;
-
+@property (strong,nonatomic) UIImageView *advImage;
 @property (strong, nonatomic) UITabBarController *rootTabbarCtr;
 
 @end

@@ -24,6 +24,7 @@
     
     [self setupLoactionManager];
     [self initRootVC];
+    [self initAdvView];
     
     return YES;
 }
@@ -102,6 +103,48 @@
     [self.window makeKeyAndVisible];
 }
 
+//MARK - 添加启动广告
+-(void)initAdvView{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"loading.png"]];
+    NSFileManager *fildManager = [NSFileManager defaultManager];
+    BOOL isDir = FALSE;
+    BOOL isExit = [fildManager fileExistsAtPath:filePath isDirectory:&isDir];
+    if (isExit) {
+        NSLog(@"不存在广告");
+        _advImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_height)];
+        [_advImage setImage:[UIImage imageWithContentsOfFile:filePath]];
+        [self.window addSubview:_advImage];
+        [self performSelector:@selector(removeAdvImage) withObject:nil afterDelay:3];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //加载启动广告并保存到本地沙盒，因为保存的图片较大，每次运行都要保存，所以注掉了
+            [self getLoadingImage];
+        });
+    }else {
+        NSLog(@"不存在广告");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //加载启动广告并保存到本地沙盒，因为保存的图片较大，每次运行都要保存，所以注掉了
+            [self getLoadingImage];
+        });
+    }
+}
+
+//MARK: - 移除广告
+-(void)removeAdvImage{
+    [UIView animateWithDuration:0.3f animations:^{
+        _advImage.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
+        _advImage.alpha = 0.f;
+    }completion:^(BOOL finished) {
+        [_advImage removeFromSuperview];
+    
+    }];
+}
+
+//MARK: - 获取启动广告图片，采用后台推送时执行请求
+-(void)getLoadingImage{
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
