@@ -8,10 +8,16 @@
 
 #import "MerchantViewController.h"
 
-@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>{
+    
+    NSMutableArray *_MerchantArray;
+    NSString *_locationInfoStr;
+    
     //分类查询ID，默认-1
     NSInteger _KindID;
     NSInteger _offset;
+    
+    UIView *_maskView;
 }
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -26,9 +32,21 @@
     self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self initData];
     [self setupNav];
     [self initView];
+    [self initMaskView];
     // Do any additional setup after loading the view.
+}
+
+//MARK: - 初始化数据
+-(void)initData{
+    _MerchantArray = [[NSMutableArray alloc] init];
+    NSUserDefaults *userD = [NSUserDefaults standardUserDefaults];
+    _locationInfoStr = [userD objectForKey:@"location"];
+    
+    _offset = 0;
+    _KindID = -1;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,6 +147,20 @@
     
 }
 
+//MARK: - 遮罩页
+-(void)initMaskView{
+    _maskView = [[UIView alloc]initWithFrame:CGRectMake(0, 64+40, screen_width, screen_height-64-40-49)];
+    _maskView.backgroundColor = RGBA(0, 0, 0, 0.5);
+    [self.view addSubview:_maskView];
+    
+    _maskView.hidden = YES;
+    
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(OnTapMaskView:)];
+    tap.delegate = self;
+    [_maskView addGestureRecognizer:tap];
+
+}
 //MARK: - 上下拉刷新
 -(void)setUpTableView{
     //下拉刷新 在开始刷新后会调用此block
@@ -174,7 +206,20 @@
  
 }
 -(void)OnFilterBtn:(UIButton *)sender{
-    
+    for (int i =0; i < 3; i++) {
+        UIButton *btn = (UIButton *)[self.view viewWithTag:100+i];
+        UIButton *sanjiaoBtn = (UIButton *)[self.view viewWithTag:120+i];
+        btn.selected = NO;
+        sanjiaoBtn.selected = NO;
+    }
+    sender.selected = YES;
+    UIButton *sjBtn = (UIButton *)[self.view viewWithTag:sender.tag+20];
+    sjBtn.selected = YES;
+    _maskView.hidden = NO;
+}
+
+-(void)OnTapMaskView:(UITapGestureRecognizer *)sender{
+    _maskView.hidden = YES;
 }
 
 #pragma mark - 请求数据
@@ -184,7 +229,8 @@
 }
 
 -(void)loadMoreData{
-    
+    _offset = _offset + 20;
+    [self refreshData];
 }
 
 -(void)refreshData{

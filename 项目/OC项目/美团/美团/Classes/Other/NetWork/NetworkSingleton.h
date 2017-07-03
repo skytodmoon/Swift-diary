@@ -23,6 +23,9 @@ typedef void(^FailureBlock)(NSString *error);
 
 
 
+#pragma mark - 获取广告页图片
+-(void)getAdvLoadingImage:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
+
 #pragma mark - 商家
 
 #pragma mark - 获取商家列表
