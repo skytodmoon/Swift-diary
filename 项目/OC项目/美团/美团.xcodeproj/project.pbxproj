@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */; };
+		5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697D1F0A3B05003C7312 /* MerchantCell.m */; };
+		5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69801F0A414B003C7312 /* MerchantFilterView.m */; };
+		5B8F69841F0A44EB003C7312 /* MerCateGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */; };
 		5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1521F063A8500F2F90F /* HomeViewController.m */; };
 		5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1551F063A8500F2F90F /* MerchantViewController.m */; };
 		5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1581F063A8500F2F90F /* MineViewController.m */; };
@@ -46,6 +50,14 @@
 		143048F83846F8037BFA301B /* libPods-美团UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE6548C200D19984F68B139 /* Pods-美团.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美团.debug.xcconfig"; path = "Pods/Target Support Files/Pods-美团/Pods-美团.debug.xcconfig"; sourceTree = "<group>"; };
 		2F7BB383BFEDA2A5A2BE31FC /* libPods-美团Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8F69791F0A3ABB003C7312 /* MerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
+		5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
+		5B8F697C1F0A3B05003C7312 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
+		5B8F697D1F0A3B05003C7312 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
+		5B8F697F1F0A414B003C7312 /* MerchantFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantFilterView.h; sourceTree = "<group>"; };
+		5B8F69801F0A414B003C7312 /* MerchantFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantFilterView.m; sourceTree = "<group>"; };
+		5B8F69821F0A44EB003C7312 /* MerCateGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerCateGroupModel.h; sourceTree = "<group>"; };
+		5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerCateGroupModel.m; sourceTree = "<group>"; };
 		5BC3D1711F0361E800F0F95D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5BDEF1511F063A8500F2F90F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5BDEF1521F063A8500F2F90F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -116,9 +128,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B8F69761F0A3A75003C7312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F69771F0A3A97003C7312 /* Merchant */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B8F69771F0A3A97003C7312 /* Merchant */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F69791F0A3ABB003C7312 /* MerchantModel.h */,
+				5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */,
+				5B8F69821F0A44EB003C7312 /* MerCateGroupModel.h */,
+				5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */,
+			);
+			path = Merchant;
+			sourceTree = "<group>";
+		};
+		5B8F69781F0A3AA5003C7312 /* Merchant */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F697C1F0A3B05003C7312 /* MerchantCell.h */,
+				5B8F697D1F0A3B05003C7312 /* MerchantCell.m */,
+				5B8F697F1F0A414B003C7312 /* MerchantFilterView.h */,
+				5B8F69801F0A414B003C7312 /* MerchantFilterView.m */,
+			);
+			path = Merchant;
+			sourceTree = "<group>";
+		};
 		5BDEF14E1F063A8500F2F90F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F69761F0A3A75003C7312 /* Model */,
 				5BDEF14F1F063A8500F2F90F /* Controller */,
 				5BDEF1621F063A8500F2F90F /* Main */,
 				5BDEF1671F063A8500F2F90F /* Other */,
@@ -239,6 +282,7 @@
 		5BDEF1691F063A8500F2F90F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F69781F0A3AA5003C7312 /* Merchant */,
 				5BDEF16A1F063A8500F2F90F /* Refresh */,
 			);
 			path = View;
@@ -508,9 +552,13 @@
 				5BDEF16F1F063A8500F2F90F /* RefreshHeader.m in Sources */,
 				5BFC74951F0336A6001ACDEF /* main.m in Sources */,
 				5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */,
+				5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */,
+				5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */,
 				5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */,
+				5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */,
 				5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */,
 				5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */,
+				5B8F69841F0A44EB003C7312 /* MerCateGroupModel.m in Sources */,
 				5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */,
 				5BDEF16E1F063A8500F2F90F /* OnSiteViewController.m in Sources */,
 				5BDEF1701F063A8500F2F90F /* AppDelegate.m in Sources */,
