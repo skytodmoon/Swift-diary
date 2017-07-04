@@ -11,6 +11,7 @@
 #import "MerAroundGroupModel.h"
 #import "ShopViewController.h"
 #import "MerDetailImageCell.h"
+#import "MerAroundGroupCell.h"
 
 @interface MerchantDetailViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UILabel *_titleLabel;
@@ -201,7 +202,66 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 1){
-    
+        static NSString *cellIndentifier = @"detailCell1";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            
+            //位置坐标
+            UIImageView * locationImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 18, 20, 20)];
+            [locationImageView setImage:[UIImage imageNamed:@"icon_merchant_location"]];
+            [cell addSubview:locationImageView];
+            //位置信息
+            UILabel *locationLabel = [[UILabel alloc]initWithFrame:CGRectMake(40, 4, screen_width-40-90, 50)];
+            locationLabel.tag = 200;
+            locationLabel.font = [UIFont systemFontOfSize:15];
+            locationLabel.textColor = [UIColor grayColor];
+            locationLabel.numberOfLines = 2;
+            [cell addSubview:locationLabel];
+            
+            UIImageView *telImageView = [[UIImageView alloc]initWithFrame:CGRectMake(screen_width-35, 15, 19, 25)];
+            [telImageView setImage:[UIImage imageNamed:@"icon_deal_phone"]];
+            [cell addSubview:telImageView];
+            
+            if (_dataSourceArray.count > 0) {
+                MerDetailModel *MerDM = _dataSourceArray[0];
+                UILabel *locationLabel = (UILabel *)[cell viewWithTag:200];
+                locationLabel.text = MerDM.addr;
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }else if (indexPath.section == 2){
+            static NSString *cellIndentifier = @"detailCell20";
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            }
+            if (_dealsArray.count > 0) {
+                cell.textLabel.text = @"附近团购";
+                cell.textLabel.textColor = [UIColor grayColor];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            }
+            return cell;
+        }else{
+            static NSString *cellIndentifier = @"detailCell21";
+            MerAroundGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            if (cell == nil) {
+                cell = [[MerAroundGroupCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            }
+            MerAroundGroupModel *jzAroundM = _dealsArray[indexPath.row-1];
+            [cell setJzMerAroundM:jzAroundM];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+    }else{
+        static NSString *cellIndentifier = @"detailCell3";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
 }
 
