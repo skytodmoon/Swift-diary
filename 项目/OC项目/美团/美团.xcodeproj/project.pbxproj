@@ -15,6 +15,8 @@
 		5B944B631F0B39510045ECED /* MerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B621F0B39510045ECED /* MerDetailModel.m */; };
 		5B944B661F0B39680045ECED /* MerAroundGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B651F0B39680045ECED /* MerAroundGroupModel.m */; };
 		5B944B691F0B495C0045ECED /* MerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B681F0B495C0045ECED /* MerchantDetailViewController.m */; };
+		5B944B6D1F0B6FE80045ECED /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B6C1F0B6FE80045ECED /* ShopViewController.m */; };
+		5B944B701F0B70EE0045ECED /* MerDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B6F1F0B70EE0045ECED /* MerDetailImageCell.m */; };
 		5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1521F063A8500F2F90F /* HomeViewController.m */; };
 		5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1551F063A8500F2F90F /* MerchantViewController.m */; };
 		5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1581F063A8500F2F90F /* MineViewController.m */; };
@@ -70,6 +72,10 @@
 		5B944B651F0B39680045ECED /* MerAroundGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerAroundGroupModel.m; sourceTree = "<group>"; };
 		5B944B671F0B495C0045ECED /* MerchantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantDetailViewController.h; sourceTree = "<group>"; };
 		5B944B681F0B495C0045ECED /* MerchantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantDetailViewController.m; sourceTree = "<group>"; };
+		5B944B6B1F0B6FE80045ECED /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		5B944B6C1F0B6FE80045ECED /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		5B944B6E1F0B70EE0045ECED /* MerDetailImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerDetailImageCell.h; sourceTree = "<group>"; };
+		5B944B6F1F0B70EE0045ECED /* MerDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerDetailImageCell.m; sourceTree = "<group>"; };
 		5BC3D1711F0361E800F0F95D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5BDEF1511F063A8500F2F90F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5BDEF1521F063A8500F2F90F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -172,8 +178,19 @@
 				5B8F69801F0A414B003C7312 /* MerchantFilterView.m */,
 				5B944B5E1F0B316C0045ECED /* KindFilterCell.h */,
 				5B944B5F1F0B316C0045ECED /* KindFilterCell.m */,
+				5B944B6E1F0B70EE0045ECED /* MerDetailImageCell.h */,
+				5B944B6F1F0B70EE0045ECED /* MerDetailImageCell.m */,
 			);
 			path = Merchant;
+			sourceTree = "<group>";
+		};
+		5B944B6A1F0B6FDD0045ECED /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				5B944B6B1F0B6FE80045ECED /* ShopViewController.h */,
+				5B944B6C1F0B6FE80045ECED /* ShopViewController.m */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		5BDEF14E1F063A8500F2F90F /* Classes */ = {
@@ -204,6 +221,7 @@
 		5BDEF1501F063A8500F2F90F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B944B6A1F0B6FDD0045ECED /* Shop */,
 				5BDEF1511F063A8500F2F90F /* HomeViewController.h */,
 				5BDEF1521F063A8500F2F90F /* HomeViewController.m */,
 			);
@@ -570,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDEF16F1F063A8500F2F90F /* RefreshHeader.m in Sources */,
+				5B944B701F0B70EE0045ECED /* MerDetailImageCell.m in Sources */,
 				5BFC74951F0336A6001ACDEF /* main.m in Sources */,
 				5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */,
 				5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */,
@@ -585,6 +604,7 @@
 				5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */,
 				5B944B631F0B39510045ECED /* MerDetailModel.m in Sources */,
 				5BDEF16E1F063A8500F2F90F /* OnSiteViewController.m in Sources */,
+				5B944B6D1F0B6FE80045ECED /* ShopViewController.m in Sources */,
 				5BDEF1701F063A8500F2F90F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

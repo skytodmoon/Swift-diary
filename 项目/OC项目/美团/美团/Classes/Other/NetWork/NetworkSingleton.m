@@ -96,4 +96,48 @@
     }];
 }
 
+#pragma mark - 获取商家详情
+-(void)getMerchantDetailResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    
+    AFHTTPSessionManager *manager = [self baseHttpRequest];
+    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:urlStr parameters:userInfo progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+        failureBlock(errorStr);
+    }];
+}
+
+#pragma mark - 获取商家详情图片
+-(void)getMerchantImagesResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    AFHTTPSessionManager *manager = [self baseHttpRequest];
+    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:urlStr parameters:userInfo progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+        failureBlock(errorStr);
+    }];
+}
+
+#pragma mark - 获取商家附近团购
+-(void)getAroundGroupPurchaseResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock{
+    AFHTTPSessionManager *manager = [self baseHttpRequest];
+    NSString *urlStr = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:urlStr parameters:userInfo progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+        failureBlock(errorStr);
+    }]; 
+}
+
+
 @end
