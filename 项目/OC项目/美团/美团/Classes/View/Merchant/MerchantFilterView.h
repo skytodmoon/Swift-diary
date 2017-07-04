@@ -8,20 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MearchantFilterDelegate <NSObject>
+@protocol MerchantFilterDelegate <NSObject>
 
 @optional
-
-/**点击tableview 过滤id*/
+/**
+ *  点击tableview，过滤id
+ */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath withId:(NSNumber *)ID withName:(NSString *)name;
 
 @end
 
+
 @interface MerchantFilterView : UIView
 
-@property(strong,nonatomic) UITableView *tableViewOfGroup;
-@property(strong,nonatomic) UITableView *tableViewOfDetail;
+@property(nonatomic, strong) UITableView *tableViewOfGroup;
+@property(nonatomic, strong) UITableView *tableViewOfDetail;
 
-@property(assign,nonatomic) id <MearchantFilterDelegate> delegate;
+@property(nonatomic, assign) id<MerchantFilterDelegate> delegate;
 
 @end

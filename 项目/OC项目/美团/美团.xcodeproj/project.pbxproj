@@ -14,6 +14,7 @@
 		5B944B601F0B316C0045ECED /* KindFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B5F1F0B316C0045ECED /* KindFilterCell.m */; };
 		5B944B631F0B39510045ECED /* MerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B621F0B39510045ECED /* MerDetailModel.m */; };
 		5B944B661F0B39680045ECED /* MerAroundGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B651F0B39680045ECED /* MerAroundGroupModel.m */; };
+		5B944B691F0B495C0045ECED /* MerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B681F0B495C0045ECED /* MerchantDetailViewController.m */; };
 		5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1521F063A8500F2F90F /* HomeViewController.m */; };
 		5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1551F063A8500F2F90F /* MerchantViewController.m */; };
 		5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1581F063A8500F2F90F /* MineViewController.m */; };
@@ -67,6 +68,8 @@
 		5B944B621F0B39510045ECED /* MerDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerDetailModel.m; sourceTree = "<group>"; };
 		5B944B641F0B39680045ECED /* MerAroundGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerAroundGroupModel.h; sourceTree = "<group>"; };
 		5B944B651F0B39680045ECED /* MerAroundGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerAroundGroupModel.m; sourceTree = "<group>"; };
+		5B944B671F0B495C0045ECED /* MerchantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantDetailViewController.h; sourceTree = "<group>"; };
+		5B944B681F0B495C0045ECED /* MerchantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantDetailViewController.m; sourceTree = "<group>"; };
 		5BC3D1711F0361E800F0F95D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5BDEF1511F063A8500F2F90F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5BDEF1521F063A8500F2F90F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				5BDEF1541F063A8500F2F90F /* MerchantViewController.h */,
 				5BDEF1551F063A8500F2F90F /* MerchantViewController.m */,
+				5B944B671F0B495C0045ECED /* MerchantDetailViewController.h */,
+				5B944B681F0B495C0045ECED /* MerchantDetailViewController.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 				5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */,
 				5B944B601F0B316C0045ECED /* KindFilterCell.m in Sources */,
 				5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */,
+				5B944B691F0B495C0045ECED /* MerchantDetailViewController.m in Sources */,
 				5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */,
 				5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */,
 				5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */,

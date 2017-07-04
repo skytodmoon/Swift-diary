@@ -8,7 +8,8 @@
 
 #import "KindFilterCell.h"
 
-@interface KindFilterCell(){
+@interface KindFilterCell ()
+{
     UIImageView *_imageView;
     UILabel *_nameLabel;
     UIButton *_numberBtn;
@@ -20,14 +21,15 @@
 
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withFrame:(CGRect)frame{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-
     if (self) {
+        //
         self.frame = frame;
-        
-        _nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, 100, 30)];
+        //
+        _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 100, 30)];
         _nameLabel.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_nameLabel];
-        
+        //
+        //        NSLog(@"self.frame.size.width:%f",self.frame.size.width);
         _numberBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _numberBtn.frame = CGRectMake(self.frame.size.width-85, 12, 80, 15);
         _numberBtn.font = [UIFont systemFontOfSize:11];
@@ -40,7 +42,7 @@
         [self.contentView addSubview:_numberBtn];
         
         //下划线
-        UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height-0.5, self.frame.size.width, 0.5)];
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-0.5, self.frame.size.width, 0.5)];
         lineView.backgroundColor = RGB(192, 192, 192);
         [self.contentView addSubview:lineView];
     }
@@ -48,15 +50,15 @@
 }
 
 - (void)awakeFromNib {
-    [super awakeFromNib];
     // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
+
 
 -(void)setGroupM:(MerCateGroupModel *)groupM{
     _groupM = groupM;
@@ -65,12 +67,15 @@
     if (groupM.list == nil) {
         [_numberBtn setTitle:[NSString stringWithFormat:@"%@",groupM.count] forState:UIControlStateNormal];
     }else{
-        [_numberBtn setTitle:[NSString stringWithFormat:@"%@",groupM.count] forState:UIControlStateHighlighted];
+        [_numberBtn setTitle:[NSString stringWithFormat:@"%@>",groupM.count] forState:UIControlStateNormal];
     }
     
     NSString *str = [NSString stringWithFormat:@"%@>",groupM.count];
     CGSize textSize = [str sizeWithFont:[UIFont systemFontOfSize:11] constrainedToSize:CGSizeMake(80, 15) lineBreakMode:NSLineBreakByWordWrapping];
+    
     _numberBtn.frame = CGRectMake(self.frame.size.width-10-textSize.width-10, 12, textSize.width+10, 15);
+    
 }
+
 
 @end

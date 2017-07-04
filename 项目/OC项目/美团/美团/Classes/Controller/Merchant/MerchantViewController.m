@@ -8,8 +8,12 @@
 
 #import "MerchantViewController.h"
 #import "MerchantFilterView.h"
+#import "MerchantModel.h"
+#import "MerchantCell.h"
+#import "MerchantModel.h"
+#import "MerchantDetailViewController.h"
 
-@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,MearchantFilterDelegate>{
+@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,MerchantFilterDelegate>{
     
     NSMutableArray *_MerchantArray;
     NSString *_locationInfoStr;
@@ -144,6 +148,8 @@
     [filterView addSubview:lineView];
     
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64+40, screen_width, screen_height-64-40-49) style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self setUpTableView];
@@ -162,8 +168,10 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(OnTapMaskView:)];
     tap.delegate = self;
     [_maskView addGestureRecognizer:tap];
+    
+    
 
-    _groupView = [[MerchantFilterView init] initWithFrame:CGRectMake(0, 0, screen_width, _maskView.frame.size.height-90)];
+    _groupView = [[MerchantFilterView alloc] initWithFrame:CGRectMake(0, 0, screen_width, _maskView.frame.size.height-90)];
     _groupView.delegate= self;
     [_maskView addSubview:_groupView];
 
@@ -229,6 +237,13 @@
     _maskView.hidden = YES;
 }
 
+//获取当前位置信息
+-(void)OnRefreshLocationBtn:(UIButton *)sender{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self getPresentLocation];
+    });
+}
+
 #pragma mark - 请求数据
 -(void)getFirstPageData{
     _offset =0;
@@ -263,7 +278,23 @@
     __weak __typeof(self) weakself = self;
     [[NetworkSingleton sharedManager] getMerchantListResult:nil url:urlStr successBlock:^(id responseBody) {
         NSLog(@"获取商家数据列表成功");
-    
+        
+        NSMutableArray *dataArray = [responseBody objectForKey:@"data"];
+        if (_offset == 0) {
+            [_MerchantArray removeAllObjects];
+        }
+        
+        for (int i = 0; i< dataArray.count; i++) {
+            MerchantModel *MerM = [MerchantModel mj_objectWithKeyValues:dataArray[i]];
+            [_MerchantArray addObject:MerM];
+        }
+        
+        [weakself.tableView reloadData];
+        
+        if (_offset == 0 && dataArray.count!=0) {
+            [weakself.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+        
         [weakself.tableView.mj_header endRefreshing];
         [weakself.tableView.mj_footer endRefreshing];
     } failureBlock:^(NSString *error) {
@@ -273,4 +304,144 @@
     }];
     
 }
+
+//MARK: - 当前位置
+-(void)getPresentLocation{
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *urlStr = @"http://api.meituan.com/group/v1/city/latlng/39.982207,116.311906?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=dhdVkMoRTQge4RJQFlm2iIF2e5s%3D&__skno=9B646232-F7BF-4642-B9B0-9A6ED68003D2&__skts=1436408843.060582&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&client=iphone&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-07-09-09-42570&tag=1&userid=10086&utm_campaign=AgroupBgroupD100Fa20141120nanning__m1__leftflow___ab_pindaochangsha__a__leftflow___ab_gxtest__gd__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_i550poi_ktv__d__j___ab_chunceshishuju__a__a___ab_gxh_82__nostrategy__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi0202__b__a___ab_pindaoshenyang__a__leftflow___ab_pindaoquxincelue0630__b__b1___ab_i_group_5_6_searchkuang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_i550poi_xxyl__b__leftflow___ab_b_food_57_purepoilist_extinfo__a__a___ab_waimaiwending__a__a___ab_waimaizhanshi__b__b1___ab_i550poi_lr__d__leftflow___ab_i_group_5_5_onsite__b__b___ab_xinkeceshi__b__leftflowGmerchant&utm_content=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&utm_medium=iphone&utm_source=AppStore&utm_term=5.7&uuid=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&version_name=5.7";
+    _locationInfoStr = @"正在定位...";
+    [self.tableView reloadData];
+    __weak __typeof(self) weakself = self;
+   
+    [[NetworkSingleton sharedManager] getPresentLocationResult:nil url:urlStr successBlock:^(id responseBody) {
+        NSDictionary *dataDic = [responseBody objectForKey:@"data"];
+        _locationInfoStr = [dataDic objectForKey:@"detail"];
+        
+        NSUserDefaults *userD = [NSUserDefaults standardUserDefaults];
+        [userD setObject:_locationInfoStr forKey:@"location"];
+        [weakself.tableView reloadData];
+    } failureBlock:^(NSString *error) {
+        
+    }];
+}
+
+
+#pragma mark - UITableViewDatagate,UITableVideDataSource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _MerchantArray.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 92;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 32;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 30)];
+    headerView.backgroundColor = RGB(240, 239, 237);
+    
+    UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, screen_width-10-40, 30)];
+    locationLabel.font = [UIFont systemFontOfSize:13];
+    locationLabel.text = [NSString stringWithFormat:@"当前位置: %@",_locationInfoStr];
+    locationLabel.textColor = [UIColor lightGrayColor];
+    [headerView addSubview:locationLabel];
+    
+    UIButton *refreshBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    refreshBtn.frame = CGRectMake(screen_width-30, 5, 20, 20);
+    [refreshBtn setImage:[UIImage imageNamed:@"icon_dellist_locate_refresh"] forState:UIControlStateNormal];
+    [refreshBtn addTarget:self action:@selector(OnRefreshLocationBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [headerView addSubview:refreshBtn];
+    return headerView;
+}
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *celIndentifier = @"merchantCel";
+    MerchantCell *cell = [tableView dequeueReusableCellWithIdentifier:celIndentifier];
+    
+    if (cell == nil) {
+        cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:celIndentifier];
+    }
+    
+    MerchantModel *MerM = _MerchantArray[indexPath.row];
+    [cell setMerM:MerM];
+    return cell;
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    //    NSLog(@"touch view  1:%@",touch.view);
+    //    NSLog(@"touch view  11:%@",touch.view.superview);
+    //    NSLog(@"touch view  111:%@",touch.view.superview.superview);
+    if ([touch.view isKindOfClass:[UITableView class]]) {
+        //        NSLog(@"111111");
+        return NO;
+    }
+    if ([touch.view.superview isKindOfClass:[UITableView class]]) {
+        //        NSLog(@"22222");
+        return NO;
+    }
+    if ([touch.view.superview.superview isKindOfClass:[UITableView class]]) {
+        //        NSLog(@"33333");
+        return NO;
+    }
+    if ([touch.view.superview.superview.superview isKindOfClass:[UITableView class]]) {
+        //        NSLog(@"44444");
+        return NO;
+    }
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MerchantModel *MerM = _MerchantArray[indexPath.row];
+    
+    MerchantDetailViewController *MerchantDVC = [[MerchantDetailViewController alloc] init];
+    MerchantDVC.poiid = MerM.poiid;
+    [self.navigationController pushViewController:MerchantDVC animated:YES];
+}
+
+
+#pragma mark - MerchantFilterDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath withId:(NSNumber *)ID withName:(NSString *)name{
+    _KindID = [ID integerValue];
+    
+    _maskView.hidden = YES;
+    [self getFirstPageData];
+}
+
+//MARK: - 动画-由大变小
+-(void)zoomOut:(UIView *)view andAnimationDuration:(float)duration andWait:(BOOL)wait{
+    __block BOOL done = wait;
+    view.transform = CGAffineTransformIdentity;
+    [UIView animateWithDuration:duration animations:^{
+        view.transform = CGAffineTransformMakeScale(0, 0);
+    } completion:^(BOOL finished){
+        done = YES;
+    }];
+    
+    while (done == NO) {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+    }
+}
+
+//MARK: - 动画-由小变大
+-(void)zoomIn:(UIView *)view andAnimationDuration:(float)duration andWait:(BOOL)wait{
+    __block BOOL done = wait;
+    view.transform = CGAffineTransformMakeScale(0, 0);
+    [UIView animateWithDuration:duration animations:^{
+        view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished){
+        done = YES;
+    }];
+    
+    while (done == NO) {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+    }
+}
+
+
 @end
