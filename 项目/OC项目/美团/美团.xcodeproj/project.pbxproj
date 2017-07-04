@@ -11,6 +11,9 @@
 		5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697D1F0A3B05003C7312 /* MerchantCell.m */; };
 		5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69801F0A414B003C7312 /* MerchantFilterView.m */; };
 		5B8F69841F0A44EB003C7312 /* MerCateGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */; };
+		5B944B601F0B316C0045ECED /* KindFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B5F1F0B316C0045ECED /* KindFilterCell.m */; };
+		5B944B631F0B39510045ECED /* MerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B621F0B39510045ECED /* MerDetailModel.m */; };
+		5B944B661F0B39680045ECED /* MerAroundGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B944B651F0B39680045ECED /* MerAroundGroupModel.m */; };
 		5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1521F063A8500F2F90F /* HomeViewController.m */; };
 		5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1551F063A8500F2F90F /* MerchantViewController.m */; };
 		5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEF1581F063A8500F2F90F /* MineViewController.m */; };
@@ -58,6 +61,12 @@
 		5B8F69801F0A414B003C7312 /* MerchantFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantFilterView.m; sourceTree = "<group>"; };
 		5B8F69821F0A44EB003C7312 /* MerCateGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerCateGroupModel.h; sourceTree = "<group>"; };
 		5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerCateGroupModel.m; sourceTree = "<group>"; };
+		5B944B5E1F0B316C0045ECED /* KindFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KindFilterCell.h; sourceTree = "<group>"; };
+		5B944B5F1F0B316C0045ECED /* KindFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KindFilterCell.m; sourceTree = "<group>"; };
+		5B944B611F0B39510045ECED /* MerDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerDetailModel.h; sourceTree = "<group>"; };
+		5B944B621F0B39510045ECED /* MerDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerDetailModel.m; sourceTree = "<group>"; };
+		5B944B641F0B39680045ECED /* MerAroundGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerAroundGroupModel.h; sourceTree = "<group>"; };
+		5B944B651F0B39680045ECED /* MerAroundGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerAroundGroupModel.m; sourceTree = "<group>"; };
 		5BC3D1711F0361E800F0F95D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5BDEF1511F063A8500F2F90F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5BDEF1521F063A8500F2F90F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -143,6 +152,10 @@
 				5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */,
 				5B8F69821F0A44EB003C7312 /* MerCateGroupModel.h */,
 				5B8F69831F0A44EB003C7312 /* MerCateGroupModel.m */,
+				5B944B611F0B39510045ECED /* MerDetailModel.h */,
+				5B944B621F0B39510045ECED /* MerDetailModel.m */,
+				5B944B641F0B39680045ECED /* MerAroundGroupModel.h */,
+				5B944B651F0B39680045ECED /* MerAroundGroupModel.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -154,6 +167,8 @@
 				5B8F697D1F0A3B05003C7312 /* MerchantCell.m */,
 				5B8F697F1F0A414B003C7312 /* MerchantFilterView.h */,
 				5B8F69801F0A414B003C7312 /* MerchantFilterView.m */,
+				5B944B5E1F0B316C0045ECED /* KindFilterCell.h */,
+				5B944B5F1F0B316C0045ECED /* KindFilterCell.m */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -554,12 +569,15 @@
 				5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */,
 				5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */,
 				5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */,
+				5B944B601F0B316C0045ECED /* KindFilterCell.m in Sources */,
 				5BDEF16B1F063A8500F2F90F /* HomeViewController.m in Sources */,
 				5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */,
 				5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */,
 				5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */,
 				5B8F69841F0A44EB003C7312 /* MerCateGroupModel.m in Sources */,
+				5B944B661F0B39680045ECED /* MerAroundGroupModel.m in Sources */,
 				5BDEF16D1F063A8500F2F90F /* MineViewController.m in Sources */,
+				5B944B631F0B39510045ECED /* MerDetailModel.m in Sources */,
 				5BDEF16E1F063A8500F2F90F /* OnSiteViewController.m in Sources */,
 				5BDEF1701F063A8500F2F90F /* AppDelegate.m in Sources */,
 			);

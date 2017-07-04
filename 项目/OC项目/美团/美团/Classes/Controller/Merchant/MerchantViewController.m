@@ -7,8 +7,9 @@
 //
 
 #import "MerchantViewController.h"
+#import "MerchantFilterView.h"
 
-@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>{
+@interface MerchantViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate,MearchantFilterDelegate>{
     
     NSMutableArray *_MerchantArray;
     NSString *_locationInfoStr;
@@ -18,6 +19,8 @@
     NSInteger _offset;
     
     UIView *_maskView;
+    
+    MerchantFilterView *_groupView;
 }
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -159,6 +162,10 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(OnTapMaskView:)];
     tap.delegate = self;
     [_maskView addGestureRecognizer:tap];
+
+    _groupView = [[MerchantFilterView init] initWithFrame:CGRectMake(0, 0, screen_width, _maskView.frame.size.height-90)];
+    _groupView.delegate= self;
+    [_maskView addSubview:_groupView];
 
 }
 //MARK: - 上下拉刷新

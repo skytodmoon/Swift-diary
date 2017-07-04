@@ -8,8 +8,10 @@
 
 #import "MerchantFilterView.h"
 #import "MerCateGroupModel.h"
+#import "KindFilterCell.h"
 
-@interface MerchantFilterView()<UITableViewDelegate,UITableViewDataSource>{
+@interface MerchantFilterView()<UITableViewDelegate,UITableViewDataSource>
+{
     //左边
     NSMutableArray *_bigGroupArray;
     //右边
@@ -42,7 +44,7 @@
 
 -(void)initViews{
     //分组
-    self.tableViewOfGroup = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width/2, self.frame.size.height) style:UITableViewStylePlain];
+    self.tableViewOfGroup = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width/2, self.frame.size.height) style:UITableViewStylePlain];
     self.tableViewOfGroup.tag = 10;
     self.tableViewOfGroup.delegate = self;
     self.tableViewOfGroup.dataSource = self;
@@ -51,10 +53,10 @@
     [self addSubview:self.tableViewOfGroup];
     
     //详情
-    self.tableViewOfDetail = [[UITableView alloc]initWithFrame:CGRectMake(self.frame.size.width/2, 0, self.frame.size.width/2, self.frame.size.height) style:UITableViewStylePlain];
+    self.tableViewOfDetail = [[UITableView alloc] initWithFrame:CGRectMake(self.frame.size.width/2, 0, self.frame.size.width/2, self.frame.size.height) style:UITableViewStylePlain];
     self.tableViewOfDetail.tag = 20;
-    self.tableViewOfDetail.delegate = self;
     self.tableViewOfDetail.dataSource = self;
+    self.tableViewOfDetail.delegate = self;
     self.tableViewOfDetail.backgroundColor = RGB(242, 242, 242);
     self.tableViewOfDetail.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self addSubview:self.tableViewOfDetail];
@@ -67,10 +69,11 @@
     
     [[NetworkSingleton sharedManager] getCateListResult:nil url:urlStr successBlock:^(id responseBody) {
         NSMutableArray *dataArray = [responseBody objectForKey:@"data"];
-        
         for (int i =0; i < dataArray.count; i++){
-
+            MerCateGroupModel *cateM = [MerCateGroupModel mj_objectWithKeyValues:dataArray[i]];
+            [_bigGroupArray addObject:cateM];
         }
+        [self.tableViewOfGroup reloadData];
     } failureBlock:^(NSString *error) {
 
     }];
@@ -98,4 +101,61 @@
     return 42;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView.tag == 10) {
+        static NSString *cellIndentifier = @"filterCell1";
+        KindFilterCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (cell == nil) {
+            cell = [[KindFilterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier withFrame:CGRectMake(0, 0, screen_width/2, 42)];
+        }
+        MerCateGroupModel *cateM = _bigGroupArray[indexPath.row];
+        [cell setGroupM:cateM];
+        
+        cell.selectedBackgroundView = [[UIView alloc]initWithFrame:cell.frame];
+        cell.selectedBackgroundView.backgroundColor = RGB(239, 239, 239);
+        return cell;
+    }else{
+        static NSString *cellIndentifier = @"filterCell2";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+        if (cell ==nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIndentifier];
+            
+            //下划线
+            UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 41.5, cell.frame.size.width, 0.5)];
+            lineView.backgroundColor = RGB(192, 192, 192);
+            [cell.contentView addSubview:lineView];
+        }
+        
+        MerCateGroupModel *cateM = (MerCateGroupModel *)_bigGroupArray[_bigSelectedIndex];
+        cell.textLabel.text = [cateM.list[indexPath.row] objectForKey:@"name"];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",[cateM.list[indexPath.row] objectForKey:@"count"]];
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
+        cell.backgroundColor = RGB(242, 242, 242);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView.tag == 10) {
+        _bigSelectedIndex = indexPath.row;
+        
+        MerCateGroupModel *cateM = (MerCateGroupModel *)_bigGroupArray[_bigSelectedIndex];
+        if (cateM.list == nil) {
+            [self.tableViewOfDetail reloadData];
+            [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath withId:cateM.id withName:cateM.name];
+        }else{
+            [self.tableViewOfDetail reloadData];
+        }
+    }else{
+        _smallSelectedIndex = indexPath.row;
+        MerCateGroupModel *cateM = (MerCateGroupModel *)_bigGroupArray[_bigSelectedIndex];
+        
+        NSDictionary *dic = cateM.list[_smallSelectedIndex];
+        NSNumber *ID = [dic objectForKey:@"id"];
+        NSString *name = [dic objectForKey:@"name"];
+        [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath withId:ID withName:name];
+    }
+}
 @end
