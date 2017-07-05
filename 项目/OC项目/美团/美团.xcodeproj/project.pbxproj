@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B44D9851F0C7C540053F9F6 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9841F0C7C540053F9F6 /* NSString+Size.m */; };
 		5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */; };
 		5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697D1F0A3B05003C7312 /* MerchantCell.m */; };
 		5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69801F0A414B003C7312 /* MerchantFilterView.m */; };
@@ -57,6 +58,8 @@
 		143048F83846F8037BFA301B /* libPods-美团UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE6548C200D19984F68B139 /* Pods-美团.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美团.debug.xcconfig"; path = "Pods/Target Support Files/Pods-美团/Pods-美团.debug.xcconfig"; sourceTree = "<group>"; };
 		2F7BB383BFEDA2A5A2BE31FC /* libPods-美团Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B44D9831F0C7C540053F9F6 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		5B44D9841F0C7C540053F9F6 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		5B8F69791F0A3ABB003C7312 /* MerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
 		5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
 		5B8F697C1F0A3B05003C7312 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
@@ -147,6 +150,15 @@
 				C5818BFDD4F2A708C6A1A535 /* Pods-美团.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B44D9821F0C7C370053F9F6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B44D9831F0C7C540053F9F6 /* NSString+Size.h */,
+				5B44D9841F0C7C540053F9F6 /* NSString+Size.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		5B8F69761F0A3A75003C7312 /* Model */ = {
@@ -308,6 +320,7 @@
 		5BDEF1671F063A8500F2F90F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B44D9821F0C7C370053F9F6 /* Category */,
 				5BDEF1681F063A8500F2F90F /* NetWork */,
 			);
 			path = Other;
@@ -596,6 +609,7 @@
 				5B944B701F0B70EE0045ECED /* MerDetailImageCell.m in Sources */,
 				5BFC74951F0336A6001ACDEF /* main.m in Sources */,
 				5BDEF1711F063A8500F2F90F /* ViewController.m in Sources */,
+				5B44D9851F0C7C540053F9F6 /* NSString+Size.m in Sources */,
 				5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */,
 				5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */,
 				5B944B601F0B316C0045ECED /* KindFilterCell.m in Sources */,

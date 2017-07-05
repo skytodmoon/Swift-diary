@@ -36,14 +36,14 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self initData];
+    [self setNav];
+    [self initTableView];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getMerchantDetailData];
         [self getAroundGroupPurchaseData];
     });
-    
-    [self initData];
-    [self setNav];
-    [self initTableView];
     // Do any additional setup after loading the view.
 }
 
@@ -150,7 +150,6 @@
     }];
 }
 
-#pragma mark - UITableViewDelegate,UITableViewDataSource{
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if (_dealsArray.count>0) {
         return 3;
@@ -163,6 +162,7 @@
     }
     return 1;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
         return 0.1;
@@ -175,10 +175,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 160;
-    }else if (indexPath.section == 1){
+    }else if(indexPath.section == 1){
         return 54;
     }else if (indexPath.section == 2){
-        if (indexPath.row > 0) {
+        if (indexPath.row>0) {
             return 100;
         }
         return 40;
@@ -186,56 +186,62 @@
         return 40;
     }
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         static NSString *cellIndentifier = @"detailCell0";
         MerDetailImageCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
         if (cell == nil) {
-            cell = [[MerDetailImageCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            cell = [[MerDetailImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            
         }
-        if (_dataSourceArray.count>0) {
+        if (_dataSourceArray.count > 0) {
             MerDetailModel *MerDM = _dataSourceArray[0];
             cell.BigImgUrl = [MerDM.frontImg stringByReplacingOccurrencesOfString:@"w.h" withString:@"300.200"];
             cell.shopName = MerDM.name;
             cell.avgPrice = MerDM.avgPrice;
         }
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return cell;
     }else if (indexPath.section == 1){
         static NSString *cellIndentifier = @"detailCell1";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
         if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
-            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
             //位置坐标
-            UIImageView * locationImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 18, 20, 20)];
-            [locationImageView setImage:[UIImage imageNamed:@"icon_merchant_location"]];
-            [cell addSubview:locationImageView];
+            UIImageView *locationImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 18, 20, 20)];
+            [locationImgView setImage:[UIImage imageNamed:@"icon_merchant_location"]];
+            [cell addSubview:locationImgView];
             //位置信息
-            UILabel *locationLabel = [[UILabel alloc]initWithFrame:CGRectMake(40, 4, screen_width-40-90, 50)];
+            UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 4, screen_width-40-90, 50)];
             locationLabel.tag = 200;
             locationLabel.font = [UIFont systemFontOfSize:15];
             locationLabel.textColor = [UIColor grayColor];
             locationLabel.numberOfLines = 2;
             [cell addSubview:locationLabel];
-            
-            UIImageView *telImageView = [[UIImageView alloc]initWithFrame:CGRectMake(screen_width-35, 15, 19, 25)];
-            [telImageView setImage:[UIImage imageNamed:@"icon_deal_phone"]];
-            [cell addSubview:telImageView];
-            
-            if (_dataSourceArray.count > 0) {
-                MerDetailModel *MerDM = _dataSourceArray[0];
-                UILabel *locationLabel = (UILabel *)[cell viewWithTag:200];
-                locationLabel.text = MerDM.addr;
-            }
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            return cell;
-        }else if (indexPath.section == 2){
+            UIImageView *telImgView = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width-35, 15, 19, 25)];
+            [telImgView setImage:[UIImage imageNamed:@"icon_deal_phone"]];
+            [cell addSubview:telImgView];
+        }
+        
+        if (_dataSourceArray.count > 0) {
+            MerDetailModel *MerDM = _dataSourceArray[0];
+            UILabel *locationLabel = (UILabel *)[cell viewWithTag:200];
+            locationLabel.text = MerDM.addr;
+        }
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }else if (indexPath.section == 2){
+        if (indexPath.row == 0) {
             static NSString *cellIndentifier = @"detailCell20";
-             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
             if (cell == nil) {
-                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
             }
             if (_dealsArray.count > 0) {
                 cell.textLabel.text = @"附近团购";
@@ -249,8 +255,11 @@
             if (cell == nil) {
                 cell = [[MerAroundGroupCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
             }
-            MerAroundGroupModel *jzAroundM = _dealsArray[indexPath.row-1];
-            [cell setJzMerAroundM:jzAroundM];
+            
+            MerAroundGroupModel *AroundM = _dealsArray[indexPath.row-1];
+            [cell setMerAroundM:AroundM];
+            
+            
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }

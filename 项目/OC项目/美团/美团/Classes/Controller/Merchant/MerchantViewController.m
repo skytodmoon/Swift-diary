@@ -179,17 +179,12 @@
 //MARK: - 上下拉刷新
 -(void)setUpTableView{
     //下拉刷新 在开始刷新后会调用此block
-    self.tableView.mj_header = [RefreshHeader headerWithRefreshingBlock:^{
-        [self getFirstPageData];
-        //结束刷新
-        [self.tableView.mj_header endRefreshing];
-    }];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getFirstPageData)];
+    [self.tableView.mj_header beginRefreshing];
     
     //上拉刷新 在开始刷新后会调用此block
-    self.tableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-        [self loadMoreData];
-        [self.tableView.mj_footer endRefreshing];
-    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    [self.tableView.mj_footer beginRefreshing];
 }
 
 #pragma mark - 点击事件

@@ -11,5 +11,5 @@
 
 @interface MerAroundGroupCell : UITableViewCell
 /**   数据*/
-@property(nonatomic, strong) MerAroundGroupModel *jzMerAroundM;
+@property(nonatomic, strong) MerAroundGroupModel *MerAroundM;
 @end
