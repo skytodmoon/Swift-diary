@@ -7,31 +7,50 @@
 //
 
 #import "HomeViewController.h"
+#import "HotQueueModel.h"
 
-@interface HomeViewController ()
-
+@interface HomeViewController (){
+    NSMutableArray *_menuArray;//
+    NSMutableArray *_rushArray;//抢购数据
+    HotQueueModel *_hotQueueData;
+    NSMutableArray *_recommendArray;
+    NSMutableArray *_discountArray;
+    
+    
+    
+}
+@property(nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    [self initData];
+    [self setNav];
+    [self initTableView];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//MARK - 初始化数据
+-(void)initData{
+    _rushArray = [[NSMutableArray alloc] init];
+    _hotQueueData = [[HotQueueModel alloc] init];
+    _recommendArray = [[NSMutableArray alloc] init];
+    _discountArray = [[NSMutableArray alloc] init];
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"menuData" ofType:@"plist"];
+    _menuArray = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
 }
 
-/*
-#pragma mark - Navigation
+-(void)setNav{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
+-(void)initTableView{
+
+}
 @end
