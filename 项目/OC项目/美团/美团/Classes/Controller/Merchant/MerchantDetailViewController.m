@@ -77,14 +77,14 @@
     
     //收藏
     UIButton *collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    collectBtn.frame = CGRectMake(screen_width-10-23, 30, 22, 22);
+    collectBtn.frame = CGRectMake(screen_width-44, 20, 44, 44);
     [collectBtn setImage:[UIImage imageNamed:@"icon_collect"] forState:UIControlStateNormal];
     [collectBtn setImage:[UIImage imageNamed:@"icon_collect_highlighted"] forState:UIControlStateHighlighted];
     [backView addSubview:collectBtn];
     
     //分享
     UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    shareBtn.frame = CGRectMake(screen_width-10-23-10-23, 30, 22, 22);
+    shareBtn.frame = CGRectMake(screen_width-68, 30, 22, 22);
     [shareBtn setImage:[UIImage imageNamed:@"icon_merchant_share_normal"] forState:UIControlStateNormal];
     [shareBtn setImage:[UIImage imageNamed:@"icon_merchant_share_highlighted"] forState:UIControlStateHighlighted];
     [shareBtn addTarget:self action:@selector(OnShareBtn:) forControlEvents:UIControlEventTouchUpInside];

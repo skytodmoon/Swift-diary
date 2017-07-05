@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B44D9851F0C7C540053F9F6 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9841F0C7C540053F9F6 /* NSString+Size.m */; };
+		5B44D9891F0CC0980053F9F6 /* ShopInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9881F0CC0980053F9F6 /* ShopInfoModel.m */; };
 		5B8F697B1F0A3ABB003C7312 /* MerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */; };
 		5B8F697E1F0A3B06003C7312 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697D1F0A3B05003C7312 /* MerchantCell.m */; };
 		5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69801F0A414B003C7312 /* MerchantFilterView.m */; };
@@ -60,6 +61,8 @@
 		2F7BB383BFEDA2A5A2BE31FC /* libPods-美团Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B44D9831F0C7C540053F9F6 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		5B44D9841F0C7C540053F9F6 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		5B44D9871F0CC0980053F9F6 /* ShopInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopInfoModel.h; sourceTree = "<group>"; };
+		5B44D9881F0CC0980053F9F6 /* ShopInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopInfoModel.m; sourceTree = "<group>"; };
 		5B8F69791F0A3ABB003C7312 /* MerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantModel.h; sourceTree = "<group>"; };
 		5B8F697A1F0A3ABB003C7312 /* MerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantModel.m; sourceTree = "<group>"; };
 		5B8F697C1F0A3B05003C7312 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
@@ -161,9 +164,19 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		5B44D9861F0CC0870053F9F6 /* shop */ = {
+			isa = PBXGroup;
+			children = (
+				5B44D9871F0CC0980053F9F6 /* ShopInfoModel.h */,
+				5B44D9881F0CC0980053F9F6 /* ShopInfoModel.m */,
+			);
+			path = shop;
+			sourceTree = "<group>";
+		};
 		5B8F69761F0A3A75003C7312 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B44D9861F0CC0870053F9F6 /* shop */,
 				5B8F69771F0A3A97003C7312 /* Merchant */,
 			);
 			path = Model;
@@ -618,6 +631,7 @@
 				5B8F69811F0A414B003C7312 /* MerchantFilterView.m in Sources */,
 				5BDEF16C1F063A8500F2F90F /* MerchantViewController.m in Sources */,
 				5BDEF1741F063BBC00F2F90F /* NetworkSingleton.m in Sources */,
+				5B44D9891F0CC0980053F9F6 /* ShopInfoModel.m in Sources */,
 				5B8F69841F0A44EB003C7312 /* MerCateGroupModel.m in Sources */,
 				5B944B731F0B79B20045ECED /* MerAroundGroupCell.m in Sources */,
 				5B944B661F0B39680045ECED /* MerAroundGroupModel.m in Sources */,

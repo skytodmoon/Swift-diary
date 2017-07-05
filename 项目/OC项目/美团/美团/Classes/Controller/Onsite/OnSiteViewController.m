@@ -16,6 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor orangeColor];
+    UILabel *text = [[UILabel alloc]initWithFrame:CGRectMake(screen_width/2-50, screen_height/2, 100, 30)];
+    text.text = @"敬请期待";
+    text.textColor = [UIColor whiteColor];
+    text.font = [UIFont systemFontOfSize:15];
+    text.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:text];
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +31,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

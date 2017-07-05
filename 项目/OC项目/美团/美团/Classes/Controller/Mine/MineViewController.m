@@ -72,7 +72,7 @@
     return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section ==1) {
+    if (section ==0) {
         return 1;
     }else{
         return 8;
@@ -100,9 +100,38 @@
     footerView.backgroundColor = RGB(239, 239, 244);
     return footerView;
 }
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    
-//}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 5)];
+        headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_login"]];
+        //头像
+        UIImageView *userImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 55, 55)];
+        userImage.layer.masksToBounds = YES;
+        userImage.layer.cornerRadius = 27;
+        [userImage setImage:[UIImage imageNamed:@"icon_mine_default_portrait"]];
+        [headerView addSubview:userImage];
+        //用户名
+        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10+55+5, 15, 200, 30)];
+        userNameLabel.font = [UIFont systemFontOfSize:13];
+        userNameLabel.text = @"醉看红尘这场梦";
+        [headerView addSubview:userNameLabel];
+
+        //账户余额
+        UILabel *moneyLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 40, 200, 30)];
+        moneyLabel.font = [UIFont systemFontOfSize:13];
+        moneyLabel.text = @"账户余额: 100元";
+        [headerView addSubview:moneyLabel];
+        
+        UIImageView *arrowImg = [[UIImageView alloc]initWithFrame:CGRectMake(screen_width-34, 30, 12, 24)];
+        [arrowImg setImage:[UIImage imageNamed:@"icon_mine_accountViewRightArrow"]];
+        [headerView addSubview:arrowImg];
+        return headerView;
+    }else{
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 5)];
+        headerView.backgroundColor = RGB(239, 239, 244);
+        return headerView;
+    }
+}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIndentifier = @"mineCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
@@ -111,9 +140,16 @@
     };
     
     if (indexPath.section == 1) {
-        
+        cell.textLabel.text = [_dataSourceArray[indexPath.row] objectForKey:@"title"];
+        NSString *imgStr = [_dataSourceArray[indexPath.row] objectForKey:@"image"];
+        cell.imageView.image = [UIImage imageNamed:imgStr];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
     }else{
-    
+        cell.textLabel.text = @"我的标题";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;
