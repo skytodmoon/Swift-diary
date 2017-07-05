@@ -289,9 +289,6 @@
         if (_offset == 0 && dataArray.count!=0) {
             [weakself.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         }
-        
-        [weakself.tableView.mj_header endRefreshing];
-        [weakself.tableView.mj_footer endRefreshing];
     } failureBlock:^(NSString *error) {
         NSLog(@"获取商家数据列表失败");
         [weakself.tableView.mj_header endRefreshing];
