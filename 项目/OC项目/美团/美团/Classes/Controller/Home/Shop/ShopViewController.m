@@ -9,7 +9,8 @@
 #import "ShopViewController.h"
 #import "ShopInfoModel.h"
 
-@interface ShopViewController (){
+@interface ShopViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
     UILabel *_titleLabel;
     UIActivityIndicatorView *_activityView;
     
@@ -39,6 +40,11 @@
     [self initData];
     [self setNav];
     [self initView];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self getShopData];
+        [self getShopRecommendData];
+    });
     // Do any additional setup after loading the view.
 }
 -(void)initData{
@@ -70,16 +76,41 @@
     [backView addSubview:collecBtn];
     
     //分享
+    UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    shareBtn.frame = CGRectMake(screen_width-66, 30, 22, 22);
+    [shareBtn setImage:[UIImage imageNamed:@"icon_merchant_share_normal"] forState:UIControlStateNormal];
+    [shareBtn setImage:[UIImage imageNamed:@"icon_merchant_share_highlighted"] forState:UIControlStateHighlighted];
+    [shareBtn addTarget:self action:@selector(OnShareBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:shareBtn];
     
 }
 -(void)initView{
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
-    self.tableView.backgroundColor = [UIColor orangeColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    self.tableView.hidden = YES;
+    
+    _activityView = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(screen_width/2-15, screen_height/2-15, 30, 30)];
+    _activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    _activityView.hidesWhenStopped = YES;
+    [self.view addSubview:_activityView];
+    [self.view bringSubviewToFront:_activityView];
 }
 
 #pragma makr - 点击事件
 -(void)OnBackBtn:(UIButton *)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+-(void)OnShareBtn:(UIButton *)sender{
+    
+}
+
+#pragma mark - 请求数据
+-(void)getShopData{
+    
+}
+-(void)getShopRecommendData{
+    
 }
 @end

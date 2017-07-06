@@ -47,10 +47,28 @@
 }
 
 -(void)setNav{
-
+    UIView *backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 64)];
+    backView.backgroundColor = navigationBarColor;
+    [self.view addSubview:backView];
+    
+    //城市
+    UIButton *cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cityBtn.frame = CGRectMake(10, 30, 40, 25);
+    cityBtn.font = [UIFont systemFontOfSize:15];
+    [cityBtn setTitle:@"深圳" forState:UIControlStateNormal];
+    [backView addSubview:cityBtn];
+    
+    UIImageView *arrowImage = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(cityBtn.frame), 38, 13, 10)];
+    [arrowImage setImage:[UIImage imageNamed:@"icon_homepage_downArrow"]];
+    [backView addSubview:arrowImage];
+    
+    //地图
+    
 }
 
 -(void)initTableView{
-
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-49-64) style:UITableViewStyleGrouped];
+    
+    [self.view addSubview:self.tableView];
 }
 @end

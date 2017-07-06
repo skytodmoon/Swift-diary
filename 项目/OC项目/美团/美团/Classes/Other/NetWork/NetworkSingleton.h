@@ -43,4 +43,12 @@ typedef void(^FailureBlock)(NSString *error);
 #pragma mark - 获取商家附近团购
 -(void)getAroundGroupPurchaseResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 
+
+#pragma  mark - 团购模块接口
+#pragma mark - 店铺详情
+-(void)getShopResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
+
+#pragma mark - 店铺看了还看了
+-(void)getShopRecommendResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
+
 @end
