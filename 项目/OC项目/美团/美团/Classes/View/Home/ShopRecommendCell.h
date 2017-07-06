@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShopRecommendModel.h"
 
 @interface ShopRecommendCell : UITableViewCell
-
+@property(nonatomic, strong) ShopRecommendModel *shopRecM;
 @end
