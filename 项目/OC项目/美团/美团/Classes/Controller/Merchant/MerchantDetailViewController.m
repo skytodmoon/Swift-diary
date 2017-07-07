@@ -9,7 +9,6 @@
 #import "MerchantDetailViewController.h"
 #import "MerDetailModel.h"
 #import "MerAroundGroupModel.h"
-#import "ShopViewController.h"
 #import "MerDetailImageCell.h"
 #import "MerAroundGroupCell.h"
 
@@ -274,15 +273,4 @@
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 2) {
-        if (indexPath.row>0) {
-            MerAroundGroupModel *AroundM = _dealsArray[indexPath.row-1];
-            NSString *shopID = [AroundM.id stringValue];
-            ShopViewController *shopVC = [[ShopViewController alloc]init];
-            shopVC.shopID = shopID;
-            [self.navigationController pushViewController:shopVC animated:YES];
-        }
-    }
-}
 @end

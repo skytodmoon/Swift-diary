@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "MapViewController.h"
 #import "HotQueueModel.h"
 
 @interface HomeViewController (){
@@ -63,12 +64,37 @@
     [backView addSubview:arrowImage];
     
     //地图
+    UIButton *mapBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    mapBtn.frame = CGRectMake(screen_width-42, 30, 42, 30);
+    [mapBtn setImage:[UIImage imageNamed:@"icon_homepage_map_old"] forState:UIControlStateNormal];
+    [mapBtn addTarget:self action:@selector(OnMapBtnTap:) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:mapBtn];
     
+    UIView *searchView = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(arrowImage.frame)+10, 30, 200, 25)];
+    searchView.backgroundColor = RGB(7, 170, 153);
+    searchView.layer.masksToBounds = YES;
+    searchView.layer.cornerRadius = 12;
+    [backView addSubview:searchView];
+    
+    UIImageView *searchImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 3, 15, 15)];
+    [searchImage setImage:[UIImage imageNamed:@"icon_homepage_search"]];
+    [searchView addSubview:searchImage];
+    
+    UILabel *placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 150, 25)];
+    placeHolderLabel.font = [UIFont boldSystemFontOfSize:13];
+    placeHolderLabel.text = @"请输入商家、品类、商圈";
+    placeHolderLabel.textColor = [UIColor whiteColor];
+    [searchView addSubview:placeHolderLabel];
 }
 
 -(void)initTableView{
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-49-64) style:UITableViewStyleGrouped];
     
     [self.view addSubview:self.tableView];
+}
+
+-(void)OnMapBtnTap:(UIButton *)sender{
+    MapViewController *MapVC = [[MapViewController alloc]init];
+    [self.navigationController pushViewController:MapVC animated:YES];
 }
 @end
