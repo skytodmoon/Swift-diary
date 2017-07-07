@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target '百思不得姐' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+    pod 'SwiftyJSON', '~> 2.0’
+    pod 'Alamofire', '~> 3.0'
+    pod 'MJRefresh'
+    pod 'Kingfisher', '~> 2.0’
+    pod 'DACircularProgress'
+
+end
