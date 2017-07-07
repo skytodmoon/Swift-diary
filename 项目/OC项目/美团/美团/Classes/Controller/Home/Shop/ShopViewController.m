@@ -14,7 +14,8 @@
 #import "ShopPriceCell.h"
 #import "ShopRecommendCell.h"
 
-@interface ShopViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ShopViewController ()
+//<UITableViewDelegate,UITableViewDataSource>
 {
     UILabel *_titleLabel;
     UIActivityIndicatorView *_activityView;
@@ -91,8 +92,8 @@
 }
 -(void)initView{
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+//    self.tableView.delegate = self;
+//    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     self.tableView.hidden = YES;
     
@@ -241,14 +242,65 @@
                 [cell.contentView addSubview:tuiBtn];
                 
                 //已销
-
+                UILabel *solderLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(tuiBtn.frame)+10, 5, 100, 30)];
+                solderLabel.textColor = [UIColor lightGrayColor];
+                solderLabel.font = [UIFont systemFontOfSize:13];
+                solderLabel.text = @"已销";
+                solderLabel.tag = 11;
+                [cell.contentView addSubview:solderLabel];
                 
             }
+            UIButton *tuiBtn =(UIButton *)[cell viewWithTag:10];
+            [tuiBtn addTarget:self action:@selector(OnTuiBtn:) forControlEvents:UIControlEventTouchUpInside];
+            
+            UILabel *soldedLabel = (UILabel *)[cell viewWithTag:11];
+            if (_shopInfoM.mname !=nil) {
+                soldedLabel.text = [NSString stringWithFormat:@"已售%@",_shopInfoM.solds];
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0) {
+            static NSString *cellIndentifier = @"shopRecCell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            cell.textLabel.text = _recommendTitle;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }else{
+            static NSString *cellIndentifier = @"shopRecInfoCell";
+            ShopRecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+            if (cell == nil) {
+                cell = [[ShopRecommendCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+            }
+            if (_shopRecommendArray.count !=0) {
+                ShopRecommendModel *shopRM = _shopRecommendArray[indexPath.row-1];
+                [cell setShopRecM:shopRM];
+            }
+            return cell;
         }
     }
+    
+    static NSString *cellIndentifier = @"shopCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 1) {
+        if (indexPath.row>0) {
+            ShopRecommendModel *shopRM = _shopRecommendArray[indexPath.row-1];
+            ShopViewController *shopVC = [[ShopViewController alloc] init];
+            shopVC.shopID = [NSString stringWithFormat:@"%@",shopRM.id];
+            [self.navigationController pushViewController:shopVC animated:YES];
+            
+        }
+    }
 }
 
 -(void)OnTuiBtn:(UIButton *)sender{

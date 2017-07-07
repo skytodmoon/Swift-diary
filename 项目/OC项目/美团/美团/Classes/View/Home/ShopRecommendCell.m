@@ -37,6 +37,13 @@
         _shopInfoLabel.font = [UIFont systemFontOfSize:13];
         _shopInfoLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [self addSubview:_shopInfoLabel];
+        
+        //价格
+        _shopPriceLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 70, 100, 20)];
+        _shopPriceLabel.font = [UIFont systemFontOfSize:13];
+        _shopPriceLabel.textColor = navigationBarColor;
+        [self addSubview:_shopPriceLabel];
+        
     }
     return self;
 }
