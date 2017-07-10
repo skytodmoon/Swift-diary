@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "MapViewController.h"
 #import "HotQueueModel.h"
+#import "RushDataModel.h"
+#import "RushDealsModel.h"
 
 @interface HomeViewController (){
     NSMutableArray *_menuArray;//
@@ -91,10 +93,65 @@
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-49-64) style:UITableViewStyleGrouped];
     
     [self.view addSubview:self.tableView];
+    [self setUpTableView];
 }
 
 -(void)OnMapBtnTap:(UIButton *)sender{
     MapViewController *MapVC = [[MapViewController alloc]init];
     [self.navigationController pushViewController:MapVC animated:YES];
 }
+
+//MARK: - 上下拉刷新
+-(void)setUpTableView{
+    //下拉刷新 在开始刷新后会调用此block
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHomeData)];
+    [self.tableView.mj_header beginRefreshing];
+    
+//    //上拉刷新 在开始刷新后会调用此block
+//    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+//    [self.tableView.mj_footer beginRefreshing];
+}
+
+-(void)refreshHomeData{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self getRushBuyData];
+        [self getHotQueueData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    });
+}
+
+
+#pragma mark - 请求数据
+-(void)getRushBuyData{
+    NSString *url = @"http://api.meituan.com/group/v1/deal/activity/1?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=NF9S7jqv3TVBAoEURoapWJ5VBdQ%3D&__skno=FB6346F3-98FF-4B26-9C36-DC9022236CC3&__skts=1434530933.316028&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&client=iphone&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-06-17-14-50363&ptId=iphone_5.7&userid=10086&utm_campaign=AgroupBgroupD100Fab_chunceshishuju__a__a___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_gxhceshi0202__b__a___ab_pindaochangsha__a__leftflow___ab_xinkeceshi__b__leftflow___ab_gxtest__gd__leftflow___ab_gxh_82__nostrategy__leftflow___ab_pindaoshenyang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_b_food_57_purepoilist_extinfo__a__a___ab_trip_yidizhoubianyou__b__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___ab_waimaizhanshi__b__b1___a20141120nanning__m1__leftflow___ab_pindaoquxincelue__a__leftflow___ab_i_group_5_5_onsite__b__b___ab_i_group_5_6_searchkuang__a__leftflow&utm_content=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&utm_medium=iphone&utm_source=AppStore&utm_term=5.7&uuid=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&version_name=5.7";
+    __weak __typeof(self) weakself = self;
+    [[NetworkSingleton sharedManager] getRushBuyResult:nil url:url successBlock:^(id responseBody) {
+        NSLog(@"抢购请求成功");
+        NSDictionary *dataDic = [responseBody objectForKey:@"data"];
+        RushDataModel *rushDataM = [RushDataModel mj_objectWithKeyValues:dataDic];
+        [_rushArray removeAllObjects];
+        
+        for (int i = 0; i<rushDataM.deals.count; i++) {
+            RushDealsModel *deals = [RushDealsModel mj_objectWithKeyValues:rushDataM.deals[i]];
+            [_rushArray addObject:deals];
+        }
+        [weakself.tableView reloadData];
+    } failureBlock:^(NSString *error) {
+        if (weakself) {
+            NSLog(@"%@",error);
+            [weakself.tableView.mj_header endRefreshing];
+        }
+    }];
+}
+
+-(void)getHotQueueData{
+    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://api.meituan.com/group/v1/itemportal/position/%f,%f?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=x6Fyq0RW3Z7ZtUXKPpRXPbYUGRE%3D&__skno=348FAC89-38E1-4880-A550-E992DB9AE44E&__skts=1434530933.451634&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&cityId=1&client=iphone&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-06-17-14-50363&userid=10086&utm_campaign=AgroupBgroupD100Fab_chunceshishuju__a__a___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_gxhceshi0202__b__a___ab_pindaochangsha__a__leftflow___ab_xinkeceshi__b__leftflow___ab_gxtest__gd__leftflow___ab_gxh_82__nostrategy__leftflow___ab_pindaoshenyang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_b_food_57_purepoilist_extinfo__a__a___ab_trip_yidizhoubianyou__b__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___ab_waimaizhanshi__b__b1___a20141120nanning__m1__leftflow___ab_pindaoquxincelue__a__leftflow___ab_i_group_5_5_onsite__b__b___ab_i_group_5_6_searchkuang__a__leftflow&utm_content=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&utm_medium=iphone&utm_source=AppStore&utm_term=5.7&uuid=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&version_name=5.7",delegate.latitude,delegate.longitude];
+    __weak __typeof(self) weakself = self;
+    NSLog(@"最新的经纬度：%f,%f",delegate.latitude,delegate.longitude);
+}
+
 @end

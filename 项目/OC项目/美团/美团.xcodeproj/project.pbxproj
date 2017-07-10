@@ -31,6 +31,8 @@
 		5B44D9F01F0CCB050053F9F6 /* MerchantFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9D61F0CCB050053F9F6 /* MerchantFilterView.m */; };
 		5B44D9F11F0CCB050053F9F6 /* MerDetailImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9D81F0CCB050053F9F6 /* MerDetailImageCell.m */; };
 		5B6095301F0F1CC30013A33E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B60952F1F0F1CC30013A33E /* MapViewController.m */; };
+		5B62621E1F130E8500242D4E /* RushDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62621D1F130E8500242D4E /* RushDataModel.m */; };
+		5B6262211F130F1400242D4E /* RushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262201F130F1400242D4E /* RushDealsModel.m */; };
 		5BA7F3211F0DCF0C00768AF1 /* ShopRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */; };
 		5BA7F3241F0DD15300768AF1 /* HotQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3231F0DD15300768AF1 /* HotQueueViewController.m */; };
 		5BDEF1761F06415B00F2F90F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDEF1751F06415B00F2F90F /* CoreLocation.framework */; };
@@ -110,6 +112,10 @@
 		5B44D9D81F0CCB050053F9F6 /* MerDetailImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerDetailImageCell.m; sourceTree = "<group>"; };
 		5B60952E1F0F1CC30013A33E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		5B60952F1F0F1CC30013A33E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5B62621C1F130E8500242D4E /* RushDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushDataModel.h; sourceTree = "<group>"; };
+		5B62621D1F130E8500242D4E /* RushDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDataModel.m; sourceTree = "<group>"; };
+		5B62621F1F130F1400242D4E /* RushDealsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushDealsModel.h; sourceTree = "<group>"; };
+		5B6262201F130F1400242D4E /* RushDealsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDealsModel.m; sourceTree = "<group>"; };
 		5BA7F31F1F0DCF0C00768AF1 /* ShopRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendModel.h; sourceTree = "<group>"; };
 		5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendModel.m; sourceTree = "<group>"; };
 		5BA7F3221F0DD15300768AF1 /* HotQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotQueueViewController.h; sourceTree = "<group>"; };
@@ -276,6 +282,10 @@
 			children = (
 				5B44D9B51F0CCB050053F9F6 /* HotQueueModel.h */,
 				5B44D9B61F0CCB050053F9F6 /* HotQueueModel.m */,
+				5B62621C1F130E8500242D4E /* RushDataModel.h */,
+				5B62621D1F130E8500242D4E /* RushDataModel.m */,
+				5B62621F1F130F1400242D4E /* RushDealsModel.h */,
+				5B6262201F130F1400242D4E /* RushDealsModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -659,7 +669,9 @@
 				5B44D9E51F0CCB050053F9F6 /* MerCateGroupModel.m in Sources */,
 				5B44D9EE1F0CCB050053F9F6 /* MerAroundGroupCell.m in Sources */,
 				5B44D9DD1F0CCB050053F9F6 /* MerchantViewController.m in Sources */,
+				5B6262211F130F1400242D4E /* RushDealsModel.m in Sources */,
 				5B44D9E61F0CCB050053F9F6 /* MerchantModel.m in Sources */,
+				5B62621E1F130E8500242D4E /* RushDataModel.m in Sources */,
 				5B6095301F0F1CC30013A33E /* MapViewController.m in Sources */,
 				5B44D9EA1F0CCB050053F9F6 /* NetworkSingleton.m in Sources */,
 				5B44D9E71F0CCB050053F9F6 /* MerDetailModel.m in Sources */,

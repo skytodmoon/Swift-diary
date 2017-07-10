@@ -30,10 +30,8 @@ typedef void(^FailureBlock)(NSString *error);
 
 #pragma mark - 获取商家列表
 -(void)getMerchantListResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
-
 #pragma mark - 获取当前位置信息
 -(void)getPresentLocationResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
-
 #pragma mark - 获取cate分组信息
 -(void)getCateListResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 #pragma mark - 获取商家详情
@@ -44,7 +42,18 @@ typedef void(^FailureBlock)(NSString *error);
 -(void)getAroundGroupPurchaseResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 
 
+
+
+
+
+
+
 #pragma  mark - 团购模块接口
+
+#pragma mark - 抢购
+-(void)getRushBuyResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
+#pragma mark - 热门排队
+-(void)getHotQueueResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 #pragma mark - 店铺详情
 -(void)getShopResult:(NSDictionary *)userInfo url:(NSString *)url successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 
