@@ -14,7 +14,7 @@
 #import "RecommendModel.h"
 #import "DiscountModel.h"
 
-@interface HomeViewController (){
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDataSource>{
     NSMutableArray *_menuArray;//
     NSMutableArray *_rushArray;//抢购数据
     HotQueueModel *_hotQueueData;
@@ -93,7 +93,8 @@
 
 -(void)initTableView{
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, screen_width, screen_height-49-64) style:UITableViewStyleGrouped];
-    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     [self setUpTableView];
 }
@@ -215,6 +216,84 @@
         [weakself.tableView.mj_header endRefreshing];
     }];
 
+}
+
+#pragma mark - UITableViewDataSource,UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    return 5;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 4) {
+        return _recommendArray.count+1;
+    }
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 180;
+    }else if(indexPath.section == 1){
+        if (_rushArray.count!=0) {
+            return 120;
+        }else{
+            return 0.0;
+        }
+    }else if (indexPath.section == 2){
+        if (_discountArray.count == 0) {
+            return 0.0;
+        }else{
+            return 160.0;
+        }
+    }else if (indexPath.section == 3){
+        if (_hotQueueData.title == nil) {
+            return 0.0;
+        }else{
+            return 50.0;
+        }
+    }else if(indexPath.section == 4){
+        if (indexPath.row == 0) {
+            return 35.0;
+        }else{
+            return 100.0;
+        }
+    }else{
+        return 70.0;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }else{
+        return 5;
+    }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 5;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 10)];
+    headerView.backgroundColor = RGB(239, 239, 244);
+    return headerView;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0)];
+    footerView.backgroundColor = RGB(239, 239, 244);
+    return footerView;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CMainCell = @"CMainCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CMainCell];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CMainCell];
+    }
+    
+    return cell;
 }
 
 @end

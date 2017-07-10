@@ -11,7 +11,6 @@
 		5B44D9DC1F0CCB050053F9F6 /* MerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9A11F0CCB050053F9F6 /* MerchantDetailViewController.m */; };
 		5B44D9DD1F0CCB050053F9F6 /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9A31F0CCB050053F9F6 /* MerchantViewController.m */; };
 		5B44D9DE1F0CCB050053F9F6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9A61F0CCB050053F9F6 /* MineViewController.m */; };
-		5B44D9DF1F0CCB050053F9F6 /* OnSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9A91F0CCB050053F9F6 /* OnSiteViewController.m */; };
 		5B44D9E01F0CCB050053F9F6 /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9AD1F0CCB050053F9F6 /* RefreshHeader.m */; };
 		5B44D9E11F0CCB050053F9F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9B01F0CCB050053F9F6 /* AppDelegate.m */; };
 		5B44D9E21F0CCB050053F9F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B44D9B21F0CCB050053F9F6 /* ViewController.m */; };
@@ -76,8 +75,6 @@
 		5B44D9A31F0CCB050053F9F6 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantViewController.m; sourceTree = "<group>"; };
 		5B44D9A51F0CCB050053F9F6 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		5B44D9A61F0CCB050053F9F6 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		5B44D9A81F0CCB050053F9F6 /* OnSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnSiteViewController.h; sourceTree = "<group>"; };
-		5B44D9A91F0CCB050053F9F6 /* OnSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnSiteViewController.m; sourceTree = "<group>"; };
 		5B44D9AC1F0CCB050053F9F6 /* RefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeader.h; sourceTree = "<group>"; };
 		5B44D9AD1F0CCB050053F9F6 /* RefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshHeader.m; sourceTree = "<group>"; };
 		5B44D9AF1F0CCB050053F9F6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -198,7 +195,6 @@
 				5B44D9991F0CCB050053F9F6 /* Home */,
 				5B44D99F1F0CCB050053F9F6 /* Merchant */,
 				5B44D9A41F0CCB050053F9F6 /* Mine */,
-				5B44D9A71F0CCB050053F9F6 /* Onsite */,
 				5B44D9AA1F0CCB050053F9F6 /* View */,
 			);
 			path = Controller;
@@ -234,15 +230,6 @@
 				5B44D9A61F0CCB050053F9F6 /* MineViewController.m */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		5B44D9A71F0CCB050053F9F6 /* Onsite */ = {
-			isa = PBXGroup;
-			children = (
-				5B44D9A81F0CCB050053F9F6 /* OnSiteViewController.h */,
-				5B44D9A91F0CCB050053F9F6 /* OnSiteViewController.m */,
-			);
-			path = Onsite;
 			sourceTree = "<group>";
 		};
 		5B44D9AA1F0CCB050053F9F6 /* View */ = {
@@ -687,7 +674,6 @@
 				5B44D9EA1F0CCB050053F9F6 /* NetworkSingleton.m in Sources */,
 				5B44D9E71F0CCB050053F9F6 /* MerDetailModel.m in Sources */,
 				5B44D9F11F0CCB050053F9F6 /* MerDetailImageCell.m in Sources */,
-				5B44D9DF1F0CCB050053F9F6 /* OnSiteViewController.m in Sources */,
 				5B6262241F1311EC00242D4E /* RecommendModel.m in Sources */,
 				5B44D9DA1F0CCB050053F9F6 /* HomeViewController.m in Sources */,
 			);
