@@ -24,7 +24,7 @@
 #import "DiscountOCViewController.h"
 #import "RushViewController.h"
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDataSource,RushDelegate,DiscountDelegate>{
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,RushDelegate,DiscountDelegate>{
     NSMutableArray *_menuArray;//
     NSMutableArray *_rushArray;//抢购数据
     HotQueueModel *_hotQueueData;
@@ -117,15 +117,12 @@
 //MARK: - 上下拉刷新
 -(void)setUpTableView{
     //下拉刷新 在开始刷新后会调用此block
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHomeData)];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     [self.tableView.mj_header beginRefreshing];
     
-//    //上拉刷新 在开始刷新后会调用此block
-//    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-//    [self.tableView.mj_footer beginRefreshing];
 }
 
--(void)refreshHomeData{
+-(void)refreshData{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getRushBuyData];
         [self getHotQueueData];

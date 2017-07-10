@@ -45,6 +45,7 @@
 		5B6262431F1326BD00242D4E /* DiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262421F1326BC00242D4E /* DiscountViewController.m */; };
 		5B6262461F13270400242D4E /* DiscountOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262451F13270400242D4E /* DiscountOCViewController.m */; };
 		5B6262491F13272B00242D4E /* RushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262481F13272B00242D4E /* RushViewController.m */; };
+		5B62624D1F1354F000242D4E /* DisTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62624C1F1354F000242D4E /* DisTopicModel.m */; };
 		5BA7F3211F0DCF0C00768AF1 /* ShopRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */; };
 		5BA7F3241F0DD15300768AF1 /* HotQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3231F0DD15300768AF1 /* HotQueueViewController.m */; };
 		5BDEF1761F06415B00F2F90F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDEF1751F06415B00F2F90F /* CoreLocation.framework */; };
@@ -152,6 +153,8 @@
 		5B6262451F13270400242D4E /* DiscountOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountOCViewController.m; sourceTree = "<group>"; };
 		5B6262471F13272B00242D4E /* RushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushViewController.h; sourceTree = "<group>"; };
 		5B6262481F13272B00242D4E /* RushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushViewController.m; sourceTree = "<group>"; };
+		5B62624B1F1354F000242D4E /* DisTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisTopicModel.h; sourceTree = "<group>"; };
+		5B62624C1F1354F000242D4E /* DisTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisTopicModel.m; sourceTree = "<group>"; };
 		5BA7F31F1F0DCF0C00768AF1 /* ShopRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendModel.h; sourceTree = "<group>"; };
 		5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendModel.m; sourceTree = "<group>"; };
 		5BA7F3221F0DD15300768AF1 /* HotQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotQueueViewController.h; sourceTree = "<group>"; };
@@ -303,6 +306,7 @@
 		5B44D9B31F0CCB050053F9F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B62624A1F1354E300242D4E /* Discount */,
 				5B44D9B41F0CCB050053F9F6 /* Home */,
 				5B44D9B71F0CCB050053F9F6 /* Merchant */,
 				5B44D9C01F0CCB050053F9F6 /* shop */,
@@ -434,6 +438,15 @@
 				5B62623F1F13268600242D4E /* ShopViewController.m */,
 			);
 			path = Shop;
+			sourceTree = "<group>";
+		};
+		5B62624A1F1354E300242D4E /* Discount */ = {
+			isa = PBXGroup;
+			children = (
+				5B62624B1F1354F000242D4E /* DisTopicModel.h */,
+				5B62624C1F1354F000242D4E /* DisTopicModel.m */,
+			);
+			path = Discount;
 			sourceTree = "<group>";
 		};
 		5BA7F3251F0DD43B00768AF1 /* Home */ = {
@@ -721,6 +734,7 @@
 				5B44D9E01F0CCB050053F9F6 /* RefreshHeader.m in Sources */,
 				5B6262391F13259000242D4E /* RecommendCell.m in Sources */,
 				5B6262491F13272B00242D4E /* RushViewController.m in Sources */,
+				5B62624D1F1354F000242D4E /* DisTopicModel.m in Sources */,
 				5B6262461F13270400242D4E /* DiscountOCViewController.m in Sources */,
 				5B44D9E31F0CCB050053F9F6 /* HotQueueModel.m in Sources */,
 				5B44D9E21F0CCB050053F9F6 /* ViewController.m in Sources */,
