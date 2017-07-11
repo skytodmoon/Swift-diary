@@ -8,30 +8,78 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController ()
 
+#define kDefaultCalloutViewMargin       -8
+#define MAPKEY @"2812f1e8b5f3c1473e8928ae9130e63d"
+
+@interface MapViewController ()<MAMapViewDelegate,AMapSearchDelegate>
+{
+    MAMapView *_mapView;
+    UIButton *_locationBtn;//定位按钮
+    
+    //地址转码
+    AMapSearchAPI *_search;
+    CLLocation *_currentLocation;
+    
+    //附近搜索数据
+    NSMutableArray *_pois;
+    NSMutableArray *_annotations;
+    
+}
 @end
 
 @implementation MapViewController
 
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self initMapView];
+    [self setNav];
+    [self initControls];
+    [self initSearch];
+    [self initAttributes];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)setNav{
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(15, 20, 30, 30);
+    [backBtn addTarget:self action:@selector(OnBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [self.view addSubview:backBtn];
+}
+-(void)initMapView{
+    [AMapServices sharedServices].apiKey = MAPKEY;
+    _mapView = [[MAMapView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    _mapView.delegate = self;
+    _mapView.compassOrigin = CGPointMake(_mapView.compassOrigin.x, 22);
+    _mapView.scaleOrigin = CGPointMake(_mapView.scaleOrigin.x, 22);
+    [self.view addSubview:_mapView];
+    
+    _mapView.showsUserLocation = YES;
+    _mapView.userTrackingMode = 1;
+}
+-(void)initControls{
+    
+}
+-(void)initSearch{
+    
+}
+-(void)initAttributes{
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)OnBackBtn:(UIButton *)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+
 
 @end

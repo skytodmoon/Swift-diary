@@ -62,6 +62,8 @@
 }
 //MARK: - 设置导航栏
 -(void)setupNav{
+    
+    
     UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 64)];
     backView.backgroundColor = RGB(250, 250, 250);
     [self.view addSubview:backView];
