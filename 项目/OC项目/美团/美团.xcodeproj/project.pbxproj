@@ -51,6 +51,10 @@
 		5B6262461F13270400242D4E /* DiscountOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262451F13270400242D4E /* DiscountOCViewController.m */; };
 		5B6262491F13272B00242D4E /* RushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6262481F13272B00242D4E /* RushViewController.m */; };
 		5B62624D1F1354F000242D4E /* DisTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B62624C1F1354F000242D4E /* DisTopicModel.m */; };
+		5B7229661F1DB12700884949 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7229631F1DB12700884949 /* CustomAnnotationView.m */; };
+		5B7229671F1DB12700884949 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7229651F1DB12700884949 /* CustomCalloutView.m */; };
+		5B72296D1F1DB17E00884949 /* MAAroundAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B72296A1F1DB17E00884949 /* MAAroundAnnotation.m */; };
+		5B72296E1F1DB17E00884949 /* MAAroundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B72296C1F1DB17E00884949 /* MAAroundModel.m */; };
 		5BA7F3211F0DCF0C00768AF1 /* ShopRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */; };
 		5BA7F3241F0DD15300768AF1 /* HotQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3231F0DD15300768AF1 /* HotQueueViewController.m */; };
 		5BFC74951F0336A6001ACDEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFC74941F0336A6001ACDEF /* main.m */; };
@@ -163,6 +167,14 @@
 		5B6262481F13272B00242D4E /* RushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushViewController.m; sourceTree = "<group>"; };
 		5B62624B1F1354F000242D4E /* DisTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisTopicModel.h; sourceTree = "<group>"; };
 		5B62624C1F1354F000242D4E /* DisTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisTopicModel.m; sourceTree = "<group>"; };
+		5B7229621F1DB12700884949 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		5B7229631F1DB12700884949 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		5B7229641F1DB12700884949 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		5B7229651F1DB12700884949 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		5B7229691F1DB17E00884949 /* MAAroundAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAroundAnnotation.h; sourceTree = "<group>"; };
+		5B72296A1F1DB17E00884949 /* MAAroundAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAroundAnnotation.m; sourceTree = "<group>"; };
+		5B72296B1F1DB17E00884949 /* MAAroundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAroundModel.h; sourceTree = "<group>"; };
+		5B72296C1F1DB17E00884949 /* MAAroundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAroundModel.m; sourceTree = "<group>"; };
 		5BA7F31F1F0DCF0C00768AF1 /* ShopRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendModel.h; sourceTree = "<group>"; };
 		5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendModel.m; sourceTree = "<group>"; };
 		5BA7F3221F0DD15300768AF1 /* HotQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotQueueViewController.h; sourceTree = "<group>"; };
@@ -318,6 +330,7 @@
 		5B44D9B31F0CCB050053F9F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B7229681F1DB17E00884949 /* Map */,
 				5B62624A1F1354E300242D4E /* Discount */,
 				5B44D9B41F0CCB050053F9F6 /* Home */,
 				5B44D9B71F0CCB050053F9F6 /* Merchant */,
@@ -411,6 +424,7 @@
 		5B44D9CD1F0CCB050053F9F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B7229611F1DB12700884949 /* Map */,
 				5BA7F3251F0DD43B00768AF1 /* Home */,
 				5B44D9CE1F0CCB050053F9F6 /* Merchant */,
 			);
@@ -459,6 +473,28 @@
 				5B62624C1F1354F000242D4E /* DisTopicModel.m */,
 			);
 			path = Discount;
+			sourceTree = "<group>";
+		};
+		5B7229611F1DB12700884949 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5B7229621F1DB12700884949 /* CustomAnnotationView.h */,
+				5B7229631F1DB12700884949 /* CustomAnnotationView.m */,
+				5B7229641F1DB12700884949 /* CustomCalloutView.h */,
+				5B7229651F1DB12700884949 /* CustomCalloutView.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5B7229681F1DB17E00884949 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5B7229691F1DB17E00884949 /* MAAroundAnnotation.h */,
+				5B72296A1F1DB17E00884949 /* MAAroundAnnotation.m */,
+				5B72296B1F1DB17E00884949 /* MAAroundModel.h */,
+				5B72296C1F1DB17E00884949 /* MAAroundModel.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		5BA7F3251F0DD43B00768AF1 /* Home */ = {
@@ -745,6 +781,7 @@
 				5B44D9E81F0CCB050053F9F6 /* ShopInfoModel.m in Sources */,
 				5B44D9DC1F0CCB050053F9F6 /* MerchantDetailViewController.m in Sources */,
 				5B44D9E11F0CCB050053F9F6 /* AppDelegate.m in Sources */,
+				5B7229661F1DB12700884949 /* CustomAnnotationView.m in Sources */,
 				5B44D9EF1F0CCB050053F9F6 /* MerchantCell.m in Sources */,
 				5B6262301F13237200242D4E /* RushCell.m in Sources */,
 				5B44D9E01F0CCB050053F9F6 /* RefreshHeader.m in Sources */,
@@ -755,6 +792,7 @@
 				5B44D9E31F0CCB050053F9F6 /* HotQueueModel.m in Sources */,
 				5B44D9E21F0CCB050053F9F6 /* ViewController.m in Sources */,
 				5B44D9E41F0CCB050053F9F6 /* MerAroundGroupModel.m in Sources */,
+				5B72296D1F1DB17E00884949 /* MAAroundAnnotation.m in Sources */,
 				5B44D9F01F0CCB050053F9F6 /* MerchantFilterView.m in Sources */,
 				5B44D9ED1F0CCB050053F9F6 /* KindFilterCell.m in Sources */,
 				5BA7F3241F0DD15300768AF1 /* HotQueueViewController.m in Sources */,
@@ -775,10 +813,12 @@
 				5B6095301F0F1CC30013A33E /* MapViewController.m in Sources */,
 				5B44D9EA1F0CCB050053F9F6 /* NetworkSingleton.m in Sources */,
 				5B6262431F1326BD00242D4E /* DiscountViewController.m in Sources */,
+				5B7229671F1DB12700884949 /* CustomCalloutView.m in Sources */,
 				5B44D9E71F0CCB050053F9F6 /* MerDetailModel.m in Sources */,
 				5B44D9F11F0CCB050053F9F6 /* MerDetailImageCell.m in Sources */,
 				5B6262241F1311EC00242D4E /* RecommendModel.m in Sources */,
 				5B44D9DA1F0CCB050053F9F6 /* HomeViewController.m in Sources */,
+				5B72296E1F1DB17E00884949 /* MAAroundModel.m in Sources */,
 				5B6262361F13253F00242D4E /* HotQueueCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,6 +961,7 @@
 			baseConfigurationReference = 2EE6548C200D19984F68B139 /* Pods-美团.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "美团/PrefixHeader.pch";
 				INFOPLIST_FILE = "美团/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -934,6 +975,7 @@
 			baseConfigurationReference = C5818BFDD4F2A708C6A1A535 /* Pods-美团.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "美团/PrefixHeader.pch";
 				INFOPLIST_FILE = "美团/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

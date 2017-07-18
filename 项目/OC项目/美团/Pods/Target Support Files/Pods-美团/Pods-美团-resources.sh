@@ -80,11 +80,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "AMap3DMap/MAMapKit.framework/AMap.bundle"
+  install_resource "AMap3DMap/MAMapKit.framework/Versions/2.5.0.002286d.60159/Resources/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "AMap3DMap/MAMapKit.framework/AMap.bundle"
+  install_resource "AMap3DMap/MAMapKit.framework/Versions/2.5.0.002286d.60159/Resources/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 
