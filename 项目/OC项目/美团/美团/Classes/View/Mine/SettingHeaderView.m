@@ -19,7 +19,7 @@
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sureLogin:) name:@"QQLogin" object:nil];
         
         self.frame = CGRectMake(0, 0, screen_width, 0.6*screen_width);
-        self.backgroundColor = [UIColor colorWithRed:186/255.0f green:71/255.0f blue:58/255.0f alpha:1];
+        self.backgroundColor = navigationBarColor;
         
         UIButton *logoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(screen_width-60, 30, 50, 20)];
         [logoutBtn addTarget:self action:@selector(logoutBtnClick) forControlEvents:UIControlEventTouchUpInside];

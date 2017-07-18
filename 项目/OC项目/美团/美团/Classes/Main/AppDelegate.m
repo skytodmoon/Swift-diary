@@ -197,8 +197,8 @@
          {
              case SSDKPlatformTypeSinaWeibo:
                  //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
-                 [appInfo SSDKSetupSinaWeiboByAppKey:@"3964063087"
-                                           appSecret:@"7a1b47a262c3c0557e36c5a01f33eb68"
+                 [appInfo SSDKSetupSinaWeiboByAppKey:@"1234171392"
+                                           appSecret:@"0cf8bc17a50102cd755c4cd85684c4a1"
                                          redirectUri:@"http://www.baidu.com"
                                             authType:SSDKAuthTypeBoth];
                  break;
