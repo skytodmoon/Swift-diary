@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 @interface AppDelegate ()<CLLocationManagerDelegate>{
     //定位
@@ -25,9 +29,11 @@
     [self setupLoactionManager];
     [self initRootVC];
     [self initAdvView];
-    
+    [self setupShareSDK];
+
     return YES;
 }
+
 
 //MARK: - 设置定位
 -(void)setupLoactionManager{
@@ -156,6 +162,65 @@
         NSLog(@"获取广告图片失败: %@",error);
     }];
 }
+
+
+#pragma mark - 设置第三方登陆信息
+- (void)setupShareSDK
+{
+    
+    
+    [ShareSDK registerActivePlatforms:@[
+                                        @(SSDKPlatformTypeSinaWeibo),
+                                        @(SSDKPlatformTypeWechat),
+                                        @(SSDKPlatformTypeQQ),
+                                        ]
+                             onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                 break;
+             case SSDKPlatformTypeSinaWeibo:
+                 [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                 break;
+             default:
+                 break;
+         }
+     }
+                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeSinaWeibo:
+                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                 [appInfo SSDKSetupSinaWeiboByAppKey:@"3964063087"
+                                           appSecret:@"7a1b47a262c3c0557e36c5a01f33eb68"
+                                         redirectUri:@"http://www.baidu.com"
+                                            authType:SSDKAuthTypeBoth];
+                 break;
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx2aaa2d1871fa3bb4"
+                                       appSecret:@"1c72adc1f0150c6c5c4d0de4cbb9613e"];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:@"1104984866"
+                                      appKey:@"HpGu2fsbpohnbw3F"
+                                    authType:SSDKAuthTypeBoth];
+                 break;
+
+
+                    default:
+                   break;
+                   }
+            
+}];
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

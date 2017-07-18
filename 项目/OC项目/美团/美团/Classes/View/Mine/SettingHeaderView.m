@@ -8,6 +8,10 @@
 
 #import "SettingHeaderView.h"
 
+@interface SettingHeaderView()<UIAlertViewDelegate>
+
+@end
+
 @implementation SettingHeaderView
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -73,7 +77,131 @@
 #pragma mark - 最终登录方式
 - (void)sureLogin:(NSNotification *)noti
 {
+    NSLog(@"%@",noti.object);
+    NSString *title = noti.object;
+    if ([title isEqualToString:@"QQ"]) {
+        
+        [ShareSDK getUserInfo:SSDKPlatformTypeQQ
+               onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+         {
+             if (state == SSDKResponseStateSuccess)
+             {
+                 NSLog(@"%@",user.rawData[@"figureurl_qq_2"]);
+                 NSLog(@"uid -- %@",user.uid);
+                 NSLog(@"token=%@",user.credential.token);
+                 NSLog(@"nickname=%@",user.nickname);
+                 
+                 [self.photoimageV sd_setImageWithURL:[NSURL URLWithString:user.rawData[@"figureurl_qq_2"]]];
+                 self.nameL.text = user.nickname;
+                 
+                 [[NSUserDefaults standardUserDefaults] setObject:user.rawData[@"figureurl_qq_2"] forKey:@"LOGINIMAGE"];
+                 [[NSUserDefaults standardUserDefaults] setObject:user.nickname forKey:@"LOGINNAME"];
+                 [[NSUserDefaults standardUserDefaults] setObject:user.uid forKey:@"UID"];
+                 
+//                 EMError *error = [[EMClient sharedClient] registerWithUsername:user.uid password:@"123"];
+//                 if (error==nil) {
+//                     NSLog(@"注册成功");
+//                     //                         [MBProgressHUD showSuccess:@"注册成功"];
+//                     
+//                     EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
+//                     if (error==nil) {
+//                         NSLog(@"登录成功");
+//                         //                             [MBProgressHUD showSuccess:@"登录成功"];
+//                         [[EMClient sharedClient].options setIsAutoLogin:YES];
+//                         
+//                     }else{
+//                         NSLog(@"登录失败,%@",error.errorDescription);
+//                     }
+//                     
+//                 }else{
+//                     NSLog(@"注册失败,%@",error.errorDescription);
+//                     if (error.code == EMErrorUserAlreadyExist){
+//                         
+//                         EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
+//                         if (error==nil) {
+//                             NSLog(@"登录成功");
+//                             //                             [MBProgressHUD showSuccess:@"登录成功"];
+//                             [[EMClient sharedClient].options setIsAutoLogin:YES];
+//                             
+//                         }else{
+//                             NSLog(@"登录失败,%@",error.errorDescription);
+//                         }
+//                     }
+//                 }
+                 
+                 
+             }else{
+//                 [MBProgressHUD showError:@"登录失败"];
+          
+                 
+             }
+             
+         }];
+        
+    }else if ([title isEqualToString:@"微信"]){
+        
+    }else{
+        
+        [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo
+               onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+         {
+             if (state == SSDKResponseStateSuccess)
+             {
+                 NSLog(@"uid --- %@",user.uid);
+                 NSLog(@"%@",user.icon);
+                 NSLog(@"nickname=%@",user.nickname);
+                 
+                 [self.photoimageV sd_setImageWithURL:[NSURL URLWithString:user.icon]];
+                 self.nameL.text = user.nickname;
+                 
+                 [[NSUserDefaults standardUserDefaults] setObject:user.icon forKey:@"LOGINIMAGE"];
+                 [[NSUserDefaults standardUserDefaults] setObject:user.nickname forKey:@"LOGINNAME"];
+                 [[NSUserDefaults standardUserDefaults] setObject:user.uid forKey:@"UID"];
+                 
+             }else{
+//                 [MBProgressHUD showError:@"登录失败"];
+             }
+             
+         }];
+    }
 
+}
+
+#pragma mark - 取消授权 退出
+- (void)logoutBtnClick{
+    if ([ShareSDK hasAuthorized:SSDKPlatformTypeSinaWeibo]) {
+        NSLog(@"qq");
+    }else{
+        NSLog(@"不是");
+    }
+    
+    if ([self.nameL.text isEqualToString:@"立即登录"]) {
+//        [MBProgressHUD showError:@"当前未登录账号"];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定要退出账号吗" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        
+//        EMError *error = [[EMClient sharedClient] logout:YES];
+//        if (!error) {
+//            [MBProgressHUD showSuccess:@"注销成功"];
+//        }
+        
+        [ShareSDK cancelAuthorize:SSDKPlatformTypeQQ];
+        [ShareSDK cancelAuthorize:SSDKPlatformTypeSinaWeibo];
+        [ShareSDK cancelAuthorize:SSDKPlatformTypeWechat];
+        
+        self.photoimageV.image = [UIImage imageNamed:@"comment_profile_default"];
+        self.nameL.text = @"立即登录";
+        [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:@"LOGINIMAGE"];
+        [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:@"LOGINNAME"];
+        [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:@"UID"];
+    }
 }
 
 @end
