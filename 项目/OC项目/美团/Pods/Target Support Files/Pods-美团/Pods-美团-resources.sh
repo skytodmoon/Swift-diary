@@ -82,6 +82,7 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "AMap3DMap/MAMapKit.framework/Versions/2.5.0.002286d.60159/Resources/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle"
@@ -91,6 +92,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AMap3DMap/MAMapKit.framework/Versions/2.5.0.002286d.60159/Resources/AMap.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/Required/ShareSDK.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle"
   install_resource "ShareSDK3/SDK/ShareSDK/Support/PlatformSDK/QQSDK/TencentOpenApi_IOS_Bundle.bundle"

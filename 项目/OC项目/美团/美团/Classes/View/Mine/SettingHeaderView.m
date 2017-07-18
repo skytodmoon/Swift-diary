@@ -98,40 +98,40 @@
                  [[NSUserDefaults standardUserDefaults] setObject:user.nickname forKey:@"LOGINNAME"];
                  [[NSUserDefaults standardUserDefaults] setObject:user.uid forKey:@"UID"];
                  
-//                 EMError *error = [[EMClient sharedClient] registerWithUsername:user.uid password:@"123"];
-//                 if (error==nil) {
-//                     NSLog(@"注册成功");
-//                     //                         [MBProgressHUD showSuccess:@"注册成功"];
-//                     
-//                     EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
-//                     if (error==nil) {
-//                         NSLog(@"登录成功");
-//                         //                             [MBProgressHUD showSuccess:@"登录成功"];
-//                         [[EMClient sharedClient].options setIsAutoLogin:YES];
-//                         
-//                     }else{
-//                         NSLog(@"登录失败,%@",error.errorDescription);
-//                     }
-//                     
-//                 }else{
-//                     NSLog(@"注册失败,%@",error.errorDescription);
-//                     if (error.code == EMErrorUserAlreadyExist){
-//                         
-//                         EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
-//                         if (error==nil) {
-//                             NSLog(@"登录成功");
-//                             //                             [MBProgressHUD showSuccess:@"登录成功"];
-//                             [[EMClient sharedClient].options setIsAutoLogin:YES];
-//                             
-//                         }else{
-//                             NSLog(@"登录失败,%@",error.errorDescription);
-//                         }
-//                     }
-//                 }
+                 EMError *error = [[EMClient sharedClient] registerWithUsername:user.uid password:@"123"];
+                 if (error==nil) {
+                     NSLog(@"注册成功");
+                    [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+                     
+                     EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
+                     if (error==nil) {
+                         NSLog(@"登录成功");
+                        [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                         [[EMClient sharedClient].options setIsAutoLogin:YES];
+                         
+                     }else{
+                         NSLog(@"登录失败,%@",error.errorDescription);
+                     }
+                     
+                 }else{
+                     NSLog(@"注册失败,%@",error.errorDescription);
+                     if (error.code == EMErrorUserAlreadyExist){
+                         
+                         EMError *error = [[EMClient sharedClient] loginWithUsername:user.uid password:@"123"];
+                         if (error==nil) {
+                             NSLog(@"登录成功");
+                                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                             [[EMClient sharedClient].options setIsAutoLogin:YES];
+                             
+                         }else{
+                             NSLog(@"登录失败,%@",error.errorDescription);
+                         }
+                     }
+                 }
                  
                  
              }else{
-//                 [MBProgressHUD showError:@"登录失败"];
+                 [SVProgressHUD showErrorWithStatus:@"登录失败"];
           
                  
              }
@@ -159,7 +159,7 @@
                  [[NSUserDefaults standardUserDefaults] setObject:user.uid forKey:@"UID"];
                  
              }else{
-//                 [MBProgressHUD showError:@"登录失败"];
+                 [SVProgressHUD showErrorWithStatus:@"登录失败"];
              }
              
          }];
@@ -176,7 +176,7 @@
     }
     
     if ([self.nameL.text isEqualToString:@"立即登录"]) {
-//        [MBProgressHUD showError:@"当前未登录账号"];
+        [SVProgressHUD showErrorWithStatus:@"当前未登录账号"];
     }else{
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"确定要退出账号吗" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alert show];
@@ -187,10 +187,10 @@
 {
     if (buttonIndex == 1) {
         
-//        EMError *error = [[EMClient sharedClient] logout:YES];
-//        if (!error) {
-//            [MBProgressHUD showSuccess:@"注销成功"];
-//        }
+        EMError *error = [[EMClient sharedClient] logout:YES];
+        if (!error) {
+            [SVProgressHUD showSuccessWithStatus:@"注销成功"];
+        }
         
         [ShareSDK cancelAuthorize:SSDKPlatformTypeQQ];
         [ShareSDK cancelAuthorize:SSDKPlatformTypeSinaWeibo];
