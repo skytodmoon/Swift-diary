@@ -7,11 +7,15 @@
 //
 
 #import "MineViewController.h"
+#import "SettingHeaderView.h"
+#import "LoginView.h"
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray *_dataSourceArray;
 }
-@property(strong,nonnull) UITableView *tableView;
+@property (nonatomic , weak) UITableView *tableview;
+@property(weak,nonatomic) UIView *headerview;
+
 @end
 
 @implementation MineViewController
@@ -62,10 +66,21 @@
 }
 
 -(void)initViews{
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
+    
+    SettingHeaderView *headerview = [[SettingHeaderView alloc] init];
+    headerview.loginBlock = ^{
+        LoginView *lv = [[LoginView alloc]init];
+        [lv show];
+    };
+    self.headerview = headerview;
+    
+    UITableView *tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStyleGrouped];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    [self.view addSubview:tableview];
+    tableview.tableHeaderView = headerview;
+    self.tableview = tableview;
+
 }
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -73,14 +88,14 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section ==0) {
-        return 1;
+        return 0;
     }else{
         return 8;
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
-        return 75;
+        return 5;
     }else{
         return 5;
     }
@@ -100,38 +115,7 @@
     footerView.backgroundColor = RGB(239, 239, 244);
     return footerView;
 }
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 5)];
-        headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_login"]];
-        //头像
-        UIImageView *userImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 55, 55)];
-        userImage.layer.masksToBounds = YES;
-        userImage.layer.cornerRadius = 27;
-        [userImage setImage:[UIImage imageNamed:@"icon_mine_default_portrait"]];
-        [headerView addSubview:userImage];
-        //用户名
-        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10+55+5, 15, 200, 30)];
-        userNameLabel.font = [UIFont systemFontOfSize:13];
-        userNameLabel.text = @"醉看红尘这场梦";
-        [headerView addSubview:userNameLabel];
 
-        //账户余额
-        UILabel *moneyLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 40, 200, 30)];
-        moneyLabel.font = [UIFont systemFontOfSize:13];
-        moneyLabel.text = @"账户余额: 100元";
-        [headerView addSubview:moneyLabel];
-        
-        UIImageView *arrowImg = [[UIImageView alloc]initWithFrame:CGRectMake(screen_width-34, 30, 12, 24)];
-        [arrowImg setImage:[UIImage imageNamed:@"icon_mine_accountViewRightArrow"]];
-        [headerView addSubview:arrowImg];
-        return headerView;
-    }else{
-        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screen_width, 5)];
-        headerView.backgroundColor = RGB(239, 239, 244);
-        return headerView;
-    }
-}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIndentifier = @"mineCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
@@ -146,12 +130,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize:15];
-    }else{
-        cell.textLabel.text = @"我的标题";
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
     return cell;
 }
 @end

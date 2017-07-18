@@ -117,10 +117,21 @@
             [_annotations removeAllObjects];
             
             for (int i = 0; i < dataArray.count; i++) {
-                AAroundModel *maaroundM = [MAAroundModel objectWithKeyValues:dataArray[i]];
-                
-                
+                MAAroundModel *maaroundM = [MAAroundModel mj_objectWithKeyValues:dataArray[i]];
+                MAAroundAnnotation *annotation = [[MAAroundAnnotation alloc]init];
+                annotation.maaroundM = maaroundM;
+                annotation.title = maaroundM.mname;
+                annotation.subtitle = [NSString stringWithFormat:@"%@元",maaroundM.price];
+                annotation.coordinate = CLLocationCoordinate2DMake(LATITUDE_DEFAULT, LONGITUDE_DEFAULT);
+                if (maaroundM.rdplocs.count>0) {
+                    NSDictionary *dic = maaroundM.rdplocs[0];
+                    NSNumber *lat = [dic objectForKey:@"lat"];
+                    NSNumber *lng = [dic objectForKey:@"lng"];
+                    annotation.coordinate = CLLocationCoordinate2DMake([lat doubleValue], [lng doubleValue]);
+                }
+                [_annotations addObject:annotation];
             }
+            [self performSelectorOnMainThread:@selector(updateUI) withObject:_annotations waitUntilDone:YES];
         }
     } failureBlock:^(NSString *error) {
         NSLog(@"地图: 获取附件商家失败:%@",error);
@@ -218,8 +229,6 @@
         }
         annotationView.canShowCallout = NO;
         annotationView.image = [UIImage imageNamed:@"icon_map_cateid_1"];
-        // 设置中⼼心点偏移,使得标注底部中间点成为经纬度对应点
-        //        annotationView.centerOffset = CGPointMake(0, -18);
         return annotationView;
     }
     return nil;

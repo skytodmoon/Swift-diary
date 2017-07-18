@@ -17,12 +17,14 @@
 #import "RefreshHeader.h"
 #import "NetworkSingleton.h"
 #import "NSString+Size.h"
+#import "UIView+Frame.h"
 #import "UIImageView+WebCache.h"
 #import <AFNetworking/AFNetworking.h>
 #import <MJRefresh/MJRefresh.h>
 #import <MJExtension/MJExtension.h>
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
+
 
 
 // 1.判断是否为iOS7
@@ -37,6 +39,7 @@
 
 // 3.是否为4inch
 #define fourInch ([UIScreen mainScreen].bounds.size.height == 568)
+#define theWindow                       [[UIApplication sharedApplication] delegate].window
 
 // 4.屏幕大小尺寸
 #define screen_width [UIScreen mainScreen].bounds.size.width

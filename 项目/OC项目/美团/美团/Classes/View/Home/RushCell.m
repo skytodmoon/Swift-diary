@@ -29,10 +29,6 @@
             imageView.contentMode = UIViewContentModeScaleAspectFit;
             imageView.tag = i+20;
             [backView addSubview:imageView];
-            //
-            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(i*screen_width/3-1, 45, 0.5, 65)];
-            lineView.backgroundColor = separaterColor;
-            [self addSubview:lineView];
             
             //
             UILabel *newPrice = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, backView.frame.size.width/2, 30)];
