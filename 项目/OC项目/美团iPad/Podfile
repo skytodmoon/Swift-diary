@@ -7,14 +7,7 @@ target '美团iPad' do
 
   # Pods for 美团iPad
 
-  target '美团iPadTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '美团iPadUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'MJExtension'
+  pod 'SDWebImage'
 
 end
