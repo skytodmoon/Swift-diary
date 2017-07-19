@@ -504,5 +504,35 @@ do {
 }catch{
     print(error)
 }
+//可以使用多个catch来护理特定的错误,参考switch中的case风格来写
+do{
 
+    let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+    print(printerResponse)
+}catch PrinterError.OnFire{
+    print("I will just this over here,with the rest of the fire")
+}catch let printerError as PrinterError{
+    print("Printer error: \(printerError).")
+}catch{
+    print(error)
+}
+
+//另外处理错误的方法使用try将结果转换为可选的，如果函数出错误，该错误会被抛弃结果为nil
+//否则的话，结果会是一个包含函数返回值的可选值
+
+let printerSuccess = try?send(job: 1884, toPrinter: "Mergenthaler")
+let printerFailure = try?send(job: 1885, toPrinter: "Never Has Toner")
+
+//使用defer代码块来表示在函数返回前，函数中最后执行的代码。无论函数是否会抛出错误，这段代码都将执行。使用defer，可以把函数调用之初就要执行的代码和函数调用结束时的扫尾代码写在一起，虽然这两者的执行时机截然不同。”
+
+//=========================泛型======================
+
+func repeatItem<Item>(repeating item: Item, numberOfTimes: Int) -> [Item]{
+    var result = [Item]()
+    for _ in 0..<numberOfTimes{
+        result.append(item)
+    }
+    return result
+}
+repeatItem(repeating: "knock", numberOfTimes: 4)
 
