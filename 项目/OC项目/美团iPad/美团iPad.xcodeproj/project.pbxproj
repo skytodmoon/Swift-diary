@@ -21,6 +21,13 @@
 		5B7F85991F1F576F007EF247 /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F85951F1F576F007EF247 /* sorts.plist */; };
 		5B7F859F1F1F58DC007EF247 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F859E1F1F58DC007EF247 /* MainController.m */; };
 		5B7F85A21F1F58F6007EF247 /* BasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85A11F1F58F6007EF247 /* BasicCollectionViewController.m */; };
+		5B7F85A71F1F5E9A007EF247 /* NavMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85A61F1F5E9A007EF247 /* NavMenu.m */; };
+		5B7F85A91F1F5EB1007EF247 /* NavMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F85A81F1F5EB1007EF247 /* NavMenu.xib */; };
+		5B7F85AD1F1F605C007EF247 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85AC1F1F605C007EF247 /* UIBarButtonItem+Extension.m */; };
+		5B7F85B01F1F6078007EF247 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85AF1F1F6078007EF247 /* UIView+Extension.m */; };
+		5B7F85B51F1F61D9007EF247 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85B41F1F61D9007EF247 /* MapViewController.m */; };
+		5B7F85B81F1F6205007EF247 /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85B71F1F6205007EF247 /* NavController.m */; };
+		5B7F85BD1F1F6302007EF247 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85BC1F1F6302007EF247 /* SearchViewController.m */; };
 		EF8FF393DA02B35DC4BF5BD8 /* libPods-美团iPad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2053D79A510A41015815ED /* libPods-美团iPad.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +75,19 @@
 		5B7F859E1F1F58DC007EF247 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		5B7F85A01F1F58F6007EF247 /* BasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicCollectionViewController.h; sourceTree = "<group>"; };
 		5B7F85A11F1F58F6007EF247 /* BasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicCollectionViewController.m; sourceTree = "<group>"; };
+		5B7F85A51F1F5E9A007EF247 /* NavMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavMenu.h; sourceTree = "<group>"; };
+		5B7F85A61F1F5E9A007EF247 /* NavMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavMenu.m; sourceTree = "<group>"; };
+		5B7F85A81F1F5EB1007EF247 /* NavMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavMenu.xib; sourceTree = "<group>"; };
+		5B7F85AB1F1F605C007EF247 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		5B7F85AC1F1F605C007EF247 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		5B7F85AE1F1F6078007EF247 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		5B7F85AF1F1F6078007EF247 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		5B7F85B31F1F61D9007EF247 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		5B7F85B41F1F61D9007EF247 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		5B7F85B61F1F6205007EF247 /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		5B7F85B71F1F6205007EF247 /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		5B7F85BB1F1F6302007EF247 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		5B7F85BC1F1F6302007EF247 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		643B9CF12A244D402AD2298E /* libPods-美团iPadTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团iPadTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99574E1BA791A71DB93BE1A0 /* Pods-美团iPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-美团iPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-美团iPad/Pods-美团iPad.debug.xcconfig"; sourceTree = "<group>"; };
 		CF2053D79A510A41015815ED /* libPods-美团iPad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-美团iPad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +189,9 @@
 		5B7F858F1F1F573F007EF247 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B7F85B91F1F62EF007EF247 /* Search */,
+				5B7F85B11F1F61C4007EF247 /* Map */,
+				5B7F85A31F1F5E87007EF247 /* Deals */,
 				5B7F859B1F1F58B6007EF247 /* Main */,
 				5B7F85901F1F573F007EF247 /* Other */,
 			);
@@ -178,6 +201,7 @@
 		5B7F85901F1F573F007EF247 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B7F85AA1F1F6048007EF247 /* Category */,
 				5B7F85911F1F5752007EF247 /* Plist */,
 			);
 			path = Other;
@@ -209,8 +233,73 @@
 				5B7F859E1F1F58DC007EF247 /* MainController.m */,
 				5B7F85A01F1F58F6007EF247 /* BasicCollectionViewController.h */,
 				5B7F85A11F1F58F6007EF247 /* BasicCollectionViewController.m */,
+				5B7F85B61F1F6205007EF247 /* NavController.h */,
+				5B7F85B71F1F6205007EF247 /* NavController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7F85A31F1F5E87007EF247 /* Deals */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85A41F1F5E87007EF247 /* View */,
+			);
+			path = Deals;
+			sourceTree = "<group>";
+		};
+		5B7F85A41F1F5E87007EF247 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85A51F1F5E9A007EF247 /* NavMenu.h */,
+				5B7F85A61F1F5E9A007EF247 /* NavMenu.m */,
+				5B7F85A81F1F5EB1007EF247 /* NavMenu.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B7F85AA1F1F6048007EF247 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85AB1F1F605C007EF247 /* UIBarButtonItem+Extension.h */,
+				5B7F85AC1F1F605C007EF247 /* UIBarButtonItem+Extension.m */,
+				5B7F85AE1F1F6078007EF247 /* UIView+Extension.h */,
+				5B7F85AF1F1F6078007EF247 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5B7F85B11F1F61C4007EF247 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85B21F1F61C4007EF247 /* Controller */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		5B7F85B21F1F61C4007EF247 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85B31F1F61D9007EF247 /* MapViewController.h */,
+				5B7F85B41F1F61D9007EF247 /* MapViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7F85B91F1F62EF007EF247 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85BA1F1F62EF007EF247 /* Controler */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5B7F85BA1F1F62EF007EF247 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85BB1F1F6302007EF247 /* SearchViewController.h */,
+				5B7F85BC1F1F6302007EF247 /* SearchViewController.m */,
+			);
+			path = Controler;
 			sourceTree = "<group>";
 		};
 		946485C837C02D908FD36722 /* Frameworks */ = {
@@ -344,6 +433,7 @@
 				5B7F85691F1F555B007EF247 /* Assets.xcassets in Resources */,
 				5B7F85971F1F576F007EF247 /* cities.plist in Resources */,
 				5B7F85671F1F555B007EF247 /* Main.storyboard in Resources */,
+				5B7F85A91F1F5EB1007EF247 /* NavMenu.xib in Resources */,
 				5B7F85981F1F576F007EF247 /* cityGroups.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,9 +508,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7F85A21F1F58F6007EF247 /* BasicCollectionViewController.m in Sources */,
+				5B7F85AD1F1F605C007EF247 /* UIBarButtonItem+Extension.m in Sources */,
 				5B7F859F1F1F58DC007EF247 /* MainController.m in Sources */,
+				5B7F85B51F1F61D9007EF247 /* MapViewController.m in Sources */,
+				5B7F85A71F1F5E9A007EF247 /* NavMenu.m in Sources */,
 				5B7F85641F1F555B007EF247 /* ViewController.m in Sources */,
 				5B7F85611F1F555B007EF247 /* AppDelegate.m in Sources */,
+				5B7F85B81F1F6205007EF247 /* NavController.m in Sources */,
+				5B7F85BD1F1F6302007EF247 /* SearchViewController.m in Sources */,
+				5B7F85B01F1F6078007EF247 /* UIView+Extension.m in Sources */,
 				5B7F855E1F1F555B007EF247 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
