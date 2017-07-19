@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JZMTBtnView.h"
+#import "MTBtnView.h"
 
 @interface HomeMenuCell : UITableViewCell
 

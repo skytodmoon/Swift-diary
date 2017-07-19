@@ -1,5 +1,5 @@
 //
-//  JZMTBtnView.h
+//  MTBtnView.h
 //  美团
 //
 //  Created by 金亮齐 on 2017/7/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JZMTBtnView : UIView
+@interface MTBtnView : UIView
 -(id)initWithFrame:(CGRect)frame title:(NSString *)title imageStr:(NSString *)imageStr;
 @end
