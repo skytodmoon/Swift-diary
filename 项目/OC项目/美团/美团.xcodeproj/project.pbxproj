@@ -59,6 +59,9 @@
 		5B72297B1F1DE1FB00884949 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B72297A1F1DE1FB00884949 /* LoginView.m */; };
 		5B72297E1F1DE38400884949 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B72297D1F1DE38400884949 /* UIView+Frame.m */; };
 		5B7229811F1DE3E200884949 /* TabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7229801F1DE3E200884949 /* TabbarButton.m */; };
+		5B7F853A1F1F04B3007EF247 /* ShopImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F85391F1F04B3007EF247 /* ShopImageCell.m */; };
+		5B7F853D1F1F0A97007EF247 /* ShopPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F853C1F1F0A97007EF247 /* ShopPriceCell.m */; };
+		5B7F85401F1F0B19007EF247 /* ShopRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F853F1F1F0B19007EF247 /* ShopRecommendCell.m */; };
 		5BA7F3211F0DCF0C00768AF1 /* ShopRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */; };
 		5BA7F3241F0DD15300768AF1 /* HotQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F3231F0DD15300768AF1 /* HotQueueViewController.m */; };
 		5BFC74951F0336A6001ACDEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFC74941F0336A6001ACDEF /* main.m */; };
@@ -187,6 +190,12 @@
 		5B72297D1F1DE38400884949 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		5B72297F1F1DE3E200884949 /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
 		5B7229801F1DE3E200884949 /* TabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarButton.m; sourceTree = "<group>"; };
+		5B7F85381F1F04B3007EF247 /* ShopImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopImageCell.h; sourceTree = "<group>"; };
+		5B7F85391F1F04B3007EF247 /* ShopImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopImageCell.m; sourceTree = "<group>"; };
+		5B7F853B1F1F0A97007EF247 /* ShopPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopPriceCell.h; sourceTree = "<group>"; };
+		5B7F853C1F1F0A97007EF247 /* ShopPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopPriceCell.m; sourceTree = "<group>"; };
+		5B7F853E1F1F0B19007EF247 /* ShopRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendCell.h; sourceTree = "<group>"; };
+		5B7F853F1F1F0B19007EF247 /* ShopRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendCell.m; sourceTree = "<group>"; };
 		5BA7F31F1F0DCF0C00768AF1 /* ShopRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendModel.h; sourceTree = "<group>"; };
 		5BA7F3201F0DCF0C00768AF1 /* ShopRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendModel.m; sourceTree = "<group>"; };
 		5BA7F3221F0DD15300768AF1 /* HotQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotQueueViewController.h; sourceTree = "<group>"; };
@@ -440,6 +449,7 @@
 		5B44D9CD1F0CCB050053F9F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B7F85371F1F047C007EF247 /* Shop */,
 				5B7229751F1DE01C00884949 /* Mine */,
 				5B7229611F1DB12700884949 /* Map */,
 				5BA7F3251F0DD43B00768AF1 /* Home */,
@@ -523,6 +533,19 @@
 				5B72297A1F1DE1FB00884949 /* LoginView.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		5B7F85371F1F047C007EF247 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F85381F1F04B3007EF247 /* ShopImageCell.h */,
+				5B7F85391F1F04B3007EF247 /* ShopImageCell.m */,
+				5B7F853B1F1F0A97007EF247 /* ShopPriceCell.h */,
+				5B7F853C1F1F0A97007EF247 /* ShopPriceCell.m */,
+				5B7F853E1F1F0B19007EF247 /* ShopRecommendCell.h */,
+				5B7F853F1F1F0B19007EF247 /* ShopRecommendCell.m */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		5BA7F3251F0DD43B00768AF1 /* Home */ = {
@@ -817,10 +840,12 @@
 				5B44D9E01F0CCB050053F9F6 /* RefreshHeader.m in Sources */,
 				5B6262391F13259000242D4E /* RecommendCell.m in Sources */,
 				5B6262491F13272B00242D4E /* RushViewController.m in Sources */,
+				5B7F85401F1F0B19007EF247 /* ShopRecommendCell.m in Sources */,
 				5B62624D1F1354F000242D4E /* DisTopicModel.m in Sources */,
 				5B6262461F13270400242D4E /* DiscountOCViewController.m in Sources */,
 				5B44D9E31F0CCB050053F9F6 /* HotQueueModel.m in Sources */,
 				5B44D9E21F0CCB050053F9F6 /* ViewController.m in Sources */,
+				5B7F853A1F1F04B3007EF247 /* ShopImageCell.m in Sources */,
 				5B7229811F1DE3E200884949 /* TabbarButton.m in Sources */,
 				5B44D9E41F0CCB050053F9F6 /* MerAroundGroupModel.m in Sources */,
 				5B72296D1F1DB17E00884949 /* MAAroundAnnotation.m in Sources */,
@@ -836,6 +861,7 @@
 				5B44D9E51F0CCB050053F9F6 /* MerCateGroupModel.m in Sources */,
 				5B62623C1F1325CB00242D4E /* DisDealModel.m in Sources */,
 				5B72297E1F1DE38400884949 /* UIView+Frame.m in Sources */,
+				5B7F853D1F1F0A97007EF247 /* ShopPriceCell.m in Sources */,
 				5B62622A1F1320C400242D4E /* HomeMenuCell.m in Sources */,
 				5B44D9EE1F0CCB050053F9F6 /* MerAroundGroupCell.m in Sources */,
 				5B44D9DD1F0CCB050053F9F6 /* MerchantViewController.m in Sources */,
