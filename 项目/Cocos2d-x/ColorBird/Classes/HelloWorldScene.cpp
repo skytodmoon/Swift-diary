@@ -90,26 +90,70 @@ bool HelloWorld::init()
     
     
     //////////DEMO3//////////////////
-    // 获取精灵帧缓存的单例对象。
-    auto spriteFrameCache = SpriteFrameCache::getInstance();
-    // ①从plist文件添加多个精灵帧
-    spriteFrameCache->addSpriteFramesWithFile("SpriteSheet.plist");
-    // ②根据图片的名称创建一个精灵帧（背景）。
-    auto sprite1Frame = spriteFrameCache->getSpriteFrameByName("gamebg.png");
-    // ③使用精灵帧创建一个精灵
-    auto bgSprite = Sprite::createWithSpriteFrame(sprite1Frame);
-    // 设置精灵sprite1的坐标位置
-    bgSprite->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2));
-    this->addChild(bgSprite);
-    // ④使用精灵帧的名称创建一个精灵（豌豆）
-    auto plantSprite = Sprite::createWithSpriteFrameName("plant.png");
-    plantSprite->setPosition(Vec2(visibleSize.width/2-200,visibleSize.height/2));
-    this->addChild(plantSprite);
-    // ⑤使用精灵帧的名称创建一个精灵（僵尸）
-    auto zSprite = Sprite::createWithSpriteFrameName("z_00_01.png");
-    zSprite->setPosition(Vec2(visibleSize.width/2+200,visibleSize.height/2));
-    this->addChild(zSprite);
+//    // 获取精灵帧缓存的单例对象。
+//    auto spriteFrameCache = SpriteFrameCache::getInstance();
+//    // ①从plist文件添加多个精灵帧
+//    spriteFrameCache->addSpriteFramesWithFile("SpriteSheet.plist");
+//    // ②根据图片的名称创建一个精灵帧（背景）。
+//    auto sprite1Frame = spriteFrameCache->getSpriteFrameByName("gamebg.png");
+//    // ③使用精灵帧创建一个精灵
+//    auto bgSprite = Sprite::createWithSpriteFrame(sprite1Frame);
+//    // 设置精灵sprite1的坐标位置
+//    bgSprite->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2));
+//    this->addChild(bgSprite);
+//    // ④使用精灵帧的名称创建一个精灵（豌豆）
+//    auto plantSprite = Sprite::createWithSpriteFrameName("plant.png");
+//    plantSprite->setPosition(Vec2(visibleSize.width/2-200,visibleSize.height/2));
+//    this->addChild(plantSprite);
+//    // ⑤使用精灵帧的名称创建一个精灵（僵尸）
+//    auto zSprite = Sprite::createWithSpriteFrameName("z_00_01.png");
+//    zSprite->setPosition(Vec2(visibleSize.width/2+200,visibleSize.height/2));
+//    this->addChild(zSprite);
     
+    //测试代码开始
+    Vector<Node*> vec(10);
+    log("%s",vec.empty() ? "Vector为空":"Vector不为空");
+    //pushBack函数将对象添加到Vector末尾
+    auto node1 = Node::create();
+    node1->setTag(1);
+    vec.pushBack(node1);
+    
+    auto node3 = Node::create();
+    node3->setTag(3);
+    vec.pushBack(node3);
+    
+    auto node5 = Node::create();
+    node5->setTag(5);
+    vec.pushBack(node5);
+    
+    auto node7 = Node::create();
+    node7->setTag(7);
+    vec.pushBack(node7);
+    
+    auto node2 = Node::create();
+    node2->setTag(2);
+    vec.pushBack(node2);
+    
+    auto node4 = Node::create();
+    node4->setTag(4);
+    vec.pushBack(node4);
+    
+    auto node6 = Node::create();
+    node6->setTag(6);
+    vec.pushBack(node6);
+    
+    //insert函数将对象插入指定的位置
+    auto node8 = Node::create();
+    node8->setTag(8);
+    vec.insert(1, node8);
+    
+    //empty函数判断Vector是否为空,为空返回true，否则范湖false
+    log("%s",vec.empty() ? "Vector为空":"Vector不为空");
+    //capacty函数范湖当前储存空间大小
+    log("Vector.capacty(): %i", (int)vec.capacity());
+    //size函数返回Vector中元素的数量
+    log("Vector.size(): %i",(int)vec.size());
+    //getIndex函数范湖包含对象的索引
     return true;
 }
 
