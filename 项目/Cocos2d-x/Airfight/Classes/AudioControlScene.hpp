@@ -1,20 +1,18 @@
 //
-//  MenuScene.hpp
+//  AudioControlScene.hpp
 //  Airfight
 //
 //  Created by 金亮齐 on 2017/7/21.
 //
 //
 
-#ifndef MenuScene_hpp
-#define MenuScene_hpp
+#ifndef AudioControlScene_hpp
+#define AudioControlScene_hpp
 
-#include <iostream>
-#include "AudioControlScene.hpp"
-
-// 1. GameMenu类的作用是显示一个菜单场景，让用户选择“开始游戏”或是“游戏设置”。
-class GameMenu : public cocos2d::Layer
-{
+#include <stdio.h>
+#include "MenuScene.hpp"
+//设置背景音乐和声音特效
+class AudioControl: public cocos2d::Layer{
 public:
     /**
      * 静态函数，创建Scene场景
@@ -30,8 +28,6 @@ public:
     /**
      * 使用CREATE_FUNC宏创建当前类的对象，返回的对象将会由自动释放池管理内存的释放
      */
-    CREATE_FUNC(GameMenu);
+    CREATE_FUNC(AudioControl);
 };
-
-
-#endif /* MenuScene_hpp */
+#endif /* AudioControlScene_hpp */

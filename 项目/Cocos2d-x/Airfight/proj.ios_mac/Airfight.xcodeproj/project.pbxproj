@@ -72,6 +72,7 @@
 		5B772B371F219C5F00E9AC9E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B772B221F219C5F00E9AC9E /* sliderThumb.png */; };
 		5B772B381F219C5F00E9AC9E /* sliderTrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B772B231F219C5F00E9AC9E /* sliderTrack.png */; };
 		5B772B431F219D2A00E9AC9E /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B772B411F219D2A00E9AC9E /* MenuScene.cpp */; };
+		5B772B481F21B29600E9AC9E /* AudioControlScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B772B461F21B29600E9AC9E /* AudioControlScene.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -192,6 +193,8 @@
 		5B772B231F219C5F00E9AC9E /* sliderTrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack.png; sourceTree = "<group>"; };
 		5B772B411F219D2A00E9AC9E /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
 		5B772B421F219D2A00E9AC9E /* MenuScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MenuScene.hpp; sourceTree = "<group>"; };
+		5B772B461F21B29600E9AC9E /* AudioControlScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioControlScene.cpp; sourceTree = "<group>"; };
+		5B772B471F21B29600E9AC9E /* AudioControlScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioControlScene.hpp; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -332,6 +335,8 @@
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
 				5B772B411F219D2A00E9AC9E /* MenuScene.cpp */,
 				5B772B421F219D2A00E9AC9E /* MenuScene.hpp */,
+				5B772B461F21B29600E9AC9E /* AudioControlScene.cpp */,
+				5B772B471F21B29600E9AC9E /* AudioControlScene.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -581,6 +586,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				5B772B431F219D2A00E9AC9E /* MenuScene.cpp in Sources */,
+				5B772B481F21B29600E9AC9E /* AudioControlScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -641,7 +647,7 @@
 				);
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};
@@ -673,7 +679,7 @@
 				);
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};
