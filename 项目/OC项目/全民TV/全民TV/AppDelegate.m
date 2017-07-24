@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainViewController.h"
+#import "EntryViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +17,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    EntryViewController *entry = [[EntryViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:entry];
+    [nav setNavigationBarHidden:YES];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)showMainViewController
+{
+    MainViewController* mainVC = [[MainViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    [nav setNavigationBarHidden:YES];
+    self.window.rootViewController = nav;
+}
+
++ (AppDelegate*)shareAppDelegate
+{
+    return [UIApplication sharedApplication].delegate;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

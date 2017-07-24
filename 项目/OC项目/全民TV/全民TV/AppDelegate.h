@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+- (void)showMainViewController;
+- (void)showLoginViewController;
++ (AppDelegate*)shareAppDelegate;
 @end
 
