@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BF6BF561F25801D00AE323B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF551F25801D00AE323B /* main.m */; };
+		5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF581F25801D00AE323B /* AppDelegate.m */; };
+		5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF5B1F25801D00AE323B /* ViewController.m */; };
+		5BF6BF5F1F25801D00AE323B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6BF5D1F25801D00AE323B /* Main.storyboard */; };
+		5BF6BF611F25801D00AE323B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6BF601F25801D00AE323B /* Assets.xcassets */; };
+		5BF6BF641F25801D00AE323B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF6BF621F25801D00AE323B /* LaunchScreen.storyboard */; };
+		5BF6BF6F1F25801D00AE323B /* __TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF6E1F25801D00AE323B /* __TVTests.m */; };
+		5BF6BF7A1F25801D00AE323B /* __TVUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF791F25801D00AE323B /* __TVUITests.m */; };
+		7F413B8F6E39A31717203A08 /* libPods-全民TV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B821ABCBDF644DFE60DE545 /* libPods-全民TV.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BF6BF6B1F25801D00AE323B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF6BF491F25801D00AE323B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF6BF501F25801D00AE323B;
+			remoteInfo = "全民TV";
+		};
+		5BF6BF761F25801D00AE323B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF6BF491F25801D00AE323B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BF6BF501F25801D00AE323B;
+			remoteInfo = "全民TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		115B2E03FE286266278EB293 /* Pods-全民TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.release.xcconfig"; sourceTree = "<group>"; };
+		5BF6BF511F25801D00AE323B /* 全民TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全民TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF6BF551F25801D00AE323B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BF6BF571F25801D00AE323B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BF6BF581F25801D00AE323B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BF6BF5A1F25801D00AE323B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5BF6BF5B1F25801D00AE323B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BF6BF5E1F25801D00AE323B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BF6BF601F25801D00AE323B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BF6BF631F25801D00AE323B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BF6BF651F25801D00AE323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF6BF6A1F25801D00AE323B /* 全民TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全民TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF6BF6E1F25801D00AE323B /* __TVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TVTests.m; sourceTree = "<group>"; };
+		5BF6BF701F25801D00AE323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF6BF751F25801D00AE323B /* 全民TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全民TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF6BF791F25801D00AE323B /* __TVUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TVUITests.m; sourceTree = "<group>"; };
+		5BF6BF7B1F25801D00AE323B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B821ABCBDF644DFE60DE545 /* libPods-全民TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45290D45B158AFBBFA11302 /* libPods-全民TVTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5894F0834086CE135B9D351 /* Pods-全民TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民TV/Pods-全民TV.debug.xcconfig"; sourceTree = "<group>"; };
+		F99ECC7F87B16FFAF1BD6642 /* libPods-全民TVUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-全民TVUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BF6BF4E1F25801D00AE323B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F413B8F6E39A31717203A08 /* libPods-全民TV.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF671F25801D00AE323B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF721F25801D00AE323B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5720E1407B0646C5BF5A4536 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5894F0834086CE135B9D351 /* Pods-全民TV.debug.xcconfig */,
+				115B2E03FE286266278EB293 /* Pods-全民TV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5BF6BF481F25801D00AE323B = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF531F25801D00AE323B /* 全民TV */,
+				5BF6BF6D1F25801D00AE323B /* 全民TVTests */,
+				5BF6BF781F25801D00AE323B /* 全民TVUITests */,
+				5BF6BF521F25801D00AE323B /* Products */,
+				5720E1407B0646C5BF5A4536 /* Pods */,
+				A092D5ACA0CB94C40A59B3AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5BF6BF521F25801D00AE323B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF511F25801D00AE323B /* 全民TV.app */,
+				5BF6BF6A1F25801D00AE323B /* 全民TVTests.xctest */,
+				5BF6BF751F25801D00AE323B /* 全民TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BF6BF531F25801D00AE323B /* 全民TV */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF571F25801D00AE323B /* AppDelegate.h */,
+				5BF6BF581F25801D00AE323B /* AppDelegate.m */,
+				5BF6BF5A1F25801D00AE323B /* ViewController.h */,
+				5BF6BF5B1F25801D00AE323B /* ViewController.m */,
+				5BF6BF5D1F25801D00AE323B /* Main.storyboard */,
+				5BF6BF601F25801D00AE323B /* Assets.xcassets */,
+				5BF6BF621F25801D00AE323B /* LaunchScreen.storyboard */,
+				5BF6BF651F25801D00AE323B /* Info.plist */,
+				5BF6BF541F25801D00AE323B /* Supporting Files */,
+			);
+			path = "全民TV";
+			sourceTree = "<group>";
+		};
+		5BF6BF541F25801D00AE323B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF551F25801D00AE323B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BF6BF6D1F25801D00AE323B /* 全民TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF6E1F25801D00AE323B /* __TVTests.m */,
+				5BF6BF701F25801D00AE323B /* Info.plist */,
+			);
+			path = "全民TVTests";
+			sourceTree = "<group>";
+		};
+		5BF6BF781F25801D00AE323B /* 全民TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6BF791F25801D00AE323B /* __TVUITests.m */,
+				5BF6BF7B1F25801D00AE323B /* Info.plist */,
+			);
+			path = "全民TVUITests";
+			sourceTree = "<group>";
+		};
+		A092D5ACA0CB94C40A59B3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B821ABCBDF644DFE60DE545 /* libPods-全民TV.a */,
+				A45290D45B158AFBBFA11302 /* libPods-全民TVTests.a */,
+				F99ECC7F87B16FFAF1BD6642 /* libPods-全民TVUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BF6BF501F25801D00AE323B /* 全民TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF6BF7E1F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TV" */;
+			buildPhases = (
+				6CAE1EB5E5A14B2A6F9FC2F1 /* [CP] Check Pods Manifest.lock */,
+				5BF6BF4D1F25801D00AE323B /* Sources */,
+				5BF6BF4E1F25801D00AE323B /* Frameworks */,
+				5BF6BF4F1F25801D00AE323B /* Resources */,
+				E80D9ABCEBC8DCB72F638AF8 /* [CP] Embed Pods Frameworks */,
+				57BF0FDE00CF4CF0BBC060A6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "全民TV";
+			productName = "全民TV";
+			productReference = 5BF6BF511F25801D00AE323B /* 全民TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BF6BF691F25801D00AE323B /* 全民TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF6BF811F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TVTests" */;
+			buildPhases = (
+				5BF6BF661F25801D00AE323B /* Sources */,
+				5BF6BF671F25801D00AE323B /* Frameworks */,
+				5BF6BF681F25801D00AE323B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BF6BF6C1F25801D00AE323B /* PBXTargetDependency */,
+			);
+			name = "全民TVTests";
+			productName = "全民TVTests";
+			productReference = 5BF6BF6A1F25801D00AE323B /* 全民TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BF6BF741F25801D00AE323B /* 全民TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF6BF841F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TVUITests" */;
+			buildPhases = (
+				5BF6BF711F25801D00AE323B /* Sources */,
+				5BF6BF721F25801D00AE323B /* Frameworks */,
+				5BF6BF731F25801D00AE323B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BF6BF771F25801D00AE323B /* PBXTargetDependency */,
+			);
+			name = "全民TVUITests";
+			productName = "全民TVUITests";
+			productReference = 5BF6BF751F25801D00AE323B /* 全民TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BF6BF491F25801D00AE323B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5BF6BF501F25801D00AE323B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5BF6BF691F25801D00AE323B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5BF6BF501F25801D00AE323B;
+					};
+					5BF6BF741F25801D00AE323B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5BF6BF501F25801D00AE323B;
+					};
+				};
+			};
+			buildConfigurationList = 5BF6BF4C1F25801D00AE323B /* Build configuration list for PBXProject "全民TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BF6BF481F25801D00AE323B;
+			productRefGroup = 5BF6BF521F25801D00AE323B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BF6BF501F25801D00AE323B /* 全民TV */,
+				5BF6BF691F25801D00AE323B /* 全民TVTests */,
+				5BF6BF741F25801D00AE323B /* 全民TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BF6BF4F1F25801D00AE323B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF6BF641F25801D00AE323B /* LaunchScreen.storyboard in Resources */,
+				5BF6BF611F25801D00AE323B /* Assets.xcassets in Resources */,
+				5BF6BF5F1F25801D00AE323B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF681F25801D00AE323B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF731F25801D00AE323B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57BF0FDE00CF4CF0BBC060A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TV/Pods-全民TV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CAE1EB5E5A14B2A6F9FC2F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E80D9ABCEBC8DCB72F638AF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-全民TV/Pods-全民TV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BF6BF4D1F25801D00AE323B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */,
+				5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */,
+				5BF6BF561F25801D00AE323B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF661F25801D00AE323B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF6BF6F1F25801D00AE323B /* __TVTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BF6BF711F25801D00AE323B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF6BF7A1F25801D00AE323B /* __TVUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BF6BF6C1F25801D00AE323B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BF6BF501F25801D00AE323B /* 全民TV */;
+			targetProxy = 5BF6BF6B1F25801D00AE323B /* PBXContainerItemProxy */;
+		};
+		5BF6BF771F25801D00AE323B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BF6BF501F25801D00AE323B /* 全民TV */;
+			targetProxy = 5BF6BF761F25801D00AE323B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BF6BF5D1F25801D00AE323B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BF6BF5E1F25801D00AE323B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BF6BF621F25801D00AE323B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BF6BF631F25801D00AE323B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BF6BF7C1F25801D00AE323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5BF6BF7D1F25801D00AE323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BF6BF7F1F25801D00AE323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5894F0834086CE135B9D351 /* Pods-全民TV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "全民TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5BF6BF801F25801D00AE323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115B2E03FE286266278EB293 /* Pods-全民TV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "全民TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5BF6BF821F25801D00AE323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "全民TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/全民TV.app/全民TV";
+			};
+			name = Debug;
+		};
+		5BF6BF831F25801D00AE323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "全民TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/全民TV.app/全民TV";
+			};
+			name = Release;
+		};
+		5BF6BF851F25801D00AE323B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "全民TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "全民TV";
+			};
+			name = Debug;
+		};
+		5BF6BF861F25801D00AE323B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "全民TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "全民TV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BF6BF4C1F25801D00AE323B /* Build configuration list for PBXProject "全民TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF6BF7C1F25801D00AE323B /* Debug */,
+				5BF6BF7D1F25801D00AE323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BF6BF7E1F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF6BF7F1F25801D00AE323B /* Debug */,
+				5BF6BF801F25801D00AE323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BF6BF811F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF6BF821F25801D00AE323B /* Debug */,
+				5BF6BF831F25801D00AE323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BF6BF841F25801D00AE323B /* Build configuration list for PBXNativeTarget "全民TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF6BF851F25801D00AE323B /* Debug */,
+				5BF6BF861F25801D00AE323B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BF6BF491F25801D00AE323B /* Project object */;
+}
