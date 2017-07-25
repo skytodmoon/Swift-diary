@@ -13,7 +13,16 @@
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <YYKit.h>
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import <WeiboSDK.h>
+#import "EMSDK.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "RefreshGifHeader.h"
+#import "UIImageView+WebCache.h"
 #import "NavigationViewController.h"
 
 //得到屏幕的高
@@ -36,11 +45,14 @@
 
 
 //根据RGB值返回颜色
-#define RGBColor(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBColor(r, g, b, a)                    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r, g, b)                        RGBA(r, g, b, 1.0f)
 
 #define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 //随机颜色
 #define RANDOMCOLOR     [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1]
+
+#define theWindow                       [[UIApplication sharedApplication] delegate].window
 
 #endif /* PrefixHeader_pch */

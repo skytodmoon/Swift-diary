@@ -11,6 +11,9 @@
 		5B8C7D9F1F25C9FE003F48A8 /* ColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7D9E1F25C9FE003F48A8 /* ColumnViewController.m */; };
 		5B8C7DA31F25CA36003F48A8 /* LiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DA21F25CA36003F48A8 /* LiveListViewController.m */; };
 		5B8C7DA71F25CA59003F48A8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DA61F25CA59003F48A8 /* ProfileViewController.m */; };
+		5B8C7DAF1F25CF99003F48A8 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DAC1F25CF99003F48A8 /* LoginView.m */; };
+		5B8C7DB01F25CF99003F48A8 /* SettingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DAE1F25CF99003F48A8 /* SettingHeaderView.m */; };
+		5B8C7DB51F25CFF3003F48A8 /* TabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */; };
 		5BF6BF561F25801D00AE323B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF551F25801D00AE323B /* main.m */; };
 		5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF581F25801D00AE323B /* AppDelegate.m */; };
 		5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF5B1F25801D00AE323B /* ViewController.m */; };
@@ -53,6 +56,12 @@
 		5B8C7DA21F25CA36003F48A8 /* LiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListViewController.m; sourceTree = "<group>"; };
 		5B8C7DA51F25CA59003F48A8 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		5B8C7DA61F25CA59003F48A8 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		5B8C7DAB1F25CF99003F48A8 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		5B8C7DAC1F25CF99003F48A8 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		5B8C7DAD1F25CF99003F48A8 /* SettingHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHeaderView.h; sourceTree = "<group>"; };
+		5B8C7DAE1F25CF99003F48A8 /* SettingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHeaderView.m; sourceTree = "<group>"; };
+		5B8C7DB31F25CFF3003F48A8 /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
+		5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarButton.m; sourceTree = "<group>"; };
 		5BF6BF511F25801D00AE323B /* 全民TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全民TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF6BF551F25801D00AE323B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BF6BF571F25801D00AE323B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +175,50 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		5B8C7DA81F25CF99003F48A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C7DA91F25CF99003F48A8 /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B8C7DA91F25CF99003F48A8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C7DAA1F25CF99003F48A8 /* Mine */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5B8C7DAA1F25CF99003F48A8 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C7DAB1F25CF99003F48A8 /* LoginView.h */,
+				5B8C7DAC1F25CF99003F48A8 /* LoginView.m */,
+				5B8C7DAD1F25CF99003F48A8 /* SettingHeaderView.h */,
+				5B8C7DAE1F25CF99003F48A8 /* SettingHeaderView.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		5B8C7DB11F25CFE2003F48A8 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C7DB21F25CFE2003F48A8 /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5B8C7DB21F25CFE2003F48A8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C7DB31F25CFF3003F48A8 /* TabbarButton.h */,
+				5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		5BF6BF481F25801D00AE323B = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +288,8 @@
 		5BF6BF891F25C4CC00AE323B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B8C7DB11F25CFE2003F48A8 /* Other */,
+				5B8C7DA81F25CF99003F48A8 /* View */,
 				5B8C7D971F25C9A1003F48A8 /* Controller */,
 				5BF6BF8D1F25C5A500AE323B /* Base */,
 				5BF6BF8C1F25C59900AE323B /* Refresh */,
@@ -456,11 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8C7DA31F25CA36003F48A8 /* LiveListViewController.m in Sources */,
+				5B8C7DB51F25CFF3003F48A8 /* TabbarButton.m in Sources */,
 				5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */,
+				5B8C7DB01F25CF99003F48A8 /* SettingHeaderView.m in Sources */,
 				5BF6BF961F25C74500AE323B /* RefreshGifHeader.m in Sources */,
 				5BF6BF991F25C7C900AE323B /* NavigationViewController.m in Sources */,
 				5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */,
 				5BF6BF931F25C63700AE323B /* EntryViewController.m in Sources */,
+				5B8C7DAF1F25CF99003F48A8 /* LoginView.m in Sources */,
 				5BF6BF561F25801D00AE323B /* main.m in Sources */,
 				5BF6BF901F25C5B500AE323B /* MainViewController.m in Sources */,
 				5B8C7DA71F25CA59003F48A8 /* ProfileViewController.m in Sources */,

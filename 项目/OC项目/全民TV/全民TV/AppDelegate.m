@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "EntryViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +26,8 @@
     [nav setNavigationBarHidden:YES];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    [self setupShareSDK];
     return YES;
 }
 
@@ -39,6 +42,62 @@
 + (AppDelegate*)shareAppDelegate
 {
     return [UIApplication sharedApplication].delegate;
+}
+
+#pragma mark - 设置第三方登陆信息
+- (void)setupShareSDK
+{
+    
+    
+    [ShareSDK registerActivePlatforms:@[
+                                        @(SSDKPlatformTypeSinaWeibo),
+                                        @(SSDKPlatformTypeWechat),
+                                        @(SSDKPlatformTypeQQ),
+                                        ]
+                             onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                 break;
+             case SSDKPlatformTypeSinaWeibo:
+                 [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                 break;
+             default:
+                 break;
+         }
+     }
+                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeSinaWeibo:
+                 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                 [appInfo SSDKSetupSinaWeiboByAppKey:@"1234171392"
+                                           appSecret:@"0cf8bc17a50102cd755c4cd85684c4a1"
+                                         redirectUri:@"http://www.baidu.com"
+                                            authType:SSDKAuthTypeBoth];
+                 break;
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx2aaa2d1871fa3bb4"
+                                       appSecret:@"1c72adc1f0150c6c5c4d0de4cbb9613e"];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:@"1104984866"
+                                      appKey:@"HpGu2fsbpohnbw3F"
+                                    authType:SSDKAuthTypeBoth];
+                 break;
+                 
+                 
+             default:
+                 break;
+         }
+         
+     }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
