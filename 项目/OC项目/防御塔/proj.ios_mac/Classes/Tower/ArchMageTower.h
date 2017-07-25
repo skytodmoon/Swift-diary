@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "BaseMageTower.h"
-#include "..\Bullet\Twister.h"
+#include "Twister.h"
 
 USING_NS_CC;
 

@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "BaseMageTower.h"
-#include "..\Soldier\DeathKnight.h"
+#include "DeathKnight.h"
 
 USING_NS_CC;
 

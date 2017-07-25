@@ -1,10 +1,10 @@
 #include "ArchMageTower.h"
-#include "..\Layer\Menu\SimplePanleLayer.h"
-#include "..\Map\BaseMap.h"
-#include "..\Data\GameManager.h"
-#include "..\Bullet\ArchMageBolt.h"
-#include "..\Bullet\Twister.h"
-#include "..\Layer\Menu\SimplePanleLayer.h"
+#include "SimplePanleLayer.h"
+#include "BaseMap.h"
+#include "GameManager.h"
+#include "ArchMageBolt.h"
+#include "Twister.h"
+#include "SimplePanleLayer.h"
 
 void ArchMageTower::sellTower()
 {

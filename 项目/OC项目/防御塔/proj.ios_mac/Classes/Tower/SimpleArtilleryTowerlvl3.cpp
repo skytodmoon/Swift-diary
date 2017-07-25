@@ -1,9 +1,9 @@
 #include "SimpleArtilleryTowerlvl3.h"
-#include "..\Layer\Menu\UpdatePanleLayer.h"
-#include "..\Data\GameManager.h"
-#include "..\Map\BaseMap.h"
+#include "UpdatePanleLayer.h"
+#include "GameManager.h"
+#include "BaseMap.h"
 #include "EarthquakeTower.h"
-#include "..\Layer\Menu\UpdatePanleLayer2.h"
+#include "Menu\UpdatePanleLayer2.h"
 #include "MechsTower.h"
 
 bool SimpleArtilleryTowerlvl3::init()

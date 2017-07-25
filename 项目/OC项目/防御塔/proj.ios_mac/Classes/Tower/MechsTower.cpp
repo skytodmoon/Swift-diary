@@ -1,6 +1,6 @@
 #include "MechsTower.h"
-#include "..\Layer\Menu\SimplePanleLayerWithFlag.h"
-#include "..\Map\BaseMap.h"
+#include "SimplePanleLayerWithFlag.h"
+#include "BaseMap.h"
 
 bool MechsTower::init()
 {

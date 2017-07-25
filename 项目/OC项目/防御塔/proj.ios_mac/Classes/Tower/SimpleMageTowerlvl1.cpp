@@ -1,9 +1,9 @@
 #include "SimpleMageTowerlvl1.h"
 #include "SimpleMageTowerlvl2.h"
-#include "..\Layer\Menu\UpdatePanleLayer.h"
-#include "..\Map\BaseMap.h"
-#include "..\Data\GameManager.h"
-#include "..\Bullet\MageBolt.h"
+#include "UpdatePanleLayer.h"
+#include "BaseMap.h"
+#include "GameManager.h"
+#include "MageBolt.h"
 
 bool SimpleMageTowerlvl1::init()
 {

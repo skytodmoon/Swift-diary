@@ -1,10 +1,10 @@
 #include "NecromancerTower.h"
-#include "..\Layer\Menu\UpdatePanleLayer.h"
-#include "..\Map\BaseMap.h"
-#include "..\Data\GameManager.h"
-#include "..\Bullet\NecrBolt.h"
-#include "..\Map\BaseMap.h"
-#include "..\Layer\Menu\SimplePanleLayerWithFlag.h"
+#include "UpdatePanleLayer.h"
+#include "BaseMap.h"
+#include "GameManager.h"
+#include "NecrBolt.h"
+#include "BaseMap.h"
+#include "SimplePanleLayerWithFlag.h"
 
 bool NecromancerTower::init()
 {

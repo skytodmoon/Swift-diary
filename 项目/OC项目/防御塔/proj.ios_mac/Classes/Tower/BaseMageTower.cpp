@@ -1,7 +1,7 @@
 #include "BaseMageTower.h"
-#include "..\Layer\Menu\UpdatePanleLayer.h"
-#include "..\Map\BaseMap.h"
-#include "..\Data\GameManager.h"
+#include "UpdatePanleLayer.h"
+#include "BaseMap.h"
+#include "GameManager.h"
 #include "math.h"
 
 void BaseMageTower::initTower(int level)

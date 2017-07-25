@@ -1,6 +1,6 @@
-#include "..\Classes\Tower\Terrain.h"
-#include "..\Map\BaseMap.h"
-#include "..\Layer\Menu\TowerPanleLayer.h"
+#include "Terrain.h"
+#include "BaseMap.h"
+#include "TowerPanleLayer.h"
 
 
 MyTerrain* MyTerrain::createTerrain(int type)

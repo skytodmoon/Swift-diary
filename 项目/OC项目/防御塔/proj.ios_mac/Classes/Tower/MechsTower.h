@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "BaseBarracksTower.h"
-#include "..\Soldier\Mecha.h"
+#include "Mecha.h"
 USING_NS_CC;
 
 class MechsTower: public BaseBarracksTower
