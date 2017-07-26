@@ -1,5 +1,5 @@
 #include "DeathKnight.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 DeathKnight* DeathKnight::createDeathKnight(Point point)
 {

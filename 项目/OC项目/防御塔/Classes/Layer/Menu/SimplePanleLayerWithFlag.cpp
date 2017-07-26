@@ -1,7 +1,7 @@
 #include "SimplePanleLayerWithFlag.h"
-#include "GameManager.h"
-#include "BaseBuildIcon.h"
-#include "TouchLayer.h"
+#include "Data/GameManager.h"
+#include "Sprite/TowerIcon/BaseBuildIcon.h"
+#include "Layer/TouchLayer.h"
 
 USING_NS_CC;
 

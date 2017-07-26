@@ -2,10 +2,10 @@
 #define _UPDATE_PANLE_LAYER2_WITHFLAG_H_
 
 #include "cocos2d.h"
-#include "Circle.h"
-#include "UpdateIcon.h"
-#include "BaseTower.h"
-#include "SellIcon.h"
+#include "Sprite/Circle/Circle.h"
+#include "Sprite/UpdateIcon.h"
+#include "Tower/BaseTower.h"
+#include "Sprite/TowerIcon/SellIcon.h"
 
 USING_NS_CC; 
 

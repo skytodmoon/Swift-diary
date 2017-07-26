@@ -1,7 +1,7 @@
 #ifndef _DEATH_KNIGHT_H_
 #define _DEATH_KNIGHT_H_
 
-#include "BaseSoldier.h"
+#include "Soldier/BaseSoldier.h"
 
 class DeathKnight : public BaseSoldier
 {

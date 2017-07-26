@@ -57,56 +57,57 @@ void Level11::onExit()
 {
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_Level11-hd.plist");
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_Level11_2-hd.plist");
+	BaseMap::onExit();
 }
 
 void Level11::addTerrains()
 {
-	auto terrain1 = MyTerrain::createTerrain(3);
+	auto terrain1 = xh::Terrain::createTerrain(3);
 	terrain1->setPosition(Point(850,710));
 	terrain1->setTag(1);
 	addChild(terrain1,3);
 	
-	auto terrain2 = MyTerrain::createTerrain(3);
+	auto terrain2 = xh::Terrain::createTerrain(3);
 	terrain2->setPosition(Point(500,610));
 	terrain2->setTag(2);
 	addChild(terrain2,4);
 
-	auto terrain3 = MyTerrain::createTerrain(3);
+	auto terrain3 = xh::Terrain::createTerrain(3);
 	terrain3->setPosition(Point(220,510));
 	terrain3->setTag(3);
 	addChild(terrain3,5);
 
-	auto terrain4 = MyTerrain::createTerrain(3);
+	auto terrain4 = xh::Terrain::createTerrain(3);
 	terrain4->setPosition(Point(780,540));
 	terrain4->setTag(4);
 	addChild(terrain4,5);
 
-	auto terrain5 = MyTerrain::createTerrain(3);
+	auto terrain5 = xh::Terrain::createTerrain(3);
 	terrain5->setPosition(Point(930,520));
 	terrain5->setTag(5);
 	addChild(terrain5,5);
 
-	auto terrain6 = MyTerrain::createTerrain(3);
+	auto terrain6 = xh::Terrain::createTerrain(3);
 	terrain6->setPosition(Point(450,440));
 	terrain6->setTag(6);
 	addChild(terrain6,6);
 
-	auto terrain7 = MyTerrain::createTerrain(3);
+	auto terrain7 = xh::Terrain::createTerrain(3);
 	terrain7->setPosition(Point(250,380));
 	terrain7->setTag(7);
 	addChild(terrain7,7);
 
-	auto terrain8 = MyTerrain::createTerrain(3);
+	auto terrain8 = xh::Terrain::createTerrain(3);
 	terrain8->setPosition(Point(740,350));
 	terrain8->setTag(8);
 	addChild(terrain8,7);
 
-	auto terrain9 = MyTerrain::createTerrain(3);
+	auto terrain9 = xh::Terrain::createTerrain(3);
 	terrain9->setPosition(Point(940,320));
 	terrain9->setTag(9);
 	addChild(terrain9,7);
 
-	auto terrain10 = MyTerrain::createTerrain(3);
+	auto terrain10 = xh::Terrain::createTerrain(3);
 	terrain10->setPosition(Point(420,250));
 	terrain10->setTag(10);
 	addChild(terrain10,8);

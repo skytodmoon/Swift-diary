@@ -1,7 +1,7 @@
 #ifndef _CANIBAL_OFF_SPRING_H_
 #define _CANIBAL_OFF_SPRING_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 #include "cocos2d.h"
 USING_NS_CC;
 

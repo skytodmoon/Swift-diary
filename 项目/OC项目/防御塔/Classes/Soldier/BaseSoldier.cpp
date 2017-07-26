@@ -1,5 +1,5 @@
 #include "BaseSoldier.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 void BaseSoldier::createAndSetHpBar()
 {

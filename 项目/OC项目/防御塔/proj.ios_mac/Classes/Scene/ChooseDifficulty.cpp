@@ -1,6 +1,6 @@
 #include "ChooseDifficulty.h"
-#include "GameScene.h"
-#include "TransitionGame.h"
+#include "Scene/GameScene.h"
+#include "Scene/TransitionGame.h"
 #include "GameManager.h"
 #include "SoundManager.h"
 
@@ -332,8 +332,9 @@ void ChooseDifficulty::menuCallback(Ref* pSpender){
 
 //开始战斗按钮进入下一场景
 void ChooseDifficulty::menuCallnext(Ref* pSpender)
-{     
+{   
 	SoundManager::playClickEffect();
+	Director::getInstance()->popToRootScene();
 	Director::getInstance()->replaceScene(TransitionGame::create(2.0f, GameScene::playGame(level,difficulty)));      
 }
 

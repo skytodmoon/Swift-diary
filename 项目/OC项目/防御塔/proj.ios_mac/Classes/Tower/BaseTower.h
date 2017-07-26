@@ -42,7 +42,7 @@ public:
    virtual void removeTower();
    virtual bool init();
    CC_SYNTHESIZE(TowerType, towerType, TowerType); 
-   CC_SYNTHESIZE(MyTerrain*, myTerrain, MyTerrain);
+   CC_SYNTHESIZE(xh::Terrain*, myTerrain, MyTerrain); 
    CC_SYNTHESIZE(std::string, towerName, TowerName); 
    CC_SYNTHESIZE(int, level, Level);
    CC_SYNTHESIZE(float, scope, Scope);

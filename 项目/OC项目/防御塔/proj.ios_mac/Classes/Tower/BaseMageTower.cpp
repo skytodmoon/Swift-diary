@@ -1,6 +1,6 @@
 #include "BaseMageTower.h"
-#include "UpdatePanleLayer.h"
-#include "BaseMap.h"
+#include "Layer/Menu/UpdatePanleLayer.h"
+#include "Map/BaseMap.h"
 #include "GameManager.h"
 #include "math.h"
 

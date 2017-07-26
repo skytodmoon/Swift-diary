@@ -2,7 +2,7 @@
 #define _EARTHQUAKE_SMOKE_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 
 class EarthquakeSmoke:public Bullet
 

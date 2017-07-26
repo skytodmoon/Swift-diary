@@ -1,11 +1,11 @@
 #ifndef _GAMEMANAGER_H_
 #define _GAMEMANAGER_H_
 
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 #include "cocos2d.h"
-#include "BaseMonster.h"
-#include "BaseTower.h"
-#include "TouchLayer.h"
+#include "Monster/BaseMonster.h"
+#include "Tower/BaseTower.h"
+#include "Layer/TouchLayer.h"
 
 USING_NS_CC;
 

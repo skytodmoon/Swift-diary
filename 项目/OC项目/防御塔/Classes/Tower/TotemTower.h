@@ -2,7 +2,7 @@
 #define _TOTEM_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseArrowTower.h"
+#include "Tower/BaseArrowTower.h"
 
 USING_NS_CC;
 

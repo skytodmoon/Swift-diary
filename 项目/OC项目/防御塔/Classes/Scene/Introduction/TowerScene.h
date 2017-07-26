@@ -2,8 +2,8 @@
 #define __Tower_SCENE_H__
 
 #include "cocos2d.h"
-#include "TowerDesc.h"
-#include "EncyclopediaScene.h"
+#include "Scene/Introduction/TowerDesc.h"
+#include "Scene/Introduction/EncyclopediaScene.h"
 USING_NS_CC;
 
 class Tower : public cocos2d::Layer

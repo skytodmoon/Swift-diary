@@ -1,5 +1,5 @@
 #include "Missile.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool Missile::init()
 {

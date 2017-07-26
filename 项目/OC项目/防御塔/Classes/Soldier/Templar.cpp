@@ -1,5 +1,5 @@
 #include "Templar.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 Templar* Templar::createTemplar(Point point)
 {

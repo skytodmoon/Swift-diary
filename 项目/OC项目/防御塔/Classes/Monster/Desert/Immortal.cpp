@@ -1,6 +1,6 @@
 #include "Immortal.h"
-#include "Fallen.h"
-#include "GameManager.h"
+#include "Monster/Desert/Fallen.h"
+#include "Data/GameManager.h"
 
 USING_NS_CC;
 

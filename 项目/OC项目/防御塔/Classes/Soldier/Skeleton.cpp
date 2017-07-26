@@ -1,5 +1,5 @@
 #include "Skeleton.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 Skeleton* Skeleton::createSkeleton(Point point)
 {

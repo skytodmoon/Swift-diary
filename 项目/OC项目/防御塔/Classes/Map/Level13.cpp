@@ -50,6 +50,7 @@ void Level13::onExit()
 {
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_Level13-hd.plist");
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_Level13_2-hd.plist");
+	BaseMap::onExit();
 }
 
 void Level13::addTerrains()

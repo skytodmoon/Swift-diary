@@ -1,5 +1,5 @@
 #include "Dynamite.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool Dynamite::init()
 {

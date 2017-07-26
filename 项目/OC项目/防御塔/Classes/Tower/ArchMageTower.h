@@ -2,8 +2,8 @@
 #define _ARCH_MAGE_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseMageTower.h"
-#include "Twister.h"
+#include "Tower/BaseMageTower.h"
+#include "Bullet/Twister.h"
 
 USING_NS_CC;
 

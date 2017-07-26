@@ -1,6 +1,6 @@
 #include "SlotMenu.h"
-#include "GameView.h"
-#include "TransitionGame.h"
+#include "Scene/GameView.h"
+#include "Scene/TransitionGame.h"
 #include "SimpleAudioEngine.h" 
 
 using namespace CocosDenshion;

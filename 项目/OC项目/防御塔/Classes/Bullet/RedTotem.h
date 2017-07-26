@@ -2,7 +2,7 @@
 #define _RED_TOTEM_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 
 USING_NS_CC;
 

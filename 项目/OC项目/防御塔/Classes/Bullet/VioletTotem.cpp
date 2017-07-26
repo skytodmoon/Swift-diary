@@ -1,5 +1,5 @@
 #include "VioletTotem.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 VioletTotem* VioletTotem::createVioletTotem(Point point)
 {

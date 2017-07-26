@@ -1,6 +1,6 @@
 #include "FireBall.h"
-#include "GameManager.h"
-#include "Smoke.h"
+#include "Data/GameManager.h"
+#include "Sprite/Smoke.h"
 
 bool FireBall::init()
 {

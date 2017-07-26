@@ -13,7 +13,7 @@
 #include "Scorpion.h"
 #include "Tremor.h"
 #include "Munra.h"
-#include "Failure.h"
+#include "Layer/Failure.h"
 #include "SoundManager.h"
 #include "Boss_Efreeti.h"
 #include "Executioner.h"

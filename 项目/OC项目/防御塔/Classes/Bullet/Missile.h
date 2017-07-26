@@ -2,8 +2,8 @@
 #define _MISSILE_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
-#include "BaseMonster.h"
+#include "Bullet/Bullet.h"
+#include "Monster/BaseMonster.h"
 
 USING_NS_CC;
 

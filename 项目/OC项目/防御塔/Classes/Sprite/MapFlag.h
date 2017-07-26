@@ -2,7 +2,7 @@
 #define _MAP_FLAG_H_
 
 #include "cocos2d.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 USING_NS_CC;
 

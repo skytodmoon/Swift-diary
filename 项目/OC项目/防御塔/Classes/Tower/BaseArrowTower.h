@@ -2,8 +2,8 @@
 #define _BASE_ARROW_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseTower.h"
-#include "Bullet.h"
+#include "Tower/BaseTower.h"
+#include "Bullet/Bullet.h"
 
 #define LEFT_ARCHER_SHOT 1
 #define RIGHT_ARCHER_SHOT 1

@@ -1,6 +1,6 @@
 #include "SimplePanleLayer.h"
-#include "GameManager.h"
-#include "BaseBuildIcon.h"
+#include "Data/GameManager.h"
+#include "Sprite/TowerIcon/BaseBuildIcon.h"
 
 USING_NS_CC;
 

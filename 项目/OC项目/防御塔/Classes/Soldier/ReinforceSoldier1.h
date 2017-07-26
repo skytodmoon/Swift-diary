@@ -1,7 +1,7 @@
 #ifndef _REINFORCE_SOLDIER_1_H_
 #define _REINFORCE_SOLDIER_1_H_
 
-#include "BaseSoldier.h"
+#include "Soldier/BaseSoldier.h"
 
 class ReinforceSoldier1 : public BaseSoldier
 {

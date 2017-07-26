@@ -1,10 +1,10 @@
 #include "ArchMageTower.h"
-#include "SimplePanleLayer.h"
-#include "BaseMap.h"
+#include "Layer/Menu/SimplePanleLayer.h"
+#include "Map/BaseMap.h"
 #include "GameManager.h"
-#include "ArchMageBolt.h"
-#include "Twister.h"
-#include "SimplePanleLayer.h"
+#include "Bullet/ArchMageBolt.h"
+#include "Bullet/Twister.h"
+#include "Layer/Menu/SimplePanleLayer.h"
 
 void ArchMageTower::sellTower()
 {
@@ -15,7 +15,7 @@ void ArchMageTower::sellTower()
 			DelayBullet[i]->removeFromParent();
 		}
 	}
-	static_cast<MyTerrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<xh::Terrain*>(this->getParent())->terrain->setVisible(true);
 	this->removeFromParent();
 }
 

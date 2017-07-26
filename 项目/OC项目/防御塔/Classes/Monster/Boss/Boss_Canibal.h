@@ -1,7 +1,7 @@
 #ifndef _BOSS_CANIBAL_H_
 #define _BOSS_CANIBAL_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 
 class Boss_Canibal : public BaseMonster
 {

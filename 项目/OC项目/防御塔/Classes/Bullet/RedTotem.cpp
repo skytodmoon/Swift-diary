@@ -1,5 +1,5 @@
 #include "RedTotem.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 RedTotem* RedTotem::createRedTotem(Point point)
 {

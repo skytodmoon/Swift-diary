@@ -16,7 +16,7 @@ public:
     // 重载触摸回调函数
     bool onTouchBegan(Touch *touch, Event *event);
     void onTouchEnded(Touch* touch, Event* event);
-    CC_SYNTHESIZE(MyTerrain*, terrain, MyTerrain);
+    CC_SYNTHESIZE(xh::Terrain*, terrain, MyTerrain); 
 	void inAnimation();
 private:    
 	void addIcons();

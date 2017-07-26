@@ -1,5 +1,5 @@
 #include "ReinforceSoldier1.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 ReinforceSoldier1* ReinforceSoldier1::createReinforceSoldier(Point point)
 {

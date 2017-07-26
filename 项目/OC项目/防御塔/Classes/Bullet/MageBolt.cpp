@@ -1,5 +1,5 @@
 #include "MageBolt.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool MageBolt::init()
 {

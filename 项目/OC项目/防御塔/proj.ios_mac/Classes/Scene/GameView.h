@@ -2,8 +2,8 @@
 #define __GAME_VIEW_H__
 
 #include "cocos2d.h"
-#include "Road.h"
-#include "MapFlag.h"
+#include "Road/Road.h"
+#include "Sprite/MapFlag.h"
 #include "GameManager.h"
 
 USING_NS_CC; 

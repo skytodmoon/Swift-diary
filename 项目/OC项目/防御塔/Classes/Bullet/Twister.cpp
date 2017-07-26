@@ -1,5 +1,5 @@
 #include "Twister.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 
 bool Twister::init()

@@ -2,8 +2,8 @@
 #define _BASE_BARRACKS_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseTower.h"
-#include "BaseSoldier.h"
+#include "Tower/BaseTower.h"
+#include "Soldier/BaseSoldier.h"
 
 USING_NS_CC;
 

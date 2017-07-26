@@ -2,7 +2,7 @@
 #define _SIMPLE_MAGE_TOWER_LVL2_H_
 
 #include "cocos2d.h"
-#include "BaseMageTower.h"
+#include "Tower/BaseMageTower.h"
 
 USING_NS_CC;
 

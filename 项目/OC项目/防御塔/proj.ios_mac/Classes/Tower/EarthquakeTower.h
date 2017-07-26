@@ -3,8 +3,8 @@
 
 #include "cocos2d.h"
 #include "BaseTower.h"
-#include "EarthquakeSmoke.h"
-#include "Lava.h"
+#include "Bullet/EarthquakeSmoke.h"
+#include "Bullet/Lava.h"
 
 USING_NS_CC;
 

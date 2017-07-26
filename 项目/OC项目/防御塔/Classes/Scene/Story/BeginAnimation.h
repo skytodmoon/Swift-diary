@@ -2,7 +2,7 @@
 #define _BEGIN_ANIMATION_H_
 
 #include "cocos2d.h"
-#include "Level0.h"
+#include "Map/Level0.h"
 USING_NS_CC;
 class BeginAnimation : public Layer
 {

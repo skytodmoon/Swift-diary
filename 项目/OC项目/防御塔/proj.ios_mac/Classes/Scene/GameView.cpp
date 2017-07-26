@@ -1,11 +1,11 @@
 #include "GameView.h"
-#include "TransitionGame.h"
-#include "WelcomeScene.h"
-#include "MapFlag.h"
-#include "Road.h"
-#include "GameViewMenu.h"
+#include "Scene/TransitionGame.h"
+#include "Scene/WelcomeScene.h"
+#include "Sprite/MapFlag.h"
+#include "Road/Road.h"
+#include "Layer/GameViewMenu.h"
 #include "GameManager.h"
-#include "RespirationSprite.h"
+#include "Sprite/RespirationSprite.h"
 #include "SoundManager.h"
 
 USING_NS_CC;
@@ -100,7 +100,7 @@ void GameView::onEnterTransitionDidFinish()
 			UserDefault::getInstance()->setIntegerForKey(instance->SLOTX_DOWNCOUNT,newReady);
 			mapFlagVector.at(newReady-1)->changeType(0);
 			auto sequence = Sequence::create(
-				CallFuncN::create(CC_CALLBACK_0(MapFlag::startSuccessAnimation, mapFlagVector.at(newReady-1)))
+				CallFuncN::create(CC_CALLBACK_0(MapFlag::startSuccessAnimation, mapFlagVector.at(newReady - 1)))
 				,CallFuncN::create(CC_CALLBACK_0(Road::buildRoadAnimation, road,newReady-1))
 				,DelayTime::create(1.5f)
 				,CallFuncN::create(CC_CALLBACK_0(GameView::addNewMapFlag,this ,newReady))

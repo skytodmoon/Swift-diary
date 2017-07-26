@@ -2,10 +2,10 @@
 #define _BASE_TOWER_
 
 #include "cocos2d.h"
-#include "Circle.h"
-#include "Terrain.h"
-#include "BaseMonster.h"
-#include "SoundManager.h"
+#include "Sprite/Circle/Circle.h"
+#include "Tower/Terrain.h"
+#include "Monster/BaseMonster.h"
+#include "Data/SoundManager.h"
 
 USING_NS_CC;
 
@@ -42,7 +42,7 @@ public:
    virtual void removeTower();
    virtual bool init();
    CC_SYNTHESIZE(TowerType, towerType, TowerType); 
-   CC_SYNTHESIZE(Terrain*, myTerrain, MyTerrain); 
+   CC_SYNTHESIZE(xh::Terrain*, myTerrain, MyTerrain); 
    CC_SYNTHESIZE(std::string, towerName, TowerName); 
    CC_SYNTHESIZE(int, level, Level);
    CC_SYNTHESIZE(float, scope, Scope);

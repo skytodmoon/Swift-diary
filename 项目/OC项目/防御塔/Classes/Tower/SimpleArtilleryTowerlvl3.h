@@ -2,7 +2,7 @@
 #define _SIMPLE_ARTILLERY_TOWER_LVL3_H_
 
 #include "cocos2d.h"
-#include "BaseArtilleryTower.h"
+#include "Tower/BaseArtilleryTower.h"
 
 USING_NS_CC;
 

@@ -1,8 +1,8 @@
 #include "EncyclopediaScene.h"
-#include "EncyclopaediaTips.h"
-#include "EnemyScene.h"
-#include "TowerScene.h"
-#include "SoundManager.h"
+#include "Scene/Introduction/EncyclopaediaTips.h"
+#include "Scene/Introduction/EnemyScene.h"
+#include "Scene/Introduction/TowerScene.h"
+#include "Data/SoundManager.h"
 
 USING_NS_CC;
 
@@ -90,8 +90,8 @@ bool EncyclopediaScene::init()
 	sprite4->setScale(0.9f);
     this->addChild(sprite4,1); 
 
-	//百科 关闭按钮
-	auto sprite51 = Sprite::createWithSpriteFrameName("encyclopedia_little_button_close_0001.png");
+	//百科 关闭按钮encyclopedia_little_button_close_0001
+	auto sprite51 = Sprite::createWithSpriteFrameName("encyclopedia_button_close_0001.png");
 	auto sprite5 = MenuItemSprite::create(Sprite::createWithSpriteFrameName("encyclopedia_button_close_0001.png"),sprite51,
 		CC_CALLBACK_1(EncyclopediaScene::menuNextCallback4,this));  
 

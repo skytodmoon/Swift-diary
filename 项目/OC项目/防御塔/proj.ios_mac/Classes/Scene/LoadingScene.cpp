@@ -1,6 +1,6 @@
 #include "LoadingScene.h"
 #include "SimpleAudioEngine.h" 
-#include "WelcomeScene.h"
+#include "Scene/WelcomeScene.h"
 #include "MyAnimation.h"
 
 using namespace CocosDenshion;
@@ -179,6 +179,6 @@ void LoadingScene::logic(float dt)
     if (numberOfLoadedRes == 2)
     {
 		auto scene = WelcomeScene::createScene();
-		Director::getInstance()->runWithScene(scene);
+		Director::getInstance()->replaceScene(scene);
     }
 }

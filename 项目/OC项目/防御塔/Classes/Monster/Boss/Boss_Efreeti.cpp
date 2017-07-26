@@ -1,8 +1,8 @@
 #include "Boss_Efreeti.h"
-#include "GameManager.h"
-#include "BaseMap.h"
-#include "Efreeti.h"
-#include "SoundManager.h"
+#include "Data/GameManager.h"
+#include "Map/BaseMap.h"
+#include "Monster/Boss/Efreeti.h"
+#include "Data/SoundManager.h"
 
 Boss_Efreeti* Boss_Efreeti::createMonster(std::vector<Point> points,std::vector<std::vector<std::vector<Point>>> sonpath)
 {

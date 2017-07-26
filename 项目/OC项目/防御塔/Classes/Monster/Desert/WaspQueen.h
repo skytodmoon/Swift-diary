@@ -1,7 +1,7 @@
 #ifndef _WASPQUEEN_H_
 #define _WASPQUEEN_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 #include "cocos2d.h"
 USING_NS_CC;
 

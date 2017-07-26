@@ -2,9 +2,9 @@
 #define _TOWER_PANLE_LAYER_H_
 
 #include "cocos2d.h"
-#include "Circle.h"
-#include "Terrain.h"
-#include "BaseBuildIcon.h"
+#include "Sprite/Circle/Circle.h"
+#include "Tower/Terrain.h"
+#include "Sprite/TowerIcon/BaseBuildIcon.h"
 
 USING_NS_CC; 
 
@@ -16,7 +16,7 @@ public:
     // 重载触摸回调函数
     bool onTouchBegan(Touch *touch, Event *event);
     void onTouchEnded(Touch* touch, Event* event);
-    CC_SYNTHESIZE(Terrain*, terrain, MyTerrain); 
+    CC_SYNTHESIZE(xh::Terrain*, terrain, MyTerrain); 
 	void inAnimation();
 private:    
 	void addIcons();

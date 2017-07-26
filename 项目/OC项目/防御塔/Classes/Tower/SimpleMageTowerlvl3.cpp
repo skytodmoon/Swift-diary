@@ -1,11 +1,11 @@
 #include "SimpleMageTowerlvl3.h"
-#include "ArchMageTower.h"
-#include "UpdatePanleLayer2.h"
-#include "BaseMap.h"
-#include "GameManager.h"
-#include "MageBolt.h"
-#include "NecromancerTower.h"
-#include "ArchMageTower.h"
+#include "Tower/ArchMageTower.h"
+#include "Layer/Menu/UpdatePanleLayer2.h"
+#include "Map/BaseMap.h"
+#include "Data/GameManager.h"
+#include "Bullet/MageBolt.h"
+#include "Tower/NecromancerTower.h"
+#include "Tower/ArchMageTower.h"
 
 bool SimpleMageTowerlvl3::init()
 {

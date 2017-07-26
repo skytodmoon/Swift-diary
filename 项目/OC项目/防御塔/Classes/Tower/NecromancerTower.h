@@ -2,8 +2,8 @@
 #define _NECROMANCER_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseMageTower.h"
-#include "DeathKnight.h"
+#include "Tower/BaseMageTower.h"
+#include "Soldier/DeathKnight.h"
 
 USING_NS_CC;
 

@@ -1,5 +1,5 @@
 #include "MechaBomb.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool MechaBomb::init()
 {

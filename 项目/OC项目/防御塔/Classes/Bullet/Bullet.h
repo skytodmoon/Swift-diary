@@ -1,9 +1,9 @@
 #ifndef _BULLET_H_
 #define _BULLET_H_
 
-#include "SoundManager.h"
+#include "Data/SoundManager.h"
 #include "cocos2d.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 USING_NS_CC;
 

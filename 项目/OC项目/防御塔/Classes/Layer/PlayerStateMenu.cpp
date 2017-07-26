@@ -1,9 +1,9 @@
 #include "PlayerStateMenu.h"
-#include "GameOption.h"
-#include "GameManager.h"
-#include "SoundManager.h"
-#include "TowerInfoLayer.h"
-#include "MonsterInfoLayer.h"
+#include "Layer/GameOption.h"
+#include "Data/GameManager.h"
+#include "Data/SoundManager.h"
+#include "Sprite/TowerInfoLayer.h"
+#include "Sprite/MonsterInfoLayer.h"
 
 bool PlayerStateMenu::init()
 {

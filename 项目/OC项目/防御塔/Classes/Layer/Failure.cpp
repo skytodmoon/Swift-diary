@@ -1,8 +1,8 @@
 #include "Failure.h"
-#include "TransitionGame.h"
-#include "GameView.h"
-#include "GameScene.h"
-#include "SoundManager.h"
+#include "Scene/TransitionGame.h"
+#include "Scene/GameView.h"
+#include "Scene/GameScene.h"
+#include "Data/SoundManager.h"
 
 USING_NS_CC;
 

@@ -2,8 +2,8 @@
 #define _DRILL_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
-#include "..\Classes\Monster\BaseMonster.h"
+#include "Bullet/Bullet.h"
+#include "BaseMonster.h"
 
 USING_NS_CC;
 

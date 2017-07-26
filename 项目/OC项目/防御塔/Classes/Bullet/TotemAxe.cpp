@@ -1,5 +1,5 @@
 #include "TotemAxe.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool TotemAxe::init()
 {

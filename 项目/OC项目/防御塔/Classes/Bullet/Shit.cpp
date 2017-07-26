@@ -1,5 +1,5 @@
 #include "Shit.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool Shit::init()
 {

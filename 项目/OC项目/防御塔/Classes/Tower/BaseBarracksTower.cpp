@@ -1,13 +1,13 @@
 #include "BaseBarracksTower.h"
-#include "BarrackSoldier.h"
-#include "GameManager.h"
-#include "BaseMap.h"
-#include "UpdatePanleLayerWithFlag.h"
-#include "UpdatePanleLayer2WithFlag.h"
-#include "SimplePanleLayer.h"
-#include "Assassin.h"
-#include "Templar.h"
-#include "SimplePanleLayerWithFlag.h"
+#include "Soldier/BarrackSoldier.h"
+#include "Data/GameManager.h"
+#include "Map/BaseMap.h"
+#include "Layer/Menu/UpdatePanleLayerWithFlag.h"
+#include "Layer/Menu/UpdatePanleLayer2WithFlag.h"
+#include "Layer/Menu/SimplePanleLayer.h"
+#include "Soldier/Assassin.h"
+#include "Soldier/Templar.h"
+#include "Layer/Menu/SimplePanleLayerWithFlag.h"
 
 void BaseBarracksTower::addTerrain()
 {
@@ -50,7 +50,7 @@ void BaseBarracksTower::initTower()
 void BaseBarracksTower::sellTower()
 {
 	static_cast<BaseMap*>(this->getParent()->getParent())->playerState->removeTowerInfo();
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<xh::Terrain*>(this->getParent())->terrain->setVisible(true);
 	for(int i = 0;i<Soldiers.size();i++){
 		if(Soldiers.at(i)!=NULL){
 			if(Soldiers.at(i)->nearestMonster!=NULL && Soldiers.at(i)->nearestMonster->getState()!=stateDeath)
@@ -59,7 +59,7 @@ void BaseBarracksTower::sellTower()
 			Soldiers.at(i)->unscheduleAllCallbacks();
 		}
 	}
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
+	static_cast<xh::Terrain*>(this->getParent())->smokeEffect();
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

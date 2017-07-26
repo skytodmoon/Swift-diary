@@ -1,6 +1,6 @@
 #include "MechsTower.h"
-#include "SimplePanleLayerWithFlag.h"
-#include "BaseMap.h"
+#include "Layer/Menu/SimplePanleLayerWithFlag.h"
+#include "Map/BaseMap.h"
 
 bool MechsTower::init()
 {
@@ -76,8 +76,8 @@ void MechsTower::sellTower()
 		mecha->unscheduleAllCallbacks();
 		mecha->removeFromParent();
 	}
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<xh::Terrain*>(this->getParent())->smokeEffect();
+	static_cast<xh::Terrain*>(this->getParent())->terrain->setVisible(true);
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

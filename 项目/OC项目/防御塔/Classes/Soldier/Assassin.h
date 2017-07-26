@@ -1,7 +1,7 @@
 #ifndef _ASSASSIN_H_
 #define _ASSASSIN_H_
 
-#include "BaseSoldier.h"
+#include "Soldier/BaseSoldier.h"
 
 class Assassin : public BaseSoldier
 {

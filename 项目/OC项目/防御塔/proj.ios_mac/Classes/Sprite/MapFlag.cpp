@@ -1,11 +1,11 @@
 #include "MapFlag.h"
-#include "GameView.h"
-#include "TransitionGame.h"
+#include "Scene/GameView.h"
+#include "Scene/TransitionGame.h"
 #include "GameManager.h"
 #include "SoundManager.h"
-#include "Level1.h"
-#include "GameScene.h"
-#include "ChooseDifficulty.h"
+#include "Map/Level1.h"
+#include "Scene/GameScene.h"
+#include "Scene/ChooseDifficulty.h"
 
 MapFlag::~MapFlag(){}
 
@@ -211,16 +211,18 @@ void MapFlag::startSuccessAnimation()
 	}*/
 	//²¥·Å¶¯»­
 	flag->runAction(Sequence::create(Animate::create(AnimationCache::getInstance()->getAnimation("succeed")),
-		CallFunc::create(this,callfunc_selector(MapFlag::starAnimation)),NULL));
+		//CallFunc::create(this,callfunc_selector(MapFlag::starAnimation))
+		CallFunc::create(CC_CALLBACK_0(MapFlag::starAnimation, this))
+		,NULL));
 	setType(1);
 }
 
 void MapFlag::starAnimation()
 {
 	SoundManager::playWinStars();
-	addChild(star_0);
-	addChild(star_1);
-	addChild(star_2);
+	//addChild(star_0);
+	//addChild(star_1);
+	//addChild(star_2);
 	int shiningNum = UserDefault::getInstance()->getIntegerForKey(String::createWithFormat(instance->LEVELX_STARNUM,getLevel())->getCString(),0);
 	if( shiningNum>0)
 	{

@@ -2,7 +2,7 @@
 #define _SIMPLE_ARROW_TOWER_LVL2_H_
 
 #include "cocos2d.h"
-#include "BaseArrowTower.h"
+#include "Tower/BaseArrowTower.h"
 
 USING_NS_CC;
 

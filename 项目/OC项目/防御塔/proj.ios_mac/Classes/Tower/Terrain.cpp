@@ -1,11 +1,10 @@
 #include "Terrain.h"
-#include "BaseMap.h"
-#include "TowerPanleLayer.h"
+#include "Map/BaseMap.h"
+#include "Layer/Menu/TowerPanleLayer.h"
 
-
-MyTerrain* MyTerrain::createTerrain(int type)
+xh::Terrain* xh::Terrain::createTerrain(int type)
 {
-	auto terrain = new MyTerrain();
+	auto terrain = new Terrain();
 	if(terrain && terrain->init(type)){
 		terrain->autorelease();
 		return terrain;
@@ -14,7 +13,7 @@ MyTerrain* MyTerrain::createTerrain(int type)
 	return NULL;
 }
 
-bool MyTerrain::init(int type)
+bool xh::Terrain::init(int type)
 {
 	if (!Sprite::init())
 	{
@@ -38,13 +37,13 @@ bool MyTerrain::init(int type)
 	}
 	addChild(terrain);
 	auto listener = EventListenerTouchOneByOne::create();
-	listener->onTouchBegan = CC_CALLBACK_2(MyTerrain::onTouchBegan, this);
-	listener->onTouchEnded = CC_CALLBACK_2(MyTerrain::onTouchEnded, this);
+	listener->onTouchBegan = CC_CALLBACK_2(Terrain::onTouchBegan, this);
+	listener->onTouchEnded = CC_CALLBACK_2(Terrain::onTouchEnded, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener,terrain);
 	return true;
 }
 
-void MyTerrain::showUpdateMenu()
+void xh::Terrain::showUpdateMenu()
 {
 	auto towerPanleLayer = TowerPanleLayer::create();
 	towerPanleLayer->setPosition(this->getPosition());
@@ -55,18 +54,18 @@ void MyTerrain::showUpdateMenu()
 	isUpdateMenuShown = true;
 }
    
-void MyTerrain::hideUpdateMenu()
+void xh::Terrain::hideUpdateMenu()
 {
 	static_cast<BaseMap*>(this->getParent())->mTouchLayer->removeChildByTag(getTag());
 	isUpdateMenuShown = false;
 }
 
-bool MyTerrain::onTouchBegan(Touch *touch, Event *event)
+bool xh::Terrain::onTouchBegan(Touch *touch, Event *event)
 {
 	return true;
 }
 
-void MyTerrain::onTouchEnded(Touch* touch, Event* event)
+void xh::Terrain::onTouchEnded(Touch* touch, Event* event)
 {
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
 
@@ -87,7 +86,7 @@ void MyTerrain::onTouchEnded(Touch* touch, Event* event)
 	}
 }
 
-void MyTerrain::smokeEffect()
+void xh::Terrain::smokeEffect()
 {
 	auto smoke = Sprite::createWithSpriteFrameName("effect_sellSmoke_0001.png");
 	addChild(smoke,99);

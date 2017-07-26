@@ -1,8 +1,8 @@
 #ifndef _MECHA_H_
 #define _MECHA_H_
 
-#include "BaseSoldier.h"
-#include "Bomb.h"
+#include "Soldier/BaseSoldier.h"
+#include "Bullet/Bomb.h"
 
 class Mecha : public BaseSoldier
 {

@@ -2,8 +2,8 @@
 #define _TOUCH_LAYER_H_
 
 #include "cocos2d.h"
-#include "BaseTower.h"
-#include "RallyCircle.h"
+#include "Tower/BaseTower.h"
+#include "Sprite/Circle/RallyCircle.h"
 
 USING_NS_CC;
 

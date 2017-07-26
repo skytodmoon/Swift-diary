@@ -1,7 +1,7 @@
 #ifndef _LEVEL_4_H_
 #define _LEVEL_4_H_
 
-#include "BaseMap.h"
+#include "Map/BaseMap.h"
 #include "cocos2d.h"
 
 USING_NS_CC;

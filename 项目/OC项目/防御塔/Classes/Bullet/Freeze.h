@@ -2,7 +2,7 @@
 #define _FREEZE_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 USING_NS_CC;
 
 class Freeze : public Bullet

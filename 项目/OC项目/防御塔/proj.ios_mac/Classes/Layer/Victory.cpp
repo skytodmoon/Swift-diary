@@ -1,7 +1,7 @@
 #include "Victory.h"
-#include "TransitionGame.h"
-#include "GameView.h"
-#include "GameScene.h"
+#include "Scene/TransitionGame.h"
+#include "Scene/GameView.h"
+#include "Scene/GameScene.h"
 #include "GameManager.h"
 
 USING_NS_CC;

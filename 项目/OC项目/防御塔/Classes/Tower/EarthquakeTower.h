@@ -2,9 +2,9 @@
 #define _EARTHQUAKE_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseTower.h"
-#include "EarthquakeSmoke.h"
-#include "Lava.h"
+#include "Tower/BaseTower.h"
+#include "Bullet/EarthquakeSmoke.h"
+#include "Bullet/Lava.h"
 
 USING_NS_CC;
 

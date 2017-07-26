@@ -1,8 +1,8 @@
 #ifndef _BASE_Soldier_H_
 #define _BASE_Soldier_H_
 
-#include "SoundManager.h"
-#include "BaseMonster.h"
+#include "Data/SoundManager.h"
+#include "Monster/BaseMonster.h"
 #include "cocos2d.h"
 USING_NS_CC;
 

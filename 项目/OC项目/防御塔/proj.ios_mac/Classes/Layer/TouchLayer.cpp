@@ -1,14 +1,14 @@
 #include "TouchLayer.h"
 #include "GameManager.h"
 #include "RallyCircle.h"
-#include "BaseMap.h"
+#include "Map/BaseMap.h"
 #include "RallyCircle.h"
 #include "ReinforceSoldier1.h"
 #include "ReinforceSoldier2.h"
-#include "Freeze.h"
-#include "Dynamite.h"
-#include "FireBall.h"
-#include "PlayerStateMenu.h"
+#include "Bullet/Freeze.h"
+#include "Bullet/Dynamite.h"
+#include "Bullet/FireBall.h"
+#include "Layer/PlayerStateMenu.h"
 
 void TouchLayer::setTouchShield()
 {
@@ -17,7 +17,7 @@ void TouchLayer::setTouchShield()
 	touchlistener->onTouchEnded = CC_CALLBACK_2(TouchLayer::onTouchEnded, this);
 	touchlistener->onTouchMoved = CC_CALLBACK_2(TouchLayer::onTouchMoved, this);
 	touchlistener->setSwallowTouches(true);
-	_eventDispatcher->addEventListenerWithFixedPriority(touchlistener,-1);
+	//_eventDispatcher->addEventListenerWithFixedPriority(touchlistener,-1);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchlistener,this);
 }
 
@@ -63,7 +63,7 @@ void TouchLayer::setFireBallTouchShield()
 	FiereBalllistener->onTouchEnded = CC_CALLBACK_2(TouchLayer::onFireBallTouchEnded, this);
 	FiereBalllistener->setSwallowTouches(true);
 	//设置比移动触摸事件高即可
-	_eventDispatcher->addEventListenerWithFixedPriority(FiereBalllistener,1);
+	//_eventDispatcher->addEventListenerWithFixedPriority(FiereBalllistener,1);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(FiereBalllistener,this);
 }
 

@@ -1,5 +1,5 @@
 #include "Smoke.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool Smoke::init()
 {

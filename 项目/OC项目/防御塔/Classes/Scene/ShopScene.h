@@ -2,7 +2,7 @@
 #define _STORE_SCENE_H_
 
 #include "cocos2d.h"
-#include "ShopIcon.h"
+#include "Sprite/ShopIcon.h"
 
 USING_NS_CC;
 

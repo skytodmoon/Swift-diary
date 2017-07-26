@@ -1,5 +1,5 @@
 #include "Freeze.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 
 bool Freeze::init()
 {

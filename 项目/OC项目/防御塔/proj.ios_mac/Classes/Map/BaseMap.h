@@ -1,11 +1,11 @@
 #ifndef _BASE_MAP_H_
 #define _BASE_MAP_H_ 
 
-#include "PlayerStateMenu.h"
+#include "Layer/PlayerStateMenu.h"
 #include "cocos2d.h"
-#include "WaveFlag.h"
+#include "Sprite/WaveFlag.h"
 #include "GroupMonster.h"
-#include "TouchLayer.h"
+#include "Layer/TouchLayer.h"
 #include "MyAnimation.h"
 USING_NS_CC;
 
@@ -73,7 +73,7 @@ protected:
 	virtual void addTerrains(){};
 	//ÍË³ö
 	virtual void onExitTransitionDidStart();
-	virtual void onExit(){};
+	//virtual void onExit(){};
 };
 
 #endif

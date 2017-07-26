@@ -2,7 +2,7 @@
 #define _MONSTER_INFO_LAYER_H_
 
 #include "cocos2d.h"
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 
 USING_NS_CC;
 

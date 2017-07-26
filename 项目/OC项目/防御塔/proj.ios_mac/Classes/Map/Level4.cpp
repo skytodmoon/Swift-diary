@@ -101,6 +101,7 @@ void Level4::onExit()
 {
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_level4_2-hd.plist");
 	SpriteFrameCache::getInstance()->removeSpriteFrameByName("sprite_level4-hd.plist");
+	BaseMap::onExit();
 }
 
 void Level4::waveEvent()
@@ -125,82 +126,82 @@ void Level4::waveEvent()
 
 void Level4::addTerrains()
 {
-	auto terrain1 = MyTerrain::createTerrain(1);
+	auto terrain1 = xh::Terrain::createTerrain(1);
 	terrain1->setPosition(Point(690,654));
 	terrain1->setTag(1);
 	addChild(terrain1,4);
 
-	auto terrain5 = MyTerrain::createTerrain(1);
+	auto terrain5 = xh::Terrain::createTerrain(1);
 	terrain5->setPosition(Point(471,642));
 	terrain5->setTag(5);
 	addChild(terrain5,4);
 
-	auto terrain2 = MyTerrain::createTerrain(1);
+	auto terrain2 = xh::Terrain::createTerrain(1);
 	terrain2->setPosition(Point(650,574));
 	terrain2->setTag(2);
 	addChild(terrain2,5);
 
-	auto terrain6 = MyTerrain::createTerrain(1);
+	auto terrain6 = xh::Terrain::createTerrain(1);
 	terrain6->setPosition(Point(452,554));
 	terrain6->setTag(6);
 	addChild(terrain6,5);
 
-	auto terrain13 = MyTerrain::createTerrain(1);
+	auto terrain13 = xh::Terrain::createTerrain(1);
 	terrain13->setPosition(Point(225,510));
 	terrain13->setTag(13);
 	addChild(terrain13,5);
 
-	auto terrain7 = MyTerrain::createTerrain(1);
+	auto terrain7 = xh::Terrain::createTerrain(1);
 	terrain7->setPosition(Point(471,475));
 	terrain7->setTag(7);
 	addChild(terrain7,6);
 	
-	auto terrain3 = MyTerrain::createTerrain(1);
+	auto terrain3 = xh::Terrain::createTerrain(1);
 	terrain3->setPosition(Point(725,456));
 	terrain3->setTag(3);
 	addChild(terrain3,6);
 
-	auto terrain4 = MyTerrain::createTerrain(1);
+	auto terrain4 = xh::Terrain::createTerrain(1);
 	terrain4->setPosition(Point(950,422));
 	terrain4->setTag(4);
 	addChild(terrain4,6);
 
-	auto terrain14 = MyTerrain::createTerrain(1);
+	auto terrain14 = xh::Terrain::createTerrain(1);
 	terrain14->setPosition(Point(250,420));
 	terrain14->setTag(14);
 	addChild(terrain14,6);
 
-	auto terrain8 = MyTerrain::createTerrain(1);
+	auto terrain8 = xh::Terrain::createTerrain(1);
 	terrain8->setPosition(Point(506,405));
 	terrain8->setTag(8);
 	addChild(terrain8,6);
 
-	auto terrain15 = MyTerrain::createTerrain(1);
+	auto terrain15 = xh::Terrain::createTerrain(1);
 	terrain15->setPosition(Point(295,340));
 	terrain15->setTag(15);
 	addChild(terrain15,7);
 
-	auto terrain16 = MyTerrain::createTerrain(1);
+	auto terrain16 = xh::Terrain::createTerrain(1);
 	terrain16->setPosition(Point(162,334));
 	terrain16->setTag(16);
 	addChild(terrain16,7);
 
-	auto terrain9 = MyTerrain::createTerrain(1);
+	auto terrain9 = xh::Terrain::createTerrain(1);
 	terrain9->setPosition(Point(556,330));
 	terrain9->setTag(9);
 	addChild(terrain9,7);
 
-	auto terrain10 = MyTerrain::createTerrain(1);
+	auto terrain10 = xh::Terrain::createTerrain(1);
 	terrain10->setPosition(Point(830,295));
 	terrain10->setTag(10);
 	addChild(terrain10,8);
 
-	auto terrain11 = MyTerrain::createTerrain(1);
+	auto terrain11 = xh::Terrain::createTerrain(1);
 	terrain11->setPosition(Point(615,265));
 	terrain11->setTag(11);
 	addChild(terrain11,8);
 
-	auto terrain12 = MyTerrain::createTerrain(1);
+	auto terrain12 = xh::Terrain::createTerrain(1);
 	terrain12->setPosition(Point(550,210));
 	terrain12->setTag(12);
 	addChild(terrain12,8);

@@ -1,7 +1,7 @@
 #ifndef _EFREETI_H_
 #define _EFREETI_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 #include "cocos2d.h"
 USING_NS_CC;
 

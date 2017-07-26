@@ -498,7 +498,7 @@ void UserDefault::initXMLFilePath()
 #ifdef KEEP_COMPATABILITY
     if (! _isFilePathInitialized)
     {
-        // UserDefault.xml is stored in /data/data/<package-path>/ before v2.1.2
+        // UserDefault.xml is stored in /<package-path>/ before v2.1.2
         std::string packageName = JniHelper::callStaticStringMethod(helperClassName, "getCocos2dxPackageName");
         _filePath += "/data/data/" + packageName + "/" + XML_FILE_NAME;
         _isFilePathInitialized = true;

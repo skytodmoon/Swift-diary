@@ -1,11 +1,11 @@
 #include "TowerPanleLayer.h"
-#include "SimpleArrowTowerlvl1.h"
-#include "SimpleArtilleryTowerlvl1.h"
-#include "SimpleMageTowerlvl1.h"
-#include "BaseBarracksTower.h"
-#include "Terrain.h"
-#include "GameManager.h"
-#include "BaseMap.h"
+#include "Tower/SimpleArrowTowerlvl1.h"
+#include "Tower/SimpleArtilleryTowerlvl1.h"
+#include "Tower/SimpleMageTowerlvl1.h"
+#include "Tower/BaseBarracksTower.h"
+#include "Tower/Terrain.h"
+#include "Data/GameManager.h"
+#include "Map/BaseMap.h"
 
 USING_NS_CC;
 

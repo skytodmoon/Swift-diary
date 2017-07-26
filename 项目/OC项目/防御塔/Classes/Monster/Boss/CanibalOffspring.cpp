@@ -1,5 +1,5 @@
 #include "CanibalOffspring.h"
-#include "GameManager.h"
+#include "Data/GameManager.h"
 USING_NS_CC;
 
 

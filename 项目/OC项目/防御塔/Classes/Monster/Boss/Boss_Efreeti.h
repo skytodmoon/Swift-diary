@@ -1,7 +1,7 @@
 #ifndef _BOSS_EFREETI_H_
 #define _BOSS_EFREETI_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 
 class Boss_Efreeti : public BaseMonster
 {

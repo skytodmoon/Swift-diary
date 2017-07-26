@@ -1,9 +1,9 @@
 #include "GameViewMenu.h"
 #include "GameManager.h"
-#include "Upgrades.h"
-#include "ShopScene.h"
+#include "Scene/UpdateTowerScene/Upgrades.h"
+#include "Scene/ShopScene.h"
 #include "SoundManager.h"
-#include "EncyclopediaScene.h"
+#include "Scene/Introduction/EncyclopediaScene.h"
 
 bool GameViewMenu::init()
 {

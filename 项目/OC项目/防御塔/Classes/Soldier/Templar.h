@@ -1,7 +1,7 @@
 #ifndef _TEMPLAR_H_
 #define _TEMPLAR_H_
 
-#include "BaseSoldier.h"
+#include "Soldier/BaseSoldier.h"
 
 class Templar : public BaseSoldier
 {

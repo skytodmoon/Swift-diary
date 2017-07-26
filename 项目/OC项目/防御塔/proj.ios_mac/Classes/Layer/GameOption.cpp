@@ -1,9 +1,9 @@
 #include "GameOption.h"
-#include "GameScene.h"
-#include "TransitionGame.h"
-#include "GameView.h"
+#include "Scene/GameScene.h"
+#include "Scene/TransitionGame.h"
+#include "Scene/GameView.h"
 #include "SoundManager.h"
-#include "PlayerStateMenu.h"
+#include "Layer/PlayerStateMenu.h"
 #include "SimpleAudioEngine.h"
 
 using namespace CocosDenshion;

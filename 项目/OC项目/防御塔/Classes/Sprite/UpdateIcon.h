@@ -2,7 +2,7 @@
 #define _UPDATE_ICON_H
 
 #include "cocos2d.h"
-#include "BaseBuildIcon.h"
+#include "Sprite/TowerIcon/BaseBuildIcon.h"
 
 USING_NS_CC;
 

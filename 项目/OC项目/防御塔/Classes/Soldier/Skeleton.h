@@ -1,7 +1,7 @@
 #ifndef _SKELETON_H_
 #define _SKELETON_H_
 
-#include "BaseSoldier.h"
+#include "Soldier/BaseSoldier.h"
 
 class Skeleton : public BaseSoldier
 {

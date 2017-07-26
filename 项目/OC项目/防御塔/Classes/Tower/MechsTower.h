@@ -2,8 +2,8 @@
 #define _MECHS_TOWER_H_
 
 #include "cocos2d.h"
-#include "BaseBarracksTower.h"
-#include "Mecha.h"
+#include "Tower/BaseBarracksTower.h"
+#include "Soldier/Mecha.h"
 USING_NS_CC;
 
 class MechsTower: public BaseBarracksTower

@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "Circle.h"
-#include "UpdateIcon.h"
+#include "Sprite/UpdateIcon.h"
 #include "BaseBarracksTower.h"
 #include "SellIcon.h"
 

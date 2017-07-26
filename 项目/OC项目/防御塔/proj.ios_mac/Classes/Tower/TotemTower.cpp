@@ -1,10 +1,10 @@
 #include "TotemTower.h"
 #include "GameManager.h"
-#include "TotemAxe.h"
-#include "RedTotem.h"
-#include "VioletTotem.h"
-#include "SimplePanleLayer.h"
-#include "BaseMap.h"
+#include "Bullet/TotemAxe.h"
+#include "Bullet/RedTotem.h"
+#include "Bullet/VioletTotem.h"
+#include "Layer/Menu/SimplePanleLayer.h"
+#include "Map/BaseMap.h"
 
 bool TotemTower::init()
 {

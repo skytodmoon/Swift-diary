@@ -1,7 +1,7 @@
 #include "Upgrades.h"
-#include "Icons.h"
-#include "GameManager.h"
-#include "SoundManager.h"
+#include "Scene/UpdateTowerScene/Icons.h"
+#include "Data/GameManager.h"
+#include "Data/SoundManager.h"
 
 USING_NS_CC;
 

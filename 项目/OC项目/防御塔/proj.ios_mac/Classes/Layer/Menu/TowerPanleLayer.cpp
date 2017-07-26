@@ -5,7 +5,7 @@
 #include "BaseBarracksTower.h"
 #include "Terrain.h"
 #include "GameManager.h"
-#include "BaseMap.h"
+#include "Map/BaseMap.h"
 
 USING_NS_CC;
 

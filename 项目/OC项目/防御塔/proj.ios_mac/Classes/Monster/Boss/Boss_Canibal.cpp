@@ -1,6 +1,6 @@
 #include "Boss_Canibal.h"
 #include "GameManager.h"
-#include "BaseMap.h"
+#include "Map/BaseMap.h"
 #include "CanibalOffspring.h"
 #include "SoundManager.h"
 

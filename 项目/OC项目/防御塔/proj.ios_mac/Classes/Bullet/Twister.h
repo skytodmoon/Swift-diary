@@ -2,7 +2,7 @@
 #define _TWISTER_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 #include "BaseMonster.h"
 
 class Twister:public Bullet

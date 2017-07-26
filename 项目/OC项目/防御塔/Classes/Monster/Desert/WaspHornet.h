@@ -1,7 +1,7 @@
 #ifndef _WASPHORNET_H_
 #define _WASPHORNET_H_
 
-#include "BaseMonster.h"
+#include "Monster/BaseMonster.h"
 #include "cocos2d.h"
 USING_NS_CC;
 

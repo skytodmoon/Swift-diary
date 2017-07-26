@@ -1,5 +1,5 @@
 ﻿#include "NecrBolt.h"
-#include "Skeleton.h"
+#include "Soldier/Skeleton.h"
 
 bool NecrBolt::init()
 {

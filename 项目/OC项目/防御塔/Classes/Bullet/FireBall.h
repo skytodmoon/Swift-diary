@@ -2,7 +2,7 @@
 #define _FIREBALL_H_
 
 #include "cocos2d.h"
-#include "Bullet.h"
+#include "Bullet/Bullet.h"
 
 class FireBall : public Bullet
 {

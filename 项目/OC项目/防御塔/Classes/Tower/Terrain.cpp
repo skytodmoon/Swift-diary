@@ -1,8 +1,8 @@
 #include "Terrain.h"
-#include "BaseMap.h"
-#include "TowerPanleLayer.h"
+#include "Map/BaseMap.h"
+#include "Layer/Menu/TowerPanleLayer.h"
 
-Terrain* Terrain::createTerrain(int type)
+xh::Terrain* xh::Terrain::createTerrain(int type)
 {
 	auto terrain = new Terrain();
 	if(terrain && terrain->init(type)){
@@ -13,7 +13,7 @@ Terrain* Terrain::createTerrain(int type)
 	return NULL;
 }
 
-bool Terrain::init(int type)
+bool xh::Terrain::init(int type)
 {
 	if (!Sprite::init())
 	{
@@ -43,7 +43,7 @@ bool Terrain::init(int type)
 	return true;
 }
 
-void Terrain::showUpdateMenu()
+void xh::Terrain::showUpdateMenu()
 {
 	auto towerPanleLayer = TowerPanleLayer::create();
 	towerPanleLayer->setPosition(this->getPosition());
@@ -54,18 +54,18 @@ void Terrain::showUpdateMenu()
 	isUpdateMenuShown = true;
 }
    
-void Terrain::hideUpdateMenu()
+void xh::Terrain::hideUpdateMenu()
 {
 	static_cast<BaseMap*>(this->getParent())->mTouchLayer->removeChildByTag(getTag());
 	isUpdateMenuShown = false;
 }
 
-bool Terrain::onTouchBegan(Touch *touch, Event *event)
+bool xh::Terrain::onTouchBegan(Touch *touch, Event *event)
 {
 	return true;
 }
 
-void Terrain::onTouchEnded(Touch* touch, Event* event)
+void xh::Terrain::onTouchEnded(Touch* touch, Event* event)
 {
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
 
@@ -86,7 +86,7 @@ void Terrain::onTouchEnded(Touch* touch, Event* event)
 	}
 }
 
-void Terrain::smokeEffect()
+void xh::Terrain::smokeEffect()
 {
 	auto smoke = Sprite::createWithSpriteFrameName("effect_sellSmoke_0001.png");
 	addChild(smoke,99);
