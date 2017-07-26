@@ -2,7 +2,7 @@
 #define __UPGRADES_H__
 
 #include "cocos2d.h"
-#include "Scene/UpdateTowerScene/Icons.h"
+#include "Icons.h"
 
 USING_NS_CC;
 

@@ -1,5 +1,5 @@
 #include "BeginAnimation.h"
-#include "Map/BaseMap.h"
+#include "BaseMap.h"
 
 USING_NS_CC;
 

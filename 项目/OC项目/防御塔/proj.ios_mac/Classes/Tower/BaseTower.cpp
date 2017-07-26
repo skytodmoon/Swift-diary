@@ -1,7 +1,7 @@
 #include "BaseTower.h"
 #include "Terrain.h"
-#include "Layer/Menu/TowerPanleLayer.h"
-#include "Map/BaseMap.h"
+#include "TowerPanleLayer.h"
+#include "BaseMap.h"
 #include "GameManager.h"
 
 BaseTower::BaseTower()

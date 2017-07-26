@@ -1,13 +1,13 @@
 #include "BaseBarracksTower.h"
 #include "BarrackSoldier.h"
 #include "GameManager.h"
-#include "Map/BaseMap.h"
-#include "Layer/Menu/UpdatePanleLayerWithFlag.h"
-#include "Layer/Menu/UpdatePanleLayer2WithFlag.h"
-#include "Layer/Menu/SimplePanleLayer.h"
+#include "BaseMap.h"
+#include "UpdatePanleLayerWithFlag.h"
+#include "UpdatePanleLayer2WithFlag.h"
+#include "SimplePanleLayer.h"
 #include "Assassin.h"
 #include "Templar.h"
-#include "Layer/Menu/SimplePanleLayerWithFlag.h"
+#include "SimplePanleLayerWithFlag.h"
 
 void BaseBarracksTower::addTerrain()
 {

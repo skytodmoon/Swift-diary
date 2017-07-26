@@ -1,11 +1,11 @@
 #ifndef _BASE_MAP_H_
 #define _BASE_MAP_H_ 
 
-#include "Layer/PlayerStateMenu.h"
+#include "PlayerStateMenu.h"
 #include "cocos2d.h"
-#include "Sprite/WaveFlag.h"
+#include "WaveFlag.h"
 #include "GroupMonster.h"
-#include "Layer/TouchLayer.h"
+#include "TouchLayer.h"
 #include "MyAnimation.h"
 USING_NS_CC;
 

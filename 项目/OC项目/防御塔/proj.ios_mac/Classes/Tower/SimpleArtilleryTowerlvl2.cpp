@@ -1,8 +1,8 @@
 #include "SimpleArtilleryTowerlvl2.h"
 #include "SimpleArtilleryTowerlvl3.h"
-#include "Layer/Menu/UpdatePanleLayer.h"
+#include "UpdatePanleLayer.h"
 #include "GameManager.h"
-#include "Map/BaseMap.h"
+#include "BaseMap.h"
 
 bool SimpleArtilleryTowerlvl2::init()
 {

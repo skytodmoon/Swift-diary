@@ -1,6 +1,6 @@
 #include "Terrain.h"
-#include "Map/BaseMap.h"
-#include "Layer/Menu/TowerPanleLayer.h"
+#include "BaseMap.h"
+#include "TowerPanleLayer.h"
 
 xh::Terrain* xh::Terrain::createTerrain(int type)
 {

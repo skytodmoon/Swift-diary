@@ -133,7 +133,7 @@ namespace
         Twiddle        = (1<<9),        // is twiddled
         Bumpmap        = (1<<10),       // has normals encoded for a bump map
         Tiling         = (1<<11),       // is bordered for tiled pvr
-        Cubemap        = (1<<12),       // is a cubemap/skybox
+        Cubemap        = (1<<12),       // is a cubeskybox
         FalseMipCol    = (1<<13),       // are there false colored MIP levels
         Volume         = (1<<14),       // is this a volume texture
         Alpha          = (1<<15),       // v2.1 is there transparency info in the texture

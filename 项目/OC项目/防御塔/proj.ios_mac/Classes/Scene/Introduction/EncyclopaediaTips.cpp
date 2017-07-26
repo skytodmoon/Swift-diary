@@ -1,6 +1,6 @@
 #include "cocos2d.h"
 #include "EncyclopaediaTips.h"
-#include "Scene/Introduction/EncyclopediaScene.h"
+#include "EncyclopediaScene.h"
 #include "SoundManager.h"
 
 USING_NS_CC;

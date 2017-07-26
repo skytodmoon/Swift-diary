@@ -2,11 +2,11 @@
 #define _PLAYER_STATE_MENU_H_
 
 #include "cocos2d.h"
-#include "Layer/TouchLayer.h"
+#include "TouchLayer.h"
 #include "GameManager.h"
 #include "BaseTower.h"
 #include "BaseMonster.h"
-#include "Layer/GameOption.h"
+#include "GameOption.h"
 
 USING_NS_CC;
 

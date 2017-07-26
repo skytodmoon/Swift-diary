@@ -1,14 +1,14 @@
 #include "TouchLayer.h"
 #include "GameManager.h"
 #include "RallyCircle.h"
-#include "Map/BaseMap.h"
+#include "BaseMap.h"
 #include "RallyCircle.h"
 #include "ReinforceSoldier1.h"
 #include "ReinforceSoldier2.h"
-#include "Bullet/Freeze.h"
-#include "Bullet/Dynamite.h"
-#include "Bullet/FireBall.h"
-#include "Layer/PlayerStateMenu.h"
+#include "Freeze.h"
+#include "Dynamite.h"
+#include "FireBall.h"
+#include "PlayerStateMenu.h"
 
 void TouchLayer::setTouchShield()
 {

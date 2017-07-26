@@ -2,7 +2,7 @@
 #define __Enemy_SCENE_H__
 
 #include "cocos2d.h"
-#include "Scene/Introduction/EnemyDesc.h"
+#include "EnemyDesc.h"
 USING_NS_CC;
 
 class Enemy : public cocos2d::Layer

@@ -29,7 +29,7 @@ THE SOFTWARE.
 
 /*
  Original rewrite of TMXLayer was based on HKTMXTiledMap by HKASoftware http://hkasoftware.com
- Further info: http://www.cocos2d-iphone.org/forums/topic/hktmxtiledmap/
+ Further info: http://www.cocos2d-iphone.org/forums/topic/hktmxtiled
 
  It was rewritten again, and only a small part of the original HK ideas/code remains in this implementation
 

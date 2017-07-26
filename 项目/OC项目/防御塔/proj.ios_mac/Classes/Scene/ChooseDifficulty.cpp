@@ -1,6 +1,6 @@
 #include "ChooseDifficulty.h"
-#include "Scene/GameScene.h"
-#include "Scene/TransitionGame.h"
+#include "GameScene.h"
+#include "TransitionGame.h"
 #include "GameManager.h"
 #include "SoundManager.h"
 

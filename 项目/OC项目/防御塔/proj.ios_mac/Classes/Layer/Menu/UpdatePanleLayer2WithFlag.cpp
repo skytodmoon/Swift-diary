@@ -1,8 +1,8 @@
 #include "UpdatePanleLayer2WithFlag.h"
 #include "GameManager.h"
 #include "BaseBuildIcon.h"
-#include "Layer/TouchLayer.h"
-#include "Map/BaseMap.h"
+#include "TouchLayer.h"
+#include "BaseMap.h"
 
 USING_NS_CC;
 

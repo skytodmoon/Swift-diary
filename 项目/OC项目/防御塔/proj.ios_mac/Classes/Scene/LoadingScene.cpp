@@ -1,6 +1,6 @@
 #include "LoadingScene.h"
 #include "SimpleAudioEngine.h" 
-#include "Scene/WelcomeScene.h"
+#include "WelcomeScene.h"
 #include "MyAnimation.h"
 
 using namespace CocosDenshion;

@@ -1,7 +1,7 @@
 #include "EncyclopediaScene.h"
-#include "Scene/Introduction/EncyclopaediaTips.h"
-#include "Scene/Introduction/EnemyScene.h"
-#include "Scene/Introduction/TowerScene.h"
+#include "EncyclopaediaTips.h"
+#include "EnemyScene.h"
+#include "TowerScene.h"
 #include "SoundManager.h"
 
 USING_NS_CC;

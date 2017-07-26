@@ -1,8 +1,8 @@
 #include "SimpleArrowTowerlvl3.h"
-#include "Layer/Menu/UpdatePanleLayer2.h"
-#include "Map/BaseMap.h"
+#include "UpdatePanleLayer2.h"
+#include "BaseMap.h"
 #include "GameManager.h"
-#include "Bullet/Arrow.h"
+#include "Arrow.h"
 #include "CossbowHunterTower.h"
 #include "TotemTower.h"
 

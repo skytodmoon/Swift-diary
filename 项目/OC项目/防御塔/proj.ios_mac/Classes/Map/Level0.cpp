@@ -1,5 +1,5 @@
 #include "Level0.h"
-#include "Scene/Story/BeginAnimation.h"
+#include "BeginAnimation.h"
 
 USING_NS_CC;
 

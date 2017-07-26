@@ -1,8 +1,8 @@
 #include "Mecha.h"
 #include "GameManager.h"
-#include "Bullet/Bomb.h"
-#include "Bullet/Missile.h"
-#include "Bullet/Shit.h"
+#include "Bomb.h"
+#include "Missile.h"
+#include "Shit.h"
 
 bool Mecha::init()
 {

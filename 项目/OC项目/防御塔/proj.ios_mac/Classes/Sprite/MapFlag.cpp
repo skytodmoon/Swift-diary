@@ -1,11 +1,11 @@
 #include "MapFlag.h"
-#include "Scene/GameView.h"
-#include "Scene/TransitionGame.h"
+#include "GameView.h"
+#include "TransitionGame.h"
 #include "GameManager.h"
 #include "SoundManager.h"
-#include "Map/Level1.h"
-#include "Scene/GameScene.h"
-#include "Scene/ChooseDifficulty.h"
+#include "Level1.h"
+#include "GameScene.h"
+#include "ChooseDifficulty.h"
 
 MapFlag::~MapFlag(){}
 

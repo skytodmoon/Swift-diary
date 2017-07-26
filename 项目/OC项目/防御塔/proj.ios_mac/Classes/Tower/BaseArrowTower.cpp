@@ -1,6 +1,6 @@
 #include "BaseArrowTower.h"
-#include "Layer/Menu/UpdatePanleLayer.h"
-#include "Map/BaseMap.h"
+#include "UpdatePanleLayer.h"
+#include "BaseMap.h"
 #include "GameManager.h"
 
 void BaseArrowTower::initTower(int level)

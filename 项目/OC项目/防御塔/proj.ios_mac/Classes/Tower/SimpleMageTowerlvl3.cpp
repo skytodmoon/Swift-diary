@@ -1,9 +1,9 @@
 #include "SimpleMageTowerlvl3.h"
 #include "ArchMageTower.h"
-#include "Layer/Menu/UpdatePanleLayer2.h"
-#include "Map/BaseMap.h"
+#include "UpdatePanleLayer2.h"
+#include "BaseMap.h"
 #include "GameManager.h"
-#include "Bullet/MageBolt.h"
+#include "MageBolt.h"
 #include "NecromancerTower.h"
 #include "ArchMageTower.h"
 

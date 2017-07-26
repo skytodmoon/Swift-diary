@@ -1,8 +1,8 @@
 #include "CossbowHunterTower.h"
 #include "GameManager.h"
-#include "Bullet/Arrow.h"
-#include "Layer/Menu/SimplePanleLayer.h"
-#include "Map/BaseMap.h"
+#include "Arrow.h"
+#include "SimplePanleLayer.h"
+#include "BaseMap.h"
 
 bool CossbowHunterTower::init()
 {

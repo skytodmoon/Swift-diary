@@ -1,9 +1,9 @@
 #include "SimpleArrowTowerlvl2.h"
 #include "SimpleArrowTowerlvl3.h"
-#include "Layer/Menu/UpdatePanleLayer.h"
-#include "Map/BaseMap.h"
+#include "UpdatePanleLayer.h"
+#include "BaseMap.h"
 #include "GameManager.h"
-#include "Bullet/Arrow.h"
+#include "Arrow.h"
 
 bool SimpleArrowTowerlvl2::init()
 {

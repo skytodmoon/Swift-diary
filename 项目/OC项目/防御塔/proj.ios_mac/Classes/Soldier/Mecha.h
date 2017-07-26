@@ -2,7 +2,7 @@
 #define _MECHA_H_
 
 #include "BaseSoldier.h"
-#include "Bullet/Bomb.h"
+#include "Bomb.h"
 
 class Mecha : public BaseSoldier
 {

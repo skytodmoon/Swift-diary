@@ -2,7 +2,7 @@
 #define _MECHA_BOMB_H_
 
 #include "cocos2d.h"
-#include "Bullet/Bullet.h"
+#include "Bullet.h"
 
 USING_NS_CC;
 

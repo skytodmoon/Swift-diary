@@ -1,11 +1,11 @@
 #include "GameView.h"
-#include "Scene/TransitionGame.h"
-#include "Scene/WelcomeScene.h"
-#include "Sprite/MapFlag.h"
-#include "Road/Road.h"
-#include "Layer/GameViewMenu.h"
+#include "TransitionGame.h"
+#include "WelcomeScene.h"
+#include "MapFlag.h"
+#include "Road.h"
+#include "GameViewMenu.h"
 #include "GameManager.h"
-#include "Sprite/RespirationSprite.h"
+#include "RespirationSprite.h"
 #include "SoundManager.h"
 
 USING_NS_CC;

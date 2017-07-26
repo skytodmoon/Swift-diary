@@ -1,6 +1,6 @@
 #include "BaseArtilleryTower.h"
 #include "GameManager.h"
-#include "Bullet/Bomb.h"
+#include "Bomb.h"
 
 void BaseArtilleryTower::initTower(int level)
 {

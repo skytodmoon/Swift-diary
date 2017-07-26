@@ -1,9 +1,9 @@
 #include "EarthquakeTower.h"
-#include "Bullet/EarthquakeSmoke.h"
+#include "EarthquakeSmoke.h"
 #include "GameManager.h"
-#include "Bullet/Drill.h"
-#include "Layer/Menu/SimplePanleLayer.h"
-#include "Map/BaseMap.h"
+#include "Drill.h"
+#include "SimplePanleLayer.h"
+#include "BaseMap.h"
 
 bool EarthquakeTower::init()
 {
