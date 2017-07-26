@@ -1,10 +1,10 @@
-#include "..\Scene\WelcomeScene.h"
+#include "WelcomeScene.h"
 #include "GameView.h"
 #include "TransitionGame.h"
-#include "..\Sprite\SlotMenu.h"
-#include "..\Data\SoundManager.h"
+#include "SlotMenu.h"
+#include "SoundManager.h"
 #include "SimpleAudioEngine.h" 
-#include "..\Scene\Introduction\Information.h"
+#include "Introduction\Information.h"
 
 using namespace CocosDenshion;
 

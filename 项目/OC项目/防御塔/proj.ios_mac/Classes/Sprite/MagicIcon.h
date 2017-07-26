@@ -1,7 +1,7 @@
 #ifndef _MAGIC_ICON_H_
 #define _MAGIC_ICON_H_
 
-#include "..\Sprite\TowerIcon\BaseBuildIcon.h"
+#include "BaseBuildIcon.h"
 #include "cocos2d.h"
 
 USING_NS_CC;

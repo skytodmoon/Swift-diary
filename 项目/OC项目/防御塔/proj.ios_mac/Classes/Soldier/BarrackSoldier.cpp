@@ -1,5 +1,5 @@
 #include "BarrackSoldier.h"
-#include "..\Data\GameManager.h"
+#include "GameManager.h"
 
 bool BarrackSoldier::initSoldier(int level)
 {

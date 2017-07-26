@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "Bullet.h"
-#include "..\Classes\Monster\BaseMonster.h"
+#include "BaseMonster.h"
 
 class Twister:public Bullet
 {

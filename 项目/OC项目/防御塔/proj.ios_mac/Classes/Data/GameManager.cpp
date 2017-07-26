@@ -1,4 +1,4 @@
-#include "..\Classes\Data\GameManager.h"
+#include "GameManager.h"
 
 GameManager* GameManager::instance;
 

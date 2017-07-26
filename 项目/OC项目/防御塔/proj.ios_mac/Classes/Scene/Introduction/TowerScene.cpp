@@ -1,5 +1,5 @@
 #include "TowerScene.h"
-#include "..\Classes\Data\SoundManager.h"
+#include "SoundManager.h"
 
 USING_NS_CC;
 

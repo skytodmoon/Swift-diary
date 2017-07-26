@@ -1,12 +1,12 @@
 #include "GameView.h"
 #include "TransitionGame.h"
 #include "WelcomeScene.h"
-#include "..\Sprite\MapFlag.h"
-#include "..\Road\Road.h"
-#include "..\Layer\GameViewMenu.h"
-#include "..\Classes\Data\GameManager.h"
-#include "..\Sprite\RespirationSprite.h"
-#include "..\Data\SoundManager.h"
+#include "MapFlag.h"
+#include "Road.h"
+#include "GameViewMenu.h"
+#include "GameManager.h"
+#include "RespirationSprite.h"
+#include "SoundManager.h"
 
 USING_NS_CC;
 

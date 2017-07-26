@@ -1,5 +1,5 @@
 #include "BaseBuildIcon.h"
-#include "..\Classes\Data\GameManager.h"
+#include "GameManager.h"
 
 bool BaseBuildIcon::initIcon(int type,int money)
 {

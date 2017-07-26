@@ -1,5 +1,5 @@
 #include "Assassin.h"
-#include "..\Data\GameManager.h"
+#include "GameManager.h"
 
 Assassin* Assassin::createAssassin(Point point)
 {

@@ -1,7 +1,7 @@
 #include "UpdatePanleLayer.h"
-#include "..\Classes\Data\GameManager.h"
-#include "..\Classes\Sprite\TowerIcon\BaseBuildIcon.h"
-#include "..\Classes\Map\BaseMap.h"
+#include "GameManager.h"
+#include "BaseBuildIcon.h"
+#include "BaseMap.h"
 
 USING_NS_CC;
 

@@ -1,5 +1,5 @@
 #include "Road.h"
-#include "..\Data\GameManager.h"
+#include "GameManager.h"
 
 Road::~Road(){}
 

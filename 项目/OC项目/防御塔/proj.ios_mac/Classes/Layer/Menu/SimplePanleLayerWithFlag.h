@@ -2,9 +2,9 @@
 #define _SIMPLE_PANLE_LAYER_WITH_FLAG_H_
 
 #include "cocos2d.h"
-#include "..\Classes\Sprite\Circle\Circle.h"
-#include "..\Classes\Tower\BaseTower.h"
-#include "..\Classes\Sprite\TowerIcon\SellIcon.h"
+#include "Circle.h"
+#include "BaseTower.h"
+#include "SellIcon.h"
 
 USING_NS_CC; 
 

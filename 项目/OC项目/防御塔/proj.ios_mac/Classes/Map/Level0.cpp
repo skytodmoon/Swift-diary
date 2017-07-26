@@ -1,6 +1,6 @@
 #include "Level0.h"
-#include "..\Tower\Terrain.h"
-#include "..\Scene\Story\BeginAnimation.h"
+#include "Terrain.h"
+#include "BeginAnimation.h"
 
 USING_NS_CC;
 

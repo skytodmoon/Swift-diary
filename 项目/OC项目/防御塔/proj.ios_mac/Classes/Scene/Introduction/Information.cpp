@@ -1,5 +1,5 @@
 #include "Information.h"
-#include "..\WelcomeScene.h"
+#include "WelcomeScene.h"
 
 USING_NS_CC;
 

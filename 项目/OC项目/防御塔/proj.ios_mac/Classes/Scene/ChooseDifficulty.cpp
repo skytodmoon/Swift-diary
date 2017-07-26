@@ -1,8 +1,8 @@
 #include "ChooseDifficulty.h"
 #include "GameScene.h"
 #include "TransitionGame.h"
-#include "..\Classes\Data\GameManager.h"
-#include "..\Classes\Data\SoundManager.h"
+#include "GameManager.h"
+#include "SoundManager.h"
 
 USING_NS_CC;
 

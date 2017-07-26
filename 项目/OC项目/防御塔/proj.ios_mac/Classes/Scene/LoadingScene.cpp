@@ -1,7 +1,7 @@
 #include "LoadingScene.h"
 #include "SimpleAudioEngine.h" 
 #include "WelcomeScene.h"
-#include "..\Data\MyAnimation.h"
+#include "MyAnimation.h"
 
 using namespace CocosDenshion;
 USING_NS_CC;

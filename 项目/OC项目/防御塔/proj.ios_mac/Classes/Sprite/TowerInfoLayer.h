@@ -2,7 +2,7 @@
 #define _TOWER_LAYER_H_
 
 #include "cocos2d.h"
-#include"..\Tower\BaseTower.h"
+#include "BaseTower.h"
 
 USING_NS_CC;
 

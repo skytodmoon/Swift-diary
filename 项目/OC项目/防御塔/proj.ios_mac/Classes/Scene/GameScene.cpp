@@ -13,7 +13,7 @@
 #include "..\Map\Level11.h"
 #include "..\Map\Level12.h"
 #include "..\Layer\PlayerStateMenu.h"
-#include "..\Classes\Data\GameManager.h"
+#include "GameManager.h"
 
 Scene* GameScene::playGame(int Level,int Difficulty)
 {            
