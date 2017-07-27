@@ -14,6 +14,14 @@
 		5B8C7DAF1F25CF99003F48A8 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DAC1F25CF99003F48A8 /* LoginView.m */; };
 		5B8C7DB01F25CF99003F48A8 /* SettingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DAE1F25CF99003F48A8 /* SettingHeaderView.m */; };
 		5B8C7DB51F25CFF3003F48A8 /* TabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */; };
+		5BB3A8EA1F29CF1D00319D05 /* LiveListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8E91F29CF1D00319D05 /* LiveListManager.m */; };
+		5BB3A8EE1F29CF8E00319D05 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8ED1F29CF8E00319D05 /* HttpClient.m */; };
+		5BB3A8F21F29D0C500319D05 /* OtherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8F11F29D0C500319D05 /* OtherModel.m */; };
+		5BB3A8F51F29D12F00319D05 /* CategoryListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8F41F29D12F00319D05 /* CategoryListModel.m */; };
+		5BB3A8F81F29D2A400319D05 /* StatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8F71F29D2A400319D05 /* StatusHelper.m */; };
+		5BB3A8FB1F29D33B00319D05 /* NSObject+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8FA1F29D33B00319D05 /* NSObject+Toast.m */; };
+		5BB3A8FE1F29D3AF00319D05 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A8FD1F29D3AF00319D05 /* UIViewController+Extension.m */; };
+		5BB3A9011F29D3F300319D05 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A9001F29D3F300319D05 /* UIImageView+Extension.m */; };
 		5BF6BF561F25801D00AE323B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF551F25801D00AE323B /* main.m */; };
 		5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF581F25801D00AE323B /* AppDelegate.m */; };
 		5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6BF5B1F25801D00AE323B /* ViewController.m */; };
@@ -62,6 +70,22 @@
 		5B8C7DAE1F25CF99003F48A8 /* SettingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHeaderView.m; sourceTree = "<group>"; };
 		5B8C7DB31F25CFF3003F48A8 /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
 		5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarButton.m; sourceTree = "<group>"; };
+		5BB3A8E81F29CF1D00319D05 /* LiveListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveListManager.h; sourceTree = "<group>"; };
+		5BB3A8E91F29CF1D00319D05 /* LiveListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveListManager.m; sourceTree = "<group>"; };
+		5BB3A8EC1F29CF8E00319D05 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		5BB3A8ED1F29CF8E00319D05 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		5BB3A8F01F29D0C500319D05 /* OtherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherModel.h; sourceTree = "<group>"; };
+		5BB3A8F11F29D0C500319D05 /* OtherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherModel.m; sourceTree = "<group>"; };
+		5BB3A8F31F29D12F00319D05 /* CategoryListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListModel.h; sourceTree = "<group>"; };
+		5BB3A8F41F29D12F00319D05 /* CategoryListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryListModel.m; sourceTree = "<group>"; };
+		5BB3A8F61F29D2A400319D05 /* StatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusHelper.h; sourceTree = "<group>"; };
+		5BB3A8F71F29D2A400319D05 /* StatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusHelper.m; sourceTree = "<group>"; };
+		5BB3A8F91F29D33B00319D05 /* NSObject+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Toast.h"; sourceTree = "<group>"; };
+		5BB3A8FA1F29D33B00319D05 /* NSObject+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Toast.m"; sourceTree = "<group>"; };
+		5BB3A8FC1F29D3AF00319D05 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		5BB3A8FD1F29D3AF00319D05 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		5BB3A8FF1F29D3F300319D05 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		5BB3A9001F29D3F300319D05 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 		5BF6BF511F25801D00AE323B /* 全民TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "全民TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF6BF551F25801D00AE323B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BF6BF571F25801D00AE323B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +229,7 @@
 		5B8C7DB11F25CFE2003F48A8 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5BB3A8EB1F29CF7D00319D05 /* Https */,
 				5B8C7DB21F25CFE2003F48A8 /* Category */,
 			);
 			path = Other;
@@ -215,8 +240,54 @@
 			children = (
 				5B8C7DB31F25CFF3003F48A8 /* TabbarButton.h */,
 				5B8C7DB41F25CFF3003F48A8 /* TabbarButton.m */,
+				5BB3A8F61F29D2A400319D05 /* StatusHelper.h */,
+				5BB3A8F71F29D2A400319D05 /* StatusHelper.m */,
+				5BB3A8F91F29D33B00319D05 /* NSObject+Toast.h */,
+				5BB3A8FA1F29D33B00319D05 /* NSObject+Toast.m */,
+				5BB3A8FC1F29D3AF00319D05 /* UIViewController+Extension.h */,
+				5BB3A8FD1F29D3AF00319D05 /* UIViewController+Extension.m */,
+				5BB3A8FF1F29D3F300319D05 /* UIImageView+Extension.h */,
+				5BB3A9001F29D3F300319D05 /* UIImageView+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		5BB3A8E61F29CEFC00319D05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3A8EF1F29D0B700319D05 /* Home */,
+				5BB3A8E71F29CF0E00319D05 /* Live */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BB3A8E71F29CF0E00319D05 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3A8E81F29CF1D00319D05 /* LiveListManager.h */,
+				5BB3A8E91F29CF1D00319D05 /* LiveListManager.m */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		5BB3A8EB1F29CF7D00319D05 /* Https */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3A8EC1F29CF8E00319D05 /* HttpClient.h */,
+				5BB3A8ED1F29CF8E00319D05 /* HttpClient.m */,
+			);
+			path = Https;
+			sourceTree = "<group>";
+		};
+		5BB3A8EF1F29D0B700319D05 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3A8F01F29D0C500319D05 /* OtherModel.h */,
+				5BB3A8F11F29D0C500319D05 /* OtherModel.m */,
+				5BB3A8F31F29D12F00319D05 /* CategoryListModel.h */,
+				5BB3A8F41F29D12F00319D05 /* CategoryListModel.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		5BF6BF481F25801D00AE323B = {
@@ -288,6 +359,7 @@
 		5BF6BF891F25C4CC00AE323B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BB3A8E61F29CEFC00319D05 /* Model */,
 				5B8C7DB11F25CFE2003F48A8 /* Other */,
 				5B8C7DA81F25CF99003F48A8 /* View */,
 				5B8C7D971F25C9A1003F48A8 /* Controller */,
@@ -513,15 +585,23 @@
 				5B8C7DA31F25CA36003F48A8 /* LiveListViewController.m in Sources */,
 				5B8C7DB51F25CFF3003F48A8 /* TabbarButton.m in Sources */,
 				5BF6BF5C1F25801D00AE323B /* ViewController.m in Sources */,
+				5BB3A8F81F29D2A400319D05 /* StatusHelper.m in Sources */,
 				5B8C7DB01F25CF99003F48A8 /* SettingHeaderView.m in Sources */,
+				5BB3A8F21F29D0C500319D05 /* OtherModel.m in Sources */,
 				5BF6BF961F25C74500AE323B /* RefreshGifHeader.m in Sources */,
 				5BF6BF991F25C7C900AE323B /* NavigationViewController.m in Sources */,
+				5BB3A8EE1F29CF8E00319D05 /* HttpClient.m in Sources */,
+				5BB3A8FE1F29D3AF00319D05 /* UIViewController+Extension.m in Sources */,
 				5BF6BF591F25801D00AE323B /* AppDelegate.m in Sources */,
 				5BF6BF931F25C63700AE323B /* EntryViewController.m in Sources */,
+				5BB3A8EA1F29CF1D00319D05 /* LiveListManager.m in Sources */,
 				5B8C7DAF1F25CF99003F48A8 /* LoginView.m in Sources */,
 				5BF6BF561F25801D00AE323B /* main.m in Sources */,
+				5BB3A8F51F29D12F00319D05 /* CategoryListModel.m in Sources */,
 				5BF6BF901F25C5B500AE323B /* MainViewController.m in Sources */,
 				5B8C7DA71F25CA59003F48A8 /* ProfileViewController.m in Sources */,
+				5BB3A9011F29D3F300319D05 /* UIImageView+Extension.m in Sources */,
+				5BB3A8FB1F29D33B00319D05 /* NSObject+Toast.m in Sources */,
 				5B8C7D9F1F25C9FE003F48A8 /* ColumnViewController.m in Sources */,
 				5B8C7D9B1F25C9BA003F48A8 /* HomeViewController.m in Sources */,
 			);
