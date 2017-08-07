@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		282CC115F7F0C5218E7995D6 /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41597112BB9A63BF2233DEB2 /* libPods-百思不得姐Tests.a */; };
+		5B1E6D341F3819CA005B0688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E6D331F3819CA005B0688 /* main.m */; };
+		5B1E6D371F3819CA005B0688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E6D361F3819CA005B0688 /* AppDelegate.m */; };
+		5B1E6D3A1F3819CA005B0688 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E6D391F3819CA005B0688 /* ViewController.m */; };
+		5B1E6D3D1F3819CA005B0688 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1E6D3B1F3819CA005B0688 /* Main.storyboard */; };
+		5B1E6D3F1F3819CA005B0688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1E6D3E1F3819CA005B0688 /* Assets.xcassets */; };
+		5B1E6D421F3819CA005B0688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1E6D401F3819CA005B0688 /* LaunchScreen.storyboard */; };
+		5B1E6D4D1F3819CA005B0688 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E6D4C1F3819CA005B0688 /* _____Tests.m */; };
+		5B1E6D581F3819CA005B0688 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1E6D571F3819CA005B0688 /* _____UITests.m */; };
+		8F10FC3960080657C558DE5E /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1AF5EF9FABC75765CA25C2 /* libPods-百思不得姐.a */; };
+		EE9EFBE84B0D4DD7EB1823C4 /* libPods-百思不得姐UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F24D2BC12A92609461B2E27 /* libPods-百思不得姐UITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B1E6D491F3819CA005B0688 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1E6D271F3819CA005B0688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B1E6D2E1F3819CA005B0688;
+			remoteInfo = "百思不得姐";
+		};
+		5B1E6D541F3819CA005B0688 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1E6D271F3819CA005B0688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B1E6D2E1F3819CA005B0688;
+			remoteInfo = "百思不得姐";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		133FEF7AE44C85869584DC24 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		2EB2C2F2D6C7721B7E8D9276 /* Pods-百思不得姐UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		41597112BB9A63BF2233DEB2 /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1AF5EF9FABC75765CA25C2 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1E6D2F1F3819CA005B0688 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1E6D331F3819CA005B0688 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B1E6D351F3819CA005B0688 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B1E6D361F3819CA005B0688 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B1E6D381F3819CA005B0688 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B1E6D391F3819CA005B0688 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B1E6D3C1F3819CA005B0688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B1E6D3E1F3819CA005B0688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B1E6D411F3819CA005B0688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B1E6D431F3819CA005B0688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1E6D481F3819CA005B0688 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1E6D4C1F3819CA005B0688 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _____Tests.m; sourceTree = "<group>"; };
+		5B1E6D4E1F3819CA005B0688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1E6D531F3819CA005B0688 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1E6D571F3819CA005B0688 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _____UITests.m; sourceTree = "<group>"; };
+		5B1E6D591F3819CA005B0688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E48D39226421C98CF2B8C45 /* Pods-百思不得姐UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F24D2BC12A92609461B2E27 /* libPods-百思不得姐UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D126420029B5FD75617CA02D /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D28E2F05EBBFAC29559D17BB /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
+		F1930D0E3DB3991A6570AB23 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B1E6D2C1F3819CA005B0688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F10FC3960080657C558DE5E /* libPods-百思不得姐.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D451F3819CA005B0688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				282CC115F7F0C5218E7995D6 /* libPods-百思不得姐Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D501F3819CA005B0688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9EFBE84B0D4DD7EB1823C4 /* libPods-百思不得姐UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B1E6D261F3819CA005B0688 = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D311F3819CA005B0688 /* 百思不得姐 */,
+				5B1E6D4B1F3819CA005B0688 /* 百思不得姐Tests */,
+				5B1E6D561F3819CA005B0688 /* 百思不得姐UITests */,
+				5B1E6D301F3819CA005B0688 /* Products */,
+				DA591CED6ABED6928421C684 /* Pods */,
+				A854AA7CBAE9479FA42B29F6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B1E6D301F3819CA005B0688 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D2F1F3819CA005B0688 /* 百思不得姐.app */,
+				5B1E6D481F3819CA005B0688 /* 百思不得姐Tests.xctest */,
+				5B1E6D531F3819CA005B0688 /* 百思不得姐UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1E6D311F3819CA005B0688 /* 百思不得姐 */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D351F3819CA005B0688 /* AppDelegate.h */,
+				5B1E6D361F3819CA005B0688 /* AppDelegate.m */,
+				5B1E6D381F3819CA005B0688 /* ViewController.h */,
+				5B1E6D391F3819CA005B0688 /* ViewController.m */,
+				5B1E6D3B1F3819CA005B0688 /* Main.storyboard */,
+				5B1E6D3E1F3819CA005B0688 /* Assets.xcassets */,
+				5B1E6D401F3819CA005B0688 /* LaunchScreen.storyboard */,
+				5B1E6D431F3819CA005B0688 /* Info.plist */,
+				5B1E6D321F3819CA005B0688 /* Supporting Files */,
+			);
+			path = "百思不得姐";
+			sourceTree = "<group>";
+		};
+		5B1E6D321F3819CA005B0688 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D331F3819CA005B0688 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B1E6D4B1F3819CA005B0688 /* 百思不得姐Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D4C1F3819CA005B0688 /* _____Tests.m */,
+				5B1E6D4E1F3819CA005B0688 /* Info.plist */,
+			);
+			path = "百思不得姐Tests";
+			sourceTree = "<group>";
+		};
+		5B1E6D561F3819CA005B0688 /* 百思不得姐UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B1E6D571F3819CA005B0688 /* _____UITests.m */,
+				5B1E6D591F3819CA005B0688 /* Info.plist */,
+			);
+			path = "百思不得姐UITests";
+			sourceTree = "<group>";
+		};
+		A854AA7CBAE9479FA42B29F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D1AF5EF9FABC75765CA25C2 /* libPods-百思不得姐.a */,
+				41597112BB9A63BF2233DEB2 /* libPods-百思不得姐Tests.a */,
+				8F24D2BC12A92609461B2E27 /* libPods-百思不得姐UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA591CED6ABED6928421C684 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28E2F05EBBFAC29559D17BB /* Pods-百思不得姐.debug.xcconfig */,
+				133FEF7AE44C85869584DC24 /* Pods-百思不得姐.release.xcconfig */,
+				D126420029B5FD75617CA02D /* Pods-百思不得姐Tests.debug.xcconfig */,
+				F1930D0E3DB3991A6570AB23 /* Pods-百思不得姐Tests.release.xcconfig */,
+				2EB2C2F2D6C7721B7E8D9276 /* Pods-百思不得姐UITests.debug.xcconfig */,
+				5E48D39226421C98CF2B8C45 /* Pods-百思不得姐UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B1E6D2E1F3819CA005B0688 /* 百思不得姐 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1E6D5C1F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐" */;
+			buildPhases = (
+				6D3716EA772B5FCC752FD0CE /* [CP] Check Pods Manifest.lock */,
+				5B1E6D2B1F3819CA005B0688 /* Sources */,
+				5B1E6D2C1F3819CA005B0688 /* Frameworks */,
+				5B1E6D2D1F3819CA005B0688 /* Resources */,
+				0D4D29AE0BB36FAE83DEBE46 /* [CP] Embed Pods Frameworks */,
+				C76D4A5A4211AD6241928F07 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "百思不得姐";
+			productName = "百思不得姐";
+			productReference = 5B1E6D2F1F3819CA005B0688 /* 百思不得姐.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B1E6D471F3819CA005B0688 /* 百思不得姐Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1E6D5F1F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */;
+			buildPhases = (
+				3E2F0A546072DCB6199B3609 /* [CP] Check Pods Manifest.lock */,
+				5B1E6D441F3819CA005B0688 /* Sources */,
+				5B1E6D451F3819CA005B0688 /* Frameworks */,
+				5B1E6D461F3819CA005B0688 /* Resources */,
+				4AAEE8885406C831747C9A52 /* [CP] Embed Pods Frameworks */,
+				BA330D434229712C82741992 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B1E6D4A1F3819CA005B0688 /* PBXTargetDependency */,
+			);
+			name = "百思不得姐Tests";
+			productName = "百思不得姐Tests";
+			productReference = 5B1E6D481F3819CA005B0688 /* 百思不得姐Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B1E6D521F3819CA005B0688 /* 百思不得姐UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1E6D621F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */;
+			buildPhases = (
+				0BD57ABC18FB5264F7FB7337 /* [CP] Check Pods Manifest.lock */,
+				5B1E6D4F1F3819CA005B0688 /* Sources */,
+				5B1E6D501F3819CA005B0688 /* Frameworks */,
+				5B1E6D511F3819CA005B0688 /* Resources */,
+				31B24047CCB7FA6E793A43A5 /* [CP] Embed Pods Frameworks */,
+				2A042B4E2878ED1B4CF3874A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B1E6D551F3819CA005B0688 /* PBXTargetDependency */,
+			);
+			name = "百思不得姐UITests";
+			productName = "百思不得姐UITests";
+			productReference = 5B1E6D531F3819CA005B0688 /* 百思不得姐UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B1E6D271F3819CA005B0688 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B1E6D2E1F3819CA005B0688 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5B1E6D471F3819CA005B0688 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B1E6D2E1F3819CA005B0688;
+					};
+					5B1E6D521F3819CA005B0688 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5B1E6D2E1F3819CA005B0688;
+					};
+				};
+			};
+			buildConfigurationList = 5B1E6D2A1F3819CA005B0688 /* Build configuration list for PBXProject "百思不得姐" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B1E6D261F3819CA005B0688;
+			productRefGroup = 5B1E6D301F3819CA005B0688 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B1E6D2E1F3819CA005B0688 /* 百思不得姐 */,
+				5B1E6D471F3819CA005B0688 /* 百思不得姐Tests */,
+				5B1E6D521F3819CA005B0688 /* 百思不得姐UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B1E6D2D1F3819CA005B0688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1E6D421F3819CA005B0688 /* LaunchScreen.storyboard in Resources */,
+				5B1E6D3F1F3819CA005B0688 /* Assets.xcassets in Resources */,
+				5B1E6D3D1F3819CA005B0688 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D461F3819CA005B0688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D511F3819CA005B0688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BD57ABC18FB5264F7FB7337 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0D4D29AE0BB36FAE83DEBE46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A042B4E2878ED1B4CF3874A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31B24047CCB7FA6E793A43A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐UITests/Pods-百思不得姐UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E2F0A546072DCB6199B3609 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4AAEE8885406C831747C9A52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3716EA772B5FCC752FD0CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA330D434229712C82741992 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C76D4A5A4211AD6241928F07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B1E6D2B1F3819CA005B0688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1E6D3A1F3819CA005B0688 /* ViewController.m in Sources */,
+				5B1E6D371F3819CA005B0688 /* AppDelegate.m in Sources */,
+				5B1E6D341F3819CA005B0688 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D441F3819CA005B0688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1E6D4D1F3819CA005B0688 /* _____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1E6D4F1F3819CA005B0688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1E6D581F3819CA005B0688 /* _____UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B1E6D4A1F3819CA005B0688 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B1E6D2E1F3819CA005B0688 /* 百思不得姐 */;
+			targetProxy = 5B1E6D491F3819CA005B0688 /* PBXContainerItemProxy */;
+		};
+		5B1E6D551F3819CA005B0688 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B1E6D2E1F3819CA005B0688 /* 百思不得姐 */;
+			targetProxy = 5B1E6D541F3819CA005B0688 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B1E6D3B1F3819CA005B0688 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B1E6D3C1F3819CA005B0688 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B1E6D401F3819CA005B0688 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B1E6D411F3819CA005B0688 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B1E6D5A1F3819CA005B0688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B1E6D5B1F3819CA005B0688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B1E6D5D1F3819CA005B0688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28E2F05EBBFAC29559D17BB /* Pods-百思不得姐.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B1E6D5E1F3819CA005B0688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 133FEF7AE44C85869584DC24 /* Pods-百思不得姐.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B1E6D601F3819CA005B0688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D126420029B5FD75617CA02D /* Pods-百思不得姐Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "百思不得姐Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/百思不得姐.app/百思不得姐";
+			};
+			name = Debug;
+		};
+		5B1E6D611F3819CA005B0688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1930D0E3DB3991A6570AB23 /* Pods-百思不得姐Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "百思不得姐Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/百思不得姐.app/百思不得姐";
+			};
+			name = Release;
+		};
+		5B1E6D631F3819CA005B0688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB2C2F2D6C7721B7E8D9276 /* Pods-百思不得姐UITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "百思不得姐";
+			};
+			name = Debug;
+		};
+		5B1E6D641F3819CA005B0688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E48D39226421C98CF2B8C45 /* Pods-百思不得姐UITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "百思不得姐";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B1E6D2A1F3819CA005B0688 /* Build configuration list for PBXProject "百思不得姐" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1E6D5A1F3819CA005B0688 /* Debug */,
+				5B1E6D5B1F3819CA005B0688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1E6D5C1F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1E6D5D1F3819CA005B0688 /* Debug */,
+				5B1E6D5E1F3819CA005B0688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1E6D5F1F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1E6D601F3819CA005B0688 /* Debug */,
+				5B1E6D611F3819CA005B0688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1E6D621F3819CA005B0688 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1E6D631F3819CA005B0688 /* Debug */,
+				5B1E6D641F3819CA005B0688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B1E6D271F3819CA005B0688 /* Project object */;
+}
