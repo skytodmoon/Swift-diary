@@ -7,14 +7,13 @@ target '百思不得姐' do
 
   # Pods for 百思不得姐
 
-  target '百思不得姐Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '百思不得姐UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'AFNetworking'
+    pod 'MJExtension'
+    pod 'SDWebImage'
+    pod 'SVProgressHUD'
+    pod 'MJRefresh'
+    pod 'DACircularProgress'
+    pod 'FLAnimatedImage'
+    pod 'pop'
 
 end
