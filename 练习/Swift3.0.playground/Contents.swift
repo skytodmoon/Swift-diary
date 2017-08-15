@@ -518,7 +518,7 @@ do{
 }
 
 //另外处理错误的方法使用try将结果转换为可选的，如果函数出错误，该错误会被抛弃结果为nil
-//否则的话，结果会是一个包含函数返回值的可选值
+//否则的话，结果会是一个包含函数返回值的可选值 
 
 let printerSuccess = try?send(job: 1884, toPrinter: "Mergenthaler")
 let printerFailure = try?send(job: 1885, toPrinter: "Never Has Toner")
