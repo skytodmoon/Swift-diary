@@ -4,12 +4,13 @@ import UIKit
 
 
 //=========================简单值======================
-//使用let声明常量，使用var声明变量
+//使用 let 来声明常量，使用 var 来声明变量。一个常量的值，在编译的时候，并不需要有明确的值，但是你只能为它赋值一次。这说明你可以用一个常量来命名一个值，一次赋值就即可在多个地方使用。
 var myVariable = 42
 myVariable = 50
 let myConstans = 42
 
-//没有初始值没有提供的足够信息，那么需要在变量后面声明类型，用冒号分割
+//常量或者变量的类型必须和你赋给它们的值一样。然而，你不用明确地声明类型，声明的同时赋值的话，编译器会自动推断类型。在上面的例子中，编译器推断出 myVariable 是一个整数类型（integer）因为它的初始值是整数。
+//如果初始值没有提供足够的信息（或者没有初始值），那你需要在变量后面声明类型，用冒号分割。
 let implicitInteger = 70
 let implicitDouble = 70.0
 let explicitDouble: Double = 70
@@ -58,8 +59,8 @@ for score in individualScores {
 print(teamScore)
 
 
-//一个可选的值是一个具体的值或者nil以表示缺少，在类型后面加上一个
-//问号来标记这个变量的值是可选的
+//在 if 语句中，条件必须是一个布尔表达式——这意味着像 if score { ... } 这样的代码将报错，而不会隐形地与 0 做对比。
+//你可以一起使用 if 和 let 来处理值缺失的情况。这些值可由可选值来代表。一个可选的值是一个具体的值或者是 nil 以表示值缺失。在类型后面加一个问号来标记这个变量的值是可选的。
 var optionalString: String? = "Hello"
 print(optionalString == nil)
 
@@ -69,7 +70,8 @@ if let name = optionalName{
     greeting = "Hello,\(name)"
 }
 
-//另一种处理可选的方法是通过使用??操作符来提供一个默认值
+//如果变量的可选值是 nil，条件会判断为 false，大括号中的代码会被跳过。如果不是 nil，会将值解包并赋给 let 后面的常量，这样代码块中就可以使用这个值了。
+//    另一种处理可选值的方法是通过使用 ?? 操作符来提供一个默认值。如果可选值缺失的话，可以使用默认值来代替。
 let nickName: String? = nil
 let fullName: String = "John Applessed"
 let informalGreeting = "Hi\(nickName ?? fullName)"
@@ -86,9 +88,11 @@ case let x where x.hasSuffix("pepper"):
 default:
     print("Everything tastes good in soup")
 }
+/**
+运行 switch 中匹配到的子句之后，程序会退出 switch 语句，并不会继续向下运行，所以不需要在每个子句结尾写 break。
+你可以使用 for-in 来遍历字典，需要两个变量来表示每个键值对。字典是一个无序的集合，所以他们的键和值以任意顺序迭代结束。
+*/
 
-//运行switch中匹配的字句之后，程序会退出switch语句，并不会
-//向下运行for-in来遍历字典，需要两个变量表示每个键值对
 let interestingNumbers = [
     "Prime":[2,3,4,5,11,13],
     "Fibonace":[1,1,2,3,5,5],
@@ -535,4 +539,29 @@ func repeatItem<Item>(repeating item: Item, numberOfTimes: Int) -> [Item]{
     return result
 }
 repeatItem(repeating: "knock", numberOfTimes: 4)
+
+
+//你也可以创建泛型函数、方法、类、枚举和结构体。
+// 重新实现 Swift 标准库中的可选类型
+enum OptionalValue<Wrapped> {
+    case None
+    case Some(Wrapped)
+}
+var possibleInteger: OptionalValue<Int> = .None
+possibleInteger = .Some(100)
+
+//在类型名后面使用 where 来指定对类型的需求，比如，限定类型实现某一个协议，限定两个类型是相同的，或者限定某个类必须有一个特定的父类。
+
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
+    where T.Iterator.Element: Equatable, T.Iterator.Element == U.Iterator.Element {
+        for lhsItem in lhs {
+            for rhsItem in rhs {
+                if lhsItem == rhsItem {
+                    return true
+                }
+            }
+        }
+        return false
+}
+anyCommonElements([1, 2, 3], [3])
 
