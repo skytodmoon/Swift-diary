@@ -1026,6 +1026,126 @@ print("The status message is \(http200Status.description)")
  */
 
 
+/** 可选类型 */
+
+/*
+使用可选类型（optionals）来处理值可能缺失的情况。可选类型表示：
+
+有值，等于 x
+或者
+
+没有值
+ 
+ */
+
+/**
+注意：
+C 和 Objective-C 中并没有可选类型这个概念。最接近的是 Objective-C 中的一个特性，一个方法要不返回一个对象要不返回nil，nil表示“缺少一个合法的对象”。然而，这只对对象起作用——对于结构体，基本的 C 类型或者枚举类型不起作用。对于这些类型，Objective-C 方法一般会返回一个特殊值（比如NSNotFound）来暗示值缺失。这种方法假设方法的调用者知道并记得对特殊值进行判断。然而，Swift 的可选类型可以让你暗示任意类型的值缺失，并不需要一个特殊值。
+
+来看一个例子。Swift 的Int类型有一种构造器，作用是将一个String值转换成一个Int值。然而，并不是所有的字符串都可以转换成一个整数。字符串"123"可以被转换成数字123，但是字符串"hello, world"不行。
+
+下面的例子使用这种构造器来尝试将一个String转换成Int：
+
+*/
+
+let possibleNumber = "123"
+let convertedNUmber = Int(possibleNumber)
+// convertedNumber 被推测为类型 "Int?"， 或者类型 "optional Int"
+
+/**
+ 因为该构造器可能会失败，所以它返回一个可选类型（optional）Int，而不是一个Int。一个可选的Int被写作Int?而不是Int。问号暗示包含的值是可选类型，也就是说可能包含Int值也可能不包含值。（不能包含其他任何值比如Bool值或者String值。只能是Int或者什么都没有。）
+ */
+
+
+/** nil */
+//你可以给可选变量赋值为nil来表示它没有值：
+
+
+var serverResponseCode: Int? = 404
+// serverResponseCode 包含一个可选的 Int 值 404
+serverResponseCode = nil
+// serverResponseCode 现在不包含值
+
+/***
+注意：
+nil不能用于非可选的常量和变量。如果你的代码中有常量或者变量需要处理值缺失的情况，请把它们声明成对应的可选类型。
+
+如果你声明一个可选常量或者变量但是没有赋值，它们会自动被设置为nil：
+
+*/
+var surveryAnswer: String?
+// surveyAnswer 被自动设置为 nil
+
+/***
+注意：
+Swift 的nil和 Objective-C 中的nil并不一样。在 Objective-C 中，nil是一个指向不存在对象的指针。在 Swift 中，nil不是指针——它是一个确定的值，用来表示值缺失。任何类型的可选状态都可以被设置为nil，不只是对象类型。
+*/
+
+
+
+/** if 语句以及强制解析 */
+//你可以使用if语句和nil比较来判断一个可选值是否包含值。你可以使用“相等”(==)或“不等”(!=)来执行比较。
+//如果可选类型有值，它将不等于nil:
+
+/*
+ 
+if convertedNumber != nil {
+    print("convertedNumberOf contains some integer value.")
+}
+ 输出 "convertedNumber contains some integer value."
+ 
+ */
+
+//当你确定可选类型确实包含值之后，你可以在可选的名字后面加一个感叹号（!）来获取值。这个惊叹号表示“我知道这个可选有值，请使用它。”这被称为可选值的强制解析（forced unwrapping）：
+/**
+ 
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
+// 输出 "convertedNumber has an integer value of 123."
+ 
+*/
+
+//更多关于if语句的内容，请参考控制流。
+
+/**
+ 
+注意：
+使用!来获取一个不存在的可选值会导致运行时错误。使用!来强制解析值之前，一定要确定可选包含一个非nil的值。
+ 
+*/
+
+
+/** 可选绑定 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
