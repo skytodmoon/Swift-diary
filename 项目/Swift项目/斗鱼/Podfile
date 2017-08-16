@@ -6,15 +6,12 @@ target '斗鱼' do
   use_frameworks!
 
   # Pods for 斗鱼
-
-  target '斗鱼Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '斗鱼UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'Alamofire', '~> 4.2.0'
+  pod 'Kingfisher', '~> 3.2.1'
+  pod 'SnapKit', '~> 3.0.2'
+  pod 'pop', '~> 1.0.9'
+  pod 'JHPullToRefreshKit', '~> 1.0.1'
+  pod 'MJRefresh'
+  pod 'DeformationButton'
+  pod 'XRCarouselView'
 end

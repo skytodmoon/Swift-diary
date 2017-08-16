@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3782FB3715005C6004B1B5E0 /* Pods___UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9AE571AA80B7B657856185 /* Pods___UITests.framework */; };
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
-		5A359D69C198780FDE555D43 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */; };
 		5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF11F441E770031D13B /* AppDelegate.swift */; };
 		5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF31F441E770031D13B /* ViewController.swift */; };
 		5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF51F441E770031D13B /* Main.storyboard */; };
@@ -20,6 +18,7 @@
 		5B8BBD231F441F9A0031D13B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD221F441F9A0031D13B /* Common.swift */; };
 		5B8BBD251F441FA70031D13B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD241F441FA70031D13B /* NetworkTools.swift */; };
 		5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD271F441FEC0031D13B /* TabBarController.swift */; };
+		5B8BBD351F4426190031D13B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD341F4426190031D13B /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		06B63D0863688C14D821D334 /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 		0B9AE571AA80B7B657856185 /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16EF1B63B2F1F47991A6D12B /* Pods-斗鱼Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼Tests/Pods-斗鱼Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8BBCEE1F441E770031D13B /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8BBCF11F441E770031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8BBCF31F441E770031D13B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,11 +58,10 @@
 		5B8BBD241F441FA70031D13B /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		5B8BBD271F441FEC0031D13B /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5B8BBD2E1F4420E30031D13B /* 斗鱼-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "斗鱼-Bridging-Header.h"; sourceTree = "<group>"; };
-		5D581661D8DDCCEDE8490778 /* Pods-斗鱼UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼UITests/Pods-斗鱼UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B8BBD331F4426190031D13B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		5B8BBD341F4426190031D13B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		89F320D591F4C86500D1DEF1 /* Pods-斗鱼Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼Tests/Pods-斗鱼Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C61CC11E0CE15CB78511250C /* Pods-斗鱼UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼UITests/Pods-斗鱼UITests.release.xcconfig"; sourceTree = "<group>"; };
 		CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A359D69C198780FDE555D43 /* Pods___Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3782FB3715005C6004B1B5E0 /* Pods___UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +148,7 @@
 		5B8BBD1F1F441F530031D13B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B8BBD321F4425F40031D13B /* Other */,
 				5B8BBD211F441F790031D13B /* Tools */,
 				5B8BBD201F441F5F0031D13B /* Main */,
 				5B8BBD2E1F4420E30031D13B /* 斗鱼-Bridging-Header.h */,
@@ -185,15 +181,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		5B8BBD321F4425F40031D13B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B8BBD331F4426190031D13B /* UIView+Extension.h */,
+				5B8BBD341F4426190031D13B /* UIView+Extension.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		AE864BA23BBCFF2F4E592746 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */,
 				06B63D0863688C14D821D334 /* Pods-斗鱼.release.xcconfig */,
-				16EF1B63B2F1F47991A6D12B /* Pods-斗鱼Tests.debug.xcconfig */,
-				89F320D591F4C86500D1DEF1 /* Pods-斗鱼Tests.release.xcconfig */,
-				5D581661D8DDCCEDE8490778 /* Pods-斗鱼UITests.debug.xcconfig */,
-				C61CC11E0CE15CB78511250C /* Pods-斗鱼UITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -235,12 +236,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B8BBD191F441E770031D13B /* Build configuration list for PBXNativeTarget "斗鱼Tests" */;
 			buildPhases = (
-				152D47BF10B9B2DA2F6A66FC /* [CP] Check Pods Manifest.lock */,
 				5B8BBCFE1F441E770031D13B /* Sources */,
 				5B8BBCFF1F441E770031D13B /* Frameworks */,
 				5B8BBD001F441E770031D13B /* Resources */,
-				AE917F6F2A7FA8D3EF50CB23 /* [CP] Embed Pods Frameworks */,
-				96D97F26E7BA1E6726B08750 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,12 +254,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B8BBD1C1F441E770031D13B /* Build configuration list for PBXNativeTarget "斗鱼UITests" */;
 			buildPhases = (
-				93A465E27FB5A292E3B6AB24 /* [CP] Check Pods Manifest.lock */,
 				5B8BBD091F441E770031D13B /* Sources */,
 				5B8BBD0A1F441E770031D13B /* Frameworks */,
 				5B8BBD0B1F441E770031D13B /* Resources */,
-				91A0044928760BAD81F50C92 /* [CP] Embed Pods Frameworks */,
-				A163E81210EE6D7627AE7052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,21 +343,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		152D47BF10B9B2DA2F6A66FC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		4D5DE5132C3C2EC4DF31022F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,81 +356,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91A0044928760BAD81F50C92 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼UITests/Pods-斗鱼UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93A465E27FB5A292E3B6AB24 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		96D97F26E7BA1E6726B08750 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼Tests/Pods-斗鱼Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A163E81210EE6D7627AE7052 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼UITests/Pods-斗鱼UITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE917F6F2A7FA8D3EF50CB23 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼Tests/Pods-斗鱼Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA8928159C5F030DD598FBA2 /* [CP] Check Pods Manifest.lock */ = {
@@ -490,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8BBD351F4426190031D13B /* UIView+Extension.m in Sources */,
 				5B8BBD251F441FA70031D13B /* NetworkTools.swift in Sources */,
 				5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */,
 				5B8BBD231F441F9A0031D13B /* Common.swift in Sources */,
@@ -677,7 +583,6 @@
 		};
 		5B8BBD1A1F441E770031D13B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16EF1B63B2F1F47991A6D12B /* Pods-斗鱼Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -692,7 +597,6 @@
 		};
 		5B8BBD1B1F441E770031D13B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F320D591F4C86500D1DEF1 /* Pods-斗鱼Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -707,7 +611,6 @@
 		};
 		5B8BBD1D1F441E770031D13B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D581661D8DDCCEDE8490778 /* Pods-斗鱼UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "斗鱼UITests/Info.plist";
@@ -721,7 +624,6 @@
 		};
 		5B8BBD1E1F441E770031D13B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C61CC11E0CE15CB78511250C /* Pods-斗鱼UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "斗鱼UITests/Info.plist";
