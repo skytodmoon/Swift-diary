@@ -12,10 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    //MARK - 自定义属性
+    fileprivate lazy var bgView: UIView = {
+        let bgView = UIView(frame: UIScreen.main.bounds)
+        bgView.backgroundColor = UIColor.black
+        return bgView
+    }()
+    
+    fileprivate lazy var scrollView: GuardScrollView = {
+        let scrollView = GuardScrollView(frame: UIScreen.main.bounds)
+        scrollView.backgroundColor = UIColor.white
+        return scrollView
+    }()
+    
+    fileprivate lazy var tabBarVC:TabBarController = TabBarController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabBarVC
+        window?.makeKeyAndVisible()
         return true
     }
 
