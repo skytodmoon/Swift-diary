@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
+		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
 		5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF11F441E770031D13B /* AppDelegate.swift */; };
 		5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF31F441E770031D13B /* ViewController.swift */; };
 		5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF51F441E770031D13B /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		06B63D0863688C14D821D334 /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 		0B9AE571AA80B7B657856185 /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
 		5B8BBCEE1F441E770031D13B /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8BBCF11F441E770031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8BBCF31F441E770031D13B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B40A6851F4526D3000098FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B40A6861F4526EC000098FE /* HomeTitlesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B8BBCE51F441E770031D13B = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +237,7 @@
 		5B8BBD3F1F4434E00031D13B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B40A6851F4526D3000098FE /* View */,
 				5B8BBD401F4434E00031D13B /* Controller */,
 			);
 			path = Home;
@@ -484,6 +495,7 @@
 				5B8BBD481F4435510031D13B /* LiveViewController.swift in Sources */,
 				5B8BBD231F441F9A0031D13B /* Common.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
+				5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */,
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
 				5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */,
 				5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */,
