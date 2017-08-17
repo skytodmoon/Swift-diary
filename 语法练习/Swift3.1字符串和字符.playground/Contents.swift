@@ -268,5 +268,176 @@ welcome1.insert(contentsOf: "there".characters, at: welcome1.index(before: welco
 //调用 remove(at:) 方法可以在一个字符串的指定索引删除一个字符，调用 removeSubrange(_:) 方法可以在一个字符串的指定索引删除一个子字符串
 
 welcome1.remove(at: welcome1.index(before: welcome1.endIndex))
-// welcome 现在等于 "hello there"
+
+/**
+ 注意： 您可以使用 insert(_:at:)、insert(contentsOf:at:)、remove(at:) 和 removeSubrange(_:) 方法在任意一个确认的并遵循 RangeReplaceableCollection 协议的类型里面，如上文所示是使用在 String 中，您也可以使用在 Array、Dictionary 和 Set 中。
+ */
+
+/** 比较字符串 */
+//Swift 提供了三种方式来比较文本值：字符串字符相等、前缀相等和后缀相等。
+
+
+/** 字符串/字符相等*/
+//字符串/字符可以用等于操作符(==)和不等于操作符(!=)
+
+let quotation = "We're a lot alike, you and I."
+let sameQuotation = "We're a lot alike, you and I."
+if quotation == sameQuotation {
+    print("These two strings are considered equal")
+}
+// 打印输出 "These two strings are considered equal"
+
+/**
+ 如果两个字符串（或者两个字符）的可扩展的字形群集是标准相等的，那就认为它们是相等的。在这个情况下，即使可扩展的字形群集是有不同的 Unicode 标量构成的，只要它们有同样的语言意义和外观，就认为它们标准相等。
+ 
+ 例如，LATIN SMALL LETTER E WITH ACUTE(U+00E9)就是标准相等于LATIN SMALL LETTER E(U+0065)后面加上COMBINING ACUTE ACCENT(U+0301)。这两个字符群集都是表示字符é的有效方式，所以它们被认为是标准相等的
+ */
+
+
+// "Voulez-vous un café?" 使用 LATIN SMALL LETTER E WITH ACUTE
+let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
+
+// "Voulez-vous un café?" 使用 LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
+let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
+
+if eAcuteQuestion == combinedEAcuteQuestion {
+    print("These two strings are considered equal")
+}
+// 打印输出 "These two strings are considered equal"
+
+/**
+ 相反，英语中的LATIN CAPITAL LETTER A(U+0041，或者A)不等于俄语中的CYRILLIC CAPITAL LETTER A(U+0410，或者A)。两个字符看着是一样的，但却有不同的语言意义：
+ */
+
+let latinCapitalLetterA: Character = "\u{41}"
+
+let cyrillicCapitalLetterA: Character = "\u{0410}"
+
+if latinCapitalLetterA != cyrillicCapitalLetterA {
+    print("These two characters are not equivalent")
+}
+// 打印 "These two characters are not equivalent"
+
+
+/** 前缀/后缀相等 */
+//通过调用字符串的hasPrefix(_:)/hasSuffix(_:)方法来检查字符串是否拥有特定前缀/后缀，两个方法均接收一个String类型的参数，并返回一个布尔值。
+
+//下面的例子以一个字符串数组表示莎士比亚话剧《罗密欧与朱丽叶》中前两场的场景位置：
+
+let romeoAndJuliet = [
+    "Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell"
+]
+
+//您可以调用hasPrefix(_:)方法来计算话剧中第一幕的场景数：
+
+var actlSceneCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Act 1") {
+        actlSceneCount += 1
+    }
+}
+print("There are \(actlSceneCount) scenes in Act 1")
+// 打印输出 "There are 5 scenes in Act 1"
+
+//相似地，您可以用hasSuffix(_:)方法来计算发生在不同地方的场景数
+var mansionCount = 0
+var cellCount = 1
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Capulet s mansion") {
+        mansionCount += 1
+    }else if scene.hasSuffix("Friat Lawrence cell"){
+        cellCount += 1
+    }
+}
+print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
+// 打印输出 "6 mansion scenes; 2 cell scenes"
+
+/**
+ 注意：
+ hasPrefix(_:)和hasSuffix(_:)方法都是在每个字符串中逐字符比较其可扩展的字符群集是否标准相等，详细描述在字符串/字符相等。
+ */
+
+
+/** 字符串的 Unicode 表示形式 */
+//当一个 Unicode 字符串被写进文本文件或者其他储存时，字符串中的 Unicode 标量会用 Unicode 定义的几种编码格式（encoding forms）编码。每一个字符串中的小块编码都被称代码单元（code units）。这些包括 UTF-8 编码格式（编码字符串为8位的代码单元）， UTF-16 编码格式（编码字符串位16位的代码单元），以及 UTF-32 编码格式（编码字符串32位的代码单元）。
+
+//Swift 提供了几种不同的方式来访问字符串的 Unicode 表示形式。 您可以利用for-in来对字符串进行遍历，从而以 Unicode 可扩展的字符群集的方式访问每一个Character值。 该过程在 使用字符 中进行了描述。
+
+//另外，能够以其他三种 Unicode 兼容的方式访问字符串的值：
+/**
+UTF-8 代码单元集合 (利用字符串的utf8属性进行访问)
+UTF-16 代码单元集合 (利用字符串的utf16属性进行访问)
+21位的 Unicode 标量值集合，也就是字符串的 UTF-32 编码格式 (利用字符串的unicodeScalars属性进行访问)
+下面由D,o,g,‼(DOUBLE EXCLAMATION MARK, Unicode 标量 U+203C)和🐶(DOG FACE，Unicode 标量为U+1F436)组成的字符串中的每一个字符代表着一种不同的表示：
+*/
+let dogString = "Dog‼🐶"
+
+
+/* UTF-8 表示 */
+//您可以通过遍历String的utf8属性来访问它的UTF-8表示。 其为String.UTF8View类型的属性，UTF8View是无符号8位 (UInt8) 值的集合，每一个UInt8值都是一个字符的 UTF-8 表示：
+
+for codeUnit in dogString.utf8 {
+    print("\(codeUnit)",terminator: "")
+}
+
+print("")
+// 68 111 103 226 128 188 240 159 144 182
+
+/**
+ 上面的例子中，前三个10进制codeUnit值 (68, 111, 103) 代表了字符D、o和 g，它们的 UTF-8 表示与 ASCII 表示相同。 接下来的三个10进制codeUnit值 (226, 128, 188) 是DOUBLE EXCLAMATION MARK的3字节 UTF-8 表示。 最后的四个codeUnit值 (240, 159, 144, 182) 是DOG FACE的4字节 UTF-8 表示。
+ */
+
+
+/** UTF-16 表示 */
+//您可以通过遍历String的utf16属性来访问它的UTF-16表示。 其为String.UTF16View类型的属性，UTF16View是无符号16位 (UInt16) 值的集合，每一个UInt16都是一个字符的 UTF-16 表示：
+
+for codeUnit in dogString.utf16 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 8252 55357 56374
+
+//同样，前三个codeUnit值 (68, 111, 103) 代表了字符D、o和g，它们的 UTF-16 代码单元和 UTF-8 完全相同（因为这些 Unicode 标量表示 ASCII 字符）。
+
+//第四个codeUnit值 (8252) 是一个等于十六进制203C的的十进制值。这个代表了DOUBLE EXCLAMATION MARK字符的 Unicode 标量值U+203C。这个字符在 UTF-16 中可以用一个代码单元表示。
+
+//第五和第六个codeUnit值 (55357和56374) 是DOG FACE字符的 UTF-16 表示。 第一个值为U+D83D(十进制值为55357)，第二个值为U+DC36(十进制值为56374)。
+
+
+/** Unicode 标量表示 */
+//您可以通过遍历String值的unicodeScalars属性来访问它的 Unicode 标量表示。 其为UnicodeScalarView类型的属性，UnicodeScalarView是UnicodeScalar类型的值的集合。 UnicodeScalar是21位的 Unicode 代码点。
+
+//每一个UnicodeScalar拥有一个value属性，可以返回对应的21位数值，用UInt32来表示：
+
+for scalar in dogString.unicodeScalars {
+    print("\(scalar.value) ", terminator: "")
+}
+print("")
+// 68 111 103 8252 128054
+
+
+//前三个UnicodeScalar值(68, 111, 103)的value属性仍然代表字符D、o和g。 第四个codeUnit值(8252)仍然是一个等于十六进制203C的十进制值。这个代表了DOUBLE EXCLAMATION MARK字符的 Unicode 标量U+203C。
+
+//第五个UnicodeScalar值的value属性，128054，是一个十六进制1F436的十进制表示。其等同于DOG FACE的 Unicode 标量U+1F436。
+
+//作为查询它们的value属性的一种替代方法，每个UnicodeScalar值也可以用来构建一个新的String值，比如在字符串插值中使用：
+
+for scalar in dogString.unicodeScalars {
+    print("\(scalar) ")
+}
+// D
+// o
+// g
+// ‼
+// 🐶
 
