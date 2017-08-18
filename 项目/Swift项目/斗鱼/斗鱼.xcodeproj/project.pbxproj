@@ -26,6 +26,9 @@
 		5B8BBD481F4435510031D13B /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD471F4435510031D13B /* LiveViewController.swift */; };
 		5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD491F4435660031D13B /* ProfileViewController.swift */; };
 		5B8BBD4C1F4436B00031D13B /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBD4B1F4436B00031D13B /* NavController.swift */; };
+		5B8E1A8E1F4681DD0063F364 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1A8D1F4681DD0063F364 /* UIBarButtonItem+Extension.swift */; };
+		5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1A911F4682AE0063F364 /* QQScanViewController.swift */; };
+		5B8E1A951F4682D30063F364 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1A941F4682D30063F364 /* LBXScanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		5B8BBD471F4435510031D13B /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5B8BBD491F4435660031D13B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B8BBD4B1F4436B00031D13B /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		5B8E1A8D1F4681DD0063F364 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		5B8E1A911F4682AE0063F364 /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
+		5B8E1A941F4682D30063F364 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8BBD3D1F442EC60031D13B /* UIColor+Extension.swift */,
+				5B8E1A8D1F4681DD0063F364 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 		5B8BBD3F1F4434E00031D13B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B8E1A8F1F4682840063F364 /* 扫一扫 */,
 				5B40A6851F4526D3000098FE /* View */,
 				5B8BBD401F4434E00031D13B /* Controller */,
 			);
@@ -281,6 +289,31 @@
 				5B8BBD491F4435660031D13B /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B8E1A8F1F4682840063F364 /* 扫一扫 */ = {
+			isa = PBXGroup;
+			children = (
+				5B8E1A931F4682C30063F364 /* Source */,
+				5B8E1A901F4682930063F364 /* Controller */,
+			);
+			path = "扫一扫";
+			sourceTree = "<group>";
+		};
+		5B8E1A901F4682930063F364 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B8E1A911F4682AE0063F364 /* QQScanViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B8E1A931F4682C30063F364 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B8E1A941F4682D30063F364 /* LBXScanViewController.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		AE864BA23BBCFF2F4E592746 /* Pods */ = {
@@ -488,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8E1A951F4682D30063F364 /* LBXScanViewController.swift in Sources */,
 				5B8BBD351F4426190031D13B /* UIView+Extension.m in Sources */,
 				5B8BBD251F441FA70031D13B /* NetworkTools.swift in Sources */,
 				5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */,
@@ -495,9 +529,11 @@
 				5B8BBD481F4435510031D13B /* LiveViewController.swift in Sources */,
 				5B8BBD231F441F9A0031D13B /* Common.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
+				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
 				5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */,
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
 				5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */,
+				5B8E1A8E1F4681DD0063F364 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */,
 				5B8BBD3E1F442EC60031D13B /* UIColor+Extension.swift in Sources */,
 				5B8BBD4C1F4436B00031D13B /* NavController.swift in Sources */,

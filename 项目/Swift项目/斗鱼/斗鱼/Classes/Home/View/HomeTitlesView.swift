@@ -8,6 +8,18 @@
 
 import UIKit
 
+private let kScrollLineH: CGFloat = 2
+private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+
+
+// MARK:- 定义协议
+@objc
+protocol HomeTitlesViewDelegate: NSObjectProtocol {
+    @objc optional func HomeTitlesViewDidSetlected(_ homeTitlesView: HomeTitlesView, selectedIndex: Int)
+}
+
+
 class HomeTitlesView: UIView {
 
     /*
