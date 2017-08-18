@@ -1,9 +1,9 @@
 //
 //  MMMaterialDesignSpinner.m
-//  斗鱼
+//  Pods
 //
-//  Created by 金亮齐 on 2017/8/18.
-//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//  Created by Michael Maxwell on 12/28/14.
+//
 //
 
 #import "MMMaterialDesignSpinner.h"

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XRCarouselView
+
 
 class RecommendCycleView: UIView {
 
@@ -16,7 +16,7 @@ class RecommendCycleView: UIView {
         let carouselView = XRCarouselView()
         carouselView.time = 2.0
         carouselView.pagePosition = PositionBottomCenter
-        carouselView.setPageImage(UIImage(named: "other"), andCurrentPageImage: UIImage(named: "current"))
+        carouselView.setPageImage(UIImage(named: "other"), andCurrentImage: UIImage(named: "current"))
         carouselView.delegate = self
         return carouselView
         }()
@@ -64,7 +64,7 @@ extension RecommendCycleView {
 
 // MARK: - XRCarouselViewDelegate
 extension RecommendCycleView: XRCarouselViewDelegate {
-    func carouselView(_ carouselView: XRCarouselView!, clickImageAt index: Int) {
+    func carouselView(_ carouselView: XRCarouselView!, didClickImage index: Int) {
         if cycleModels?.count == 0 {
             return
         }

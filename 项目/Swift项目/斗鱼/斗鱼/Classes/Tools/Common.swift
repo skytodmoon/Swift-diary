@@ -7,12 +7,6 @@
 //
 
 import Foundation
-import MJRefresh
-import DeformationButton
-import XRCarouselView
-import JHPullToRefreshKit
-
-
 
 let kStatusBarH : CGFloat = 20
 let kNavigationBarH : CGFloat = 44

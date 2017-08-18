@@ -32,11 +32,9 @@ let kPrettyCellID = "kPrettyCellID"
 let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: BaseViewController {
-    
     var headerIndexPath: IndexPath?
     // MARK:- ViewModel
     fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
-    
     
     // MARK:- 懒加载属性
     fileprivate lazy var cycleView : RecommendCycleView = {
@@ -72,32 +70,29 @@ class RecommendViewController: BaseViewController {
         collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         return collectionView
+        }()
     
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
 
         loadData()
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 }
 
 // MARK: - 初始化UI
 extension RecommendViewController {
-    
     override func setUpMainView()  {
         // 0.给ContentView进行赋值
         contentView = collectionView
         
         view.addSubview(collectionView)
+        collectionView.addSubview(cycleView)
+        collectionView.addSubview(gameView)
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
         
         super.setUpMainView()
@@ -150,7 +145,7 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if (indexPath as NSIndexPath).section == 1 {
+        if (indexPath as NSIndexPath).section == 1 {  /// 颜值
             // 1.取出PrettyCell
             let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
             
@@ -173,6 +168,92 @@ extension RecommendViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension RecommendViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        // 1.取出对应的主播信息
+        let anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        // 2.判断是秀场房间&普通房间
+        anchor.isVertical == 0 ? pushNormalRoomVc(anchor: anchor) : presentShowRoomVc(anchor: anchor)
+    }
+    
+    fileprivate func presentShowRoomVc(anchor: AnchorModel) {
+        // 1.创建SFSafariViewController
+        if #available(iOS 9.0, *) {
+            let safariVC = SFSafariViewController(url: URL(string: anchor.jumpUrl)!, entersReaderIfAvailable: true)
+            // 2.以Modal方式弹出
+            present(safariVC, animated: true, completion: nil)
+        } else {
+            let webVC = WebViewController(navigationTitle: anchor.room_name, urlStr: anchor.jumpUrl)
+            // 2.以Modal方式弹出
+            present(webVC, animated: true, completion: nil)
         }
+    }
+    
+    fileprivate func pushNormalRoomVc(anchor: AnchorModel) {
+        // 1.创建WebViewController
+        let webVC = WebViewController(navigationTitle: anchor.room_name, urlStr: anchor.jumpUrl)
+        webVC.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        // 2.以Push方式弹出
+        navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    @objc(collectionView:viewForSupplementaryElementOfKind:atIndexPath:) func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // 1.取出HeaderView
+        // 1.取出HeaderView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        
+        // 2.给HeaderView设置数据
+        headerView.group = recommendVM.anchorGroups[(indexPath as NSIndexPath).section]
+        
+        
+        headerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RecommendViewController.headerClick(_:))))
+        headerIndexPath = indexPath
+        
+        return headerView
+    }
+    
+    @objc fileprivate func headerClick(_ tap: UITapGestureRecognizer) {
+        var url = ""
+        var title = ""
+        switch headerIndexPath!.section {
+        case 0:
+            url = "http://www.douyu.com/directory/game/TVgame"
+            title = "主机游戏"
+        case 1:
+            url = "http://www.douyu.com/directory/game/yz"
+            title = "美颜"
+        case 2:
+            url = "http://www.douyu.com/directory/game/outdoor"
+            title = "户外"
+        case 3:
+            url = "http://www.douyu.com/directory/game/LOL"
+            title = "英雄联盟"
+        case 4:
+            url = "http://www.douyu.com/directory/game/mhxy"
+            title = "梦幻西游手游"
+        case 5:
+            url = "http://www.douyu.com/directory/game/How"
+            title = "炉石传说"
+        case 6:
+            url = "http://www.douyu.com/directory/game/wzry"
+            title = "王者荣耀"
+        default:
+            url = "http://www.douyu.com/directory/game/yz"
+            title = "美颜"
+        }
+        
+        let webVC = WebViewController(navigationTitle: title, urlStr: url)
+        navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        var itemSize = CGSize.zero
+        if (indexPath as NSIndexPath).section == 1 {
+            itemSize = CGSize(width: kNormalItemW, height: kPrettyItemH)
+        } else  {
+            itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
+        }
+        return itemSize
+    }
 }
