@@ -36,6 +36,10 @@ class HomeViewController: UIViewController {
         
         // 2.确定所有的子控制器
         var childVcs = [UIViewController]()
+        childVcs.append(RecommendViewController())
+        childVcs.append(GameViewController())
+        childVcs.append(AmuseViewController())
+        childVcs.append(FunnyViewController())
         let contentView = HomeContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView
