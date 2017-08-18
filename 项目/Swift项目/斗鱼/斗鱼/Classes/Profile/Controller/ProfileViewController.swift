@@ -9,7 +9,7 @@
 import UIKit
 
 private let kProfileCellID = "kProfileCellID"
-private let kHeaderView: CGFloat = 288
+private let kHeaderViewHeigth: CGFloat = 250
 
 
 // MARK: --  列表标题
@@ -19,7 +19,7 @@ private let kMePlayHistory = "播放历史"
 private let kMeHasBuy      = "我的已购"
 private let kMeWallet      = "我的钱包"
 
-private let kMeStore    = "XJ直播商城"
+private let kMeStore       = "直播商城"
 private let kMeStoreOrder  = "我的商城订单"
 private let kMeCoupon      = "我的优惠券"
 private let kMeGameenter   = "游戏中心"
@@ -58,11 +58,11 @@ class ProfileViewController: UIViewController {
     
     /// tableView
     fileprivate lazy var tableView : UITableView = {
-        let rect = CGRect(x: 0, y: -20, width: kScreenW, height: self.view.height )
+        let rect = CGRect(x: 0, y: 0, width: kScreenW, height: self.view.height - 49)
         let tableView = UITableView(frame: rect, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: kHeaderViewH))
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: kHeaderViewHeigth))
         tableView.addSubview(self.headerView)
         
         return tableView
@@ -70,7 +70,7 @@ class ProfileViewController: UIViewController {
     
     /// headerView
     fileprivate lazy var headerView : ProfileHeaderView = {
-        let rect = CGRect(x: 0, y: 0, width: kScreenW, height: kHeaderViewH)
+        let rect = CGRect(x: 0, y: 0, width: kScreenW, height: kHeaderViewHeigth)
         let headerView = ProfileHeaderView(frame: rect)
         headerView.backgroundColor = UIColor.red
         return headerView
@@ -184,7 +184,7 @@ extension ProfileViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY <= 0 {
-            headerView.frame = CGRect(x: offsetY * 0.5, y: offsetY, width: kScreenW - offsetY, height: kHeaderViewH - offsetY)
+            headerView.frame = CGRect(x: offsetY * 0.5, y: offsetY, width: kScreenW - offsetY, height: kHeaderViewHeigth - offsetY)
         }
         
         // 随时设置状态栏样式

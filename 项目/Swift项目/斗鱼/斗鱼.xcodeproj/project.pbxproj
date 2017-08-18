@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
 		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
-		5B4ACDF41F46E4AF002623B8 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF31F46E4AF002623B8 /* ProfileHeaderView.swift */; };
 		5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */; };
 		5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF71F46E63A002623B8 /* TextViewController.swift */; };
 		5B4ACDFA1F46E66B002623B8 /* BannersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF91F46E66B002623B8 /* BannersController.swift */; };
@@ -88,6 +87,7 @@
 		5B8E1A9D1F468B840063F364 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1A9C1F468B840063F364 /* RecommendViewController.swift */; };
 		5B8E1AA51F46A8210063F364 /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA41F46A8210063F364 /* SaveTools.swift */; };
 		5B8E1AA71F46A9150063F364 /* ScrollTopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA61F46A9150063F364 /* ScrollTopWindow.swift */; };
+		5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +111,6 @@
 		06B63D0863688C14D821D334 /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 		0B9AE571AA80B7B657856185 /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
-		5B4ACDF31F46E4AF002623B8 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF71F46E63A002623B8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF91F46E66B002623B8 /* BannersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersController.swift; sourceTree = "<group>"; };
@@ -220,6 +219,7 @@
 		5B8E1A9C1F468B840063F364 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		5B8E1AA41F46A8210063F364 /* SaveTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTools.swift; sourceTree = "<group>"; };
 		5B8E1AA61F46A9150063F364 /* ScrollTopWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTopWindow.swift; sourceTree = "<group>"; };
+		5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,14 +266,6 @@
 				5B5D1F571F46C2C900BD9564 /* RecommendGameView.swift */,
 				5B5D1F631F46C58100BD9564 /* CollectionGameCell.swift */,
 				5B5D1F641F46C58100BD9564 /* CollectionGameCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5B4ACDF21F46E49E002623B8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B4ACDF31F46E4AF002623B8 /* ProfileHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,7 +599,7 @@
 		5B8BBD431F44352F0031D13B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				5B4ACDF21F46E49E002623B8 /* View */,
+				5BD4FA801F46F3C600DA00A4 /* View */,
 				5B8BBD441F44352F0031D13B /* Controller */,
 			);
 			path = Profile;
@@ -647,6 +639,14 @@
 				5B8E1A941F4682D30063F364 /* LBXScanViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		5BD4FA801F46F3C600DA00A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AE864BA23BBCFF2F4E592746 /* Pods */ = {
@@ -874,7 +874,6 @@
 				5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */,
 				5B7817CE1F46D86D0035B947 /* MJRefreshComponent.m in Sources */,
 				5B8E1A9B1F468B4D0063F364 /* BaseViewController.swift in Sources */,
-				5B4ACDF41F46E4AF002623B8 /* ProfileHeaderView.swift in Sources */,
 				5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */,
 				5B7817CD1F46D86D0035B947 /* MJRefreshBackFooter.m in Sources */,
 				5B78178D1F46D7670035B947 /* WKWebViewController.swift in Sources */,
@@ -895,6 +894,7 @@
 				5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
 				5B5D1F651F46C58100BD9564 /* CollectionGameCell.swift in Sources */,
+				5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */,
 				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
 				5B7817DE1F46D86D0035B947 /* UIView+MJExtension.m in Sources */,
 				5B7817D71F46D86D0035B947 /* MJRefreshGifHeader.m in Sources */,
