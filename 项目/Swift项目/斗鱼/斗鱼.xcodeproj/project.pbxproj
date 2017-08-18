@@ -103,6 +103,8 @@
 		5BAD0A871F4701A800A5540F /* CarouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A861F4701A800A5540F /* CarouseViewModel.swift */; };
 		5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A891F4703D300A5540F /* LiveViewModel.swift */; };
 		5BAD0A8C1F47053D00A5540F /* LiveStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8B1F47053D00A5540F /* LiveStyle.swift */; };
+		5BAD0A901F47085300A5540F /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8E1F47085300A5540F /* RoomViewController.swift */; };
+		5BAD0A911F47085300A5540F /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8F1F47085300A5540F /* RoomViewController.xib */; };
 		5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -251,6 +253,8 @@
 		5BAD0A861F4701A800A5540F /* CarouseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouseViewModel.swift; sourceTree = "<group>"; };
 		5BAD0A891F4703D300A5540F /* LiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		5BAD0A8B1F47053D00A5540F /* LiveStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStyle.swift; sourceTree = "<group>"; };
+		5BAD0A8E1F47085300A5540F /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		5BAD0A8F1F47085300A5540F /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -516,6 +520,7 @@
 		5B8BBD1F1F441F530031D13B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BAD0A8D1F47083500A5540F /* Room */,
 				5BAD0A5E1F46FD9000A5540F /* Discover */,
 				5B8BBD431F44352F0031D13B /* Profile */,
 				5B8BBD411F4435000031D13B /* Live */,
@@ -745,6 +750,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5BAD0A8D1F47083500A5540F /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD0A8E1F47085300A5540F /* RoomViewController.swift */,
+				5BAD0A8F1F47085300A5540F /* RoomViewController.xib */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
 		5BD4FA801F46F3C600DA00A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -892,6 +906,7 @@
 				5B5D1F291F46BDC100BD9564 /* CollectionPrettyCell.xib in Resources */,
 				5B7817E11F46D86D0035B947 /* placeholder.png in Resources */,
 				5B5D1F251F46BD2600BD9564 /* CollectionNormalCell.xib in Resources */,
+				5BAD0A911F47085300A5540F /* RoomViewController.xib in Resources */,
 				5BAD0A741F46FE9F00A5540F /* DiscoverCell.xib in Resources */,
 				5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */,
 				5B7817DA1F46D86D0035B947 /* MJRefresh.bundle in Resources */,
@@ -1013,6 +1028,7 @@
 				5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */,
 				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
 				5BAD0A7D1F47004200A5540F /* LiveAnchorModel.swift in Sources */,
+				5BAD0A901F47085300A5540F /* RoomViewController.swift in Sources */,
 				5BAD0A751F46FE9F00A5540F /* DiscoverCollectionViewCell.swift in Sources */,
 				5B7817DE1F46D86D0035B947 /* UIView+MJExtension.m in Sources */,
 				5B7817D71F46D86D0035B947 /* MJRefreshGifHeader.m in Sources */,
