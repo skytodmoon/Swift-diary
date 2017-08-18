@@ -55,16 +55,16 @@ extension LiveViewController {
         style.isShowBottomLine = true
         let pageFrame = CGRect(x: 0, y: kNavigationBarH + kStatusBarH, width: kScreenW, height: kScreenH - kNavigationBarH - kStatusBarH - 44)
         
-        var childVCs = [XJAnchorViewController]()
+        var childVCs = [AnchorLiveController]()
         for type in homeTypes {
-            let anchorVC = XJAnchorViewController()
-            anchorVC.homeType = type
-            childVCs.append(anchorVC)
+//            let anchorVC = AnchorLiveController()
+//            anchorVC.homeType = type
+//            childVCs.append(anchorVC)
         }
         
-        let scrollView = XJScrollPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVCs, parentVc: self)
-        
-        view.addSubview(scrollView)
+//        let scrollView = ScrollPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVCs, parentVc: self)
+//        
+//        view.addSubview(scrollView)
         
     }
     private func loadTypesData() ->[LiveStyle] {
