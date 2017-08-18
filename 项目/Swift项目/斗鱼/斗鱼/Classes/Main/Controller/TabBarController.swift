@@ -34,8 +34,8 @@ class TabBarController: UITabBarController {
         let LiveVC = LiveViewController()
         setUpNavRootViewControllers(vc: LiveVC, title: "直播", imageName: normalImages[1], selectImage: selectedImages[1])
         
-        let garageVC = UIViewController()
-        setUpNavRootViewControllers(vc: garageVC, title: "关注", imageName: normalImages[2], selectImage: selectedImages[2])
+        let garageVC = DiscoverViewController()
+        setUpNavRootViewControllers(vc: garageVC, title: "发现", imageName: normalImages[2], selectImage: selectedImages[2])
         
         let profileVC = ProfileViewController()
         setUpNavRootViewControllers(vc: profileVC, title: "我的", imageName: normalImages[3], selectImage: selectedImages[3])
