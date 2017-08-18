@@ -65,9 +65,9 @@ class WKWebViewController: UIViewController {
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "loading" {
-//            print("loading")
+
         } else if keyPath == "title" {
-//            title = self.webView.title
+
         } else if keyPath == "estimatedProgress" {
             print(webView.estimatedProgress)
             progressView.setProgress(Float(webView.estimatedProgress), animated: false)
