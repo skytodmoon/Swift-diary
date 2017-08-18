@@ -22,16 +22,31 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    fileprivate lazy var homeTitlesView: HomeTitlesView = { [weak self] in
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitlesViewH)
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let tsView = HomeTitlesView(frame: titleFrame, titles: titles)
+        tsView.deledate = self
+        return tsView
+        }()
+    fileprivate lazy var homeContentView: HomeContentView = { [weak self] in
+        // 1.确定内容的frame
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitlesViewH - kTabbarH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH+kTitlesViewH, width: kScreenW, height: contentH)
+        
+        // 2.确定所有的子控制器
+        var childVcs = [UIViewController]()
+        let contentView = HomeContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
+        return contentView
+        }()
 }
 
 extension HomeViewController {
     fileprivate func setUpMainView(){
         setUpNavgationBar()
+        view.addSubview(homeTitlesView)
+        view.addSubview(homeContentView)
     }
     fileprivate func setUpNavgationBar() {
         // 1.设置左侧的Item
@@ -59,3 +74,18 @@ extension HomeViewController {
         self.show(QQScanViewController(), sender: nil)
     }
 }
+// MARK:- 遵守 HomeTitlesViewDelegate 协议
+extension HomeViewController : HomeTitlesViewDelegate {
+    func HomeTitlesViewDidSetlected(_ homeTitlesView: HomeTitlesView, selectedIndex: Int) {
+        homeContentView.setCurrentIndex(selectedIndex)
+    }
+}
+// MARK:- 遵守 HomeContentViewDelegate 协议
+extension HomeViewController : HomeContentViewDelegate {
+    func HomeContentViewDidScroll(_ contentView: HomeContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        homeTitlesView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+
+
