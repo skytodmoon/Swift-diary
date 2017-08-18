@@ -36,6 +36,10 @@
 		5B8E1A9F1F468B900063F364 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1A9E1F468B900063F364 /* GameViewController.swift */; };
 		5B8E1AA11F468B990063F364 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA01F468B990063F364 /* AmuseViewController.swift */; };
 		5B8E1AA31F468BA30063F364 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA21F468BA30063F364 /* FunnyViewController.swift */; };
+		5B8E1AA51F46A8210063F364 /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA41F46A8210063F364 /* SaveTools.swift */; };
+		5B8E1AA71F46A9150063F364 /* ScrollTopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AA61F46A9150063F364 /* ScrollTopWindow.swift */; };
+		5B8E1AAE1F46AA2B0063F364 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AAA1F46AA2B0063F364 /* DeformationButton.m */; };
+		5B8E1AAF1F46AA2B0063F364 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E1AAD1F46AA2B0063F364 /* MMMaterialDesignSpinner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,12 @@
 		5B8E1A9E1F468B900063F364 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5B8E1AA01F468B990063F364 /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		5B8E1AA21F468BA30063F364 /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		5B8E1AA41F46A8210063F364 /* SaveTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTools.swift; sourceTree = "<group>"; };
+		5B8E1AA61F46A9150063F364 /* ScrollTopWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTopWindow.swift; sourceTree = "<group>"; };
+		5B8E1AA91F46AA2B0063F364 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
+		5B8E1AAA1F46AA2B0063F364 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
+		5B8E1AAC1F46AA2B0063F364 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		5B8E1AAD1F46AA2B0063F364 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +227,7 @@
 				5B8BBD3C1F442EB60031D13B /* Category */,
 				5B8BBD221F441F9A0031D13B /* Common.swift */,
 				5B8BBD241F441FA70031D13B /* NetworkTools.swift */,
+				5B8E1AA41F46A8210063F364 /* SaveTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 		5B8BBD321F4425F40031D13B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B8E1AA81F46AA2B0063F364 /* DeformationButton */,
 				5B8BBD331F4426190031D13B /* UIView+Extension.h */,
 				5B8BBD341F4426190031D13B /* UIView+Extension.m */,
 			);
@@ -244,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8BBD3A1F442B260031D13B /* GuardScrollView.swift */,
+				5B8E1AA61F46A9150063F364 /* ScrollTopWindow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +348,25 @@
 				5B8E1A941F4682D30063F364 /* LBXScanViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		5B8E1AA81F46AA2B0063F364 /* DeformationButton */ = {
+			isa = PBXGroup;
+			children = (
+				5B8E1AA91F46AA2B0063F364 /* DeformationButton.h */,
+				5B8E1AAA1F46AA2B0063F364 /* DeformationButton.m */,
+				5B8E1AAB1F46AA2B0063F364 /* MMMaterialDesignSpinner-master */,
+			);
+			path = DeformationButton;
+			sourceTree = "<group>";
+		};
+		5B8E1AAB1F46AA2B0063F364 /* MMMaterialDesignSpinner-master */ = {
+			isa = PBXGroup;
+			children = (
+				5B8E1AAC1F46AA2B0063F364 /* MMMaterialDesignSpinner.h */,
+				5B8E1AAD1F46AA2B0063F364 /* MMMaterialDesignSpinner.m */,
+			);
+			path = "MMMaterialDesignSpinner-master";
 			sourceTree = "<group>";
 		};
 		AE864BA23BBCFF2F4E592746 /* Pods */ = {
@@ -543,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8E1A951F4682D30063F364 /* LBXScanViewController.swift in Sources */,
+				5B8E1AAF1F46AA2B0063F364 /* MMMaterialDesignSpinner.m in Sources */,
 				5B8E1AA31F468BA30063F364 /* FunnyViewController.swift in Sources */,
 				5B8BBD351F4426190031D13B /* UIView+Extension.m in Sources */,
 				5B8BBD251F441FA70031D13B /* NetworkTools.swift in Sources */,
@@ -552,6 +585,9 @@
 				5B8E1A991F468A5B0063F364 /* UIButton+Extension.swift in Sources */,
 				5B8E1A9F1F468B900063F364 /* GameViewController.swift in Sources */,
 				5B8BBD481F4435510031D13B /* LiveViewController.swift in Sources */,
+				5B8E1AAE1F46AA2B0063F364 /* DeformationButton.m in Sources */,
+				5B8E1AA51F46A8210063F364 /* SaveTools.swift in Sources */,
+				5B8E1AA71F46A9150063F364 /* ScrollTopWindow.swift in Sources */,
 				5B8BBD231F441F9A0031D13B /* Common.swift in Sources */,
 				5B8E1A9D1F468B840063F364 /* RecommendViewController.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,

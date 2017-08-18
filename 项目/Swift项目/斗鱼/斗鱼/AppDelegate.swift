@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,7 +34,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            ScrollTopWindow.shareInstance.show()
+        }
+        
+        let isfirst = SaveTools.mg_getLocalData(key: "isFirstOpen") as? String
+        if (isfirst?.isEmpty == nil) {
+            UIApplication.shared.isStatusBarHidden = true
+            showAppGurdView()
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.EnterHomeView(_:)), name: NSNotification.Name(rawValue: KEnterHomeViewNotification), object: nil)
+        
         return true
+    }
+    
+    deinit {
+        print("AppDelegate--deinit")
+        NotificationCenter.default.removeObserver(self)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -59,5 +77,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    fileprivate func showAppGurdView() {
+        self.window?.addSubview(bgView)
+        bgView.addSubview(scrollView)
+    }
+    func EnterHomeView(_ noti: Notification) {
+        // 获取通知传过来的按钮
+        let dict = (noti as NSNotification).userInfo as! [String: AnyObject]
+        let btn = dict["sender"]
+        
+        SaveTools.mg_SaveToLocal(value: "false", key:  "isFirstOpen")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double((Int64)(UInt64(2.5) * NSEC_PER_SEC)) / Double(NSEC_PER_SEC), execute: { () -> Void in
+            guard let showMenuAnimation = POPSpringAnimation(propertyNamed: kPOPViewAlpha) else { return }
+            showMenuAnimation.toValue = (0.0)
+            showMenuAnimation.springBounciness = 10.0
+            btn!.pop_add(showMenuAnimation,forKey:"hideBtn")
+            UIView.animate(withDuration: 1.5, animations: { () -> Void in
+                self.bgView.layer.transform = CATransform3DMakeScale(2, 2, 2)
+                self.bgView.alpha = 0
+            },completion: { (completion) -> Void in
+                UIApplication.shared.isStatusBarHidden = false
+                self.bgView.removeFromSuperview()
+            })
+        })
+    }
+
+    
 }
 
