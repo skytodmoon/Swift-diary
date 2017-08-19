@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Knm-SH-fzT" customClass="LiveFucusViewCell" customModule="斗鱼" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Knm-SH-fzT" id="GLq-0n-pCU">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-Ho-nam">
+                        <rect key="frame" x="20" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="M7Z-7C-H8Y"/>
+                            <constraint firstAttribute="width" constant="40" id="a9e-dX-2kK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paulpang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mD-pP-h6o">
+                        <rect key="frame" x="70" y="14" width="60" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center_icon_follow_zhibo" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-zN-ojD">
+                        <rect key="frame" x="284" y="14" width="16" height="16"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jD4-zN-ojD" secondAttribute="trailing" constant="20" id="4Yk-cU-DA3"/>
+                    <constraint firstItem="3mD-pP-h6o" firstAttribute="centerY" secondItem="M6c-Ho-nam" secondAttribute="centerY" id="M21-Fi-AIe"/>
+                    <constraint firstItem="jD4-zN-ojD" firstAttribute="centerY" secondItem="GLq-0n-pCU" secondAttribute="centerY" id="QEx-8G-ZIW"/>
+                    <constraint firstItem="3mD-pP-h6o" firstAttribute="leading" secondItem="M6c-Ho-nam" secondAttribute="trailing" constant="10" id="ef4-rJ-mFj"/>
+                    <constraint firstItem="M6c-Ho-nam" firstAttribute="centerY" secondItem="GLq-0n-pCU" secondAttribute="centerY" id="go2-OX-XB2"/>
+                    <constraint firstItem="M6c-Ho-nam" firstAttribute="leading" secondItem="GLq-0n-pCU" secondAttribute="leading" constant="20" id="wuA-cc-h0a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="M6c-Ho-nam" id="FSy-T9-ojT"/>
+                <outlet property="liveImageView" destination="jD4-zN-ojD" id="wEt-Wa-YuF"/>
+                <outlet property="nickNameLabel" destination="3mD-pP-h6o" id="9VM-DZ-GlP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="center_icon_follow_zhibo" width="16" height="16"/>
+    </resources>
+</document>

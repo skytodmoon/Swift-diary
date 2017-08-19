@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D43E3DD1F47F9B80014D979 /* LiveFucusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3DC1F47F9B80014D979 /* LiveFucusViewModel.swift */; };
+		1D43E3DF1F47FA540014D979 /* LiveWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3DE1F47FA540014D979 /* LiveWaterfallLayout.swift */; };
+		1D43E3E21F47FA7B0014D979 /* LiveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3E01F47FA7B0014D979 /* LiveViewCell.swift */; };
+		1D43E3E31F47FA7B0014D979 /* LiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43E3E11F47FA7B0014D979 /* LiveViewCell.xib */; };
+		1D43E3E61F47FA9A0014D979 /* LiveFucusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3E41F47FA9A0014D979 /* LiveFucusViewCell.swift */; };
+		1D43E3E71F47FA9A0014D979 /* LiveFucusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D43E3E51F47FA9A0014D979 /* LiveFucusViewCell.xib */; };
+		1D43E3EE1F47FE400014D979 /* LiewPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3E91F47FE400014D979 /* LiewPageCollectionView.swift */; };
+		1D43E3EF1F47FE400014D979 /* LivePageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3EA1F47FE400014D979 /* LivePageCollectionViewLayout.swift */; };
+		1D43E3F11F47FE400014D979 /* LIveTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3EC1F47FE400014D979 /* LIveTitleView.swift */; };
+		1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3ED1F47FE400014D979 /* LivewContentView.swift */; };
+		1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */; };
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
 		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
 		5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */; };
@@ -108,9 +119,8 @@
 		5BAD0AA21F470C7F00A5540F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A9D1F470C7F00A5540F /* NetworkTools.swift */; };
 		5BAD0AA31F470C7F00A5540F /* SaveTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A9E1F470C7F00A5540F /* SaveTools.swift */; };
 		5BAD0AA41F470C7F00A5540F /* TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A9F1F470C7F00A5540F /* TitleStyle.swift */; };
-		5BAD0AA51F470C7F00A5540F /* XJSqliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA01F470C7F00A5540F /* XJSqliteTools.swift */; };
+		5BAD0AA51F470C7F00A5540F /* SqliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA01F470C7F00A5540F /* SqliteTools.swift */; };
 		5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA61F470CD900A5540F /* AnchorLiveController.swift */; };
-		5BAD0AA91F470D3800A5540F /* ScrollPageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA81F470D3800A5540F /* ScrollPageView+Extension.swift */; };
 		5BAD0AAB1F470DB200A5540F /* FucusLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AAA1F470DB200A5540F /* FucusLiveController.swift */; };
 		5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -135,6 +145,17 @@
 /* Begin PBXFileReference section */
 		06B63D0863688C14D821D334 /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 		0B9AE571AA80B7B657856185 /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D43E3DC1F47F9B80014D979 /* LiveFucusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveFucusViewModel.swift; sourceTree = "<group>"; };
+		1D43E3DE1F47FA540014D979 /* LiveWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveWaterfallLayout.swift; sourceTree = "<group>"; };
+		1D43E3E01F47FA7B0014D979 /* LiveViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewCell.swift; sourceTree = "<group>"; };
+		1D43E3E11F47FA7B0014D979 /* LiveViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveViewCell.xib; sourceTree = "<group>"; };
+		1D43E3E41F47FA9A0014D979 /* LiveFucusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveFucusViewCell.swift; sourceTree = "<group>"; };
+		1D43E3E51F47FA9A0014D979 /* LiveFucusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveFucusViewCell.xib; sourceTree = "<group>"; };
+		1D43E3E91F47FE400014D979 /* LiewPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiewPageCollectionView.swift; sourceTree = "<group>"; };
+		1D43E3EA1F47FE400014D979 /* LivePageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1D43E3EC1F47FE400014D979 /* LIveTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIveTitleView.swift; sourceTree = "<group>"; };
+		1D43E3ED1F47FE400014D979 /* LivewContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivewContentView.swift; sourceTree = "<group>"; };
+		1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveScrollPageView.swift; sourceTree = "<group>"; };
 		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
 		5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF71F46E63A002623B8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -265,9 +286,8 @@
 		5BAD0A9D1F470C7F00A5540F /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		5BAD0A9E1F470C7F00A5540F /* SaveTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTools.swift; sourceTree = "<group>"; };
 		5BAD0A9F1F470C7F00A5540F /* TitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleStyle.swift; sourceTree = "<group>"; };
-		5BAD0AA01F470C7F00A5540F /* XJSqliteTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJSqliteTools.swift; sourceTree = "<group>"; };
+		5BAD0AA01F470C7F00A5540F /* SqliteTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteTools.swift; sourceTree = "<group>"; };
 		5BAD0AA61F470CD900A5540F /* AnchorLiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorLiveController.swift; sourceTree = "<group>"; };
-		5BAD0AA81F470D3800A5540F /* ScrollPageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollPageView+Extension.swift"; sourceTree = "<group>"; };
 		5BAD0AAA1F470DB200A5540F /* FucusLiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FucusLiveController.swift; sourceTree = "<group>"; };
 		5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +323,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D43E3DB1F47F9690014D979 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D43E3DE1F47FA540014D979 /* LiveWaterfallLayout.swift */,
+				1D43E3E01F47FA7B0014D979 /* LiveViewCell.swift */,
+				1D43E3E11F47FA7B0014D979 /* LiveViewCell.xib */,
+				1D43E3E41F47FA9A0014D979 /* LiveFucusViewCell.swift */,
+				1D43E3E51F47FA9A0014D979 /* LiveFucusViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D43E3E81F47FE400014D979 /* ScollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */,
+				1D43E3E91F47FE400014D979 /* LiewPageCollectionView.swift */,
+				1D43E3EA1F47FE400014D979 /* LivePageCollectionViewLayout.swift */,
+				1D43E3EC1F47FE400014D979 /* LIveTitleView.swift */,
+				1D43E3ED1F47FE400014D979 /* LivewContentView.swift */,
+			);
+			path = ScollPageView;
+			sourceTree = "<group>";
+		};
 		5B40A6851F4526D3000098FE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +603,7 @@
 		5B8BBD211F441F790031D13B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1D43E3E81F47FE400014D979 /* ScollPageView */,
 				5BAD0A9B1F470C6200A5540F /* Libs */,
 				5B8BBD3C1F442EB60031D13B /* Category */,
 			);
@@ -607,7 +652,6 @@
 				5B8E1A981F468A5B0063F364 /* UIButton+Extension.swift */,
 				5BAD0A771F46FF2E00A5540F /* UIImageView+Extension.swift */,
 				5BAD0A791F46FF5100A5540F /* UIImage+Extension.swift */,
-				5BAD0AA81F470D3800A5540F /* ScrollPageView+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -639,6 +683,7 @@
 		5B8BBD411F4435000031D13B /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				1D43E3DB1F47F9690014D979 /* View */,
 				5BAD0A881F4703AE00A5540F /* ViewModel */,
 				5BAD0A7B1F47002800A5540F /* Model */,
 				5B8BBD421F4435000031D13B /* Controller */,
@@ -761,6 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				5BAD0A891F4703D300A5540F /* LiveViewModel.swift */,
+				1D43E3DC1F47F9B80014D979 /* LiveFucusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -791,7 +837,7 @@
 				5BAD0A9D1F470C7F00A5540F /* NetworkTools.swift */,
 				5BAD0A9E1F470C7F00A5540F /* SaveTools.swift */,
 				5BAD0A9F1F470C7F00A5540F /* TitleStyle.swift */,
-				5BAD0AA01F470C7F00A5540F /* XJSqliteTools.swift */,
+				5BAD0AA01F470C7F00A5540F /* SqliteTools.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -942,12 +988,14 @@
 				5BAD0A981F470C2600A5540F /* QHNormalEmotionSort.plist in Resources */,
 				5B8BBCF91F441E770031D13B /* Assets.xcassets in Resources */,
 				5B5D1F291F46BDC100BD9564 /* CollectionPrettyCell.xib in Resources */,
+				1D43E3E71F47FA9A0014D979 /* LiveFucusViewCell.xib in Resources */,
 				5B7817E11F46D86D0035B947 /* placeholder.png in Resources */,
 				5B5D1F251F46BD2600BD9564 /* CollectionNormalCell.xib in Resources */,
 				5BAD0A911F47085300A5540F /* RoomViewController.xib in Resources */,
 				5BAD0A991F470C2600A5540F /* QHSohuGifSort.plist in Resources */,
 				5BAD0A741F46FE9F00A5540F /* DiscoverCell.xib in Resources */,
 				5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */,
+				1D43E3E31F47FA7B0014D979 /* LiveViewCell.xib in Resources */,
 				5BAD0A9A1F470C2600A5540F /* types.plist in Resources */,
 				5B7817DA1F46D86D0035B947 /* MJRefresh.bundle in Resources */,
 				5B5D1F2D1F46BDEA00BD9564 /* CollectionHeaderView.xib in Resources */,
@@ -1028,6 +1076,7 @@
 				5BAD0AAB1F470DB200A5540F /* FucusLiveController.swift in Sources */,
 				5B7817E21F46D86D0035B947 /* XRCarouselView.m in Sources */,
 				5B5D1F4A1F46BFA000BD9564 /* AnchorModel.swift in Sources */,
+				1D43E3E61F47FA9A0014D979 /* LiveFucusViewCell.swift in Sources */,
 				5B4ACDFA1F46E66B002623B8 /* BannersController.swift in Sources */,
 				5B5D1F621F46C45A00BD9564 /* UIView+Extension.swift in Sources */,
 				5B5D1F461F46BF6D00BD9564 /* BaseGameModel.swift in Sources */,
@@ -1036,10 +1085,13 @@
 				5BAD0A6A1F46FDCB00A5540F /* DiscoverViewController.swift in Sources */,
 				5BAD0A6C1F46FE1100A5540F /* CarouseModel.swift in Sources */,
 				5B5D1F4E1F46BFC300BD9564 /* GameModel.swift in Sources */,
+				1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */,
 				5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */,
+				1D43E3EE1F47FE400014D979 /* LiewPageCollectionView.swift in Sources */,
 				5B7817D81F46D86D0035B947 /* MJRefreshNormalHeader.m in Sources */,
 				5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */,
 				5B7817CE1F46D86D0035B947 /* MJRefreshComponent.m in Sources */,
+				1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */,
 				5B8E1A9B1F468B4D0063F364 /* BaseViewController.swift in Sources */,
 				5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */,
 				5B7817CD1F46D86D0035B947 /* MJRefreshBackFooter.m in Sources */,
@@ -1059,20 +1111,24 @@
 				5B8E1A9D1F468B840063F364 /* RecommendViewController.swift in Sources */,
 				5B7817D51F46D86D0035B947 /* MJRefreshBackNormalFooter.m in Sources */,
 				5BAD0A7A1F46FF5100A5540F /* UIImage+Extension.swift in Sources */,
+				1D43E3DF1F47FA540014D979 /* LiveWaterfallLayout.swift in Sources */,
 				5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
 				5B5D1F651F46C58100BD9564 /* CollectionGameCell.swift in Sources */,
 				5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */,
 				5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */,
+				1D43E3F11F47FE400014D979 /* LIveTitleView.swift in Sources */,
 				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
 				5BAD0A7D1F47004200A5540F /* LiveAnchorModel.swift in Sources */,
 				5BAD0A901F47085300A5540F /* RoomViewController.swift in Sources */,
+				1D43E3EF1F47FE400014D979 /* LivePageCollectionViewLayout.swift in Sources */,
 				5BAD0A751F46FE9F00A5540F /* DiscoverCollectionViewCell.swift in Sources */,
 				5B7817DE1F46D86D0035B947 /* UIView+MJExtension.m in Sources */,
 				5BAD0AA41F470C7F00A5540F /* TitleStyle.swift in Sources */,
 				5B7817D71F46D86D0035B947 /* MJRefreshGifHeader.m in Sources */,
 				5B5D1F601F46C3E300BD9564 /* WebViewController.swift in Sources */,
 				5B5D1F561F46C2BA00BD9564 /* RecommendCycleView.swift in Sources */,
+				1D43E3DD1F47F9B80014D979 /* LiveFucusViewModel.swift in Sources */,
 				5B7817DD1F46D86D0035B947 /* UIScrollView+MJRefresh.m in Sources */,
 				5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */,
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
@@ -1095,7 +1151,7 @@
 				5B8BBD3E1F442EC60031D13B /* UIColor+Extension.swift in Sources */,
 				5B7817DC1F46D86D0035B947 /* UIScrollView+MJExtension.m in Sources */,
 				5B78178B1F46D7240035B947 /* GameViewController.swift in Sources */,
-				5BAD0AA51F470C7F00A5540F /* XJSqliteTools.swift in Sources */,
+				5BAD0AA51F470C7F00A5540F /* SqliteTools.swift in Sources */,
 				5B8E1A971F4687050063F364 /* HomeContentView.swift in Sources */,
 				5B7817D21F46D86D0035B947 /* MJRefreshAutoNormalFooter.m in Sources */,
 				5B5D1F501F46BFF000BD9564 /* GameViewModel.swift in Sources */,
@@ -1106,9 +1162,9 @@
 				5B5D1F281F46BDC100BD9564 /* CollectionPrettyCell.swift in Sources */,
 				5B7817CA1F46D86D0035B947 /* DeformationButton.m in Sources */,
 				5B8BBD4C1F4436B00031D13B /* NavController.swift in Sources */,
+				1D43E3E21F47FA7B0014D979 /* LiveViewCell.swift in Sources */,
 				5BAD0A8C1F47053D00A5540F /* LiveStyle.swift in Sources */,
 				5B7817CF1F46D86D0035B947 /* MJRefreshFooter.m in Sources */,
-				5BAD0AA91F470D3800A5540F /* ScrollPageView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

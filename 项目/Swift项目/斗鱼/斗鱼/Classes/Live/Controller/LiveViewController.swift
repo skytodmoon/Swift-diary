@@ -48,23 +48,23 @@ extension LiveViewController {
     private func setupContentView() {
         
         // 0.获取数据
-        let homeTypes = loadTypesData()
-        let titles = homeTypes.map({$0.title})
+        let liveTypes = loadTypesData()
+        let titles = liveTypes.map({$0.title})
         // 1.创建内容视图
         let style = TitleStyle()
         style.isShowBottomLine = true
         let pageFrame = CGRect(x: 0, y: kNavigationBarH + kStatusBarH, width: kScreenW, height: kScreenH - kNavigationBarH - kStatusBarH - 44)
         
         var childVCs = [AnchorLiveController]()
-        for type in homeTypes {
-//            let anchorVC = AnchorLiveController()
-//            anchorVC.homeType = type
-//            childVCs.append(anchorVC)
+        for type in liveTypes {
+            let anchorVC = AnchorLiveController()
+            anchorVC.liveType = type
+            childVCs.append(anchorVC)
         }
         
-//        let scrollView = ScrollPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVCs, parentVc: self)
-//        
-//        view.addSubview(scrollView)
+        let scrollView = LiveScrollPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVCs, parentVc: self)
+        
+        view.addSubview(scrollView)
         
     }
     private func loadTypesData() ->[LiveStyle] {
@@ -92,6 +92,7 @@ extension LiveViewController {
 extension LiveViewController {
     
     @objc fileprivate func didClickRightItem() {
-        
+        let vc = FucusLiveController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

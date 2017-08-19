@@ -105,7 +105,7 @@ extension NavController  {
 extension NavController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController is LiveViewController {
-            navigationController.navigationBar.barTintColor = UIColor.yellow
+            navigationController.navigationBar.barTintColor = UIColor.white
         }else {
             navigationController.navigationBar.barTintColor = UIColor.orange
         }

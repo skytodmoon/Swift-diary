@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK - 自定义属性
     fileprivate lazy var bgView: UIView = {
         let bgView = UIView(frame: UIScreen.main.bounds)
-        bgView.backgroundColor = UIColor.black
+        bgView.backgroundColor = UIColor.white
         return bgView
     }()
     
