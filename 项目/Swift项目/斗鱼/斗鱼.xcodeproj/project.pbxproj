@@ -22,6 +22,9 @@
 		5B3471CB1F4A84C1001E6512 /* WeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471CA1F4A84C1001E6512 /* WeekModel.swift */; };
 		5B3471CE1F4A8511001E6512 /* WeeklyRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471CC1F4A8511001E6512 /* WeeklyRankCell.swift */; };
 		5B3471CF1F4A8511001E6512 /* WeeklyRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3471CD1F4A8511001E6512 /* WeeklyRankCell.xib */; };
+		5B3471D11F4A8769001E6512 /* SubbankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471D01F4A8769001E6512 /* SubbankViewController.swift */; };
+		5B3471D31F4A87B5001E6512 /* WeeklyRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471D21F4A87B5001E6512 /* WeeklyRankViewController.swift */; };
+		5B3471D51F4A87CC001E6512 /* NomalRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471D41F4A87CC001E6512 /* NomalRankViewController.swift */; };
 		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
 		5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */; };
 		5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF71F46E63A002623B8 /* TextViewController.swift */; };
@@ -168,6 +171,9 @@
 		5B3471CA1F4A84C1001E6512 /* WeekModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekModel.swift; sourceTree = "<group>"; };
 		5B3471CC1F4A8511001E6512 /* WeeklyRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRankCell.swift; sourceTree = "<group>"; };
 		5B3471CD1F4A8511001E6512 /* WeeklyRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeeklyRankCell.xib; sourceTree = "<group>"; };
+		5B3471D01F4A8769001E6512 /* SubbankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubbankViewController.swift; sourceTree = "<group>"; };
+		5B3471D21F4A87B5001E6512 /* WeeklyRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRankViewController.swift; sourceTree = "<group>"; };
+		5B3471D41F4A87CC001E6512 /* NomalRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NomalRankViewController.swift; sourceTree = "<group>"; };
 		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
 		5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF71F46E63A002623B8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -883,6 +889,9 @@
 			isa = PBXGroup;
 			children = (
 				5BFA72391F4A837F00879A51 /* RankViewController.swift */,
+				5B3471D01F4A8769001E6512 /* SubbankViewController.swift */,
+				5B3471D21F4A87B5001E6512 /* WeeklyRankViewController.swift */,
+				5B3471D41F4A87CC001E6512 /* NomalRankViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1189,6 +1198,7 @@
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
 				5B5D1F651F46C58100BD9564 /* CollectionGameCell.swift in Sources */,
 				5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */,
+				5B3471D11F4A8769001E6512 /* SubbankViewController.swift in Sources */,
 				5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */,
 				1D43E3F11F47FE400014D979 /* LIveTitleView.swift in Sources */,
 				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
@@ -1205,7 +1215,9 @@
 				5B7817DD1F46D86D0035B947 /* UIScrollView+MJRefresh.m in Sources */,
 				5BFA72411F4A83E900879A51 /* DetailRankCell.swift in Sources */,
 				5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */,
+				5B3471D51F4A87CC001E6512 /* NomalRankViewController.swift in Sources */,
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
+				5B3471D31F4A87B5001E6512 /* WeeklyRankViewController.swift in Sources */,
 				5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */,
 				5BFA723C1F4A83BC00879A51 /* DetailRankViewModel.swift in Sources */,
 				5B5D1F441F46BF5700BD9564 /* BaseViewModel.swift in Sources */,
