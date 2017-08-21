@@ -27,8 +27,8 @@ class TabBarController: UITabBarController {
     
     //MARK: - setUpAllChildViewControllers
     fileprivate func setUpAllChildViewControllers() {
-        let normalImages = ["btn_home_normal","btn_live_normal","btn_column_normal","btn_user_normal"]
-        let selectedImages = ["btn_home_selected","btn_live_selected","btn_column_selected","btn_user_selected"]
+        let normalImages = ["btn_home_normal","btn_column_normal","btn_live_normal","btn_user_normal"]
+        let selectedImages = ["btn_home_selected","btn_column_selected","btn_live_selected","btn_user_selected"]
         let HomeVC = HomeViewController()
         setUpNavRootViewControllers(vc: HomeVC, title: "首页", imageName: normalImages[0], selectImage: selectedImages[0])
         let LiveVC = LiveViewController()

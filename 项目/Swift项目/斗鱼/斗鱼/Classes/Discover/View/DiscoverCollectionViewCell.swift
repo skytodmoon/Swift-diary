@@ -27,7 +27,7 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
             onlineLabel.text = "\(anchorModel?.focus)人观看"
             nickNameLabel.text = anchorModel?.name
     
-            iconImageView.setImage(anchorModel?.pic51, UIImage(named: "home_pic_default"), false)
+            iconImageView.setImage(anchorModel?.pic51, UIImage(named: "live_pic_default"), false)
             liveImageView.isHidden = anchorModel?.live == 0
         }
     }

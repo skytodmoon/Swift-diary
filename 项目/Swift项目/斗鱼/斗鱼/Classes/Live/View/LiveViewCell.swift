@@ -20,7 +20,7 @@ class LiveViewCell: UICollectionViewCell {
     // MARK: -- 定义属性
     var anchorModel : LiveAnchorModel? {
         didSet {
-            albumImageView.setImage((anchorModel?.isEvenIndex)! ? anchorModel?.pic74 : anchorModel?.pic51, UIImage(named: "home_pic_default"), false)
+            albumImageView.setImage((anchorModel?.isEvenIndex)! ? anchorModel?.pic74 : anchorModel?.pic51, UIImage(named: "live_pic_default"), false)
             liveImageView.isHidden = anchorModel?.live == 0
             nickNameLabel.text = anchorModel?.name
             onlinePeopleLabel.setTitle(" " + "\(anchorModel?.focus ?? 0)", for: .normal)

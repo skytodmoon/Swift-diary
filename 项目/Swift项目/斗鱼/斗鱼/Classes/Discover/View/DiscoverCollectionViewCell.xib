@@ -27,17 +27,17 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美女哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sca-Qe-UlS" userLabel="主播名字">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="美女哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sca-Qe-UlS" userLabel="主播名字">
                         <rect key="frame" x="5" y="150" width="37" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="home_pic_default" translatesAutoresizingMaskIntoConstraints="NO" id="gPn-vi-ovS" userLabel="主播头像">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" image="live_pic_default" translatesAutoresizingMaskIntoConstraints="NO" id="gPn-vi-ovS" userLabel="主播头像">
                         <rect key="frame" x="0.0" y="10" width="169" height="135"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-bd-i3j" userLabel="是否开播">
-                        <rect key="frame" x="141" y="15" width="23" height="13"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-bd-i3j" userLabel="是否开播">
+                        <rect key="frame" x="148" y="15" width="16" height="16"/>
                     </imageView>
                 </subviews>
             </view>
@@ -65,7 +65,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="home_icon_live" width="23" height="13"/>
-        <image name="home_pic_default" width="255" height="370"/>
+        <image name="live_icon_live" width="16" height="16"/>
+        <image name="live_pic_default" width="16" height="16"/>
     </resources>
 </document>
