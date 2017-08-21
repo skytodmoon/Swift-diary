@@ -81,7 +81,7 @@ extension LiveViewController {
     
     private func setupNav(){
         // 右侧Item
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "search_btn_follow"), style: .plain, target: self, action: #selector(didClickRightItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Liver_anking"), style: .plain, target: self, action: #selector(didClickRightItem))
         // 添加TitleView
         navigationItem.titleView = searchBar
         
@@ -92,7 +92,7 @@ extension LiveViewController {
 extension LiveViewController {
     
     @objc fileprivate func didClickRightItem() {
-        let vc = FucusLiveController()
+        let vc = RankViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

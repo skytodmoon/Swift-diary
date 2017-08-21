@@ -19,6 +19,9 @@
 		1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3ED1F47FE400014D979 /* LivewContentView.swift */; };
 		1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */; };
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
+		5B3471CB1F4A84C1001E6512 /* WeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471CA1F4A84C1001E6512 /* WeekModel.swift */; };
+		5B3471CE1F4A8511001E6512 /* WeeklyRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3471CC1F4A8511001E6512 /* WeeklyRankCell.swift */; };
+		5B3471CF1F4A8511001E6512 /* WeeklyRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3471CD1F4A8511001E6512 /* WeeklyRankCell.xib */; };
 		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
 		5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */; };
 		5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF71F46E63A002623B8 /* TextViewController.swift */; };
@@ -121,8 +124,14 @@
 		5BAD0AA41F470C7F00A5540F /* TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A9F1F470C7F00A5540F /* TitleStyle.swift */; };
 		5BAD0AA51F470C7F00A5540F /* SqliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA01F470C7F00A5540F /* SqliteTools.swift */; };
 		5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AA61F470CD900A5540F /* AnchorLiveController.swift */; };
-		5BAD0AAB1F470DB200A5540F /* FucusLiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0AAA1F470DB200A5540F /* FucusLiveController.swift */; };
 		5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */; };
+		5BFA723A1F4A837F00879A51 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA72391F4A837F00879A51 /* RankViewController.swift */; };
+		5BFA723C1F4A83BC00879A51 /* DetailRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA723B1F4A83BC00879A51 /* DetailRankViewModel.swift */; };
+		5BFA723E1F4A83CB00879A51 /* WeeklyRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA723D1F4A83CB00879A51 /* WeeklyRankViewModel.swift */; };
+		5BFA72411F4A83E900879A51 /* DetailRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA723F1F4A83E900879A51 /* DetailRankCell.swift */; };
+		5BFA72421F4A83E900879A51 /* DetailRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA72401F4A83E900879A51 /* DetailRankCell.xib */; };
+		5BFA72441F4A83FB00879A51 /* RankType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA72431F4A83FB00879A51 /* RankType.swift */; };
+		5BFA72461F4A841900879A51 /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA72451F4A841900879A51 /* RankModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +165,9 @@
 		1D43E3EC1F47FE400014D979 /* LIveTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIveTitleView.swift; sourceTree = "<group>"; };
 		1D43E3ED1F47FE400014D979 /* LivewContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivewContentView.swift; sourceTree = "<group>"; };
 		1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveScrollPageView.swift; sourceTree = "<group>"; };
+		5B3471CA1F4A84C1001E6512 /* WeekModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekModel.swift; sourceTree = "<group>"; };
+		5B3471CC1F4A8511001E6512 /* WeeklyRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRankCell.swift; sourceTree = "<group>"; };
+		5B3471CD1F4A8511001E6512 /* WeeklyRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeeklyRankCell.xib; sourceTree = "<group>"; };
 		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
 		5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF71F46E63A002623B8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -288,8 +300,14 @@
 		5BAD0A9F1F470C7F00A5540F /* TitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleStyle.swift; sourceTree = "<group>"; };
 		5BAD0AA01F470C7F00A5540F /* SqliteTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteTools.swift; sourceTree = "<group>"; };
 		5BAD0AA61F470CD900A5540F /* AnchorLiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorLiveController.swift; sourceTree = "<group>"; };
-		5BAD0AAA1F470DB200A5540F /* FucusLiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FucusLiveController.swift; sourceTree = "<group>"; };
 		5BD4FA811F46F3C600DA00A4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		5BFA72391F4A837F00879A51 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		5BFA723B1F4A83BC00879A51 /* DetailRankViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRankViewModel.swift; sourceTree = "<group>"; };
+		5BFA723D1F4A83CB00879A51 /* WeeklyRankViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRankViewModel.swift; sourceTree = "<group>"; };
+		5BFA723F1F4A83E900879A51 /* DetailRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRankCell.swift; sourceTree = "<group>"; };
+		5BFA72401F4A83E900879A51 /* DetailRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailRankCell.xib; sourceTree = "<group>"; };
+		5BFA72431F4A83FB00879A51 /* RankType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankType.swift; sourceTree = "<group>"; };
+		5BFA72451F4A841900879A51 /* RankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
 		892FB4902BBE1F5A6E401BC5 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B1C55C09981DA10DDAC3A4 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD4B7FA3D1196D9F7300524 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
@@ -578,6 +596,7 @@
 		5B8BBD1F1F441F530031D13B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BFA72341F4A836800879A51 /* Rank */,
 				5BAD0A8D1F47083500A5540F /* Room */,
 				5BAD0A5E1F46FD9000A5540F /* Discover */,
 				5B8BBD431F44352F0031D13B /* Profile */,
@@ -696,7 +715,6 @@
 			children = (
 				5B8BBD471F4435510031D13B /* LiveViewController.swift */,
 				5BAD0AA61F470CD900A5540F /* AnchorLiveController.swift */,
-				5BAD0AAA1F470DB200A5540F /* FucusLiveController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -850,6 +868,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5BFA72341F4A836800879A51 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA72351F4A836800879A51 /* Controller */,
+				5BFA72361F4A836800879A51 /* Model */,
+				5BFA72371F4A836800879A51 /* View */,
+				5BFA72381F4A836800879A51 /* ViewModel */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		5BFA72351F4A836800879A51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA72391F4A837F00879A51 /* RankViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BFA72361F4A836800879A51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA72431F4A83FB00879A51 /* RankType.swift */,
+				5BFA72451F4A841900879A51 /* RankModel.swift */,
+				5B3471CA1F4A84C1001E6512 /* WeekModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BFA72371F4A836800879A51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA723F1F4A83E900879A51 /* DetailRankCell.swift */,
+				5BFA72401F4A83E900879A51 /* DetailRankCell.xib */,
+				5B3471CC1F4A8511001E6512 /* WeeklyRankCell.swift */,
+				5B3471CD1F4A8511001E6512 /* WeeklyRankCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BFA72381F4A836800879A51 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA723B1F4A83BC00879A51 /* DetailRankViewModel.swift */,
+				5BFA723D1F4A83CB00879A51 /* WeeklyRankViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AE864BA23BBCFF2F4E592746 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -986,8 +1053,10 @@
 				5BAD0A761F46FE9F00A5540F /* DiscoverCollectionViewCell.xib in Resources */,
 				5B8BBCFC1F441E770031D13B /* LaunchScreen.storyboard in Resources */,
 				5BAD0A981F470C2600A5540F /* QHNormalEmotionSort.plist in Resources */,
+				5B3471CF1F4A8511001E6512 /* WeeklyRankCell.xib in Resources */,
 				5B8BBCF91F441E770031D13B /* Assets.xcassets in Resources */,
 				5B5D1F291F46BDC100BD9564 /* CollectionPrettyCell.xib in Resources */,
+				5BFA72421F4A83E900879A51 /* DetailRankCell.xib in Resources */,
 				1D43E3E71F47FA9A0014D979 /* LiveFucusViewCell.xib in Resources */,
 				5B7817E11F46D86D0035B947 /* placeholder.png in Resources */,
 				5B5D1F251F46BD2600BD9564 /* CollectionNormalCell.xib in Resources */,
@@ -1073,8 +1142,9 @@
 			files = (
 				5B8E1A951F4682D30063F364 /* LBXScanViewController.swift in Sources */,
 				5B7817D11F46D86D0035B947 /* MJRefreshAutoGifFooter.m in Sources */,
-				5BAD0AAB1F470DB200A5540F /* FucusLiveController.swift in Sources */,
 				5B7817E21F46D86D0035B947 /* XRCarouselView.m in Sources */,
+				5BFA72461F4A841900879A51 /* RankModel.swift in Sources */,
+				5BFA72441F4A83FB00879A51 /* RankType.swift in Sources */,
 				5B5D1F4A1F46BFA000BD9564 /* AnchorModel.swift in Sources */,
 				1D43E3E61F47FA9A0014D979 /* LiveFucusViewCell.swift in Sources */,
 				5B4ACDFA1F46E66B002623B8 /* BannersController.swift in Sources */,
@@ -1085,6 +1155,7 @@
 				5BAD0A6A1F46FDCB00A5540F /* DiscoverViewController.swift in Sources */,
 				5BAD0A6C1F46FE1100A5540F /* CarouseModel.swift in Sources */,
 				5B5D1F4E1F46BFC300BD9564 /* GameModel.swift in Sources */,
+				5B3471CB1F4A84C1001E6512 /* WeekModel.swift in Sources */,
 				1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */,
 				5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */,
 				1D43E3EE1F47FE400014D979 /* LiewPageCollectionView.swift in Sources */,
@@ -1096,9 +1167,11 @@
 				5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */,
 				5B7817CD1F46D86D0035B947 /* MJRefreshBackFooter.m in Sources */,
 				5B78178D1F46D7670035B947 /* WKWebViewController.swift in Sources */,
+				5BFA723A1F4A837F00879A51 /* RankViewController.swift in Sources */,
 				5B7817D41F46D86D0035B947 /* MJRefreshBackGifFooter.m in Sources */,
 				5B7817CB1F46D86D0035B947 /* MMMaterialDesignSpinner.m in Sources */,
 				5B8BBD3B1F442B260031D13B /* GuardScrollView.swift in Sources */,
+				5B3471CE1F4A8511001E6512 /* WeeklyRankCell.swift in Sources */,
 				5B7817891F46D7240035B947 /* AmuseViewController.swift in Sources */,
 				5BAD0A851F47019900A5540F /* DiscoverContentViewModel.swift in Sources */,
 				5B8E1A991F468A5B0063F364 /* UIButton+Extension.swift in Sources */,
@@ -1130,9 +1203,11 @@
 				5B5D1F561F46C2BA00BD9564 /* RecommendCycleView.swift in Sources */,
 				1D43E3DD1F47F9B80014D979 /* LiveFucusViewModel.swift in Sources */,
 				5B7817DD1F46D86D0035B947 /* UIScrollView+MJRefresh.m in Sources */,
+				5BFA72411F4A83E900879A51 /* DetailRankCell.swift in Sources */,
 				5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */,
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
 				5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */,
+				5BFA723C1F4A83BC00879A51 /* DetailRankViewModel.swift in Sources */,
 				5B5D1F441F46BF5700BD9564 /* BaseViewModel.swift in Sources */,
 				5B7817D31F46D86D0035B947 /* MJRefreshAutoStateFooter.m in Sources */,
 				5B5D1F2C1F46BDEA00BD9564 /* CollectionHeaderView.swift in Sources */,
@@ -1163,6 +1238,7 @@
 				5B7817CA1F46D86D0035B947 /* DeformationButton.m in Sources */,
 				5B8BBD4C1F4436B00031D13B /* NavController.swift in Sources */,
 				1D43E3E21F47FA7B0014D979 /* LiveViewCell.swift in Sources */,
+				5BFA723E1F4A83CB00879A51 /* WeeklyRankViewModel.swift in Sources */,
 				5BAD0A8C1F47053D00A5540F /* LiveStyle.swift in Sources */,
 				5B7817CF1F46D86D0035B947 /* MJRefreshFooter.m in Sources */,
 			);
