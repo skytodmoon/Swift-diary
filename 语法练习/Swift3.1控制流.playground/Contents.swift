@@ -260,7 +260,193 @@ if temperatureInFahrenheit <= 32 {
 //switch语句会尝试把某个值与若干个模式（pattern）进行匹配。根据第一个匹配成功的模式，switch语句会执行对应的代码。当有可能的情况较多时，通常用switch语句替换if语句。
 
 //switch语句最简单的形式就是把某个值与一个或若干个相同类型的值作比较：
+/**
+switch some value to consider {
+    case value 1:
+    respond to value 1
+    case value 2,
+    value 3:
+    respond to value 2 or 3
+    default:
+    otherwise, do something else
+}
+*/
+
+//switch语句由多个 case 构成，每个由case关键字开始。为了匹配某些更特定的值，Swift 提供了几种方法来进行更复杂的模式匹配，这些模式将在本节的稍后部分提到。
+
+//与if语句类似，每一个 case 都是代码执行的一条分支。switch语句会决定哪一条分支应该被执行，这个流程被称作根据给定的值切换(switching)。
+
+//switch语句必须是完备的。这就是说，每一个可能的值都必须至少有一个 case 分支与之对应。在某些不可能涵盖所有值的情况下，你可以使用默认（default）分支来涵盖其它所有没有对应的值，这个默认分支必须在switch语句的最后面。
+
+//下面的例子使用switch语句来匹配一个名为someCharacter的小写字符：
+
+let someCharacter: Character = "2"
+switch someCharacter {
+case "a":
+    print("The first letter of the alphabet")
+case "z":
+    print("The last letter of the alphabet")
+default:
+    print("Some other character")
+}
+// 输出 "The last letter of the alphabet"
+
+/**
+ 在这个例子中，第一个 case 分支用于匹配第一个英文字母a，第二个 case 分支用于匹配最后一个字母z。 因为switch语句必须有一个case分支用于覆盖所有可能的字符，而不仅仅是所有的英文字母，所以switch语句使用default分支来匹配除了a和z外的所有值，这个分支保证了swith语句的完备性。
+ */
 
 
+/**不存在隐式的贯穿*/
+
+/**
+
+ 与 C 和 Objective-C 中的switch语句不同，在 Swift 中，当匹配的 case 分支中的代码执行完毕后，程序会终止switch语句，而不会继续执行下一个 case 分支。这也就是说，不需要在 case 分支中显式地使用break语句。这使得switch语句更安全、更易用，也避免了因忘记写break语句而产生的错误。
+ 每一个 case 分支都必须包含至少一条语句。像下面这样书写代码是无效的，因为第一个 case 分支是空的：
+ */
+
+
+/**
+ let anotherCharacter: Character = "a"
+ switch anotherCharacter {
+ case "a": // 无效，这个分支下面没有语句
+ case "A":
+ print("The letter A")
+ default:
+ print("Not the letter A")
+ }
+ // 这段代码会报编译错误
+ **/
+
+/**
+ 不像 C 语言里的switch语句，在 Swift 中，switch语句不会一起匹配"a"和"A"。相反的，上面的代码会引起编译期错误：case "a": 不包含任何可执行语句——这就避免了意外地从一个 case 分支贯穿到另外一个，使得代码更安全、也更直观。
+ 
+ 为了让单个case同时匹配a和A，可以将这个两个值组合成一个复合匹配，并且用逗号分开：
+ **/
+
+let anotherCharacter: Character = "a"
+switch anotherCharacter {
+case "a", "A":
+    print("The letter A")
+default:
+    print("Not the letter A")
+}
+// 输出 "The letter A
+
+/**
+ 区间匹配
+ case 分支的模式也可以是一个值的区间。下面的例子展示了如何使用区间匹配来输出任意数字对应的自然语言格式：
+ */
+
+let approximateCount = 62
+let countedThings = "moons orbiting Saturn"
+var naturalCount: String
+switch approximateCount {
+case 0:
+    naturalCount = "no"
+case 1..<5:
+    naturalCount = "a few"
+case 5..<12:
+    naturalCount = "several"
+case 12..<100:
+    naturalCount = "dozens of"
+case 100..<1000:
+    naturalCount = "hundreds of"
+default:
+    naturalCount = "many"
+}
+print("There are \(naturalCount) \(countedThings).")
+// 输出 "There are dozens of moons orbiting Saturn."
+
+/**
+ 在上例中，approximateCount在一个switch声明中被评估。每一个case都与之进行比较。因为approximateCount落在了 12 到 100 的区间，所以naturalCount等于"dozens of"值，并且此后的执行跳出了switch语句。
+ */
+
+/**
+ 元组
+ 我们可以使用元组在同一个switch语句中测试多个值。元组中的元素可以是值，也可以是区间。另外，使用下划线（_）来匹配所有可能的值。
+ 
+ 下面的例子展示了如何使用一个(Int, Int)类型的元组来分类下图中的点(x, y)：
+ */
+
+let somePoint = (1, 1)
+switch somePoint {
+case (0, 0):
+    print("(0, 0) is at the origin")
+case (_, 0):
+    print("(\(somePoint.0), 0) is on the x-axis")
+case (0, _):
+    print("(0, \(somePoint.1)) is on the y-axis")
+case (-2...2, -2...2):
+    print("(\(somePoint.0), \(somePoint.1)) is inside the box")
+default:
+    print("(\(somePoint.0), \(somePoint.1)) is outside of the box")
+}
+// 输出 "(1, 1) is inside the box"
+
+/**
+ 在上面的例子中，switch语句会判断某个点是否是原点(0, 0)，是否在红色的x轴上，是否在橘黄色的y轴上，是否在一个以原点为中心的4x4的蓝色矩形里，或者在这个矩形外面。
+ 
+ 不像 C 语言，Swift 允许多个 case 匹配同一个值。实际上，在这个例子中，点(0, 0)可以匹配所有四个 case。但是，如果存在多个匹配，那么只会执行第一个被匹配到的 case 分支。考虑点(0, 0)会首先匹配case (0, 0)，因此剩下的能够匹配的分支都会被忽视掉。
+ */
+
+
+/**
+ 值绑定（Value Bindings）
+ case 分支允许将匹配的值绑定到一个临时的常量或变量，并且在case分支体内使用 —— 这种行为被称为值绑定（value binding），因为匹配的值在case分支体内，与临时的常量或变量绑定。
+ 
+ 下面的例子展示了如何在一个(Int, Int)类型的元组中使用值绑定来分类下图中的点(x, y)：
+ */
+
+let anotherPoint = (2, 0)
+switch anotherPoint {
+case (let x, 0):
+    print("on the x-axis with an x value of \(x)")
+case (0, let y):
+    print("on the y-axis with a y value of \(y)")
+case let (x, y):
+    print("somewhere else at (\(x), \(y))")
+}
+// 输出 "on the x-axis with an x value of 2"
+
+/**
+ 在上面的例子中，switch语句会判断某个点是否在红色的x轴上，是否在橘黄色的y轴上，或者不在坐标轴上。
+ 
+ 这三个 case 都声明了常量x和y的占位符，用于临时获取元组anotherPoint的一个或两个值。第一个 case ——case (let x, 0)将匹配一个纵坐标为0的点，并把这个点的横坐标赋给临时的常量x。类似的，第二个 case ——case (0, let y)将匹配一个横坐标为0的点，并把这个点的纵坐标赋给临时的常量y。
+ 
+ 一旦声明了这些临时的常量，它们就可以在其对应的 case 分支里使用。在这个例子中，它们用于打印给定点的类型。
+ 
+ 请注意，这个switch语句不包含默认分支。这是因为最后一个 case ——case let(x, y)声明了一个可以匹配余下所有值的元组。这使得switch语句已经完备了，因此不需要再书写默认分支。
+ */
+
+/**
+ Where
+ case 分支的模式可以使用where语句来判断额外的条件。
+ 
+ 下面的例子把下图中的点(x, y)进行了分类：
+ */
+
+let yetAnotherPoint = (1, -1)
+switch yetAnotherPoint {
+case let (x, y) where x == y:
+    print("(\(x), \(y)) is on the line x == y")
+case let (x, y) where x == -y:
+    print("(\(x), \(y)) is on the line x == -y")
+case let (x, y):
+    print("(\(x), \(y)) is just some arbitrary point")
+}
+// 输出 "(1, -1) is on the line x == -y"
+
+/**
+ 在上面的例子中，switch语句会判断某个点是否在绿色的对角线x == y上，是否在紫色的对角线x == -y上，或者不在对角线上。
+ 
+ 这三个 case 都声明了常量x和y的占位符，用于临时获取元组yetAnotherPoint的两个值。这两个常量被用作where语句的一部分，从而创建一个动态的过滤器(filter)。当且仅当where语句的条件为true时，匹配到的 case 分支才会被执行。
+ 
+ 就像是值绑定中的例子，由于最后一个 case 分支匹配了余下所有可能的值，switch语句就已经完备了，因此不需要再书写默认分支。
+ */
+
+/**
+ 复合匹配
+ 当多个条件可以使用同一种方法来处理时，可以将这几种可能放在同一个case后面，并且用逗号隔开。当case后面的任意一种模式匹配的时候，这条分支就会被匹配。并且，如果匹配列表过长，还可以分行书写：
+ */
 
 
