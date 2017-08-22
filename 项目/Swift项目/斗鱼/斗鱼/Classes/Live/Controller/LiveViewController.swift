@@ -92,7 +92,7 @@ extension LiveViewController {
 extension LiveViewController {
     
     @objc fileprivate func didClickRightItem() {
-        let vc = RankViewController()
+        let vc = BaseViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
