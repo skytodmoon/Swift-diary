@@ -20,3 +20,61 @@ import UIKit
 //嵌套函数
 //
 
+//========================函数的定义与调用======================
+
+/**
+ 当你定义一个函数时，你可以定义一个或多个有名字和类型的值，作为函数的输入，称为参数，也可以定义某种类型的值作为函数执行结束时的输出，称为返回类型。
+ 
+ 每个函数有个函数名，用来描述函数执行的任务。要使用一个函数时，用函数名来“调用”这个函数，并传给它匹配的输入值（称作 实参 ）。函数的实参必须与函数参数表里参数的顺序一致。
+ 
+ 下面例子中的函数的名字是greet(person:)，之所以叫这个名字,是因为这个函数用一个人的名字当做输入，并返回向这个人问候的语句。为了完成这个任务，你需要定义一个输入参数——一个叫做 person 的 String 值，和一个包含给这个人问候语的 String 类型的返回值：
+ */
+
+func greet(person: String) -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}
+
+/**
+ 所有的这些信息汇总起来成为函数的定义，并以 func 作为前缀。指定函数返回类型时，用返回箭头 ->（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
+ 
+ 该定义描述了函数的功能，它期望接收什么作为参数和执行结束时它返回的结果是什么类型。这样的定义使得函数可以在别的地方以一种清晰的方式被调用：
+ **/
+
+print(greet(person: "Anna"))
+// 打印 "Hello, Anna!"
+print(greet(person: "Brian"))
+// 打印 "Hello, Brian!"
+
+/**
+ 调用 greet(person:) 函数时，在圆括号中传给它一个 String 类型的实参，例如 greet(person: "Anna")。正如上面所示，因为这个函数返回一个 String 类型的值，所以greet 可以被包含在 print(_:separator:terminator:) 的调用中，用来输出这个函数的返回值。
+ 
+ 注意
+ print(_:separator:terminator:) 函数的第一个参数并没有设置一个标签，而其他的参数因为已经有了默认值，因此是可选的。关于这些函数语法上的变化详见下方关于 函数参数标签和参数名 以及 默认参数值。
+ 
+ 在 greet(person:) 的函数体中，先定义了一个新的名为 greeting 的 String 常量，同时，把对 personName 的问候消息赋值给了 greeting 。然后用 return 关键字把这个问候返回出去。一旦 return greeting 被调用，该函数结束它的执行并返回 greeting 的当前值。
+ 
+ 你可以用不同的输入值多次调用 greet(person:)。上面的例子展示的是用"Anna"和"Brian"调用的结果，该函数分别返回了不同的结果。
+ 
+ 为了简化这个函数的定义，可以将问候消息的创建和返回写成一句：
+ */
+
+func greetAgain(person: String) -> String {
+    return "Hello again, " + person + "!"
+}
+print(greetAgain(person: "Anna"))
+// 打印 "Hello again, Anna!
+
+//========================函数参数与返回值======================
+//函数参数与返回值在 Swift 中非常的灵活。你可以定义任何类型的函数，包括从只带一个未名参数的简单函数到复杂的带有表达性参数名和不同参数选项的复杂函数。
+
+
+//无参数函数
+//函数可以没有参数。下面这个函数就是一个无参数函数，当被调用时，它返回固定的 String 消息：
+
+func sayHelloWorld() -> String {
+    return "hello, world"
+}
+print(sayHelloWorld())
+// 打印 "hello, world"
+
