@@ -41,8 +41,6 @@ import UIKit
 //断言
 //
 
-/**常量和变量*/
-
 /**常量和变量把一个名字（比如maximumNumberOfLoginAttempts或者welcomeMessage）和一个指定类型的值（比如数字10或者字符串"Hello"）关联起来。常量的值一旦设定就不能改变，而变量的值可以随意更改。*/
 
 
