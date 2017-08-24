@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 import Alamofire
 import SwiftyJSON
 
@@ -48,14 +47,13 @@ extension DiscoverContentViewModel {
                     let dict = JSON(value)
                     let message = dict["message"].dictionary
                         if let anchors  = message!["anchors"]?.arrayObject {
-                            
                             for dict in anchors {
                                 self.anchorModels.append(LiveAnchorModel(dict: dict as! [String : Any]))
                             }
                             complection()
                     }
                     
-                }
+            }
         }
     }
 }

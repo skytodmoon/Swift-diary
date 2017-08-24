@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class GameViewModel: NSObject {
     lazy var games : [GameModel] = [GameModel]()
@@ -16,18 +18,35 @@ class GameViewModel: NSObject {
 
 extension GameViewModel {
     func loadAllGameData(_ finishedCallback: @escaping () -> ()) {
-        NetWorkTools.requestData1(.get, urlString:  "http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters: ["shortName" : "game"]) { (result) -> () in
-            // 1.获取到数据
-            guard let resultDict = result as? [String: Any] else { return }
-            guard let dataArray = resultDict["data"] as? [[String: Any]] else { return }
-            
-            // 2.字典转模型
-            for dict in dataArray {
-                self.games.append(GameModel(dict: dict))
-            }
-            
-            // 3.完成回调
-            finishedCallback()
+//        NetWorkTools.requestData1(.get, urlString:  "http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters: ["shortName" : "game"]) { (result) -> () in
+//            // 1.获取到数据
+//            guard let resultDict = result as? [String: Any] else { return }
+//            guard let dataArray = resultDict["data"] as? [[String: Any]] else { return }
+//            
+//            // 2.字典转模型
+//            for dict in dataArray {
+//                self.games.append(GameModel(dict: dict))
+//            }
+//            
+//            // 3.完成回调
+//            finishedCallback()
+//        }
+        
+        Alamofire
+            .request("http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters: ["shortName" : "game"])
+            .responseJSON { (response) in
+                
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                        if let dataArray = dict["data"].arrayObject {
+                            for dict in dataArray {
+                                self.games.append(GameModel(dict: dict as! [String : Any]))
+                        }
+                        finishedCallback()
+                    }
+                    
+                }
         }
+
     }
 }
