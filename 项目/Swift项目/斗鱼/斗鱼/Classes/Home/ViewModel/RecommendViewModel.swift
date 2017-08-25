@@ -32,6 +32,9 @@ extension RecommendViewModel {
         
         
         Alamofire.request("http://capi.douyucdn.cn/api/v1/getbigDataRoom", method: .get, parameters: nil).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
             if let value = response.result.value {
                 let dict = JSON(value)
                     if let dataArray = dict["data"].arrayObject {

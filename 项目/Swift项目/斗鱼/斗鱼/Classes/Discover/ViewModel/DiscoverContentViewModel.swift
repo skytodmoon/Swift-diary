@@ -23,6 +23,10 @@ extension DiscoverContentViewModel {
             .request("http://qf.56.com/home/v4/guess.ios", parameters: ["count" : 27])
             .responseJSON { (response) in
                 
+                guard response.result.isSuccess else {
+                    return
+                }
+                
                 if let value = response.result.value {
                     let dict = JSON(value)
                     let message = dict["message"].dictionary
