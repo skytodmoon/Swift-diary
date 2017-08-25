@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class RecommendViewModel: BaseViewModel {
     // MARK:- 懒加载属性
@@ -28,33 +30,22 @@ extension RecommendViewModel {
         // 3.请求第一部分推荐数据
         dGroup.enter()
         
-        NetWorkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", succeed: { (result, err) in
-            // 1.将result转成字典类型
-            guard let resultDict = result as? [String : NSObject] else { return }
-            
-            // 2.根据data该key,获取数组
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-            
-            // 3.遍历字典,并且转成模型对象
-            // 3.1.设置组的属性
-            self.bigDataGroup.tag_name = "热门"
-            self.bigDataGroup.icon_name = "home_header_hot"
-            
-            //            print(dataArray)
-            // 3.2.获取主播数据
-            for dict in dataArray {
-                let anchor = AnchorModel(dict: dict)
-                self.bigDataGroup.anchors.append(anchor)
-            }
-            
-            // 3.3.离开组
-            dGroup.leave()
-            // 3.完成回调
-            
-        }) { (err) in
-            
-        }
         
+        Alamofire.request("http://capi.douyucdn.cn/api/v1/getbigDataRoom", method: .get, parameters: nil).responseJSON { (response) in
+            if let value = response.result.value {
+                let dict = JSON(value)
+                    if let dataArray = dict["data"].arrayObject {
+                        self.bigDataGroup.tag_name = "热门"
+                        self.bigDataGroup.icon_name = "home_header_hot"
+                        
+                        for dict in dataArray {
+                            let anchor = AnchorModel(dict: dict as! [String : Any])
+                            self.bigDataGroup.anchors.append(anchor)
+                        }
+                        dGroup.leave()
+                }
+            }
+        }
         
         // 4.请求第二部分颜值数据
         dGroup.enter()

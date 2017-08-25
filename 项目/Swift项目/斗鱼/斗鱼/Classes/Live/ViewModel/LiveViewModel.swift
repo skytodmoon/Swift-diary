@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LiveViewModel {
     
@@ -19,23 +21,37 @@ class LiveViewModel {
 extension LiveViewModel {
     
     func loadHomeData(type: LiveStyle,index : Int,  finishedCallback : @escaping () -> ()) {
-        
-        NetWorkTools.requestData1(.get, urlString: "http://qf.56.com/home/v4/moreAnchor.ios", parameters: ["type" : type.type, "index" : index, "size" : 48]) { (result) in
-                    
-            guard let resultDict = result as? [String : Any],
-                let messageDict = resultDict["message"] as? [String : Any],
-                let anchorsArray = messageDict["anchors"] as? [[String : Any]]
-                else {
-                    return
+        Alamofire.request("http://qf.56.com/home/v4/moreAnchor.ios", method: .get, parameters: ["type" : type.type, "index" : index, "size" : 48]).responseJSON { (response) in
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                        let messageDict = dict["message"].dictionary
+                               if let anchorsArray = messageDict?["anchors"]?.arrayObject {
+                                for (index,dict) in anchorsArray.enumerated() {
+                                    let anchor = LiveAnchorModel(dict:dict as! [String : Any])
+                                    anchor.isEvenIndex = index % 2 == 0
+                                    self.anchorModels.append(anchor)
+                                }
+                                finishedCallback()
+                            }
             }
-            
-            for (index,dict) in anchorsArray.enumerated() {
-                let anchor = LiveAnchorModel(dict: dict)
-                anchor.isEvenIndex = index % 2 == 0
-                // 将所有的模型添加到数组中
-                self.anchorModels.append(anchor)
-            }
-            finishedCallback()
         }
+        
+//        NetWorkTools.requestData1(.get, urlString: "http://qf.56.com/home/v4/moreAnchor.ios", parameters: ["type" : type.type, "index" : index, "size" : 48]) { (result) in
+//                    
+//            guard let resultDict = result as? [String : Any],
+//                let messageDict = resultDict["message"] as? [String : Any],
+//                let anchorsArray = messageDict["anchors"] as? [[String : Any]]
+//                else {
+//                    return
+//            }
+//            
+//            for (index,dict) in anchorsArray.enumerated() {
+//                let anchor = LiveAnchorModel(dict: dict)
+//                anchor.isEvenIndex = index % 2 == 0
+//                // 将所有的模型添加到数组中
+//                self.anchorModels.append(anchor)
+//            }
+//            finishedCallback()
+//        }
     }
 }

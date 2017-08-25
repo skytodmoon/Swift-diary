@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 
 class BaseViewModel {
     lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
