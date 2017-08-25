@@ -36,22 +36,5 @@ extension LiveViewModel {
             }
         }
         
-//        NetWorkTools.requestData1(.get, urlString: "http://qf.56.com/home/v4/moreAnchor.ios", parameters: ["type" : type.type, "index" : index, "size" : 48]) { (result) in
-//                    
-//            guard let resultDict = result as? [String : Any],
-//                let messageDict = resultDict["message"] as? [String : Any],
-//                let anchorsArray = messageDict["anchors"] as? [[String : Any]]
-//                else {
-//                    return
-//            }
-//            
-//            for (index,dict) in anchorsArray.enumerated() {
-//                let anchor = LiveAnchorModel(dict: dict)
-//                anchor.isEvenIndex = index % 2 == 0
-//                // 将所有的模型添加到数组中
-//                self.anchorModels.append(anchor)
-//            }
-//            finishedCallback()
-//        }
     }
 }
