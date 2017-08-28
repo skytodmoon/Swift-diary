@@ -19,6 +19,39 @@
 		1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3ED1F47FE400014D979 /* LivewContentView.swift */; };
 		1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */; };
 		404A0B9D747803ACE06B4565 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892FB4902BBE1F5A6E401BC5 /* Pods___.framework */; };
+		5B2827E71F53B78200B3530A /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827DB1F53B78200B3530A /* RoomViewController.swift */; };
+		5B2827E81F53B78200B3530A /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2827DC1F53B78200B3530A /* RoomViewController.xib */; };
+		5B2827E91F53B78200B3530A /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 5B2827DE1F53B78200B3530A /* IMMessage.proto */; };
+		5B2827EA1F53B78200B3530A /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827DF1F53B78200B3530A /* Immessage.proto.swift */; };
+		5B2827EB1F53B78200B3530A /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E01F53B78200B3530A /* Socket.swift */; };
+		5B2827EC1F53B78200B3530A /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E21F53B78200B3530A /* ysocket.swift */; };
+		5B2827ED1F53B78200B3530A /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E31F53B78200B3530A /* ytcpsocket.c */; };
+		5B2827EE1F53B78200B3530A /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E41F53B78200B3530A /* ytcpsocket.swift */; };
+		5B2827EF1F53B78200B3530A /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E51F53B78200B3530A /* yudpsocket.c */; };
+		5B2827F01F53B78200B3530A /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827E61F53B78200B3530A /* yudpsocket.swift */; };
+		5B2827F81F53B95400B3530A /* EmoticonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827F71F53B95400B3530A /* EmoticonModel.swift */; };
+		5B2827FA1F53B97800B3530A /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827F91F53B97800B3530A /* EmoticonPackage.swift */; };
+		5B2827FC1F53B9B700B3530A /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827FB1F53B9B700B3530A /* GiftModel.swift */; };
+		5B2827FE1F53B9D400B3530A /* GiftPackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827FD1F53B9D400B3530A /* GiftPackageModel.swift */; };
+		5B2828001F53BA9400B3530A /* EmoticonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2827FF1F53BA9400B3530A /* EmoticonViewModel.swift */; };
+		5B2828021F53BAA000B3530A /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828011F53BAA000B3530A /* GiftViewModel.swift */; };
+		5B2828041F53BC8600B3530A /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828031F53BC8600B3530A /* Emitterable.swift */; };
+		5B2828061F53BD0200B3530A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828051F53BD0200B3530A /* NibLoadable.swift */; };
+		5B28280A1F53BDC400B3530A /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828091F53BDC400B3530A /* ShareView.swift */; };
+		5B28280C1F53BDD400B3530A /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B28280B1F53BDD400B3530A /* ShareView.xib */; };
+		5B28280E1F53BE3900B3530A /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28280D1F53BE3900B3530A /* CustomBtn.swift */; };
+		5B2828101F53BE5300B3530A /* MoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28280F1F53BE5300B3530A /* MoreInfoView.swift */; };
+		5B2828121F53BE6400B3530A /* MoreInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2828111F53BE6400B3530A /* MoreInfoView.xib */; };
+		5B2828181F53BFD200B3530A /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828171F53BFD200B3530A /* GiftListView.swift */; };
+		5B28281A1F53BFEA00B3530A /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2828191F53BFEA00B3530A /* GiftListView.xib */; };
+		5B28281D1F53C01300B3530A /* GiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28281B1F53C01300B3530A /* GiftViewCell.swift */; };
+		5B28281E1F53C01300B3530A /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B28281C1F53C01300B3530A /* GiftViewCell.xib */; };
+		5B2828201F53C02A00B3530A /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28281F1F53C02A00B3530A /* ChatToolsView.swift */; };
+		5B2828221F53C03A00B3530A /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2828211F53C03A00B3530A /* ChatToolsView.xib */; };
+		5B2828241F53C06400B3530A /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828231F53C06400B3530A /* ChatContentView.swift */; };
+		5B2828261F53C07500B3530A /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2828251F53C07500B3530A /* ChatContentView.xib */; };
+		5B2828281F53C09100B3530A /* GiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2828271F53C09100B3530A /* GiftChannelView.swift */; };
+		5B28282A1F53C0A300B3530A /* GiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2828291F53C0A300B3530A /* GiftChannelView.xib */; };
 		5B40A6871F4526EC000098FE /* HomeTitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40A6861F4526EC000098FE /* HomeTitlesView.swift */; };
 		5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */; };
 		5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4ACDF71F46E63A002623B8 /* TextViewController.swift */; };
@@ -110,8 +143,6 @@
 		5BAD0A871F4701A800A5540F /* CarouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A861F4701A800A5540F /* CarouseViewModel.swift */; };
 		5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A891F4703D300A5540F /* LiveViewModel.swift */; };
 		5BAD0A8C1F47053D00A5540F /* LiveStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8B1F47053D00A5540F /* LiveStyle.swift */; };
-		5BAD0A901F47085300A5540F /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8E1F47085300A5540F /* RoomViewController.swift */; };
-		5BAD0A911F47085300A5540F /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD0A8F1F47085300A5540F /* RoomViewController.xib */; };
 		5BAD0A981F470C2600A5540F /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD0A951F470C2600A5540F /* QHNormalEmotionSort.plist */; };
 		5BAD0A991F470C2600A5540F /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD0A961F470C2600A5540F /* QHSohuGifSort.plist */; };
 		5BAD0A9A1F470C2600A5540F /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD0A971F470C2600A5540F /* types.plist */; };
@@ -155,6 +186,39 @@
 		1D43E3EC1F47FE400014D979 /* LIveTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIveTitleView.swift; sourceTree = "<group>"; };
 		1D43E3ED1F47FE400014D979 /* LivewContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivewContentView.swift; sourceTree = "<group>"; };
 		1D43E3F71F47FF340014D979 /* LiveScrollPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveScrollPageView.swift; sourceTree = "<group>"; };
+		5B2827DB1F53B78200B3530A /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		5B2827DC1F53B78200B3530A /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
+		5B2827DE1F53B78200B3530A /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
+		5B2827DF1F53B78200B3530A /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		5B2827E01F53B78200B3530A /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		5B2827E21F53B78200B3530A /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		5B2827E31F53B78200B3530A /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		5B2827E41F53B78200B3530A /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		5B2827E51F53B78200B3530A /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		5B2827E61F53B78200B3530A /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		5B2827F71F53B95400B3530A /* EmoticonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonModel.swift; sourceTree = "<group>"; };
+		5B2827F91F53B97800B3530A /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
+		5B2827FB1F53B9B700B3530A /* GiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
+		5B2827FD1F53B9D400B3530A /* GiftPackageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftPackageModel.swift; sourceTree = "<group>"; };
+		5B2827FF1F53BA9400B3530A /* EmoticonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewModel.swift; sourceTree = "<group>"; };
+		5B2828011F53BAA000B3530A /* GiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
+		5B2828031F53BC8600B3530A /* Emitterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
+		5B2828051F53BD0200B3530A /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		5B2828091F53BDC400B3530A /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		5B28280B1F53BDD400B3530A /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		5B28280D1F53BE3900B3530A /* CustomBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
+		5B28280F1F53BE5300B3530A /* MoreInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoView.swift; sourceTree = "<group>"; };
+		5B2828111F53BE6400B3530A /* MoreInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoView.xib; sourceTree = "<group>"; };
+		5B2828171F53BFD200B3530A /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
+		5B2828191F53BFEA00B3530A /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
+		5B28281B1F53C01300B3530A /* GiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewCell.swift; sourceTree = "<group>"; };
+		5B28281C1F53C01300B3530A /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewCell.xib; sourceTree = "<group>"; };
+		5B28281F1F53C02A00B3530A /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
+		5B2828211F53C03A00B3530A /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
+		5B2828231F53C06400B3530A /* ChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		5B2828251F53C07500B3530A /* ChatContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
+		5B2828271F53C09100B3530A /* GiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftChannelView.swift; sourceTree = "<group>"; };
+		5B2828291F53C0A300B3530A /* GiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftChannelView.xib; sourceTree = "<group>"; };
 		5B40A6861F4526EC000098FE /* HomeTitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitlesView.swift; sourceTree = "<group>"; };
 		5B4ACDF51F46E62C002623B8 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5B4ACDF71F46E63A002623B8 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -276,8 +340,6 @@
 		5BAD0A861F4701A800A5540F /* CarouseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouseViewModel.swift; sourceTree = "<group>"; };
 		5BAD0A891F4703D300A5540F /* LiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		5BAD0A8B1F47053D00A5540F /* LiveStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStyle.swift; sourceTree = "<group>"; };
-		5BAD0A8E1F47085300A5540F /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
-		5BAD0A8F1F47085300A5540F /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		5BAD0A951F470C2600A5540F /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
 		5BAD0A961F470C2600A5540F /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
 		5BAD0A971F470C2600A5540F /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
@@ -343,6 +405,128 @@
 				1D43E3ED1F47FE400014D979 /* LivewContentView.swift */,
 			);
 			path = ScollPageView;
+			sourceTree = "<group>";
+		};
+		5B2827DA1F53B78200B3530A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2827DB1F53B78200B3530A /* RoomViewController.swift */,
+				5B2827DC1F53B78200B3530A /* RoomViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B2827DD1F53B78200B3530A /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				5B2827DE1F53B78200B3530A /* IMMessage.proto */,
+				5B2827DF1F53B78200B3530A /* Immessage.proto.swift */,
+				5B2827E01F53B78200B3530A /* Socket.swift */,
+				5B2827E11F53B78200B3530A /* ysocket */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		5B2827E11F53B78200B3530A /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				5B2827E21F53B78200B3530A /* ysocket.swift */,
+				5B2827E31F53B78200B3530A /* ytcpsocket.c */,
+				5B2827E41F53B78200B3530A /* ytcpsocket.swift */,
+				5B2827E51F53B78200B3530A /* yudpsocket.c */,
+				5B2827E61F53B78200B3530A /* yudpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+		5B2827F11F53B92900B3530A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B2827F71F53B95400B3530A /* EmoticonModel.swift */,
+				5B2827F91F53B97800B3530A /* EmoticonPackage.swift */,
+				5B2827FB1F53B9B700B3530A /* GiftModel.swift */,
+				5B2827FD1F53B9D400B3530A /* GiftPackageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B2827F21F53B92900B3530A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B2828131F53BFB900B3530A /* ChatContentView */,
+				5B2828141F53BFB900B3530A /* ChatView */,
+				5B2828151F53BFB900B3530A /* GiftAnimationView */,
+				5B2828161F53BFB900B3530A /* GiftView */,
+				5B2828071F53BDAF00B3530A /* MoreView */,
+				5B2828081F53BDAF00B3530A /* ShareView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B2827F31F53B92900B3530A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B2827FF1F53BA9400B3530A /* EmoticonViewModel.swift */,
+				5B2828011F53BAA000B3530A /* GiftViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B2828071F53BDAF00B3530A /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				5B28280D1F53BE3900B3530A /* CustomBtn.swift */,
+				5B28280F1F53BE5300B3530A /* MoreInfoView.swift */,
+				5B2828111F53BE6400B3530A /* MoreInfoView.xib */,
+			);
+			path = MoreView;
+			sourceTree = "<group>";
+		};
+		5B2828081F53BDAF00B3530A /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+				5B2828091F53BDC400B3530A /* ShareView.swift */,
+				5B28280B1F53BDD400B3530A /* ShareView.xib */,
+			);
+			path = ShareView;
+			sourceTree = "<group>";
+		};
+		5B2828131F53BFB900B3530A /* ChatContentView */ = {
+			isa = PBXGroup;
+			children = (
+				5B2828231F53C06400B3530A /* ChatContentView.swift */,
+				5B2828251F53C07500B3530A /* ChatContentView.xib */,
+			);
+			path = ChatContentView;
+			sourceTree = "<group>";
+		};
+		5B2828141F53BFB900B3530A /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				5B28281F1F53C02A00B3530A /* ChatToolsView.swift */,
+				5B2828211F53C03A00B3530A /* ChatToolsView.xib */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		5B2828151F53BFB900B3530A /* GiftAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				5B2828271F53C09100B3530A /* GiftChannelView.swift */,
+				5B2828291F53C0A300B3530A /* GiftChannelView.xib */,
+			);
+			path = GiftAnimationView;
+			sourceTree = "<group>";
+		};
+		5B2828161F53BFB900B3530A /* GiftView */ = {
+			isa = PBXGroup;
+			children = (
+				5B2828171F53BFD200B3530A /* GiftListView.swift */,
+				5B2828191F53BFEA00B3530A /* GiftListView.xib */,
+				5B28281B1F53C01300B3530A /* GiftViewCell.swift */,
+				5B28281C1F53C01300B3530A /* GiftViewCell.xib */,
+			);
+			path = GiftView;
 			sourceTree = "<group>";
 		};
 		5B40A6851F4526D3000098FE /* View */ = {
@@ -650,6 +834,8 @@
 				5B8E1A981F468A5B0063F364 /* UIButton+Extension.swift */,
 				5BAD0A771F46FF2E00A5540F /* UIImageView+Extension.swift */,
 				5BAD0A791F46FF5100A5540F /* UIImage+Extension.swift */,
+				5B2828031F53BC8600B3530A /* Emitterable.swift */,
+				5B2828051F53BD0200B3530A /* NibLoadable.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -811,8 +997,11 @@
 		5BAD0A8D1F47083500A5540F /* Room */ = {
 			isa = PBXGroup;
 			children = (
-				5BAD0A8E1F47085300A5540F /* RoomViewController.swift */,
-				5BAD0A8F1F47085300A5540F /* RoomViewController.xib */,
+				5B2827F11F53B92900B3530A /* Model */,
+				5B2827F21F53B92900B3530A /* View */,
+				5B2827F31F53B92900B3530A /* ViewModel */,
+				5B2827DA1F53B78200B3530A /* Controller */,
+				5B2827DD1F53B78200B3530A /* Socket */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -979,23 +1168,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2827E91F53B78200B3530A /* IMMessage.proto in Resources */,
 				5B5D1F661F46C58100BD9564 /* CollectionGameCell.xib in Resources */,
+				5B2828261F53C07500B3530A /* ChatContentView.xib in Resources */,
 				5BAD0A761F46FE9F00A5540F /* DiscoverCollectionViewCell.xib in Resources */,
+				5B2828121F53BE6400B3530A /* MoreInfoView.xib in Resources */,
 				5B8BBCFC1F441E770031D13B /* LaunchScreen.storyboard in Resources */,
 				5BAD0A981F470C2600A5540F /* QHNormalEmotionSort.plist in Resources */,
+				5B28282A1F53C0A300B3530A /* GiftChannelView.xib in Resources */,
 				5B8BBCF91F441E770031D13B /* Assets.xcassets in Resources */,
 				5B5D1F291F46BDC100BD9564 /* CollectionPrettyCell.xib in Resources */,
 				1D43E3E71F47FA9A0014D979 /* LiveFucusViewCell.xib in Resources */,
 				5B7817E11F46D86D0035B947 /* placeholder.png in Resources */,
+				5B2827E81F53B78200B3530A /* RoomViewController.xib in Resources */,
 				5B5D1F251F46BD2600BD9564 /* CollectionNormalCell.xib in Resources */,
-				5BAD0A911F47085300A5540F /* RoomViewController.xib in Resources */,
+				5B28280C1F53BDD400B3530A /* ShareView.xib in Resources */,
 				5BAD0A991F470C2600A5540F /* QHSohuGifSort.plist in Resources */,
 				5BAD0A741F46FE9F00A5540F /* DiscoverCell.xib in Resources */,
+				5B28281A1F53BFEA00B3530A /* GiftListView.xib in Resources */,
 				5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */,
 				1D43E3E31F47FA7B0014D979 /* LiveViewCell.xib in Resources */,
 				5BAD0A9A1F470C2600A5540F /* types.plist in Resources */,
 				5B7817DA1F46D86D0035B947 /* MJRefresh.bundle in Resources */,
+				5B28281E1F53C01300B3530A /* GiftViewCell.xib in Resources */,
 				5B5D1F2D1F46BDEA00BD9564 /* CollectionHeaderView.xib in Resources */,
+				5B2828221F53C03A00B3530A /* ChatToolsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,6 +1272,7 @@
 				1D43E3E61F47FA9A0014D979 /* LiveFucusViewCell.swift in Sources */,
 				5B4ACDFA1F46E66B002623B8 /* BannersController.swift in Sources */,
 				5B5D1F621F46C45A00BD9564 /* UIView+Extension.swift in Sources */,
+				5B28281D1F53C01300B3530A /* GiftViewCell.swift in Sources */,
 				5B5D1F461F46BF6D00BD9564 /* BaseGameModel.swift in Sources */,
 				5BAD0A871F4701A800A5540F /* CarouseViewModel.swift in Sources */,
 				5B5D1F541F46C00C00BD9564 /* AmuseViewModel.swift in Sources */,
@@ -1082,21 +1280,27 @@
 				5BAD0A6C1F46FE1100A5540F /* CarouseModel.swift in Sources */,
 				5B5D1F4E1F46BFC300BD9564 /* GameModel.swift in Sources */,
 				1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */,
+				5B2828181F53BFD200B3530A /* GiftListView.swift in Sources */,
 				5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */,
 				1D43E3EE1F47FE400014D979 /* LiewPageCollectionView.swift in Sources */,
+				5B2827FE1F53B9D400B3530A /* GiftPackageModel.swift in Sources */,
 				5B7817D81F46D86D0035B947 /* MJRefreshNormalHeader.m in Sources */,
+				5B2827EA1F53B78200B3530A /* Immessage.proto.swift in Sources */,
 				5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */,
 				5B7817CE1F46D86D0035B947 /* MJRefreshComponent.m in Sources */,
 				1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */,
 				5B8E1A9B1F468B4D0063F364 /* BaseViewController.swift in Sources */,
 				5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */,
+				5B2827EF1F53B78200B3530A /* yudpsocket.c in Sources */,
 				5B7817CD1F46D86D0035B947 /* MJRefreshBackFooter.m in Sources */,
 				5B78178D1F46D7670035B947 /* WKWebViewController.swift in Sources */,
 				5B7817D41F46D86D0035B947 /* MJRefreshBackGifFooter.m in Sources */,
 				5B7817CB1F46D86D0035B947 /* MMMaterialDesignSpinner.m in Sources */,
+				5B2827EB1F53B78200B3530A /* Socket.swift in Sources */,
 				5B8BBD3B1F442B260031D13B /* GuardScrollView.swift in Sources */,
 				5B7817891F46D7240035B947 /* AmuseViewController.swift in Sources */,
 				5BAD0A851F47019900A5540F /* DiscoverContentViewModel.swift in Sources */,
+				5B2827FA1F53B97800B3530A /* EmoticonPackage.swift in Sources */,
 				5B8E1A991F468A5B0063F364 /* UIButton+Extension.swift in Sources */,
 				5B5D1F4C1F46BFB000BD9564 /* CycleModel.swift in Sources */,
 				5B8BBD481F4435510031D13B /* LiveViewController.swift in Sources */,
@@ -1104,23 +1308,30 @@
 				5B8E1AA71F46A9150063F364 /* ScrollTopWindow.swift in Sources */,
 				5B7817CC1F46D86D0035B947 /* MJRefreshAutoFooter.m in Sources */,
 				5BAD0A731F46FE9F00A5540F /* DiscoverCell.swift in Sources */,
+				5B2828241F53C06400B3530A /* ChatContentView.swift in Sources */,
 				5B8E1A9D1F468B840063F364 /* RecommendViewController.swift in Sources */,
+				5B2828041F53BC8600B3530A /* Emitterable.swift in Sources */,
 				5B7817D51F46D86D0035B947 /* MJRefreshBackNormalFooter.m in Sources */,
 				5BAD0A7A1F46FF5100A5540F /* UIImage+Extension.swift in Sources */,
 				1D43E3DF1F47FA540014D979 /* LiveWaterfallLayout.swift in Sources */,
+				5B2827EC1F53B78200B3530A /* ysocket.swift in Sources */,
 				5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */,
 				5B8BBD4A1F4435660031D13B /* ProfileViewController.swift in Sources */,
 				5B5D1F651F46C58100BD9564 /* CollectionGameCell.swift in Sources */,
 				5BD4FA821F46F3C600DA00A4 /* ProfileHeaderView.swift in Sources */,
 				5BAD0A8A1F4703D300A5540F /* LiveViewModel.swift in Sources */,
+				5B2828201F53C02A00B3530A /* ChatToolsView.swift in Sources */,
 				1D43E3F11F47FE400014D979 /* LIveTitleView.swift in Sources */,
 				5B8E1A921F4682AE0063F364 /* QQScanViewController.swift in Sources */,
 				5BAD0A7D1F47004200A5540F /* LiveAnchorModel.swift in Sources */,
-				5BAD0A901F47085300A5540F /* RoomViewController.swift in Sources */,
+				5B28280E1F53BE3900B3530A /* CustomBtn.swift in Sources */,
 				1D43E3EF1F47FE400014D979 /* LivePageCollectionViewLayout.swift in Sources */,
 				5BAD0A751F46FE9F00A5540F /* DiscoverCollectionViewCell.swift in Sources */,
+				5B2828281F53C09100B3530A /* GiftChannelView.swift in Sources */,
+				5B2828061F53BD0200B3530A /* NibLoadable.swift in Sources */,
 				5B7817DE1F46D86D0035B947 /* UIView+MJExtension.m in Sources */,
 				5BAD0AA41F470C7F00A5540F /* TitleStyle.swift in Sources */,
+				5B2827ED1F53B78200B3530A /* ytcpsocket.c in Sources */,
 				5B7817D71F46D86D0035B947 /* MJRefreshGifHeader.m in Sources */,
 				5B5D1F601F46C3E300BD9564 /* WebViewController.swift in Sources */,
 				5B5D1F561F46C2BA00BD9564 /* RecommendCycleView.swift in Sources */,
@@ -1130,17 +1341,23 @@
 				5B8BBD461F4435450031D13B /* HomeViewController.swift in Sources */,
 				5B8BBD281F441FEC0031D13B /* TabBarController.swift in Sources */,
 				5B5D1F441F46BF5700BD9564 /* BaseViewModel.swift in Sources */,
+				5B2827F01F53B78200B3530A /* yudpsocket.swift in Sources */,
 				5B7817D31F46D86D0035B947 /* MJRefreshAutoStateFooter.m in Sources */,
 				5B5D1F2C1F46BDEA00BD9564 /* CollectionHeaderView.swift in Sources */,
+				5B2827E71F53B78200B3530A /* RoomViewController.swift in Sources */,
+				5B2827EE1F53B78200B3530A /* ytcpsocket.swift in Sources */,
 				5B78178A1F46D7240035B947 /* FunnyViewController.swift in Sources */,
 				5BAD0AA31F470C7F00A5540F /* SaveTools.swift in Sources */,
 				5B8E1A8E1F4681DD0063F364 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B5D1F521F46C00300BD9564 /* FunnyViewModel.swift in Sources */,
 				5B5D1F241F46BD2600BD9564 /* CollectionNormalCell.swift in Sources */,
 				5B7817DB1F46D86D0035B947 /* MJRefreshConst.m in Sources */,
+				5B2828101F53BE5300B3530A /* MoreInfoView.swift in Sources */,
 				5B5D1F481F46BF8B00BD9564 /* AnchorGroup.swift in Sources */,
 				5B5D1F421F46BF1400BD9564 /* RecommendViewModel.swift in Sources */,
 				5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */,
+				5B2827FC1F53B9B700B3530A /* GiftModel.swift in Sources */,
+				5B28280A1F53BDC400B3530A /* ShareView.swift in Sources */,
 				5BAD0A781F46FF2E00A5540F /* UIImageView+Extension.swift in Sources */,
 				5B5D1F581F46C2C900BD9564 /* RecommendGameView.swift in Sources */,
 				5B7817E01F46D86D0035B947 /* UIView+LYMExtension.m in Sources */,
@@ -1150,13 +1367,16 @@
 				5BAD0AA51F470C7F00A5540F /* SqliteTools.swift in Sources */,
 				5B8E1A971F4687050063F364 /* HomeContentView.swift in Sources */,
 				5B7817D21F46D86D0035B947 /* MJRefreshAutoNormalFooter.m in Sources */,
+				5B2828021F53BAA000B3530A /* GiftViewModel.swift in Sources */,
 				5B5D1F501F46BFF000BD9564 /* GameViewModel.swift in Sources */,
+				5B2827F81F53B95400B3530A /* EmoticonModel.swift in Sources */,
 				5B7817D01F46D86D0035B947 /* MJRefreshHeader.m in Sources */,
 				5BAD0AA21F470C7F00A5540F /* NetworkTools.swift in Sources */,
 				5BAD0AA11F470C7F00A5540F /* Common.swift in Sources */,
 				5B7817D91F46D86D0035B947 /* MJRefreshStateHeader.m in Sources */,
 				5B5D1F281F46BDC100BD9564 /* CollectionPrettyCell.swift in Sources */,
 				5B7817CA1F46D86D0035B947 /* DeformationButton.m in Sources */,
+				5B2828001F53BA9400B3530A /* EmoticonViewModel.swift in Sources */,
 				5B8BBD4C1F4436B00031D13B /* NavController.swift in Sources */,
 				1D43E3E21F47FA7B0014D979 /* LiveViewCell.swift in Sources */,
 				5BAD0A8C1F47053D00A5540F /* LiveStyle.swift in Sources */,
