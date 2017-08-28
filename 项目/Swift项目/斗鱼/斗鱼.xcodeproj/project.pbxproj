@@ -106,6 +106,11 @@
 		5B7817E01F46D86D0035B947 /* UIView+LYMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7817C51F46D86D0035B947 /* UIView+LYMExtension.m */; };
 		5B7817E11F46D86D0035B947 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7817C71F46D86D0035B947 /* placeholder.png */; };
 		5B7817E21F46D86D0035B947 /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7817C91F46D86D0035B947 /* XRCarouselView.m */; };
+		5B7A19F51F53F1890024BE1A /* GiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A19F41F53F1890024BE1A /* GiftContainerView.swift */; };
+		5B7A19F71F53F1AE0024BE1A /* GiftDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A19F61F53F1AE0024BE1A /* GiftDigitLabel.swift */; };
+		5B7A19F91F53F1C20024BE1A /* GiftMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A19F81F53F1C20024BE1A /* GiftMessageModel.swift */; };
+		5B7A19FC1F53F2190024BE1A /* ChatContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7A19FA1F53F2190024BE1A /* ChatContentViewCell.swift */; };
+		5B7A19FD1F53F2190024BE1A /* ChatContentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7A19FB1F53F2190024BE1A /* ChatContentViewCell.xib */; };
 		5B8BBCF21F441E770031D13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF11F441E770031D13B /* AppDelegate.swift */; };
 		5B8BBCF41F441E770031D13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF31F441E770031D13B /* ViewController.swift */; };
 		5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8BBCF51F441E770031D13B /* Main.storyboard */; };
@@ -296,6 +301,11 @@
 		5B7817C71F46D86D0035B947 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		5B7817C81F46D86D0035B947 /* XRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCarouselView.h; sourceTree = "<group>"; };
 		5B7817C91F46D86D0035B947 /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
+		5B7A19F41F53F1890024BE1A /* GiftContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftContainerView.swift; sourceTree = "<group>"; };
+		5B7A19F61F53F1AE0024BE1A /* GiftDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDigitLabel.swift; sourceTree = "<group>"; };
+		5B7A19F81F53F1C20024BE1A /* GiftMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftMessageModel.swift; sourceTree = "<group>"; };
+		5B7A19FA1F53F2190024BE1A /* ChatContentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentViewCell.swift; sourceTree = "<group>"; };
+		5B7A19FB1F53F2190024BE1A /* ChatContentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentViewCell.xib; sourceTree = "<group>"; };
 		5B8BBCEE1F441E770031D13B /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8BBCF11F441E770031D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8BBCF31F441E770031D13B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -496,6 +506,8 @@
 			children = (
 				5B2828231F53C06400B3530A /* ChatContentView.swift */,
 				5B2828251F53C07500B3530A /* ChatContentView.xib */,
+				5B7A19FA1F53F2190024BE1A /* ChatContentViewCell.swift */,
+				5B7A19FB1F53F2190024BE1A /* ChatContentViewCell.xib */,
 			);
 			path = ChatContentView;
 			sourceTree = "<group>";
@@ -514,6 +526,9 @@
 			children = (
 				5B2828271F53C09100B3530A /* GiftChannelView.swift */,
 				5B2828291F53C0A300B3530A /* GiftChannelView.xib */,
+				5B7A19F41F53F1890024BE1A /* GiftContainerView.swift */,
+				5B7A19F61F53F1AE0024BE1A /* GiftDigitLabel.swift */,
+				5B7A19F81F53F1C20024BE1A /* GiftMessageModel.swift */,
 			);
 			path = GiftAnimationView;
 			sourceTree = "<group>";
@@ -1188,6 +1203,7 @@
 				5B28281A1F53BFEA00B3530A /* GiftListView.xib in Resources */,
 				5B8BBCF71F441E770031D13B /* Main.storyboard in Resources */,
 				1D43E3E31F47FA7B0014D979 /* LiveViewCell.xib in Resources */,
+				5B7A19FD1F53F2190024BE1A /* ChatContentViewCell.xib in Resources */,
 				5BAD0A9A1F470C2600A5540F /* types.plist in Resources */,
 				5B7817DA1F46D86D0035B947 /* MJRefresh.bundle in Resources */,
 				5B28281E1F53C01300B3530A /* GiftViewCell.xib in Resources */,
@@ -1279,6 +1295,7 @@
 				5BAD0A6A1F46FDCB00A5540F /* DiscoverViewController.swift in Sources */,
 				5BAD0A6C1F46FE1100A5540F /* CarouseModel.swift in Sources */,
 				5B5D1F4E1F46BFC300BD9564 /* GameModel.swift in Sources */,
+				5B7A19F71F53F1AE0024BE1A /* GiftDigitLabel.swift in Sources */,
 				1D43E3F81F47FF340014D979 /* LiveScrollPageView.swift in Sources */,
 				5B2828181F53BFD200B3530A /* GiftListView.swift in Sources */,
 				5BAD0AA71F470CD900A5540F /* AnchorLiveController.swift in Sources */,
@@ -1290,6 +1307,7 @@
 				5B7817CE1F46D86D0035B947 /* MJRefreshComponent.m in Sources */,
 				1D43E3F21F47FE400014D979 /* LivewContentView.swift in Sources */,
 				5B8E1A9B1F468B4D0063F364 /* BaseViewController.swift in Sources */,
+				5B7A19FC1F53F2190024BE1A /* ChatContentViewCell.swift in Sources */,
 				5B4ACDF61F46E62C002623B8 /* SettingViewController.swift in Sources */,
 				5B2827EF1F53B78200B3530A /* yudpsocket.c in Sources */,
 				5B7817CD1F46D86D0035B947 /* MJRefreshBackFooter.m in Sources */,
@@ -1313,6 +1331,7 @@
 				5B2828041F53BC8600B3530A /* Emitterable.swift in Sources */,
 				5B7817D51F46D86D0035B947 /* MJRefreshBackNormalFooter.m in Sources */,
 				5BAD0A7A1F46FF5100A5540F /* UIImage+Extension.swift in Sources */,
+				5B7A19F51F53F1890024BE1A /* GiftContainerView.swift in Sources */,
 				1D43E3DF1F47FA540014D979 /* LiveWaterfallLayout.swift in Sources */,
 				5B2827EC1F53B78200B3530A /* ysocket.swift in Sources */,
 				5B4ACDF81F46E63A002623B8 /* TextViewController.swift in Sources */,
@@ -1344,6 +1363,7 @@
 				5B2827F01F53B78200B3530A /* yudpsocket.swift in Sources */,
 				5B7817D31F46D86D0035B947 /* MJRefreshAutoStateFooter.m in Sources */,
 				5B5D1F2C1F46BDEA00BD9564 /* CollectionHeaderView.swift in Sources */,
+				5B7A19F91F53F1C20024BE1A /* GiftMessageModel.swift in Sources */,
 				5B2827E71F53B78200B3530A /* RoomViewController.swift in Sources */,
 				5B2827EE1F53B78200B3530A /* ytcpsocket.swift in Sources */,
 				5B78178A1F46D7240035B947 /* FunnyViewController.swift in Sources */,
