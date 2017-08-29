@@ -153,9 +153,9 @@ extension DiscoverViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: kDiscoverID, for: indexPath) as! DiscoverCell
         
         cell.cellDidSelected = { (anchor : LiveAnchorModel) in
-//            let liveVc = RoomViewController()
-//            liveVc.anchor = anchor
-//            self.navigationController?.pushViewController(liveVc, animated: true)
+            let liveVc = RoomViewController()
+            liveVc.anchor = anchor
+            self.navigationController?.pushViewController(liveVc, animated: true)
         }
         return cell
     }

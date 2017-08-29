@@ -10,7 +10,7 @@ import UIKit
 
 private let kChatContentViewID = "kChatContentViewID"
 
-class ChatContentView: UIView {
+class ChatContentView: UIView,NibLoadable {
 
     @IBOutlet weak var tableView: UITableView!
     

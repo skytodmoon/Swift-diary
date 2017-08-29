@@ -31,7 +31,7 @@ class GiftListView: UIView,NibLoadable {
     fileprivate var currentIndexPath : IndexPath?
     
     // MARK: 私有控件
-    fileprivate var pageCollectionView : LiewPageCollectionView!
+    fileprivate var pageCollectionView : LivePageCollectionView!
     fileprivate var giftVM : GiftViewModel = GiftViewModel()
     
     
@@ -70,7 +70,7 @@ extension GiftListView {
         style.normalColor = UIColor(r: 255, g: 255, b: 255)
         style.selectedColor = UIColor(r: 255, g: 127, b: 0)
         
-        let layout = PageCollectionViewLayout()
+        let layout = LivePageCollectionViewLayout()
         layout.cols = 4
         layout.rows = 2
         layout.sectionInset = UIEdgeInsets(top: kEdgeMargin, left: kEdgeMargin, bottom: kEdgeMargin, right: kEdgeMargin)
@@ -79,7 +79,7 @@ extension GiftListView {
         
         var pageViewFrame = giftView.bounds
         pageViewFrame.size.width = kScreenW
-        pageCollectionView = PageCollectionView(frame:pageViewFrame, titles: ["热门", "高级", "豪华", "专属"], style: style, isTitleInTop: true, layout: layout)
+        pageCollectionView = LivePageCollectionView(frame:pageViewFrame, titles: ["热门", "高级", "豪华", "专属"], style: style, isTitleInTop: true, layout: layout)
         pageCollectionView.dataSource = self
         pageCollectionView.delegate = self
         
@@ -94,22 +94,22 @@ extension GiftListView {
 
 
 
-extension GiftListView : PageCollectionViewDataSource, PageCollectionViewDelegate {
+extension GiftListView : LivePageCollectionViewDataSource, LivePageCollectionViewDelegate {
     // 返回多少组
-    func numberOfSections(in pageCollectionView: PageCollectionView) -> Int {
+    func numberOfSections(in pageCollectionView: LivePageCollectionView) -> Int {
         
         return giftVM.giftlistData.count
         
     }
     // 返回每组多少行
-    func pageCollectionView(_ collectionView: PageCollectionView, numberOfItemsInSection section: Int) -> Int {
+    func pageCollectionView(_ collectionView: LivePageCollectionView, numberOfItemsInSection section: Int) -> Int {
         
         let package = giftVM.giftlistData[section]
         return package.list.count
     }
     
     // 返回每个 Item 的内容
-    func pageCollectionView(_ pageCollectionView: PageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func pageCollectionView(_ pageCollectionView: LivePageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGiftViewCellID, for: indexPath) as! GiftViewCell
         //        cell.backgroundColor = UIColor.randomColor()
         
@@ -119,7 +119,7 @@ extension GiftListView : PageCollectionViewDataSource, PageCollectionViewDelegat
     }
     
     
-    func pageCollectionView(_ pageCollectionView: PageCollectionView, didSelectItemAt indexPath: IndexPath) {
+    func pageCollectionView(_ pageCollectionView: LivePageCollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // 1. 将赠送按钮设为可点击
         sendGiftBtn.isEnabled = true

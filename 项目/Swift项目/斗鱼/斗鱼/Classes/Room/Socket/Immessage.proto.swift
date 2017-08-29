@@ -1099,6 +1099,11 @@ final public class GiftMessage : GeneratedMessage {
 }
 
 extension UserInfo: GeneratedMessageProtocol {
+    
+    public subscript(key: String) -> Any? {
+        return nil
+    }
+    
   public class func parseArrayDelimitedFrom(inputStream: InputStream) throws -> Array<UserInfo> {
     var mergedArray = Array<UserInfo>()
     while let value = try parseDelimitedFrom(inputStream: inputStream) {
@@ -1129,6 +1134,10 @@ extension UserInfo: GeneratedMessageProtocol {
   }
 }
 extension ChatMessage: GeneratedMessageProtocol {
+    public subscript(key: String) -> Any? {
+        return nil
+    }
+
   public class func parseArrayDelimitedFrom(inputStream: InputStream) throws -> Array<ChatMessage> {
     var mergedArray = Array<ChatMessage>()
     while let value = try parseDelimitedFrom(inputStream: inputStream) {
@@ -1159,6 +1168,9 @@ extension ChatMessage: GeneratedMessageProtocol {
   }
 }
 extension GiftMessage: GeneratedMessageProtocol {
+    public subscript(key: String) -> Any? {
+        return nil
+    }
   public class func parseArrayDelimitedFrom(inputStream: InputStream) throws -> Array<GiftMessage> {
     var mergedArray = Array<GiftMessage>()
     while let value = try parseDelimitedFrom(inputStream: inputStream) {

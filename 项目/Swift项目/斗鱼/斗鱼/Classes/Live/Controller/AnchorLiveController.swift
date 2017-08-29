@@ -131,9 +131,9 @@ extension AnchorLiveController : UICollectionViewDataSource,UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//        let roomVC = RoomViewController()
-//        roomVC.anchor = homeVM.anchorModels[indexPath.item]
-//        navigationController?.pushViewController(roomVC, animated: true)
+        let roomVC = RoomViewController()
+        roomVC.anchor = homeVM.anchorModels[indexPath.item]
+        navigationController?.pushViewController(roomVC, animated: true)
         
     }
     
