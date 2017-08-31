@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import Kingfisher
-import PKHUD
+
 
 class Status: NSObject {
     //MARK: - 微博创建时间
@@ -97,7 +97,7 @@ class Status: NSObject {
             switch response.result {
                 
                 case .failure:
-                    HUD.flash(.error, delay: 2.0)
+                    
                     break
                 case .success:
                     
@@ -109,7 +109,7 @@ class Status: NSObject {
                          request = "/2/statuses/home_timeline.json";
                          用户请求频次超过上限
                          **/
-                         HUD.flash(.success, delay: 2.0)
+                         
                         let resultDic = response.result.value as! [String:AnyObject]
                         let models = dictToModel(list: resultDic["statuses"] as! [[String: AnyObject]])
                         cacheStatusImages(list: models, finished:finished )

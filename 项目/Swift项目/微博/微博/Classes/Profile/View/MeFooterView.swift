@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import PKHUD
+
 
 class MeFooterView: UIView {
     
@@ -26,7 +26,7 @@ class MeFooterView: UIView {
         params["c"] = "topic";
         
         Alamofire.request("http://api.budejie.com/api/api_open.php", method: .get, parameters: params).responseJSON { (response) in
-            HUD.flash(.success, delay: 2.0)
+            
             if let value = response.result.value {
                 let dict = JSON(value)
                     let squares = Square.squares(array: dict["square_list"].array!)

@@ -7,13 +7,13 @@ target '微博' do
 
   # Pods for 微博
 
-    pod 'Alamofire', '~> 4.2.0'  ##Swift 网络请求
-    pod 'Kingfisher', '~> 3.2.1' ##Swift 加载网络图片
-    pod 'SnapKit', '~> 3.0.2'    ##Swift 约束布局
-    pod 'SwiftyJSON', '~> 3.1.4' ##Swift 解析json
-    pod 'PKHUD', '~> 4.0'        ##Swift 弹出框
-    pod 'DGElasticPullToRefresh' ##Swift 下来刷新
+    pod 'Alamofire', '~> 4.2.0'         ##Swift 网络请求
+    pod 'Kingfisher', '~> 3.2.1'        ##Swift 加载网络图片
+    pod 'SnapKit', '~> 3.0.2'           ##Swift 约束布局
+    pod 'SwiftyJSON', '~> 3.1.4'        ##Swift 解析json
     
-    pod 'GTMRefresh'
+    
+    pod 'SVProgressHUD', '~> 2.1.2'     ## 提示功能
+    pod 'MJRefresh'                     ## 上拉和下拉刷新框架
 
 end

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DGElasticPullToRefresh
+
 
 class ProfileViewController: BaseTableViewController{
     
@@ -34,17 +34,7 @@ class ProfileViewController: BaseTableViewController{
     
     func setTableView() {
         
-        /**
-        // DGElasticPullToRefresh用法
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
-        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            print("请求数据")
-            self?.tableView.dg_stopLoading()
-            }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
-        */
+
         
         self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 44), style: UITableViewStyle.grouped)
         self.tableView.separatorStyle = .none

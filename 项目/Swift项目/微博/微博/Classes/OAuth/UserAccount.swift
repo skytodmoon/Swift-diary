@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import PKHUD
+
 
 class UserAccount: NSObject, NSCoding {
     
@@ -67,7 +67,7 @@ class UserAccount: NSObject, NSCoding {
     func loadUserInfo(finished: @escaping (_ account: UserAccount?, _ error: NSError?)->()){
         let params = ["access_token":access_token!, "uid":uid!]
         Alamofire.request("https://api.weibo.com/2/users/show.json", method: .get, parameters: params).responseJSON { (response) in
-            HUD.flash(.success, delay: 2.0)
+            
             if let dic = response.result.value as? [String: AnyObject] {
                 self.screen_name = dic["screen_name"] as? String
                 self.avatar_large = dic["avatar_large"] as? String
