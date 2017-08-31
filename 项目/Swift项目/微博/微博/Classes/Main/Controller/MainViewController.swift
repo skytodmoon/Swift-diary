@@ -23,7 +23,7 @@ class MainViewController: UITabBarController {
         addChildViewController(childController: MessageViewController(), title: "消息", imageName: "tabbar_message_center")
         addChildViewController(UIViewController())
         addChildViewController(childController: DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
-        addChildViewController(childController: ProfileViewController(), title: "我的", imageName: "tabbar_profile")
+        addChildViewController(childController: MineViewController(), title: "我的", imageName: "tabbar_profile")
     }
     
     //MARK: - 设置TaBbar的图片颜色，以及点击高亮

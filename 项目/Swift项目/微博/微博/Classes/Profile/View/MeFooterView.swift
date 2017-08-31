@@ -49,7 +49,7 @@ class MeFooterView: UIView {
         let maxCols:CGFloat = 4
         
         
-        let buttonW = screenW / maxCols - 1
+        let buttonW = screenWidth / maxCols - 1
         let buttonH = buttonW - 1
         
         for i in 0 ..< 16{

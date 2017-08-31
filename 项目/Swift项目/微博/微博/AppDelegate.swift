@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTheme
 
 //MARK: - 通知
 let SwitchRootViewControllerKey = "SwitchRootViewControllerKey"
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: - 同意设置颜色
         UINavigationBar.appearance().tintColor = UIColor.orange
         UITabBar.appearance().tintColor = UIColor.orange
+        ThemeManager.setTheme(plistName: UserDefaults.standard.bool(forKey: isNight) ? "night_theme" : "default_theme", path: .mainBundle)
+        
         //MARK: - 设置主窗口
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white

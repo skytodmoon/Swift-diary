@@ -9,48 +9,37 @@
 import UIKit
 
 
-class ProfileViewController: BaseTableViewController{
+class ProfileViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //MARK: - 判断用户是否登录
-        if !userIsLogin{
-            visitorView.setupVisitorInfo(isHome: false, imageName: "visitordiscover_image_profile", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
-        }else{
+
             setNav()
             
             setTableView()
-        }
     
 
         // Do any additional setup after loading the view.
     }
 
     func setNav() {
-        navigationItem.title = "我的"
+        self.navigationItem.title = "消息内容"
         view.backgroundColor = UIColor(r: 0, g: 0, b: 0, alpha: 0.7)
     }
     
     func setTableView() {
         
-
-        
-        self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 44), style: UITableViewStyle.grouped)
+        self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: UITableViewStyle.plain)
         self.tableView.separatorStyle = .none
-        self.tableView.sectionHeaderHeight = 30
-        self.tableView.contentInset = UIEdgeInsetsMake(-10, 0, 0, 0)
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.tableView.tableFooterView = MeFooterView.init(frame: CGRect.zero, settingHeightAction: { () -> () in
         })
         
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
     
 
@@ -58,13 +47,6 @@ class ProfileViewController: BaseTableViewController{
         
         let cell = UITableViewCell.init()
         cell.selectionStyle = .none
-        
-        if (indexPath.section == 0) {
-            cell.textLabel?.text = "醉看红尘这场梦"
-        }else if (indexPath.section == 1){
-            cell.textLabel?.text = "离线下载"
-        }
-
         return cell
     }
     
@@ -72,11 +54,10 @@ class ProfileViewController: BaseTableViewController{
         
         if (indexPath.section==0) {
             
-            let nav = UINavigationController(rootViewController: OAuthViewController())
-            present(nav, animated: true, completion: nil)
+
             
         }else if (indexPath.section==1){
-            NSLog("点击了离线下载");
+            
         }
     }
 }
