@@ -8,22 +8,7 @@
 
 import UIKit
 
-public let QJLBgColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
 
-
-/* cell中text的Y值 */
-let topicCellTextY:CGFloat = 55
-/* cell的间距 */
-let margin:CGFloat = 10
-/* cell 底部按钮的高度 */
-let cellBottomBtnH:CGFloat = 35
-/* cell 最热评论的高度 */
-let hotCommentTitleH:CGFloat = 20
-/* 图片的最大高度 */
-let cellPictureMaxImageH:CGFloat = 1000
-/* 超过最大高度时候 设置的高度 */
-let cellPictureModifiedH:CGFloat = 250
-/* 屏幕宽度 */
 let screenW = UIScreen.main.bounds.width
 /* 屏幕高度 */
 let screenH = UIScreen.main.bounds.height

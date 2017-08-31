@@ -31,8 +31,9 @@ class MainViewController: UITabBarController {
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
         childController.title = title
-        let nav = UINavigationController(rootViewController: childController)
-        addChildViewController(nav)
+        let navC = MainNavigationController(rootViewController: childController)
+        addChildViewController(navC)
+        
     }
     
     //MARK: - 计算中间按钮的frame
