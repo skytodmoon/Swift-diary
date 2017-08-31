@@ -29,7 +29,7 @@ class ProfileViewController: BaseTableViewController{
 
     func setNav() {
         navigationItem.title = "我的"
-        view.backgroundColor = QJLBgColor
+        view.backgroundColor = UIColor(r: 0, g: 0, b: 0, alpha: 0.7)
     }
     
     func setTableView() {
@@ -38,7 +38,7 @@ class ProfileViewController: BaseTableViewController{
         
         self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 44), style: UITableViewStyle.grouped)
         self.tableView.separatorStyle = .none
-        self.tableView.sectionHeaderHeight = margin
+        self.tableView.sectionHeaderHeight = 30
         self.tableView.contentInset = UIEdgeInsetsMake(-10, 0, 0, 0)
         self.tableView.tableFooterView = MeFooterView.init(frame: CGRect.zero, settingHeightAction: { () -> () in
         })
