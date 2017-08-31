@@ -82,8 +82,7 @@ class ProfileViewController: BaseTableViewController{
         
         if (indexPath.section==0) {
             
-            let nav = UINavigationController(rootViewController: OAuthViewController())
-            present(nav, animated: true, completion: nil)
+            print("我的名字")
             
         }else if (indexPath.section==1){
             NSLog("点击了离线下载");

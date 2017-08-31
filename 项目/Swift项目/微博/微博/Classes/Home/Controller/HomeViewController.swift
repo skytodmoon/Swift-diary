@@ -36,7 +36,7 @@ class HomeViewController: BaseTableViewController {
 //        refreshControl = HomeRefreshControl()
 //        refreshControl?.addTarget(self, action: #selector(HomeViewController.loadData), for: UIControlEvents.valueChanged)
         
-        loadData()
+//        loadData()
         // Do any additional setup after loading the view.
     }
     
