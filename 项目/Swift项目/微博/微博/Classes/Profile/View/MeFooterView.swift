@@ -87,7 +87,7 @@ class MeFooterView: UIView {
         
         if button.square!.url.hasPrefix("http"){
             let vc = QJLWebViewController.init()
-            
+
             vc.url = URLRequest.init(url: URL.init(string: (button.square?.url)!)!)
             let tvc = UIApplication.shared.keyWindow?.rootViewController as! UITabBarController
             let nvc = tvc.selectedViewController as! UINavigationController

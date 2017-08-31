@@ -8,33 +8,47 @@
 
 import UIKit
 
-class MessageViewController: BaseTableViewController {
+class MessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - 判断用户是否登录
-        if !userIsLogin{
-            visitorView.setupVisitorInfo(isHome: false, imageName: "visitordiscover_image_message", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
-        }
+//        //MARK: - 判断用户是否登录
+//        if !userIsLogin{
+//            visitorView.setupVisitorInfo(isHome: false, imageName: "visitordiscover_image_message", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
+//        }
+        setNav()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setNav() {
+        
+        navigationItem.title = "我的关注"
+        
+        navigationItem.leftBarButtonItem = Common.itemWithImage(image: UIImage.init(named: "friendsRecommentIcon")!, highlightImage: UIImage.init(named: "friendsRecommentIcon-click")!, target: self, action: #selector(MessageViewController.pushToRecommend))
+        
+        view.backgroundColor = QJLBgColor
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func login() {
+        /* 点击登录按钮设置UIViewControllerAnimatedTransitioning动画 */
+        let oauthVC = OAuthViewController()
+        oauthVC.transitioningDelegate = self as UIViewControllerTransitioningDelegate
+        present(oauthVC, animated: true, completion: nil)
     }
-    */
+    
+    func pushToRecommend() {
+        self.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(RecommendController(), animated: true)
+        self.hidesBottomBarWhenPushed = false
 
+    }
+}
+
+extension MessageViewController :UIViewControllerTransitioningDelegate{
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+        return Animater()
+    }
 }
