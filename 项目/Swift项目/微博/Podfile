@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target '微博' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for 微博
+
+    pod 'Alamofire', '~> 4.2.0'         ##Swift 网络请求
+    pod 'Kingfisher', '~> 3.2.1'        ##Swift 加载网络图片
+    pod 'SnapKit', '~> 3.0.2'           ##Swift 约束布局
+    pod 'SwiftyJSON', '~> 3.1.4'        ##Swift 解析json
+    pod 'RxSwift', '~> 3.6.1'           ##Swift 响应式编程框架
+    pod 'RxCocoa', '~> 3.6.1'           ##Swift 响应式编程框架
+    
+    pod 'SVProgressHUD', '~> 2.1.2'     ## 提示功能
+    pod 'MJRefresh'                     ## 上拉和下拉刷新框架
+    pod 'IBAnimatable'                  ## 设计原型，自定义 UI，交互，导航，转场和动画 https://github.com/IBAnimatable/IBAnimatable
+    pod 'BMPlayer'                      ## 视频播放框架 https://github.com/BrikerMan/BMPlayer
+    pod 'LeanCloud'                     ## 云存储功能，可作为后台，模拟登录 https://leancloud.cn/docs/sdk_down.html
+    pod 'SwiftTheme'                    ## 主题替换方案 https://github.com/jiecao-fm/SwiftTheme
+end
