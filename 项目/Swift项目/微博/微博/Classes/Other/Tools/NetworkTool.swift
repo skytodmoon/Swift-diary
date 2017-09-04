@@ -62,6 +62,64 @@ class NetworkTool: NetworkToolProtocol {
             }
         }
     }
+    
+    /// 点击了关注按钮
+    class func loadFollowInfo(user_id: Int, completionHandler: @escaping (_ isFllowing: Bool)->()) {
+        let url = BASE_URL + "2/relation/follow/v2/?"
+        let params = ["iid": IID,
+                      "user_id": user_id,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let data = json["data"].dictionary else {
+                    return
+                }
+                guard data["description"]?.string == "关注成功" else {
+                    return
+                }
+                if let user = data["user"]?.dictionaryObject {
+                    let user_info = WTTUser(dict: user as [String : AnyObject])
+                    completionHandler(user_info.is_following!)
+                }
+            }
+        }
+        
+    }
+    
+    /// 点击了取消关注按钮
+    class func loadUnfollowInfo(user_id: Int, completionHandler: @escaping (_ isFllowing: Bool)->()) {
+        let url = BASE_URL + "/2/relation/unfollow/?"
+        let params = ["iid": IID,
+                      "user_id": user_id,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let data = json["data"].dictionary else {
+                    return
+                }
+                if let user = data["user"]?.dictionaryObject {
+                    let user_info = WTTUser(dict: user as [String : AnyObject])
+                    completionHandler(user_info.is_following!)
+                }
+            }
+        }
+        
+    }
+
 
     
     // --------------------------------- 我的 mine  ---------------------------------

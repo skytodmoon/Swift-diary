@@ -14,11 +14,13 @@ import SVProgressHUD
 class TouTiaoViewController: UIViewController {
     
     /// 微头条数据
-    fileprivate var microNews = [WeiTouTiao]()
+    fileprivate var microNews = [TouTiao]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        setupUI()
         /// 获取微头条数据
         let header = RefreshHeder(refreshingBlock: { [weak self] in
             NetworkTool.loadTouTiaoData { (weitoutiaos) in
@@ -51,6 +53,12 @@ class TouTiaoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    fileprivate lazy var headerView: WeitoutiaoHeaderView = {
+        let headerView = WeitoutiaoHeaderView.headerView()
+//        headerView.delegate = self
+        return headerView
+    }()
+    
     fileprivate lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
@@ -58,8 +66,57 @@ class TouTiaoViewController: UIViewController {
 //        tableView.delegate = self
 //        tableView.dataSource = self
         tableView.separatorStyle = .none
+        //        tableView.register(UINib(nibName: String(describing: WeiTouTiaoCell.self), bundle: nil), forCellReuseIdentifier: String(describing: WeiTouTiaoCell.self))
         return tableView
     }()
-
+    
+    /// 没有数据时显示
+    fileprivate lazy var notNetworkView: NotNetworkView = {
+        let notNetworkView = NotNetworkView.noNetworkView()
+        return notNetworkView
+    }()
+    
+    fileprivate lazy var bgView: UIView = {
+        let bgView = UIView()
+        return bgView
+    }()
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }
+
+extension TouTiaoViewController {
+    
+    fileprivate func setupUI() {
+        // 设置导航栏颜色
+        navigationController?.navigationBar.theme_barTintColor = "colors.otherNavBarTintColor"
+        view.backgroundColor = UIColor.globalBackgroundColor()
+        navigationItem.rightBarButtonItem?.theme_tintColor = "colors.black"
+        view.addSubview(bgView)
+        bgView.addSubview(headerView)
+        bgView.addSubview(tableView)
+        
+        bgView.snp.makeConstraints { (make) in
+            make.left.right.equalTo(view)
+            make.top.equalTo(view).offset(kNavBarHeight)
+            make.bottom.equalTo(view).offset(-kTabBarHeight)
+        }
+        
+        headerView.snp.makeConstraints { (make) in
+            make.top.left.right.equalTo(bgView)
+            make.height.equalTo(kWeiTouTiaoHeaderHieght)
+        }
+        
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(headerView.snp.bottom)
+            make.left.bottom.right.equalTo(bgView)
+        }
+        
+    }
+}
+
+
+

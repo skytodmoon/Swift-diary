@@ -41,8 +41,22 @@
 		5B74968D1F555C620057FC39 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74968C1F555C620057FC39 /* WelcomeViewController.swift */; };
 		5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06B1F5D379F00224234 /* TouTiaoViewController.swift */; };
 		5B88A06E1F5D37BE00224234 /* TouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06D1F5D37BE00224234 /* TouTiao.swift */; };
-		5B88A0701F5D37D100224234 /* NotNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06F1F5D37D100224234 /* NotNetworkView.swift */; };
-		5B88A0721F5D37E000224234 /* NotNetworkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0711F5D37E000224234 /* NotNetworkView.xib */; };
+		5B88A0821F5D3D3B00224234 /* CellVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0731F5D3D3B00224234 /* CellVideoView.swift */; };
+		5B88A0831F5D3D3B00224234 /* CellVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0741F5D3D3B00224234 /* CellVideoView.xib */; };
+		5B88A0841F5D3D3B00224234 /* NotNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0751F5D3D3B00224234 /* NotNetworkView.swift */; };
+		5B88A0851F5D3D3B00224234 /* NotNetworkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0761F5D3D3B00224234 /* NotNetworkView.xib */; };
+		5B88A0861F5D3D3B00224234 /* PostFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0771F5D3D3B00224234 /* PostFirstCell.swift */; };
+		5B88A0871F5D3D3B00224234 /* PostFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0781F5D3D3B00224234 /* PostFirstCell.xib */; };
+		5B88A0881F5D3D3B00224234 /* PostSecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0791F5D3D3B00224234 /* PostSecondCell.swift */; };
+		5B88A0891F5D3D3B00224234 /* PostSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A07A1F5D3D3B00224234 /* PostSecondCell.xib */; };
+		5B88A08A1F5D3D3B00224234 /* ThumbCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A07B1F5D3D3B00224234 /* ThumbCollectionView.swift */; };
+		5B88A08B1F5D3D3B00224234 /* ThumbCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A07C1F5D3D3B00224234 /* ThumbCollectionViewCell.swift */; };
+		5B88A08C1F5D3D3B00224234 /* ThumbCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A07D1F5D3D3B00224234 /* ThumbCollectionViewCell.xib */; };
+		5B88A08D1F5D3D3B00224234 /* WeiTouTiaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A07E1F5D3D3B00224234 /* WeiTouTiaoCell.swift */; };
+		5B88A08E1F5D3D3B00224234 /* WeiTouTiaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A07F1F5D3D3B00224234 /* WeiTouTiaoCell.xib */; };
+		5B88A08F1F5D3D3B00224234 /* WeitoutiaoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0801F5D3D3B00224234 /* WeitoutiaoHeaderView.swift */; };
+		5B88A0901F5D3D3B00224234 /* WeitoutiaoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0811F5D3D3B00224234 /* WeitoutiaoHeaderView.xib */; };
+		5B88A0921F5D3E3700224234 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A0911F5D3E3700224234 /* UIImage+Extension.swift */; };
 		5BAB08861F56CCF800504D42 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAB08841F56CCF800504D42 /* PublishController.swift */; };
 		5BAB08871F56CCF800504D42 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAB08851F56CCF800504D42 /* PublishController.xib */; };
 		5BC0F28B1F56A76F002259C8 /* MeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0F28A1F56A76F002259C8 /* MeFooterView.swift */; };
@@ -147,8 +161,22 @@
 		5B74968C1F555C620057FC39 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5B88A06B1F5D379F00224234 /* TouTiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouTiaoViewController.swift; sourceTree = "<group>"; };
 		5B88A06D1F5D37BE00224234 /* TouTiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouTiao.swift; sourceTree = "<group>"; };
-		5B88A06F1F5D37D100224234 /* NotNetworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotNetworkView.swift; sourceTree = "<group>"; };
-		5B88A0711F5D37E000224234 /* NotNetworkView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotNetworkView.xib; sourceTree = "<group>"; };
+		5B88A0731F5D3D3B00224234 /* CellVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellVideoView.swift; sourceTree = "<group>"; };
+		5B88A0741F5D3D3B00224234 /* CellVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellVideoView.xib; sourceTree = "<group>"; };
+		5B88A0751F5D3D3B00224234 /* NotNetworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotNetworkView.swift; sourceTree = "<group>"; };
+		5B88A0761F5D3D3B00224234 /* NotNetworkView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotNetworkView.xib; sourceTree = "<group>"; };
+		5B88A0771F5D3D3B00224234 /* PostFirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFirstCell.swift; sourceTree = "<group>"; };
+		5B88A0781F5D3D3B00224234 /* PostFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostFirstCell.xib; sourceTree = "<group>"; };
+		5B88A0791F5D3D3B00224234 /* PostSecondCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSecondCell.swift; sourceTree = "<group>"; };
+		5B88A07A1F5D3D3B00224234 /* PostSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostSecondCell.xib; sourceTree = "<group>"; };
+		5B88A07B1F5D3D3B00224234 /* ThumbCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbCollectionView.swift; sourceTree = "<group>"; };
+		5B88A07C1F5D3D3B00224234 /* ThumbCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B88A07D1F5D3D3B00224234 /* ThumbCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B88A07E1F5D3D3B00224234 /* WeiTouTiaoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiTouTiaoCell.swift; sourceTree = "<group>"; };
+		5B88A07F1F5D3D3B00224234 /* WeiTouTiaoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiTouTiaoCell.xib; sourceTree = "<group>"; };
+		5B88A0801F5D3D3B00224234 /* WeitoutiaoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeitoutiaoHeaderView.swift; sourceTree = "<group>"; };
+		5B88A0811F5D3D3B00224234 /* WeitoutiaoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeitoutiaoHeaderView.xib; sourceTree = "<group>"; };
+		5B88A0911F5D3E3700224234 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5BAB08841F56CCF800504D42 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		5BAB08851F56CCF800504D42 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
 		5BC0F28A1F56A76F002259C8 /* MeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeFooterView.swift; sourceTree = "<group>"; };
@@ -497,8 +525,21 @@
 		5B88A06A1F5D378800224234 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B88A06F1F5D37D100224234 /* NotNetworkView.swift */,
-				5B88A0711F5D37E000224234 /* NotNetworkView.xib */,
+				5B88A0731F5D3D3B00224234 /* CellVideoView.swift */,
+				5B88A0741F5D3D3B00224234 /* CellVideoView.xib */,
+				5B88A0751F5D3D3B00224234 /* NotNetworkView.swift */,
+				5B88A0761F5D3D3B00224234 /* NotNetworkView.xib */,
+				5B88A0771F5D3D3B00224234 /* PostFirstCell.swift */,
+				5B88A0781F5D3D3B00224234 /* PostFirstCell.xib */,
+				5B88A0791F5D3D3B00224234 /* PostSecondCell.swift */,
+				5B88A07A1F5D3D3B00224234 /* PostSecondCell.xib */,
+				5B88A07B1F5D3D3B00224234 /* ThumbCollectionView.swift */,
+				5B88A07C1F5D3D3B00224234 /* ThumbCollectionViewCell.swift */,
+				5B88A07D1F5D3D3B00224234 /* ThumbCollectionViewCell.xib */,
+				5B88A07E1F5D3D3B00224234 /* WeiTouTiaoCell.swift */,
+				5B88A07F1F5D3D3B00224234 /* WeiTouTiaoCell.xib */,
+				5B88A0801F5D3D3B00224234 /* WeitoutiaoHeaderView.swift */,
+				5B88A0811F5D3D3B00224234 /* WeitoutiaoHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +591,7 @@
 				5BD8B9461F57E2930043C64C /* UIColor+Extension.swift */,
 				5BD8B9471F57E2930043C64C /* UILabel+Extension.swift */,
 				5B66F1631F5933D40077C75C /* Date+Extension.swift */,
+				5B88A0911F5D3E3700224234 /* UIImage+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -704,21 +746,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B654CDC1F553B2D0076CDA0 /* LaunchScreen.storyboard in Resources */,
+				5B88A0891F5D3D3B00224234 /* PostSecondCell.xib in Resources */,
 				5B66F16C1F59382B0077C75C /* settingPlist.plist in Resources */,
 				5BF0B3471F57F93A004BA137 /* night_theme.plist in Resources */,
 				5B66F1681F5937020077C75C /* SettingCell.xib in Resources */,
+				5B88A0831F5D3D3B00224234 /* CellVideoView.xib in Resources */,
 				5B66F1531F5930670077C75C /* AllConcernsCell.xib in Resources */,
 				5BAB08871F56CCF800504D42 /* PublishController.xib in Resources */,
+				5B88A0851F5D3D3B00224234 /* NotNetworkView.xib in Resources */,
 				5BF0B32A1F57F3CC004BA137 /* LoginHeaderView.xib in Resources */,
 				5B66F15B1F5931DE0077C75C /* ConcernNavigationView.xib in Resources */,
+				5B88A0901F5D3D3B00224234 /* WeitoutiaoHeaderView.xib in Resources */,
+				5B88A0871F5D3D3B00224234 /* PostFirstCell.xib in Resources */,
 				5BF0B3461F57F93A004BA137 /* default_theme.plist in Resources */,
-				5B88A0721F5D37E000224234 /* NotNetworkView.xib in Resources */,
+				5B88A08E1F5D3D3B00224234 /* WeiTouTiaoCell.xib in Resources */,
 				5B654CD91F553B2D0076CDA0 /* Assets.xcassets in Resources */,
 				5B654CD71F553B2D0076CDA0 /* Main.storyboard in Resources */,
 				5BF0B33C1F57F750004BA137 /* MineOtherCell.xib in Resources */,
 				5BF0B3381F57F6C3004BA137 /* MyConcernCell.xib in Resources */,
 				5B66F15F1F5932420077C75C /* ConcernHeaderView.xib in Resources */,
 				5BF0B3341F57F648004BA137 /* MineFirstSectionCell.xib in Resources */,
+				5B88A08C1F5D3D3B00224234 /* ThumbCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,7 +846,9 @@
 				5BC0F2961F56B590002259C8 /* QJLWebViewController.swift in Sources */,
 				5B66F1571F5931850077C75C /* TopTabViewController.swift in Sources */,
 				5BE0D0471F55879600E649F3 /* StatusTableViewCell.swift in Sources */,
+				5B88A08F1F5D3D3B00224234 /* WeitoutiaoHeaderView.swift in Sources */,
 				5BC0F28B1F56A76F002259C8 /* MeFooterView.swift in Sources */,
+				5B88A0921F5D3E3700224234 /* UIImage+Extension.swift in Sources */,
 				5BF0B3301F57F5BC004BA137 /* MyTheme.swift in Sources */,
 				5B66F1591F5931CF0077C75C /* ConcernNavigationView.swift in Sources */,
 				5BE0D0491F5587A500E649F3 /* StatusNormalTableViewCell.swift in Sources */,
@@ -806,6 +856,7 @@
 				5BD8B94C1F57E2930043C64C /* String+Extension.swift in Sources */,
 				5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */,
 				5BD8B9511F57E2930043C64C /* UILabel+Extension.swift in Sources */,
+				5B88A08B1F5D3D3B00224234 /* ThumbCollectionViewCell.swift in Sources */,
 				5B654D1A1F5544D50076CDA0 /* OAuthViewController.swift in Sources */,
 				5B66F1671F5937020077C75C /* SettingCell.swift in Sources */,
 				5B66F1621F5932D60077C75C /* UserCard.swift in Sources */,
@@ -828,16 +879,21 @@
 				5B66F16A1F5937AF0077C75C /* OfflineDownloadController.swift in Sources */,
 				5BE0D04D1F5587C200E649F3 /* StatusTableViewTopView.swift in Sources */,
 				5B654CD21F553B2D0076CDA0 /* AppDelegate.swift in Sources */,
+				5B88A0861F5D3D3B00224234 /* PostFirstCell.swift in Sources */,
+				5B88A08D1F5D3D3B00224234 /* WeiTouTiaoCell.swift in Sources */,
 				5BF0B3281F57F3B9004BA137 /* LoginHeaderView.swift in Sources */,
 				5B654D131F553F8C0076CDA0 /* DiscoverViewController.swift in Sources */,
 				5BD8B93D1F57E18A0043C64C /* RefreshHeder.swift in Sources */,
 				5B654D151F553F9E0076CDA0 /* ProfileViewController.swift in Sources */,
 				5BF0B32C1F57F4EC004BA137 /* MoreLoginViewController.swift in Sources */,
+				5B88A08A1F5D3D3B00224234 /* ThumbCollectionView.swift in Sources */,
 				5B66F15D1F5932340077C75C /* ConcernHeaderView.swift in Sources */,
 				5BF0B3401F57F7A8004BA137 /* SettingViewController.swift in Sources */,
 				5BD8B9391F57DF8F0043C64C /* MainNavigationController.swift in Sources */,
 				5B654D1D1F5545170076CDA0 /* VisitorView.swift in Sources */,
+				5B88A0821F5D3D3B00224234 /* CellVideoView.swift in Sources */,
 				5BE0D04B1F5587AF00E649F3 /* StatusForwardTableViewCell.swift in Sources */,
+				5B88A0881F5D3D3B00224234 /* PostSecondCell.swift in Sources */,
 				5B66F1641F5933D40077C75C /* Date+Extension.swift in Sources */,
 				5BD8B94B1F57E2930043C64C /* NSDate+Extension.swift in Sources */,
 				5BF0B33E1F57F791004BA137 /* MyConcernController.swift in Sources */,
@@ -847,7 +903,7 @@
 				5BD8B94D1F57E2930043C64C /* TitleButton+Extension.swift in Sources */,
 				5BF0B3331F57F648004BA137 /* MineFirstSectionCell.swift in Sources */,
 				5BD8B9521F57E2930043C64C /* Common.swift in Sources */,
-				5B88A0701F5D37D100224234 /* NotNetworkView.swift in Sources */,
+				5B88A0841F5D3D3B00224234 /* NotNetworkView.swift in Sources */,
 				5B66F1501F59303D0077C75C /* AllConcernsCell.swift in Sources */,
 				5B654D0F1F553F5D0076CDA0 /* HomeViewController.swift in Sources */,
 				5B654D111F553F720076CDA0 /* MessageViewController.swift in Sources */,
