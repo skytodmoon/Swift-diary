@@ -27,7 +27,6 @@
 		5B654D1F1F554C160076CDA0 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B654D1E1F554C160076CDA0 /* UserAccount.swift */; };
 		5B66F1501F59303D0077C75C /* AllConcernsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66F14E1F59303D0077C75C /* AllConcernsCell.swift */; };
 		5B66F1531F5930670077C75C /* AllConcernsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B66F1521F5930670077C75C /* AllConcernsCell.xib */; };
-		5B66F1551F5930AE0077C75C /* WeiTouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66F1541F5930AE0077C75C /* WeiTouTiao.swift */; };
 		5B66F1571F5931850077C75C /* TopTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66F1561F5931850077C75C /* TopTabViewController.swift */; };
 		5B66F1591F5931CF0077C75C /* ConcernNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66F1581F5931CF0077C75C /* ConcernNavigationView.swift */; };
 		5B66F15B1F5931DE0077C75C /* ConcernNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B66F15A1F5931DE0077C75C /* ConcernNavigationView.xib */; };
@@ -40,9 +39,12 @@
 		5B66F16A1F5937AF0077C75C /* OfflineDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66F1691F5937AF0077C75C /* OfflineDownloadController.swift */; };
 		5B66F16C1F59382B0077C75C /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B66F16B1F59382B0077C75C /* settingPlist.plist */; };
 		5B74968D1F555C620057FC39 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74968C1F555C620057FC39 /* WelcomeViewController.swift */; };
+		5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06B1F5D379F00224234 /* TouTiaoViewController.swift */; };
+		5B88A06E1F5D37BE00224234 /* TouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06D1F5D37BE00224234 /* TouTiao.swift */; };
+		5B88A0701F5D37D100224234 /* NotNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B88A06F1F5D37D100224234 /* NotNetworkView.swift */; };
+		5B88A0721F5D37E000224234 /* NotNetworkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B88A0711F5D37E000224234 /* NotNetworkView.xib */; };
 		5BAB08861F56CCF800504D42 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAB08841F56CCF800504D42 /* PublishController.swift */; };
 		5BAB08871F56CCF800504D42 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAB08851F56CCF800504D42 /* PublishController.xib */; };
-		5BC0F2881F569E8B002259C8 /* NewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0F2871F569E8B002259C8 /* NewfeatureCollectionViewController.swift */; };
 		5BC0F28B1F56A76F002259C8 /* MeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0F28A1F56A76F002259C8 /* MeFooterView.swift */; };
 		5BC0F28E1F56A8B6002259C8 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0F28D1F56A8B6002259C8 /* Square.swift */; };
 		5BC0F2921F56B24D002259C8 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0F2911F56B24D002259C8 /* SquareButton.swift */; };
@@ -131,7 +133,6 @@
 		5B654D1E1F554C160076CDA0 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		5B66F14E1F59303D0077C75C /* AllConcernsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllConcernsCell.swift; sourceTree = "<group>"; };
 		5B66F1521F5930670077C75C /* AllConcernsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllConcernsCell.xib; sourceTree = "<group>"; };
-		5B66F1541F5930AE0077C75C /* WeiTouTiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiTouTiao.swift; sourceTree = "<group>"; };
 		5B66F1561F5931850077C75C /* TopTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTabViewController.swift; sourceTree = "<group>"; };
 		5B66F1581F5931CF0077C75C /* ConcernNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcernNavigationView.swift; sourceTree = "<group>"; };
 		5B66F15A1F5931DE0077C75C /* ConcernNavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConcernNavigationView.xib; sourceTree = "<group>"; };
@@ -144,9 +145,12 @@
 		5B66F1691F5937AF0077C75C /* OfflineDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineDownloadController.swift; sourceTree = "<group>"; };
 		5B66F16B1F59382B0077C75C /* settingPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
 		5B74968C1F555C620057FC39 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5B88A06B1F5D379F00224234 /* TouTiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouTiaoViewController.swift; sourceTree = "<group>"; };
+		5B88A06D1F5D37BE00224234 /* TouTiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouTiao.swift; sourceTree = "<group>"; };
+		5B88A06F1F5D37D100224234 /* NotNetworkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotNetworkView.swift; sourceTree = "<group>"; };
+		5B88A0711F5D37E000224234 /* NotNetworkView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotNetworkView.xib; sourceTree = "<group>"; };
 		5BAB08841F56CCF800504D42 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		5BAB08851F56CCF800504D42 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
-		5BC0F2871F569E8B002259C8 /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		5BC0F28A1F56A76F002259C8 /* MeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeFooterView.swift; sourceTree = "<group>"; };
 		5BC0F28D1F56A8B6002259C8 /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		5BC0F2911F56B24D002259C8 /* SquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 		5B654D011F553D440076CDA0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B88A0671F5D378800224234 /* TouTiao */,
 				5B7496891F555C2A0057FC39 /* Newfeature */,
 				5B654D201F554D330076CDA0 /* Other */,
 				5B654D181F5544BF0076CDA0 /* OAuth */,
@@ -459,9 +464,43 @@
 			isa = PBXGroup;
 			children = (
 				5B74968C1F555C620057FC39 /* WelcomeViewController.swift */,
-				5BC0F2871F569E8B002259C8 /* NewfeatureCollectionViewController.swift */,
 			);
 			path = Newfeature;
+			sourceTree = "<group>";
+		};
+		5B88A0671F5D378800224234 /* TouTiao */ = {
+			isa = PBXGroup;
+			children = (
+				5B88A0681F5D378800224234 /* Controller */,
+				5B88A0691F5D378800224234 /* Model */,
+				5B88A06A1F5D378800224234 /* View */,
+			);
+			path = TouTiao;
+			sourceTree = "<group>";
+		};
+		5B88A0681F5D378800224234 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B88A06B1F5D379F00224234 /* TouTiaoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B88A0691F5D378800224234 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B88A06D1F5D37BE00224234 /* TouTiao.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B88A06A1F5D378800224234 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B88A06F1F5D37D100224234 /* NotNetworkView.swift */,
+				5B88A0711F5D37E000224234 /* NotNetworkView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BC0F2891F56A762002259C8 /* View */ = {
@@ -521,7 +560,6 @@
 				5BD8B9491F57E2930043C64C /* Common.swift */,
 				5BD8B94A1F57E2930043C64C /* NetworkTool.swift */,
 				5BF0B32F1F57F5BC004BA137 /* MyTheme.swift */,
-				5B66F1541F5930AE0077C75C /* WeiTouTiao.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -674,6 +712,7 @@
 				5BF0B32A1F57F3CC004BA137 /* LoginHeaderView.xib in Resources */,
 				5B66F15B1F5931DE0077C75C /* ConcernNavigationView.xib in Resources */,
 				5BF0B3461F57F93A004BA137 /* default_theme.plist in Resources */,
+				5B88A0721F5D37E000224234 /* NotNetworkView.xib in Resources */,
 				5B654CD91F553B2D0076CDA0 /* Assets.xcassets in Resources */,
 				5B654CD71F553B2D0076CDA0 /* Main.storyboard in Resources */,
 				5BF0B33C1F57F750004BA137 /* MineOtherCell.xib in Resources */,
@@ -753,7 +792,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF0B3371F57F6C3004BA137 /* MyConcernCell.swift in Sources */,
-				5B66F1551F5930AE0077C75C /* WeiTouTiao.swift in Sources */,
 				5BC0F28E1F56A8B6002259C8 /* Square.swift in Sources */,
 				5BF0B3221F57F14E004BA137 /* MineCellModel.swift in Sources */,
 				5B654D051F553D690076CDA0 /* MainViewController.swift in Sources */,
@@ -766,6 +804,7 @@
 				5BE0D0491F5587A500E649F3 /* StatusNormalTableViewCell.swift in Sources */,
 				5BE0D04F1F5587CC00E649F3 /* StatusTableViewBottomView.swift in Sources */,
 				5BD8B94C1F57E2930043C64C /* String+Extension.swift in Sources */,
+				5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */,
 				5BD8B9511F57E2930043C64C /* UILabel+Extension.swift in Sources */,
 				5B654D1A1F5544D50076CDA0 /* OAuthViewController.swift in Sources */,
 				5B66F1671F5937020077C75C /* SettingCell.swift in Sources */,
@@ -774,6 +813,7 @@
 				5BD8B94F1F57E2930043C64C /* UIButtton+Extension.swift in Sources */,
 				5BF120791F566C750091A556 /* PhotoBrowserCell.swift in Sources */,
 				5B654D171F55441D0076CDA0 /* BaseTableViewController.swift in Sources */,
+				5B88A06E1F5D37BE00224234 /* TouTiao.swift in Sources */,
 				5BE0D0511F5587E000E649F3 /* StatusPictureView.swift in Sources */,
 				5BD8B9501F57E2930043C64C /* UIColor+Extension.swift in Sources */,
 				5BF0B32E1F57F551004BA137 /* VerticalButton.swift in Sources */,
@@ -794,7 +834,6 @@
 				5B654D151F553F9E0076CDA0 /* ProfileViewController.swift in Sources */,
 				5BF0B32C1F57F4EC004BA137 /* MoreLoginViewController.swift in Sources */,
 				5B66F15D1F5932340077C75C /* ConcernHeaderView.swift in Sources */,
-				5BC0F2881F569E8B002259C8 /* NewfeatureCollectionViewController.swift in Sources */,
 				5BF0B3401F57F7A8004BA137 /* SettingViewController.swift in Sources */,
 				5BD8B9391F57DF8F0043C64C /* MainNavigationController.swift in Sources */,
 				5B654D1D1F5545170076CDA0 /* VisitorView.swift in Sources */,
@@ -808,6 +847,7 @@
 				5BD8B94D1F57E2930043C64C /* TitleButton+Extension.swift in Sources */,
 				5BF0B3331F57F648004BA137 /* MineFirstSectionCell.swift in Sources */,
 				5BD8B9521F57E2930043C64C /* Common.swift in Sources */,
+				5B88A0701F5D37D100224234 /* NotNetworkView.swift in Sources */,
 				5B66F1501F59303D0077C75C /* AllConcernsCell.swift in Sources */,
 				5B654D0F1F553F5D0076CDA0 /* HomeViewController.swift in Sources */,
 				5B654D111F553F720076CDA0 /* MessageViewController.swift in Sources */,

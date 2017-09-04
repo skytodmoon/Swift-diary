@@ -14,8 +14,9 @@ import SVProgressHUD
 
 protocol NetworkToolProtocol {
     
-    
-    
+    // --------------------------  微  头  条  --------------------------
+    /// 获取微头条数据
+    static func loadTouTiaoData(completionHandler: @escaping (_ weitoutiaos: [TouTiao]) -> ())
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     static func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->())
@@ -27,6 +28,42 @@ protocol NetworkToolProtocol {
 
 
 class NetworkTool: NetworkToolProtocol {
+    
+    // --------------------------  微  头  条  --------------------------
+    /// 获取微头条数据
+    class func loadTouTiaoData(completionHandler: @escaping (_ weitoutiaos: [TouTiao]) -> ()) {
+        let url = BASE_URL + "api/news/feed/v54/?"
+        let params = ["iid": IID,
+                      "category": "weitoutiao",
+                      "count": 20,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let dataJSONs = json["data"].array else {
+                    return
+                }
+                var weitoutiaos = [TouTiao]()
+                for dataJSON in dataJSONs {
+                    if let content = dataJSON["content"].string {
+                        let data = content.data(using: String.Encoding.utf8)! as Data
+                        let dict = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                        let weitoutiao = TouTiao(dict: dict as! [String : AnyObject])
+                        weitoutiaos.append(weitoutiao)
+                    }
+                }
+                completionHandler(weitoutiaos)
+            }
+        }
+    }
+
+    
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     class func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->()) {

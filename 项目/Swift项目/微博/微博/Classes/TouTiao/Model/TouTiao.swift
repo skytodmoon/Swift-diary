@@ -1,14 +1,15 @@
 //
-//  WeiTouTiao.swift
+//  TouTiao.swift
 //  微博
 //
-//  Created by 金亮齐 on 2017/9/1.
+//  Created by 金亮齐 on 2017/9/4.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
+
 import UIKit
 
-class WeiTouTiao {
+class TouTiao {
     
     var relateNewsCellHeight: CGFloat? {
         let size = CGSize(width: screenWidth - 30 * 2, height: CGFloat(MAXFLOAT))
@@ -1055,4 +1056,3 @@ class Video {
         }
     }
 }
-

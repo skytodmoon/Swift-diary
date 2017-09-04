@@ -18,7 +18,7 @@ class AllConcernsCell: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var weitoutiao: WeiTouTiao? {
+    var weitoutiao: TouTiao? {
         didSet{
             
         }

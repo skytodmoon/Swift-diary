@@ -162,7 +162,8 @@ extension MineViewController {
             let followDetail = ProfileViewController()
             navigationController?.pushViewController(followDetail, animated: true)
         } else if indexPath.section == 2 { // 头条商城，京东特供
-            
+            let toutiao = TouTiaoViewController()
+            navigationController?.pushViewController(toutiao, animated: true)
         }  else if indexPath.section == 3 { // 我要爆料，用户反馈，系统设置
             if indexPath.row == 2 { // 系统设置
                 self.navigationController?.pushViewController(SettingViewController(), animated: true)
