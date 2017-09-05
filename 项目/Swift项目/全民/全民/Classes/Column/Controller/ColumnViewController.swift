@@ -9,27 +9,31 @@
 import UIKit
 
 class ColumnViewController: UIViewController {
+    
+    
+    fileprivate lazy var ColumnArray = [ColumnModel]()
+    fileprivate lazy var columnVM: ColumnVM = ColumnVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupUI()
+        
+        requestData()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+}
+extension ColumnViewController {
+    // MARK: - 设置UI内容
+    fileprivate func setupUI() {
+       
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - 发送网络请求
+    fileprivate func requestData () {
+        columnVM.loadColumnData {
+            
+        }
     }
-    */
-
 }

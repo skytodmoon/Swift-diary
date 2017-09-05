@@ -16,6 +16,16 @@ let HOME_CHILDVCS: String = "childvcs" // 首页contentView中的子控制器
 let DEFAULT_CHILDVCS: String = "default" // 首页初始化的子控制器
 let ALL_GMES: String = "GameVC.archive"
 
+
+///服务器请求的地址
+let QUANMIN_TV_JSON = "http://www.quanmin.tv/json/"
+let HOME_OTHER_JSON = "http://www.quanmin.tv/json/categories/"
+let LIST_JSON       =  "/list.json?"
+let List_iphone_json = "/list-iphone.json?"
+
+
+
+
 /// notification
 let NotifyUpdateCategory = NSNotification.Name(rawValue:"notifyUpdateCategory")
 let KSelectedChannel: String = "selectedChannel"
