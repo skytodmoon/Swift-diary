@@ -7,14 +7,7 @@ target '全民' do
 
   # Pods for 全民
 
-  target '全民Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '全民UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+   pod 'Alamofire', '~> 4.2.0'
+   pod 'Kingfisher', '~> 3.2.0'
 
 end
