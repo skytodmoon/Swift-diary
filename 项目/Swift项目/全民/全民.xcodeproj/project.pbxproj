@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		044C35E102D24AAB9613669C /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE14C53BF15766FCD285810 /* Pods___.framework */; };
+		5B041FF91F5EB7D50012DD4B /* ColumnVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B041FF81F5EB7D50012DD4B /* ColumnVM.swift */; };
+		5B041FFC1F5EBA300012DD4B /* CollectionColumnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B041FFA1F5EBA300012DD4B /* CollectionColumnCell.swift */; };
+		5B041FFD1F5EBA300012DD4B /* CollectionColumnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B041FFB1F5EBA300012DD4B /* CollectionColumnCell.xib */; };
 		5B3421451F5E8737004D6DE6 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3421441F5E8737004D6DE6 /* NSDate+Extension.swift */; };
 		5B63C5CB1F5E729200F5DFFD /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63C5CA1F5E729200F5DFFD /* NetworkTool.swift */; };
 		5B63C5CD1F5E72C700F5DFFD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63C5CC1F5E72C700F5DFFD /* Common.swift */; };
@@ -50,6 +53,9 @@
 		3624FE3E03B083A45E098E80 /* Pods___UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1DBFC90CB7022BC7A6880C /* Pods-全民.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-全民.debug.xcconfig"; path = "Pods/Target Support Files/Pods-全民/Pods-全民.debug.xcconfig"; sourceTree = "<group>"; };
 		4AE14C53BF15766FCD285810 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B041FF81F5EB7D50012DD4B /* ColumnVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnVM.swift; sourceTree = "<group>"; };
+		5B041FFA1F5EBA300012DD4B /* CollectionColumnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionColumnCell.swift; sourceTree = "<group>"; };
+		5B041FFB1F5EBA300012DD4B /* CollectionColumnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionColumnCell.xib; sourceTree = "<group>"; };
 		5B3421441F5E8737004D6DE6 /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		5B63C5CA1F5E729200F5DFFD /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		5B63C5CC1F5E72C700F5DFFD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 		5B63C5D51F5E76E900F5DFFD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B041FF81F5EB7D50012DD4B /* ColumnVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -151,6 +158,8 @@
 		5B63C5D61F5E76E900F5DFFD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B041FFA1F5EBA300012DD4B /* CollectionColumnCell.swift */,
+				5B041FFB1F5EBA300012DD4B /* CollectionColumnCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 				5BFD731A1F5E554200BDE0E2 /* LaunchScreen.storyboard in Resources */,
 				5BFD73171F5E554200BDE0E2 /* Assets.xcassets in Resources */,
 				5BFD73151F5E554200BDE0E2 /* Main.storyboard in Resources */,
+				5B041FFD1F5EBA300012DD4B /* CollectionColumnCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,8 +533,10 @@
 				5B3421451F5E8737004D6DE6 /* NSDate+Extension.swift in Sources */,
 				5B8050681F5E66CB0051B0EB /* ProfileViewController.swift in Sources */,
 				5B724EFD1F5EAD05002F4914 /* ColumnViewController.swift in Sources */,
+				5B041FF91F5EB7D50012DD4B /* ColumnVM.swift in Sources */,
 				5B63C5CD1F5E72C700F5DFFD /* Common.swift in Sources */,
 				5BFD73101F5E554200BDE0E2 /* AppDelegate.swift in Sources */,
+				5B041FFC1F5EBA300012DD4B /* CollectionColumnCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
