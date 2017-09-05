@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionColumnCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var columnModel: ColumnModel? {
+        didSet {
+            guard let iconURL = URL(string: columnModel?.image ?? "") else { return }
+            imageView.kf.setImage(with: iconURL)
+            nameLabel.text = columnModel?.name
+        }
     }
 
 }

@@ -10,12 +10,16 @@ import UIKit
 
 class ColumnModel: NSObject,NSCoding {
     
-    var cname: String = ""
-    var ename: String = ""
-    var img: String    = ""
-    var ext: String    = ""
+    var id: Int?
+    var name: String = ""
+    var slug: String = ""
+    var first_letter: String    = ""
     var status: Int?
-    var cdn_rate: Int?
+    var prompt: Int?
+    var image: String = ""
+    var thumb: String = ""
+    var priority: Int?
+    var screen: Int?
     
     init(dict: [String: Any]) {
         super.init()
@@ -23,26 +27,35 @@ class ColumnModel: NSObject,NSCoding {
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-    
+   
     // MARK:- 处理需要归档的字段
     func encode(with aCoder:NSCoder) {
-        aCoder.encode(cname, forKey:"cname")
-        aCoder.encode(ename, forKey:"ename")
-        aCoder.encode(img, forKey:"img")
-        aCoder.encode(ext, forKey:"ext")
+        aCoder.encode(id, forKey:"id")
+        aCoder.encode(name, forKey:"name")
+        aCoder.encode(slug, forKey:"slug")
+        aCoder.encode(first_letter, forKey:"first_letter")
         aCoder.encode(status, forKey:"status")
-        aCoder.encode(cdn_rate, forKey:"cdn_rate")
+        aCoder.encode(prompt, forKey:"prompt")
+        aCoder.encode(image, forKey:"image")
+        aCoder.encode(thumb, forKey:"thumb")
+        aCoder.encode(priority, forKey:"priority")
+        aCoder.encode(screen, forKey:"screen")
     }
     
     // MARK:- 处理需要解档的字段
     required init(coder aDecoder:NSCoder) {
         super.init()
-        cname = (aDecoder.decodeObject(forKey:"cname")as? String)!
-        ename = (aDecoder.decodeObject(forKey:"ename")as? String)!
-        img = (aDecoder.decodeObject(forKey:"img")as? String)!
-        ext = (aDecoder.decodeObject(forKey:"ext")as? String)!
+        
+        id = aDecoder.decodeObject(forKey:"id")as? Int
+        name = (aDecoder.decodeObject(forKey:"name")as? String)!
+        slug = (aDecoder.decodeObject(forKey:"slug")as? String)!
+        first_letter = (aDecoder.decodeObject(forKey:"first_letter")as? String)!
         status = aDecoder.decodeObject(forKey:"status")as? Int
-        cdn_rate = aDecoder.decodeObject(forKey:"cdn_rate")as? Int
+        prompt = aDecoder.decodeObject(forKey:"prompt")as? Int
+        image = (aDecoder.decodeObject(forKey:"image")as? String)!
+        thumb = (aDecoder.decodeObject(forKey:"thumb")as? String)!
+        priority = aDecoder.decodeObject(forKey:"priority")as? Int
+        screen = aDecoder.decodeObject(forKey:"screen")as? Int
     }
     
     override init() {
