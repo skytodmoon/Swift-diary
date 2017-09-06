@@ -60,13 +60,12 @@ class TouTiaoViewController: UIViewController {
     }()
     
     fileprivate lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: UITableViewStyle.grouped)
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         tableView.tableFooterView = UIView()
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.separatorStyle = .none
-        //        tableView.register(UINib(nibName: String(describing: WeiTouTiaoCell.self), bundle: nil), forCellReuseIdentifier: String(describing: WeiTouTiaoCell.self))
         return tableView
     }()
     
@@ -115,6 +114,92 @@ extension TouTiaoViewController {
             make.left.bottom.right.equalTo(bgView)
         }
         
+    }
+}
+// MARK: - 顶部 头部 WeitoutiaoHeaderViewDelegate
+extension TouTiaoViewController: WeitoutiaoHeaderViewDelegate {
+    // 文字按钮点击了
+    func headerViewTextButtonClicked() {
+//        let storyboard = UIStoryboard(name: "WeiTouTiaoHeader", bundle: nil)
+//        let textVC = storyboard.instantiateViewController(withIdentifier: "TextNavigationController") as! MyNavigationController
+//        present(textVC, animated: true, completion: nil)
+    }
+    
+    // 图片按钮点击了
+    func headerViewImageButtonClicked() {
+        
+    }
+    
+    // 视频按钮点击了
+    func headerViewVideoButtonClicked() {
+        
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension TouTiaoViewController: UITableViewDelegate, UITableViewDataSource {
+    /// UITableViewDelegate
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return microNews.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let weitoutiao = microNews[indexPath.row]
+        return weitoutiao.cellH!
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = Bundle.main.loadNibNamed(String(describing: WeiTouTiaoCell.self), owner: nil, options: nil)?.last as! WeiTouTiaoCell
+        cell.weitoutiao = microNews[indexPath.row]
+        cell.delegate = self
+        return cell
+    }
+    
+    /// UIScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y;
+        if case 0...kWeiTouTiaoHeaderHieght = offsetY { // 向上滑动
+            bgView.snp.updateConstraints({ (make) in
+                make.top.equalTo(view).offset(kNavBarHeight - offsetY)
+            })
+        } else if offsetY > kWeiTouTiaoHeaderHieght {
+            bgView.snp.updateConstraints({ (make) in
+                make.top.equalTo(view).offset(-kWeiTouTiaoHeaderHieght)
+            })
+        }
+    }
+}
+
+// MARK: - WeitoutiaoCellDelegate cell
+extension TouTiaoViewController: WeitoutiaoCellDelegate {
+    
+    /// cell 顶部用户名区域点击
+    func weiTouTiaoCellofHeaderButtonClicked(weitoutiao: TouTiao) {
+        let userVC = FollowDetailViewController()
+        if let user = weitoutiao.user {
+            userVC.userid = user.user_id!
+        } else if let user_info = weitoutiao.user_info {
+            userVC.userid = user_info.user_id!
+        }
+        navigationController?.pushViewController(userVC, animated: true)
+    }
+    
+    /// 转发按钮点击
+    func weiTouTiaoCelloffeedShareButtonClicked(weitoutiaoCell: WeiTouTiaoCell) {
+//        let storyboard = UIStoryboard(name: "WeiTouTiaoHeader", bundle: nil)
+//        let feedShareVC = storyboard.instantiateViewController(withIdentifier: "FeedShareViewController") as! FeedShareViewController
+//        let weitoutiao = weitoutiaoCell.weitoutiao
+//        if weitoutiao!.title!.isEqual(to: "") {
+//            feedShareVC.content = String(describing: weitoutiao!.content!)
+//        } else {
+//            feedShareVC.content = String(describing: weitoutiao!.title!)
+//        }
+//        if let video_detail_info = weitoutiao?.video_detail_info {
+//            let detail_video_large_image = video_detail_info.detail_video_large_image
+//            feedShareVC.thumbImageURL = detail_video_large_image?.url
+//        }
+//        let navigationVC = MainNavigationController(rootViewController: feedShareVC)
+//        present(navigationVC, animated: true, completion: nil)
     }
 }
 

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.switchRootViewController(notify:)), name: NSNotification.Name(rawValue: SwitchRootViewControllerKey), object: nil)
         // Override point for customization after application launch.
         //MARK: - 同意设置颜色
         UINavigationBar.appearance().tintColor = UIColor.orange
@@ -32,34 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         //MARK: - 根控制器
-        window?.rootViewController = defaultContoller()
+        
+        window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
         return true
     }
     
     
-    deinit{
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    //MARK: - 通知中心，判断时候进入引导页
-    func switchRootViewController(notify: NSNotification){
-        if notify.object as! Bool
-        {
-            window?.rootViewController = MainViewController()
-        }else
-        {
-            window?.rootViewController = WelcomeViewController()
-        }
-    }
-    //MARK: - 用户登入之后进入引导页
-    private func defaultContoller() ->UIViewController
-    {
-        if UserAccount.userLogin(){
-            return WelcomeViewController()
-        }
-        return MainViewController()
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

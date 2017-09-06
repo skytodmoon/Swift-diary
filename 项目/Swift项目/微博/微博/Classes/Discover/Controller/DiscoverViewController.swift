@@ -8,16 +8,12 @@
 
 import UIKit
 
-class DiscoverViewController: BaseTableViewController {
+class DiscoverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - 判断用户是否登录
-        if !userIsLogin
-        {
-            visitorView.setupVisitorInfo(isHome: false, imageName: "visitordiscover_feed_image_smallicon", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
-        }
+
         // Do any additional setup after loading the view.
     }
 

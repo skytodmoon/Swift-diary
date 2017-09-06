@@ -8,15 +8,11 @@
 
 import UIKit
 
-class MessageViewController: BaseTableViewController {
+class MessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - 判断用户是否登录
-        if !userIsLogin{
-            visitorView.setupVisitorInfo(isHome: false, imageName: "visitordiscover_image_message", message: "我是醉看红尘这场梦,这是我仿写的新浪微博客户端")
-        }
 
         // Do any additional setup after loading the view.
     }
