@@ -8,18 +8,22 @@
 [![Platform](https://img.shields.io/cocoapods/p/BMPlayer.svg?style=flat)](http://cocoapods.org/pods/BMPlayer)
 [![Weibo](https://img.shields.io/badge/%E5%BE%AE%E5%8D%9A-%40%E8%89%BE%E5%8A%9B%E4%BA%9A%E5%B0%94-yellow.svg?style=flat)](http://weibo.com/536445669)
 
-A simple video player for iOS, based on AVPlayer, pure swift.
+A video player for iOS, based on AVPlayer, support the horizontal, vertical screen. support adjust volume, brightness and seek by slide, support subtitles. 
 
 [中文说明](https://github.com/BrikerMan/BMPlayer/blob/master/README.zh.md)
 
 ## Features
-- Support for horizontal and vertical play mode
-- Support play with online URL and local file
-- Adjust brightness by slide vertical at left side of screen
-- Adjust volume by slide vertical at right side of screen
-- Slide horizontal to fast forward and rewind
-- Support multi-definition video
-- Mirror mode, slow play mode
+- [x] Support for horizontal and vertical play mode
+- [x] Support play online URL and local file
+- [x] Adjust brightness by slide vertical at left side of screen
+- [x] Adjust volume by slide vertical at right side of screen
+- [x] Slide horizontal to fast forward and rewind
+- [x] Support multi-definition video
+- [x] Custom playrate
+- [x] Add Http header and other options to AVURLAsset
+- [x] Easy to customize
+- [x] Supporting show local and online subtitles 
+- [x] [Swift 3](https://developer.apple.com/swift/)
 
 ## Requirements
 - iOS 8 +
@@ -30,23 +34,19 @@ A simple video player for iOS, based on AVPlayer, pure swift.
 ### CocoaPods
 
 #### Swift3
-Please make sure using the **cocoapods 1.1.0.rc.2**, update with `sudo gem install cocoapods --pre`.
+Please make sure using the latest cocoapods, update with `sudo gem install cocoapods`.
 
 ```ruby
 target 'ProjectName' do
     use_frameworks!
     pod 'BMPlayer'
 end
+```
 
+**To test the experimental caching support with [VIMediaCache](https://github.com/vitoziv/VIMediaCache), use**
 
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |configuration|
-            configuration.build_settings['SWIFT_VERSION'] = "3.0"
-            configuration.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-        end
-    end
-end
+```swift
+pod 'BMPlayer/CacheSupport', :git => 'https://github.com/BrikerMan/BMPlayer.git'
 ```
 
 #### Swift 2.2 
@@ -106,18 +106,38 @@ player.backBlock = { [unowned self] in
 ### Set video url
 
 ```swift
-player.playWithURL(URL(string: "http://baobab.wdjcdn.com/14571455324031.mp4")!, title: "风格互换：原来你我相爱")
+let asset = BMPlayerResource(url: URL(string: "http://baobab.wdjcdn.com/14525705791193.mp4")!,
+                             name: "风格互换：原来你我相爱")
+player.setVideo(resource: asset)
 ```
 
 ### multi-definition video with cover
 
 ```swift
-let resource0 = BMPlayerItemDefinitionItem(url: URL(string: "http://baobab.wdjcdn.com/14570071502774.mp4")!, definitionName: "HD")
-let resource1 = BMPlayerItemDefinitionItem(url: URL(string: "http://baobab.wdjcdn.com/1457007294968_5824_854x480.mp4")!, definitionName: "SD")
+let res0 = BMPlayerResourceDefinition(url: URL(string: "http://baobab.wdjcdn.com/1457162012752491010143.mp4")!,
+                                      definition: "高清")
+let res1 = BMPlayerResourceDefinition(url: URL(string: "http://baobab.wdjcdn.com/1457162012752491010143.mp4")!,
+                                      definition: "标清")
+   
+let asset = BMPlayerResource(name: "周末号外丨中国第一高楼",
+                             definitions: [res0, res1],
+                             cover: URL(string: "http://img.wdjimg.com/image/video/447f973848167ee5e44b67c8d4df9839_0_0.jpeg"))
 
-let item = BMPlayerItem(title: "周末号外丨川普版权力的游戏",
-                        resource: [resource0, resource1],
-                        cover: "http://img.wdjimg.com/image/video/acdba01e52efe8082d7c33556cf61549_0_0.jpeg")
+player.setVideo(resource: asset)
+```
+
+### Add HTTP header for request
+
+```swift
+let header = ["User-Agent":"BMPlayer"]
+let options = ["AVURLAssetHTTPHeaderFieldsKey":header]
+  
+let definition = BMPlayerResourceDefinition(url: URL(string: "http://baobab.wdjcdn.com/1457162012752491010143.mp4")!,
+                                            definition: "高清",
+                                            options: options)
+  
+let asset = BMPlayerResource(name: "Video Name",
+                             definitions: [definition])
 ```
 
 ### Listening to player state changes
@@ -156,15 +176,13 @@ BMPlayerConf.shouldAutoPlay = true
 BMPlayerConf.tintColor = UIColor.whiteColor()
 // options to show header view (which include the back button, title and definition change button) , default .Always，options: .Always, .HorizantalOnly and .None
 BMPlayerConf.topBarShowInCase = .Always
-// show mirror mode, slow play mode button, default false
-BMPlayerConf.slowAndMirror = true
 // loader type, see detail：https://github.com/ninjaprox/NVActivityIndicatorView
 BMPlayerConf.loaderType  = NVActivityIndicatorType.BallRotateChase
 ```
 
-## Advanced
-- [Customize control UI](https://eliyar.biz/custom-player-ui-with-bmplayer/)
-- or Use the `BMPlayerLayer` with your own player control view~
+## Advanced Customize
+- Subclass `BMPlayerControlView` to create your personal control UI, check the Example.
+- Use the `BMPlayerLayer` with your own player control view.
 
 ## Demonstration
 ![gif](https://github.com/BrikerMan/resources/raw/master/BMPlayer/demo.gif)
@@ -180,10 +198,10 @@ This project heavily reference the Objective-C version of this project [ZFPlayer
 - [Albert Young](https://github.com/cedared)
 - [tooodooo](https://github.com/tooodooo)
 - [Ben Bahrenburg](https://github.com/benbahrenburg)
+- [MangoMade](https://github.com/MangoMade)
 
 You are welcome to fork and submit pull requests.
 
 ## License
 BMPlayer is available under the MIT license. See the LICENSE file for more info.
-
 
