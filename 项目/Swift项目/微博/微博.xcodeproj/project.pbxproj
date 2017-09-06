@@ -73,6 +73,13 @@
 		5BE226A81F5FAAF800E573F8 /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */; };
 		5BE226AA1F5FAB6700E573F8 /* TopicTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226A91F5FAB6700E573F8 /* TopicTitle.swift */; };
 		5BE226AD1F5FABA300E573F8 /* TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226AC1F5FABA300E573F8 /* TitleStyle.swift */; };
+		5BE226B01F5FAC4600E573F8 /* RelateVideoNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226AE1F5FAC4600E573F8 /* RelateVideoNewsCell.swift */; };
+		5BE226B11F5FAC4600E573F8 /* RelateVideoNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE226AF1F5FAC4600E573F8 /* RelateVideoNewsCell.xib */; };
+		5BE226B81F5FB35000E573F8 /* RelateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226B61F5FB35000E573F8 /* RelateHeaderView.swift */; };
+		5BE226B91F5FB35000E573F8 /* RelateHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE226B71F5FB35000E573F8 /* RelateHeaderView.xib */; };
+		5BE226BD1F5FB4E600E573F8 /* NSData+CRC32.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226BC1F5FB4E600E573F8 /* NSData+CRC32.m */; };
+		5BE226C01F5FB59900E573F8 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE226BF1F5FB59900E573F8 /* libz.1.2.8.tbd */; };
+		5BE226C21F5FB5A100E573F8 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE226C11F5FB5A100E573F8 /* libxml2.2.tbd */; };
 		5BF0B3221F57F14E004BA137 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3211F57F14E004BA137 /* MineCellModel.swift */; };
 		5BF0B3241F57F164004BA137 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3231F57F164004BA137 /* SettingModel.swift */; };
 		5BF0B3261F57F32E004BA137 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3251F57F32E004BA137 /* MineViewController.swift */; };
@@ -185,6 +192,15 @@
 		5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTopicCell.xib; sourceTree = "<group>"; };
 		5BE226A91F5FAB6700E573F8 /* TopicTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTitle.swift; sourceTree = "<group>"; };
 		5BE226AC1F5FABA300E573F8 /* TitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleStyle.swift; sourceTree = "<group>"; };
+		5BE226AE1F5FAC4600E573F8 /* RelateVideoNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelateVideoNewsCell.swift; sourceTree = "<group>"; };
+		5BE226AF1F5FAC4600E573F8 /* RelateVideoNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelateVideoNewsCell.xib; sourceTree = "<group>"; };
+		5BE226B61F5FB35000E573F8 /* RelateHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelateHeaderView.swift; sourceTree = "<group>"; };
+		5BE226B71F5FB35000E573F8 /* RelateHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelateHeaderView.xib; sourceTree = "<group>"; };
+		5BE226BB1F5FB4E600E573F8 /* NSData+CRC32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC32.h"; sourceTree = "<group>"; };
+		5BE226BC1F5FB4E600E573F8 /* NSData+CRC32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC32.m"; sourceTree = "<group>"; };
+		5BE226BE1F5FB50400E573F8 /* 微博-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "微博-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BE226BF1F5FB59900E573F8 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		5BE226C11F5FB5A100E573F8 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		5BF0B3211F57F14E004BA137 /* MineCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5BF0B3231F57F164004BA137 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5BF0B3251F57F32E004BA137 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +232,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE226C21F5FB5A100E573F8 /* libxml2.2.tbd in Frameworks */,
+				5BE226C01F5FB59900E573F8 /* libz.1.2.8.tbd in Frameworks */,
 				7301FB7B6AF64BF079092324 /* Pods___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +258,8 @@
 		58421CEEAFDE4F62DFDAD438 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BE226C11F5FB5A100E573F8 /* libxml2.2.tbd */,
+				5BE226BF1F5FB59900E573F8 /* libz.1.2.8.tbd */,
 				920131B516E721527776DA45 /* Pods___.framework */,
 				6CF178D42FE857210402059E /* Pods___Tests.framework */,
 				67CC26556B232AF383E40260 /* Pods___UITests.framework */,
@@ -433,6 +453,7 @@
 		5B654D201F554D330076CDA0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5BE226BE1F5FB50400E573F8 /* 微博-Bridging-Header.h */,
 				5BF0B3431F57F93A004BA137 /* Resource */,
 				5BD8B9401F57E2930043C64C /* Category */,
 				5BD8B9481F57E2930043C64C /* Tools */,
@@ -535,6 +556,8 @@
 		5BD8B9401F57E2930043C64C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5BE226BB1F5FB4E600E573F8 /* NSData+CRC32.h */,
+				5BE226BC1F5FB4E600E573F8 /* NSData+CRC32.m */,
 				5BD8B9411F57E2930043C64C /* NSDate+Extension.swift */,
 				5BD8B9421F57E2930043C64C /* String+Extension.swift */,
 				5BD8B9431F57E2930043C64C /* TitleButton+Extension.swift */,
@@ -572,6 +595,10 @@
 				5BE226A31F5FAAE900E573F8 /* VideoTitleView.swift */,
 				5BE226A51F5FAAF800E573F8 /* VideoTopicCell.swift */,
 				5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */,
+				5BE226AE1F5FAC4600E573F8 /* RelateVideoNewsCell.swift */,
+				5BE226AF1F5FAC4600E573F8 /* RelateVideoNewsCell.xib */,
+				5BE226B61F5FB35000E573F8 /* RelateHeaderView.swift */,
+				5BE226B71F5FB35000E573F8 /* RelateHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,6 +701,7 @@
 				TargetAttributes = {
 					5B654CCD1F553B2D0076CDA0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					5B654CE11F553B2D0076CDA0 = {
@@ -714,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B654CDC1F553B2D0076CDA0 /* LaunchScreen.storyboard in Resources */,
+				5BE226B11F5FAC4600E573F8 /* RelateVideoNewsCell.xib in Resources */,
 				5B88A0891F5D3D3B00224234 /* PostSecondCell.xib in Resources */,
 				5B66F16C1F59382B0077C75C /* settingPlist.plist in Resources */,
 				5BF0B3471F57F93A004BA137 /* night_theme.plist in Resources */,
@@ -730,6 +759,7 @@
 				5B88A08E1F5D3D3B00224234 /* WeiTouTiaoCell.xib in Resources */,
 				5BE226A81F5FAAF800E573F8 /* VideoTopicCell.xib in Resources */,
 				5B654CD91F553B2D0076CDA0 /* Assets.xcassets in Resources */,
+				5BE226B91F5FB35000E573F8 /* RelateHeaderView.xib in Resources */,
 				5B654CD71F553B2D0076CDA0 /* Main.storyboard in Resources */,
 				5BF0B33C1F57F750004BA137 /* MineOtherCell.xib in Resources */,
 				5BF0B3381F57F6C3004BA137 /* MyConcernCell.xib in Resources */,
@@ -817,11 +847,13 @@
 				5B66F1571F5931850077C75C /* TopTabViewController.swift in Sources */,
 				5B88A08F1F5D3D3B00224234 /* WeitoutiaoHeaderView.swift in Sources */,
 				5BC0F28B1F56A76F002259C8 /* MeFooterView.swift in Sources */,
+				5BE226B81F5FB35000E573F8 /* RelateHeaderView.swift in Sources */,
 				5B88A0921F5D3E3700224234 /* UIImage+Extension.swift in Sources */,
 				5BE226AD1F5FABA300E573F8 /* TitleStyle.swift in Sources */,
 				5BF0B3301F57F5BC004BA137 /* MyTheme.swift in Sources */,
 				5B66F1591F5931CF0077C75C /* ConcernNavigationView.swift in Sources */,
 				5BD8B94C1F57E2930043C64C /* String+Extension.swift in Sources */,
+				5BE226BD1F5FB4E600E573F8 /* NSData+CRC32.m in Sources */,
 				5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */,
 				5BE226AA1F5FAB6700E573F8 /* TopicTitle.swift in Sources */,
 				5BD8B9511F57E2930043C64C /* UILabel+Extension.swift in Sources */,
@@ -844,6 +876,7 @@
 				5B88A0861F5D3D3B00224234 /* PostFirstCell.swift in Sources */,
 				5B88A08D1F5D3D3B00224234 /* WeiTouTiaoCell.swift in Sources */,
 				5BF0B3281F57F3B9004BA137 /* LoginHeaderView.swift in Sources */,
+				5BE226B01F5FAC4600E573F8 /* RelateVideoNewsCell.swift in Sources */,
 				5B654D131F553F8C0076CDA0 /* DiscoverViewController.swift in Sources */,
 				5BD8B93D1F57E18A0043C64C /* RefreshHeder.swift in Sources */,
 				5B654D151F553F9E0076CDA0 /* ProfileViewController.swift in Sources */,
@@ -1021,10 +1054,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "微博/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "微博/Classes/Other/微博-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1035,10 +1071,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "微博/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "微博/Classes/Other/微博-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

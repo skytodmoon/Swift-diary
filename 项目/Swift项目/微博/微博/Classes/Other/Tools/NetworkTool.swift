@@ -13,6 +13,9 @@ import SVProgressHUD
 
 
 protocol NetworkToolProtocol {
+    /// 解析视频的真实链接
+    static func parseVideoRealURL(video_id: String, completionHandler:@escaping (_ realVideo: RealVideo)->())
+
     
     // --------------------------  微  头  条  --------------------------
     /// 获取微头条数据
@@ -28,6 +31,33 @@ protocol NetworkToolProtocol {
 
 
 class NetworkTool: NetworkToolProtocol {
+    /// 解析视频的真实链接
+    static func parseVideoRealURL(video_id: String, completionHandler: @escaping (RealVideo) -> ()) {
+        let r = arc4random() // 随机数
+        let url: NSString = "/video/urls/v/1/toutiao/mp4/\(video_id)?r=\(r)" as NSString
+        let data: NSData = url.data(using: String.Encoding.utf8.rawValue)! as NSData
+        var crc32 = data.getCRC32() // 使用 crc32 校验
+        if crc32 < 0 { // crc32 的值可能为负数
+            crc32 += 0x100000000
+        }
+        // 拼接
+        let realURL = "http://i.snssdk.com/video/urls/v/1/toutiao/mp4/\(video_id)?r=\(r)&s=\(crc32)"
+        Alamofire.request(realURL).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                let dict = json["data"].dictionaryObject
+                let video = RealVideo(dict: dict! as [String : AnyObject])
+                completionHandler(video)
+            }
+        }
+
+    }
+
+
+
     
     // --------------------------  微  头  条  --------------------------
     /// 获取微头条数据
