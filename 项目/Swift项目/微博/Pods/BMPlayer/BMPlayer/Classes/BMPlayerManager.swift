@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 import NVActivityIndicatorView
 
 public let BMPlayerConf = BMPlayerManager.shared
@@ -22,27 +21,25 @@ open class BMPlayerManager {
     /// 单例
     open static let shared = BMPlayerManager()
     
-    /// tint color
+    /// 主题色
     open var tintColor   = UIColor.white
     
-    /// Loader
+    /// Loader样式
     open var loaderType  = NVActivityIndicatorType.ballRotateChase
     
-    /// should auto play
+    /// 是否自动播放
     open var shouldAutoPlay = true
     
     open var topBarShowInCase = BMPlayerTopBarShowCase.always
     
-    open var animateDelayTimeInterval = TimeInterval(5)
+    /// 是否显示慢放和镜像按钮
+    open var slowAndMirror = false
     
-    /// should show log
+    /// 是否显示比例切换按钮
+    open var showScaleChangeButton = false
+    
+    /// 是否打印log
     open var allowLog  = false
-    
-    
-    internal static func asset(for resouce: BMPlayerResourceDefinition) -> AVURLAsset {
-        return AVURLAsset(url: resouce.url, options: resouce.options)
-    }
-    
     /**
      打印log
      
