@@ -80,6 +80,7 @@
 		5BE226BD1F5FB4E600E573F8 /* NSData+CRC32.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226BC1F5FB4E600E573F8 /* NSData+CRC32.m */; };
 		5BE226C01F5FB59900E573F8 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE226BF1F5FB59900E573F8 /* libz.1.2.8.tbd */; };
 		5BE226C21F5FB5A100E573F8 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE226C11F5FB5A100E573F8 /* libxml2.2.tbd */; };
+		5BE226C41F5FB9D100E573F8 /* VideoTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226C31F5FB9D100E573F8 /* VideoTopicController.swift */; };
 		5BF0B3221F57F14E004BA137 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3211F57F14E004BA137 /* MineCellModel.swift */; };
 		5BF0B3241F57F164004BA137 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3231F57F164004BA137 /* SettingModel.swift */; };
 		5BF0B3261F57F32E004BA137 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3251F57F32E004BA137 /* MineViewController.swift */; };
@@ -201,6 +202,7 @@
 		5BE226BE1F5FB50400E573F8 /* 微博-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "微博-Bridging-Header.h"; sourceTree = "<group>"; };
 		5BE226BF1F5FB59900E573F8 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
 		5BE226C11F5FB5A100E573F8 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		5BE226C31F5FB9D100E573F8 /* VideoTopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTopicController.swift; sourceTree = "<group>"; };
 		5BF0B3211F57F14E004BA137 /* MineCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5BF0B3231F57F164004BA137 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5BF0B3251F57F32E004BA137 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				5B654D101F553F720076CDA0 /* MessageViewController.swift */,
+				5BE226C31F5FB9D100E573F8 /* VideoTopicController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				5BF0B3301F57F5BC004BA137 /* MyTheme.swift in Sources */,
 				5B66F1591F5931CF0077C75C /* ConcernNavigationView.swift in Sources */,
 				5BD8B94C1F57E2930043C64C /* String+Extension.swift in Sources */,
+				5BE226C41F5FB9D100E573F8 /* VideoTopicController.swift in Sources */,
 				5BE226BD1F5FB4E600E573F8 /* NSData+CRC32.m in Sources */,
 				5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */,
 				5BE226AA1F5FAB6700E573F8 /* TopicTitle.swift in Sources */,
