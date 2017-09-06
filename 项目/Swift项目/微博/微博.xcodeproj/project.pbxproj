@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B5C4A2D1F5568750005ABFE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C4A2C1F5568750005ABFE /* Status.swift */; };
 		5B654CD21F553B2D0076CDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B654CD11F553B2D0076CDA0 /* AppDelegate.swift */; };
 		5B654CD41F553B2D0076CDA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B654CD31F553B2D0076CDA0 /* ViewController.swift */; };
 		5B654CD71F553B2D0076CDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B654CD51F553B2D0076CDA0 /* Main.storyboard */; };
@@ -68,6 +67,12 @@
 		5BD8B9511F57E2930043C64C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8B9471F57E2930043C64C /* UILabel+Extension.swift */; };
 		5BD8B9521F57E2930043C64C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8B9491F57E2930043C64C /* Common.swift */; };
 		5BD8B9531F57E2930043C64C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8B94A1F57E2930043C64C /* NetworkTool.swift */; };
+		5BE226A21F5FAAD900E573F8 /* NewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226A11F5FAAD800E573F8 /* NewsTopic.swift */; };
+		5BE226A41F5FAAE900E573F8 /* VideoTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226A31F5FAAE900E573F8 /* VideoTitleView.swift */; };
+		5BE226A71F5FAAF800E573F8 /* VideoTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226A51F5FAAF800E573F8 /* VideoTopicCell.swift */; };
+		5BE226A81F5FAAF800E573F8 /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */; };
+		5BE226AA1F5FAB6700E573F8 /* TopicTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226A91F5FAB6700E573F8 /* TopicTitle.swift */; };
+		5BE226AD1F5FABA300E573F8 /* TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE226AC1F5FABA300E573F8 /* TitleStyle.swift */; };
 		5BF0B3221F57F14E004BA137 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3211F57F14E004BA137 /* MineCellModel.swift */; };
 		5BF0B3241F57F164004BA137 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3231F57F164004BA137 /* SettingModel.swift */; };
 		5BF0B3261F57F32E004BA137 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0B3251F57F32E004BA137 /* MineViewController.swift */; };
@@ -108,7 +113,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B5C4A2C1F5568750005ABFE /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		5B654CCE1F553B2D0076CDA0 /* 微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B654CD11F553B2D0076CDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B654CD31F553B2D0076CDA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,12 @@
 		5BD8B9471F57E2930043C64C /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		5BD8B9491F57E2930043C64C /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5BD8B94A1F57E2930043C64C /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		5BE226A11F5FAAD800E573F8 /* NewsTopic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTopic.swift; sourceTree = "<group>"; };
+		5BE226A31F5FAAE900E573F8 /* VideoTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTitleView.swift; sourceTree = "<group>"; };
+		5BE226A51F5FAAF800E573F8 /* VideoTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTopicCell.swift; sourceTree = "<group>"; };
+		5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTopicCell.xib; sourceTree = "<group>"; };
+		5BE226A91F5FAB6700E573F8 /* TopicTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTitle.swift; sourceTree = "<group>"; };
+		5BE226AC1F5FABA300E573F8 /* TitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleStyle.swift; sourceTree = "<group>"; };
 		5BF0B3211F57F14E004BA137 /* MineCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5BF0B3231F57F164004BA137 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5BF0B3251F57F32E004BA137 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +250,7 @@
 		5B5C4A291F5568520005ABFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B5C4A2C1F5568750005ABFE /* Status.swift */,
+				5BE226A91F5FAB6700E573F8 /* TopicTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +361,7 @@
 		5B654D081F553F330076CDA0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5BE226AB1F5FAB9900E573F8 /* View */,
 				5B5C4A291F5568520005ABFE /* Model */,
 				5B654D091F553F330076CDA0 /* Controller */,
 			);
@@ -369,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				5B654D0B1F553F330076CDA0 /* Controller */,
+				5BE2269F1F5FAACA00E573F8 /* Model */,
+				5BE226A01F5FAACA00E573F8 /* View */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -545,6 +558,32 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		5BE2269F1F5FAACA00E573F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BE226A11F5FAAD800E573F8 /* NewsTopic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BE226A01F5FAACA00E573F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BE226A31F5FAAE900E573F8 /* VideoTitleView.swift */,
+				5BE226A51F5FAAF800E573F8 /* VideoTopicCell.swift */,
+				5BE226A61F5FAAF800E573F8 /* VideoTopicCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BE226AB1F5FAB9900E573F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BE226AC1F5FABA300E573F8 /* TitleStyle.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5BF0B3431F57F93A004BA137 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +728,7 @@
 				5B88A0871F5D3D3B00224234 /* PostFirstCell.xib in Resources */,
 				5BF0B3461F57F93A004BA137 /* default_theme.plist in Resources */,
 				5B88A08E1F5D3D3B00224234 /* WeiTouTiaoCell.xib in Resources */,
+				5BE226A81F5FAAF800E573F8 /* VideoTopicCell.xib in Resources */,
 				5B654CD91F553B2D0076CDA0 /* Assets.xcassets in Resources */,
 				5B654CD71F553B2D0076CDA0 /* Main.storyboard in Resources */,
 				5BF0B33C1F57F750004BA137 /* MineOtherCell.xib in Resources */,
@@ -771,16 +811,19 @@
 				5BF0B3371F57F6C3004BA137 /* MyConcernCell.swift in Sources */,
 				5BC0F28E1F56A8B6002259C8 /* Square.swift in Sources */,
 				5BF0B3221F57F14E004BA137 /* MineCellModel.swift in Sources */,
+				5BE226A21F5FAAD900E573F8 /* NewsTopic.swift in Sources */,
 				5B654D051F553D690076CDA0 /* MainViewController.swift in Sources */,
 				5BC0F2961F56B590002259C8 /* QJLWebViewController.swift in Sources */,
 				5B66F1571F5931850077C75C /* TopTabViewController.swift in Sources */,
 				5B88A08F1F5D3D3B00224234 /* WeitoutiaoHeaderView.swift in Sources */,
 				5BC0F28B1F56A76F002259C8 /* MeFooterView.swift in Sources */,
 				5B88A0921F5D3E3700224234 /* UIImage+Extension.swift in Sources */,
+				5BE226AD1F5FABA300E573F8 /* TitleStyle.swift in Sources */,
 				5BF0B3301F57F5BC004BA137 /* MyTheme.swift in Sources */,
 				5B66F1591F5931CF0077C75C /* ConcernNavigationView.swift in Sources */,
 				5BD8B94C1F57E2930043C64C /* String+Extension.swift in Sources */,
 				5B88A06C1F5D379F00224234 /* TouTiaoViewController.swift in Sources */,
+				5BE226AA1F5FAB6700E573F8 /* TopicTitle.swift in Sources */,
 				5BD8B9511F57E2930043C64C /* UILabel+Extension.swift in Sources */,
 				5B88A08B1F5D3D3B00224234 /* ThumbCollectionViewCell.swift in Sources */,
 				5B66F1671F5937020077C75C /* SettingCell.swift in Sources */,
@@ -790,7 +833,6 @@
 				5B88A06E1F5D37BE00224234 /* TouTiao.swift in Sources */,
 				5BD8B9501F57E2930043C64C /* UIColor+Extension.swift in Sources */,
 				5BF0B32E1F57F551004BA137 /* VerticalButton.swift in Sources */,
-				5B5C4A2D1F5568750005ABFE /* Status.swift in Sources */,
 				5BF0B3421F57F7DD004BA137 /* FollowDetailViewController.swift in Sources */,
 				5BF0B3241F57F164004BA137 /* SettingModel.swift in Sources */,
 				5BF0B3261F57F32E004BA137 /* MineViewController.swift in Sources */,
@@ -798,6 +840,7 @@
 				5BD8B94E1F57E2930043C64C /* UIBarButtonItem+Extension.swift in Sources */,
 				5B66F16A1F5937AF0077C75C /* OfflineDownloadController.swift in Sources */,
 				5B654CD21F553B2D0076CDA0 /* AppDelegate.swift in Sources */,
+				5BE226A41F5FAAE900E573F8 /* VideoTitleView.swift in Sources */,
 				5B88A0861F5D3D3B00224234 /* PostFirstCell.swift in Sources */,
 				5B88A08D1F5D3D3B00224234 /* WeiTouTiaoCell.swift in Sources */,
 				5BF0B3281F57F3B9004BA137 /* LoginHeaderView.swift in Sources */,
@@ -806,6 +849,7 @@
 				5B654D151F553F9E0076CDA0 /* ProfileViewController.swift in Sources */,
 				5BF0B32C1F57F4EC004BA137 /* MoreLoginViewController.swift in Sources */,
 				5B88A08A1F5D3D3B00224234 /* ThumbCollectionView.swift in Sources */,
+				5BE226A71F5FAAF800E573F8 /* VideoTopicCell.swift in Sources */,
 				5B66F15D1F5932340077C75C /* ConcernHeaderView.swift in Sources */,
 				5BF0B3401F57F7A8004BA137 /* SettingViewController.swift in Sources */,
 				5BD8B9391F57DF8F0043C64C /* MainNavigationController.swift in Sources */,

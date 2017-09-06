@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol VideoViewControllerDelegate : class {
+    func videoViewController(_ videoViewController : MessageViewController, targetIndex : Int)
+}
+
 class MessageViewController: UIViewController {
 
     override func viewDidLoad() {

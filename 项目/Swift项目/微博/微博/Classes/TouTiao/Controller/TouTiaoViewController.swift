@@ -60,7 +60,7 @@ class TouTiaoViewController: UIViewController {
     }()
     
     fileprivate lazy var tableView: UITableView = {
-        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: UITableViewStyle.grouped)
+        let tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), style: UITableViewStyle.plain)
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         tableView.tableFooterView = UIView()
         tableView.delegate = self
