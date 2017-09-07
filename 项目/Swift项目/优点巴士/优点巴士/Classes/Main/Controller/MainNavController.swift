@@ -13,7 +13,10 @@ class MainNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setUpNavAppearance ()
+        setUpNavAppearance()
+        
+        //全局拖拽手势
+        setUpGlobalPanGes()
         // Do any additional setup after loading the view.
     }
 
@@ -41,6 +44,55 @@ class MainNavController: UINavigationController {
     }
 
 }
+
+// MARK: - 全局拖拽手势
+extension MainNavController: UIGestureRecognizerDelegate {
+    /// 全局拖拽手势
+    func setUpGlobalPanGes() {
+        // 1.创建Pan手势
+        let target = interactivePopGestureRecognizer?.delegate
+        let globalPan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+        globalPan.delegate = self
+        self.view.addGestureRecognizer(globalPan)
+        
+        // 2.禁止系统的手势
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    /// 什么时候支持全屏手势（解决手势和TableView左滑冲突问题）
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if self.childViewControllers.count != 1 {
+            if (gestureRecognizer is UIPanGestureRecognizer) {
+                if (self.topViewController != nil) && (self.view.gestureRecognizers!.contains(gestureRecognizer)) {
+                    let tPoint: CGPoint = ((gestureRecognizer as? UIPanGestureRecognizer)?.translation(in: gestureRecognizer.view))!
+                    if tPoint.x >= 0 {
+                        let y: CGFloat = fabs(tPoint.y)
+                        let x: CGFloat = fabs(tPoint.x)
+                        let af: CGFloat = 30.0 / 180.0 * .pi  // tanf(Float(af))
+                        let tf: CGFloat = tan(af)
+                        return (y / x) <= tf
+                    } else {
+                        return false
+                    }
+                }
+            }
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    /// 移除全局手势
+    func removeGlobalPanGes() {
+        for case let ges as UIPanGestureRecognizer in self.view.gestureRecognizers! {
+            let i = self.view.gestureRecognizers?.index(of: ges)
+            self.view.gestureRecognizers?.remove(at: i!)
+            print(ges)
+        }
+    }
+}
+
+
 //MARK: - 设置导航栏的颜色
 extension MainNavController  {
     

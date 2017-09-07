@@ -15,6 +15,8 @@ class MainViewController: SWRevealViewController {
         super.viewDidLoad()
 
         setUpMainView()
+        
+        view.backgroundColor = UIColor.orange
         // Do any additional setup after loading the view.
     }
 
@@ -31,28 +33,19 @@ extension MainViewController {
     
     fileprivate func setUpMainView() {
         self.title = "优点巴士"
-        setUpNavgationBar()
+        
+        let revealController = self.getRevealViewController()
+        revealController.rearViewRevealWidth = ScreenW*0.82
+        view.addGestureRecognizer(revealController.panGestureRecognizer())
+        view.addGestureRecognizer(revealController.tapGestureRecognizer())
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_home_Nav_left").withRenderingMode(.alwaysOriginal), style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_home_Nav_right").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(MainViewController.rightClick))
     }
     
-    fileprivate func setUpNavgationBar() {
-        
-        // 1.设置左侧的Item
-        
-        let size = CGSize(width: 0, height: 0)
-        let leftBarItem = UIBarButtonItem(imageName: "icon_home_Nav_left", highImageName: "", size: size, target: self, action: #selector(self.leftClick(_:)))
-        navigationItem.leftBarButtonItems = [leftBarItem]
-        
-        // 2.设置右侧的Item
-        let rightBarItem = UIBarButtonItem(imageName: "icon_home_Nav_right", highImageName: "", size: size, target: self, action: #selector(self.rightClick(_:)))
-        navigationItem.rightBarButtonItems = [rightBarItem]
-        
+    @objc fileprivate func leftClick() {
+        self.revealViewController().revealToggle(nil)
     }
-    
-    @objc fileprivate func leftClick(_ btn: UIButton) {
-        print("点击了左侧")
-    }
-    
-    
     @objc fileprivate func rightClick(_ btn: UIButton) {
         let messageVC = MessageController()
         navigationController?.pushViewController(messageVC, animated: true)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SWRevealViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,21 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         
-        let started = UserDefaults.standard.value(forKey: "started")
-        if started == nil {
-            let vc = NewFeatureController()
-            self.window?.rootViewController = vc
-            
-            vc.startClosure = {
-                () -> Void in
-                self.window?.rootViewController = MainNavController(rootViewController: MainViewController())
-                let userDefaults = UserDefaults.standard
-                userDefaults.setValue("start", forKey: "started")
-                userDefaults.synchronize()
-            }
-        } else {
-            self.window?.rootViewController = MainNavController(rootViewController: MainViewController())
-        }
+        let homeVc = MainViewController()
+        let sideVc = ProfileViewController()
+        let homeNav = MainNavController(rootViewController: homeVc)
+        let revealController = SWRevealViewController(rearViewController: sideVc, frontViewController: homeNav)
+        revealController?.delegate = self
+        self.window?.rootViewController = revealController
         self.window?.makeKeyAndVisible()
         
     }
@@ -69,5 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+
+extension AppDelegate: SWRevealViewControllerDelegate {
+    @nonobjc func revealController(_ revealController: SWRevealViewController, animationControllerFor operation: SWRevealControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> Any? {
+        if operation != SWRevealControllerOperationReplaceRightController {
+            return nil
+        }
+        return nil
+    }
 }
 
