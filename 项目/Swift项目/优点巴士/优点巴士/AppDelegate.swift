@@ -33,13 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             vc.startClosure = {
                 () -> Void in
-                self.window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+                self.window?.rootViewController = MainNavController(rootViewController: MainViewController())
                 let userDefaults = UserDefaults.standard
                 userDefaults.setValue("start", forKey: "started")
                 userDefaults.synchronize()
             }
         } else {
-            self.window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+            self.window?.rootViewController = MainNavController(rootViewController: MainViewController())
         }
         self.window?.makeKeyAndVisible()
         

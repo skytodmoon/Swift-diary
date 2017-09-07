@@ -17,6 +17,9 @@
 		5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */; };
 		5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */; };
 		5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */; };
+		5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C3D1F60E85F00F7DD93 /* MainNavController.swift */; };
+		5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C401F60E9C000F7DD93 /* UIButton+Extension.swift */; };
+		5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C441F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift */; };
 		D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureController.swift; sourceTree = "<group>"; };
 		5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		5B8D6C3D1F60E85F00F7DD93 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
+		5B8D6C401F60E9C000F7DD93 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		5B8D6C441F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		706A96BA0D19609947C495A7 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.release.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 			children = (
 				5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */,
 				5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */,
+				5B8D6C3D1F60E85F00F7DD93 /* MainNavController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 		5B8D6C391F60DEF600F7DD93 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B8D6C3F1F60E9B200F7DD93 /* Category */,
 				5B8D6C3A1F60DF3000F7DD93 /* Tools */,
 			);
 			path = Other;
@@ -208,6 +216,15 @@
 				5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		5B8D6C3F1F60E9B200F7DD93 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B8D6C401F60E9C000F7DD93 /* UIButton+Extension.swift */,
+				5B8D6C441F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,11 +412,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
 				5B228ACC1F601276004CA389 /* ViewController.swift in Sources */,
 				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
 				5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */,
+				5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
+				5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

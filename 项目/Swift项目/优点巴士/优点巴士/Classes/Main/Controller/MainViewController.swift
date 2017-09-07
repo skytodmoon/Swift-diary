@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.orange
+        setUpMainView()
         // Do any additional setup after loading the view.
     }
 
@@ -23,14 +23,35 @@ class MainViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+// MARK: - 初始化UI
+extension MainViewController {
+    
+    fileprivate func setUpMainView() {
+        setUpNavgationBar()
     }
-    */
-
+    
+    fileprivate func setUpNavgationBar() {
+        
+        // 1.设置左侧的Item
+        
+        let size = CGSize(width: 0, height: 0)
+        let leftBarItem = UIBarButtonItem(imageName: "icon_home_Nav_left", highImageName: "", size: size, target: self, action: #selector(self.leftClick(_:)))
+        navigationItem.leftBarButtonItems = [leftBarItem]
+        
+        // 2.设置右侧的Item
+        let rightBarItem = UIBarButtonItem(imageName: "icon_home_Nav_right", highImageName: "", size: size, target: self, action: #selector(self.rightClick(_:)))
+        navigationItem.rightBarButtonItems = [rightBarItem]
+        
+    }
+    
+    @objc fileprivate func leftClick(_ btn: UIButton) {
+        print("点击了左侧")
+    }
+    
+    // 搜索
+    @objc fileprivate func rightClick(_ btn: UIButton) {
+        print("点击了右侧")
+    }
 }
