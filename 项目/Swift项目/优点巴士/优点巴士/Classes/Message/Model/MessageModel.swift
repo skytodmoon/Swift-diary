@@ -14,6 +14,7 @@ class MessageModel: NSObject {
     var url: String = ""
     var imgUrl: String = ""
     var title: String = ""
+    var content: String = ""
     var needEncrypt : Bool = false
     
     override init() {

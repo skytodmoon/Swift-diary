@@ -17,14 +17,17 @@ class MessageTableViewCell: UITableViewCell {
     
     @IBOutlet var mesageview: UIView!
     
+    @IBOutlet var Content: UILabel!
+    
     var messagemodel : MessageModel? {
         didSet {
             // 校验模型是否有值
             guard let message = messagemodel else { return }
             
+            
             // 设置名称
             messagetitle.text = message.title
-            
+            Content.text = message.content
             // 设置封面图片
             guard let iconURL = URL(string: message.imgUrl) else { return }
             messageimgUrl.kf.setImage(with: iconURL)

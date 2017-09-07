@@ -11,3 +11,5 @@ import UIKit
 
 let ScreenW = UIScreen.main.bounds.width
 let ScreenH = UIScreen.main.bounds.height
+let offsetDetailRight:CGFloat = 90
+let offsetMainRight:CGFloat = 320

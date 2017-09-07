@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SWRevealViewController
 
-class MainViewController: UIViewController {
+class MainViewController: SWRevealViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

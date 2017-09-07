@@ -35,7 +35,11 @@ class WKWebViewController: UIViewController {
     convenience init(navigationTitle: String, urlStr: String) {
         self.init(nibName: nil, bundle: nil)
         navigationItem.title = navigationTitle
-        webView.load(URLRequest(url: URL(string: urlStr)!))
+        if urlStr == "" {
+            return
+        }else {
+            webView.load(URLRequest(url: URL(string: urlStr)!))
+        }
     }
     
     convenience init(navigationTitle: String, url: URL) {

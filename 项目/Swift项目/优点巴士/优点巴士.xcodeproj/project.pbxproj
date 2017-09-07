@@ -65,6 +65,7 @@
 		5B228AE51F601276004CA389 /* 优点巴士UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "优点巴士UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B228AE91F601276004CA389 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		5B228AEB1F601276004CA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B37678C1F61627100F99EE5 /* 优点巴士-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "优点巴士-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureController.swift; sourceTree = "<group>"; };
 		5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 			children = (
 				5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */,
 				5B8D6C4A1F60F93000F7DD93 /* NetWorkTools.swift */,
+				5B37678C1F61627100F99EE5 /* 优点巴士-Bridging-Header.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -374,6 +376,7 @@
 				TargetAttributes = {
 					5B228AC51F601276004CA389 = {
 						CreatedOnToolsVersion = 8.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					5B228AD91F601276004CA389 = {
@@ -659,10 +662,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "优点巴士/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "优点巴士/Classes/Other/Tools/优点巴士-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -673,10 +679,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "优点巴士/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "优点巴士/Classes/Other/Tools/优点巴士-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

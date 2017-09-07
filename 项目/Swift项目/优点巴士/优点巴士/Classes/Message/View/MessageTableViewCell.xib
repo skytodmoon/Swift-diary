@@ -21,6 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blQ-AA-viT">
                         <rect key="frame" x="10" y="10" width="318" height="219.5"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr6-eN-SeG">
+                                <rect key="frame" x="5" y="5" width="308" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="MRy-c2-fDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-4f-TqY">
                                 <rect key="frame" x="0.0" y="0.0" width="318" height="150"/>
                                 <constraints>
@@ -67,14 +76,17 @@
                             <constraint firstItem="ju1-kp-nR8" firstAttribute="leading" secondItem="blQ-AA-viT" secondAttribute="leading" constant="8" id="6f2-rO-5op"/>
                             <constraint firstAttribute="trailing" secondItem="nFC-gl-plK" secondAttribute="trailing" constant="8" id="EQZ-Lb-OgE"/>
                             <constraint firstItem="QWt-1i-FJ0" firstAttribute="top" secondItem="ju1-kp-nR8" secondAttribute="bottom" constant="10" id="Qbb-cm-Cgn"/>
+                            <constraint firstItem="Jr6-eN-SeG" firstAttribute="top" secondItem="blQ-AA-viT" secondAttribute="top" constant="5" id="TYv-v7-mFr"/>
                             <constraint firstAttribute="trailing" secondItem="iqM-4f-TqY" secondAttribute="trailing" id="V3m-05-Dzc"/>
                             <constraint firstItem="iqM-4f-TqY" firstAttribute="top" secondItem="blQ-AA-viT" secondAttribute="top" id="Xtd-7Y-dC2"/>
+                            <constraint firstAttribute="trailing" secondItem="Jr6-eN-SeG" secondAttribute="trailing" constant="5" id="ZiW-E7-Icp"/>
                             <constraint firstAttribute="trailing" secondItem="ju1-kp-nR8" secondAttribute="trailing" id="cNI-ca-yG7"/>
                             <constraint firstItem="QWt-1i-FJ0" firstAttribute="leading" secondItem="blQ-AA-viT" secondAttribute="leading" constant="8" id="djp-2X-tBV"/>
                             <constraint firstItem="nFC-gl-plK" firstAttribute="leading" secondItem="blQ-AA-viT" secondAttribute="leading" constant="8" id="hyr-bs-lIo"/>
                             <constraint firstItem="ju1-kp-nR8" firstAttribute="top" secondItem="nFC-gl-plK" secondAttribute="bottom" constant="7" id="neh-IJ-06F"/>
                             <constraint firstItem="cH2-mg-x9L" firstAttribute="leading" secondItem="QWt-1i-FJ0" secondAttribute="trailing" id="opk-si-Utl"/>
                             <constraint firstItem="cH2-mg-x9L" firstAttribute="top" secondItem="ju1-kp-nR8" secondAttribute="bottom" constant="15" id="r1u-b9-czm"/>
+                            <constraint firstItem="Jr6-eN-SeG" firstAttribute="leading" secondItem="blQ-AA-viT" secondAttribute="leading" constant="5" id="vi1-Bu-X1D"/>
                             <constraint firstItem="iqM-4f-TqY" firstAttribute="leading" secondItem="blQ-AA-viT" secondAttribute="leading" id="z2l-mV-Wki"/>
                         </constraints>
                     </view>
@@ -88,6 +100,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="Content" destination="Jr6-eN-SeG" id="aJb-8k-aAp"/>
                 <outlet property="mesageview" destination="blQ-AA-viT" id="iXD-1t-xn4"/>
                 <outlet property="messageimgUrl" destination="iqM-4f-TqY" id="y5F-Sw-LzK"/>
                 <outlet property="messagetitle" destination="nFC-gl-plK" id="6yC-3G-IYU"/>

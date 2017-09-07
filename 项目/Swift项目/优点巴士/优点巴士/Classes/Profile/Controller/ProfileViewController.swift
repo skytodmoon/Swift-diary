@@ -8,9 +8,7 @@
 
 
 import UIKit
-private let kEdgeMargin : CGFloat = 26
-private let kMiddleMargin : CGFloat = 22
-private let kTopMargin : CGFloat = 33.5
+
 
 class ProfileViewController: UIViewController {
     
@@ -18,17 +16,11 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor.orange
         // Do any additional setup after loading the view.
     }
 
-    init(kTargetRight : CGFloat) {
-        super.init(nibName: nil, bundle: nil)
-        self.targetRight = kTargetRight
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 
 }
