@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
 extension MainViewController {
     
     fileprivate func setUpMainView() {
+        self.title = "优点巴士"
         setUpNavgationBar()
     }
     
@@ -50,8 +51,9 @@ extension MainViewController {
         print("点击了左侧")
     }
     
-    // 搜索
+    
     @objc fileprivate func rightClick(_ btn: UIButton) {
-        print("点击了右侧")
+        let messageVC = MessageController()
+        navigationController?.pushViewController(messageVC, animated: true)
     }
 }

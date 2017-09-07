@@ -13,33 +13,31 @@ class MainNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         setUpNavAppearance ()
         // Do any additional setup after loading the view.
     }
 
-    // MARK: - 拦截Push操作
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        // 这里判断是否进入push视图
-        if (self.childViewControllers.count > 0) {
-            let backBtn = UIButton(image: #imageLiteral(resourceName: "icon_left"), highlightedImage: nil, title: nil,target: self, action: #selector(MainNavController.backClick))
-            
-            // 设置按钮内容左对齐
-            backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left;
-            // 内边距
-            backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
-            
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
-            // 隐藏要push的控制器的tabbar
-            viewController.hidesBottomBarWhenPushed = true
-        }
-        super.pushViewController(viewController, animated: animated)
-    }
-    
-    @objc fileprivate func backClick() {
-        popViewController(animated: true)
-    }
+//    // MARK: - 拦截Push操作
+//    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+//        // 这里判断是否进入push视图
+//        if (self.childViewControllers.count > 0) {
+//            let backBtn = UIButton(image: #imageLiteral(resourceName: "icon_left"), highlightedImage: #imageLiteral(resourceName: "icon_left"), title: "返回",target: self, action: #selector(MainNavController.backClick))
+//            
+//            // 设置按钮内容左对齐
+//            backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left;
+//            // 内边距
+//            backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+//            
+//            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+//            // 隐藏要push的控制器的tabbar
+//            viewController.hidesBottomBarWhenPushed = true
+//        }
+//        super.pushViewController(viewController, animated: animated)
+//    }
+//    
+//    @objc fileprivate func backClick() {
+//        popViewController(animated: true)
+//    }
 
 
 }
