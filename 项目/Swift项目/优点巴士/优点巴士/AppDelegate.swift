@@ -16,8 +16,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupRootViewController()
         return true
     }
+    
+    //MARK: - 主控制器的设置
+    fileprivate func setupRootViewController() {
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        
+        let started = UserDefaults.standard.value(forKey: "started")
+        if started == nil {
+            let vc = NewFeatureController()
+            self.window?.rootViewController = vc
+            
+            vc.startClosure = {
+                () -> Void in
+                self.window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+                let userDefaults = UserDefaults.standard
+                userDefaults.setValue("start", forKey: "started")
+                userDefaults.synchronize()
+            }
+        } else {
+            self.window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        }
+        self.window?.makeKeyAndVisible()
+        
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
