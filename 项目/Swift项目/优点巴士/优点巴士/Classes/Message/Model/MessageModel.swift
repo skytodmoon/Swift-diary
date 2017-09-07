@@ -10,21 +10,11 @@ import UIKit
 
 class MessageModel: NSObject {
     
-    var id: String!
-    var createDate: String!
-    var modifyDate: String!
-    var url: String!
-    var imgUrl: String!
-    var overTime: String!
-    var startTime: String!
-    var status: String!
-    var title: String!
-    var content: String!
-    var type: String!
-    var isRead: String!
-    var lineLabel: String!
-    var function: String!
-    var needEncrypt: String!
+
+    var url: String = ""
+    var imgUrl: String = ""
+    var title: String = ""
+
     
     override init() {
         

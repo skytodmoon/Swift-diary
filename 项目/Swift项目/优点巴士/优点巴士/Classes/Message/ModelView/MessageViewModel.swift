@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 
-class MessageViewModel: NSObject {
+class MessageViewModel {
     lazy var message : [MessageModel] = [MessageModel]()
 }
 
@@ -23,9 +23,11 @@ extension MessageViewModel {
             
             if let value = response.result.value {
                 let dict = JSON(value)
-                if let dataArray = dict["data"].dictionary {
-                    if let eventsList = dataArray["eventsList"]?.arrayObject {
-                        print(eventsList)
+                    let dataDict = dict["data"].dictionary
+                        if let eventsList = dataDict!["eventsList"]?.arrayObject {
+                        for dict in eventsList {
+                            self.message.append(MessageModel(dict: dict as! [String : Any]))
+                        }
                     }
                         finishedCallback()
                 }
@@ -35,4 +37,4 @@ extension MessageViewModel {
         
     }
     
-}
+
