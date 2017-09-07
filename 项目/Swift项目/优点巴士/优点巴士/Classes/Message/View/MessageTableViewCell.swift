@@ -15,6 +15,8 @@ class MessageTableViewCell: UITableViewCell {
 
     @IBOutlet var messagetitle: UILabel!
     
+    @IBOutlet var mesageview: UIView!
+    
     var messagemodel : MessageModel? {
         didSet {
             // 校验模型是否有值
@@ -30,13 +32,17 @@ class MessageTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        mesageview.layer.masksToBounds = true
+        mesageview.layer.cornerRadius = 10
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+        
     }
     
 }

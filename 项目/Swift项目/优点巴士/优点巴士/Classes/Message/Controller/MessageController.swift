@@ -17,8 +17,10 @@ class MessageController: UIViewController {
     fileprivate lazy var tableView : UITableView = {[unowned self] in
 
         let tableView = UITableView(frame: self.view.bounds)
+        tableView.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(UINib(nibName: "MessageTableViewCell", bundle: nil), forCellReuseIdentifier: messageCellID)
         return tableView
     }()
@@ -43,7 +45,7 @@ class MessageController: UIViewController {
 // MARK:- 设置UI界面
 extension MessageController {
      func setUpMainView() {
-        
+        self.title = "消息"
         view.addSubview(tableView)
         
     }
@@ -71,12 +73,19 @@ extension MessageController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: messageCellID, for: indexPath) as! MessageTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.messagemodel = messageVM.message[indexPath.item]
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webviewVC = WebViewController()
+        
+        navigationController?.pushViewController(webviewVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 240
     }
 }
 
