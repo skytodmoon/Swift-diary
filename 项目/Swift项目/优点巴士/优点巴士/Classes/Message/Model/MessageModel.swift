@@ -14,7 +14,7 @@ class MessageModel: NSObject {
     var url: String = ""
     var imgUrl: String = ""
     var title: String = ""
-
+    var needEncrypt : Bool = false
     
     override init() {
         
@@ -26,6 +26,7 @@ class MessageModel: NSObject {
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) { }
+    
 }
 
 

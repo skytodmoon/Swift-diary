@@ -79,13 +79,19 @@ extension MessageController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let webviewVC = WebViewController()
         
-        navigationController?.pushViewController(webviewVC, animated: true)
+        let message = messageVM.message[indexPath.section]
+        presentShowRoomVc(message: message)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 240
+    }
+    
+    fileprivate func presentShowRoomVc(message: MessageModel) {
+        let webVC = WKWebViewController(navigationTitle: message.title, urlStr: message.url)
+        navigationController?.pushViewController(webVC, animated: true)
     }
 }
 

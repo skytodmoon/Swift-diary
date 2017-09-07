@@ -27,7 +27,9 @@
 		5B8D6C691F61156700F7DD93 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C681F61156700F7DD93 /* MessageModel.swift */; };
 		5B8D6C6C1F61197000F7DD93 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C6B1F61197000F7DD93 /* MessageViewModel.swift */; };
 		5B8D6C6D1F612A5F00F7DD93 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C481F60F7C100F7DD93 /* MessageController.swift */; };
-		5B8D6C6F1F613D9600F7DD93 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C6E1F613D9600F7DD93 /* WebViewController.swift */; };
+		5B9796231F61438E00CB51F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9796211F61438E00CB51F9 /* ProfileViewController.swift */; };
+		5B9796241F61438E00CB51F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9796221F61438E00CB51F9 /* ProfileViewController.xib */; };
+		5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9796271F61459600CB51F9 /* WKWebViewController.swift */; };
 		D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +77,9 @@
 		5B8D6C571F61068900F7DD93 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		5B8D6C681F61156700F7DD93 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		5B8D6C6B1F61197000F7DD93 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		5B8D6C6E1F613D9600F7DD93 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5B9796211F61438E00CB51F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5B9796221F61438E00CB51F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		5B9796271F61459600CB51F9 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		706A96BA0D19609947C495A7 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.release.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		5B8D6C2F1F60DAF900F7DD93 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B97961F1F61437E00CB51F9 /* Profile */,
 				5B8D6C461F60F79B00F7DD93 /* Message */,
 				5B8D6C391F60DEF600F7DD93 /* Other */,
 				5B8D6C301F60DAF900F7DD93 /* Main */,
@@ -251,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8D6C481F60F7C100F7DD93 /* MessageController.swift */,
-				5B8D6C6E1F613D9600F7DD93 /* WebViewController.swift */,
+				5B9796271F61459600CB51F9 /* WKWebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +284,23 @@
 				5B8D6C6B1F61197000F7DD93 /* MessageViewModel.swift */,
 			);
 			path = ModelView;
+			sourceTree = "<group>";
+		};
+		5B97961F1F61437E00CB51F9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5B9796201F61437E00CB51F9 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5B9796201F61437E00CB51F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B9796211F61438E00CB51F9 /* ProfileViewController.swift */,
+				5B9796221F61438E00CB51F9 /* ProfileViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +416,7 @@
 				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
 				5B8D6C591F61068900F7DD93 /* MessageTableViewCell.xib in Resources */,
 				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
+				5B9796241F61438E00CB51F9 /* ProfileViewController.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
@@ -478,7 +502,7 @@
 				5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */,
 				5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */,
 				5B8D6C6C1F61197000F7DD93 /* MessageViewModel.swift in Sources */,
-				5B8D6C6F1F613D9600F7DD93 /* WebViewController.swift in Sources */,
+				5B9796231F61438E00CB51F9 /* ProfileViewController.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
 				5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */,
 			);
