@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
+		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
+		5B228ACF1F601276004CA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228ACD1F601276004CA389 /* Main.storyboard */; };
+		5B228AD11F601276004CA389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B228AD01F601276004CA389 /* Assets.xcassets */; };
+		5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228AD21F601276004CA389 /* LaunchScreen.storyboard */; };
+		5B228ADF1F601276004CA389 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ADE1F601276004CA389 /* ____Tests.swift */; };
+		5B228AEA1F601276004CA389 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AE91F601276004CA389 /* ____UITests.swift */; };
+		D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B228ADB1F601276004CA389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B228ABE1F601276004CA389 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B228AC51F601276004CA389;
+			remoteInfo = "优点巴士";
+		};
+		5B228AE61F601276004CA389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B228ABE1F601276004CA389 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B228AC51F601276004CA389;
+			remoteInfo = "优点巴士";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
+		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B228AC91F601276004CA389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B228ACB1F601276004CA389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B228ACE1F601276004CA389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B228AD01F601276004CA389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B228AD31F601276004CA389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B228AD51F601276004CA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B228ADA1F601276004CA389 /* 优点巴士Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "优点巴士Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B228ADE1F601276004CA389 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Tests.swift; sourceTree = "<group>"; };
+		5B228AE01F601276004CA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B228AE51F601276004CA389 /* 优点巴士UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "优点巴士UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B228AE91F601276004CA389 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____UITests.swift; sourceTree = "<group>"; };
+		5B228AEB1F601276004CA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		706A96BA0D19609947C495A7 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.release.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.release.xcconfig"; sourceTree = "<group>"; };
+		DF40B635B1F4AFCB5A8E71FE /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B228AC31F601276004CA389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AD71F601276004CA389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AE21F601276004CA389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D3FB6E938D90379B30B6F9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */,
+				706A96BA0D19609947C495A7 /* Pods_____Tests.framework */,
+				DF40B635B1F4AFCB5A8E71FE /* Pods_____UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B31F528589ED2589EB1FCD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */,
+				C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B228ABD1F601276004CA389 = {
+			isa = PBXGroup;
+			children = (
+				5B228AC81F601276004CA389 /* 优点巴士 */,
+				5B228ADD1F601276004CA389 /* 优点巴士Tests */,
+				5B228AE81F601276004CA389 /* 优点巴士UITests */,
+				5B228AC71F601276004CA389 /* Products */,
+				3B31F528589ED2589EB1FCD1 /* Pods */,
+				1D3FB6E938D90379B30B6F9E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B228AC71F601276004CA389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B228AC61F601276004CA389 /* 优点巴士.app */,
+				5B228ADA1F601276004CA389 /* 优点巴士Tests.xctest */,
+				5B228AE51F601276004CA389 /* 优点巴士UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B228AC81F601276004CA389 /* 优点巴士 */ = {
+			isa = PBXGroup;
+			children = (
+				5B228AC91F601276004CA389 /* AppDelegate.swift */,
+				5B228ACB1F601276004CA389 /* ViewController.swift */,
+				5B228ACD1F601276004CA389 /* Main.storyboard */,
+				5B228AD01F601276004CA389 /* Assets.xcassets */,
+				5B228AD21F601276004CA389 /* LaunchScreen.storyboard */,
+				5B228AD51F601276004CA389 /* Info.plist */,
+			);
+			path = "优点巴士";
+			sourceTree = "<group>";
+		};
+		5B228ADD1F601276004CA389 /* 优点巴士Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5B228ADE1F601276004CA389 /* ____Tests.swift */,
+				5B228AE01F601276004CA389 /* Info.plist */,
+			);
+			path = "优点巴士Tests";
+			sourceTree = "<group>";
+		};
+		5B228AE81F601276004CA389 /* 优点巴士UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B228AE91F601276004CA389 /* ____UITests.swift */,
+				5B228AEB1F601276004CA389 /* Info.plist */,
+			);
+			path = "优点巴士UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B228AC51F601276004CA389 /* 优点巴士 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B228AEE1F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士" */;
+			buildPhases = (
+				EE08AAEAE8902740FDDD32A6 /* [CP] Check Pods Manifest.lock */,
+				5B228AC21F601276004CA389 /* Sources */,
+				5B228AC31F601276004CA389 /* Frameworks */,
+				5B228AC41F601276004CA389 /* Resources */,
+				EAF991868037CEB3CB87DA1D /* [CP] Embed Pods Frameworks */,
+				86C09B8FA88B2D938C8D6EA5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "优点巴士";
+			productName = "优点巴士";
+			productReference = 5B228AC61F601276004CA389 /* 优点巴士.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B228AD91F601276004CA389 /* 优点巴士Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B228AF11F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士Tests" */;
+			buildPhases = (
+				5B228AD61F601276004CA389 /* Sources */,
+				5B228AD71F601276004CA389 /* Frameworks */,
+				5B228AD81F601276004CA389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B228ADC1F601276004CA389 /* PBXTargetDependency */,
+			);
+			name = "优点巴士Tests";
+			productName = "优点巴士Tests";
+			productReference = 5B228ADA1F601276004CA389 /* 优点巴士Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B228AE41F601276004CA389 /* 优点巴士UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B228AF41F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士UITests" */;
+			buildPhases = (
+				5B228AE11F601276004CA389 /* Sources */,
+				5B228AE21F601276004CA389 /* Frameworks */,
+				5B228AE31F601276004CA389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B228AE71F601276004CA389 /* PBXTargetDependency */,
+			);
+			name = "优点巴士UITests";
+			productName = "优点巴士UITests";
+			productReference = 5B228AE51F601276004CA389 /* 优点巴士UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B228ABE1F601276004CA389 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "醉看红尘这场梦";
+				TargetAttributes = {
+					5B228AC51F601276004CA389 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					5B228AD91F601276004CA389 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B228AC51F601276004CA389;
+					};
+					5B228AE41F601276004CA389 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B228AC51F601276004CA389;
+					};
+				};
+			};
+			buildConfigurationList = 5B228AC11F601276004CA389 /* Build configuration list for PBXProject "优点巴士" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B228ABD1F601276004CA389;
+			productRefGroup = 5B228AC71F601276004CA389 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B228AC51F601276004CA389 /* 优点巴士 */,
+				5B228AD91F601276004CA389 /* 优点巴士Tests */,
+				5B228AE41F601276004CA389 /* 优点巴士UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B228AC41F601276004CA389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
+				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
+				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AD81F601276004CA389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AE31F601276004CA389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86C09B8FA88B2D938C8D6EA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAF991868037CEB3CB87DA1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE08AAEAE8902740FDDD32A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B228AC21F601276004CA389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B228ACC1F601276004CA389 /* ViewController.swift in Sources */,
+				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AD61F601276004CA389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B228ADF1F601276004CA389 /* ____Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B228AE11F601276004CA389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B228AEA1F601276004CA389 /* ____UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B228ADC1F601276004CA389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B228AC51F601276004CA389 /* 优点巴士 */;
+			targetProxy = 5B228ADB1F601276004CA389 /* PBXContainerItemProxy */;
+		};
+		5B228AE71F601276004CA389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B228AC51F601276004CA389 /* 优点巴士 */;
+			targetProxy = 5B228AE61F601276004CA389 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B228ACD1F601276004CA389 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B228ACE1F601276004CA389 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B228AD21F601276004CA389 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B228AD31F601276004CA389 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B228AEC1F601276004CA389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B228AED1F601276004CA389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B228AEF1F601276004CA389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "优点巴士/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5B228AF01F601276004CA389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "优点巴士/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5B228AF21F601276004CA389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "优点巴士Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/优点巴士.app/优点巴士";
+			};
+			name = Debug;
+		};
+		5B228AF31F601276004CA389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "优点巴士Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/优点巴士.app/优点巴士";
+			};
+			name = Release;
+		};
+		5B228AF51F601276004CA389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "优点巴士UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "优点巴士";
+			};
+			name = Debug;
+		};
+		5B228AF61F601276004CA389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "优点巴士UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "优点巴士";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B228AC11F601276004CA389 /* Build configuration list for PBXProject "优点巴士" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B228AEC1F601276004CA389 /* Debug */,
+				5B228AED1F601276004CA389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B228AEE1F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B228AEF1F601276004CA389 /* Debug */,
+				5B228AF01F601276004CA389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B228AF11F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B228AF21F601276004CA389 /* Debug */,
+				5B228AF31F601276004CA389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B228AF41F601276004CA389 /* Build configuration list for PBXNativeTarget "优点巴士UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B228AF51F601276004CA389 /* Debug */,
+				5B228AF61F601276004CA389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B228ABE1F601276004CA389 /* Project object */;
+}
