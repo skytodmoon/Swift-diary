@@ -22,6 +22,11 @@ private let Agreement = "使用协议"
 private let Aboutme  = "关于我们"
 private let Proposal = "投诉建议"
 
+private let ProblemURL  = "http://www.youdianbus.cn/ydbus-static/problem.html"
+private let UserguideURL = "http://www.youdianbus.cn/ydbus-static/user-guide.html"
+private let AgreementURL = "http://www.youdianbus.cn/ydbus-static/agreement.html"
+private let AboutmeURL  = "http://www.youdianbus.cn/ydbus-static/about-us.html"
+
 
 class MoreViewController: UIViewController {
     
@@ -48,7 +53,7 @@ class MoreViewController: UIViewController {
         
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
@@ -57,9 +62,9 @@ class MoreViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kProfileCellID)
         setUpMainView()
-
+        
     }
-
+    
     // MARK:- 设置状态栏样式
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if lightFlag {
@@ -175,33 +180,40 @@ extension MoreViewController: UITableViewDelegate,UITableViewDataSource {
 extension MoreViewController {
     fileprivate func ActivityVC() {
         
-//        let serviceVC = XJBannersController()
-//        serviceVC.urlString = kFreeTraficURL
-//        serviceVC.titleString = "免流量包"
-//        serviceVC.hidesBottomBarWhenPushed = true
-//        navigationController?.pushViewController(serviceVC, animated: true)
+
         print(1)
     }
     fileprivate func CouponVC() {
-//        let settingVc = XJSettingViewController()
-//        settingVc.hidesBottomBarWhenPushed = true
-//        navigationController?.pushViewController(settingVc, animated: true)
+        //        let settingVc = XJSettingViewController()
+        //        settingVc.hidesBottomBarWhenPushed = true
+        //        navigationController?.pushViewController(settingVc, animated: true)
         print(2)
     }
     fileprivate func AddressVC() {
         print(3)
     }
     fileprivate func ProblemVC() {
-        print(4)
+        let problemVC = ProblemViewController()
+        problemVC.urlString = ProblemURL
+        self.present(problemVC, animated: true)
     }
     fileprivate func UserguideVC() {
         print(5)
+        let userguideVC = UserguideViewController()
+        userguideVC.urlString = UserguideURL
+        self.present(userguideVC, animated: true)
     }
     fileprivate func AgreementVC() {
         print(6)
+        let agreementVC = ProblemViewController()
+        agreementVC.urlString = AgreementURL
+        self.present(agreementVC, animated: true)
     }
     fileprivate func AboutmeVC() {
         print(7)
+        let aboutmeVC = ProblemViewController()
+        aboutmeVC.urlString = AboutmeURL
+        self.present(aboutmeVC, animated: true)
     }
     fileprivate func ProposalVC() {
         print(88)
