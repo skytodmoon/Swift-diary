@@ -159,8 +159,8 @@ extension ProfileViewController {
     
     fileprivate func jump2kMeMore() {
         print("更多")
-        let messageVC = MessageController()
-        navigationController?.pushViewController(messageVC, animated: true)
+        let moreVC = MoreViewController()
+        self.present(moreVC, animated: true)
     }
     
 }
