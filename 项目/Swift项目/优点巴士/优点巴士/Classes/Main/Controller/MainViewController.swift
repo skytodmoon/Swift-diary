@@ -9,14 +9,45 @@
 import UIKit
 import SWRevealViewController
 
+private let kTitleViewH : CGFloat = 40
+
 class MainViewController: SWRevealViewController {
+    
+    
+    // MARK:- 懒加载属性
+    fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: ScreenW, height: kTitleViewH)
+        let titles = ["班车", "公交", "城际", "包车"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
+        return titleView
+        }()
+    
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
+        
+        // 1.确定内容的frame
+        let contentH = ScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: ScreenW, height: contentH)
+        
+        // 2.确定所有的子控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
+        return contentView
+        }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpMainView()
         
-        view.backgroundColor = UIColor.orange
+
         // Do any additional setup after loading the view.
     }
 
@@ -41,6 +72,17 @@ extension MainViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_home_Nav_left").withRenderingMode(.alwaysOriginal), style: .plain, target: revealController, action: #selector(revealController.revealToggle(_:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_home_Nav_right").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(MainViewController.rightClick))
+        
+        // 0.不需要调整UIScrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
+        
+        view.backgroundColor = UIColor.white
+        
+        // 2.添加TitleView
+        view.addSubview(pageTitleView)
+        
+        // 3.添加ContentView
+        view.addSubview(pageContentView)
     }
     
     @objc fileprivate func leftClick() {
@@ -49,5 +91,21 @@ extension MainViewController {
     @objc fileprivate func rightClick(_ btn: UIButton) {
         let messageVC = MessageController()
         navigationController?.pushViewController(messageVC, animated: true)
+    }
+}
+
+
+// MARK:- 遵守PageTitleViewDelegate协议
+extension MainViewController : PageTitleViewDelegate {
+    func pageTitleView(_ titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(index)
+    }
+}
+
+
+// MARK:- 遵守PageContentViewDelegate协议
+extension MainViewController : PageContentViewDelegate {
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

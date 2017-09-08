@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D1D22BB1F62E27A00966946 /* ActivityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D22BA1F62E27A00966946 /* ActivityDetailController.swift */; };
+		1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D221C701F62E8FF00212E8B /* PageTitleView.swift */; };
+		1D221C731F62E91100212E8B /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D221C721F62E91100212E8B /* PageContentView.swift */; };
+		1D221C751F62E98800212E8B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D221C741F62E98800212E8B /* UIColor+Extension.swift */; };
 		1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3627BA1F61888F003CBCE5 /* UIViewController+Extension.swift */; };
 		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
 		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
@@ -64,6 +67,9 @@
 
 /* Begin PBXFileReference section */
 		1D1D22BA1F62E27A00966946 /* ActivityDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailController.swift; sourceTree = "<group>"; };
+		1D221C701F62E8FF00212E8B /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		1D221C721F62E91100212E8B /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		1D221C741F62E98800212E8B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1D3627BA1F61888F003CBCE5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
 		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D221C6F1F62E8EF00212E8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D221C701F62E8FF00212E8B /* PageTitleView.swift */,
+				1D221C721F62E91100212E8B /* PageContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1D3FB6E938D90379B30B6F9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +307,7 @@
 		5B8D6C301F60DAF900F7DD93 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1D221C6F1F62E8EF00212E8B /* View */,
 				5B8D6C311F60DAF900F7DD93 /* Controller */,
 			);
 			path = Main;
@@ -332,6 +348,7 @@
 				5B8D6C401F60E9C000F7DD93 /* UIButton+Extension.swift */,
 				5B8D6C441F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift */,
 				1D3627BA1F61888F003CBCE5 /* UIViewController+Extension.swift */,
+				1D221C741F62E98800212E8B /* UIColor+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -581,9 +598,11 @@
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
+				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
 				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
 				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */,
+				1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
 				1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */,
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
@@ -595,6 +614,7 @@
 				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
 				1D1D22BB1F62E27A00966946 /* ActivityDetailController.swift in Sources */,
 				5B843EC41F62728E006E5B9C /* AgreementViewController.swift in Sources */,
+				1D221C751F62E98800212E8B /* UIColor+Extension.swift in Sources */,
 				5B8D6C691F61156700F7DD93 /* MessageModel.swift in Sources */,
 				5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */,
 				5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */,
