@@ -8,17 +8,52 @@
 
 import UIKit
 
+private let activityDetailCellID = "activityDetailCellID"
+
 class ActivityDetailController: UIViewController {
+    
+    
+    // MARK: 懒加载属性
+    fileprivate lazy var activityDetailVM : ActivityDetailViewModel = ActivityDetailViewModel()
+    
+    fileprivate lazy var tableView : UITableView = {[unowned self] in
+        
+        
+        let rect = CGRect(x: 0, y: 64, width: ScreenW, height: ScreenH - 64)
+        let tableView = UITableView(frame: rect)
+        tableView.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.register(UINib(nibName: "ActivityDetailTableViewCell", bundle: nil), forCellReuseIdentifier: activityDetailCellID)
+        return tableView
+        }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpMainView()
+        
+        view.addSubview(tableView)
+        loadData()
         // Do any additional setup after loading the view.
     }
 
 
 }
+
+// MARK:- 请求数据
+extension ActivityDetailController {
+    
+    func loadData() {
+        activityDetailVM.loadactivityDetailData{
+            
+            self.tableView.reloadData()
+        }
+        
+    }
+}
+
 
 extension ActivityDetailController {
     
@@ -51,3 +86,27 @@ extension ActivityDetailController {
         self.dismiss(animated: true)
     }
 }
+
+// MARK:- 遵守UITableView的数据源&代理
+extension ActivityDetailController : UITableViewDelegate,UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activityDetailVM.activityDetail.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: activityDetailCellID, for: indexPath) as! ActivityDetailTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.activitDetailmodel = activityDetailVM.activityDetail[indexPath.item]
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+}
+

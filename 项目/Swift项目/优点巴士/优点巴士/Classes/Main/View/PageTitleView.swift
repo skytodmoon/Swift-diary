@@ -14,10 +14,11 @@ protocol PageTitleViewDelegate : class {
     func pageTitleView(_ titleView : PageTitleView, selectedIndex index : Int)
 }
 
+//UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)Á
 // MARK:- 定义常量
 private let kScrollLineH : CGFloat = 2
 private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 255, 255)
+private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (51, 145, 232)
 
 // MARK:- 定义PageTitleView类
 class PageTitleView: UIView {
@@ -34,12 +35,12 @@ class PageTitleView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollsToTop = false
         scrollView.bounces = false
-        scrollView.backgroundColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
+        scrollView.backgroundColor = UIColor.white
         return scrollView
     }()
     fileprivate lazy var scrollLine : UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.clear
+        scrollLine.backgroundColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
         return scrollLine
     }()
     
