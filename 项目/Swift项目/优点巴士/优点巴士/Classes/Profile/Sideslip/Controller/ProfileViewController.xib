@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="优点巴士" customModuleProvider="target">
             <connections>
+                <outlet property="Profile" destination="Sgf-4z-xkD" id="w5Q-2N-s34"/>
                 <outlet property="tableview" destination="Dvg-Bl-QXo" id="5WV-cB-2ui"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -62,16 +63,19 @@
                     <rect key="frame" x="0.0" y="539" width="315" height="128"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-4z-xkD">
-                            <rect key="frame" x="10" y="5" width="295" height="118"/>
-                            <color key="backgroundColor" red="1" green="0.59534040178571423" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="10" y="0.0" width="295" height="118"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="31m-VS-YdQ"/>
-                        <constraint firstItem="Sgf-4z-xkD" firstAttribute="top" secondItem="PhJ-7b-gti" secondAttribute="top" constant="5" id="LBq-Mu-gKd"/>
+                        <constraint firstItem="Sgf-4z-xkD" firstAttribute="top" secondItem="PhJ-7b-gti" secondAttribute="top" id="LBq-Mu-gKd"/>
                         <constraint firstAttribute="trailing" secondItem="Sgf-4z-xkD" secondAttribute="trailing" constant="10" id="Rhr-uM-ytt"/>
-                        <constraint firstAttribute="bottom" secondItem="Sgf-4z-xkD" secondAttribute="bottom" constant="5" id="gVj-jP-VaO"/>
+                        <constraint firstAttribute="bottom" secondItem="Sgf-4z-xkD" secondAttribute="bottom" constant="10" id="gVj-jP-VaO"/>
                         <constraint firstItem="Sgf-4z-xkD" firstAttribute="leading" secondItem="PhJ-7b-gti" secondAttribute="leading" constant="10" id="nYX-fS-1aq"/>
                     </constraints>
                 </view>

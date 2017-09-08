@@ -10,6 +10,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 private let kProfileCellID = "kProfileCellID"
 // MARK: --  列表标题
@@ -27,7 +28,10 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
+    @IBOutlet weak var Profile: UIImageView!
     
+    // MARK: 懒加载属性
+    fileprivate lazy var profileVM : ProfileModel = ProfileModel()
     
     /// 列表标题数组
     fileprivate lazy var titleArray:[[String]] = {
@@ -42,42 +46,38 @@ class ProfileViewController: UIViewController {
                 "icon_SZTCard", "icon_byNeed"]]
     }()
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
-    
         automaticallyAdjustsScrollViewInsets = false
         tableview.rowHeight = 44.0
         tableview.isScrollEnabled = false
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: kProfileCellID)
         tableview.separatorStyle = UITableViewCellSeparatorStyle.none
-        
-        
         loadProfileDate()
         // Do any additional setup after loading the view.
     }
-    
-    func loadProfileDate(){
-        Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/events/menu?token=a43acba1c90752f93e51f64364b71d9c&user_id=7c19f276d626928a611e0f58eeaddc09", method: .get, parameters: nil).responseJSON { (response) in
-                if let value = response.result.value {
-                    let dict = JSON(value)
-                        let dataDict = dict["data"].dictionary
-                            if let eventDict = dataDict?["event"]?.dictionary{
-                                print(eventDict)
-                    }
-            }
-            
-        }
-        
-    }
-
-
 
 }
 
+extension ProfileViewController {
+    func loadProfileDate() {
+        Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/events/menu?token=a43acba1c90752f93e51f64364b71d9c&user_id=7c19f276d626928a611e0f58eeaddc09", method: .get, parameters: nil).responseJSON { (response) in
+            
+            if let value = response.result.value {
+                let dict = JSON(value)
+                    let dataDict = dict["data"].dictionary
+                        if let eventDict = dataDict?["event"]?.dictionary{
+                            print(eventDict)
+                            let imgUrl = eventDict["imgUrl"]?.stringValue
+                                guard let iconURL = URL(string: imgUrl!) else { return }
+                                self.Profile.kf.setImage(with: iconURL)
+                }
+            }
+        }
+    }
+}
 
 
 // MARK: --  UITableView的数据源和代理方法
@@ -159,6 +159,8 @@ extension ProfileViewController {
     
     fileprivate func jump2kMeMore() {
         print("更多")
+        let messageVC = MessageController()
+        navigationController?.pushViewController(messageVC, animated: true)
     }
     
 }
