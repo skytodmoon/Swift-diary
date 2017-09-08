@@ -20,9 +20,13 @@
 		5B843EC41F62728E006E5B9C /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EC31F62728E006E5B9C /* AgreementViewController.swift */; };
 		5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EC51F6272EF006E5B9C /* MoreViewController.swift */; };
 		5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EC71F62736F006E5B9C /* AboutmeViewController.swift */; };
+		5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843ECC1F6277C9006E5B9C /* ActivityViewController.swift */; };
+		5B843ECF1F627921006E5B9C /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843ECE1F627921006E5B9C /* ActivityModel.swift */; };
+		5B843ED11F627931006E5B9C /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843ED01F627931006E5B9C /* ActivityViewModel.swift */; };
+		5B843ED41F62794A006E5B9C /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843ED21F62794A006E5B9C /* ActivityTableViewCell.swift */; };
+		5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B843ED31F62794A006E5B9C /* ActivityTableViewCell.xib */; };
 		5B8C4E3C1F622B5600246A8C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C4E391F622B5600246A8C /* ProfileViewController.swift */; };
 		5B8C4E3D1F622B5600246A8C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C4E3A1F622B5600246A8C /* ProfileViewController.xib */; };
-		5B8C4E421F622C0200246A8C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C4E411F622C0200246A8C /* ProfileModel.swift */; };
 		5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */; };
 		5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */; };
 		5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */; };
@@ -79,9 +83,13 @@
 		5B843EC31F62728E006E5B9C /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		5B843EC51F6272EF006E5B9C /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		5B843EC71F62736F006E5B9C /* AboutmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutmeViewController.swift; sourceTree = "<group>"; };
+		5B843ECC1F6277C9006E5B9C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		5B843ECE1F627921006E5B9C /* ActivityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		5B843ED01F627931006E5B9C /* ActivityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		5B843ED21F62794A006E5B9C /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		5B843ED31F62794A006E5B9C /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		5B8C4E391F622B5600246A8C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5B8C4E3A1F622B5600246A8C /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		5B8C4E411F622C0200246A8C /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5B8D6C321F60DBA200F7DD93 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B8D6C341F60DC1100F7DD93 /* NewFeatureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureController.swift; sourceTree = "<group>"; };
 		5B8D6C3B1F60DF3E00F7DD93 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -203,6 +211,9 @@
 		5B843EB91F62419D006E5B9C /* More */ = {
 			isa = PBXGroup;
 			children = (
+				5B843EC91F6277AC006E5B9C /* Model */,
+				5B843ECA1F6277AC006E5B9C /* View */,
+				5B843ECB1F6277AC006E5B9C /* ViewModel */,
 				5B843EBA1F62419D006E5B9C /* Controller */,
 			);
 			path = More;
@@ -216,8 +227,34 @@
 				5B843EC31F62728E006E5B9C /* AgreementViewController.swift */,
 				5B843EC51F6272EF006E5B9C /* MoreViewController.swift */,
 				5B843EC71F62736F006E5B9C /* AboutmeViewController.swift */,
+				5B843ECC1F6277C9006E5B9C /* ActivityViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B843EC91F6277AC006E5B9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B843ECE1F627921006E5B9C /* ActivityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B843ECA1F6277AC006E5B9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B843ED21F62794A006E5B9C /* ActivityTableViewCell.swift */,
+				5B843ED31F62794A006E5B9C /* ActivityTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B843ECB1F6277AC006E5B9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B843ED01F627931006E5B9C /* ActivityViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5B8C4E371F622B5600246A8C /* Sideslip */ = {
@@ -225,7 +262,6 @@
 			children = (
 				5B843EB91F62419D006E5B9C /* More */,
 				5B8C4E381F622B5600246A8C /* Controller */,
-				5B8C4E3B1F622B5600246A8C /* Model */,
 			);
 			path = Sideslip;
 			sourceTree = "<group>";
@@ -237,14 +273,6 @@
 				5B8C4E3A1F622B5600246A8C /* ProfileViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5B8C4E3B1F622B5600246A8C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				5B8C4E411F622C0200246A8C /* ProfileModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5B8D6C2F1F60DAF900F7DD93 /* Classes */ = {
@@ -473,6 +501,7 @@
 				5B8D6C591F61068900F7DD93 /* MessageTableViewCell.xib in Resources */,
 				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
 				5B8C4E3D1F622B5600246A8C /* ProfileViewController.xib in Resources */,
+				5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,15 +578,17 @@
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
+				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
 				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
 				1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */,
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
 				5B8C4E3C1F622B5600246A8C /* ProfileViewController.swift in Sources */,
+				5B843ED11F627931006E5B9C /* ActivityViewModel.swift in Sources */,
 				5B8D6C581F61068900F7DD93 /* MessageTableViewCell.swift in Sources */,
+				5B843ED41F62794A006E5B9C /* ActivityTableViewCell.swift in Sources */,
 				5B228ACC1F601276004CA389 /* ViewController.swift in Sources */,
-				5B8C4E421F622C0200246A8C /* ProfileModel.swift in Sources */,
 				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
 				5B843EC41F62728E006E5B9C /* AgreementViewController.swift in Sources */,
 				5B8D6C691F61156700F7DD93 /* MessageModel.swift in Sources */,
@@ -565,6 +596,7 @@
 				5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */,
 				5B8D6C6C1F61197000F7DD93 /* MessageViewModel.swift in Sources */,
 				5B843EC21F627284006E5B9C /* UserguideViewController.swift in Sources */,
+				5B843ECF1F627921006E5B9C /* ActivityModel.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
 				5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */,
 				5B843EC01F627272006E5B9C /* ProblemViewController.swift in Sources */,

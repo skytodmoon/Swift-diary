@@ -30,8 +30,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var Profile: UIImageView!
     
-    // MARK: 懒加载属性
-    fileprivate lazy var profileVM : ProfileModel = ProfileModel()
     
     /// 列表标题数组
     fileprivate lazy var titleArray:[[String]] = {

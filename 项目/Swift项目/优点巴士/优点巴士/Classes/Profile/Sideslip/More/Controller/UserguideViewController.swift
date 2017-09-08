@@ -39,7 +39,6 @@ class UserguideViewController: UIViewController {
 // MARK: --  加载数据
 extension UserguideViewController {
     fileprivate func loadData() {
-        print(urlString ?? "")
         let url = URL(string: urlString!)
         let request = URLRequest(url: url!)
         webView.loadRequest(request)

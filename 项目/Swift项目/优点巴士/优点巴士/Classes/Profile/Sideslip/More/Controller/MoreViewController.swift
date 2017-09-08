@@ -180,17 +180,15 @@ extension MoreViewController: UITableViewDelegate,UITableViewDataSource {
 extension MoreViewController {
     fileprivate func ActivityVC() {
         
-
-        print(1)
+        let ActivitVC = ActivityViewController()
+        self.present(ActivitVC, animated: true)
     }
     fileprivate func CouponVC() {
-        //        let settingVc = XJSettingViewController()
-        //        settingVc.hidesBottomBarWhenPushed = true
-        //        navigationController?.pushViewController(settingVc, animated: true)
-        print(2)
+
+        print("我的优惠卷")
     }
     fileprivate func AddressVC() {
-        print(3)
+        print("工作地址")
     }
     fileprivate func ProblemVC() {
         let problemVC = ProblemViewController()
@@ -198,25 +196,22 @@ extension MoreViewController {
         self.present(problemVC, animated: true)
     }
     fileprivate func UserguideVC() {
-        print(5)
         let userguideVC = UserguideViewController()
         userguideVC.urlString = UserguideURL
         self.present(userguideVC, animated: true)
     }
     fileprivate func AgreementVC() {
-        print(6)
         let agreementVC = ProblemViewController()
         agreementVC.urlString = AgreementURL
         self.present(agreementVC, animated: true)
     }
     fileprivate func AboutmeVC() {
-        print(7)
         let aboutmeVC = ProblemViewController()
         aboutmeVC.urlString = AboutmeURL
         self.present(aboutmeVC, animated: true)
     }
     fileprivate func ProposalVC() {
-        print(88)
+        print("建议")
     }
 }
 

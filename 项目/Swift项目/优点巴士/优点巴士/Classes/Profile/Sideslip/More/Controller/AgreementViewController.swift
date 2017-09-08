@@ -38,7 +38,6 @@ class AgreementViewController: UIViewController {
 // MARK: --  加载数据
 extension AgreementViewController {
     fileprivate func loadData() {
-        print(urlString ?? "")
         let url = URL(string: urlString!)
         let request = URLRequest(url: url!)
         webView.loadRequest(request)
