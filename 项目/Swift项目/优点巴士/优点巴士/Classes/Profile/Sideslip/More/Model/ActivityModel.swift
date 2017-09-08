@@ -10,14 +10,12 @@ import UIKit
 
 class ActivityModel: NSObject {
 
-    var ALLAmount: String = ""
-//    var commuteAmount: String = ""
+    var ALLAmount: Double = 0
+    var commuteAmount: Double = 0
     var date: String = ""
-//    var expressAmount: String = ""
-//    var intercityAmount: String = ""
-//    var qualityAmount: String = ""
-//    var shuttleAmount: String = ""
-//    var subwayShuttleAmount: String = ""
+    var intercityAmount: Double = 0
+    var qualityAmount: Double = 0
+
     
     override init() {
         

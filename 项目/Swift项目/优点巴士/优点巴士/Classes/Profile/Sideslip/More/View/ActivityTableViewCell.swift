@@ -15,17 +15,21 @@ class ActivityTableViewCell: UITableViewCell {
     
     @IBOutlet var commuteAmountlabel: UILabel!
     
+    @IBOutlet var ALLAmountlabel: UILabel!
+    
+    @IBOutlet var intercityAmountlabel: UILabel!
+    
+    @IBOutlet var qualityAmountlabel: UILabel!
     
     var activitmodel : ActivityModel? {
         didSet {
             // 校验模型是否有值
             guard let activit = activitmodel else { return }
             datalabel.text = activit.date
-//            commuteAmountlabel.text = activit.ALLAmount
-//            Content.text = message.content
-//            // 设置封面图片
-//            guard let iconURL = URL(string: message.imgUrl) else { return }
-//            messageimgUrl.kf.setImage(with: iconURL)
+            commuteAmountlabel.text = String.init(format: "%.2f", activit.commuteAmount)
+            ALLAmountlabel.text = String.init(format: "%.2f", activit.ALLAmount)
+            intercityAmountlabel.text = String.init(format: "%.2f", activit.intercityAmount)
+            qualityAmountlabel.text = String.init(format: "%.2f", activit.qualityAmount)
         }
     }
 
