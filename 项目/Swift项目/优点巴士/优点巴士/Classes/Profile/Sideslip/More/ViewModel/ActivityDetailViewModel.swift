@@ -26,15 +26,13 @@ extension ActivityDetailViewModel {
             if let value = response.result.value {
                 let dict = JSON(value)
                     let dataDict = dict["data"].dictionary
-                        if let orderStorageItemLists = dataDict!["orderStorageItemList"]?.arrayObject{
-//                            let line = orderStorageItemLists["line"].dictionary
-//                            print(line)
-                            
-                            print(orderStorageItemLists)
-                            
-                            for dict in orderStorageItemLists {
-                                self.activityDetail.append(ActivityDetailModel(dict: dict as! [String : Any]))
+                        if let orderStorageItemLists = dataDict!["orderStorageItemList"]?.arrayValue{
+                            for line in orderStorageItemLists {
+                                let line_list = line["line"].dictionaryObject
+                                self.activityDetail.append(ActivityDetailModel(dict: line_list! as [String : AnyObject]))
+                                print(line_list!)
                             }
+                        
                     }
             
                 finishedCallback()

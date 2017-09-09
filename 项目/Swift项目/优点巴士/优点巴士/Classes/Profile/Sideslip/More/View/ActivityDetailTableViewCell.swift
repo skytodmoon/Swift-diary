@@ -17,9 +17,8 @@ class ActivityDetailTableViewCell: UITableViewCell {
         didSet {
             // 校验模型是否有值
             guard let activitDetail = activitDetailmodel else { return }
-            
-            startStationName.text = activitDetail.date
-//            datalabel.text = activit.date
+            print(activitDetail)
+//            startStationName.text = activitDetail.arriveTime
 //            commuteAmountlabel.text = String.init(format: "%.2f", activit.commuteAmount)
 //            ALLAmountlabel.text = String.init(format: "%.2f", activit.ALLAmount)
 //            intercityAmountlabel.text = String.init(format: "%.2f", activit.intercityAmount)

@@ -7,25 +7,22 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class ActivityDetailModel: NSObject {
     
-    
-    
-    var startStationName: String = ""
-    var date: String = ""
+//    var arriveTime: String = ""
 
     override init() {
         
     }
+    
     
     init(dict : [String : Any]) {
         super.init()
         setValuesForKeys(dict)
     }
     
-
-    
     override func setValue(_ value: Any?, forUndefinedKey key: String) { }
+    
+
 }
