@@ -144,10 +144,12 @@ extension ProfileViewController {
         print("我的订单")
     }
     fileprivate func jump2kMeAllLine(){
-        print("所有线路")
+        let meallVC = MeAllLineController()
+        self.present(meallVC, animated: true)
     }
     fileprivate func jump2kMeLine(){
-        print("我的线路")
+        let melineVC = MeLineController()
+        self.present(melineVC, animated: true)
     }
     
     fileprivate func jump2kMeShenZhen() {

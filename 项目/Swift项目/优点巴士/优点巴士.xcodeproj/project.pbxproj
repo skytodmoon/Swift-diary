@@ -20,6 +20,16 @@
 		1DCA075D1F63B1C2001CCF32 /* TransitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */; };
 		1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07601F63B21B001CCF32 /* CityViewController.swift */; };
 		1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07641F63B268001CCF32 /* CharteredViewController.swift */; };
+		1DCA076C1F63E2E6001CCF32 /* MeAllLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA076B1F63E2E6001CCF32 /* MeAllLineController.swift */; };
+		1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA076F1F63E3DC001CCF32 /* MeLineController.swift */; };
+		1DCA07751F63E4B4001CCF32 /* MeAllLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07741F63E4B4001CCF32 /* MeAllLineModel.swift */; };
+		1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07761F63E4C3001CCF32 /* MeAllLineViewModel.swift */; };
+		1DCA077A1F63E4D8001CCF32 /* MeAllLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07781F63E4D8001CCF32 /* MeAllLineTableViewCell.swift */; };
+		1DCA077B1F63E4D8001CCF32 /* MeAllLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07791F63E4D8001CCF32 /* MeAllLineTableViewCell.xib */; };
+		1DCA077E1F63E4F2001CCF32 /* MeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA077C1F63E4F2001CCF32 /* MeLineTableViewCell.swift */; };
+		1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA077D1F63E4F2001CCF32 /* MeLineTableViewCell.xib */; };
+		1DCA07811F63E504001CCF32 /* MeLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07801F63E504001CCF32 /* MeLineModel.swift */; };
+		1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */; };
 		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
 		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
 		5B228ACF1F601276004CA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228ACD1F601276004CA389 /* Main.storyboard */; };
@@ -87,6 +97,16 @@
 		1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitViewController.swift; sourceTree = "<group>"; };
 		1DCA07601F63B21B001CCF32 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		1DCA07641F63B268001CCF32 /* CharteredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharteredViewController.swift; sourceTree = "<group>"; };
+		1DCA076B1F63E2E6001CCF32 /* MeAllLineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineController.swift; sourceTree = "<group>"; };
+		1DCA076F1F63E3DC001CCF32 /* MeLineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineController.swift; sourceTree = "<group>"; };
+		1DCA07741F63E4B4001CCF32 /* MeAllLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineModel.swift; sourceTree = "<group>"; };
+		1DCA07761F63E4C3001CCF32 /* MeAllLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineViewModel.swift; sourceTree = "<group>"; };
+		1DCA07781F63E4D8001CCF32 /* MeAllLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineTableViewCell.swift; sourceTree = "<group>"; };
+		1DCA07791F63E4D8001CCF32 /* MeAllLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeAllLineTableViewCell.xib; sourceTree = "<group>"; };
+		1DCA077C1F63E4F2001CCF32 /* MeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineTableViewCell.swift; sourceTree = "<group>"; };
+		1DCA077D1F63E4F2001CCF32 /* MeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeLineTableViewCell.xib; sourceTree = "<group>"; };
+		1DCA07801F63E504001CCF32 /* MeLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineModel.swift; sourceTree = "<group>"; };
+		1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineViewModel.swift; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
 		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B228AC91F601276004CA389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +260,94 @@
 				1DCA07641F63B268001CCF32 /* CharteredViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA07661F63E2CD001CCF32 /* MeAllLine */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07671F63E2CD001CCF32 /* Controller */,
+				1DCA07681F63E2CD001CCF32 /* Model */,
+				1DCA07691F63E2CD001CCF32 /* View */,
+				1DCA076A1F63E2CD001CCF32 /* ViewModel */,
+			);
+			path = MeAllLine;
+			sourceTree = "<group>";
+		};
+		1DCA07671F63E2CD001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA076B1F63E2E6001CCF32 /* MeAllLineController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA07681F63E2CD001CCF32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07741F63E4B4001CCF32 /* MeAllLineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DCA07691F63E2CD001CCF32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07781F63E4D8001CCF32 /* MeAllLineTableViewCell.swift */,
+				1DCA07791F63E4D8001CCF32 /* MeAllLineTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DCA076A1F63E2CD001CCF32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07761F63E4C3001CCF32 /* MeAllLineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DCA076D1F63E3DC001CCF32 /* MeLine */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA076E1F63E3DC001CCF32 /* Controller */,
+				1DCA07701F63E3DC001CCF32 /* Model */,
+				1DCA07711F63E3DC001CCF32 /* View */,
+				1DCA07721F63E3DC001CCF32 /* ViewModel */,
+			);
+			path = MeLine;
+			sourceTree = "<group>";
+		};
+		1DCA076E1F63E3DC001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA076F1F63E3DC001CCF32 /* MeLineController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA07701F63E3DC001CCF32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07801F63E504001CCF32 /* MeLineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DCA07711F63E3DC001CCF32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA077C1F63E4F2001CCF32 /* MeLineTableViewCell.swift */,
+				1DCA077D1F63E4F2001CCF32 /* MeLineTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DCA07721F63E3DC001CCF32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3B31F528589ED2589EB1FCD1 /* Pods */ = {
@@ -489,6 +597,8 @@
 		5B97961F1F61437E00CB51F9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA076D1F63E3DC001CCF32 /* MeLine */,
+				1DCA07661F63E2CD001CCF32 /* MeAllLine */,
 				5B8C4E371F622B5600246A8C /* Sideslip */,
 			);
 			path = Profile;
@@ -606,6 +716,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
+				1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */,
+				1DCA077B1F63E4D8001CCF32 /* MeAllLineTableViewCell.xib in Resources */,
 				5B8D6C591F61068900F7DD93 /* MessageTableViewCell.xib in Resources */,
 				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
 				1D221C7D1F62F6D900212E8B /* ActivityDetailTableViewCell.xib in Resources */,
@@ -686,14 +798,21 @@
 			files = (
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
 				1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */,
+				1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */,
+				1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				1D221C771F62F6A000212E8B /* ActivityDetailModel.swift in Sources */,
+				1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */,
 				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
 				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
+				1DCA076C1F63E2E6001CCF32 /* MeAllLineController.swift in Sources */,
+				1DCA07751F63E4B4001CCF32 /* MeAllLineModel.swift in Sources */,
 				1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */,
 				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
+				1DCA077A1F63E4D8001CCF32 /* MeAllLineTableViewCell.swift in Sources */,
 				5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */,
+				1DCA07811F63E504001CCF32 /* MeLineModel.swift in Sources */,
 				1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
 				1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */,
@@ -710,6 +829,7 @@
 				1D221C791F62F6B600212E8B /* ActivityDetailViewModel.swift in Sources */,
 				1D221C751F62E98800212E8B /* UIColor+Extension.swift in Sources */,
 				5B8D6C691F61156700F7DD93 /* MessageModel.swift in Sources */,
+				1DCA077E1F63E4F2001CCF32 /* MeLineTableViewCell.swift in Sources */,
 				5B8D6C3C1F60DF3E00F7DD93 /* Common.swift in Sources */,
 				5B8D6C3E1F60E85F00F7DD93 /* MainNavController.swift in Sources */,
 				5B8D6C6C1F61197000F7DD93 /* MessageViewModel.swift in Sources */,
