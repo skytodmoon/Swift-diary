@@ -10,8 +10,10 @@ import UIKit
 
 class ActivityDetailModel: NSObject {
     
-    var startStationName: String = ""
     
+    
+    var startStationName: String = ""
+    var date: String = ""
 
     override init() {
         

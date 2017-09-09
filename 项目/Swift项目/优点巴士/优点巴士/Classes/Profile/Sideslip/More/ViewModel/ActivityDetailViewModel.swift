@@ -27,14 +27,22 @@ extension ActivityDetailViewModel {
                 let dict = JSON(value)
                     let dataDict = dict["data"].dictionary
                         if let orderStorageItemLists = dataDict!["orderStorageItemList"]?.arrayObject{
-                        print(orderStorageItemLists)
-                            let line  = orderStorageItemLists["line"].dictionary
-                            print(line¡)
+//                            let line = orderStorageItemLists["line"].dictionary
+//                            print(line)
+                            
+                            print(orderStorageItemLists)
+                            
+                            for dict in orderStorageItemLists {
+                                self.activityDetail.append(ActivityDetailModel(dict: dict as! [String : Any]))
+                            }
                     }
-                }
             
                 finishedCallback()
             }
             
         }
+    }
 }
+
+
+

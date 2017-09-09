@@ -24,7 +24,6 @@ extension ActivityViewModel {
                 let dict = JSON(value)
                 let dataDict = dict["data"].dictionary
                 if let orderStorageList = dataDict!["orderStorageList"]?.arrayObject {
-                    print(orderStorageList)
                     for dict in orderStorageList {
                         self.activity.append(ActivityModel(dict: dict as! [String : Any]))
                     }
