@@ -141,7 +141,9 @@ extension ProfileViewController {
         print("我的行程")
     }
     fileprivate func jump2kMeOder(){
-        print("我的订单")
+        
+       let meoderVC = MeOderViewController()
+       self.present(meoderVC, animated: true)
     }
     fileprivate func jump2kMeAllLine(){
         let meallVC = MeAllLineController()

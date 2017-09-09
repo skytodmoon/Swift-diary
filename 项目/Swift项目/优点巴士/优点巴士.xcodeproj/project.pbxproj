@@ -30,6 +30,11 @@
 		1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA077D1F63E4F2001CCF32 /* MeLineTableViewCell.xib */; };
 		1DCA07811F63E504001CCF32 /* MeLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07801F63E504001CCF32 /* MeLineModel.swift */; };
 		1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */; };
+		1DCA078A1F63E9CE001CCF32 /* MeOderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07891F63E9CE001CCF32 /* MeOderViewController.swift */; };
+		1DCA078C1F63EA40001CCF32 /* MeOderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078B1F63EA40001CCF32 /* MeOderModel.swift */; };
+		1DCA078E1F63EA4C001CCF32 /* MeOderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */; };
+		1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */; };
+		1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */; };
 		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
 		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
 		5B228ACF1F601276004CA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228ACD1F601276004CA389 /* Main.storyboard */; };
@@ -107,6 +112,11 @@
 		1DCA077D1F63E4F2001CCF32 /* MeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeLineTableViewCell.xib; sourceTree = "<group>"; };
 		1DCA07801F63E504001CCF32 /* MeLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineModel.swift; sourceTree = "<group>"; };
 		1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineViewModel.swift; sourceTree = "<group>"; };
+		1DCA07891F63E9CE001CCF32 /* MeOderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderViewController.swift; sourceTree = "<group>"; };
+		1DCA078B1F63EA40001CCF32 /* MeOderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderModel.swift; sourceTree = "<group>"; };
+		1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderViewModel.swift; sourceTree = "<group>"; };
+		1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderTableViewCell.swift; sourceTree = "<group>"; };
+		1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeOderTableViewCell.xib; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
 		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B228AC91F601276004CA389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -346,6 +356,50 @@
 			isa = PBXGroup;
 			children = (
 				1DCA07821F63E512001CCF32 /* MeLineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DCA07841F63E9BE001CCF32 /* MeOder */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07851F63E9BE001CCF32 /* Controller */,
+				1DCA07861F63E9BE001CCF32 /* Model */,
+				1DCA07871F63E9BE001CCF32 /* View */,
+				1DCA07881F63E9BE001CCF32 /* ViewModel */,
+			);
+			path = MeOder;
+			sourceTree = "<group>";
+		};
+		1DCA07851F63E9BE001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07891F63E9CE001CCF32 /* MeOderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA07861F63E9BE001CCF32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA078B1F63EA40001CCF32 /* MeOderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DCA07871F63E9BE001CCF32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */,
+				1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DCA07881F63E9BE001CCF32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -597,6 +651,7 @@
 		5B97961F1F61437E00CB51F9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA07841F63E9BE001CCF32 /* MeOder */,
 				1DCA076D1F63E3DC001CCF32 /* MeLine */,
 				1DCA07661F63E2CD001CCF32 /* MeAllLine */,
 				5B8C4E371F622B5600246A8C /* Sideslip */,
@@ -724,6 +779,7 @@
 				5B8C4E3D1F622B5600246A8C /* ProfileViewController.xib in Resources */,
 				5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
+				1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,12 +871,16 @@
 				1DCA07811F63E504001CCF32 /* MeLineModel.swift in Sources */,
 				1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
+				1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */,
+				1DCA078C1F63EA40001CCF32 /* MeOderModel.swift in Sources */,
 				1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */,
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
 				5B8C4E3C1F622B5600246A8C /* ProfileViewController.swift in Sources */,
 				5B843ED11F627931006E5B9C /* ActivityViewModel.swift in Sources */,
+				1DCA078A1F63E9CE001CCF32 /* MeOderViewController.swift in Sources */,
 				5B8D6C581F61068900F7DD93 /* MessageTableViewCell.swift in Sources */,
 				5B843ED41F62794A006E5B9C /* ActivityTableViewCell.swift in Sources */,
+				1DCA078E1F63EA4C001CCF32 /* MeOderViewModel.swift in Sources */,
 				5B228ACC1F601276004CA389 /* ViewController.swift in Sources */,
 				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
 				1DCA075D1F63B1C2001CCF32 /* TransitViewController.swift in Sources */,
