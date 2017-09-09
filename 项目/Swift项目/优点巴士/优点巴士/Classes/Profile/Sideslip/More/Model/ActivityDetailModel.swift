@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ActivityDetailModel: NSObject {
     
@@ -23,6 +24,8 @@ class ActivityDetailModel: NSObject {
         super.init()
         setValuesForKeys(dict)
     }
+    
+
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) { }
 }

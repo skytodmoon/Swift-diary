@@ -93,7 +93,7 @@ extension PageContentView : UICollectionViewDataSource {
             view.removeFromSuperview()
         }
         
-        let childVc = childVcs[indexPath.item]
+        let childVc = childVcs[(indexPath as NSIndexPath).item]
         childVc.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVc.view)
         

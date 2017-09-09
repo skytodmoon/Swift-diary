@@ -16,6 +16,10 @@
 		1D221C7C1F62F6D900212E8B /* ActivityDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D221C7A1F62F6D900212E8B /* ActivityDetailTableViewCell.swift */; };
 		1D221C7D1F62F6D900212E8B /* ActivityDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D221C7B1F62F6D900212E8B /* ActivityDetailTableViewCell.xib */; };
 		1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3627BA1F61888F003CBCE5 /* UIViewController+Extension.swift */; };
+		1DCA07591F63B131001CCF32 /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07581F63B131001CCF32 /* BusViewController.swift */; };
+		1DCA075D1F63B1C2001CCF32 /* TransitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */; };
+		1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07601F63B21B001CCF32 /* CityViewController.swift */; };
+		1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07641F63B268001CCF32 /* CharteredViewController.swift */; };
 		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
 		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
 		5B228ACF1F601276004CA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228ACD1F601276004CA389 /* Main.storyboard */; };
@@ -79,6 +83,10 @@
 		1D221C7A1F62F6D900212E8B /* ActivityDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailTableViewCell.swift; sourceTree = "<group>"; };
 		1D221C7B1F62F6D900212E8B /* ActivityDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDetailTableViewCell.xib; sourceTree = "<group>"; };
 		1D3627BA1F61888F003CBCE5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		1DCA07581F63B131001CCF32 /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
+		1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitViewController.swift; sourceTree = "<group>"; };
+		1DCA07601F63B21B001CCF32 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		1DCA07641F63B268001CCF32 /* CharteredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharteredViewController.swift; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
 		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B228AC91F601276004CA389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +176,70 @@
 				DF40B635B1F4AFCB5A8E71FE /* Pods_____UITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DCA07561F63B11C001CCF32 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07571F63B11C001CCF32 /* Controller */,
+			);
+			path = Bus;
+			sourceTree = "<group>";
+		};
+		1DCA07571F63B11C001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07581F63B131001CCF32 /* BusViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA075A1F63B1B5001CCF32 /* Transit */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA075B1F63B1B5001CCF32 /* Controller */,
+			);
+			path = Transit;
+			sourceTree = "<group>";
+		};
+		1DCA075B1F63B1B5001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA075E1F63B210001CCF32 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA075F1F63B210001CCF32 /* Controller */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		1DCA075F1F63B210001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07601F63B21B001CCF32 /* CityViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1DCA07621F63B260001CCF32 /* Chartered */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07631F63B260001CCF32 /* Controller */,
+			);
+			path = Chartered;
+			sourceTree = "<group>";
+		};
+		1DCA07631F63B260001CCF32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DCA07641F63B268001CCF32 /* CharteredViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3B31F528589ED2589EB1FCD1 /* Pods */ = {
@@ -319,6 +391,10 @@
 		5B8D6C301F60DAF900F7DD93 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1DCA07621F63B260001CCF32 /* Chartered */,
+				1DCA075E1F63B210001CCF32 /* City */,
+				1DCA075A1F63B1B5001CCF32 /* Transit */,
+				1DCA07561F63B11C001CCF32 /* Bus */,
 				1D221C6F1F62E8EF00212E8B /* View */,
 				5B8D6C311F60DAF900F7DD93 /* Controller */,
 			);
@@ -609,11 +685,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
+				1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				1D221C771F62F6A000212E8B /* ActivityDetailModel.swift in Sources */,
 				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
 				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
+				1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */,
 				5B8D6C451F60EFFF00F7DD93 /* UIBarButtonItem+Extension.swift in Sources */,
 				5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */,
 				1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */,
@@ -626,6 +704,7 @@
 				5B843ED41F62794A006E5B9C /* ActivityTableViewCell.swift in Sources */,
 				5B228ACC1F601276004CA389 /* ViewController.swift in Sources */,
 				5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */,
+				1DCA075D1F63B1C2001CCF32 /* TransitViewController.swift in Sources */,
 				1D1D22BB1F62E27A00966946 /* ActivityDetailController.swift in Sources */,
 				5B843EC41F62728E006E5B9C /* AgreementViewController.swift in Sources */,
 				1D221C791F62F6B600212E8B /* ActivityDetailViewModel.swift in Sources */,
@@ -637,6 +716,7 @@
 				5B843EC21F627284006E5B9C /* UserguideViewController.swift in Sources */,
 				5B843ECF1F627921006E5B9C /* ActivityModel.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
+				1DCA07591F63B131001CCF32 /* BusViewController.swift in Sources */,
 				1D221C7C1F62F6D900212E8B /* ActivityDetailTableViewCell.swift in Sources */,
 				5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */,
 				5B843EC01F627272006E5B9C /* ProblemViewController.swift in Sources */,
