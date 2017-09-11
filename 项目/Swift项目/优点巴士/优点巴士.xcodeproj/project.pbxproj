@@ -35,6 +35,10 @@
 		1DCA078E1F63EA4C001CCF32 /* MeOderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */; };
 		1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */; };
 		1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */; };
+		5B21C43D1F6674DA00931E3E /* BusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43C1F6674DA00931E3E /* BusModel.swift */; };
+		5B21C4401F6674F000931E3E /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */; };
+		5B21C4411F6674F000931E3E /* BusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */; };
+		5B21C4431F66750000931E3E /* BusModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C4421F66750000931E3E /* BusModelView.swift */; };
 		5B228ACA1F601276004CA389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AC91F601276004CA389 /* AppDelegate.swift */; };
 		5B228ACC1F601276004CA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ACB1F601276004CA389 /* ViewController.swift */; };
 		5B228ACF1F601276004CA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228ACD1F601276004CA389 /* Main.storyboard */; };
@@ -118,6 +122,10 @@
 		1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderTableViewCell.swift; sourceTree = "<group>"; };
 		1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeOderTableViewCell.xib; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
+		5B21C43C1F6674DA00931E3E /* BusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusModel.swift; sourceTree = "<group>"; };
+		5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewCell.swift; sourceTree = "<group>"; };
+		5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusTableViewCell.xib; sourceTree = "<group>"; };
+		5B21C4421F66750000931E3E /* BusModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusModelView.swift; sourceTree = "<group>"; };
 		5B228AC61F601276004CA389 /* 优点巴士.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "优点巴士.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B228AC91F601276004CA389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B228ACB1F601276004CA389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				1DCA07571F63B11C001CCF32 /* Controller */,
+				5B21C4391F6674C800931E3E /* Model */,
+				5B21C43A1F6674C800931E3E /* ModelView */,
+				5B21C43B1F6674C800931E3E /* View */,
 			);
 			path = Bus;
 			sourceTree = "<group>";
@@ -411,6 +422,31 @@
 				C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B21C4391F6674C800931E3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B21C43C1F6674DA00931E3E /* BusModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B21C43A1F6674C800931E3E /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				5B21C4421F66750000931E3E /* BusModelView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		5B21C43B1F6674C800931E3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */,
+				5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B228ABD1F601276004CA389 = {
@@ -780,6 +816,7 @@
 				5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
 				1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */,
+				5B21C4411F6674F000931E3E /* BusTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,7 +907,9 @@
 				5B843EC81F62736F006E5B9C /* AboutmeViewController.swift in Sources */,
 				1DCA07811F63E504001CCF32 /* MeLineModel.swift in Sources */,
 				1D221C711F62E8FF00212E8B /* PageTitleView.swift in Sources */,
+				5B21C43D1F6674DA00931E3E /* BusModel.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
+				5B21C4431F66750000931E3E /* BusModelView.swift in Sources */,
 				1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */,
 				1DCA078C1F63EA40001CCF32 /* MeOderModel.swift in Sources */,
 				1D3627BB1F61888F003CBCE5 /* UIViewController+Extension.swift in Sources */,
@@ -897,6 +936,7 @@
 				5B843ECF1F627921006E5B9C /* ActivityModel.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
 				1DCA07591F63B131001CCF32 /* BusViewController.swift in Sources */,
+				5B21C4401F6674F000931E3E /* BusTableViewCell.swift in Sources */,
 				1D221C7C1F62F6D900212E8B /* ActivityDetailTableViewCell.swift in Sources */,
 				5B8D6C411F60E9C000F7DD93 /* UIButton+Extension.swift in Sources */,
 				5B843EC01F627272006E5B9C /* ProblemViewController.swift in Sources */,
