@@ -9,6 +9,42 @@
 import UIKit
 
 class MeAllLineTableViewCell: UITableViewCell {
+    
+    @IBOutlet var MeAllView: UIView!
+    
+    @IBOutlet var lineLabel: UILabel!
+    
+    @IBOutlet var lineNo: UILabel!
+    
+    @IBOutlet var endStationName: UILabel!
+    
+    @IBOutlet var startStationName: UILabel!
+    
+    @IBOutlet var dayPrice: UILabel!
+    
+    var meallLinemodel : MeAllLineModel? {
+        didSet {
+            
+            MeAllView.layer.cornerRadius = 3
+            MeAllView.layer.masksToBounds = true
+            
+            lineLabel.layer.cornerRadius = 3
+            lineLabel.layer.masksToBounds = true
+            lineLabel.text = meallLinemodel?.lineLabel
+            
+            lineNo.text = meallLinemodel?.lineNo
+            
+        
+            let str1 = "¥"
+            let str2 = meallLinemodel?.dayPrice
+            let str3 = "购票"
+            let str4 = str1+str2!+str3
+            dayPrice.text = str4
+            
+            endStationName.text = meallLinemodel?.endStationName
+            startStationName.text = meallLinemodel?.startStationName
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
