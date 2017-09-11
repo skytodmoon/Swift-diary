@@ -12,17 +12,26 @@ class ActivityDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var startStationName: UILabel!
     
+    @IBOutlet var endStationName: UILabel!
+    
+    @IBOutlet var dayPrice: UILabel!
+    
+    @IBOutlet var date: UILabel!
     
     var activitDetailmodel : ActivityDetailModel? {
         didSet {
             // 校验模型是否有值
             guard let activitDetail = activitDetailmodel else { return }
-            print(activitDetail)
-//            startStationName.text = activitDetail.arriveTime
-//            commuteAmountlabel.text = String.init(format: "%.2f", activit.commuteAmount)
-//            ALLAmountlabel.text = String.init(format: "%.2f", activit.ALLAmount)
-//            intercityAmountlabel.text = String.init(format: "%.2f", activit.intercityAmount)
-//            qualityAmountlabel.text = String.init(format: "%.2f", activit.qualityAmount)
+            startStationName.text = activitDetail.startStationName
+            endStationName.text = activitDetail.endStationName
+            
+          let str1="¥"
+          let str2 = activitDetail.dayPrice
+          let str3 = str1+str2!
+          dayPrice.text = str3
+            
+            date.text = activitDetail.startTime
+            
         }
     }
 

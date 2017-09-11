@@ -24,7 +24,6 @@ class ActivityDetailController: UIViewController {
         tableView.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(UINib(nibName: "ActivityDetailTableViewCell", bundle: nil), forCellReuseIdentifier: activityDetailCellID)
         return tableView
         }()
@@ -105,7 +104,7 @@ extension ActivityDetailController : UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
 }
