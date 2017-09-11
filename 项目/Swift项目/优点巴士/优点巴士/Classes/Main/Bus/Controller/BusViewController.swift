@@ -8,6 +8,9 @@
 
 import UIKit
 import DGElasticPullToRefresh
+import Alamofire
+import SwiftyJSON
+import Kingfisher
 
 private let BusCellID = "BusCellID"
 
@@ -23,47 +26,55 @@ class BusViewController: UIViewController {
     tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     tableView.dataSource = self
     tableView.delegate = self
+    tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 160))
+    tableView.addSubview(self.headerView)
     tableView.register(UINib(nibName: "BusTableViewCell", bundle: nil), forCellReuseIdentifier: BusCellID)
     return tableView
+    }()
+    
+    /// headerView
+    fileprivate lazy var headerView : UIImageView = {
+        let rect = CGRect(x: 0, y: 0, width: ScreenW, height: 160)
+        let headerView = UIImageView(frame: rect)
+        return headerView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addSubview(tableView)
-        HeaderView()
         Refresh()
-//        loadData()
-        
+        loadData()
+        loadHeadViewData()
 
     }
     
     func Refresh(){
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        loadingView.tintColor = UIColor.white
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            self?.loadData()
             self?.tableView.dg_stopLoading()
             }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
     }
     
-    func HeaderView() {
+    func loadHeadViewData ()  {
+        Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/events/rotation", method: .get, parameters: nil).responseJSON { (response) in
+            if let value = response.result.value {
+                let dict = JSON(value)
+                let dataDict = dict["data"].dictionary
+                if let eventsList = dataDict?["eventsList"]?.array{
+                    for line in eventsList {
+                        let imgUrl = line["imgUrl"].stringValue
+                        guard let iconURL = URL(string: imgUrl) else { return }
+                        self.headerView.kf.setImage(with: iconURL)
+                    }
+                }
+            }
+        }
         
-        let headerView = UIView(frame:
-            CGRect(x:0, y:64-44, width:ScreenW, height:30))
-        
-        let headerlabel:UILabel = UILabel(frame: headerView.bounds)
-        headerlabel.textColor = UIColor.lightGray
-        headerlabel.backgroundColor = UIColor.groupTableViewBackground
-        headerlabel.font = UIFont.systemFont(ofSize: 13)
-        headerlabel.text = "推荐路线"
-        headerView.addSubview(headerlabel)
-        headerView.backgroundColor = UIColor.groupTableViewBackground
-        tableView.tableHeaderView = headerView
     }
-
 
 }
 
@@ -90,6 +101,7 @@ extension BusViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: BusCellID, for: indexPath) as! BusTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.busmodel = BusVM.bus[indexPath.item]
         return cell
     }
