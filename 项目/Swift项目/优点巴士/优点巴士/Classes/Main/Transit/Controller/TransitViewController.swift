@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 private let transitCellID = "transitCellID"
 
@@ -21,7 +22,6 @@ class TransitViewController: UIViewController {
         tableView.backgroundColor = UIColor.groupTableViewBackground
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(UINib(nibName: "TransitViewCell", bundle: nil), forCellReuseIdentifier: transitCellID)
         return tableView
         }()
@@ -30,10 +30,20 @@ class TransitViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
+        Refresh()
         loadData()
         // Do any additional setup after loading the view.
     }
 
+    func Refresh(){
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.white
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.tableView.dg_stopLoading()
+            }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0))
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+    }
 
 }
 
@@ -67,6 +77,35 @@ extension TransitViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    //返回分区头部视图
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.groupTableViewBackground
+        let titleLabel = UILabel()
+        //        titleLabel.text = self.adHeaders?[section]
+        titleLabel.text = "附近站点"
+        titleLabel.textColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
+        titleLabel.font = UIFont.systemFont(ofSize: 13)
+        titleLabel.sizeToFit()
+        titleLabel.center = CGPoint(x: self.view.frame.width/8, y: 15)
+        headerView.addSubview(titleLabel)
+        
+        let titleLabel2 = UILabel()
+        titleLabel2.text = "直线距离/辐射半径1.5km"
+        titleLabel2.textColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
+        titleLabel2.font = UIFont.systemFont(ofSize: 12)
+        titleLabel2.sizeToFit()
+        titleLabel2.center = CGPoint(x: self.view.frame.width-70, y: 15)
+        headerView.addSubview(titleLabel2)
+        
+        return headerView
+    }
+    
+    //返回分区头部高度
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
 }

@@ -14,13 +14,26 @@ class TransitViewCell: UITableViewCell {
     
     @IBOutlet var station_direction: UILabel!
     
+    @IBOutlet var distance: UILabel!
+    
     var transitmodel : TransitModel? {
         
         didSet {
             guard let Tranmodel = transitmodel else { return }
-            print(Tranmodel)
-            station_name.text = Tranmodel.stationName
-            station_direction.text = Tranmodel.stationName
+            station_name.text = Tranmodel.station_name
+            
+            
+            let str11 = "("
+            let str12 = Tranmodel.station_direction
+            let str13 = ")"
+            let str14 = str11+str12+str13
+            station_direction.text = str14
+            
+            let str1 = "距离您"
+            let str2 = String(Tranmodel.distance)
+            let str3 = "米"
+            let str4 = str1 + str2 + str3
+            distance.text = str4
         }
     }
 

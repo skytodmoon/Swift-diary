@@ -106,7 +106,25 @@ extension BusViewController : UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
-
+    //返回分区头部视图
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.groupTableViewBackground
+        let titleLabel = UILabel()
+//        titleLabel.text = self.adHeaders?[section]
+        titleLabel.text = "推荐线路"
+        titleLabel.textColor = UIColor.darkGray
+        titleLabel.font = UIFont.systemFont(ofSize: 13)
+        titleLabel.sizeToFit()
+        titleLabel.center = CGPoint(x: self.view.frame.width/8, y: 15)
+        headerView.addSubview(titleLabel)
+        return headerView
+    }
+    
+    //返回分区头部高度
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
