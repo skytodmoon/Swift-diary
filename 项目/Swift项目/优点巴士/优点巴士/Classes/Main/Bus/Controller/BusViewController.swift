@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DGElasticPullToRefresh
+
 import Alamofire
 import SwiftyJSON
 import Kingfisher
@@ -43,21 +43,13 @@ class BusViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
-        Refresh()
+        
         loadData()
         loadHeadViewData()
 
     }
     
-    func Refresh(){
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor.white
-        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            self?.tableView.dg_stopLoading()
-            }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0))
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
-    }
+    
     
     func loadHeadViewData ()  {
         Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/events/rotation", method: .get, parameters: nil).responseJSON { (response) in

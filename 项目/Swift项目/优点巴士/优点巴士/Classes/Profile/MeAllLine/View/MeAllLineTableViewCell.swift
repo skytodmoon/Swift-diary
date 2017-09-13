@@ -22,6 +22,10 @@ class MeAllLineTableViewCell: UITableViewCell {
     
     @IBOutlet var dayPrice: UILabel!
     
+    @IBOutlet var startTime: UILabel!
+    
+    @IBOutlet var arriveTime: UILabel!
+    
     var meallLinemodel : MeAllLineModel? {
         didSet {
             
@@ -43,6 +47,22 @@ class MeAllLineTableViewCell: UITableViewCell {
             
             endStationName.text = meallLinemodel?.endStationName
             startStationName.text = meallLinemodel?.startStationName
+            
+            let str = meallLinemodel?.startTime
+            //截取时间段字符串
+            let startIndex = str?.index((str?.startIndex)!, offsetBy:10)
+            let endIndex = str?.index(startIndex!, offsetBy:6)
+            let result = str?.substring(with: startIndex!..<endIndex!)
+            startTime.text = result
+            
+            
+            let arrivestr = meallLinemodel?.arriveTime
+            //截取时间段字符串
+            let arrivestartIndex = arrivestr?.index((arrivestr?.startIndex)!, offsetBy:10)
+            let arriveendIndex = arrivestr?.index(arrivestartIndex!, offsetBy:6)
+            let arriveresult = arrivestr?.substring(with: arrivestartIndex!..<arriveendIndex!)
+            arriveTime.text = arriveresult
+
         }
     }
 
