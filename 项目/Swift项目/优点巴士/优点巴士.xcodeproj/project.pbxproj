@@ -36,6 +36,10 @@
 		1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */; };
 		1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */; };
 		5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */; };
+		5B1195E11F68FD10000FD554 /* MeTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195E01F68FD10000FD554 /* MeTripModel.swift */; };
+		5B1195E31F68FD19000FD554 /* MeTripModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195E21F68FD19000FD554 /* MeTripModelView.swift */; };
+		5B1195E61F68FD2A000FD554 /* MeTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195E41F68FD2A000FD554 /* MeTripTableViewCell.swift */; };
+		5B1195E71F68FD2A000FD554 /* MeTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1195E51F68FD2A000FD554 /* MeTripTableViewCell.xib */; };
 		5B21C43D1F6674DA00931E3E /* BusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43C1F6674DA00931E3E /* BusModel.swift */; };
 		5B21C4401F6674F000931E3E /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */; };
 		5B21C4411F6674F000931E3E /* BusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */; };
@@ -129,6 +133,10 @@
 		1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeOderTableViewCell.xib; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
 		5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripViewController.swift; sourceTree = "<group>"; };
+		5B1195E01F68FD10000FD554 /* MeTripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripModel.swift; sourceTree = "<group>"; };
+		5B1195E21F68FD19000FD554 /* MeTripModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripModelView.swift; sourceTree = "<group>"; };
+		5B1195E41F68FD2A000FD554 /* MeTripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripTableViewCell.swift; sourceTree = "<group>"; };
+		5B1195E51F68FD2A000FD554 /* MeTripTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeTripTableViewCell.xib; sourceTree = "<group>"; };
 		5B21C43C1F6674DA00931E3E /* BusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusModel.swift; sourceTree = "<group>"; };
 		5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewCell.swift; sourceTree = "<group>"; };
 		5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusTableViewCell.xib; sourceTree = "<group>"; };
@@ -461,6 +469,7 @@
 		5B1195DB1F68FC49000FD554 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B1195E01F68FD10000FD554 /* MeTripModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +477,7 @@
 		5B1195DC1F68FC49000FD554 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				5B1195E21F68FD19000FD554 /* MeTripModelView.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -475,6 +485,8 @@
 		5B1195DD1F68FC49000FD554 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B1195E41F68FD2A000FD554 /* MeTripTableViewCell.swift */,
+				5B1195E51F68FD2A000FD554 /* MeTripTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -899,6 +911,7 @@
 				5B21C4521F66A59500931E3E /* TransitViewCell.xib in Resources */,
 				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
 				1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */,
+				5B1195E71F68FD2A000FD554 /* MeTripTableViewCell.xib in Resources */,
 				1DCA077B1F63E4D8001CCF32 /* MeAllLineTableViewCell.xib in Resources */,
 				5B8D6C591F61068900F7DD93 /* MessageTableViewCell.xib in Resources */,
 				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
@@ -989,6 +1002,7 @@
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				1D221C771F62F6A000212E8B /* ActivityDetailModel.swift in Sources */,
 				1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */,
+				5B1195E61F68FD2A000FD554 /* MeTripTableViewCell.swift in Sources */,
 				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
 				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
 				1DCA076C1F63E2E6001CCF32 /* MeAllLineController.swift in Sources */,
@@ -1010,6 +1024,7 @@
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
 				5B8C4E3C1F622B5600246A8C /* ProfileViewController.swift in Sources */,
 				5B843ED11F627931006E5B9C /* ActivityViewModel.swift in Sources */,
+				5B1195E11F68FD10000FD554 /* MeTripModel.swift in Sources */,
 				1DCA078A1F63E9CE001CCF32 /* MeOderViewController.swift in Sources */,
 				5B8D6C581F61068900F7DD93 /* MessageTableViewCell.swift in Sources */,
 				5B843ED41F62794A006E5B9C /* ActivityTableViewCell.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				5B843EC21F627284006E5B9C /* UserguideViewController.swift in Sources */,
 				5B843ECF1F627921006E5B9C /* ActivityModel.swift in Sources */,
 				5B8D6C351F60DC1100F7DD93 /* NewFeatureController.swift in Sources */,
+				5B1195E31F68FD19000FD554 /* MeTripModelView.swift in Sources */,
 				1DCA07591F63B131001CCF32 /* BusViewController.swift in Sources */,
 				5B21C4401F6674F000931E3E /* BusTableViewCell.swift in Sources */,
 				1D221C7C1F62F6D900212E8B /* ActivityDetailTableViewCell.swift in Sources */,

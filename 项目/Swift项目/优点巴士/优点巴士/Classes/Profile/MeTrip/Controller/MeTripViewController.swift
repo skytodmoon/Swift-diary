@@ -8,7 +8,12 @@
 
 import UIKit
 
+private let metripCellID = "metripCellID"
+
 class MeTripViewController: UIViewController {
+    
+    // MARK: 懒加载属性
+    fileprivate lazy var meAllTripVM : MeTripModelView = MeTripModelView()
     
     fileprivate lazy var tableView : UITableView = {[unowned self] in
         
@@ -16,10 +21,11 @@ class MeTripViewController: UIViewController {
         let rect = CGRect(x: 0, y: 64, width: ScreenW, height: ScreenH - 64)
         let tableView = UITableView(frame: rect)
         tableView.backgroundColor = UIColor.groupTableViewBackground
-//        tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-//        tableView.register(UINib(nibName: "MeOderTableViewCell", bundle: nil), forCellReuseIdentifier: meoderCellID)
+
+        tableView.register(UINib(nibName: "MeTripTableViewCell", bundle: nil), forCellReuseIdentifier: metripCellID)
         return tableView
         }()
 
@@ -27,10 +33,23 @@ class MeTripViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(tableView)
         setUpMainView()
+        loadData()
         // Do any additional setup after loading the view.
     }
 
 
+}
+
+
+// MARK:- 请求数据
+extension MeTripViewController {
+    
+    func loadData() {
+        meAllTripVM.loadmetripData{
+            self.tableView.reloadData()
+        }
+        
+    }
 }
 
 
@@ -63,5 +82,27 @@ extension MeTripViewController {
     
     func leftItem(_ btn: UIButton) {
         self.dismiss(animated: true)
+    }
+}
+
+// MARK:- 遵守UITableView的数据源&代理
+extension MeTripViewController : UITableViewDelegate,UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meAllTripVM.meTripModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: metripCellID, for: indexPath) as! MeTripTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.metripmodel = meAllTripVM.meTripModel[indexPath.item]
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
     }
 }
