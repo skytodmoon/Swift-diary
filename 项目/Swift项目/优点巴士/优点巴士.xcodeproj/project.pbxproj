@@ -35,6 +35,7 @@
 		1DCA078E1F63EA4C001CCF32 /* MeOderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */; };
 		1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */; };
 		1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */; };
+		5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */; };
 		5B21C43D1F6674DA00931E3E /* BusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43C1F6674DA00931E3E /* BusModel.swift */; };
 		5B21C4401F6674F000931E3E /* BusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */; };
 		5B21C4411F6674F000931E3E /* BusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */; };
@@ -127,6 +128,7 @@
 		1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderTableViewCell.swift; sourceTree = "<group>"; };
 		1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeOderTableViewCell.xib; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripViewController.swift; sourceTree = "<group>"; };
 		5B21C43C1F6674DA00931E3E /* BusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusModel.swift; sourceTree = "<group>"; };
 		5B21C43E1F6674F000931E3E /* BusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewCell.swift; sourceTree = "<group>"; };
 		5B21C43F1F6674F000931E3E /* BusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusTableViewCell.xib; sourceTree = "<group>"; };
@@ -437,6 +439,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B1195D91F68FC49000FD554 /* MeTrip */ = {
+			isa = PBXGroup;
+			children = (
+				5B1195DA1F68FC49000FD554 /* Controller */,
+				5B1195DB1F68FC49000FD554 /* Model */,
+				5B1195DC1F68FC49000FD554 /* ModelView */,
+				5B1195DD1F68FC49000FD554 /* View */,
+			);
+			path = MeTrip;
+			sourceTree = "<group>";
+		};
+		5B1195DA1F68FC49000FD554 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B1195DB1F68FC49000FD554 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B1195DC1F68FC49000FD554 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		5B1195DD1F68FC49000FD554 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B21C4391F6674C800931E3E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +768,7 @@
 		5B97961F1F61437E00CB51F9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5B1195D91F68FC49000FD554 /* MeTrip */,
 				1DCA07841F63E9BE001CCF32 /* MeOder */,
 				1DCA076D1F63E3DC001CCF32 /* MeLine */,
 				1DCA07661F63E2CD001CCF32 /* MeAllLine */,
@@ -942,6 +985,7 @@
 				1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */,
 				1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
+				5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				1D221C771F62F6A000212E8B /* ActivityDetailModel.swift in Sources */,
 				1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */,

@@ -138,7 +138,8 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource {
 extension ProfileViewController {
     
     fileprivate func jump2MeTripVC(){
-        print("我的行程")
+        let meTripVC = MeTripViewController()
+        self.present(meTripVC, animated: true)
     }
     fileprivate func jump2kMeOder(){
         
