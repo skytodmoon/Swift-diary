@@ -23,11 +23,11 @@ class BusTableViewCell: UITableViewCell {
     
     @IBOutlet var dayPrice: UILabel!
     
-    @IBOutlet var startTime: UILabel!
-    
     @IBOutlet var mileage: UILabel!
     
     @IBOutlet var runTimes: UILabel!
+    
+    @IBOutlet var startTime: UILabel!
     
     
     var busmodel : BusModel? {
@@ -55,13 +55,20 @@ class BusTableViewCell: UITableViewCell {
             let str6 = str4! + str5
             endStationName.text = str6
             
+            
+            let str = busmodel?.startTime
+            //截取时间段字符串
+            let startIndex = str?.index((str?.startIndex)!, offsetBy:10)
+            let endIndex = str?.index(startIndex!, offsetBy:6)
+            let result = str?.substring(with: startIndex!..<endIndex!)
+            
+            startTime.text = result
+            
             let str7 = "¥"
             let str8 = Busmodel.dayPrice
             let str9 = "购票"
             let str10 = str7+str8!+str9
             dayPrice.text = str10
-            
-            startTime.text = Busmodel.startTime
             
             let str11 = Busmodel.mileage
             let str12 = "公里"

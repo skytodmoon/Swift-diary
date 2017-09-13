@@ -9,6 +9,7 @@
 import UIKit
 
 class MeOderTableViewCell: UITableViewCell {
+    @IBOutlet var MeOderView: UIView!
     
     @IBOutlet var lineLabel: UILabel!
 
@@ -49,12 +50,22 @@ class MeOderTableViewCell: UITableViewCell {
             createDate.text = meodermodel.createDate
             realPrice.text = meodermodel.realPrice
             
-            startTime.text = meodermodel.startTime
+            let str = meodermodel.startTime
+            //截取时间段字符串
+            let startIndex = str?.index((str?.startIndex)!, offsetBy:10)
+            let endIndex = str?.index(startIndex!, offsetBy:6)
+            let result = str?.substring(with: startIndex!..<endIndex!)
+            
+            startTime.text = result
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        MeOderView.layer.cornerRadius = 3
+        MeOderView.layer.masksToBounds = true
         // Initialization code
     }
 
