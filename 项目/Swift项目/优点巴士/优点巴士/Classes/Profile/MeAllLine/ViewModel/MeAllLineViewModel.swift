@@ -19,7 +19,9 @@ extension MeAllLineViewModel {
     
     func loadmeAllLineData(_ finishedCallback: @escaping () -> ()) {
         
-        Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/line/list_running_line?index=0&line_label=&line_type=&query_name=&size=10", method: .get, parameters: nil).responseJSON { (response) in
+        let indexpage = 10
+        
+        Alamofire.request("http://www.youdianbus.cn/ydbus-api/api/line/list_running_line?", method: .get, parameters: ["index" : indexpage,"line_label" : "","line_type" : "","query_name" : "","size" : "10"]).responseJSON { (response) in
             
             if let value = response.result.value {
                 let dict = JSON(value)

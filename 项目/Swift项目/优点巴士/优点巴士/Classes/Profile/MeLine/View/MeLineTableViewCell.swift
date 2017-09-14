@@ -9,6 +9,13 @@
 import UIKit
 
 class MeLineTableViewCell: UITableViewCell {
+    
+    var melinemodel : MeLineModel? {
+        didSet {
+            // 校验模型是否有值
+//            guard let Melinemodel = melinemodel else { return }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

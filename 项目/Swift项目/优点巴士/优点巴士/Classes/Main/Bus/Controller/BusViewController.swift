@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Kingfisher
+import MJRefresh
 
 private let BusCellID = "BusCellID"
 
@@ -43,12 +44,25 @@ class BusViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
+        Refresh()
         
         loadData()
         loadHeadViewData()
+        
 
     }
-    
+    func Refresh() {
+        //下拉刷新相关设置,使用闭包Block
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+            sleep(1)
+            //重现生成数据
+//            self.loadData()
+            //重现加载表格数据
+            self.tableView.reloadData()
+            //结束刷新
+            self.tableView.mj_header.endRefreshing()
+        })
+    }
     
     
     func loadHeadViewData ()  {

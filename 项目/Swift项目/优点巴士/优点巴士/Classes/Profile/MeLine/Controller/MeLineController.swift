@@ -8,16 +8,32 @@
 
 import UIKit
 
+
+private let melineCellID = "melineCellID"
+
 class MeLineController: UIViewController {
     
     
     // MARK: 懒加载属性
     fileprivate lazy var meLineVM : MeLineViewModel = MeLineViewModel()
+    
+    fileprivate lazy var tableView : UITableView = {[unowned self] in
+        
+        
+        let rect = CGRect(x: 0, y: 64, width: ScreenW, height: ScreenH - 64)
+        let tableView = UITableView(frame: rect)
+        tableView.backgroundColor = UIColor.groupTableViewBackground
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.register(UINib(nibName: "MeLineTableViewCell", bundle: nil), forCellReuseIdentifier: melineCellID)
+        return tableView
+        }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        view.addSubview(tableView)
         setUpMainView()
         loadData()
         // Do any additional setup after loading the view.
@@ -31,7 +47,7 @@ extension MeLineController {
     
     func loadData() {
         meLineVM.loadmeLineData{
-            
+            self.tableView.reloadData()
         }
         
     }
@@ -67,5 +83,28 @@ extension MeLineController {
     func leftItem(_ btn: UIButton) {
         self.dismiss(animated: true)
     }
+}
+
+// MARK:- 遵守UITableView的数据源&代理
+extension MeLineController : UITableViewDelegate,UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return meLineVM.meLineModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: melineCellID, for: indexPath) as! MeLineTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.melinemodel = meLineVM.meLineModel[indexPath.item]
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 }
 

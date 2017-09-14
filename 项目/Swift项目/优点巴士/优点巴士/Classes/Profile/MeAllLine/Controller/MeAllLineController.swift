@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 
 private let meallCellID = "meallCellID"
@@ -35,14 +36,25 @@ class MeAllLineController: UIViewController {
         
         setUpMainView()
         view.addSubview(tableView)
-        
+        Refresh()
         loadData()
         // Do any additional setup after loading the view.
     }
 
     
     
-    
+    func Refresh() {
+        //下拉刷新相关设置,使用闭包Block
+        self.tableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
+            sleep(1)
+            //重现生成数据
+            self.loadData()
+            //重现加载表格数据
+            self.tableView.reloadData()
+            //结束刷新
+            self.tableView.mj_footer.endRefreshing()
+        })
+    }
     
     
     
@@ -55,6 +67,7 @@ extension MeAllLineController {
     
     func loadData() {
         meAllLineVM.loadmeAllLineData{
+
             self.tableView.reloadData()
         }
         
