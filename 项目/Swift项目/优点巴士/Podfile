@@ -7,14 +7,13 @@ target '优点巴士' do
 
   # Pods for 优点巴士
 
-  target '优点巴士Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '优点巴士UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    pod 'Alamofire'         ##Swift 网络请求
+    pod 'Kingfisher'        ##Swift 加载网络图片
+    pod 'SnapKit'           ##Swift 约束布局
+    pod 'SwiftyJSON'        ##Swift 解析json
+    
+    
+    pod 'SWRevealViewController'
+    pod 'MJExtension'
+    pod 'MJRefresh'
 end

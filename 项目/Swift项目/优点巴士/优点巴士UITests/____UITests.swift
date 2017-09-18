@@ -1,8 +1,14 @@
-//___FILEHEADER___
+//
+//  ____UITests.swift
+//  优点巴士UITests
+//
+//  Created by 金亮齐 on 2017/9/6.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
 
 import XCTest
 
-class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
+class ____UITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

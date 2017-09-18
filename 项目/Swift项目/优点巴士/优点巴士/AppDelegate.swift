@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  优点巴士
 //
-//  Created by 金亮齐 on 2017/9/18.
+//  Created by 金亮齐 on 2017/9/6.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 import UIKit
+import SWRevealViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,16 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        window?.frame = UIScreen.main.bounds
-        window?.backgroundColor = UIColor.white        
-        let homeVc = MainViewController()
-        let homeNav = NavigationController(rootViewController: homeVc)
-        self.window?.rootViewController = homeNav
-        window?.makeKeyAndVisible()
         // Override point for customization after application launch.
+        
+        setupRootViewController()
         return true
     }
+    
+    //MARK: - 主控制器的设置
+    func setupRootViewController() {
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        
+        let homeVc = MainViewController()
+        let sideVc = ProfileViewController()
+        let homeNav = MainNavController(rootViewController: homeVc)
+        let revealController = SWRevealViewController(rearViewController: sideVc, frontViewController: homeNav)
+        revealController?.delegate = self
+        self.window?.rootViewController = homeVc
+        self.window?.makeKeyAndVisible()
+        
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -49,5 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+
+extension AppDelegate: SWRevealViewControllerDelegate {
+    @nonobjc func revealController(_ revealController: SWRevealViewController, animationControllerFor operation: SWRevealControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> Any? {
+        if operation != SWRevealControllerOperationReplaceRightController {
+            return nil
+        }
+        return nil
+    }
 }
 

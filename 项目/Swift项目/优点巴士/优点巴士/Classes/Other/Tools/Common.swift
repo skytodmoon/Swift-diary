@@ -2,38 +2,16 @@
 //  Common.swift
 //  优点巴士
 //
-//  Created by 金亮齐 on 2017/9/18.
+//  Created by 金亮齐 on 2017/9/7.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 import UIKit
 
-/// 屏幕宽度
-let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+let kStatusBarH : CGFloat = 20
+let kNavigationBarH : CGFloat = 44
 
-/// 屏幕高度
-let SCREEN_WIDTH = UIScreen.main.bounds.size.width
-
-/// 自适应屏幕宽度
-func FIT_SCREEN_WIDTH(_ size: CGFloat) -> CGFloat {
-    return size * SCREEN_WIDTH / 375.0
-}
-
-/// 自适应屏幕高度
-func FIT_SCREEN_HEIGHT(_ size: CGFloat) -> CGFloat {
-    return size * SCREEN_HEIGHT / 667.0
-}
-
-/// 自适应屏幕字体大小
-func AUTO_FONT(_ size: CGFloat) -> UIFont {
-    let autoSize = size * SCREEN_WIDTH / 375.0
-    return UIFont.systemFont(ofSize: autoSize)
-}
-
-
-
-/// 根控制器--抽屉
-func drawerMenuController() -> DrawerMenuController? {
-    let drawerVC = UIApplication.shared.keyWindow?.rootViewController as? DrawerMenuController
-    return drawerVC
-}
+let ScreenW = UIScreen.main.bounds.width
+let ScreenH = UIScreen.main.bounds.height
+let offsetDetailRight:CGFloat = 90
+let offsetMainRight:CGFloat = 320

@@ -1,9 +1,15 @@
-//___FILEHEADER___
+//
+//  ____Tests.swift
+//  优点巴士Tests
+//
+//  Created by 金亮齐 on 2017/9/6.
+//  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
+//
 
 import XCTest
-@testable import ___VARIABLE_productName:identifier___
+@testable import ____
 
-class ___FILEBASENAMEASIDENTIFIER___: XCTestCase {
+class ____Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
