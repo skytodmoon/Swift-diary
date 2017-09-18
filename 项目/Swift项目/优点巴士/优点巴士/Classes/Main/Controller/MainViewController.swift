@@ -49,6 +49,7 @@ class MainViewController: SWRevealViewController {
 
         setUpMainView()
         
+
         // Do any additional setup after loading the view.
     }
 

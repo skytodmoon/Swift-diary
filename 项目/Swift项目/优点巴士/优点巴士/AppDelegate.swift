@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     //MARK: - 主控制器的设置
-    func setupRootViewController() {
+    fileprivate func setupRootViewController() {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let homeNav = MainNavController(rootViewController: homeVc)
         let revealController = SWRevealViewController(rearViewController: sideVc, frontViewController: homeNav)
         revealController?.delegate = self
-        self.window?.rootViewController = homeVc
+        self.window?.rootViewController = revealController
         self.window?.makeKeyAndVisible()
         
     }

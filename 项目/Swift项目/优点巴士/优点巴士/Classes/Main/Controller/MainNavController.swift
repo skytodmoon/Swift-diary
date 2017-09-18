@@ -12,19 +12,14 @@ class MainNavController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUpNavAppearance()
         
         //全局拖拽手势
         setUpGlobalPanGes()
         // Do any additional setup after loading the view.
     }
-    //MARK: - 设置导航栏的颜色
-    func setUpNavAppearance () {
-        let navBar = UINavigationBar.appearance()
-        navBar.barTintColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
-        navBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:UIFont.boldSystemFont(ofSize: 18)]
-    }
+
     // MARK: - 拦截Push操作
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         // 这里判断是否进入push视图
@@ -36,7 +31,7 @@ class MainNavController: UINavigationController {
             // 设置按钮内容左对齐
             backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left;
             // 内边距
-            backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+            backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 00, 0, 0);
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
             // 隐藏要push的控制器的tabbar
             viewController.hidesBottomBarWhenPushed = true
@@ -98,4 +93,12 @@ extension MainNavController: UIGestureRecognizerDelegate {
 }
 
 
-
+//MARK: - 设置导航栏的颜色
+extension MainNavController  {
+    
+    fileprivate func setUpNavAppearance () {
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:UIFont.boldSystemFont(ofSize: 18)]
+    }
+}

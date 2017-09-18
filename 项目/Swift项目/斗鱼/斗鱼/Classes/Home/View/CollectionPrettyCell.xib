@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kPrettyCellID" id="kp0-am-sKt" customClass="CollectionPrettyCell" customModule="斗鱼" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuy-nh-vOI">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="200"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="bZW-AQ-MgU">
+                                <rect key="frame" x="0.0" y="0.0" width="173" height="200"/>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFY-ZK-FOV">
+                                <rect key="frame" x="112" y="2" width="56" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="22.2万" image="Image_online"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bZW-AQ-MgU" secondAttribute="trailing" id="4S1-j4-Ca4"/>
+                            <constraint firstAttribute="trailing" secondItem="fFY-ZK-FOV" secondAttribute="trailing" constant="5" id="AcV-0p-1jo"/>
+                            <constraint firstItem="bZW-AQ-MgU" firstAttribute="leading" secondItem="iuy-nh-vOI" secondAttribute="leading" id="L9L-A8-BgA"/>
+                            <constraint firstItem="bZW-AQ-MgU" firstAttribute="top" secondItem="iuy-nh-vOI" secondAttribute="top" id="ZH0-iA-eHT"/>
+                            <constraint firstAttribute="bottom" secondItem="bZW-AQ-MgU" secondAttribute="bottom" id="buG-J8-L78"/>
+                            <constraint firstItem="fFY-ZK-FOV" firstAttribute="top" secondItem="iuy-nh-vOI" secondAttribute="top" constant="2" id="erV-hj-5zD"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ3-pQ-htb">
+                        <rect key="frame" x="122.5" y="200" width="47.5" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="梅州市" image="ico_location">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUJ-ys-NW2">
+                        <rect key="frame" x="0.0" y="200" width="119.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="aS9-0J-ItY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="小心的抹茶" image="home_live_cate_normal">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TZ3-pQ-htb" secondAttribute="bottom" id="1pk-PQ-9xY"/>
+                <constraint firstItem="TZ3-pQ-htb" firstAttribute="top" secondItem="iuy-nh-vOI" secondAttribute="bottom" id="9mX-th-rkl"/>
+                <constraint firstItem="wUJ-ys-NW2" firstAttribute="leading" secondItem="kp0-am-sKt" secondAttribute="leading" id="A3v-r8-Js3"/>
+                <constraint firstAttribute="bottom" secondItem="wUJ-ys-NW2" secondAttribute="bottom" id="CYm-pC-d3N"/>
+                <constraint firstItem="iuy-nh-vOI" firstAttribute="leading" secondItem="kp0-am-sKt" secondAttribute="leading" id="Fmo-lR-yBw"/>
+                <constraint firstItem="iuy-nh-vOI" firstAttribute="top" secondItem="kp0-am-sKt" secondAttribute="top" id="Qhw-7a-q2c"/>
+                <constraint firstItem="TZ3-pQ-htb" firstAttribute="width" secondItem="wUJ-ys-NW2" secondAttribute="width" multiplier="0.4" id="Rh6-uQ-M2V"/>
+                <constraint firstItem="TZ3-pQ-htb" firstAttribute="height" secondItem="wUJ-ys-NW2" secondAttribute="height" id="Rma-34-Enq"/>
+                <constraint firstAttribute="trailing" secondItem="iuy-nh-vOI" secondAttribute="trailing" id="Sfu-ti-HA5"/>
+                <constraint firstItem="TZ3-pQ-htb" firstAttribute="leading" secondItem="wUJ-ys-NW2" secondAttribute="trailing" constant="3" id="dbo-pt-ESY"/>
+                <constraint firstItem="wUJ-ys-NW2" firstAttribute="top" secondItem="iuy-nh-vOI" secondAttribute="bottom" id="hbV-hB-j2l"/>
+                <constraint firstAttribute="trailing" secondItem="TZ3-pQ-htb" secondAttribute="trailing" constant="3" id="m0J-uf-OW1"/>
+            </constraints>
+            <size key="customSize" width="229" height="99"/>
+            <connections>
+                <outlet property="cityBtn" destination="TZ3-pQ-htb" id="4vo-Xu-4Cz"/>
+                <outlet property="iconImageView" destination="bZW-AQ-MgU" id="I6c-eC-gH9"/>
+                <outlet property="nickNameBtn" destination="wUJ-ys-NW2" id="Z6P-MO-m7u"/>
+                <outlet property="onlineBtn" destination="fFY-ZK-FOV" id="g6N-ww-Lrh"/>
+            </connections>
+            <point key="canvasLocation" x="198.5" y="254"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+        <image name="ico_location" width="12" height="12"/>
+    </resources>
+</document>

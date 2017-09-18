@@ -61,8 +61,6 @@ class MoreViewController: UIViewController {
         tableView.rowHeight = 44.0
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kProfileCellID)
-//        self.tableView.estimatedSectionHeaderHeight=0;
-//        self.tableView.estimatedSectionFooterHeight=0;
         setUpMainView()
         
     }
