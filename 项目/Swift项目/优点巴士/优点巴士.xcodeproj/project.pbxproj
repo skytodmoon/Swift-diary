@@ -82,6 +82,10 @@
 		5B8D6C6D1F612A5F00F7DD93 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D6C481F60F7C100F7DD93 /* MessageController.swift */; };
 		5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9796271F61459600CB51F9 /* WKWebViewController.swift */; };
 		5BA23ACE1F6942E900185225 /* RefreshHeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA23ACD1F6942E900185225 /* RefreshHeder.swift */; };
+		5BDBDC3E1F71075C00D9935C /* TransitHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBDC3D1F71075C00D9935C /* TransitHeaderModel.swift */; };
+		5BDBDC401F71077E00D9935C /* TransitModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBDC3F1F71077E00D9935C /* TransitModelHeaderView.swift */; };
+		5BDBDC431F71090C00D9935C /* TransitViewCellHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBDC411F71090C00D9935C /* TransitViewCellHeaderCell.swift */; };
+		5BDBDC441F71090C00D9935C /* TransitViewCellHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBDC421F71090C00D9935C /* TransitViewCellHeaderCell.xib */; };
 		5BFB4FDF1F677A8A00433F99 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB4FDE1F677A8A00433F99 /* BaseModel.swift */; };
 		D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */; };
 /* End PBXBuildFile section */
@@ -186,6 +190,10 @@
 		5B8D6C6B1F61197000F7DD93 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		5B9796271F61459600CB51F9 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		5BA23ACD1F6942E900185225 /* RefreshHeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshHeder.swift; sourceTree = "<group>"; };
+		5BDBDC3D1F71075C00D9935C /* TransitHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitHeaderModel.swift; sourceTree = "<group>"; };
+		5BDBDC3F1F71077E00D9935C /* TransitModelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitModelHeaderView.swift; sourceTree = "<group>"; };
+		5BDBDC411F71090C00D9935C /* TransitViewCellHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitViewCellHeaderCell.swift; sourceTree = "<group>"; };
+		5BDBDC421F71090C00D9935C /* TransitViewCellHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransitViewCellHeaderCell.xib; sourceTree = "<group>"; };
 		5BFB4FDE1F677A8A00433F99 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		706A96BA0D19609947C495A7 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -522,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				5B21C44B1F66A57600931E3E /* TransitModel.swift */,
+				5BDBDC3D1F71075C00D9935C /* TransitHeaderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -530,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				5B21C44D1F66A58100931E3E /* TransitModelView.swift */,
+				5BDBDC3F1F71077E00D9935C /* TransitModelHeaderView.swift */,
 			);
 			path = ModeView;
 			sourceTree = "<group>";
@@ -539,6 +549,8 @@
 			children = (
 				5B21C44F1F66A59500931E3E /* TransitViewCell.swift */,
 				5B21C4501F66A59500931E3E /* TransitViewCell.xib */,
+				5BDBDC411F71090C00D9935C /* TransitViewCellHeaderCell.swift */,
+				5BDBDC421F71090C00D9935C /* TransitViewCellHeaderCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -914,6 +926,7 @@
 				5B21C4521F66A59500931E3E /* TransitViewCell.xib in Resources */,
 				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
 				1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */,
+				5BDBDC441F71090C00D9935C /* TransitViewCellHeaderCell.xib in Resources */,
 				5B1195E71F68FD2A000FD554 /* MeTripTableViewCell.xib in Resources */,
 				1DCA077B1F63E4D8001CCF32 /* MeAllLineTableViewCell.xib in Resources */,
 				5B8D6C591F61068900F7DD93 /* MessageTableViewCell.xib in Resources */,
@@ -996,10 +1009,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDBDC3E1F71075C00D9935C /* TransitHeaderModel.swift in Sources */,
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
 				1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */,
 				1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */,
 				1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */,
+				5BDBDC401F71077E00D9935C /* TransitModelHeaderView.swift in Sources */,
 				5B9796281F61459600CB51F9 /* WKWebViewController.swift in Sources */,
 				5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
@@ -1027,6 +1042,7 @@
 				5B8D6C331F60DBA200F7DD93 /* MainViewController.swift in Sources */,
 				5B8C4E3C1F622B5600246A8C /* ProfileViewController.swift in Sources */,
 				5B843ED11F627931006E5B9C /* ActivityViewModel.swift in Sources */,
+				5BDBDC431F71090C00D9935C /* TransitViewCellHeaderCell.swift in Sources */,
 				5B1195E11F68FD10000FD554 /* MeTripModel.swift in Sources */,
 				1DCA078A1F63E9CE001CCF32 /* MeOderViewController.swift in Sources */,
 				5B8D6C581F61068900F7DD93 /* MessageTableViewCell.swift in Sources */,

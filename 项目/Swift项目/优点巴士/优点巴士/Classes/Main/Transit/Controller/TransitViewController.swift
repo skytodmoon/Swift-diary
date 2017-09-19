@@ -11,15 +11,22 @@ import UIKit
 
 private let transitCellID = "transitCellID"
 
+private let transitHeaderCellID = "transitHeaderCellID"
+
 class TransitViewController: UIViewController {
     
     // MARK: 懒加载属性
     fileprivate lazy var transitVM : TransitModelView = TransitModelView()
     
+    fileprivate lazy var transitHeaderVM : TransitModelHeaderView = TransitModelHeaderView()
+    
     fileprivate lazy var headerView : UITableView = {[unowned self] in
         let rect = CGRect(x: 0, y: 0, width: ScreenW, height: 160)
         let headerView = UITableView(frame: rect)
-        headerView.backgroundColor = UIColor.red
+        headerView.dataSource = self
+        headerView.delegate = self
+        headerView.separatorStyle = UITableViewCellSeparatorStyle.none
+        headerView.register(UINib(nibName: "TransitViewCellHeaderCell", bundle: nil), forCellReuseIdentifier: transitHeaderCellID)
         return headerView
         }()
     
@@ -29,7 +36,7 @@ class TransitViewController: UIViewController {
         tableView.backgroundColor = UIColor.groupTableViewBackground
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 160))
+        tableView.tableHeaderView = self.headerView
         tableView.addSubview(self.headerView)
         tableView.register(UINib(nibName: "TransitViewCell", bundle: nil), forCellReuseIdentifier: transitCellID)
         return tableView
@@ -39,7 +46,9 @@ class TransitViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
+        view.addSubview(headerView)
         loadData()
+        loadHeaderData()
         // Do any additional setup after loading the view.
     }
 
@@ -56,6 +65,11 @@ extension TransitViewController {
         }
         
     }
+    func loadHeaderData() {
+        transitHeaderVM.loadHeaderData(){
+            self.headerView.reloadData()
+        }
+    }
 }
 
 // MARK:- 遵守UITableView的数据源&代理
@@ -63,49 +77,42 @@ extension TransitViewController : UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transitVM.transitModel.count
+        
+        if tableView.isEqual(self.headerView){
+            return transitHeaderVM.transitHeaderModel.count
+        }else {
+            return transitVM.transitModel.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: transitCellID, for: indexPath) as! TransitViewCell
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
-        cell.transitmodel = transitVM.transitModel[indexPath.item]
-        return cell
+        if (tableView ==  headerView) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: transitHeaderCellID, for: indexPath) as! TransitViewCellHeaderCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.transitHeadermodel = transitHeaderVM.transitHeaderModel[indexPath.item]
+            return cell
+            
+           
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: transitCellID, for: indexPath) as! TransitViewCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.transitmodel = transitVM.transitModel[indexPath.item]
+            return cell
+        }
+        
+
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-    //返回分区头部视图
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.groupTableViewBackground
-        let titleLabel = UILabel()
-        //        titleLabel.text = self.adHeaders?[section]
-        titleLabel.text = "附近站点"
-        titleLabel.textColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
-        titleLabel.font = UIFont.systemFont(ofSize: 13)
-        titleLabel.sizeToFit()
-        titleLabel.center = CGPoint(x: self.view.frame.width/8, y: 15)
-        headerView.addSubview(titleLabel)
         
-        let titleLabel2 = UILabel()
-        titleLabel2.text = "直线距离/辐射半径1.5km"
-        titleLabel2.textColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0)
-        titleLabel2.font = UIFont.systemFont(ofSize: 12)
-        titleLabel2.sizeToFit()
-        titleLabel2.center = CGPoint(x: self.view.frame.width-70, y: 15)
-        headerView.addSubview(titleLabel2)
-        
-        return headerView
-    }
-    
-    //返回分区头部高度
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        if (tableView  == headerView) {
+            return 80
+        }else{
+            return 60
+        }
     }
     
 }
