@@ -10,15 +10,36 @@ import UIKit
 
 class MeLineTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var lineLabel: UILabel!
+    @IBOutlet weak var lineNo: UILabel!
+    @IBOutlet weak var startStationName: UILabel!
+    @IBOutlet weak var endStationName: UILabel!
+    @IBOutlet weak var melineview: UIView!
+    
     var melinemodel : MeLineModel? {
         didSet {
             // 校验模型是否有值
-//            guard let Melinemodel = melinemodel else { return }
+            guard let PaidLineList = melinemodel else { return }
+            lineLabel.text = PaidLineList.lineLabel
+            lineNo.text = PaidLineList.lineNo
+            
+            let str1="("
+            let str2 = PaidLineList.startStationName
+            let str3 = str1+str2!
+            startStationName.text = str3
+            
+            let str4 = PaidLineList.endStationName
+            let str5 = ")"
+            let str6 = str4! + str5
+            endStationName.text = str6
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        melineview.layer.cornerRadius = 3
+        melineview.layer.masksToBounds = true
         // Initialization code
     }
 

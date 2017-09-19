@@ -98,6 +98,13 @@
                     <constraint firstItem="QYt-nv-7Mi" firstAttribute="leading" secondItem="eyl-iK-zd8" secondAttribute="leading" constant="15" id="IcV-f5-ffd"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="endStationName" destination="wH3-3a-OBg" id="osr-yH-c3T"/>
+                <outlet property="lineLabel" destination="Cg0-WK-psX" id="mcJ-x5-H5B"/>
+                <outlet property="lineNo" destination="v1f-Vd-LJb" id="tWM-u4-GTB"/>
+                <outlet property="melineview" destination="QYt-nv-7Mi" id="UkI-iX-Xtt"/>
+                <outlet property="startStationName" destination="UWH-YQ-mld" id="rUY-lb-0LP"/>
+            </connections>
             <point key="canvasLocation" x="26" y="80.5"/>
         </tableViewCell>
     </objects>
