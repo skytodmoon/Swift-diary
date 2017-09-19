@@ -16,12 +16,21 @@ class TransitViewController: UIViewController {
     // MARK: 懒加载属性
     fileprivate lazy var transitVM : TransitModelView = TransitModelView()
     
+    fileprivate lazy var headerView : UITableView = {[unowned self] in
+        let rect = CGRect(x: 0, y: 0, width: ScreenW, height: 160)
+        let headerView = UITableView(frame: rect)
+        headerView.backgroundColor = UIColor.red
+        return headerView
+        }()
+    
     fileprivate lazy var tableView : UITableView = {[unowned self] in
         let rect = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH-64-40)
         let tableView = UITableView(frame: rect)
         tableView.backgroundColor = UIColor.groupTableViewBackground
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 160))
+        tableView.addSubview(self.headerView)
         tableView.register(UINib(nibName: "TransitViewCell", bundle: nil), forCellReuseIdentifier: transitCellID)
         return tableView
         }()
@@ -30,7 +39,6 @@ class TransitViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
-        
         loadData()
         // Do any additional setup after loading the view.
     }
