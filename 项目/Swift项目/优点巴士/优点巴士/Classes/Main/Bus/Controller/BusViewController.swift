@@ -33,10 +33,12 @@ class BusViewController: UIViewController {
     return tableView
     }()
     
+    
     /// headerView
     fileprivate lazy var headerView : UIImageView = {
         let rect = CGRect(x: 0, y: 0, width: ScreenW, height: 160)
         let headerView = UIImageView(frame: rect)
+        
         return headerView
     }()
 
