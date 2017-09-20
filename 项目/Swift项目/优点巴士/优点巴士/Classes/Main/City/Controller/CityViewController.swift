@@ -7,30 +7,33 @@
 //
 
 import UIKit
+import ZHDropDownMenu
 
 class CityViewController: UIViewController {
+    
+    fileprivate lazy var HeaderView : UIView = {[unowned self] in
+        
+        let headerview = ZHDropDownMenu()
+        headerview.frame = CGRect(x: 0, y: 0, width: ScreenW, height: 44)
+        //设置下拉列表项数据
+        headerview.options = ["北京","深圳","上海","厦门","广州"]
+        //设置最大高度
+        headerview.menuHeight = 240;
+        //设置默认值
+        headerview.defaultValue = "深圳"
+        headerview.buttonImage = UIImage(named:"icon_cityBus_head_down.png")
+
+        return headerview
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.gray
+        self.view.backgroundColor = UIColor.white
+        self.view.addSubview(HeaderView)
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

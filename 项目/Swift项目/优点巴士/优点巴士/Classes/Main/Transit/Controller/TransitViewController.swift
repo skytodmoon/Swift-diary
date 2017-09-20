@@ -46,7 +46,6 @@ class TransitViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
-        view.addSubview(headerView)
         loadData()
         loadHeaderData()
         // Do any additional setup after loading the view.
@@ -114,5 +113,7 @@ extension TransitViewController : UITableViewDelegate,UITableViewDataSource {
             return 60
         }
     }
+    
+    
     
 }
