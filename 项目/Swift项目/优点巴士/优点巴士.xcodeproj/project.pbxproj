@@ -19,7 +19,6 @@
 		1DCA07591F63B131001CCF32 /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07581F63B131001CCF32 /* BusViewController.swift */; };
 		1DCA075D1F63B1C2001CCF32 /* TransitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */; };
 		1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07601F63B21B001CCF32 /* CityViewController.swift */; };
-		1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07641F63B268001CCF32 /* CharteredViewController.swift */; };
 		1DCA076C1F63E2E6001CCF32 /* MeAllLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA076B1F63E2E6001CCF32 /* MeAllLineController.swift */; };
 		1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA076F1F63E3DC001CCF32 /* MeLineController.swift */; };
 		1DCA07751F63E4B4001CCF32 /* MeAllLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA07741F63E4B4001CCF32 /* MeAllLineModel.swift */; };
@@ -35,6 +34,10 @@
 		1DCA078E1F63EA4C001CCF32 /* MeOderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078D1F63EA4C001CCF32 /* MeOderViewModel.swift */; };
 		1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */; };
 		1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */; };
+		5B00FA1F1F720EF2002C1A11 /* CharteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00FA1D1F720EF2002C1A11 /* CharteredViewController.swift */; };
+		5B00FA201F720EF2002C1A11 /* CharteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B00FA1E1F720EF2002C1A11 /* CharteredViewController.xib */; };
+		5B00FA241F7215EC002C1A11 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B00FA221F7215EC002C1A11 /* tableViewCell.swift */; };
+		5B00FA251F7215EC002C1A11 /* tableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B00FA231F7215EC002C1A11 /* tableViewCell.xib */; };
 		5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */; };
 		5B1195E11F68FD10000FD554 /* MeTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195E01F68FD10000FD554 /* MeTripModel.swift */; };
 		5B1195E31F68FD19000FD554 /* MeTripModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1195E21F68FD19000FD554 /* MeTripModelView.swift */; };
@@ -122,7 +125,6 @@
 		1DCA07581F63B131001CCF32 /* BusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
 		1DCA075C1F63B1C2001CCF32 /* TransitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitViewController.swift; sourceTree = "<group>"; };
 		1DCA07601F63B21B001CCF32 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
-		1DCA07641F63B268001CCF32 /* CharteredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharteredViewController.swift; sourceTree = "<group>"; };
 		1DCA076B1F63E2E6001CCF32 /* MeAllLineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineController.swift; sourceTree = "<group>"; };
 		1DCA076F1F63E3DC001CCF32 /* MeLineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeLineController.swift; sourceTree = "<group>"; };
 		1DCA07741F63E4B4001CCF32 /* MeAllLineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAllLineModel.swift; sourceTree = "<group>"; };
@@ -139,6 +141,10 @@
 		1DCA078F1F63EA60001CCF32 /* MeOderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeOderTableViewCell.swift; sourceTree = "<group>"; };
 		1DCA07901F63EA60001CCF32 /* MeOderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeOderTableViewCell.xib; sourceTree = "<group>"; };
 		26F11ECB4BF87F80C9144853 /* Pods-优点巴士.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-优点巴士.debug.xcconfig"; path = "Pods/Target Support Files/Pods-优点巴士/Pods-优点巴士.debug.xcconfig"; sourceTree = "<group>"; };
+		5B00FA1D1F720EF2002C1A11 /* CharteredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharteredViewController.swift; sourceTree = "<group>"; };
+		5B00FA1E1F720EF2002C1A11 /* CharteredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharteredViewController.xib; sourceTree = "<group>"; };
+		5B00FA221F7215EC002C1A11 /* tableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		5B00FA231F7215EC002C1A11 /* tableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tableViewCell.xib; sourceTree = "<group>"; };
 		5B1195DE1F68FC63000FD554 /* MeTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripViewController.swift; sourceTree = "<group>"; };
 		5B1195E01F68FD10000FD554 /* MeTripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripModel.swift; sourceTree = "<group>"; };
 		5B1195E21F68FD19000FD554 /* MeTripModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTripModelView.swift; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 		1DCA07621F63B260001CCF32 /* Chartered */ = {
 			isa = PBXGroup;
 			children = (
+				5B00FA211F7215D8002C1A11 /* View */,
 				1DCA07631F63B260001CCF32 /* Controller */,
 			);
 			path = Chartered;
@@ -316,7 +323,8 @@
 		1DCA07631F63B260001CCF32 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1DCA07641F63B268001CCF32 /* CharteredViewController.swift */,
+				5B00FA1D1F720EF2002C1A11 /* CharteredViewController.swift */,
+				5B00FA1E1F720EF2002C1A11 /* CharteredViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,6 +468,15 @@
 				C4EF8BA2CC1B14EB2C21B6F1 /* Pods-优点巴士.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B00FA211F7215D8002C1A11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B00FA221F7215EC002C1A11 /* tableViewCell.swift */,
+				5B00FA231F7215EC002C1A11 /* tableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B1195D91F68FC49000FD554 /* MeTrip */ = {
@@ -939,6 +956,7 @@
 			files = (
 				5B21C4521F66A59500931E3E /* TransitViewCell.xib in Resources */,
 				5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */,
+				5B00FA251F7215EC002C1A11 /* tableViewCell.xib in Resources */,
 				1DCA077F1F63E4F2001CCF32 /* MeLineTableViewCell.xib in Resources */,
 				5BDBDC441F71090C00D9935C /* TransitViewCellHeaderCell.xib in Resources */,
 				5B1195E71F68FD2A000FD554 /* MeTripTableViewCell.xib in Resources */,
@@ -950,6 +968,7 @@
 				5BF2AA431F71FBEB00CC8F06 /* CityTableViewCell.xib in Resources */,
 				5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
+				5B00FA201F720EF2002C1A11 /* CharteredViewController.xib in Resources */,
 				1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */,
 				5B21C4411F6674F000931E3E /* BusTableViewCell.xib in Resources */,
 			);
@@ -1026,7 +1045,6 @@
 			files = (
 				5BDBDC3E1F71075C00D9935C /* TransitHeaderModel.swift in Sources */,
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
-				1DCA07651F63B268001CCF32 /* CharteredViewController.swift in Sources */,
 				1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */,
 				1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */,
 				5BDBDC401F71077E00D9935C /* TransitModelHeaderView.swift in Sources */,
@@ -1034,6 +1052,7 @@
 				5B1195DF1F68FC63000FD554 /* MeTripViewController.swift in Sources */,
 				5B8D6C4B1F60F93000F7DD93 /* NetWorkTools.swift in Sources */,
 				1D221C771F62F6A000212E8B /* ActivityDetailModel.swift in Sources */,
+				5B00FA1F1F720EF2002C1A11 /* CharteredViewController.swift in Sources */,
 				1DCA07731F63E3DC001CCF32 /* MeLineController.swift in Sources */,
 				5B1195E61F68FD2A000FD554 /* MeTripTableViewCell.swift in Sources */,
 				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
@@ -1050,6 +1069,7 @@
 				5B21C43D1F6674DA00931E3E /* BusModel.swift in Sources */,
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
 				5B21C4431F66750000931E3E /* BusModelView.swift in Sources */,
+				5B00FA241F7215EC002C1A11 /* tableViewCell.swift in Sources */,
 				1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */,
 				1DCA078C1F63EA40001CCF32 /* MeOderModel.swift in Sources */,
 				5B21C44C1F66A57600931E3E /* TransitModel.swift in Sources */,

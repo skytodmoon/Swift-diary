@@ -17,7 +17,7 @@ class MainViewController: SWRevealViewController {
     // MARK:- 懒加载属性
     fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: ScreenW, height: kTitleViewH)
-        let titles = ["班车", "公交", "城际", "包车"]
+        let titles = ["班车", "公交", "城际", "地图"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
         return titleView
