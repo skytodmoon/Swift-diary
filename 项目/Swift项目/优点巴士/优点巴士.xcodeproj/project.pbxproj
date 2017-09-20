@@ -86,6 +86,8 @@
 		5BDBDC401F71077E00D9935C /* TransitModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBDC3F1F71077E00D9935C /* TransitModelHeaderView.swift */; };
 		5BDBDC431F71090C00D9935C /* TransitViewCellHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBDC411F71090C00D9935C /* TransitViewCellHeaderCell.swift */; };
 		5BDBDC441F71090C00D9935C /* TransitViewCellHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBDC421F71090C00D9935C /* TransitViewCellHeaderCell.xib */; };
+		5BF2AA421F71FBEB00CC8F06 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2AA401F71FBEB00CC8F06 /* CityTableViewCell.swift */; };
+		5BF2AA431F71FBEB00CC8F06 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF2AA411F71FBEB00CC8F06 /* CityTableViewCell.xib */; };
 		5BFB4FDF1F677A8A00433F99 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB4FDE1F677A8A00433F99 /* BaseModel.swift */; };
 		D7ED4BF9661F04A860F30EB8 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */; };
 /* End PBXBuildFile section */
@@ -194,6 +196,8 @@
 		5BDBDC3F1F71077E00D9935C /* TransitModelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitModelHeaderView.swift; sourceTree = "<group>"; };
 		5BDBDC411F71090C00D9935C /* TransitViewCellHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitViewCellHeaderCell.swift; sourceTree = "<group>"; };
 		5BDBDC421F71090C00D9935C /* TransitViewCellHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransitViewCellHeaderCell.xib; sourceTree = "<group>"; };
+		5BF2AA401F71FBEB00CC8F06 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		5BF2AA411F71FBEB00CC8F06 /* CityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		5BFB4FDE1F677A8A00433F99 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		706A96BA0D19609947C495A7 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A355DFA28FE3ADDA6F86A593 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				1DCA075F1F63B210001CCF32 /* Controller */,
+				5BF2AA3F1F71FBD600CC8F06 /* View */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -804,6 +809,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		5BF2AA3F1F71FBD600CC8F06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2AA401F71FBEB00CC8F06 /* CityTableViewCell.swift */,
+				5BF2AA411F71FBEB00CC8F06 /* CityTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5BFB4FDD1F677A7700433F99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,6 +947,7 @@
 				5B228AD11F601276004CA389 /* Assets.xcassets in Resources */,
 				1D221C7D1F62F6D900212E8B /* ActivityDetailTableViewCell.xib in Resources */,
 				5B8C4E3D1F622B5600246A8C /* ProfileViewController.xib in Resources */,
+				5BF2AA431F71FBEB00CC8F06 /* CityTableViewCell.xib in Resources */,
 				5B843ED51F62794A006E5B9C /* ActivityTableViewCell.xib in Resources */,
 				5B228ACF1F601276004CA389 /* Main.storyboard in Resources */,
 				1DCA07921F63EA60001CCF32 /* MeOderTableViewCell.xib in Resources */,
@@ -1023,6 +1038,7 @@
 				5B1195E61F68FD2A000FD554 /* MeTripTableViewCell.swift in Sources */,
 				1D221C731F62E91100212E8B /* PageContentView.swift in Sources */,
 				5B843ECD1F6277C9006E5B9C /* ActivityViewController.swift in Sources */,
+				5BF2AA421F71FBEB00CC8F06 /* CityTableViewCell.swift in Sources */,
 				1DCA076C1F63E2E6001CCF32 /* MeAllLineController.swift in Sources */,
 				1DCA07751F63E4B4001CCF32 /* MeAllLineModel.swift in Sources */,
 				1DCA07611F63B21B001CCF32 /* CityViewController.swift in Sources */,
