@@ -6,12 +6,19 @@
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
+/*
+ http://www.youdianbus.cn/ydbus-api/api/intercity/search_line_by_city?dev_id=D781FAF8-C667-4FBA-B2FE-49E9B21F28C4&token=a43acba1c90752f93e51f64364b71d9c&user_id=7c19f276d626928a611e0f58eeaddc09
+ */
+
 import UIKit
 import ZHDropDownMenu
 
 private let CityCellID = "CityCellID"
 
 class CityViewController: UIViewController {
+    
+    
+    fileprivate lazy var CityVM : CityModelView = CityModelView()
     
     
     fileprivate lazy var HeaderView : UIView = {[unowned self] in
@@ -44,6 +51,7 @@ class CityViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
+        loadData()
         self.view.addSubview(HeaderView)
         self.view.addSubview(tableView)
         // Do any additional setup after loading the view.
@@ -51,6 +59,17 @@ class CityViewController: UIViewController {
 
 
 
+}
+
+// MARK:- 请求数据
+extension CityViewController {
+    func loadData() {
+        CityVM.loadCityData {
+            
+            self.tableView.reloadData()
+        }
+        
+    }
 }
 
 

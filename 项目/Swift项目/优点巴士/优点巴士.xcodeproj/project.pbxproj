@@ -58,6 +58,8 @@
 		5B228AD41F601276004CA389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B228AD21F601276004CA389 /* LaunchScreen.storyboard */; };
 		5B228ADF1F601276004CA389 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228ADE1F601276004CA389 /* ____Tests.swift */; };
 		5B228AEA1F601276004CA389 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B228AE91F601276004CA389 /* ____UITests.swift */; };
+		5B6E72791F72504800FBDDBA /* CityModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E72781F72504800FBDDBA /* CityModelView.swift */; };
+		5B6E727B1F72509B00FBDDBA /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E727A1F72509B00FBDDBA /* CityModel.swift */; };
 		5B843EC01F627272006E5B9C /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EBF1F627272006E5B9C /* ProblemViewController.swift */; };
 		5B843EC21F627284006E5B9C /* UserguideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EC11F627284006E5B9C /* UserguideViewController.swift */; };
 		5B843EC41F62728E006E5B9C /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843EC31F62728E006E5B9C /* AgreementViewController.swift */; };
@@ -172,6 +174,8 @@
 		5B228AE91F601276004CA389 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		5B228AEB1F601276004CA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B37678C1F61627100F99EE5 /* 优点巴士-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "优点巴士-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B6E72781F72504800FBDDBA /* CityModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModelView.swift; sourceTree = "<group>"; };
+		5B6E727A1F72509B00FBDDBA /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		5B843EBF1F627272006E5B9C /* ProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
 		5B843EC11F627284006E5B9C /* UserguideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserguideViewController.swift; sourceTree = "<group>"; };
 		5B843EC31F62728E006E5B9C /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +301,8 @@
 		1DCA075E1F63B210001CCF32 /* City */ = {
 			isa = PBXGroup;
 			children = (
+				5B6E72761F72501500FBDDBA /* Model */,
+				5B6E72771F72501500FBDDBA /* ViewModel */,
 				1DCA075F1F63B210001CCF32 /* Controller */,
 				5BF2AA3F1F71FBD600CC8F06 /* View */,
 			);
@@ -629,6 +635,22 @@
 				5B228AEB1F601276004CA389 /* Info.plist */,
 			);
 			path = "优点巴士UITests";
+			sourceTree = "<group>";
+		};
+		5B6E72761F72501500FBDDBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B6E727A1F72509B00FBDDBA /* CityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B6E72771F72501500FBDDBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B6E72781F72504800FBDDBA /* CityModelView.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5B843EB91F62419D006E5B9C /* More */ = {
@@ -1045,6 +1067,7 @@
 			files = (
 				5BDBDC3E1F71075C00D9935C /* TransitHeaderModel.swift in Sources */,
 				5B843EC61F6272EF006E5B9C /* MoreViewController.swift in Sources */,
+				5B6E727B1F72509B00FBDDBA /* CityModel.swift in Sources */,
 				1DCA07831F63E512001CCF32 /* MeLineViewModel.swift in Sources */,
 				1DCA07771F63E4C3001CCF32 /* MeAllLineViewModel.swift in Sources */,
 				5BDBDC401F71077E00D9935C /* TransitModelHeaderView.swift in Sources */,
@@ -1070,6 +1093,7 @@
 				5B8D6C491F60F7C100F7DD93 /* MessageController.swift in Sources */,
 				5B21C4431F66750000931E3E /* BusModelView.swift in Sources */,
 				5B00FA241F7215EC002C1A11 /* tableViewCell.swift in Sources */,
+				5B6E72791F72504800FBDDBA /* CityModelView.swift in Sources */,
 				1DCA07911F63EA60001CCF32 /* MeOderTableViewCell.swift in Sources */,
 				1DCA078C1F63EA40001CCF32 /* MeOderModel.swift in Sources */,
 				5B21C44C1F66A57600931E3E /* TransitModel.swift in Sources */,

@@ -126,6 +126,12 @@
                                     <constraint firstAttribute="width" constant="1" id="HQc-ca-Jmi"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城际" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwX-Z1-cA2">
+                                <rect key="frame" x="12" y="10.5" width="17" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汕尾站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM9-kH-Za2">
                                 <rect key="frame" x="95.5" y="101.5" width="28" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
@@ -143,6 +149,7 @@
                             <constraint firstItem="joK-v2-MQ8" firstAttribute="top" secondItem="4S7-Zc-Qys" secondAttribute="bottom" constant="8" symbolic="YES" id="9rh-D8-kl2"/>
                             <constraint firstItem="jhf-VH-L50" firstAttribute="leading" secondItem="gKF-Wn-LIc" secondAttribute="leading" constant="33" id="DK6-2c-1cv"/>
                             <constraint firstItem="PLo-oJ-KR3" firstAttribute="leading" secondItem="SJg-3v-2uW" secondAttribute="trailing" constant="5" id="Fb6-LO-hPL"/>
+                            <constraint firstItem="PwX-Z1-cA2" firstAttribute="centerY" secondItem="PLo-oJ-KR3" secondAttribute="centerY" id="Fd7-e5-PdJ"/>
                             <constraint firstItem="OM9-kH-Za2" firstAttribute="top" secondItem="s8T-2o-195" secondAttribute="bottom" constant="4" id="Gdp-rL-NwR"/>
                             <constraint firstItem="JU8-kx-BTk" firstAttribute="top" secondItem="9vU-Ek-fyg" secondAttribute="bottom" id="LKY-L8-i5x"/>
                             <constraint firstItem="4Lb-N6-gPF" firstAttribute="leading" secondItem="9vU-Ek-fyg" secondAttribute="trailing" constant="8" id="NYe-cB-6rX"/>
@@ -153,6 +160,7 @@
                             <constraint firstItem="JU8-kx-BTk" firstAttribute="centerX" secondItem="9vU-Ek-fyg" secondAttribute="centerX" id="RR4-BD-wkg"/>
                             <constraint firstItem="Mzs-Pg-axn" firstAttribute="leading" secondItem="JU8-kx-BTk" secondAttribute="trailing" constant="13" id="SvX-fE-L73"/>
                             <constraint firstItem="Lej-t9-bJq" firstAttribute="centerY" secondItem="PLo-oJ-KR3" secondAttribute="centerY" id="UIg-Sn-0CO"/>
+                            <constraint firstItem="PLo-oJ-KR3" firstAttribute="leading" secondItem="PwX-Z1-cA2" secondAttribute="trailing" constant="6" id="Uau-gs-Rib"/>
                             <constraint firstItem="zJj-7I-8pS" firstAttribute="top" secondItem="Mzs-Pg-axn" secondAttribute="bottom" constant="4" id="Utj-5U-pb9"/>
                             <constraint firstItem="s8T-2o-195" firstAttribute="top" secondItem="zJj-7I-8pS" secondAttribute="bottom" constant="4" id="VSc-n2-Xve"/>
                             <constraint firstItem="SJg-3v-2uW" firstAttribute="top" secondItem="gKF-Wn-LIc" secondAttribute="top" id="VVK-dB-xwm"/>
