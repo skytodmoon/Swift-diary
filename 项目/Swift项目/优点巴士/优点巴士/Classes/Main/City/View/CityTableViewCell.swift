@@ -13,6 +13,7 @@ class CityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var PriceBtn: UIButton!
     
+    @IBOutlet weak var CityCellView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,9 @@ class CityTableViewCell: UITableViewCell {
         PriceBtn.layer.borderColor = UIColor(red: 51/255, green: 145/255, blue: 232/255, alpha: 1.0).cgColor;
         PriceBtn.layer.borderWidth = 1;
         PriceBtn.layer.cornerRadius = 10;
+        
+        CityCellView.layer.masksToBounds = true
+        CityCellView.layer.cornerRadius = 5;
         // Initialization code
     }
 

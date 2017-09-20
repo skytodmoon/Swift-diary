@@ -257,11 +257,6 @@ class CharteredViewController: UIViewController,MAMapViewDelegate, AMapSearchDel
 
     }
 
-
-    @IBAction func back(_ sender: Any) {
-        
-    }
-
 }
 
 extension CharteredViewController:UITableViewDataSource,UITableViewDelegate {
