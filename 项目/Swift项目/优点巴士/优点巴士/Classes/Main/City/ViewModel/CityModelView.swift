@@ -9,8 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MJExtension
 
 class CityModelView {
+    
+    lazy var lineNo = [String]()
+    lazy var startCity = [String]()
+    lazy var endCity = [String]()
+    lazy var startStationName = [String]()
+    lazy var endStationName = [String]()
+    lazy var dayPrice = [Int]()
     lazy var city : [CityModel] = [CityModel]()
 }
 
@@ -25,11 +33,36 @@ extension CityModelView {
                 let dict = JSON(value)
                 let dataDict = dict["data"].dictionary
                 if let lineIntercityList = dataDict!["lineIntercityList"]?.arrayObject {
-                    print(lineIntercityList)
+
+                    var lineNoM = [String]()
+                    var startCityM = [String]()
+                    var endCityM = [String]()
+                    var startStationNameM = [String]()
+                    var endStationNameM = [String]()
+                    var dayPriceM = [Int]()
+                    
                     for dict in lineIntercityList {
                         self.city.append(CityModel(dict: dict as! [String : Any]))
                     }
+                    
+                    for i in 0..<self.city.count{
+                        let model = CityModel.mj_object(withKeyValues: self.city[i])
+                        lineNoM.append((model?.lineNo)!)
+                        startCityM.append((model?.startCity)!)
+                        endCityM.append((model?.endCity)!)
+                        startStationNameM.append((model?.startStationName)!)
+                        endStationNameM.append((model?.endStationName)!)
+                        dayPriceM.append((model?.dayPrice)!)
+                        
+                    }
+                    self.lineNo = lineNoM
+                    self.startCity = startCityM
+                    self.endCity = endCityM
+                    self.startStationName = startStationNameM
+                    self.endStationName = endStationNameM
+                    self.dayPrice = dayPriceM
                 }
+                
                 finishedCallback()
             }
             

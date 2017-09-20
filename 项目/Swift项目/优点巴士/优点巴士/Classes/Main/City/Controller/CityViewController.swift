@@ -78,13 +78,14 @@ extension CityViewController : UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return CityVM.city.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CityCellID, for: indexPath) as! CityTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.cityModel = CityVM.city[indexPath.item]
         return cell
     }
         

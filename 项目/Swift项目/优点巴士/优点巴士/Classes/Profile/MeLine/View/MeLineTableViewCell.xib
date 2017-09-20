@@ -51,12 +51,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-96-MFl">
-                                <rect key="frame" x="5" y="30" width="240" height="1"/>
+                                <rect key="frame" x="5" y="30" width="272" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="HW1-v0-SSu"/>
-                                    <constraint firstAttribute="height" constant="1" id="lT9-cb-qFt"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="voa-B8-dX9"/>
+                                    <constraint firstAttribute="height" constant="1" id="85k-ND-Rww"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH3-3a-OBg">
@@ -72,9 +70,11 @@
                             <constraint firstItem="wH3-3a-OBg" firstAttribute="height" secondItem="UWH-YQ-mld" secondAttribute="height" id="2sc-Ac-9xf"/>
                             <constraint firstItem="wH3-3a-OBg" firstAttribute="leading" secondItem="5ge-iW-Ev8" secondAttribute="trailing" constant="5" id="4lD-21-bHO"/>
                             <constraint firstItem="v1f-Vd-LJb" firstAttribute="centerY" secondItem="Cg0-WK-psX" secondAttribute="centerY" id="9c1-UU-Twl"/>
-                            <constraint firstItem="NQQ-96-MFl" firstAttribute="leading" secondItem="QYt-nv-7Mi" secondAttribute="leading" constant="5" id="CUf-YH-MTm"/>
                             <constraint firstItem="UWH-YQ-mld" firstAttribute="top" secondItem="v1f-Vd-LJb" secondAttribute="top" id="FLM-lB-WkH"/>
                             <constraint firstItem="5ge-iW-Ev8" firstAttribute="leading" secondItem="UWH-YQ-mld" secondAttribute="trailing" constant="5" id="Fp5-I8-mRf"/>
+                            <constraint firstItem="NQQ-96-MFl" firstAttribute="top" secondItem="wH3-3a-OBg" secondAttribute="bottom" constant="4" id="KHc-M0-brw"/>
+                            <constraint firstAttribute="trailing" secondItem="NQQ-96-MFl" secondAttribute="trailing" constant="15" id="O1N-kU-5T0"/>
+                            <constraint firstItem="NQQ-96-MFl" firstAttribute="leading" secondItem="QYt-nv-7Mi" secondAttribute="leading" constant="5" id="Ori-vp-y1z"/>
                             <constraint firstItem="5ge-iW-Ev8" firstAttribute="top" secondItem="QYt-nv-7Mi" secondAttribute="top" constant="14" id="Oy1-dI-Ecb"/>
                             <constraint firstItem="v1f-Vd-LJb" firstAttribute="leading" secondItem="Cg0-WK-psX" secondAttribute="trailing" constant="5" id="Sho-I2-lVY"/>
                             <constraint firstItem="Cg0-WK-psX" firstAttribute="top" secondItem="QYt-nv-7Mi" secondAttribute="top" constant="5" id="Tql-X9-PUo"/>
@@ -82,8 +82,6 @@
                             <constraint firstItem="UWH-YQ-mld" firstAttribute="height" secondItem="v1f-Vd-LJb" secondAttribute="height" id="dDj-Nb-Cid"/>
                             <constraint firstItem="wH3-3a-OBg" firstAttribute="top" secondItem="UWH-YQ-mld" secondAttribute="top" id="e1K-gd-7At"/>
                             <constraint firstItem="wH3-3a-OBg" firstAttribute="centerY" secondItem="UWH-YQ-mld" secondAttribute="centerY" id="gZ4-kd-u7y"/>
-                            <constraint firstItem="NQQ-96-MFl" firstAttribute="leading" secondItem="QYt-nv-7Mi" secondAttribute="leading" constant="5" id="jQe-eo-zMr"/>
-                            <constraint firstItem="NQQ-96-MFl" firstAttribute="top" secondItem="wH3-3a-OBg" secondAttribute="bottom" constant="4" id="puV-8R-HvQ"/>
                             <constraint firstItem="UWH-YQ-mld" firstAttribute="leading" secondItem="v1f-Vd-LJb" secondAttribute="trailing" id="rfo-cE-Wvm"/>
                             <constraint firstItem="v1f-Vd-LJb" firstAttribute="height" secondItem="Cg0-WK-psX" secondAttribute="height" id="sWy-LS-OJs"/>
                             <constraint firstItem="v1f-Vd-LJb" firstAttribute="top" secondItem="Cg0-WK-psX" secondAttribute="top" id="zDh-Pv-zUA"/>

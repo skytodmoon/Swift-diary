@@ -9,7 +9,14 @@
 import UIKit
 
 class CityModel: NSObject {
-
+    
+    var lineNo: String = ""
+    var startCity: String = ""
+    var endCity: String = ""
+    var startStationName: String = ""
+    var endStationName: String = ""
+    var dayPrice: Int = 0
+    
     override init() {
         
     }
@@ -20,4 +27,7 @@ class CityModel: NSObject {
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) { }
+    
 }
+
+
