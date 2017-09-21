@@ -15,6 +15,10 @@ class MeLineTableViewCell: UITableViewCell {
     @IBOutlet weak var startStationName: UILabel!
     @IBOutlet weak var endStationName: UILabel!
     @IBOutlet weak var melineview: UIView!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var mileage: UILabel!
+    @IBOutlet weak var runTimes: UILabel!
+    @IBOutlet weak var dayPrice: UILabel!
     
     var melinemodel : MeLineModel? {
         didSet {
@@ -32,6 +36,37 @@ class MeLineTableViewCell: UITableViewCell {
             let str5 = ")"
             let str6 = str4! + str5
             endStationName.text = str6
+            
+            
+            
+            let str = PaidLineList.startTime
+            //截取时间段字符串
+            let startIndex = str?.index((str?.startIndex)!, offsetBy:10)
+            let endIndex = str?.index(startIndex!, offsetBy:6)
+            let result = str?.substring(with: startIndex!..<endIndex!)
+            
+            startTime.text = result
+            
+            
+            
+            let str11 = melinemodel?.mileage
+            let str12 = "公里"
+            let str13 = str11!+str12
+            mileage.text = str13
+            
+            
+            let str14 = "约"
+            let str15 = melinemodel?.runTimes
+            let str16 = "分钟"
+            let str17 = str14+str15!+str16
+            runTimes.text = str17
+            
+            let str7 = "¥"
+            let str8 = melinemodel?.dayPrice
+            let str9 = "购票"
+            let str10 = str7+str8!+str9
+            dayPrice.text = str10
+
         }
     }
 
