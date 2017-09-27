@@ -11,6 +11,25 @@ import Alamofire
 import SwiftyJSON
 import SVProgressHUD
 
-class NetworkTool: NSObject {
+protocol NetworkToolProtocol {
+    // --------------------------------- 我的 mine  ---------------------------------
+    /// 我的界面 cell 数据
+    static func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->())
+    
+}
+
+class NetworkTool: NetworkToolProtocol {
+    static func loadMineCellData(completionHandler: @escaping ([AnyObject]) -> ()) {
+        let url = BASE_URL + "user/tab/tabs/?"
+        let params = ["iid": IID]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            print(url)
+            print(response)
+        }
+    }
+    
 
 }
