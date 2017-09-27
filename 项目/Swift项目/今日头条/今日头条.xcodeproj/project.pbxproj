@@ -20,6 +20,9 @@
 		5B7741FE1F7B367500238A06 /* jsCode2Html.html in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FB1F7B367500238A06 /* jsCode2Html.html */; };
 		5B7741FF1F7B367500238A06 /* news.css in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FC1F7B367500238A06 /* news.css */; };
 		5B7742001F7B367500238A06 /* news_detail_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FD1F7B367500238A06 /* news_detail_1.html */; };
+		5B7742021F7B371000238A06 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7742011F7B371000238A06 /* MyTheme.swift */; };
+		5B7742041F7B371B00238A06 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7742031F7B371B00238A06 /* Const.swift */; };
+		5B7742071F7B374700238A06 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7742061F7B374700238A06 /* UIView+Extension.swift */; };
 		5BB5FD691F7A54D9001AB0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD681F7A54D9001AB0D4 /* AppDelegate.swift */; };
 		5BB5FD6B1F7A54D9001AB0D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD6A1F7A54D9001AB0D4 /* ViewController.swift */; };
 		5BB5FD6E1F7A54D9001AB0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FD6C1F7A54D9001AB0D4 /* Main.storyboard */; };
@@ -48,7 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7EA61EF321576376765EAA /* Pods-今日头条.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.debug.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.debug.xcconfig"; sourceTree = "<group>"; };
 		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -63,6 +66,9 @@
 		5B7741FB1F7B367500238A06 /* jsCode2Html.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsCode2Html.html; sourceTree = "<group>"; };
 		5B7741FC1F7B367500238A06 /* news.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = news.css; sourceTree = "<group>"; };
 		5B7741FD1F7B367500238A06 /* news_detail_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news_detail_1.html; sourceTree = "<group>"; };
+		5B7742011F7B371000238A06 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
+		5B7742031F7B371B00238A06 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		5B7742061F7B374700238A06 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5BB5FD651F7A54D9001AB0D4 /* 今日头条.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "今日头条.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB5FD681F7A54D9001AB0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB5FD6A1F7A54D9001AB0D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,14 +77,14 @@
 		5BB5FD721F7A54D9001AB0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BB5FD741F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB5FD791F7A54D9001AB0D4 /* 今日头条Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB5FD7D1F7A54D9001AB0D4 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
+		5BB5FD7D1F7A54D9001AB0D4 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Tests.swift; sourceTree = "<group>"; };
 		5BB5FD7F1F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB5FD841F7A54D9001AB0D4 /* 今日头条UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
+		5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____UITests.swift; sourceTree = "<group>"; };
 		5BB5FD8A1F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98019CDD2F3E59BE3A0C27EF /* Pods-今日头条.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.release.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.release.xcconfig"; sourceTree = "<group>"; };
-		B6BCE8313DA270E7534A965C /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D06C90480E16E7A2036AA119 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6BCE8313DA270E7534A965C /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06C90480E16E7A2036AA119 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,7 @@
 		5B7741EF1F7B359D00238A06 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B7742051F7B373200238A06 /* Category */,
 				5B7741FA1F7B366800238A06 /* Web */,
 				5B7741F31F7B362000238A06 /* Plist */,
 				5B7741F01F7B35A300238A06 /* Tools */,
@@ -216,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				5B7741F11F7B35BE00238A06 /* NetworkTool.swift */,
+				5B7742011F7B371000238A06 /* MyTheme.swift */,
+				5B7742031F7B371B00238A06 /* Const.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -238,6 +247,14 @@
 				5B7741FC1F7B367500238A06 /* news.css */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		5B7742051F7B373200238A06 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B7742061F7B374700238A06 /* UIView+Extension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		5BB5FD5C1F7A54D8001AB0D4 = {
@@ -494,6 +511,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-今日头条/Pods-今日头条-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
@@ -503,6 +521,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
@@ -521,14 +540,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
+				5B7742021F7B371000238A06 /* MyTheme.swift in Sources */,
 				5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */,
 				5B7741EA1F7B33C800238A06 /* WeiTouTiaoViewController.swift in Sources */,
 				5BB5FD6B1F7A54D9001AB0D4 /* ViewController.swift in Sources */,
 				5B7741EE1F7B33E300238A06 /* MineViewController.swift in Sources */,
+				5B7742071F7B374700238A06 /* UIView+Extension.swift in Sources */,
 				5B7741E61F7B33AD00238A06 /* VideoViewController.swift in Sources */,
 				5BB5FD691F7A54D9001AB0D4 /* AppDelegate.swift in Sources */,
 				5B7741DE1F7B329F00238A06 /* MainNavigationController.swift in Sources */,
 				5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */,
+				5B7742041F7B371B00238A06 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
