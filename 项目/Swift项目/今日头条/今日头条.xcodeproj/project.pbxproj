@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */; };
+		5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */; };
 		5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DB1F7B328100238A06 /* MainTabBarController.swift */; };
 		5B7741DE1F7B329F00238A06 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */; };
 		5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741E11F7B32C300238A06 /* HomeViewController.swift */; };
@@ -57,8 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7EA61EF321576376765EAA /* Pods-今日头条.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.debug.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.debug.xcconfig"; sourceTree = "<group>"; };
+		5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
+		5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		5B7741E11F7B32C300238A06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,14 +95,14 @@
 		5BB5FD721F7A54D9001AB0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BB5FD741F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB5FD791F7A54D9001AB0D4 /* 今日头条Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB5FD7D1F7A54D9001AB0D4 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
+		5BB5FD7D1F7A54D9001AB0D4 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Tests.swift; sourceTree = "<group>"; };
 		5BB5FD7F1F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BB5FD841F7A54D9001AB0D4 /* 今日头条UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
+		5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____UITests.swift; sourceTree = "<group>"; };
 		5BB5FD8A1F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98019CDD2F3E59BE3A0C27EF /* Pods-今日头条.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.release.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.release.xcconfig"; sourceTree = "<group>"; };
-		B6BCE8313DA270E7534A965C /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D06C90480E16E7A2036AA119 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6BCE8313DA270E7534A965C /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06C90480E16E7A2036AA119 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B73BEB01F7B8C59003A81C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */,
+				5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B7741D81F7B324900238A06 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +222,7 @@
 		5B7741EB1F7B33CE00238A06 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				5B73BEB01F7B8C59003A81C0 /* Model */,
 				5B7741EC1F7B33D900238A06 /* Controller */,
 			);
 			name = Mine;
@@ -541,8 +555,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-今日头条/Pods-今日头条-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BMPlayer/BMPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
@@ -551,8 +570,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
@@ -570,7 +594,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */,
 				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
+				5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */,
 				5B7742021F7B371000238A06 /* MyTheme.swift in Sources */,
 				5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */,
 				5B7742191F7B389A00238A06 /* UIImage+Extension.swift in Sources */,
