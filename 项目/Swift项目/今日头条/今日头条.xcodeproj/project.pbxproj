@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DB1F7B328100238A06 /* MainTabBarController.swift */; };
+		5B7741DE1F7B329F00238A06 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */; };
+		5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741E11F7B32C300238A06 /* HomeViewController.swift */; };
+		5B7741E61F7B33AD00238A06 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741E51F7B33AD00238A06 /* VideoViewController.swift */; };
+		5B7741EA1F7B33C800238A06 /* WeiTouTiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741E91F7B33C800238A06 /* WeiTouTiaoViewController.swift */; };
+		5B7741EE1F7B33E300238A06 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741ED1F7B33E300238A06 /* MineViewController.swift */; };
+		5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741F11F7B35BE00238A06 /* NetworkTool.swift */; };
+		5B7741F71F7B365600238A06 /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741F41F7B365600238A06 /* settingPlist.plist */; };
+		5B7741F81F7B365600238A06 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741F51F7B365600238A06 /* default_theme.plist */; };
+		5B7741F91F7B365600238A06 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741F61F7B365600238A06 /* night_theme.plist */; };
+		5B7741FE1F7B367500238A06 /* jsCode2Html.html in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FB1F7B367500238A06 /* jsCode2Html.html */; };
+		5B7741FF1F7B367500238A06 /* news.css in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FC1F7B367500238A06 /* news.css */; };
+		5B7742001F7B367500238A06 /* news_detail_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5B7741FD1F7B367500238A06 /* news_detail_1.html */; };
 		5BB5FD691F7A54D9001AB0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD681F7A54D9001AB0D4 /* AppDelegate.swift */; };
 		5BB5FD6B1F7A54D9001AB0D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD6A1F7A54D9001AB0D4 /* ViewController.swift */; };
 		5BB5FD6E1F7A54D9001AB0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FD6C1F7A54D9001AB0D4 /* Main.storyboard */; };
@@ -37,6 +50,19 @@
 /* Begin PBXFileReference section */
 		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7EA61EF321576376765EAA /* Pods-今日头条.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.debug.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		5B7741E11F7B32C300238A06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5B7741E51F7B33AD00238A06 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		5B7741E91F7B33C800238A06 /* WeiTouTiaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiTouTiaoViewController.swift; sourceTree = "<group>"; };
+		5B7741ED1F7B33E300238A06 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		5B7741F11F7B35BE00238A06 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		5B7741F41F7B365600238A06 /* settingPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
+		5B7741F51F7B365600238A06 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = default_theme.plist; sourceTree = "<group>"; };
+		5B7741F61F7B365600238A06 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = night_theme.plist; sourceTree = "<group>"; };
+		5B7741FB1F7B367500238A06 /* jsCode2Html.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsCode2Html.html; sourceTree = "<group>"; };
+		5B7741FC1F7B367500238A06 /* news.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = news.css; sourceTree = "<group>"; };
+		5B7741FD1F7B367500238A06 /* news_detail_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = news_detail_1.html; sourceTree = "<group>"; };
 		5BB5FD651F7A54D9001AB0D4 /* 今日头条.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "今日头条.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB5FD681F7A54D9001AB0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB5FD6A1F7A54D9001AB0D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +107,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B7741D81F7B324900238A06 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741EF1F7B359D00238A06 /* Other */,
+				5B7741EB1F7B33CE00238A06 /* Mine */,
+				5B7741E71F7B33B400238A06 /* WeiTou */,
+				5B7741E31F7B339500238A06 /* Video */,
+				5B7741DF1F7B32B000238A06 /* Home */,
+				5B7741D91F7B325800238A06 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B7741D91F7B325800238A06 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741DA1F7B325D00238A06 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B7741DA1F7B325D00238A06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741DB1F7B328100238A06 /* MainTabBarController.swift */,
+				5B7741DD1F7B329F00238A06 /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7741DF1F7B32B000238A06 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E01F7B32B500238A06 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B7741E01F7B32B500238A06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E11F7B32C300238A06 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7741E31F7B339500238A06 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E41F7B33A100238A06 /* Controller */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		5B7741E41F7B33A100238A06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E51F7B33AD00238A06 /* VideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7741E71F7B33B400238A06 /* WeiTou */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E81F7B33BD00238A06 /* Controller */,
+			);
+			path = WeiTou;
+			sourceTree = "<group>";
+		};
+		5B7741E81F7B33BD00238A06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741E91F7B33C800238A06 /* WeiTouTiaoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7741EB1F7B33CE00238A06 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741EC1F7B33D900238A06 /* Controller */,
+			);
+			name = Mine;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5B7741EC1F7B33D900238A06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741ED1F7B33E300238A06 /* MineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B7741EF1F7B359D00238A06 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741FA1F7B366800238A06 /* Web */,
+				5B7741F31F7B362000238A06 /* Plist */,
+				5B7741F01F7B35A300238A06 /* Tools */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5B7741F01F7B35A300238A06 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741F11F7B35BE00238A06 /* NetworkTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5B7741F31F7B362000238A06 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741F51F7B365600238A06 /* default_theme.plist */,
+				5B7741F61F7B365600238A06 /* night_theme.plist */,
+				5B7741F41F7B365600238A06 /* settingPlist.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		5B7741FA1F7B366800238A06 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5B7741FB1F7B367500238A06 /* jsCode2Html.html */,
+				5B7741FD1F7B367500238A06 /* news_detail_1.html */,
+				5B7741FC1F7B367500238A06 /* news.css */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		5BB5FD5C1F7A54D8001AB0D4 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +265,7 @@
 		5BB5FD671F7A54D9001AB0D4 /* 今日头条 */ = {
 			isa = PBXGroup;
 			children = (
+				5B7741D81F7B324900238A06 /* Classes */,
 				5BB5FD681F7A54D9001AB0D4 /* AppDelegate.swift */,
 				5BB5FD6A1F7A54D9001AB0D4 /* ViewController.swift */,
 				5BB5FD6C1F7A54D9001AB0D4 /* Main.storyboard */,
@@ -265,7 +425,13 @@
 			files = (
 				5BB5FD731F7A54D9001AB0D4 /* LaunchScreen.storyboard in Resources */,
 				5BB5FD701F7A54D9001AB0D4 /* Assets.xcassets in Resources */,
+				5B7741F71F7B365600238A06 /* settingPlist.plist in Resources */,
+				5B7742001F7B367500238A06 /* news_detail_1.html in Resources */,
+				5B7741FE1F7B367500238A06 /* jsCode2Html.html in Resources */,
+				5B7741FF1F7B367500238A06 /* news.css in Resources */,
+				5B7741F91F7B365600238A06 /* night_theme.plist in Resources */,
 				5BB5FD6E1F7A54D9001AB0D4 /* Main.storyboard in Resources */,
+				5B7741F81F7B365600238A06 /* default_theme.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +494,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-今日头条/Pods-今日头条-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -336,6 +503,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -352,8 +520,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
+				5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */,
+				5B7741EA1F7B33C800238A06 /* WeiTouTiaoViewController.swift in Sources */,
 				5BB5FD6B1F7A54D9001AB0D4 /* ViewController.swift in Sources */,
+				5B7741EE1F7B33E300238A06 /* MineViewController.swift in Sources */,
+				5B7741E61F7B33AD00238A06 /* VideoViewController.swift in Sources */,
 				5BB5FD691F7A54D9001AB0D4 /* AppDelegate.swift in Sources */,
+				5B7741DE1F7B329F00238A06 /* MainNavigationController.swift in Sources */,
+				5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
