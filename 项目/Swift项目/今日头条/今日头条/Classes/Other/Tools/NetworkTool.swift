@@ -51,12 +51,12 @@ class NetworkTool: NetworkToolProtocol {
                     titles.append(recommend)
                     // 添加控制器
                     let firstVC = VideoTopicController()
-//                    firstVC.videoTitle = recommend
+                    firstVC.videoTitle = recommend
                     videoTopicVCs.append(firstVC)
                     for dict in data {
                         let title = TopicTitle(dict: dict as! [String: AnyObject])
                         let videoTopicVC = VideoTopicController()
-//                        videoTopicVC.videoTitle = title
+                        videoTopicVC.videoTitle = title
                         videoTopicVCs.append(videoTopicVC)
                         titles.append(title)
                     }
