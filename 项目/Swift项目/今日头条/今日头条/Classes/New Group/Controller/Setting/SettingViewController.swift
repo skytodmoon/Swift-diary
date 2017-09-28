@@ -96,7 +96,7 @@ extension SettingViewController {
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                navigationController?.pushViewController(OfflineDownloadController(), animated: true)
+                print("离线下载")
             }
         }
     }

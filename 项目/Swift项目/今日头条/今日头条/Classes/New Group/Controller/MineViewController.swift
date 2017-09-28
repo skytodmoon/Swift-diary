@@ -140,9 +140,9 @@ extension MineViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 { // 我的关注
-//            let myConcernVC = MyConcernController()
-//            myConcernVC.myConcerns = concerns
-//            navigationController?.pushViewController(myConcernVC, animated: true)
+            let myConcernVC = MyConcernController()
+            myConcernVC.myConcerns = concerns
+            navigationController?.pushViewController(myConcernVC, animated: true)
         } else if indexPath.section == 1 {
             // 消息通知
         } else if indexPath.section == 2 {
@@ -174,14 +174,12 @@ extension MineViewController: MineFirstSectionCellDelegate {
 
     /// 点击了 第一个 cell 的标题
     func mineFirstSectionCellTitleButtonClicked() {
-//        let myConcernVC = MyConcernController()
-//        myConcernVC.myConcerns = concerns
-//        navigationController?.pushViewController(myConcernVC, animated: true)
+        let myConcernVC = MyConcernController()
+        myConcernVC.myConcerns = concerns
+        navigationController?.pushViewController(myConcernVC, animated: true)
     }
     /// 点击了第几个关注
     func mineFirstSectionCellDidSelected(myConcern: MyConcern) {
-        let followDetail = FollowDetailViewController()
-        followDetail.userid = myConcern.userid ?? 0
-        navigationController?.pushViewController(followDetail, animated: true)
+        print("关注")
     }
 }
