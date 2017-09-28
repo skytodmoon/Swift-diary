@@ -15,10 +15,7 @@ class SettingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 设置 UI
         setupUI()
-        // 从沙盒读取缓存数据的大小
         calcuateCacheSizeFromSandBox()
     }
 
@@ -54,15 +51,20 @@ extension SettingViewController {
         let cellArray = settings[indexPath.section] as! [SettingModel]
         cell.setting = cellArray[indexPath.row]
         if indexPath.section == 0 {
-            if indexPath.row == 0 { // 清理缓存
+            if indexPath.row == 0 {
+                // 清理缓存
                 NotificationCenter.default.addObserver(self, selector: #selector(loadCacheSize), name: NSNotification.Name(rawValue: "cacheSizeM"), object: nil)
-            } else if indexPath.row == 1 { // 字体大小
+            } else if indexPath.row == 1 {
+                // 字体大小
                 NotificationCenter.default.addObserver(self, selector: #selector(changeFontSize), name: NSNotification.Name(rawValue: "fontSize"), object: nil)
-            } else if indexPath.row == 3 { //  非 WiFi 网络流量
+            } else if indexPath.row == 3 {
+                //  非 WiFi 网络流量
                 NotificationCenter.default.addObserver(self, selector: #selector(changeNeworkMode), name: NSNotification.Name(rawValue: "networkMode"), object: nil)
-            } else if indexPath.row == 4 { //  非 WiFi 播放提醒
+            } else if indexPath.row == 4 {
+                //  非 WiFi 播放提醒
                 NotificationCenter.default.addObserver(self, selector: #selector(changePlayNotice), name: NSNotification.Name(rawValue: "playNotice"), object: nil)
-            } else if indexPath.row == 5 { // 推送
+            } else if indexPath.row == 5 {
+                // 推送
                 cell.selectionStyle = .none
             }
         } else if indexPath.section == 1 {
@@ -83,10 +85,12 @@ extension SettingViewController {
             } else if indexPath.row == 3 {
                 // 网络流量
                 setupNetworkAlertController()
-            } else if indexPath.row == 4 { // 播放提醒
+            } else if indexPath.row == 4 {
+                // 播放提醒
                 // 设置播放提醒
                 setupPlayNoticeAlertController()
-            } else if indexPath.row == 5 { // 推送通知
+            } else if indexPath.row == 5 {
+                // 推送通知
                 let url = URL(string: UIApplicationOpenSettingsURLString)
                 UIApplication.shared.openURL(url!)
             }
@@ -99,13 +103,13 @@ extension SettingViewController {
 }
 
 extension SettingViewController {
-    
+    //MARK: - 设置 UI
     fileprivate func setupUI() {
         navigationItem.title = "设置"
         tableView.rowHeight = 44
         tableView.backgroundColor = UIColor.globalBackgroundColor()
         tableView.tableFooterView = UIView()
-        // 从 plist 加载数据
+        //MARK: 从 plist 加载数据
         let path = Bundle.main.path(forResource: "settingPlist", ofType: "plist")
         let cellPlist = NSArray(contentsOfFile: path!)! as [AnyObject]
         for arrayDict in cellPlist {
@@ -119,7 +123,7 @@ extension SettingViewController {
         }
         tableView.register(UINib(nibName: String(describing: SettingCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SettingCell.self))
     }
-    /// 从沙盒读取缓存数据的大小
+    //MARK: 从沙盒读取缓存数据的大小
     fileprivate func calcuateCacheSizeFromSandBox() {
         let cache = KingfisherManager.shared.cache
         cache.calculateDiskCacheSize { (size) in
@@ -129,35 +133,35 @@ extension SettingViewController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "cacheSizeM"), object: self, userInfo: ["cacheSize": sizeString])
         }
     }
-    /// 获取缓存大小
+    //MARK: 获取缓存大小
     @objc fileprivate func loadCacheSize(notification: NSNotification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
         let indexPath = IndexPath(row: 0, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! SettingCell
         cell.rightTitleLabel.text = userInfo["cacheSize"] as? String
     }
-    /// 改变字体大小
+    //MARK: 改变字体大小
     @objc fileprivate func changeFontSize(notification: Notification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
         let indexPath = IndexPath(row: 1, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! SettingCell
         cell.rightTitleLabel.text = userInfo["fontSize"] as? String
     }
-    /// 改变非 wifi 网络流量
+    //MARK: 改变非 wifi 网络流量
     @objc fileprivate func changeNeworkMode(notification: NSNotification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
         let indexPath = IndexPath(row: 3, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! SettingCell
         cell.rightTitleLabel.text = userInfo["networkMode"] as? String
     }
-    /// 改变非 wifi 播放提醒
+    //MARK: 改变非 wifi 播放提醒
     @objc fileprivate func changePlayNotice(notification: NSNotification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
         let indexPath = IndexPath(row: 4, section: 0)
         let cell = tableView.cellForRow(at: indexPath) as! SettingCell
         cell.rightTitleLabel.text = userInfo["playNotice"] as? String
     }
-    /// 清除缓存
+    //MARK: 清除缓存
     fileprivate func clearCacheAlertController() {
         let alertController = UIAlertController(title: "确定清除所有缓存？问答草稿、离线内容及图片均会被清除", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -173,7 +177,7 @@ extension SettingViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    /// 设置字体大小
+    //MARK: 设置字体大小
     fileprivate func setupFontAlertController() {
         let alertController = UIAlertController(title: "设置字体大小", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -196,7 +200,7 @@ extension SettingViewController {
         alertController.addAction(largeAction)
         present(alertController, animated: true, completion: nil)
     }
-    /// 非 wifi 网络流量
+    //MARK: 非 wifi 网络流量
     fileprivate func setupNetworkAlertController() {
         let alertController = UIAlertController(title: "非Wifi网络流量", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -215,7 +219,7 @@ extension SettingViewController {
         alertController.addAction(leastFlowAction)
         present(alertController, animated: true, completion: nil)
     }
-    /// 设置播放提醒
+    //MARK: 设置播放提醒
     fileprivate func setupPlayNoticeAlertController() {
         let alertController = UIAlertController(title: "非Wifi网络播放提醒", message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)

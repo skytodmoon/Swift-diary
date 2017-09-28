@@ -12,6 +12,8 @@ import SwiftyJSON
 import SVProgressHUD
 
 protocol NetworkToolProtocol {
+
+    
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     static func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->())
@@ -22,6 +24,9 @@ protocol NetworkToolProtocol {
 }
 
 class NetworkTool: NetworkToolProtocol {
+    
+    
+    
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     class func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->()) {
@@ -60,6 +65,7 @@ class NetworkTool: NetworkToolProtocol {
         let url = BASE_URL + "concern/v2/follow/my_follow/?"
         let params = ["device_id": device_id]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
+            print(url)
             guard response.result.isSuccess else {
                 return
             }
@@ -86,6 +92,7 @@ class NetworkTool: NetworkToolProtocol {
         let url = BASE_URL + "user/profile/homepage/v3/?"
         let params = ["user_id": userId] as [String : Any]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
+            print(url)
             guard response.result.isSuccess else {
                 return
             }

@@ -180,8 +180,8 @@ extension MineViewController: MineFirstSectionCellDelegate {
     }
     /// 点击了第几个关注
     func mineFirstSectionCellDidSelected(myConcern: MyConcern) {
-//        let followDetail = FollowDetailViewController()
-//        followDetail.userid = myConcern.userid ?? 0
-//        navigationController?.pushViewController(followDetail, animated: true)
+        let followDetail = FollowDetailViewController()
+        followDetail.userid = myConcern.userid ?? 0
+        navigationController?.pushViewController(followDetail, animated: true)
     }
 }
