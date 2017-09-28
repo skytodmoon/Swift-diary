@@ -16,12 +16,11 @@ class VideoViewController: UIViewController {
     
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: screenWidth, height: screenHeight - kNavBarHeight - 40)
+        layout.itemSize = CGSize(width: screenWidth, height: screenHeight)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        
-        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight), collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "VideoTopicViewCell")

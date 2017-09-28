@@ -16,13 +16,13 @@ import NVActivityIndicatorView
 class VideoTopicController: UIViewController {
     
     fileprivate lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: screenWidth, height: screenHeight))
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.rowHeight = screenHeight * 0.4
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.contentSize = CGSize(width: screenWidth, height: screenHeight - kNavBarHeight - kTabBarHeight)
+        tableView.contentSize = CGSize(width: screenWidth, height: screenHeight)
         tableView.register(UINib(nibName: String(describing: VideoTopicCell.self), bundle: nil), forCellReuseIdentifier: String(describing: VideoTopicCell.self))
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return tableView
@@ -56,10 +56,8 @@ class VideoTopicController: UIViewController {
 extension VideoTopicController {
     
     fileprivate func setupUI() {
+
         view.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.top.left.bottom.right.equalTo(view)
-        }
     }
 }
 

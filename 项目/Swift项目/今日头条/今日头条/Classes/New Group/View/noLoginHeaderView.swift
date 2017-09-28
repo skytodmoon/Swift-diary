@@ -15,14 +15,9 @@ class NoLoginHeaderView: UIView {
     @IBOutlet weak var moreLoginButton: AnimatableButton!
     
     @IBOutlet weak var bgImageView: UIImageView!
-    /// 手机按钮
-    @IBOutlet weak var mobileButton: UIButton!
-    /// 微信按钮
-    @IBOutlet weak var wechatButton: UIButton!
-    /// QQ 按钮
-    @IBOutlet weak var qqButton: UIButton!
-    /// 新浪按钮
-    @IBOutlet weak var sinaButton: UIButton!
+
+    @IBOutlet weak var Headerimage: UIImageView!
+    
     /// 收藏按钮
     @IBOutlet weak var favoriteButton: UIButton!
     /// 收藏按钮
@@ -47,11 +42,11 @@ class NoLoginHeaderView: UIView {
         dayOrNightButton.theme_backgroundColor = "colors.cellBackgroundColor"
         dayOrNightButton.setTitle("夜间", for: .normal)
         dayOrNightButton.setTitle("日间", for: .selected)
-        mobileButton.theme_setImage("images.mobileButton", forState: .normal)
-        wechatButton.theme_setImage("images.wechatButton", forState: .normal)
-        qqButton.theme_setImage("images.qqButton", forState: .normal)
-        sinaButton.theme_setImage("images.sinaButton", forState: .normal)
         dayOrNightButton.isSelected = UserDefaults.standard.bool(forKey: isNight)
+        
+        let imagerLayer: CALayer = Headerimage.layer
+        imagerLayer.masksToBounds = true
+        imagerLayer.cornerRadius = Headerimage.frame.size.height/2
     }
     
     class func headerView() -> NoLoginHeaderView {

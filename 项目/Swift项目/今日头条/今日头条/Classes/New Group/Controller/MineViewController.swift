@@ -36,6 +36,7 @@ class MineViewController: UITableViewController {
     // 头部视图
     fileprivate lazy var noLoginHeaderView: NoLoginHeaderView = {
         let noLoginHeaderView = NoLoginHeaderView.headerView()
+        noLoginHeaderView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 250)
         return noLoginHeaderView
     }()
 
@@ -155,15 +156,6 @@ extension MineViewController {
         }
     }
     
-    // MARK: - UIScrollViewDelagate
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y;
-        if offsetY < 0 {
-            let totalOffset = kMineHeaderViewHieght + abs(offsetY)
-            let f = totalOffset / kMineHeaderViewHieght
-            noLoginHeaderView.bgImageView.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
-        }
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
