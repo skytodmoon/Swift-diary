@@ -39,6 +39,11 @@
 		5B8034001F7CC5E500C38795 /* AllConcernsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8033FE1F7CC5E500C38795 /* AllConcernsCell.swift */; };
 		5B8034011F7CC5E500C38795 /* AllConcernsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8033FF1F7CC5E500C38795 /* AllConcernsCell.xib */; };
 		5B8034041F7CC71200C38795 /* WeiTouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8034031F7CC71200C38795 /* WeiTouTiao.swift */; };
+		5B8034071F7CC9AE00C38795 /* NewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8034061F7CC9AE00C38795 /* NewsTopic.swift */; };
+		5B80340B1F7CC9CC00C38795 /* VideoTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8034091F7CC9CC00C38795 /* VideoTopicCell.swift */; };
+		5B80340C1F7CC9CC00C38795 /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B80340A1F7CC9CC00C38795 /* VideoTopicCell.xib */; };
+		5B80340E1F7CCA9700C38795 /* VideoTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80340D1F7CCA9700C38795 /* VideoTopicController.swift */; };
+		5B8034101F7CCAA300C38795 /* VideoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B80340F1F7CCAA300C38795 /* VideoDetailController.swift */; };
 		5B9B42101F7B973000C0AF91 /* MineFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B420E1F7B973000C0AF91 /* MineFirstSectionCell.swift */; };
 		5B9B42111F7B973000C0AF91 /* MineFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9B420F1F7B973000C0AF91 /* MineFirstSectionCell.xib */; };
 		5B9B42141F7B974400C0AF91 /* MineOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B42121F7B974400C0AF91 /* MineOtherCell.swift */; };
@@ -112,6 +117,11 @@
 		5B8033FE1F7CC5E500C38795 /* AllConcernsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllConcernsCell.swift; sourceTree = "<group>"; };
 		5B8033FF1F7CC5E500C38795 /* AllConcernsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllConcernsCell.xib; sourceTree = "<group>"; };
 		5B8034031F7CC71200C38795 /* WeiTouTiao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiTouTiao.swift; sourceTree = "<group>"; };
+		5B8034061F7CC9AE00C38795 /* NewsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTopic.swift; sourceTree = "<group>"; };
+		5B8034091F7CC9CC00C38795 /* VideoTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTopicCell.swift; sourceTree = "<group>"; };
+		5B80340A1F7CC9CC00C38795 /* VideoTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTopicCell.xib; sourceTree = "<group>"; };
+		5B80340D1F7CCA9700C38795 /* VideoTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTopicController.swift; sourceTree = "<group>"; };
+		5B80340F1F7CCAA300C38795 /* VideoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailController.swift; sourceTree = "<group>"; };
 		5B9B420E1F7B973000C0AF91 /* MineFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineFirstSectionCell.swift; sourceTree = "<group>"; };
 		5B9B420F1F7B973000C0AF91 /* MineFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineFirstSectionCell.xib; sourceTree = "<group>"; };
 		5B9B42121F7B974400C0AF91 /* MineOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineOtherCell.swift; sourceTree = "<group>"; };
@@ -253,6 +263,8 @@
 		5B7741E31F7B339500238A06 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				5B8034081F7CC9B400C38795 /* View */,
+				5B8034051F7CC99B00C38795 /* Model */,
 				5B7741E41F7B33A100238A06 /* Controller */,
 			);
 			path = Video;
@@ -262,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				5B7741E51F7B33AD00238A06 /* VideoViewController.swift */,
+				5B80340D1F7CCA9700C38795 /* VideoTopicController.swift */,
+				5B80340F1F7CCAA300C38795 /* VideoDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,6 +388,23 @@
 				5B8034031F7CC71200C38795 /* WeiTouTiao.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5B8034051F7CC99B00C38795 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B8034061F7CC9AE00C38795 /* NewsTopic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B8034081F7CC9B400C38795 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B8034091F7CC9CC00C38795 /* VideoTopicCell.swift */,
+				5B80340A1F7CC9CC00C38795 /* VideoTopicCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B9B420D1F7B96CF00C0AF91 /* View */ = {
@@ -585,6 +616,7 @@
 				5B7742001F7B367500238A06 /* news_detail_1.html in Resources */,
 				5B9B42231F7B9DC100C0AF91 /* MyConcernCell.xib in Resources */,
 				5B9B42151F7B974400C0AF91 /* MineOtherCell.xib in Resources */,
+				5B80340C1F7CC9CC00C38795 /* VideoTopicCell.xib in Resources */,
 				5B7741FE1F7B367500238A06 /* jsCode2Html.html in Resources */,
 				5B7741FF1F7B367500238A06 /* news.css in Resources */,
 				5B9B421E1F7B985800C0AF91 /* NoLoginHeaderView.xib in Resources */,
@@ -693,6 +725,7 @@
 				5B02CF691F7C81BA00C0546B /* SettingViewController.swift in Sources */,
 				5B7742021F7B371000238A06 /* MyTheme.swift in Sources */,
 				5B9B421F1F7B985800C0AF91 /* NoLoginHeaderView.swift in Sources */,
+				5B8034071F7CC9AE00C38795 /* NewsTopic.swift in Sources */,
 				5B8033FD1F7CC55000C38795 /* MyConcernController.swift in Sources */,
 				5B9B421B1F7B981000C0AF91 /* VerticalButton.swift in Sources */,
 				5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */,
@@ -715,8 +748,11 @@
 				5BB5FD691F7A54D9001AB0D4 /* AppDelegate.swift in Sources */,
 				5B7741DE1F7B329F00238A06 /* MainNavigationController.swift in Sources */,
 				5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */,
+				5B80340E1F7CCA9700C38795 /* VideoTopicController.swift in Sources */,
 				5B77420A1F7B37CB00238A06 /* RefreshHeder.swift in Sources */,
 				5B7742041F7B371B00238A06 /* Const.swift in Sources */,
+				5B8034101F7CCAA300C38795 /* VideoDetailController.swift in Sources */,
+				5B80340B1F7CC9CC00C38795 /* VideoTopicCell.swift in Sources */,
 				5B9B42101F7B973000C0AF91 /* MineFirstSectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

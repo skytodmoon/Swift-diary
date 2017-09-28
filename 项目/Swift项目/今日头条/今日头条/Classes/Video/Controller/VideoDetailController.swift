@@ -1,21 +1,18 @@
 //
-//  VideoViewController.swift
+//  VideoDetailController.swift
 //  今日头条
 //
-//  Created by 金亮齐 on 2017/9/27.
+//  Created by 金亮齐 on 2017/9/28.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setupUI()
-        
-        self.RequestData()
+
         // Do any additional setup after loading the view.
     }
 
@@ -35,25 +32,4 @@ class VideoViewController: UIViewController {
     }
     */
 
-}
-
-// MARK: - setupUI
-extension VideoViewController {
-    // 设置 UI
-    fileprivate func setupUI() {
-        view.backgroundColor = UIColor.globalBackgroundColor()
-        // 设置导航栏颜色
-        navigationController?.navigationBar.theme_barTintColor = "colors.otherNavBarTintColor"
-        navigationController?.navigationBar.shadowImage = UIImage()
-        
-    }
-}
-
-extension VideoViewController {
-    fileprivate func RequestData() {
-        NetworkTool.loadVideoTitlesData { (videoTitles, videoTopicVCs) in
-            
-        }
-    }
-    
 }
