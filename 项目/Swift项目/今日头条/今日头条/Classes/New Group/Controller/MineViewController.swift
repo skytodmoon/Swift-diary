@@ -150,7 +150,7 @@ extension MineViewController {
         }  else if indexPath.section == 3 {
              // 我要爆料，用户反馈，系统设置
             if indexPath.row == 2 { // 系统设置
-//                self.navigationController?.pushViewController(SettingViewController(), animated: true)
+                self.navigationController?.pushViewController(SettingViewController(), animated: true)
             }
         }
     }

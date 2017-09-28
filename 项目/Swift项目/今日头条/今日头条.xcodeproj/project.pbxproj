@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B02CF691F7C81BA00C0546B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02CF681F7C81BA00C0546B /* SettingViewController.swift */; };
+		5B02CF6C1F7C833700C0546B /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02CF6A1F7C833700C0546B /* SettingCell.swift */; };
+		5B02CF6D1F7C833700C0546B /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B02CF6B1F7C833700C0546B /* SettingCell.xib */; };
+		5B02CF6F1F7C838900C0546B /* OfflineDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B02CF6E1F7C838900C0546B /* OfflineDownloadController.swift */; };
 		5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */; };
 		5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */; };
 		5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DB1F7B328100238A06 /* MainTabBarController.swift */; };
@@ -70,6 +74,10 @@
 /* Begin PBXFileReference section */
 		1AB9B6D4DCE3FAF43DE7A91D /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7EA61EF321576376765EAA /* Pods-今日头条.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.debug.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.debug.xcconfig"; sourceTree = "<group>"; };
+		5B02CF681F7C81BA00C0546B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5B02CF6A1F7C833700C0546B /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		5B02CF6B1F7C833700C0546B /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		5B02CF6E1F7C838900C0546B /* OfflineDownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadController.swift; sourceTree = "<group>"; };
 		5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -149,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B02CF671F7C819F00C0546B /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				5B02CF681F7C81BA00C0546B /* SettingViewController.swift */,
+				5B02CF6E1F7C838900C0546B /* OfflineDownloadController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		5B73BEB01F7B8C59003A81C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +268,7 @@
 		5B7741EC1F7B33D900238A06 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B02CF671F7C819F00C0546B /* Setting */,
 				5B7741ED1F7B33E300238A06 /* MineViewController.swift */,
 			);
 			path = Controller;
@@ -332,6 +350,8 @@
 				5B9B42131F7B974400C0AF91 /* MineOtherCell.xib */,
 				5B9B42201F7B9DC100C0AF91 /* MyConcernCell.swift */,
 				5B9B42211F7B9DC100C0AF91 /* MyConcernCell.xib */,
+				5B02CF6A1F7C833700C0546B /* SettingCell.swift */,
+				5B02CF6B1F7C833700C0546B /* SettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +542,7 @@
 			files = (
 				5BB5FD731F7A54D9001AB0D4 /* LaunchScreen.storyboard in Resources */,
 				5BB5FD701F7A54D9001AB0D4 /* Assets.xcassets in Resources */,
+				5B02CF6D1F7C833700C0546B /* SettingCell.xib in Resources */,
 				5B7741F71F7B365600238A06 /* settingPlist.plist in Resources */,
 				5B9B42111F7B973000C0AF91 /* MineFirstSectionCell.xib in Resources */,
 				5B7742001F7B367500238A06 /* news_detail_1.html in Resources */,
@@ -632,6 +653,7 @@
 				5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */,
 				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
 				5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */,
+				5B02CF691F7C81BA00C0546B /* SettingViewController.swift in Sources */,
 				5B7742021F7B371000238A06 /* MyTheme.swift in Sources */,
 				5B9B421F1F7B985800C0AF91 /* NoLoginHeaderView.swift in Sources */,
 				5B9B421B1F7B981000C0AF91 /* VerticalButton.swift in Sources */,
@@ -653,7 +675,9 @@
 				5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */,
 				5B77420A1F7B37CB00238A06 /* RefreshHeder.swift in Sources */,
 				5B7742041F7B371B00238A06 /* Const.swift in Sources */,
+				5B02CF6F1F7C838900C0546B /* OfflineDownloadController.swift in Sources */,
 				5B9B42101F7B973000C0AF91 /* MineFirstSectionCell.swift in Sources */,
+				5B02CF6C1F7C833700C0546B /* SettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
