@@ -16,7 +16,7 @@ import NVActivityIndicatorView
 class VideoTopicController: UIViewController {
     
     fileprivate lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: screenWidth, height: screenHeight))
+        let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: screenWidth, height: screenHeight - 165))
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         tableView.rowHeight = screenHeight * 0.4

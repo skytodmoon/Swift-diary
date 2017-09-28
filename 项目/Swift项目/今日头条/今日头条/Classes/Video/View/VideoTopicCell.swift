@@ -31,7 +31,6 @@ class VideoTopicCell: UITableViewCell {
     /// 更多按钮
     @IBOutlet weak var moreButton: UIButton!
     
-    @IBOutlet weak var bottomLineView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +41,6 @@ class VideoTopicCell: UITableViewCell {
         nameLable.theme_textColor = "colors.black"
         commentButton.theme_setTitleColor("colors.black", forState: .normal)
         concernButton.theme_setTitleColor("colors.black", forState: .normal)
-        bottomLineView.theme_backgroundColor = "colors.separatorColor"
         playCountLabel.theme_textColor = "colors.playCountColor"
         concernButton.theme_setImage("images.videoConcernButton", forState: .normal)
         commentButton.theme_setImage("images.videoCommentButton", forState: .normal)
