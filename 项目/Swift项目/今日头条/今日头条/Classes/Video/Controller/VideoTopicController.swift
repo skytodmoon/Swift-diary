@@ -41,6 +41,8 @@ class VideoTopicController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        RequestData()
         // Do any additional setup after loading the view.
     }
 
@@ -58,6 +60,38 @@ extension VideoTopicController {
         tableView.snp.makeConstraints { (make) in
             make.top.left.bottom.right.equalTo(view)
         }
+    }
+}
+
+
+extension VideoTopicController {
+    
+    fileprivate func RequestData() {
+        let header = RefreshHeder(refreshingBlock: { [weak self] in
+            NetworkTool.loadHomeCategoryNewsFeed(category: self!.videoTitle!.category!) { (nowTime, newsTopics) in
+                self!.tableView.mj_header.endRefreshing()
+                self!.newsTopics = newsTopics
+                self!.tableView.reloadData()
+            }
+        })
+        header?.isAutomaticallyChangeAlpha = true
+        header?.lastUpdatedTimeLabel.isHidden = true
+        tableView.mj_header = header
+        tableView.mj_header.beginRefreshing()
+        
+        tableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: { [weak self] in
+            NetworkTool.loadHomeCategoryNewsFeed(category: self!.videoTitle!.category!) { (nowTime, newsTopics) in
+                if newsTopics.count == 0 {
+                    SVProgressHUD.setForegroundColor(UIColor.white)
+                    SVProgressHUD.setBackgroundColor(UIColor(r: 0, g: 0, b: 0, alpha: 0.3))
+                    SVProgressHUD.showInfo(withStatus: "没有更多视频啦~")
+                    self!.tableView.mj_footer.endRefreshing()
+                    return
+                }
+                self!.newsTopics += newsTopics
+                self!.tableView.reloadData()
+            }
+        })
     }
 }
 
