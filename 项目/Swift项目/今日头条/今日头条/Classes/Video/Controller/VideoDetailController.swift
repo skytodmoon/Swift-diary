@@ -126,10 +126,7 @@ extension VideoDetailController {
         
         view.addSubview(commentTableView)
         
-        relateHeaderView.weitoutiao = videoTopic
-        relateTableView.tableHeaderView = relateHeaderView
-        commentTableView.tableHeaderView = commentHeaderBackView
-        
+        relateHeaderView.weitoutiao = videoTopic        
         commentHeaderBackView.addSubview(relateTableView)
         
         commentTableView.snp.makeConstraints { (make) in
