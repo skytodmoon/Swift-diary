@@ -12,7 +12,8 @@ import SwiftyJSON
 import SVProgressHUD
 
 protocol NetworkToolProtocol {
-    
+    /// 获取新闻详情相关新闻
+    static func loadNewsDetailRelateNews(fromCategory: String, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ relateNews: [WeiTouTiao], _ labels: [NewsDetailLabel], _ userLike: UserLike?, _ appInfo: NewsDetailAPPInfo?, _ filter_wrods: [WTTFilterWord]) -> ())
     /// 解析视频的真实链接
     static func parseVideoRealURL(video_id: String, completionHandler:@escaping (_ realVideo: RealVideo)->())
     /// 获取首页不同分类的新闻内容(和视频内容使用一个接口)
@@ -32,6 +33,89 @@ protocol NetworkToolProtocol {
 }
 
 class NetworkTool: NetworkToolProtocol {
+    
+    /// 获取新闻详情相关新闻
+    class func loadNewsDetailRelateNews(fromCategory: String, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ relateNews: [WeiTouTiao], _ labels: [NewsDetailLabel], _ userLike: UserLike?, _ appInfo: NewsDetailAPPInfo?, _ filter_wrods: [WTTFilterWord]) -> ()) {
+        let url = BASE_URL + "2/article/information/v21/?"
+        // version_code=6.2.6
+        let article_page = weitoutiao.has_video! ? 1 : 0
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+        let params = ["device_id": device_id,
+                      "version_code": version,
+                      "article_page": article_page,
+                      "aggr_type": weitoutiao.aggr_type!,
+                      "latitude": "",
+                      "longitude": "",
+                      "iid": IID,
+                      "item_id": weitoutiao.item_id!,
+                      "group_id": weitoutiao.group_id!,
+                      "device_platform": "iphone",
+                      "from_category": fromCategory] as [String : AnyObject]
+        
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                if let data = json["data"].dictionary {
+                    var relateNews = [WeiTouTiao]()
+                    var labels = [NewsDetailLabel]()
+                    var userLike: UserLike?
+                    var appInfo: NewsDetailAPPInfo?
+                    var filter_words = [WTTFilterWord]()
+                    if let relatedVideoToutiao = data["related_video_toutiao"] {
+                        for dict in relatedVideoToutiao.arrayObject! {
+                            let news = WeiTouTiao(dict: dict as! [String: AnyObject])
+                            relateNews.append(news)
+                        }
+                    } else if let ordered_info = data["ordered_info"] {
+                        // ordered_info 对应新闻详情顶部的 新闻类别按钮，新欢，不喜欢按钮，app 广告， 相关新闻
+                        // ordered_info是一个数组，数组内容不定，根据其中的 name 来判断对应的字典
+                        if ordered_info.count > 0 { // 说明 ordered_info 有数据
+                            for orderInfo in ordered_info.arrayObject! { // 遍历，根据 name 来判断
+                                let ordered = orderInfo as! [String: AnyObject]
+                                let name = ordered["name"]! as! String
+                                if name == "labels" { // 新闻相关类别,数组
+                                    if let orders = ordered["data"] as? [AnyObject] {
+                                        for dict in orders {
+                                            let label = NewsDetailLabel(dict: dict as! [String: AnyObject])
+                                            labels.append(label)
+                                        }
+                                    }
+                                } else if name == "like_and_rewards" { // 喜欢 / 不喜欢  字典
+                                    userLike = UserLike(dict: ordered["data"] as! [String: AnyObject])
+                                } else if name == "ad" { // 广告， 字典
+                                    let appData = ordered["data"] as! [String: AnyObject]
+                                    // 有两种情况，一种 app，一种 mixed
+                                    if let app = appData["app"] {
+                                        appInfo = NewsDetailAPPInfo(dict: app as! [String: AnyObject])
+                                    } else if let mixed = appData["mixed"] {
+                                        appInfo = NewsDetailAPPInfo(dict: mixed as! [String: AnyObject])
+                                    }
+                                } else if name == "related_news" { // 相关新闻  数组
+                                    if let orders = ordered["data"] as? [AnyObject] {
+                                        for dict in orders {
+                                            let relatenews = WeiTouTiao(dict: dict as! [String: AnyObject])
+                                            relateNews.append(relatenews)
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    if let filterWords = data["filter_words"]?.arrayObject {
+                        for item in filterWords {
+                            let filterWord = WTTFilterWord(dict: item as! [String: AnyObject])
+                            filter_words.append(filterWord)
+                        }
+                    }
+                    completionHandler(relateNews, labels, userLike, appInfo, filter_words)
+                }
+            }
+        }
+    }
     
     // 获取今日头条的视频真实链接可参考下面的博客
     // http://blog.csdn.net/dianliang01/article/details/73163086

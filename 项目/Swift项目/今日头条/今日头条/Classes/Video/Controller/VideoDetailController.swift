@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import MJRefresh
+import SnapKit
+import BMPlayer
+import NVActivityIndicatorView
+import SVProgressHUD
 
 class VideoDetailController: UIViewController {
+    
+    /// 播放器
+    fileprivate lazy var player = BMPlayer()
+    var changeButton = UIButton()
+    var playTimeDidChange:((TimeInterval, TimeInterval) -> Void)?
+    
+    var videoTopic: WeiTouTiao? {
+        didSet {
+            NetworkTool.loadNewsDetailRelateNews(fromCategory: "", weitoutiao: videoTopic!) { (relateNews, labels, userLike, appInfo, filter_wrods) in
+                self.relateNews = relateNews
+            }
+        }
+    }
+    
+    var offset: Int = 0
+    var realVideo: RealVideo?
+    
+    var relateNews = [WeiTouTiao]()
+    var comments = [NewsDetailImageComment]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground,  object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +49,20 @@ class VideoDetailController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension VideoDetailController {
+    
+    @objc func applicationWillEnterForeground() {
+        
     }
-    */
-
+    
+    @objc func applicationDidEnterBackground() {
+        player.pause(allowAutoPlay: false)
+    }
+    
+    /// 设置 UI
+    fileprivate func setupUI() {
+        view.backgroundColor = UIColor.orange
+    }
 }

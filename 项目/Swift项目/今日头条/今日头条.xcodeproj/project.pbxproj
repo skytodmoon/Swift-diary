@@ -60,6 +60,9 @@
 		5BB5FD731F7A54D9001AB0D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FD711F7A54D9001AB0D4 /* LaunchScreen.storyboard */; };
 		5BB5FD7E1F7A54D9001AB0D4 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD7D1F7A54D9001AB0D4 /* ____Tests.swift */; };
 		5BB5FD891F7A54D9001AB0D4 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */; };
+		5BD1FFE31F7DD85E00E6C0AE /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1FFE21F7DD85E00E6C0AE /* NewsDetail.swift */; };
+		5BD1FFE51F7DD87B00E6C0AE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1FFE41F7DD87B00E6C0AE /* Question.swift */; };
+		5BD1FFE71F7DD88500E6C0AE /* ConcernToutiaohao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD1FFE61F7DD88500E6C0AE /* ConcernToutiaohao.swift */; };
 		5BF051721F7CD8B7002C0AAD /* TheyUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF051711F7CD8B7002C0AAD /* TheyUse.swift */; };
 		67AC068C0F40AFF68BE8B098 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BCE8313DA270E7534A965C /* Pods_____.framework */; };
 /* End PBXBuildFile section */
@@ -145,6 +148,9 @@
 		5BB5FD841F7A54D9001AB0D4 /* 今日头条UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "今日头条UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB5FD881F7A54D9001AB0D4 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		5BB5FD8A1F7A54D9001AB0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD1FFE21F7DD85E00E6C0AE /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		5BD1FFE41F7DD87B00E6C0AE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5BD1FFE61F7DD88500E6C0AE /* ConcernToutiaohao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcernToutiaohao.swift; sourceTree = "<group>"; };
 		5BF051711F7CD8B7002C0AAD /* TheyUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheyUse.swift; sourceTree = "<group>"; };
 		98019CDD2F3E59BE3A0C27EF /* Pods-今日头条.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-今日头条.release.xcconfig"; path = "Pods/Target Support Files/Pods-今日头条/Pods-今日头条.release.xcconfig"; sourceTree = "<group>"; };
 		B6BCE8313DA270E7534A965C /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +197,9 @@
 			children = (
 				5B02CF731F7C885700C0546B /* TopicTitle.swift */,
 				5BF051711F7CD8B7002C0AAD /* TheyUse.swift */,
+				5BD1FFE21F7DD85E00E6C0AE /* NewsDetail.swift */,
+				5BD1FFE41F7DD87B00E6C0AE /* Question.swift */,
+				5BD1FFE61F7DD88500E6C0AE /* ConcernToutiaohao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -725,6 +734,7 @@
 				5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */,
 				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
 				5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */,
+				5BD1FFE31F7DD85E00E6C0AE /* NewsDetail.swift in Sources */,
 				5B02CF691F7C81BA00C0546B /* SettingViewController.swift in Sources */,
 				5B7742021F7B371000238A06 /* MyTheme.swift in Sources */,
 				5B9B421F1F7B985800C0AF91 /* NoLoginHeaderView.swift in Sources */,
@@ -734,6 +744,8 @@
 				5B9B421B1F7B981000C0AF91 /* VerticalButton.swift in Sources */,
 				5B7741F21F7B35BE00238A06 /* NetworkTool.swift in Sources */,
 				5B02CF791F7C88F400C0546B /* SettingCell.swift in Sources */,
+				5BD1FFE51F7DD87B00E6C0AE /* Question.swift in Sources */,
+				5BD1FFE71F7DD88500E6C0AE /* ConcernToutiaohao.swift in Sources */,
 				5B02CF741F7C885700C0546B /* TopicTitle.swift in Sources */,
 				5B7742191F7B389A00238A06 /* UIImage+Extension.swift in Sources */,
 				5B7741EA1F7B33C800238A06 /* WeiTouTiaoViewController.swift in Sources */,

@@ -106,4 +106,29 @@ extension VideoTopicController: UITableViewDelegate, UITableViewDataSource {
         cell.videoTopic = newsTopics[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let videoTopic = newsTopics[indexPath.row]
+        /// 获取视频的真实链接
+        NetworkTool.parseVideoRealURL(video_id: videoTopic.video_id!) { (realVideo) in
+            let videoDetailVC = VideoDetailController()
+            videoDetailVC.videoTopic = videoTopic
+            videoDetailVC.realVideo = realVideo
+            self.navigationController?.pushViewController(videoDetailVC, animated: true)
+            if self.player.isPlaying { // 说明有正在播放的视频
+                self.player.removeFromSuperview()
+            }
+        }
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if player.isPlaying { // 说明有正在播放的视频
+            let imageButton = player.superview
+            let contentView = imageButton?.superview
+            let cell = contentView?.superview as! VideoTopicCell
+            let rect = tableView.convert(cell.frame, to: view)
+            if (rect.origin.y <= -cell.height) || (rect.origin.y >= screenHeight - kTabBarHeight) {
+                player.pause()
+                player.removeFromSuperview()
+            }
+        }
+    }
 }
