@@ -12,6 +12,8 @@ import SwiftyJSON
 import SVProgressHUD
 
 protocol NetworkToolProtocol {
+    /// 获取新闻详情评论
+    static func loadNewsDetailComments(offset: Int, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ comments: [NewsDetailImageComment])->())
     /// 获取新闻详情相关新闻
     static func loadNewsDetailRelateNews(fromCategory: String, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ relateNews: [WeiTouTiao], _ labels: [NewsDetailLabel], _ userLike: UserLike?, _ appInfo: NewsDetailAPPInfo?, _ filter_wrods: [WTTFilterWord]) -> ())
     /// 解析视频的真实链接
@@ -33,6 +35,43 @@ protocol NetworkToolProtocol {
 }
 
 class NetworkTool: NetworkToolProtocol {
+    
+    
+    /// 获取新闻详情评论
+    class func loadNewsDetailComments(offset: Int, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ comments: [NewsDetailImageComment])->()) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let url = BASE_URL + "article/v2/tab_comments/?"
+        var item_id = ""
+        var group_id = ""
+        if let itemId = weitoutiao.item_id {
+            item_id = "\(itemId)"
+        }
+        if let groupId = weitoutiao.group_id {
+            group_id = "\(groupId)"
+        }
+        let params = ["offset": offset,
+                      "item_id": item_id,
+                      "group_id": group_id] as [String : AnyObject]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                if let data = json["data"].arrayObject {
+                    var comments = [NewsDetailImageComment]()
+                    for dict in data {
+                        let commentDict = dict as! [String: AnyObject]
+                        let comment = NewsDetailImageComment(dict: commentDict["comment"] as! [String : AnyObject])
+                        comments.append(comment)
+                        
+                    }
+                    completionHandler(comments)
+                }
+            }
+        }
+    }
     
     /// 获取新闻详情相关新闻
     class func loadNewsDetailRelateNews(fromCategory: String, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ relateNews: [WeiTouTiao], _ labels: [NewsDetailLabel], _ userLike: UserLike?, _ appInfo: NewsDetailAPPInfo?, _ filter_wrods: [WTTFilterWord]) -> ()) {
