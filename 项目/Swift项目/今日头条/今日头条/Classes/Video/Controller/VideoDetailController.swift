@@ -120,7 +120,7 @@ extension VideoDetailController {
     
     /// 设置 UI
     fileprivate func setupUI() {
-        view.backgroundColor = UIColor.orange
+        view.backgroundColor = UIColor.white
         // 设置播放器
         setupPlayerManager()
         
