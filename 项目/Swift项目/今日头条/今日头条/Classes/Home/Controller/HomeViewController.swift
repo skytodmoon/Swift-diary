@@ -26,8 +26,16 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = homeNavigationBar
         
         automaticallyAdjustsScrollViewInsets = false
+        
+        RequestData()
         // Do any additional setup after loading the view.
     }
+    
+    fileprivate lazy var pageView: HomePageView = {
+        let pageView = HomePageView()
+        pageView.backgroundColor = UIColor.orange
+        return pageView
+    }()
     
     // 自定义导航栏
     fileprivate lazy var homeNavigationBar: HomeNavigationBar = {
@@ -45,6 +53,48 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension HomeViewController {
+    
+    fileprivate func RequestData(){
+        
+        /// 获取标题数据
+        NetworkTool.loadHomeTitlesData(fromViewController: String(describing: HomeViewController.self)) { (topTitles, homeTopicVCs) in
+            // 将所有子控制器添加到父控制器中
+            for childVc in homeTopicVCs {
+                self.addChildViewController(childVc)
+            }
+            self.setupUI()
+            
+//            self.pageView.titles = topTitles
+//            self.pageView.childVcs = self.childViewControllers as? [TopicViewController]
+        }
+    }
+}
+
+extension HomeViewController {
+    
+    fileprivate func setupUI(){
+        
+        view.addSubview(pageView)
+        
+        pageView.snp.makeConstraints { (make) in
+            make.left.bottom.right.equalTo(view)
+            make.top.equalTo(view).offset(kNavBarHeight)
+        }
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(homeTitleAddButtonClicked(notification:)), name: NSNotification.Name(rawValue: "homeTitleAddButtonClicked"), object: nil)
+//
+//        /// 点击了加号按钮
+//        func homeTitleAddButtonClicked(notification: Notification) {
+//            print("点击了加号")
+//        }
+        
+        var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+    }
 }
 
 // MARK: - UITextFieldDelegate

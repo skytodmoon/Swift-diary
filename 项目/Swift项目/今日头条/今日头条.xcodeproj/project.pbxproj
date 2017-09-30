@@ -14,6 +14,8 @@
 		5B11DD841F7F34DE00902FEE /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD831F7F34DE00902FEE /* HomeNavigationBar.swift */; };
 		5B11DD861F7F350400902FEE /* HomeSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD851F7F350400902FEE /* HomeSearchBar.swift */; };
 		5B11DD881F7F358600902FEE /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD871F7F358600902FEE /* HomeSearchViewController.swift */; };
+		5B11DD8A1F7F3B0000902FEE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD891F7F3B0000902FEE /* TopicViewController.swift */; };
+		5B11DD8D1F7F3CAF00902FEE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */; };
 		5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */; };
 		5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */; };
 		5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DB1F7B328100238A06 /* MainTabBarController.swift */; };
@@ -103,6 +105,8 @@
 		5B11DD831F7F34DE00902FEE /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		5B11DD851F7F350400902FEE /* HomeSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBar.swift; sourceTree = "<group>"; };
 		5B11DD871F7F358600902FEE /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
+		5B11DD891F7F3B0000902FEE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,14 @@
 			path = NavigtionBar;
 			sourceTree = "<group>";
 		};
+		5B11DD8B1F7F3C9600902FEE /* HomePageView */ = {
+			isa = PBXGroup;
+			children = (
+				5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */,
+			);
+			path = HomePageView;
+			sourceTree = "<group>";
+		};
 		5B73BEB01F7B8C59003A81C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +309,7 @@
 			children = (
 				5B7741E11F7B32C300238A06 /* HomeViewController.swift */,
 				5B11DD871F7F358600902FEE /* HomeSearchViewController.swift */,
+				5B11DD891F7F3B0000902FEE /* TopicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -525,6 +538,7 @@
 		5BD1FFF01F7DDF5500E6C0AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B11DD8B1F7F3C9600902FEE /* HomePageView */,
 				5B11DD821F7F34B000902FEE /* NavigtionBar */,
 				5BD1FFF11F7DDF5C00E6C0AE /* NewsDetailImageCell */,
 			);
@@ -795,6 +809,7 @@
 				5B9B421F1F7B985800C0AF91 /* NoLoginHeaderView.swift in Sources */,
 				5B11DD881F7F358600902FEE /* HomeSearchViewController.swift in Sources */,
 				5B8034071F7CC9AE00C38795 /* NewsTopic.swift in Sources */,
+				5B11DD8A1F7F3B0000902FEE /* TopicViewController.swift in Sources */,
 				5BF051721F7CD8B7002C0AAD /* TheyUse.swift in Sources */,
 				5B8033FD1F7CC55000C38795 /* MyConcernController.swift in Sources */,
 				5B9B421B1F7B981000C0AF91 /* VerticalButton.swift in Sources */,
@@ -818,6 +833,7 @@
 				5B8034041F7CC71200C38795 /* WeiTouTiao.swift in Sources */,
 				5B8034001F7CC5E500C38795 /* AllConcernsCell.swift in Sources */,
 				5B7741E61F7B33AD00238A06 /* VideoViewController.swift in Sources */,
+				5B11DD8D1F7F3CAF00902FEE /* HomePageView.swift in Sources */,
 				5B7742111F7B383400238A06 /* NSData+CRC32.m in Sources */,
 				5B7742131F7B386800238A06 /* UIColor+Extension.swift in Sources */,
 				5B11DD861F7F350400902FEE /* HomeSearchBar.swift in Sources */,
