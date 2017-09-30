@@ -16,6 +16,9 @@
 		5B11DD881F7F358600902FEE /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD871F7F358600902FEE /* HomeSearchViewController.swift */; };
 		5B11DD8A1F7F3B0000902FEE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD891F7F3B0000902FEE /* TopicViewController.swift */; };
 		5B11DD8D1F7F3CAF00902FEE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */; };
+		5B5F6FAC1F7F9603001E9F1D /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F6FAB1F7F9603001E9F1D /* HomeTitleView.swift */; };
+		5B5F6FB01F7F9674001E9F1D /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F6FAE1F7F9674001E9F1D /* HomeCollectionViewCell.swift */; };
+		5B5F6FB11F7F9674001E9F1D /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5F6FAF1F7F9674001E9F1D /* HomeCollectionViewCell.xib */; };
 		5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */; };
 		5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */; };
 		5B7741DC1F7B328100238A06 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7741DB1F7B328100238A06 /* MainTabBarController.swift */; };
@@ -107,6 +110,9 @@
 		5B11DD871F7F358600902FEE /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
 		5B11DD891F7F3B0000902FEE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		5B5F6FAB1F7F9603001E9F1D /* HomeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
+		5B5F6FAE1F7F9674001E9F1D /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B5F6FAF1F7F9674001E9F1D /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B73BEB41F7B8C81003A81C0 /* MineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		5B73BEB61F7B8C8D003A81C0 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		5B7741DB1F7B328100238A06 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -250,8 +256,18 @@
 			isa = PBXGroup;
 			children = (
 				5B11DD8C1F7F3CAF00902FEE /* HomePageView.swift */,
+				5B5F6FAB1F7F9603001E9F1D /* HomeTitleView.swift */,
 			);
 			path = HomePageView;
+			sourceTree = "<group>";
+		};
+		5B5F6FAD1F7F965A001E9F1D /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F6FAE1F7F9674001E9F1D /* HomeCollectionViewCell.swift */,
+				5B5F6FAF1F7F9674001E9F1D /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		5B73BEB01F7B8C59003A81C0 /* Model */ = {
@@ -538,6 +554,7 @@
 		5BD1FFF01F7DDF5500E6C0AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B5F6FAD1F7F965A001E9F1D /* HomeCollectionViewCell */,
 				5B11DD8B1F7F3C9600902FEE /* HomePageView */,
 				5B11DD821F7F34B000902FEE /* NavigtionBar */,
 				5BD1FFF11F7DDF5C00E6C0AE /* NewsDetailImageCell */,
@@ -699,6 +716,7 @@
 				5B7741FE1F7B367500238A06 /* jsCode2Html.html in Resources */,
 				5BD1FFEB1F7DDEB800E6C0AE /* RelateVideoNewsCell.xib in Resources */,
 				5B7741FF1F7B367500238A06 /* news.css in Resources */,
+				5B5F6FB11F7F9674001E9F1D /* HomeCollectionViewCell.xib in Resources */,
 				5B9B421E1F7B985800C0AF91 /* NoLoginHeaderView.xib in Resources */,
 				5B7741F91F7B365600238A06 /* night_theme.plist in Resources */,
 				5BB5FD6E1F7A54D9001AB0D4 /* Main.storyboard in Resources */,
@@ -799,6 +817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5F6FB01F7F9674001E9F1D /* HomeCollectionViewCell.swift in Sources */,
 				5B73BEB71F7B8C8D003A81C0 /* SettingModel.swift in Sources */,
 				5B7741E21F7B32C300238A06 /* HomeViewController.swift in Sources */,
 				5B73BEB51F7B8C81003A81C0 /* MineCellModel.swift in Sources */,
@@ -819,6 +838,7 @@
 				5BD1FFE51F7DD87B00E6C0AE /* Question.swift in Sources */,
 				5BD1FFE71F7DD88500E6C0AE /* ConcernToutiaohao.swift in Sources */,
 				5B02CF741F7C885700C0546B /* TopicTitle.swift in Sources */,
+				5B5F6FAC1F7F9603001E9F1D /* HomeTitleView.swift in Sources */,
 				5BD1FFED1F7DDECA00E6C0AE /* RelateHeaderView.swift in Sources */,
 				5B7742191F7B389A00238A06 /* UIImage+Extension.swift in Sources */,
 				5B7741EA1F7B33C800238A06 /* WeiTouTiaoViewController.swift in Sources */,

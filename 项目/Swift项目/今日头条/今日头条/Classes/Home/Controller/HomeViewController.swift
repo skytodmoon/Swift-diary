@@ -33,7 +33,6 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var pageView: HomePageView = {
         let pageView = HomePageView()
-        pageView.backgroundColor = UIColor.orange
         return pageView
     }()
     
@@ -67,8 +66,8 @@ extension HomeViewController {
             }
             self.setupUI()
             
-//            self.pageView.titles = topTitles
-//            self.pageView.childVcs = self.childViewControllers as? [TopicViewController]
+            self.pageView.titles = topTitles
+            self.pageView.childVcs = self.childViewControllers as? [TopicViewController]
         }
     }
 }
@@ -81,9 +80,9 @@ extension HomeViewController {
         
         pageView.snp.makeConstraints { (make) in
             make.left.bottom.right.equalTo(view)
-            make.top.equalTo(view).offset(kNavBarHeight)
+            make.top.equalTo(view).offset(88)
         }
-//
+
 //        NotificationCenter.default.addObserver(self, selector: #selector(homeTitleAddButtonClicked(notification:)), name: NSNotification.Name(rawValue: "homeTitleAddButtonClicked"), object: nil)
 //
 //        /// 点击了加号按钮
