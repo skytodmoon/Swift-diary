@@ -48,12 +48,37 @@ let multiplier = 3
 let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 
 
-//Unicode
+//Unicode标量
 
 let wiseWords = "\"Imagination is more important than knowlegdge\" - Einstein"
 let dellarSign = "\u{24}"
 let blackHeart = "\u{2665}"
 let sparkLingHeart = "\u{1F496}"
 
+
+//计算字符串数量
+
+let unsualMenagrie = "Koala ?, Snail ?, Penguin ?, Dromedary ?"
+print("unsualMenagrie has \(unsualMenagrie.characters.count) characters ")
+
+var word = "cafe"
+print("the number of characters in \(word) is \(word.characters.count)")
+word += "\u{301}"
+print("the number of characters in \(word) is \(word.characters.count)")
+
+//字符串索引
+let greeting = "Guten Tag"
+greeting[greeting.startIndex]
+
+for index in greeting.characters.indices{
+    print("\(greeting[index])")
+}
+
+//插入
+var Welcome = "hello"
+Welcome.insert("!", at: Welcome.endIndex)
+Welcome.insert(contentsOf: "there".characters, at: Welcome.endIndex)
+
+//字符串/字符相等
 
 
