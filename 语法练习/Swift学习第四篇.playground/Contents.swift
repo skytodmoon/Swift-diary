@@ -101,4 +101,79 @@ print("square.origin is now at (\(square.origin.x),\(square.origin.y))")
 //}
 
 //只读计算属性
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+print("The volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
+
+//属性观察器
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps){
+            print("About to set totalSteps to \(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("Added \(totalSteps - oldValue) steps")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+// About to set totalSteps to 200
+// Added 200 steps
+stepCounter.totalSteps = 360
+// About to set totalSteps to 360
+// Added 160 steps
+stepCounter.totalSteps = 896
+// About to set totalSteps to 896
+// Added 536 steps
+
+
+//类型属性语法
+struct SomeStructure {
+    static var storedTyoeProperty = "Some value"
+    static var computedTypeProperty : Int {
+        return 1
+    }
+}
+
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty : Int {
+        return 6
+    }
+}
+
+class SomeClass {
+    static var storedTypeProperty = "Some value"
+    static var computedTypeProperty : Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+//获取和设置类型属性的值
+print(SomeStructure.storedTyoeProperty)
+
+SomeStructure.storedTyoeProperty = "Another value"
+
+print(SomeStructure.storedTyoeProperty)
+
+print(SomeEnumeration.computedTypeProperty)
+
+print(SomeClass.computedTypeProperty)
+
+
+
+
+
 
