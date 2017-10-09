@@ -102,3 +102,29 @@ if turnipsAreDelicious {
 //元祖
 //http404Error 类型是(Int,String),值是(404, "Not Found")
 let http404Error = (404, "Not Found")
+
+let (statusCode, statusMessage) = http404Error
+print("The status code is \(statusCode)")
+print("The status messgae is \(statusMessage)")
+
+let (justTheStatusCode, _) = http404Error
+print("The status code is \(justTheStatusCode)")
+print("The status code is \(http404Error.0)")
+print("The status message is \(http404Error.1)")
+
+let http200Status = (statusCode : 200, description: "OK")
+print("The status code is \(http200Status.statusCode)")
+print("The status message is \(http200Status.description)")
+
+
+//可选类型
+//serverResponseCode 包含一个可选的Int值404
+var serverResponseCode : Int? = 404
+serverResponseCode = nil
+//serverResponseCode现在不包含值
+
+//错误处理
+func makeASandwich() throws {
+    
+}
+
