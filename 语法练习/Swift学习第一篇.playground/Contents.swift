@@ -49,5 +49,56 @@ let minValue = UInt8.min
 //maxValue 为 255，是UInt8 类型
 let maxValue = UInt8.max
 
+//类型安全和类型推断
+//meaningOfLife 会被推测为Int类型
+let meaningOfLife = 42
+//pi会被推断为Double 类型
+let pi = 3.1312
+//anotherPi会被推测为Double类型
+let anotherPi = 3 + 0.14159
+
+//数值类型字面量
+let decimalInterger = 17
+let binaryInterger = 0b10001
+let octalInterger = 0o21
+let hexadecimalInterger = 0x11
+
+let decimalDouble = 12.1875
+let exponentDouble = 1.21875e1
+let hexadecimalDouble = 0xC.3p0
+
+//类型转换
+//UInt8 类型不能储存负数，会报错
+//let cannotBeNegative: UInt8 = -1
+//Int8 类型不能储存超过最大值的数，所以会报错
+//let tooBig: Int8 = Int8.max + 1
+
+//整数和浮点数转换
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let PI = Double(three) + pointOneFourOneFiveNine
+
+let intergerPi = Int(PI)
+//intergerPi d等于3 所以推测为Int类型
+
+//类型别名
+typealias AudioSample = UInt16
+
+var maxAmplitudeFound = AudioSample.min
+//maxAmplitudeFound 现在是0
+
+//布尔值
+
+let orangesAreOrange = true
+let turnipsAreDelicious = false
+
+if turnipsAreDelicious {
+    print("Mmm, tasty turnips!")
+}else{
+    print("Eww,turnips are horrible")
+}
 
 
+//元祖
+//http404Error 类型是(Int,String),值是(404, "Not Found")
+let http404Error = (404, "Not Found")
