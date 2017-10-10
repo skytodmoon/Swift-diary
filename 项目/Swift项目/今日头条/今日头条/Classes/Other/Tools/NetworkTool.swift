@@ -5,7 +5,6 @@
 //  Created by 金亮齐 on 2017/9/27.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
-
 import UIKit
 import Alamofire
 import SwiftyJSON
@@ -15,19 +14,36 @@ protocol NetworkToolProtocol {
     /// -------------------------- 首 页 home -------------------------
     /// 获取首页顶部标题内容
     static func loadHomeTitlesData(fromViewController: String, completionHandler:@escaping (_ topTitles: [TopicTitle], _ homeTopicVCs: [TopicViewController])->())
+    /// 获取首页顶部标题内容
+    static func loadHomeTitlesData(completionHandler:@escaping (_ topTitles: [TopicTitle])->())
+    /// 点击首页加号按钮，获取频道推荐数据
+    static func loadHomeCategoryRecommend(completionHandler:@escaping (_ topTitles: [TopicTitle]) -> ())
+    /// 搜索
+    static func loadSearchResult(keyword: String, offset: Int, completionHandler:@escaping (_ weitoutiao: [WeiTouTiao]) -> ())
+    /// 获取首页不同分类的新闻内容(和视频内容使用一个接口)
+    static func loadHomeCategoryNewsFeed(category: String, completionHandler:@escaping (_ nowTime: TimeInterval,_ newsTopics: [WeiTouTiao])->())
+    /// 获取一般新闻详情数据
+    static func loadCommenNewsDetail(articleURL: String, completionHandler:@escaping (_ htmlString: String, _ images: [NewsDetailImage], _ abstracts: [String])->())
+    /// 获取图片新闻详情数据
+    static func loadNewsDetail(articleURL: String, completionHandler:@escaping (_ images: [NewsDetailImage], _ abstracts: [String])->())
+    /// 获取图片新闻详情评论
+    static func loadNewsDetailImageComments(offset: Int, item_id: Int, group_id: Int, completionHandler:@escaping (_ comments: [NewsDetailImageComment])->())
     /// 获取新闻详情评论
     static func loadNewsDetailComments(offset: Int, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ comments: [NewsDetailImageComment])->())
     /// 获取新闻详情相关新闻
     static func loadNewsDetailRelateNews(fromCategory: String, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ relateNews: [WeiTouTiao], _ labels: [NewsDetailLabel], _ userLike: UserLike?, _ appInfo: NewsDetailAPPInfo?, _ filter_wrods: [WTTFilterWord]) -> ())
     /// 解析视频的真实链接
     static func parseVideoRealURL(video_id: String, completionHandler:@escaping (_ realVideo: RealVideo)->())
-    /// 获取首页不同分类的新闻内容(和视频内容使用一个接口)
-    static func loadHomeCategoryNewsFeed(category: String, completionHandler:@escaping (_ nowTime: TimeInterval,_ newsTopics: [WeiTouTiao])->())
-
+    /// 获取头条号 关注
+    static func loadEntryList(completionHandler:@escaping (_ concerns: [ConcernToutiaohao])->())
+    /// 悟空问答
+    static func loadQuestionAnswerList(topicTitle: TopicTitle, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ questionAnswer: QuestionAnswer)->())
     /// -------------------------- 视 频 video --------------------------
     /// 获取视频顶部标题内容
     static func loadVideoTitlesData(completionHandler:@escaping (_ videoTitles: [TopicTitle], _ videoTopicVCs: [VideoTopicController])->())
-    
+    // --------------------------  微  头  条  --------------------------
+    /// 获取微头条数据
+    static func loadWeiTouTiaoData(completionHandler: @escaping (_ weitoutiaos: [WeiTouTiao]) -> ())
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     static func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->())
@@ -73,6 +89,265 @@ class NetworkTool: NetworkToolProtocol {
                         homeTopicVCs.append(homeTopicVC)
                     }
                     completionHandler(titles, homeTopicVCs)
+                }
+            }
+        }
+    }
+    /// 获取首页顶部标题内容
+    class func loadHomeTitlesData(completionHandler:@escaping (_ topTitles: [TopicTitle])->()) {
+        let url = BASE_URL + "article/category/get_subscribed/v1/?"
+        let params = ["device_id": device_id,
+                      "aid": 13,
+                      "iid": IID] as [String : AnyObject]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                let dataDict = json["data"].dictionary
+                if let data = dataDict!["data"]!.arrayObject {
+                    var titles = [TopicTitle]()
+                    // 添加推荐标题
+                    let recommendDict = ["category": "", "name": "推荐"]
+                    let recommend = TopicTitle(dict: recommendDict as [String : AnyObject])
+                    titles.append(recommend)
+                    for dict in data {
+                        let topicTitle = TopicTitle(dict: dict as! [String: AnyObject])
+                        titles.append(topicTitle)
+                        let homeTopicVC = TopicViewController()
+                        homeTopicVC.topicTitle = topicTitle
+                    }
+                    completionHandler(titles)
+                }
+            }
+        }
+    }
+    
+    /// 点击首页加号按钮，获取频道推荐数据
+    class func loadHomeCategoryRecommend(completionHandler:@escaping (_ topTitles: [TopicTitle]) -> ()) {
+        SVProgressHUD.show(withStatus: "正在加载...")
+        SVProgressHUD.setBackgroundColor(UIColor(r: 0, g: 0, b: 0, alpha: 0.5))
+        SVProgressHUD.setForegroundColor(UIColor.white)
+        let url = BASE_URL + "article/category/get_extra/v1/?"
+        let params = ["device_id": device_id]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            SVProgressHUD.dismiss()
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                let dataDict = json["data"].dictionary
+                if let data = dataDict!["data"]!.arrayObject {
+                    var titles = [TopicTitle]()
+                    for dict in data {
+                        let topicTitle = TopicTitle(dict: dict as! [String: AnyObject])
+                        titles.append(topicTitle)
+                    }
+                    completionHandler(titles)
+                }
+            }
+        }
+    }
+    
+    /// 搜索
+    class func loadSearchResult(keyword: String, offset: Int, completionHandler:@escaping (_ weitoutiao: [WeiTouTiao]) -> ()) {
+        let url = BASE_URL + "api/2/wap/search_content/?"
+        let params = ["device_id": device_id,
+                      "keyword": keyword,
+                      "from": "search_tab",
+                      "count": "10",
+                      "cur_tab": "1",
+                      "format": "json",
+                      "offset": offset,
+                      "search_text": keyword] as [String: AnyObject]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                if let data = json["data"].arrayObject {
+                    var weitoutiaos = [WeiTouTiao]()
+                    for dict in data {
+                        let weitoutiao = WeiTouTiao(dict: dict as! [String: AnyObject])
+                        weitoutiaos.append(weitoutiao)
+                    }
+                    completionHandler(weitoutiaos)
+                }
+            }
+        }
+    }
+    
+    /// 获取首页不同分类的新闻内容(和视频内容使用一个接口)
+    class func loadHomeCategoryNewsFeed(category: String, completionHandler:@escaping (_ nowTime: TimeInterval,_ newsTopics: [WeiTouTiao])->()) {
+        let url = BASE_URL + "api/news/feed/v58/?"
+        let params = ["device_id": device_id,
+                      "category": category,
+                      "iid": IID,
+                      "device_platform": "iphone",
+                      "version_code": versionCode]
+        
+        let nowTime = NSDate().timeIntervalSince1970
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            print(url)
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard let dataJSONs = json["data"].array else {
+                    return
+                }
+                var topics = [WeiTouTiao]()
+                for data in dataJSONs {
+                    if let content = data["content"].string {
+                        let contentData: NSData = content.data(using: String.Encoding.utf8)! as NSData
+                        do {
+                            let dict = try JSONSerialization.jsonObject(with: contentData as Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+                            let topic = WeiTouTiao(dict: dict as! [String : AnyObject])
+                            topics.append(topic)
+                            print(dict)
+                            print("-----------------------------")
+                        } catch {
+                            
+                        }
+                    }
+                }
+                completionHandler(nowTime, topics)
+            }
+        }
+    }
+    
+    /// 获取一般新闻详情数据
+    class func loadCommenNewsDetail(articleURL: String, completionHandler:@escaping (_ htmlString: String, _ images: [NewsDetailImage], _ abstracts: [String])->()) {
+        // 测试数据
+        Alamofire.request(articleURL).responseString { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                var images = [NewsDetailImage]()
+                var abstracts = [String]()
+                var htmlString = String()
+                if value.contains("BASE_DATA.galleryInfo =") { // 则是图文详情
+                    // 获取 图片链接数组
+                    let startIndex = value.range(of: "\"sub_images\":")!.upperBound
+                    let endIndex = value.range(of: ",\"max_img_width\"")!.lowerBound
+                    let range = Range(uncheckedBounds: (lower: startIndex, upper: endIndex))
+                    let BASE_DATA = value.substring(with: range)
+                    let data = BASE_DATA.data(using: String.Encoding.utf8)! as Data
+                    let dict = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [AnyObject]
+                    for image in dict! {
+                        let img = NewsDetailImage(dict: image as! [String: AnyObject])
+                        images.append(img)
+                    }
+                    // 获取 子标题
+                    let titleStartIndex = value.range(of: "\"sub_abstracts\":")!.upperBound
+                    let titlEndIndex = value.range(of: ",\"sub_titles\"")!.lowerBound
+                    let titleRange = Range(uncheckedBounds: (lower: titleStartIndex, upper: titlEndIndex))
+                    let sub_abstracts = value.substring(with: titleRange)
+                    let titleData = sub_abstracts.data(using: String.Encoding.utf8)! as Data
+                    let subAbstracts = try? JSONSerialization.jsonObject(with: titleData, options: .mutableContainers) as! [String]
+                    for string in subAbstracts! {
+                        abstracts.append(string)
+                    }
+                } else if value.contains("articleInfo: ") { // 一般的新闻
+                    // 获取 新闻内容
+                    let startIndex = value.range(of: "content: '")!.upperBound
+                    let endIndex = value.range(of: "'.replace")!.lowerBound
+                    let range = Range(uncheckedBounds: (lower: startIndex, upper: endIndex))
+                    let content = value.substring(with: range)
+                    let contentDecode = NetworkTool.htmlDecode(content: content)
+                    let path = Bundle.main.path(forResource: "news_detail_1", ofType: "html")
+                    let html = try! String(contentsOfFile: path!)
+                    // 替换本地 html 里 content 的内容，新闻内容格式可参考 jsCode2Html.html
+                    htmlString = html.replacingOccurrences(of: "新闻内容", with: contentDecode)
+                    // 加载 css文件
+                    htmlString.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"news.css\" />\n ")
+                } else { // 第三方的新闻内容
+                    /// 这部分显示还有问题
+                    htmlString = value
+                }
+                completionHandler(htmlString, images, abstracts)
+            }
+        }
+    }
+    /// 转义字符
+    class func htmlDecode(content: String) -> String {
+        var s = String()
+        s = content.replacingOccurrences(of: "&amp;", with: "&")
+        s = s.replacingOccurrences(of: "&lt;", with: "<")
+        s = s.replacingOccurrences(of: "&gt;", with: ">")
+        s = s.replacingOccurrences(of: "&nbsp;", with: " ")
+        s = s.replacingOccurrences(of: "&#39;", with: "\'")
+        s = s.replacingOccurrences(of: "&quot;", with: "\"")
+        s = s.replacingOccurrences(of: "<br>", with: "\n")
+        return s
+    }
+    
+    /// 获取图片新闻详情数据
+    class func loadNewsDetail(articleURL: String, completionHandler:@escaping (_ images: [NewsDetailImage], _ abstracts: [String])->()) {
+        // 测试数据
+        //        http://toutiao.com/item/6450211121520443918/
+        let url = "http://www.toutiao.com/a6450237670911852814/#p=1"
+        
+        Alamofire.request(url).responseString { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                if value.contains("BASE_DATA.galleryInfo =") {
+                    // 获取 图片链接数组
+                    let startIndex = value.range(of: "\"sub_images\":")!.upperBound
+                    let endIndex = value.range(of: ",\"max_img_width\"")!.lowerBound
+                    let range = Range(uncheckedBounds: (lower: startIndex, upper: endIndex))
+                    let BASE_DATA = value.substring(with: range)
+                    let data = BASE_DATA.data(using: String.Encoding.utf8)! as Data
+                    let dict = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [AnyObject]
+                    var images = [NewsDetailImage]()
+                    for image in dict! {
+                        let img = NewsDetailImage(dict: image as! [String: AnyObject])
+                        images.append(img)
+                    }
+                    // 获取 子标题
+                    let titleStartIndex = value.range(of: "\"sub_abstracts\":")!.upperBound
+                    let titlEndIndex = value.range(of: ",\"sub_titles\"")!.lowerBound
+                    let titleRange = Range(uncheckedBounds: (lower: titleStartIndex, upper: titlEndIndex))
+                    let sub_abstracts = value.substring(with: titleRange)
+                    let titleData = sub_abstracts.data(using: String.Encoding.utf8)! as Data
+                    let subAbstracts = try? JSONSerialization.jsonObject(with: titleData, options: .mutableContainers) as! [String]
+                    var abstracts = [String]()
+                    for string in subAbstracts! {
+                        abstracts.append(string)
+                    }
+                    completionHandler(images, abstracts)
+                }
+            }
+        }
+    }
+    
+    /// 获取图片新闻详情评论
+    class func loadNewsDetailImageComments(offset: Int, item_id: Int, group_id: Int, completionHandler:@escaping (_ comments: [NewsDetailImageComment])->()) {
+        let url = BASE_URL + "article/v2/tab_comments/?"
+        let params = ["offset": offset,
+                      "item_id": item_id,
+                      "group_id": group_id] as [String : AnyObject]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                if let data = json["data"].arrayObject {
+                    var comments = [NewsDetailImageComment]()
+                    for dict in data {
+                        let commentDict = dict as! [String: AnyObject]
+                        let comment = NewsDetailImageComment(dict: commentDict["comment"] as! [String : AnyObject])
+                        comments.append(comment)
+                    }
+                    completionHandler(comments)
                 }
             }
         }
@@ -223,41 +498,40 @@ class NetworkTool: NetworkToolProtocol {
         }
     }
     
-    /// 获取首页不同分类的新闻内容(和视频内容使用一个接口)
-    class func loadHomeCategoryNewsFeed(category: String, completionHandler:@escaping (_ nowTime: TimeInterval,_ newsTopics: [WeiTouTiao])->()) {
-        let url = BASE_URL + "api/news/feed/v58/?"
+    /// 获取头条号 关注
+    class func loadEntryList(completionHandler:@escaping (_ concerns: [ConcernToutiaohao])->()) {
+        let url = BASE_URL + "entry/list/v1/?"
         let params = ["device_id": device_id,
-                      "category": category,
-                      "iid": IID,
-                      "device_platform": "iphone",
-                      "version_code": versionCode]
-        
-        let nowTime = NSDate().timeIntervalSince1970
+                      "iid": IID]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
-            print(url)
             guard response.result.isSuccess else {
                 return
             }
             if let value = response.result.value {
                 let json = JSON(value)
-                guard let dataJSONs = json["data"].array else {
-                    return
-                }
-                var topics = [WeiTouTiao]()
-                for data in dataJSONs {
-                    if let content = data["content"].string {
-                        let contentData: NSData = content.data(using: String.Encoding.utf8)! as NSData
-                        do {
-                            let dict = try JSONSerialization.jsonObject(with: contentData as Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-                            let topic = WeiTouTiao(dict: dict as! [String : AnyObject])
-                            topics.append(topic)
-                            print(dict)
-                        } catch {
-                            
-                        }
+                if let data = json["data"].arrayObject {
+                    var concerns = [ConcernToutiaohao]()
+                    for item in data {
+                        let concern = ConcernToutiaohao(dict: item as! [String : AnyObject])
+                        concerns.append(concern)
                     }
+                    completionHandler(concerns)
                 }
-                completionHandler(nowTime, topics)
+            }
+        }
+    }
+    
+    /// 悟空问答
+    class func loadQuestionAnswerList(topicTitle: TopicTitle, weitoutiao: WeiTouTiao, completionHandler:@escaping (_ questionAnswer: QuestionAnswer)->()) {
+        let url = BASE_URL + "wenda/v1/question/brow/"
+        Alamofire.request(url, method: .post, parameters: weitoutiao.params!).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                let question = QuestionAnswer(dict: json.dictionaryObject! as [String : AnyObject])
+                completionHandler(question)
             }
         }
     }
@@ -270,7 +544,6 @@ class NetworkTool: NetworkToolProtocol {
         let params = ["device_id": device_id,
                       "iid": IID]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
-            print(url)
             guard response.result.isSuccess else {
                 return
             }
@@ -300,13 +573,104 @@ class NetworkTool: NetworkToolProtocol {
         }
     }
     
+    // --------------------------  微  头  条  --------------------------
+    
+    /// 获取微头条数据
+    class func loadWeiTouTiaoData(completionHandler: @escaping (_ weitoutiaos: [WeiTouTiao]) -> ()) {
+        let url = BASE_URL + "api/news/feed/v54/?"
+        let params = ["iid": IID,
+                      "category": "weitoutiao",
+                      "count": 20,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let dataJSONs = json["data"].array else {
+                    return
+                }
+                var weitoutiaos = [WeiTouTiao]()
+                for dataJSON in dataJSONs {
+                    if let content = dataJSON["content"].string {
+                        let data = content.data(using: String.Encoding.utf8)! as Data
+                        let dict = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                        let weitoutiao = WeiTouTiao(dict: dict as! [String : AnyObject])
+                        weitoutiaos.append(weitoutiao)
+                    }
+                }
+                completionHandler(weitoutiaos)
+            }
+        }
+    }
+    
+    /// 点击了关注按钮
+    class func loadFollowInfo(user_id: Int, completionHandler: @escaping (_ isFllowing: Bool)->()) {
+        let url = BASE_URL + "2/relation/follow/v2/?"
+        let params = ["iid": IID,
+                      "user_id": user_id,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let data = json["data"].dictionary else {
+                    return
+                }
+                guard data["description"]?.string == "关注成功" else {
+                    return
+                }
+                if let user = data["user"]?.dictionaryObject {
+                    let user_info = WTTUser(dict: user as [String : AnyObject])
+                    completionHandler(user_info.is_following!)
+                }
+            }
+        }
+        
+    }
+    
+    /// 点击了取消关注按钮
+    class func loadUnfollowInfo(user_id: Int, completionHandler: @escaping (_ isFllowing: Bool)->()) {
+        let url = BASE_URL + "/2/relation/unfollow/?"
+        let params = ["iid": IID,
+                      "user_id": user_id,
+                      "device_id": device_id] as [String : Any]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"].string == "success" else {
+                    return
+                }
+                guard let data = json["data"].dictionary else {
+                    return
+                }
+                if let user = data["user"]?.dictionaryObject {
+                    let user_info = WTTUser(dict: user as [String : AnyObject])
+                    completionHandler(user_info.is_following!)
+                }
+            }
+        }
+        
+    }
+    
     // --------------------------------- 我的 mine  ---------------------------------
     /// 我的界面 cell 数据
     class func loadMineCellData(completionHandler: @escaping (_ sectionsArray: [AnyObject])->()) {
         let url = BASE_URL + "user/tab/tabs/?"
         let params = ["iid": IID]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
-            print(url)
             guard response.result.isSuccess else {
                 return
             }
@@ -338,7 +702,6 @@ class NetworkTool: NetworkToolProtocol {
         let url = BASE_URL + "concern/v2/follow/my_follow/?"
         let params = ["device_id": device_id]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
-            print(url)
             guard response.result.isSuccess else {
                 return
             }
@@ -365,7 +728,6 @@ class NetworkTool: NetworkToolProtocol {
         let url = BASE_URL + "user/profile/homepage/v3/?"
         let params = ["user_id": userId] as [String : Any]
         Alamofire.request(url, parameters: params).responseJSON { (response) in
-            print(url)
             guard response.result.isSuccess else {
                 return
             }
@@ -380,4 +742,3 @@ class NetworkTool: NetworkToolProtocol {
         }
     }
 }
-

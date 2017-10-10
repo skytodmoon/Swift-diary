@@ -184,12 +184,20 @@ class DiceGameTracker: DiceGameDelegate {
     }
     
     func game(game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+        numberOfTurns + 1
         print("Rolled a \(diceRoll)")
     }
     func gameDidEnd(game: DiceGame) {
         print("The game lasted for \(numberOfTurns) turns")
     }
 }
+
+let tracker = DiceGameTracker()
+let game = SnakesAndLadders()
+
+//在扩展中添加协议成员
+
+
 
 
 
