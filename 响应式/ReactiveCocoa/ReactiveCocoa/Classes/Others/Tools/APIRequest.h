@@ -10,4 +10,11 @@
 
 @interface APIRequest : NSObject
 
++ (instancetype)sharedManager;
+
+/// 首页专题列表
+- (void)requestSpecialListFinishBlock:(void (^)(id data, NSError *error))finishBlock;
+/// 作者列表
+- (void)requestAuthorListFinishBlock:(void (^)(id data, NSError *error))finishBlock;
+
 @end
