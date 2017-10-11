@@ -10,4 +10,33 @@
 
 @implementation FFNavController
 
+-(void)viewDidLoad {
+    
+    [super viewDidLoad];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:FONT_SIZE_16],NSForegroundColorAttributeName:[UIColor darkGrayColor]}];
+    self.navigationBar.barTintColor = kNavBarTintColor;
+}
+
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self setBackItem:viewController];
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
+-(void)setBackItem:(UIViewController *)vc {
+    self.interactivePopGestureRecognizer.delegate = nil;
+    UIBarButtonItem *back = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(s_backAction)];
+    vc.navigationItem.leftBarButtonItem = back;
+}
+
+-(void)s_backAction {
+    if (self.presentingViewController != nil) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }else{
+        [self popViewControllerAnimated:YES];
+    }
+}
+
 @end
