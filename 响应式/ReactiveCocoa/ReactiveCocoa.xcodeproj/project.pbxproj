@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1EED469FF4E46990E9505962 /* Pods_ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F899D5D4460F39BD21F6B61 /* Pods_ReactiveCocoa.framework */; };
+		5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C48A1F8DAB7000A0C0DB /* FFTabBarController.m */; };
+		5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4921F8DAC7600A0C0DB /* UIViewController+ViewModel.m */; };
+		5B35C49A1F8DAD0200A0C0DB /* CODE LIGHT.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4961F8DAD0200A0C0DB /* CODE LIGHT.OTF */; };
+		5B35C49B1F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4971F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF */; };
+		5B35C49C1F8DAD0200A0C0DB /* FZXQJW_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4981F8DAD0200A0C0DB /* FZXQJW_0.TTF */; };
+		5B35C49D1F8DAD0200A0C0DB /* CODE BOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -38,6 +44,14 @@
 
 /* Begin PBXFileReference section */
 		1F899D5D4460F39BD21F6B61 /* Pods_ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B35C4891F8DAB7000A0C0DB /* FFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTabBarController.h; sourceTree = "<group>"; };
+		5B35C48A1F8DAB7000A0C0DB /* FFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTabBarController.m; sourceTree = "<group>"; };
+		5B35C4911F8DAC7600A0C0DB /* UIViewController+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewModel.h"; sourceTree = "<group>"; };
+		5B35C4921F8DAC7600A0C0DB /* UIViewController+ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewModel.m"; sourceTree = "<group>"; };
+		5B35C4961F8DAD0200A0C0DB /* CODE LIGHT.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE LIGHT.OTF"; sourceTree = "<group>"; };
+		5B35C4971F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭纤黑简体.TTF"; sourceTree = "<group>"; };
+		5B35C4981F8DAD0200A0C0DB /* FZXQJW_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXQJW_0.TTF; sourceTree = "<group>"; };
+		5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE BOLD.OTF"; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +111,60 @@
 				CA89563ECD09FD79FE434811 /* Pods_ReactiveCocoaUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B35C4871F8DAB4900A0C0DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4881F8DAB5D00A0C0DB /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5B35C4881F8DAB5D00A0C0DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4891F8DAB7000A0C0DB /* FFTabBarController.h */,
+				5B35C48A1F8DAB7000A0C0DB /* FFTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B35C48C1F8DAC2400A0C0DB /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4941F8DAD0200A0C0DB /* Resources */,
+				5B35C48D1F8DAC2400A0C0DB /* Category */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		5B35C48D1F8DAC2400A0C0DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4911F8DAC7600A0C0DB /* UIViewController+ViewModel.h */,
+				5B35C4921F8DAC7600A0C0DB /* UIViewController+ViewModel.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5B35C4941F8DAD0200A0C0DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4951F8DAD0200A0C0DB /* font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B35C4951F8DAD0200A0C0DB /* font */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4961F8DAD0200A0C0DB /* CODE LIGHT.OTF */,
+				5B35C4971F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF */,
+				5B35C4981F8DAD0200A0C0DB /* FZXQJW_0.TTF */,
+				5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		5B9233BA1F8CCEFF00A818FB = {
@@ -168,6 +236,8 @@
 		5B9233F91F8CDF5C00A818FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B35C48C1F8DAC2400A0C0DB /* Others */,
+				5B35C4871F8DAB4900A0C0DB /* Base */,
 				5B9233FA1F8CDF6800A818FB /* One */,
 			);
 			path = Classes;
@@ -297,9 +367,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B35C49A1F8DAD0200A0C0DB /* CODE LIGHT.OTF in Resources */,
 				5B9233D61F8CCEFF00A818FB /* LaunchScreen.storyboard in Resources */,
 				5B9233D31F8CCEFF00A818FB /* Assets.xcassets in Resources */,
+				5B35C49D1F8DAD0200A0C0DB /* CODE BOLD.OTF in Resources */,
+				5B35C49B1F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF in Resources */,
 				5B9233D11F8CCEFF00A818FB /* Main.storyboard in Resources */,
+				5B35C49C1F8DAD0200A0C0DB /* FZXQJW_0.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +404,6 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -342,7 +415,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
@@ -395,7 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */,
+				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
+				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
 				5B9233FD1F8CDF7C00A818FB /* OneViewController.m in Sources */,
 			);
@@ -539,6 +613,7 @@
 			baseConfigurationReference = 7764C7333818BCBF12FC4F0F /* Pods-ReactiveCocoa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = ReactiveCocoa/PrefixHeader.pch;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -552,6 +627,7 @@
 			baseConfigurationReference = E8AA0D05EE884671C3D2251B /* Pods-ReactiveCocoa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = ReactiveCocoa/PrefixHeader.pch;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
