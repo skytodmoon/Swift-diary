@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "FFViewControllerProtocol.h"
+#import "FFViewModelProtocol.h"
 #import "FFViewModel.h"
 
 @interface UIViewController (ViewModel) <FFViewControllerProtocol>
 
-@property(nonatomic,strong) FFViewModel *viewModel;
+@property (nonatomic, strong) FFViewModel *viewModel;
 
--(instancetype)initWithViewModel:(id<FFViewModelProtocol>)viewModel;
+- (instancetype)initWithViewModel:(id<FFViewModelProtocol>)viewModel;
 
 @end

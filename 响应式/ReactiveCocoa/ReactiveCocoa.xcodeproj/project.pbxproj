@@ -18,6 +18,7 @@
 		5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A51F8DB01F00A0C0DB /* FFViewModel.m */; };
 		5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */; };
 		5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */; };
+		5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -66,6 +67,8 @@
 		5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNavController.m; sourceTree = "<group>"; };
 		5B35C4AB1F8DB6C700A0C0DB /* FFTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTabBarViewModel.h; sourceTree = "<group>"; };
 		5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTabBarViewModel.m; sourceTree = "<group>"; };
+		5B35C4B01F8DBEE900A0C0DB /* FFSpecialViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialViewModel.h; sourceTree = "<group>"; };
+		5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialViewModel.m; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -207,6 +210,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		5B35C4AE1F8DBEBE00A0C0DB /* Special(专题) */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4AF1F8DBED800A0C0DB /* ViewModel */,
+			);
+			path = "Special(专题)";
+			sourceTree = "<group>";
+		};
+		5B35C4AF1F8DBED800A0C0DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4B01F8DBEE900A0C0DB /* FFSpecialViewModel.h */,
+				5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5B9233BA1F8CCEFF00A818FB = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				5B35C48C1F8DAC2400A0C0DB /* Others */,
+				5B35C4AE1F8DBEBE00A0C0DB /* Special(专题) */,
 				5B35C4871F8DAB4900A0C0DB /* Base */,
 				5B9233FA1F8CDF6800A818FB /* One */,
 			);
@@ -513,6 +534,7 @@
 				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
 				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
+				5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */,
 				5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
 				5B9233FD1F8CDF7C00A818FB /* OneViewController.m in Sources */,

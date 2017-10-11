@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FFViewModelProtocol.h"
 
-@interface FFViewModel : NSObject <FFViewModelProtocol>
+@interface FFViewModel : NSObject<FFViewModelProtocol>
 
 @property (nonatomic, copy) NSDictionary *params;
 @property (nonatomic, copy) NSString *navTitle;

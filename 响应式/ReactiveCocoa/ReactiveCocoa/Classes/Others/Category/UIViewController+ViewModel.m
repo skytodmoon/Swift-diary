@@ -10,10 +10,9 @@
 #import <objc/runtime.h>
 
 static char viewModelKey;
-
 @implementation UIViewController (ViewModel)
 
--(instancetype)initWithViewModel:(id<FFViewModelProtocol>)viewModel{
+- (instancetype)initWithViewModel:(id<FFViewModelProtocol>)viewModel {
     if (self = [self init]) {
         self.viewModel = viewModel;
     }

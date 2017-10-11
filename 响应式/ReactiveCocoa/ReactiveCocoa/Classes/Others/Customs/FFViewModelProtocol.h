@@ -12,7 +12,7 @@
 
 @optional;
 
--(instancetype)initWithModel:(id<NSObject>)model;
+- (instancetype)initWithModel:(id<NSObject>)model;
 
 
 @end

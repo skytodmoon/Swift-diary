@@ -10,7 +10,7 @@
 
 @implementation FFViewModel
 
--(instancetype)initWithParams:(NSDictionary *)params {
+- (instancetype)initWithParams:(NSDictionary *)params {
     self = [super init];
     if (self) {
         self.params = params;
@@ -23,6 +23,5 @@
     }
     return self;
 }
-
 
 @end
