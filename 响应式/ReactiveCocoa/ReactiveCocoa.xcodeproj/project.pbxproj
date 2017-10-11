@@ -29,6 +29,8 @@
 		5B35C4D41F8DEE8000A0C0DB /* UIView+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D31F8DEE8000A0C0DB /* UIView+FFAdd.m */; };
 		5B35C4D71F8DEE9100A0C0DB /* UIView+FFFRame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D61F8DEE9100A0C0DB /* UIView+FFFRame.m */; };
 		5B35C4DA1F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D91F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m */; };
+		5B35C4DE1F8DFFA800A0C0DB /* FFAuthorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4DD1F8DFFA800A0C0DB /* FFAuthorCell.m */; };
+		5B35C4E11F8DFFE200A0C0DB /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4E01F8DFFE200A0C0DB /* APIRequest.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -98,6 +100,10 @@
 		5B35C4D61F8DEE9100A0C0DB /* UIView+FFFRame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFFRame.m"; sourceTree = "<group>"; };
 		5B35C4D81F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FFAdd.h"; sourceTree = "<group>"; };
 		5B35C4D91F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FFAdd.m"; sourceTree = "<group>"; };
+		5B35C4DC1F8DFFA800A0C0DB /* FFAuthorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorCell.h; sourceTree = "<group>"; };
+		5B35C4DD1F8DFFA800A0C0DB /* FFAuthorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAuthorCell.m; sourceTree = "<group>"; };
+		5B35C4DF1F8DFFE200A0C0DB /* APIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
+		5B35C4E01F8DFFE200A0C0DB /* APIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 			children = (
 				5B35C4A11F8DAF5700A0C0DB /* NetworkHelper.h */,
 				5B35C4A21F8DAF5700A0C0DB /* NetworkHelper.m */,
+				5B35C4DF1F8DFFE200A0C0DB /* APIRequest.h */,
+				5B35C4E01F8DFFE200A0C0DB /* APIRequest.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 		5B35C4B31F8DC29900A0C0DB /* Authro(作者) */ = {
 			isa = PBXGroup;
 			children = (
+				5B35C4DB1F8DFF9600A0C0DB /* View */,
 				5B35C4C11F8DC86300A0C0DB /* Controller */,
 				5B35C4B41F8DC29900A0C0DB /* ViewModel */,
 			);
@@ -326,6 +335,15 @@
 				5B35C4C71F8DC89000A0C0DB /* FFShopController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B35C4DB1F8DFF9600A0C0DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4DC1F8DFFA800A0C0DB /* FFAuthorCell.h */,
+				5B35C4DD1F8DFFA800A0C0DB /* FFAuthorCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B9233BA1F8CCEFF00A818FB = {
@@ -623,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */,
+				5B35C4DE1F8DFFA800A0C0DB /* FFAuthorCell.m in Sources */,
 				5B35C4D11F8DEA8000A0C0DB /* FFTableView.m in Sources */,
 				5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */,
 				5B35C4DA1F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m in Sources */,
@@ -639,6 +658,7 @@
 				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
 				5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */,
 				5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */,
+				5B35C4E11F8DFFE200A0C0DB /* APIRequest.m in Sources */,
 				5B35C4B71F8DC2AB00A0C0DB /* FFAuthorViewModel.m in Sources */,
 				5B35C4BC1F8DC2DC00A0C0DB /* FFShopViewModel.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
