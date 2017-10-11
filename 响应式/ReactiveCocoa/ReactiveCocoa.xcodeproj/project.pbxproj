@@ -25,6 +25,10 @@
 		5B35C4C41F8DC86D00A0C0DB /* FFAuthorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4C31F8DC86D00A0C0DB /* FFAuthorController.m */; };
 		5B35C4C81F8DC89000A0C0DB /* FFShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4C71F8DC89000A0C0DB /* FFShopController.m */; };
 		5B35C4CE1F8DE7D700A0C0DB /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4CD1F8DE7D700A0C0DB /* UIColor+Hex.m */; };
+		5B35C4D11F8DEA8000A0C0DB /* FFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D01F8DEA8000A0C0DB /* FFTableView.m */; };
+		5B35C4D41F8DEE8000A0C0DB /* UIView+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D31F8DEE8000A0C0DB /* UIView+FFAdd.m */; };
+		5B35C4D71F8DEE9100A0C0DB /* UIView+FFFRame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D61F8DEE9100A0C0DB /* UIView+FFFRame.m */; };
+		5B35C4DA1F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4D91F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -86,6 +90,14 @@
 		5B35C4C71F8DC89000A0C0DB /* FFShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFShopController.m; sourceTree = "<group>"; };
 		5B35C4CC1F8DE7D700A0C0DB /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5B35C4CD1F8DE7D700A0C0DB /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		5B35C4CF1F8DEA8000A0C0DB /* FFTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTableView.h; sourceTree = "<group>"; };
+		5B35C4D01F8DEA8000A0C0DB /* FFTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTableView.m; sourceTree = "<group>"; };
+		5B35C4D21F8DEE8000A0C0DB /* UIView+FFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FFAdd.h"; sourceTree = "<group>"; };
+		5B35C4D31F8DEE8000A0C0DB /* UIView+FFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFAdd.m"; sourceTree = "<group>"; };
+		5B35C4D51F8DEE9100A0C0DB /* UIView+FFFRame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FFFRame.h"; sourceTree = "<group>"; };
+		5B35C4D61F8DEE9100A0C0DB /* UIView+FFFRame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FFFRame.m"; sourceTree = "<group>"; };
+		5B35C4D81F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FFAdd.h"; sourceTree = "<group>"; };
+		5B35C4D91F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FFAdd.m"; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +196,12 @@
 				5B35C4921F8DAC7600A0C0DB /* UIViewController+ViewModel.m */,
 				5B35C4CC1F8DE7D700A0C0DB /* UIColor+Hex.h */,
 				5B35C4CD1F8DE7D700A0C0DB /* UIColor+Hex.m */,
+				5B35C4D21F8DEE8000A0C0DB /* UIView+FFAdd.h */,
+				5B35C4D31F8DEE8000A0C0DB /* UIView+FFAdd.m */,
+				5B35C4D51F8DEE9100A0C0DB /* UIView+FFFRame.h */,
+				5B35C4D61F8DEE9100A0C0DB /* UIView+FFFRame.m */,
+				5B35C4D81F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.h */,
+				5B35C4D91F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -214,6 +232,8 @@
 				5B35C4A01F8DAF2300A0C0DB /* FFViewModelProtocol.h */,
 				5B35C4A41F8DB01F00A0C0DB /* FFViewModel.h */,
 				5B35C4A51F8DB01F00A0C0DB /* FFViewModel.m */,
+				5B35C4CF1F8DEA8000A0C0DB /* FFTableView.h */,
+				5B35C4D01F8DEA8000A0C0DB /* FFTableView.m */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -603,8 +623,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */,
+				5B35C4D11F8DEA8000A0C0DB /* FFTableView.m in Sources */,
 				5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */,
+				5B35C4DA1F8DF0DA00A0C0DB /* UITableViewCell+FFAdd.m in Sources */,
 				5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */,
+				5B35C4D41F8DEE8000A0C0DB /* UIView+FFAdd.m in Sources */,
+				5B35C4D71F8DEE9100A0C0DB /* UIView+FFFRame.m in Sources */,
 				5B35C4C41F8DC86D00A0C0DB /* FFAuthorController.m in Sources */,
 				5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */,
 				5B35C4CE1F8DE7D700A0C0DB /* UIColor+Hex.m in Sources */,

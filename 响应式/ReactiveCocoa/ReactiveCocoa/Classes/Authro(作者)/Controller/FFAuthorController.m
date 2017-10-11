@@ -7,7 +7,28 @@
 //
 
 #import "FFAuthorController.h"
+#import "FFTableView.h"
+
+@interface FFAuthorController()
+
+@property(nonatomic,strong) FFTableView *mainView;
+
+@end
 
 @implementation FFAuthorController
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view addSubview:self.mainView];
+}
+
+
+- (FFTableView *)mainView {
+    if (_mainView == nil) {
+        _mainView = [[FFTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
+    }
+    return _mainView;
+}
+
 
 @end
