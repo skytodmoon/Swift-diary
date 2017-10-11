@@ -6,17 +6,13 @@ target 'ReactiveCocoa' do
    use_frameworks!
 
   # Pods for ReactiveCocoa
+  pod 'MBProgressHUD'
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'MJExtension'
+  pod 'YYWebImage'
+  pod 'ReactiveCocoa', '~> 4.1.0'
 
-    pod 'ReactiveCocoa', '~> 4.1.0'
 
-  target 'ReactiveCocoaTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'ReactiveCocoaUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
