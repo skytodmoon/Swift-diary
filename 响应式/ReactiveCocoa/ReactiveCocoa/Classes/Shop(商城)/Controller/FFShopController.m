@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  FFShopController.m
 //  ReactiveCocoa
 //
-//  Created by 金亮齐 on 2017/10/10.
+//  Created by 金亮齐 on 2017/10/11.
 //  Copyright © 2017年 醉看红尘这场梦. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FFShopController.h"
 
 /**
  在RAC中最核心的类RACSiganl,会用这个类就能用ReactiveCocoa开发了
@@ -17,11 +17,11 @@
 //默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触发。
 //如何订阅信号：调用信号RACSignal的subscribeNext就能订阅。
 
-@interface ViewController ()
+@interface FFShopController ()
 
 @end
 
-@implementation ViewController
+@implementation FFShopController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -148,7 +148,7 @@
     
     //RAC高级写法
     
-
+    
 }
 
 // RACMulticastConnection使用步骤:
@@ -258,6 +258,8 @@
         
     }];
 }
+
+
 
 @end
 

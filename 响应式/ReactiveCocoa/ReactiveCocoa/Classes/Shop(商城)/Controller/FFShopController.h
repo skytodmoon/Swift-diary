@@ -1,5 +1,5 @@
 //
-//  FFTabBarController.h
+//  FFShopController.h
 //  ReactiveCocoa
 //
 //  Created by 金亮齐 on 2017/10/11.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+ViewModel.h"
 
-@interface FFTabBarController : UITabBarController
+@interface FFShopController : UIViewController
 
 @end

@@ -19,6 +19,11 @@
 		5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */; };
 		5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */; };
 		5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */; };
+		5B35C4B71F8DC2AB00A0C0DB /* FFAuthorViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4B61F8DC2AB00A0C0DB /* FFAuthorViewModel.m */; };
+		5B35C4BC1F8DC2DC00A0C0DB /* FFShopViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4BB1F8DC2DC00A0C0DB /* FFShopViewModel.m */; };
+		5B35C4C01F8DC84A00A0C0DB /* FFSpecialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4BF1F8DC84A00A0C0DB /* FFSpecialController.m */; };
+		5B35C4C41F8DC86D00A0C0DB /* FFAuthorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4C31F8DC86D00A0C0DB /* FFAuthorController.m */; };
+		5B35C4C81F8DC89000A0C0DB /* FFShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4C71F8DC89000A0C0DB /* FFShopController.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -27,7 +32,6 @@
 		5B9233D61F8CCEFF00A818FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9233D41F8CCEFF00A818FB /* LaunchScreen.storyboard */; };
 		5B9233E11F8CCF0000A818FB /* ReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233E01F8CCF0000A818FB /* ReactiveCocoaTests.m */; };
 		5B9233EC1F8CCF0000A818FB /* ReactiveCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233EB1F8CCF0000A818FB /* ReactiveCocoaUITests.m */; };
-		5B9233FD1F8CDF7C00A818FB /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233FC1F8CDF7C00A818FB /* OneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,16 @@
 		5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTabBarViewModel.m; sourceTree = "<group>"; };
 		5B35C4B01F8DBEE900A0C0DB /* FFSpecialViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialViewModel.h; sourceTree = "<group>"; };
 		5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialViewModel.m; sourceTree = "<group>"; };
+		5B35C4B51F8DC2AB00A0C0DB /* FFAuthorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorViewModel.h; sourceTree = "<group>"; };
+		5B35C4B61F8DC2AB00A0C0DB /* FFAuthorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAuthorViewModel.m; sourceTree = "<group>"; };
+		5B35C4BA1F8DC2DC00A0C0DB /* FFShopViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFShopViewModel.h; sourceTree = "<group>"; };
+		5B35C4BB1F8DC2DC00A0C0DB /* FFShopViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFShopViewModel.m; sourceTree = "<group>"; };
+		5B35C4BE1F8DC84A00A0C0DB /* FFSpecialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialController.h; sourceTree = "<group>"; };
+		5B35C4BF1F8DC84A00A0C0DB /* FFSpecialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialController.m; sourceTree = "<group>"; };
+		5B35C4C21F8DC86D00A0C0DB /* FFAuthorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorController.h; sourceTree = "<group>"; };
+		5B35C4C31F8DC86D00A0C0DB /* FFAuthorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAuthorController.m; sourceTree = "<group>"; };
+		5B35C4C61F8DC89000A0C0DB /* FFShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFShopController.h; sourceTree = "<group>"; };
+		5B35C4C71F8DC89000A0C0DB /* FFShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFShopController.m; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,8 +99,6 @@
 		5B9233E71F8CCF0000A818FB /* ReactiveCocoaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233EB1F8CCF0000A818FB /* ReactiveCocoaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaUITests.m; sourceTree = "<group>"; };
 		5B9233ED1F8CCF0000A818FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B9233FB1F8CDF7C00A818FB /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
-		5B9233FC1F8CDF7C00A818FB /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		5B9233FE1F8CE0B400A818FB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7764C7333818BCBF12FC4F0F /* Pods-ReactiveCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 		CA89563ECD09FD79FE434811 /* Pods_ReactiveCocoaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +225,7 @@
 		5B35C4AE1F8DBEBE00A0C0DB /* Special(专题) */ = {
 			isa = PBXGroup;
 			children = (
+				5B35C4BD1F8DC83D00A0C0DB /* Controller */,
 				5B35C4AF1F8DBED800A0C0DB /* ViewModel */,
 			);
 			path = "Special(专题)";
@@ -225,6 +238,69 @@
 				5B35C4B11F8DBEE900A0C0DB /* FFSpecialViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B35C4B31F8DC29900A0C0DB /* Authro(作者) */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4C11F8DC86300A0C0DB /* Controller */,
+				5B35C4B41F8DC29900A0C0DB /* ViewModel */,
+			);
+			path = "Authro(作者)";
+			sourceTree = "<group>";
+		};
+		5B35C4B41F8DC29900A0C0DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4B51F8DC2AB00A0C0DB /* FFAuthorViewModel.h */,
+				5B35C4B61F8DC2AB00A0C0DB /* FFAuthorViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B35C4B81F8DC2D000A0C0DB /* Shop(商城) */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4C51F8DC88700A0C0DB /* Controller */,
+				5B35C4B91F8DC2D000A0C0DB /* ViewModel */,
+			);
+			path = "Shop(商城)";
+			sourceTree = "<group>";
+		};
+		5B35C4B91F8DC2D000A0C0DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4BA1F8DC2DC00A0C0DB /* FFShopViewModel.h */,
+				5B35C4BB1F8DC2DC00A0C0DB /* FFShopViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B35C4BD1F8DC83D00A0C0DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4BE1F8DC84A00A0C0DB /* FFSpecialController.h */,
+				5B35C4BF1F8DC84A00A0C0DB /* FFSpecialController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B35C4C11F8DC86300A0C0DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4C21F8DC86D00A0C0DB /* FFAuthorController.h */,
+				5B35C4C31F8DC86D00A0C0DB /* FFAuthorController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B35C4C51F8DC88700A0C0DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4C61F8DC89000A0C0DB /* FFShopController.h */,
+				5B35C4C71F8DC89000A0C0DB /* FFShopController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5B9233BA1F8CCEFF00A818FB = {
@@ -296,21 +372,13 @@
 		5B9233F91F8CDF5C00A818FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B35C4B81F8DC2D000A0C0DB /* Shop(商城) */,
+				5B35C4B31F8DC29900A0C0DB /* Authro(作者) */,
 				5B35C48C1F8DAC2400A0C0DB /* Others */,
 				5B35C4AE1F8DBEBE00A0C0DB /* Special(专题) */,
 				5B35C4871F8DAB4900A0C0DB /* Base */,
-				5B9233FA1F8CDF6800A818FB /* One */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		5B9233FA1F8CDF6800A818FB /* One */ = {
-			isa = PBXGroup;
-			children = (
-				5B9233FB1F8CDF7C00A818FB /* OneViewController.h */,
-				5B9233FC1F8CDF7C00A818FB /* OneViewController.m */,
-			);
-			path = One;
 			sourceTree = "<group>";
 		};
 		B921F2DA9A870BB25FB4B31D /* Pods */ = {
@@ -530,14 +598,18 @@
 				5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */,
 				5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */,
 				5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */,
+				5B35C4C41F8DC86D00A0C0DB /* FFAuthorController.m in Sources */,
 				5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */,
 				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
+				5B35C4C01F8DC84A00A0C0DB /* FFSpecialController.m in Sources */,
+				5B35C4C81F8DC89000A0C0DB /* FFShopController.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
 				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
 				5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */,
 				5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */,
+				5B35C4B71F8DC2AB00A0C0DB /* FFAuthorViewModel.m in Sources */,
+				5B35C4BC1F8DC2DC00A0C0DB /* FFShopViewModel.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
-				5B9233FD1F8CDF7C00A818FB /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

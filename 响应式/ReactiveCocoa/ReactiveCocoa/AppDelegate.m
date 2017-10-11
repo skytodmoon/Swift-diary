@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FFTabBarController.h"
+#import "FFTabBarViewModel.h"
 
 @interface AppDelegate ()
 
@@ -20,22 +21,26 @@
     //设置状态栏
     [self configAppearance];
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    self.window.rootViewController = [self ]
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [self rootViewController];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
 
--(void)configAppearance{
+- (void)configAppearance {
     [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
     [[UITabBar appearance] setTintColor:[UIColor darkGrayColor]];
 }
 
-//-(UIViewController *)rootViewController {
-//    return [FFTabBarController alloc]
-//}
+- (FFViewModel *)createInitialViewModel {
+    return [[FFTabBarViewModel alloc] initWithParams:nil];
+}
+
+- (UIViewController *)rootViewController {
+    return [[FFTabBarController alloc] initWithViewModel:[self createInitialViewModel]];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

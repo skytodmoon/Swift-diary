@@ -7,31 +7,36 @@
 //
 
 #import "FFTabBarController.h"
-
-@interface FFTabBarController ()
-
-@end
+#import "FFNavController.h"
+#import "FFTabBarViewModel.h"
 
 @implementation FFTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    @weakify(self)
+    [RACObserve(self, viewModel) subscribeNext:^(FFTabBarViewModel *viewModel) {
+        @strongify(self)
+        [self addChildViewControllerWithViewModel:viewModel.specialViewModel];
+        [self addChildViewControllerWithViewModel:viewModel.authorViewModel];
+        [self addChildViewControllerWithViewModel:viewModel.shopViewModel];
+    }];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)addChildViewControllerWithViewModel:(FFViewModel *)viewModel {
+    
+    Class vcClass = NSClassFromString(viewModel.viewcontroller);
+    UIViewController *viewcontroller = [[vcClass alloc] initWithViewModel:viewModel];
+    if (!viewcontroller) { return;}
+    FFNavController *nav = [[FFNavController alloc]initWithRootViewController:viewcontroller];
+    viewcontroller.navigationItem.title = viewModel.tabTitle;
+    viewcontroller.tabBarItem.title = viewModel.tabTitle;
+    viewcontroller.tabBarItem.image= [[UIImage imageNamed:viewModel.tabIcon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    viewcontroller.tabBarItem.selectedImage= [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",viewModel.tabIcon]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [self addChildViewController:nav];
 }
-*/
 
 @end
