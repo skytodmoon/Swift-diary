@@ -14,6 +14,10 @@
 		5B35C49B1F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4971F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF */; };
 		5B35C49C1F8DAD0200A0C0DB /* FZXQJW_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4981F8DAD0200A0C0DB /* FZXQJW_0.TTF */; };
 		5B35C49D1F8DAD0200A0C0DB /* CODE BOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */; };
+		5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A21F8DAF5700A0C0DB /* NetworkHelper.m */; };
+		5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A51F8DB01F00A0C0DB /* FFViewModel.m */; };
+		5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */; };
+		5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -52,6 +56,16 @@
 		5B35C4971F8DAD0200A0C0DB /* 方正兰亭纤黑简体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭纤黑简体.TTF"; sourceTree = "<group>"; };
 		5B35C4981F8DAD0200A0C0DB /* FZXQJW_0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXQJW_0.TTF; sourceTree = "<group>"; };
 		5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CODE BOLD.OTF"; sourceTree = "<group>"; };
+		5B35C4A01F8DAF2300A0C0DB /* FFViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFViewModelProtocol.h; sourceTree = "<group>"; };
+		5B35C4A11F8DAF5700A0C0DB /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		5B35C4A21F8DAF5700A0C0DB /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		5B35C4A41F8DB01F00A0C0DB /* FFViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFViewModel.h; sourceTree = "<group>"; };
+		5B35C4A51F8DB01F00A0C0DB /* FFViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFViewModel.m; sourceTree = "<group>"; };
+		5B35C4A71F8DB10C00A0C0DB /* FFViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFViewControllerProtocol.h; sourceTree = "<group>"; };
+		5B35C4A81F8DB6B400A0C0DB /* FFNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNavController.h; sourceTree = "<group>"; };
+		5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNavController.m; sourceTree = "<group>"; };
+		5B35C4AB1F8DB6C700A0C0DB /* FFTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTabBarViewModel.h; sourceTree = "<group>"; };
+		5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTabBarViewModel.m; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +140,10 @@
 			children = (
 				5B35C4891F8DAB7000A0C0DB /* FFTabBarController.h */,
 				5B35C48A1F8DAB7000A0C0DB /* FFTabBarController.m */,
+				5B35C4A81F8DB6B400A0C0DB /* FFNavController.h */,
+				5B35C4A91F8DB6B400A0C0DB /* FFNavController.m */,
+				5B35C4AB1F8DB6C700A0C0DB /* FFTabBarViewModel.h */,
+				5B35C4AC1F8DB6C700A0C0DB /* FFTabBarViewModel.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +151,8 @@
 		5B35C48C1F8DAC2400A0C0DB /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				5B35C49E1F8DAF0D00A0C0DB /* Customs */,
+				5B35C49F1F8DAF0D00A0C0DB /* Tools */,
 				5B35C4941F8DAD0200A0C0DB /* Resources */,
 				5B35C48D1F8DAC2400A0C0DB /* Category */,
 			);
@@ -165,6 +185,26 @@
 				5B35C4991F8DAD0200A0C0DB /* CODE BOLD.OTF */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		5B35C49E1F8DAF0D00A0C0DB /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4A71F8DB10C00A0C0DB /* FFViewControllerProtocol.h */,
+				5B35C4A01F8DAF2300A0C0DB /* FFViewModelProtocol.h */,
+				5B35C4A41F8DB01F00A0C0DB /* FFViewModel.h */,
+				5B35C4A51F8DB01F00A0C0DB /* FFViewModel.m */,
+			);
+			path = Customs;
+			sourceTree = "<group>";
+		};
+		5B35C49F1F8DAF0D00A0C0DB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5B35C4A11F8DAF5700A0C0DB /* NetworkHelper.h */,
+				5B35C4A21F8DAF5700A0C0DB /* NetworkHelper.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		5B9233BA1F8CCEFF00A818FB = {
@@ -466,10 +506,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B35C4A61F8DB01F00A0C0DB /* FFViewModel.m in Sources */,
+				5B35C4AA1F8DB6B400A0C0DB /* FFNavController.m in Sources */,
+				5B35C4AD1F8DB6C700A0C0DB /* FFTabBarViewModel.m in Sources */,
 				5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */,
 				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
 				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
+				5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
 				5B9233FD1F8CDF7C00A818FB /* OneViewController.m in Sources */,
 			);
