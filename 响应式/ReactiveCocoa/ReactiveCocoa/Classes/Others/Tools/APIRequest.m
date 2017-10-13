@@ -10,6 +10,7 @@
 #import "FFResponseModel.h"
 #import "FFHelper.h"
 #import "NetworkHelper.h"
+#import "DBManager.h"
 
 @implementation APIRequest
 
@@ -22,27 +23,49 @@
     return _instance;
 }
 
-////首页专题列表
-//-(void)requestSpecialListFinishBlock:(void (^)(id, NSError *))finishBlock{
-//    NSMutableDictionary *params = @{}.mutableCopy;
-//    params[@"currentPageIndex"] = @0;
-//    params[@"pageSize"] = @(kPageSize);
-//    params[@"isCache666"] = @(YES);
-//    
-//}
-//
-////作者列表
-//-(void)requestAuthorListFinishBlock:(void (^)(id, NSError *))finishBlock{
-//    
-//}
-//
-//-(void)requestMethod:(NSString *)methd url:(NSString *)url parameters:(NSMutableDictionary *)params finishBlock:(void(^)(id data, NSError *error)) finishBlock {
-//    NSString *cacheKey = [FFHelper connectBaseUrl:url params:params];
-//    BOOL isCache = [cacheKey containsString:@"isCache666"];
-//    [[NetworkHelper sharedInstance] requestMethod:methd url:url parameters:params finishBlock:^(id data, NSError *error) {
-//
-//    }];
-//    
-//}
+//首页专题列表
+-(void)requestSpecialListFinishBlock:(void (^)(id, NSError *))finishBlock{
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"currentPageIndex"] = @0;
+    params[@"pageSize"] = @(20);
+    params[@"isCache666"] = @(YES);
+    [self requestMethod:POST url:@"http://m.htxq.net/servlet/SysArticleServlet?action=mainList" parameters:params.copy finishBlock:^(id data, NSError *error) {
+        finishBlock(data,error);
+    }];
+
+}
+
+//作者列表
+-(void)requestAuthorListFinishBlock:(void (^)(id, NSError *))finishBlock{
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"action"] = @"topArticleAuthor";
+    [self requestMethod:POST url:@"http://ec.htxq.net/servlet/SysArticleServlet?currentPageIndex=0&pageSize=10" parameters:params.copy finishBlock:^(id data, NSError *error) {
+        finishBlock(data,error);
+    }];
+}
+
+-(void)requestMethod:(NSString *)methd url:(NSString *)url parameters:(NSMutableDictionary *)params finishBlock:(void(^)(id data, NSError *error)) finishBlock {
+    NSString *cacheKey = [FFHelper connectBaseUrl:url params:params];
+    BOOL isCache = [cacheKey containsString:@"isCache666"];
+    [[NetworkHelper sharedInstance] requestMethod:methd url:url parameters:params finishBlock:^(id data, NSError *error) {
+        if (error) {
+            id cacheData = [[DBManager sharedManager] itemWithCacheKey:cacheKey];
+            FFResponseModel *model = [FFResponseModel mj_objectWithKeyValues:cacheData];
+            if (!model) {
+                finishBlock(nil,error);
+            }else {
+                finishBlock(model,nil);
+            }
+            return;
+        }
+        
+        FFResponseModel *model = [FFResponseModel mj_objectWithKeyValues:data];
+        finishBlock(model,nil);
+        if (isCache) {
+            [[DBManager sharedManager] insertItem:data cacheKey:cacheKey];
+        }
+    }];
+    
+}
 
 @end

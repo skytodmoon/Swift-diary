@@ -7,6 +7,7 @@
 //
 
 #import "FFTableView.h"
+#import "UITableViewCell+FFAdd.h"
 
 @interface FFTableView()
 
@@ -27,7 +28,6 @@
         self.tableView.estimatedRowHeight = 100;
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.tableView.tableFooterView = [UIView new];
-        self.tableView.backgroundColor = [UIColor orangeColor];
     }
     return self;
 }

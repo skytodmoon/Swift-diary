@@ -8,6 +8,15 @@
 
 #import "FFAuthorController.h"
 #import "FFTableView.h"
+#import "FFAuthorViewModel.h"
+#import "FFAuthorCell.h"
+#import "UIView+FFAdd.h"
+#import "HUDTools.h"
+#import "UITableViewCell+FFAdd.h"
+#import "FFAuthorDetailController.h"
+#import "FFSpecialDetailController.h"
+#import "UIViewController+ViewModel.h"
+#import "FFRouter.h"
 
 @interface FFAuthorController()
 
@@ -17,9 +26,41 @@
 
 @implementation FFAuthorController
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.view addSubview:self.mainView];
+    @weakify(self)
+    [RACObserve(self, viewModel) subscribeNext:^(FFAuthorViewModel *viewModel) {
+        @strongify(self)
+        [self.mainView registerCellClass:[FFAuthorCell class]];
+        [HUDTools zj_showLoadingInView:self.view];
+        @weakify(self)
+        [[viewModel.requestAuthorList execute:nil] subscribeNext:^(FFAuthorViewModel *viewModel) {
+            @strongify(self)
+            [HUDTools zj_hideInView:self.view];
+            self.mainView.viewModel = viewModel;
+            [self.mainView.tableView reloadData];
+            
+            for (FFAuthorViewModel *tempModel in viewModel.dataSource) {
+                @weakify(self)
+                [tempModel.goodTopicClickSubject subscribeNext:^(id x) {
+                    @strongify(self)
+                    FFSpecialDetailController *detailVC = [[FFSpecialDetailController alloc] initWithViewModel:nil];
+                    [self.navigationController pushViewController:detailVC animated:YES];
+                }];
+            }
+        } error:^(NSError *error) {
+            [HUDTools zj_showErrorStatusInView:self.view title:@"Request Error!"];
+        }];
+        
+        [viewModel.didSelectSubject subscribeNext:^(id x) {
+            @strongify(self)
+            UIViewController *controller = [[FFRouter sharedInstance] controllerForViewModel:x];
+            [self.navigationController pushViewController:controller animated:YES];
+        }];
+        
+    }];
 }
 
 

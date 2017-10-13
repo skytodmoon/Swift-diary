@@ -36,6 +36,12 @@
 		5B35C4EA1F8E0A9500A0C0DB /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4E91F8E0A9500A0C0DB /* DBManager.m */; };
 		5B35C4ED1F8E0B5500A0C0DB /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4EC1F8E0B5500A0C0DB /* UIButton+Extension.m */; };
 		5B35C4F01F8E0B7200A0C0DB /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4EF1F8E0B7200A0C0DB /* UILabel+Extension.m */; };
+		5B60249D1F90589200780231 /* HUDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B60249C1F90589200780231 /* HUDTools.m */; };
+		5B6024A11F905A3D00780231 /* FFAuthorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A01F905A3D00780231 /* FFAuthorModel.m */; };
+		5B6024A41F905CB400780231 /* FFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A31F905CB400780231 /* FFConst.m */; };
+		5B6024A71F905ECD00780231 /* FFAuthorDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A61F905ECD00780231 /* FFAuthorDetailController.m */; };
+		5B6024AA1F905EFB00780231 /* FFSpecialDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A91F905EFB00780231 /* FFSpecialDetailController.m */; };
+		5B6024AD1F905F3500780231 /* FFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024AC1F905F3500780231 /* FFRouter.m */; };
 		5B9233C81F8CCEFF00A818FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233C71F8CCEFF00A818FB /* main.m */; };
 		5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CA1F8CCEFF00A818FB /* AppDelegate.m */; };
 		5B9233CE1F8CCEFF00A818FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233CD1F8CCEFF00A818FB /* ViewController.m */; };
@@ -119,6 +125,18 @@
 		5B35C4EC1F8E0B5500A0C0DB /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		5B35C4EE1F8E0B7200A0C0DB /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
 		5B35C4EF1F8E0B7200A0C0DB /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		5B60249B1F90589200780231 /* HUDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTools.h; sourceTree = "<group>"; };
+		5B60249C1F90589200780231 /* HUDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTools.m; sourceTree = "<group>"; };
+		5B60249F1F905A3D00780231 /* FFAuthorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorModel.h; sourceTree = "<group>"; };
+		5B6024A01F905A3D00780231 /* FFAuthorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAuthorModel.m; sourceTree = "<group>"; };
+		5B6024A21F905CB400780231 /* FFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConst.h; sourceTree = "<group>"; };
+		5B6024A31F905CB400780231 /* FFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConst.m; sourceTree = "<group>"; };
+		5B6024A51F905ECD00780231 /* FFAuthorDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorDetailController.h; sourceTree = "<group>"; };
+		5B6024A61F905ECD00780231 /* FFAuthorDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAuthorDetailController.m; sourceTree = "<group>"; };
+		5B6024A81F905EFB00780231 /* FFSpecialDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialDetailController.h; sourceTree = "<group>"; };
+		5B6024A91F905EFB00780231 /* FFSpecialDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialDetailController.m; sourceTree = "<group>"; };
+		5B6024AB1F905F3500780231 /* FFRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFRouter.h; sourceTree = "<group>"; };
+		5B6024AC1F905F3500780231 /* FFRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFRouter.m; sourceTree = "<group>"; };
 		5B9233C31F8CCEFF00A818FB /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9233C71F8CCEFF00A818FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9233C91F8CCEFF00A818FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -261,6 +279,10 @@
 				5B35C4D01F8DEA8000A0C0DB /* FFTableView.m */,
 				5B35C4E21F8E0A1C00A0C0DB /* FFResponseModel.h */,
 				5B35C4E31F8E0A1C00A0C0DB /* FFResponseModel.m */,
+				5B6024A21F905CB400780231 /* FFConst.h */,
+				5B6024A31F905CB400780231 /* FFConst.m */,
+				5B6024AB1F905F3500780231 /* FFRouter.h */,
+				5B6024AC1F905F3500780231 /* FFRouter.m */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -276,6 +298,8 @@
 				5B35C4E61F8E0A5800A0C0DB /* FFHelper.m */,
 				5B35C4E81F8E0A9500A0C0DB /* DBManager.h */,
 				5B35C4E91F8E0A9500A0C0DB /* DBManager.m */,
+				5B60249B1F90589200780231 /* HUDTools.h */,
+				5B60249C1F90589200780231 /* HUDTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -301,6 +325,7 @@
 		5B35C4B31F8DC29900A0C0DB /* Authro(作者) */ = {
 			isa = PBXGroup;
 			children = (
+				5B60249E1F905A3200780231 /* Model */,
 				5B35C4DB1F8DFF9600A0C0DB /* View */,
 				5B35C4C11F8DC86300A0C0DB /* Controller */,
 				5B35C4B41F8DC29900A0C0DB /* ViewModel */,
@@ -340,6 +365,8 @@
 			children = (
 				5B35C4BE1F8DC84A00A0C0DB /* FFSpecialController.h */,
 				5B35C4BF1F8DC84A00A0C0DB /* FFSpecialController.m */,
+				5B6024A81F905EFB00780231 /* FFSpecialDetailController.h */,
+				5B6024A91F905EFB00780231 /* FFSpecialDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,6 +376,8 @@
 			children = (
 				5B35C4C21F8DC86D00A0C0DB /* FFAuthorController.h */,
 				5B35C4C31F8DC86D00A0C0DB /* FFAuthorController.m */,
+				5B6024A51F905ECD00780231 /* FFAuthorDetailController.h */,
+				5B6024A61F905ECD00780231 /* FFAuthorDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +398,15 @@
 				5B35C4DD1F8DFFA800A0C0DB /* FFAuthorCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B60249E1F905A3200780231 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B60249F1F905A3D00780231 /* FFAuthorModel.h */,
+				5B6024A01F905A3D00780231 /* FFAuthorModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5B9233BA1F8CCEFF00A818FB = {
@@ -684,16 +722,22 @@
 				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
 				5B35C4C01F8DC84A00A0C0DB /* FFSpecialController.m in Sources */,
 				5B35C4C81F8DC89000A0C0DB /* FFShopController.m in Sources */,
+				5B6024A41F905CB400780231 /* FFConst.m in Sources */,
 				5B35C4E41F8E0A1C00A0C0DB /* FFResponseModel.m in Sources */,
+				5B6024A11F905A3D00780231 /* FFAuthorModel.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
+				5B6024AD1F905F3500780231 /* FFRouter.m in Sources */,
 				5B35C4931F8DAC7600A0C0DB /* UIViewController+ViewModel.m in Sources */,
 				5B35C4B21F8DBEE900A0C0DB /* FFSpecialViewModel.m in Sources */,
+				5B6024A71F905ECD00780231 /* FFAuthorDetailController.m in Sources */,
 				5B35C4EA1F8E0A9500A0C0DB /* DBManager.m in Sources */,
 				5B35C4A31F8DAF5700A0C0DB /* NetworkHelper.m in Sources */,
+				5B6024AA1F905EFB00780231 /* FFSpecialDetailController.m in Sources */,
 				5B35C4E11F8DFFE200A0C0DB /* APIRequest.m in Sources */,
 				5B35C4B71F8DC2AB00A0C0DB /* FFAuthorViewModel.m in Sources */,
 				5B35C4BC1F8DC2DC00A0C0DB /* FFShopViewModel.m in Sources */,
 				5B9233C81F8CCEFF00A818FB /* main.m in Sources */,
+				5B60249D1F90589200780231 /* HUDTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
