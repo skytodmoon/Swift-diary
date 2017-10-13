@@ -10,4 +10,7 @@
 
 @interface FFHelper : NSObject
 
+
++(NSString *)connectBaseUrl:(NSString *)baseUrl params:(NSMutableDictionary *)params;
+
 @end
