@@ -36,6 +36,8 @@
 		5B35C4EA1F8E0A9500A0C0DB /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4E91F8E0A9500A0C0DB /* DBManager.m */; };
 		5B35C4ED1F8E0B5500A0C0DB /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4EC1F8E0B5500A0C0DB /* UIButton+Extension.m */; };
 		5B35C4F01F8E0B7200A0C0DB /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35C4EF1F8E0B7200A0C0DB /* UILabel+Extension.m */; };
+		5B5FFE221F949FE20064E029 /* FFSpecialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FFE211F949FE20064E029 /* FFSpecialModel.m */; };
+		5B5FFE251F94A0D70064E029 /* FFSpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FFE241F94A0D70064E029 /* FFSpecialCell.m */; };
 		5B60249D1F90589200780231 /* HUDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B60249C1F90589200780231 /* HUDTools.m */; };
 		5B6024A11F905A3D00780231 /* FFAuthorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A01F905A3D00780231 /* FFAuthorModel.m */; };
 		5B6024A41F905CB400780231 /* FFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6024A31F905CB400780231 /* FFConst.m */; };
@@ -125,6 +127,10 @@
 		5B35C4EC1F8E0B5500A0C0DB /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
 		5B35C4EE1F8E0B7200A0C0DB /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
 		5B35C4EF1F8E0B7200A0C0DB /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		5B5FFE201F949FE20064E029 /* FFSpecialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialModel.h; sourceTree = "<group>"; };
+		5B5FFE211F949FE20064E029 /* FFSpecialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialModel.m; sourceTree = "<group>"; };
+		5B5FFE231F94A0D70064E029 /* FFSpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialCell.h; sourceTree = "<group>"; };
+		5B5FFE241F94A0D70064E029 /* FFSpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialCell.m; sourceTree = "<group>"; };
 		5B60249B1F90589200780231 /* HUDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDTools.h; sourceTree = "<group>"; };
 		5B60249C1F90589200780231 /* HUDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDTools.m; sourceTree = "<group>"; };
 		5B60249F1F905A3D00780231 /* FFAuthorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAuthorModel.h; sourceTree = "<group>"; };
@@ -307,6 +313,8 @@
 		5B35C4AE1F8DBEBE00A0C0DB /* Special(专题) */ = {
 			isa = PBXGroup;
 			children = (
+				5B5FFE1E1F949FCF0064E029 /* Model */,
+				5B5FFE1F1F949FCF0064E029 /* View */,
 				5B35C4BD1F8DC83D00A0C0DB /* Controller */,
 				5B35C4AF1F8DBED800A0C0DB /* ViewModel */,
 			);
@@ -396,6 +404,24 @@
 			children = (
 				5B35C4DC1F8DFFA800A0C0DB /* FFAuthorCell.h */,
 				5B35C4DD1F8DFFA800A0C0DB /* FFAuthorCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B5FFE1E1F949FCF0064E029 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B5FFE201F949FE20064E029 /* FFSpecialModel.h */,
+				5B5FFE211F949FE20064E029 /* FFSpecialModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B5FFE1F1F949FCF0064E029 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B5FFE231F94A0D70064E029 /* FFSpecialCell.h */,
+				5B5FFE241F94A0D70064E029 /* FFSpecialCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,6 +748,8 @@
 				5B35C48B1F8DAB7000A0C0DB /* FFTabBarController.m in Sources */,
 				5B35C4C01F8DC84A00A0C0DB /* FFSpecialController.m in Sources */,
 				5B35C4C81F8DC89000A0C0DB /* FFShopController.m in Sources */,
+				5B5FFE221F949FE20064E029 /* FFSpecialModel.m in Sources */,
+				5B5FFE251F94A0D70064E029 /* FFSpecialCell.m in Sources */,
 				5B6024A41F905CB400780231 /* FFConst.m in Sources */,
 				5B35C4E41F8E0A1C00A0C0DB /* FFResponseModel.m in Sources */,
 				5B6024A11F905A3D00780231 /* FFAuthorModel.m in Sources */,
