@@ -4,20 +4,35 @@
         <meta charset="utf-8">
         <title>高仿小米登录页面</title>
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    </head>
-    <body>
-        <p>醉看红尘这场梦</p>
-        <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/CssReset.css">
+        <style type="text/css">
+            html,
+            body{
+                width: 100%;
+            }
+            #divfoot{
+                width: 100%;
+                height:100px;
+                text-align: center;
+            }
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+            #divul{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-color: #F5F5F5;">
+        <div id="divfoot">
+            <div id="divul">
+                <ul>
+                    <li> <a href="#">简体</a> | </li>
+                    <li> <a href="#">繁体</a> | </li>
+                    <li> <a href="#">英语</a> | </li>
+                    <li> <a href="#">常见问题</a> | </li>
+                </ul>
+                <br />
+                <span>小米公司版权所有-京ICP备10046444-<a class="beian-record-link" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"><span><img src= "img/ghs.png"></span>京公网安备11010802020134号</a>-京ICP证110507号</span>
+            </div>
+        </div>
     </body>
 </html>
