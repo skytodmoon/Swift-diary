@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"作者详情";
+    self.view.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view.
 }
 
