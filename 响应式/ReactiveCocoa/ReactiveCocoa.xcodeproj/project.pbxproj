@@ -52,6 +52,7 @@
 		5B9233D61F8CCEFF00A818FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9233D41F8CCEFF00A818FB /* LaunchScreen.storyboard */; };
 		5B9233E11F8CCF0000A818FB /* ReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233E01F8CCF0000A818FB /* ReactiveCocoaTests.m */; };
 		5B9233EC1F8CCF0000A818FB /* ReactiveCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9233EB1F8CCF0000A818FB /* ReactiveCocoaUITests.m */; };
+		5BCC0CF91F95A0D000704E6A /* FFSpecialCellBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC0CF81F95A0D000704E6A /* FFSpecialCellBottomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		5B9233EB1F8CCF0000A818FB /* ReactiveCocoaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaUITests.m; sourceTree = "<group>"; };
 		5B9233ED1F8CCF0000A818FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B9233FE1F8CE0B400A818FB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5BCC0CF71F95A0D000704E6A /* FFSpecialCellBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSpecialCellBottomView.h; sourceTree = "<group>"; };
+		5BCC0CF81F95A0D000704E6A /* FFSpecialCellBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSpecialCellBottomView.m; sourceTree = "<group>"; };
 		7764C7333818BCBF12FC4F0F /* Pods-ReactiveCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.debug.xcconfig"; sourceTree = "<group>"; };
 		CA89563ECD09FD79FE434811 /* Pods_ReactiveCocoaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AA0D05EE884671C3D2251B /* Pods-ReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoa/Pods-ReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 			children = (
 				5B5FFE231F94A0D70064E029 /* FFSpecialCell.h */,
 				5B5FFE241F94A0D70064E029 /* FFSpecialCell.m */,
+				5BCC0CF71F95A0D000704E6A /* FFSpecialCellBottomView.h */,
+				5BCC0CF81F95A0D000704E6A /* FFSpecialCellBottomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -752,6 +757,7 @@
 				5B5FFE251F94A0D70064E029 /* FFSpecialCell.m in Sources */,
 				5B6024A41F905CB400780231 /* FFConst.m in Sources */,
 				5B35C4E41F8E0A1C00A0C0DB /* FFResponseModel.m in Sources */,
+				5BCC0CF91F95A0D000704E6A /* FFSpecialCellBottomView.m in Sources */,
 				5B6024A11F905A3D00780231 /* FFAuthorModel.m in Sources */,
 				5B9233CB1F8CCEFF00A818FB /* AppDelegate.m in Sources */,
 				5B6024AD1F905F3500780231 /* FFRouter.m in Sources */,
