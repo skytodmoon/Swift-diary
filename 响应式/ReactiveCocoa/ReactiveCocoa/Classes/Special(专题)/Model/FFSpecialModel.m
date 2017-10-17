@@ -8,6 +8,18 @@
 
 #import "FFSpecialModel.h"
 
+@implementation FFCategoryModel
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"categoryID":@"id"};
+}
+
+@end
+
 @implementation FFSpecialModel
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"articleID":@"id"};
+}
 
 @end
