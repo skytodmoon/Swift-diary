@@ -4,35 +4,64 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>慕课七夕主题</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='pageA.css' />
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Swipe.js"></script>
-
+    <link href="img" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Swipe.js"></script>
 </head>
+<style type="text/css">
+    .charector {
+        width: 151px;
+        height: 291px;
+        background: url(http://img.mukewang.com/55ade248000198ae10550582.png) -0px -291px no-repeat;
+        position: absolute;
+        /* 设置一个元素的坐标 */
+        left: 6%;
+        top: 55%;
+    }
+</style>
 
 <body>
 <div id='content'>
     <ul class='content-wrap'>
-        <!-- 第一副画面 -->
-        <li> 页面1 </li>
-        <!-- 第二副画面 -->
+        <li>
+            <div class="a_background">
+                <div><img src="img/background/a_background_top.png"></div>
+                <div><img src="img/background/a_background_middle.png"></div>
+                <div><img src="img/background/a_background_botton.png"></div>
+            </div>
+        </li>
         <li> 页面2 </li>
-        <!-- 第三副画面 -->
         <li> 页面3 </li>
     </ul>
-    <div class="button">
-        <button>点击切换页面</button>
-    </div>
+    <div id="boy" class="charector"></div>
 </div>
 <script type="text/javascript">
     var swipe = Swipe($("#content"));
 
-    // 绑定一个事件，触发通过
-    $('button').click(function() {
-        // 在5秒的时间内，移动X的位置，为2个页面单位
-        //?
-    });
+    // 获取数据
+    var getValue = function(className) {
+        var $elem = $('' + className + '');
+        // 走路的路线坐标
+        return {
+            height: $elem.height(),
+            top: $elem.position().top
+        };
+    };
+
+    // 路的Y轴
+    var pathY = function() {
+        var data = getValue('.a_background_middle');
+        return data.top + data.height / 2;
+    }();
+
+    var $boy = $("#boy");
+    var boyHeight = $boy.height();
+
+    // 修正小男孩的正确位置
+    // 路的中间位置减去小孩的高度，25是一个修正值
+    //？
 </script>
 </body>
-
 </html>
