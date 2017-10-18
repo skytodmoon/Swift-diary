@@ -2,6 +2,7 @@
 //页面滑动 //
 /////////
 
+
 /**
  * [Swipe description]
  * @param {[type]} container [页面容器节点]
@@ -13,7 +14,7 @@ function Swipe(container) {
     var swipe = {};
 
     // li页面数量
-    var slides = element.find("li");
+    var slides = element.find(">");
 
     // 获取容器尺寸
     var width = container.width();
