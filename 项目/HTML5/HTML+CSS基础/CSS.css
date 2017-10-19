@@ -29,5 +29,23 @@ h1{
     color: #ccc;
 }
 .ellipsis{
-    color: #cccccc;
+    font-size: 14px;
+    padding:3px 5px;
+}
+
+.page-next i,.page-disabled i{
+    cursor:pointer;
+    display:inline-block;
+    width:5px;
+    height:9px;
+    background:url(img/bg_hotsale.gif);
+}
+
+.page-disabled i {
+    background-position: -80px -608px;
+    margin-right: 3px;
+}
+.page-next i {
+    background-position: -62px -608px;
+    margin-left: 3px;
 }
