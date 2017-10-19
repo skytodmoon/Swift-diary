@@ -1,0 +1,33 @@
+/*设置标题的样式*/
+h1{
+    color: antiquewhite;
+}
+.page-icon{
+    margin: 20px 0 0 0;
+    /*修复内元素之间的空隙*/
+    font-size: 0;
+    text-align: center;
+}
+.page-icon a,.page-disabled,page-next{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding:4px 10px 5px;
+    /*修复行内元素之间空隙间隔*/
+    font-size: 14px;
+    margin-right:10px;
+}
+.page-icon a{
+    text-decoration: none;
+    color: #005aa0;
+}
+.page-current{
+    color: #ff6600;
+    padding: 4px 10px 5px;
+    font-size: 14px;
+}
+.page-disabled{
+    color: #ccc;
+}
+.ellipsis{
+    color: #cccccc;
+}
