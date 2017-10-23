@@ -6,6 +6,9 @@
     <title>Html+CSS的基础练习</title>
     <!--//引入css样式文件-->
     <link rel="stylesheet" type="text/css" href="CSS/CSS.css">
+    <link rel="stylesheet" type="text/css" href="CSS/public.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/radip.css"/>
+    <script type="text/javascript" src="js/radio.js"></script>
 </head>
 <body>
 
@@ -29,6 +32,14 @@
 </div>
 
 
+<div class="type">
+    <dl id="type">
+        <dt>配送类型：</dt>
+        <dd class="selected" onclick="show(0)"><a href="#"><b></b>全部</a></dd>
+        <dd><a href="#" onclick="show(1)"><b></b>京东配送</a></dd>
+        <dd><a href="#" onclick="show(2)"><b></b>第三方配送</a></dd>
+    </dl>
+</div>
 
 </body>
 </html>
