@@ -7,6 +7,16 @@ target 'RxSwift' do
 
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'NSObject+Rx'
+    pod 'Moya/RxSwift'
+    pod 'ObjectMapper'
+    pod 'RxDataSources'
+    pod 'Then'
+    pod 'Kingfisher'
+    pod 'SnapKit'
+    pod 'Reusable'
+    pod 'MJRefresh'
+    pod 'SVProgressHUD'
 
   target 'RxSwiftTests' do
     inherit! :search_paths
