@@ -63,4 +63,23 @@ if MyString != nil {
 }
 
 //强制解析
+var myString1: String?
+myString1 = "Hello,Swift!"
+//强制解析
+if myString1 != nil {
+    print(myString1!)
+}else{
+    print("myString1值为nil")
+}
+
+//自动解析
+var myString2: String!
+myString2 = "Hello,Swift!"
+if myString2 != nil {
+    print(myString2)
+}else{
+    print("myString2 值为nil")
+}
+
+//可选绑定
 
