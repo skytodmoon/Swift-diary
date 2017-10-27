@@ -40,5 +40,27 @@ print(varC)
 
 
 //变量的命名
+var  _var = "Hello,Swift!"
+print(_var)
 
+var 你好 = "你好世界"
+var W3Cschool教程 = "www.ctolib.com"
+print(你好)
+print(W3Cschool教程)
+
+//变量输出
+var name = "W3Cschool教程"
+var site = "http://www.ctolib.com"
+print("\(name)的官网地址为:\(site)")
+
+
+//Swift可选(Optional)类型
+var MyString: String? = nil
+if MyString != nil {
+    print(MyString as Any)
+}else{
+    print("字符串为nil")
+}
+
+//强制解析
 
