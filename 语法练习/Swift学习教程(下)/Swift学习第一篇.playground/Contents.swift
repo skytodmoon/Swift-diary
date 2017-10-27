@@ -82,4 +82,31 @@ if myString2 != nil {
 }
 
 //可选绑定
+var myString3: String?
+myString3 = "Hello,Swift"
+if let yourString = myString3 {
+    print("你的字符串值为 -\(yourString)")
+}else{
+    print("你的字符串没有值")
+}
+
+//常量声明
+let ConstA1 = 42
+print(ConstA1)
+
+//类型标注
+let ConstA2 = 44
+print(ConstA2)
+
+let constB1: Float = 3.14159
+print(constB1)
+
+//常量命名
+let _const = "Hello,Swift!"
+print(_const)
+
+let 你好啊 = "你好世界"
+print(你好啊)
+
+//整数字面量
 
