@@ -109,4 +109,27 @@ let 你好啊 = "你好世界"
 print(你好啊)
 
 //整数字面量
+//十进制表示
+let decimalInterger = 17
+//二进制表示
+let binaryInterger = 0b1001
+//八进制表示
+let octalInterger = 0o21
+//十六进制表示
+let hexadecimalInterger = 0o11
 
+//字符串型字面量
+let stringL = "Hello\tWorld\n\nW3Cschool教程官网：\'http://www.ctolib.com\'"
+print(stringL)
+
+//算术运算符
+var A = 10
+var B = 20
+print("A + B 结果为：\(A + B)")
+print("A - B 结果为：\(A - B)")
+print("A * B 结果为：\(A * B)")
+print("B / A 结果为：\(B / A)")
+print("A++ 后 A 的值为 \(A)")
+print("B-- 后 B 的值为 \(B)")
+
+//比较运算符
