@@ -133,3 +133,19 @@ print("A++ 后 A 的值为 \(A)")
 print("B-- 后 B 的值为 \(B)")
 
 //比较运算符
+var AA = 10
+var BB = 20
+print("A == B 结果为：\(AA == BB)")
+print("A != B 结果为：\(AA != BB)")
+print("A > B 结果为：\(AA > BB)")
+print("A < B 结果为：\(AA < BB)")
+print("A >= B 结果为：\(AA >= BB)")
+print("A <= B 结果为：\(AA <= BB)")
+
+//逻辑运算符
+var AAA = true
+var BBB = false
+print("AAA && BBB 结果为：\(AAA && BBB)")
+print("AAA || BBB 结果为：\(AAA || BBB)")
+print("!AAA 结果为：\(!AAA)")
+print("!BBB 结果为：\(!BBB)")
