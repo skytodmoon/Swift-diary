@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */; };
+		5B0DADAE1FB57FCB00F3ECEA /* EssenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */; };
+		5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADB11FB5800C00F3ECEA /* NewViewController.swift */; };
+		5B0DADB61FB5805800F3ECEA /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADB51FB5805800F3ECEA /* MeViewController.swift */; };
+		5B0DADBA1FB580DF00F3ECEA /* FriendStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0DADB91FB580DF00F3ECEA /* FriendStoryboard.storyboard */; };
+		5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADBB1FB580F000F3ECEA /* FriendViewController.swift */; };
+		5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */; };
+		5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -37,7 +45,15 @@
 
 /* Begin PBXFileReference section */
 		1584C66EC4D1DEF4D61FF8EC /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
-		29F18FBD761441CF2751EC43 /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F18FBD761441CF2751EC43 /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceViewController.swift; sourceTree = "<group>"; };
+		5B0DADB11FB5800C00F3ECEA /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		5B0DADB51FB5805800F3ECEA /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		5B0DADB91FB580DF00F3ECEA /* FriendStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FriendStoryboard.storyboard; sourceTree = "<group>"; };
+		5B0DADBB1FB580F000F3ECEA /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedValue.swift; sourceTree = "<group>"; };
+		5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,15 +62,15 @@
 		5B69382B1FAC466200E5702B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B69382D1FAC466200E5702B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B6938321FAC466200E5702B /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B6938361FAC466200E5702B /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____Tests.swift; sourceTree = "<group>"; };
+		5B6938361FAC466200E5702B /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____Tests.swift"; sourceTree = "<group>"; };
 		5B6938381FAC466200E5702B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B69383D1FAC466200E5702B /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B6938411FAC466200E5702B /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____UITests.swift; sourceTree = "<group>"; };
+		5B6938411FAC466200E5702B /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
 		5B6938431FAC466200E5702B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B6938541FAC480300E5702B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		69F508BAF13980CC0E526749 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
-		BBEF4C646F9368731F059E4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40505489A2A2B6AA988CB9C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEF4C646F9368731F059E4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40505489A2A2B6AA988CB9C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,96 @@
 				F40505489A2A2B6AA988CB9C /* Pods______UITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B0DADAB1FB57F8900F3ECEA /* Essence(精华) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADAC1FB57FAE00F3ECEA /* Controller */,
+			);
+			path = "Essence(精华)";
+			sourceTree = "<group>";
+		};
+		5B0DADAC1FB57FAE00F3ECEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B0DADAF1FB57FE500F3ECEA /* New(新帖) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADB01FB57FF500F3ECEA /* Controller */,
+			);
+			path = "New(新帖)";
+			sourceTree = "<group>";
+		};
+		5B0DADB01FB57FF500F3ECEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADB11FB5800C00F3ECEA /* NewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B0DADB31FB5803100F3ECEA /* Me(个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADB41FB5804000F3ECEA /* Controller */,
+			);
+			path = "Me(个人中心)";
+			sourceTree = "<group>";
+		};
+		5B0DADB41FB5804000F3ECEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADB51FB5805800F3ECEA /* MeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B0DADB71FB580AC00F3ECEA /* Friend(关注) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADB81FB580C100F3ECEA /* Controller */,
+			);
+			path = "Friend(关注)";
+			sourceTree = "<group>";
+		};
+		5B0DADB81FB580C100F3ECEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADBB1FB580F000F3ECEA /* FriendViewController.swift */,
+				5B0DADB91FB580DF00F3ECEA /* FriendStoryboard.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B0DADBD1FB5819000F3ECEA /* Other(其他) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADBF1FB581AE00F3ECEA /* Tools(工具类) */,
+				5B0DADBE1FB5819A00F3ECEA /* Category(扩展) */,
+			);
+			path = "Other(其他)";
+			sourceTree = "<group>";
+		};
+		5B0DADBE1FB5819A00F3ECEA /* Category(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */,
+			);
+			path = "Category(扩展)";
+			sourceTree = "<group>";
+		};
+		5B0DADBF1FB581AE00F3ECEA /* Tools(工具类) */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */,
+			);
+			path = "Tools(工具类)";
 			sourceTree = "<group>";
 		};
 		5B6938151FAC466200E5702B = {
@@ -159,23 +265,29 @@
 		5B69384F1FAC477400E5702B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5B6938521FAC47E400E5702B /* Main */,
+				5B0DADBD1FB5819000F3ECEA /* Other(其他) */,
+				5B0DADB71FB580AC00F3ECEA /* Friend(关注) */,
+				5B0DADB31FB5803100F3ECEA /* Me(个人中心) */,
+				5B0DADAF1FB57FE500F3ECEA /* New(新帖) */,
+				5B0DADAB1FB57F8900F3ECEA /* Essence(精华) */,
+				5B6938521FAC47E400E5702B /* Main(主页) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		5B6938521FAC47E400E5702B /* Main */ = {
+		5B6938521FAC47E400E5702B /* Main(主页) */ = {
 			isa = PBXGroup;
 			children = (
 				5B6938531FAC47E900E5702B /* Controller */,
 			);
-			path = Main;
+			path = "Main(主页)";
 			sourceTree = "<group>";
 		};
 		5B6938531FAC47E900E5702B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5B6938541FAC480300E5702B /* MainViewController.swift */,
+				5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +405,7 @@
 				5B69382C1FAC466200E5702B /* LaunchScreen.storyboard in Resources */,
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
+				5B0DADBA1FB580DF00F3ECEA /* FriendStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,8 +500,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0DADAE1FB57FCB00F3ECEA /* EssenceViewController.swift in Sources */,
+				5B0DADB61FB5805800F3ECEA /* MeViewController.swift in Sources */,
+				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
+				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
+				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
+				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
+				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
