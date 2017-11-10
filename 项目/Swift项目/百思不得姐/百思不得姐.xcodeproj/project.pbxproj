@@ -24,6 +24,9 @@
 		5B6938371FAC466200E5702B /* _____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938361FAC466200E5702B /* _____Tests.swift */; };
 		5B6938421FAC466200E5702B /* _____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938411FAC466200E5702B /* _____UITests.swift */; };
 		5B6938551FAC480300E5702B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938541FAC480300E5702B /* MainViewController.swift */; };
+		5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FE7371FB5999000182B52 /* MeFooterView.swift */; };
+		5B9FE73D1FB59C9B00182B52 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FE73B1FB59C9B00182B52 /* PublishViewController.swift */; };
+		5B9FE73E1FB59C9B00182B52 /* PublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FE73C1FB59C9B00182B52 /* PublishViewController.xib */; };
 		D1332C83366F29A8AD80A4E2 /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEF4C646F9368731F059E4C /* Pods______.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		5B6938411FAC466200E5702B /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
 		5B6938431FAC466200E5702B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B6938541FAC480300E5702B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B9FE7371FB5999000182B52 /* MeFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeFooterView.swift; sourceTree = "<group>"; };
+		5B9FE73B1FB59C9B00182B52 /* PublishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
+		5B9FE73C1FB59C9B00182B52 /* PublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishViewController.xib; sourceTree = "<group>"; };
 		69F508BAF13980CC0E526749 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		BBEF4C646F9368731F059E4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40505489A2A2B6AA988CB9C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				5B0DADB41FB5804000F3ECEA /* Controller */,
+				5B9FE7361FB5996300182B52 /* View */,
 			);
 			path = "Me(个人中心)";
 			sourceTree = "<group>";
@@ -275,6 +282,7 @@
 		5B69384F1FAC477400E5702B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5B9FE7391FB59C6F00182B52 /* Publish(公共) */,
 				5B0DADBD1FB5819000F3ECEA /* Other(其他) */,
 				5B0DADB71FB580AC00F3ECEA /* Friend(关注) */,
 				5B0DADB31FB5803100F3ECEA /* Me(个人中心) */,
@@ -299,6 +307,31 @@
 			children = (
 				5B6938541FAC480300E5702B /* MainViewController.swift */,
 				5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B9FE7361FB5996300182B52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B9FE7371FB5999000182B52 /* MeFooterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B9FE7391FB59C6F00182B52 /* Publish(公共) */ = {
+			isa = PBXGroup;
+			children = (
+				5B9FE73A1FB59C7F00182B52 /* Controller */,
+			);
+			path = "Publish(公共)";
+			sourceTree = "<group>";
+		};
+		5B9FE73A1FB59C7F00182B52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B9FE73B1FB59C9B00182B52 /* PublishViewController.swift */,
+				5B9FE73C1FB59C9B00182B52 /* PublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +449,7 @@
 				5B69382C1FAC466200E5702B /* LaunchScreen.storyboard in Resources */,
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
+				5B9FE73E1FB59C9B00182B52 /* PublishViewController.xib in Resources */,
 				5B0DADBA1FB580DF00F3ECEA /* FriendStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,12 +550,14 @@
 				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
+				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
 				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
 				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
 				5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
+				5B9FE73D1FB59C9B00182B52 /* PublishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

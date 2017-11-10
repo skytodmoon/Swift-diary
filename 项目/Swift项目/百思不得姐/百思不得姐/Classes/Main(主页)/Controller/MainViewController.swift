@@ -62,15 +62,6 @@ class MainViewController: UITabBarController {
         
         let vcs = [vc1, vc2, vc3, vc4]
         for vc in vcs {
-            let red = CGFloat(arc4random_uniform(UInt32(255)))
-            let green = CGFloat(arc4random_uniform(UInt32(255)))
-            let blue = CGFloat(arc4random_uniform(UInt32(255)))
-            
-            if #available(iOS 10.0, *) {
-                vc.view.backgroundColor = UIColor(displayP3Red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
-            } else {
-                // Fallback on earlier versions
-            }
             let nav = MainNavigationController(rootViewController: vc)
             nav.navigationBar.setBackgroundImage(UIImage(named:"navigationbarBackgroundWhite"), for: .default)
             addChildViewController(nav)
@@ -78,5 +69,5 @@ class MainViewController: UITabBarController {
         
         setValue(TabBar(), forKey: "tabBar")
     }
-    
+
 }

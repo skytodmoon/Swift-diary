@@ -35,6 +35,7 @@ class MeViewController: UITableViewController {
         tableView.sectionHeaderHeight = cellTextMargin
         tableView.sectionFooterHeight = 0
         tableView.contentInset = UIEdgeInsets(top: cellTextMargin - 35, left: 0, bottom: 0, right: 0)
+        tableView.tableFooterView = MeFooterView()
     }
 
     // MARK: - Table view data source
