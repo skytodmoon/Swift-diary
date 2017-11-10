@@ -15,6 +15,7 @@
 		5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADBB1FB580F000F3ECEA /* FriendViewController.swift */; };
 		5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */; };
 		5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */; };
+		5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC51FB5871900F3ECEA /* TabBar.swift */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		5B0DADBB1FB580F000F3ECEA /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedValue.swift; sourceTree = "<group>"; };
 		5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		5B0DADC51FB5871900F3ECEA /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 			path = "Tools(工具类)";
 			sourceTree = "<group>";
 		};
+		5B0DADC41FB586F700F3ECEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B0DADC51FB5871900F3ECEA /* TabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B6938151FAC466200E5702B = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				5B6938531FAC47E900E5702B /* Controller */,
+				5B0DADC41FB586F700F3ECEA /* View */,
 			);
 			path = "Main(主页)";
 			sourceTree = "<group>";
@@ -508,6 +519,7 @@
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
 				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
 				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
+				5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
 			);
