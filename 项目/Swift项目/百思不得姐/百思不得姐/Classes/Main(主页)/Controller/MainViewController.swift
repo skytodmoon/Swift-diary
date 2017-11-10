@@ -15,6 +15,7 @@ class MainViewController: UITabBarController {
         
         setUpTabBarUI()
         setUpControllerUI()
+
         
         
     }
