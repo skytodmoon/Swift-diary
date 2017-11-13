@@ -8,8 +8,27 @@
 
 import UIKit
 
+
 extension String {
     
-
+    public func height(_ size: CGSize, _ attributes: [NSAttributedStringKey: Any]?) -> CGFloat {
+        
+        let string = self as NSString
+        
+        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        
+        return stringSize.height
+        
+    }
+    
+    public func width(_ size: CGSize, _ attributes: [NSAttributedStringKey: Any]?) -> CGFloat {
+        
+        let string = self as NSString
+        
+        let stringSize = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+        
+        return stringSize.width
+        
+    }
     
 }

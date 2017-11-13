@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB6AD6A1FB9D1AC00D24B78 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6AD691FB9D1AC00D24B78 /* TextView.swift */; };
+		1DB6AD6C1FB9D1C000D24B78 /* PublishTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6AD6B1FB9D1C000D24B78 /* PublishTagView.swift */; };
+		1DB6AD6E1FB9D1D700D24B78 /* PublishTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB6AD6D1FB9D1D700D24B78 /* PublishTagView.xib */; };
+		1DB6AD701FB9D21600D24B78 /* PublishTagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6AD6F1FB9D21600D24B78 /* PublishTagButton.swift */; };
+		1DB6AD721FB9D24B00D24B78 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6AD711FB9D24B00D24B78 /* AddTagViewController.swift */; };
 		5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */; };
 		5B0DADAE1FB57FCB00F3ECEA /* EssenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */; };
 		5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADB11FB5800C00F3ECEA /* NewViewController.swift */; };
@@ -79,6 +84,11 @@
 
 /* Begin PBXFileReference section */
 		1584C66EC4D1DEF4D61FF8EC /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		1DB6AD691FB9D1AC00D24B78 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		1DB6AD6B1FB9D1C000D24B78 /* PublishTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTagView.swift; sourceTree = "<group>"; };
+		1DB6AD6D1FB9D1D700D24B78 /* PublishTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishTagView.xib; sourceTree = "<group>"; };
+		1DB6AD6F1FB9D21600D24B78 /* PublishTagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTagButton.swift; sourceTree = "<group>"; };
+		1DB6AD711FB9D24B00D24B78 /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
 		29F18FBD761441CF2751EC43 /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0DADA91FB57F6A00F3ECEA /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +177,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DB6AD681FB9D18F00D24B78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DB6AD691FB9D1AC00D24B78 /* TextView.swift */,
+				1DB6AD6B1FB9D1C000D24B78 /* PublishTagView.swift */,
+				1DB6AD6D1FB9D1D700D24B78 /* PublishTagView.xib */,
+				1DB6AD6F1FB9D21600D24B78 /* PublishTagButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1FFF79A61204A5767845FA30 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9FE73A1FB59C7F00182B52 /* Controller */,
+				1DB6AD681FB9D18F00D24B78 /* View */,
 			);
 			path = "Publish(公共)";
 			sourceTree = "<group>";
@@ -458,10 +480,11 @@
 		5B9FE73A1FB59C7F00182B52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B2E4F6D1FB9477500CEEF0A /* PublishNavigationController.swift */,
 				5B9FE73B1FB59C9B00182B52 /* PublishViewController.swift */,
 				5B9FE73C1FB59C9B00182B52 /* PublishViewController.xib */,
-				5B2E4F6D1FB9477500CEEF0A /* PublishNavigationController.swift */,
 				5B2E4F6F1FB947CC00CEEF0A /* PublishTextViewController.swift */,
+				1DB6AD711FB9D24B00D24B78 /* AddTagViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -577,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B69382C1FAC466200E5702B /* LaunchScreen.storyboard in Resources */,
+				1DB6AD6E1FB9D1D700D24B78 /* PublishTagView.xib in Resources */,
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
 				5B2E4F911FB9702500CEEF0A /* RefreshFooterView.xib in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
@@ -688,9 +712,12 @@
 				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
 				5B2A20D71FB92EE500B00340 /* MeWebViewController.swift in Sources */,
 				5B2E4F781FB9679700CEEF0A /* RecommendCategory.swift in Sources */,
+				1DB6AD6A1FB9D1AC00D24B78 /* TextView.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
 				5B2E4F9D1FB97A6100CEEF0A /* EssenceContentViewController.swift in Sources */,
+				1DB6AD6C1FB9D1C000D24B78 /* PublishTagView.swift in Sources */,
+				1DB6AD701FB9D21600D24B78 /* PublishTagButton.swift in Sources */,
 				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
 				5B2E4F8F1FB9701000CEEF0A /* RefreshFooterView.swift in Sources */,
 				5B2E4F6E1FB9477500CEEF0A /* PublishNavigationController.swift in Sources */,
@@ -715,6 +742,7 @@
 				5B2A20D41FB92C8C00B00340 /* MeVerticalButton.swift in Sources */,
 				5B2E4FA21FB97B2F00CEEF0A /* RecommendTags.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
+				1DB6AD721FB9D24B00D24B78 /* AddTagViewController.swift in Sources */,
 				5B2E4FA41FB97B4900CEEF0A /* Comment.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
 				5B9FE73D1FB59C9B00182B52 /* PublishViewController.swift in Sources */,
