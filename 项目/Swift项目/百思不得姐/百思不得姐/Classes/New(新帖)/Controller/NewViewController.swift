@@ -12,7 +12,12 @@ class NewViewController: EssenceViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(UIImage(named: "MainTagSubIcon"), for: .normal)
+        button.setBackgroundImage(UIImage(named: "MainTagSubIconClick"), for: .highlighted)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(tagClick), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         // Do any additional setup after loading the view.
     }
 

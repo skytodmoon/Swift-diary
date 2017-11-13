@@ -40,6 +40,12 @@
 		5B2E4F951FB976B900CEEF0A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F941FB976B900CEEF0A /* UIView+Extension.swift */; };
 		5B2E4F971FB976DC00CEEF0A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F961FB976DC00CEEF0A /* UIColor+Extension.swift */; };
 		5B2E4F991FB976F600CEEF0A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F981FB976F600CEEF0A /* String+Extension.swift */; };
+		5B2E4F9B1FB979C400CEEF0A /* RecommendTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F9A1FB979C400CEEF0A /* RecommendTagsViewController.swift */; };
+		5B2E4F9D1FB97A6100CEEF0A /* EssenceContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F9C1FB97A6100CEEF0A /* EssenceContentViewController.swift */; };
+		5B2E4FA01FB97AC300CEEF0A /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F9F1FB97AC300CEEF0A /* Content.swift */; };
+		5B2E4FA21FB97B2F00CEEF0A /* RecommendTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4FA11FB97B2F00CEEF0A /* RecommendTags.swift */; };
+		5B2E4FA41FB97B4900CEEF0A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4FA31FB97B4900CEEF0A /* Comment.swift */; };
+		5B2E4FA61FB97B5D00CEEF0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4FA51FB97B5D00CEEF0A /* User.swift */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -107,6 +113,12 @@
 		5B2E4F941FB976B900CEEF0A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5B2E4F961FB976DC00CEEF0A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5B2E4F981FB976F600CEEF0A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		5B2E4F9A1FB979C400CEEF0A /* RecommendTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTagsViewController.swift; sourceTree = "<group>"; };
+		5B2E4F9C1FB97A6100CEEF0A /* EssenceContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceContentViewController.swift; sourceTree = "<group>"; };
+		5B2E4F9F1FB97AC300CEEF0A /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		5B2E4FA11FB97B2F00CEEF0A /* RecommendTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTags.swift; sourceTree = "<group>"; };
+		5B2E4FA31FB97B4900CEEF0A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		5B2E4FA51FB97B5D00CEEF0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +189,7 @@
 		5B0DADAB1FB57F8900F3ECEA /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
+				5B2E4F9E1FB97AB200CEEF0A /* Model */,
 				5B0DADAC1FB57FAE00F3ECEA /* Controller */,
 			);
 			path = "Essence(精华)";
@@ -186,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0DADAD1FB57FCB00F3ECEA /* EssenceViewController.swift */,
+				5B2E4F9A1FB979C400CEEF0A /* RecommendTagsViewController.swift */,
+				5B2E4F9C1FB97A6100CEEF0A /* EssenceContentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +339,17 @@
 				5B2E4F901FB9702400CEEF0A /* RefreshFooterView.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		5B2E4F9E1FB97AB200CEEF0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B2E4F9F1FB97AC300CEEF0A /* Content.swift */,
+				5B2E4FA11FB97B2F00CEEF0A /* RecommendTags.swift */,
+				5B2E4FA31FB97B4900CEEF0A /* Comment.swift */,
+				5B2E4FA51FB97B5D00CEEF0A /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5B6938151FAC466200E5702B = {
@@ -664,6 +690,7 @@
 				5B2E4F781FB9679700CEEF0A /* RecommendCategory.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
+				5B2E4F9D1FB97A6100CEEF0A /* EssenceContentViewController.swift in Sources */,
 				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
 				5B2E4F8F1FB9701000CEEF0A /* RefreshFooterView.swift in Sources */,
 				5B2E4F6E1FB9477500CEEF0A /* PublishNavigationController.swift in Sources */,
@@ -671,11 +698,14 @@
 				5B2E4F721FB9487900CEEF0A /* RecommendViewController.swift in Sources */,
 				5B2E4F831FB9689F00CEEF0A /* RecommendUserCell.swift in Sources */,
 				5B2E4F8C1FB96B2200CEEF0A /* UIImage+Extension.swift in Sources */,
+				5B2E4F9B1FB979C400CEEF0A /* RecommendTagsViewController.swift in Sources */,
 				5B2E4F931FB9769000CEEF0A /* ProgressView.swift in Sources */,
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
 				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
+				5B2E4FA01FB97AC300CEEF0A /* Content.swift in Sources */,
 				5B2E4F7F1FB9688F00CEEF0A /* RecommendCategoryCell.swift in Sources */,
 				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
+				5B2E4FA61FB97B5D00CEEF0A /* User.swift in Sources */,
 				5B2E4F6C1FB946E500CEEF0A /* VerticalButton.swift in Sources */,
 				5B2E4F971FB976DC00CEEF0A /* UIColor+Extension.swift in Sources */,
 				5B2A20D21FB92C3A00B00340 /* MeContent.swift in Sources */,
@@ -683,7 +713,9 @@
 				5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */,
 				5B2E4F951FB976B900CEEF0A /* UIView+Extension.swift in Sources */,
 				5B2A20D41FB92C8C00B00340 /* MeVerticalButton.swift in Sources */,
+				5B2E4FA21FB97B2F00CEEF0A /* RecommendTags.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
+				5B2E4FA41FB97B4900CEEF0A /* Comment.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
 				5B9FE73D1FB59C9B00182B52 /* PublishViewController.swift in Sources */,
 			);
