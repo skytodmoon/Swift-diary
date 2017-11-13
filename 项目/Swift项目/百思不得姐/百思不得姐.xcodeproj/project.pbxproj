@@ -25,6 +25,15 @@
 		5B2E4F701FB947CC00CEEF0A /* PublishTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F6F1FB947CC00CEEF0A /* PublishTextViewController.swift */; };
 		5B2E4F721FB9487900CEEF0A /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F711FB9487900CEEF0A /* RecommendViewController.swift */; };
 		5B2E4F741FB9488600CEEF0A /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F731FB9488600CEEF0A /* LoginRegisterViewController.swift */; };
+		5B2E4F781FB9679700CEEF0A /* RecommendCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F771FB9679700CEEF0A /* RecommendCategory.swift */; };
+		5B2E4F7A1FB967AA00CEEF0A /* RecommendUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F791FB967AA00CEEF0A /* RecommendUser.swift */; };
+		5B2E4F7C1FB9684600CEEF0A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F7B1FB9684600CEEF0A /* TextField.swift */; };
+		5B2E4F7F1FB9688F00CEEF0A /* RecommendCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F7D1FB9688F00CEEF0A /* RecommendCategoryCell.swift */; };
+		5B2E4F801FB9688F00CEEF0A /* RecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E4F7E1FB9688F00CEEF0A /* RecommendCategoryCell.xib */; };
+		5B2E4F831FB9689F00CEEF0A /* RecommendUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F811FB9689F00CEEF0A /* RecommendUserCell.swift */; };
+		5B2E4F841FB9689F00CEEF0A /* RecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E4F821FB9689F00CEEF0A /* RecommendUserCell.xib */; };
+		5B2E4F861FB9695F00CEEF0A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F851FB9695F00CEEF0A /* UIImageView+Extension.swift */; };
+		5B2E4F8C1FB96B2200CEEF0A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F8B1FB96B2200CEEF0A /* UIImage+Extension.swift */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -77,6 +86,15 @@
 		5B2E4F6F1FB947CC00CEEF0A /* PublishTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTextViewController.swift; sourceTree = "<group>"; };
 		5B2E4F711FB9487900CEEF0A /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		5B2E4F731FB9488600CEEF0A /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
+		5B2E4F771FB9679700CEEF0A /* RecommendCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCategory.swift; sourceTree = "<group>"; };
+		5B2E4F791FB967AA00CEEF0A /* RecommendUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendUser.swift; sourceTree = "<group>"; };
+		5B2E4F7B1FB9684600CEEF0A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		5B2E4F7D1FB9688F00CEEF0A /* RecommendCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCategoryCell.swift; sourceTree = "<group>"; };
+		5B2E4F7E1FB9688F00CEEF0A /* RecommendCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCategoryCell.xib; sourceTree = "<group>"; };
+		5B2E4F811FB9689F00CEEF0A /* RecommendUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendUserCell.swift; sourceTree = "<group>"; };
+		5B2E4F821FB9689F00CEEF0A /* RecommendUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendUserCell.xib; sourceTree = "<group>"; };
+		5B2E4F851FB9695F00CEEF0A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		5B2E4F8B1FB96B2200CEEF0A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,8 +217,9 @@
 		5B0DADB71FB580AC00F3ECEA /* Friend(关注) */ = {
 			isa = PBXGroup;
 			children = (
-				5B2E4F691FB946CC00CEEF0A /* View */,
+				5B2E4F761FB9676900CEEF0A /* Model */,
 				5B0DADB81FB580C100F3ECEA /* Controller */,
+				5B2E4F691FB946CC00CEEF0A /* View */,
 			);
 			path = "Friend(关注)";
 			sourceTree = "<group>";
@@ -229,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */,
+				5B2E4F851FB9695F00CEEF0A /* UIImageView+Extension.swift */,
+				5B2E4F8B1FB96B2200CEEF0A /* UIImage+Extension.swift */,
 			);
 			path = "Category(扩展)";
 			sourceTree = "<group>";
@@ -261,8 +282,22 @@
 			isa = PBXGroup;
 			children = (
 				5B2E4F6B1FB946E500CEEF0A /* VerticalButton.swift */,
+				5B2E4F7B1FB9684600CEEF0A /* TextField.swift */,
+				5B2E4F7D1FB9688F00CEEF0A /* RecommendCategoryCell.swift */,
+				5B2E4F7E1FB9688F00CEEF0A /* RecommendCategoryCell.xib */,
+				5B2E4F811FB9689F00CEEF0A /* RecommendUserCell.swift */,
+				5B2E4F821FB9689F00CEEF0A /* RecommendUserCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B2E4F761FB9676900CEEF0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B2E4F771FB9679700CEEF0A /* RecommendCategory.swift */,
+				5B2E4F791FB967AA00CEEF0A /* RecommendUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5B6938151FAC466200E5702B = {
@@ -493,8 +528,10 @@
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
 				5B2A20D81FB92EE500B00340 /* MeWebViewController.xib in Resources */,
+				5B2E4F801FB9688F00CEEF0A /* RecommendCategoryCell.xib in Resources */,
 				5B9FE73E1FB59C9B00182B52 /* PublishViewController.xib in Resources */,
 				5B0DADBA1FB580DF00F3ECEA /* FriendStoryboard.storyboard in Resources */,
+				5B2E4F841FB9689F00CEEF0A /* RecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,19 +629,26 @@
 				5B2E4F701FB947CC00CEEF0A /* PublishTextViewController.swift in Sources */,
 				5B0DADAE1FB57FCB00F3ECEA /* EssenceViewController.swift in Sources */,
 				5B0DADB61FB5805800F3ECEA /* MeViewController.swift in Sources */,
+				5B2E4F7C1FB9684600CEEF0A /* TextField.swift in Sources */,
 				5B2E4F741FB9488600CEEF0A /* LoginRegisterViewController.swift in Sources */,
 				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
 				5B2A20D71FB92EE500B00340 /* MeWebViewController.swift in Sources */,
+				5B2E4F781FB9679700CEEF0A /* RecommendCategory.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
 				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
 				5B2E4F6E1FB9477500CEEF0A /* PublishNavigationController.swift in Sources */,
+				5B2E4F861FB9695F00CEEF0A /* UIImageView+Extension.swift in Sources */,
 				5B2E4F721FB9487900CEEF0A /* RecommendViewController.swift in Sources */,
+				5B2E4F831FB9689F00CEEF0A /* RecommendUserCell.swift in Sources */,
+				5B2E4F8C1FB96B2200CEEF0A /* UIImage+Extension.swift in Sources */,
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
 				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
+				5B2E4F7F1FB9688F00CEEF0A /* RecommendCategoryCell.swift in Sources */,
 				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
 				5B2E4F6C1FB946E500CEEF0A /* VerticalButton.swift in Sources */,
 				5B2A20D21FB92C3A00B00340 /* MeContent.swift in Sources */,
+				5B2E4F7A1FB967AA00CEEF0A /* RecommendUser.swift in Sources */,
 				5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */,
 				5B2A20D41FB92C8C00B00340 /* MeVerticalButton.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
