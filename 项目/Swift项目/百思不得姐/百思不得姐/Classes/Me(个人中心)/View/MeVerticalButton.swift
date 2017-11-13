@@ -11,10 +11,10 @@ import Kingfisher
 
 class MeVerticalButton: UIButton {
 
-    var content: MeContent! {
+    var content: MeContent? {
         didSet {
-            setTitle(content.name, for: .normal)
-            let url = URL(string: content.icon)
+            setTitle(content?.name, for: .normal)
+            let url = URL(string: (content?.icon)!)
             kf.setImage(with: url!, for: .normal)
             addTarget(self, action: #selector(click(_:)), for: .touchUpInside)
         }
@@ -59,9 +59,7 @@ extension MeVerticalButton {
     
     @objc fileprivate func click(_ btn: MeVerticalButton) {
         
-        print("Button Click --- ", content.url)
-        
-        guard content.url.hasPrefix("http:") else {
+        guard (content?.url.hasPrefix("http:"))! else {
             return
         }
         
@@ -69,7 +67,7 @@ extension MeVerticalButton {
             return
         }
         let webVC = MeWebViewController()
-        webVC.url = content.url
+        webVC.url = content?.url
         
         let vc = tab.childViewControllers[tab.selectedIndex] as! UINavigationController
         vc.pushViewController(webVC, animated: true)

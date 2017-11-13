@@ -37,35 +37,33 @@ class MeViewController: UITableViewController {
         tableView.contentInset = UIEdgeInsets(top: cellTextMargin - 35, left: 0, bottom: 0, right: 0)
         tableView.tableFooterView = MeFooterView()
     }
+}
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
-    }
-
+extension MeViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "meCell", for: indexPath)
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "meCell")
         
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "meCell")
         }
+        
         if indexPath.section == 0 {
-            cell.textLabel?.text = "登录注册"
-        }else {
-            cell.textLabel?.text = "离线下载"
+            cell?.textLabel?.text = "登录注册"
+        } else {
+            cell?.textLabel?.text = "离线下载"
         }
-        // Configure the cell...
-
-        return cell
+        
+        return cell!
+        
     }
- 
-
 }
+

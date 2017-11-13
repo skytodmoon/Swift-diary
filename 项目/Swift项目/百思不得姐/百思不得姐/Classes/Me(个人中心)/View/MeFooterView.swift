@@ -30,7 +30,7 @@ class MeFooterView: UIView {
             ]
         
         Alamofire.request(url!, method: .get, parameters: parameter).responseJSON { (response) in
-        
+            
             switch response.result {
                 
             case let .success(value):
@@ -40,9 +40,8 @@ class MeFooterView: UIView {
                 guard let datas = dic["square_list"] as? [[String: Any]] else {
                     return
                 }
-                
-                let contents = MeContent.mj_objectArray(withKeyValuesArray: datas) as! [MeContent]
-                self.setupButtons(contents)
+//                let contents = MeContent.mj_objectArray(withKeyValuesArray: datas) as! [MeContent]
+//                self.setupButtons(contents)
                 
             case let .failure(error):
                 print("me contetn error = \(error)")
