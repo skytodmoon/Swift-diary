@@ -34,6 +34,8 @@
 		5B2E4F841FB9689F00CEEF0A /* RecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E4F821FB9689F00CEEF0A /* RecommendUserCell.xib */; };
 		5B2E4F861FB9695F00CEEF0A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F851FB9695F00CEEF0A /* UIImageView+Extension.swift */; };
 		5B2E4F8C1FB96B2200CEEF0A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F8B1FB96B2200CEEF0A /* UIImage+Extension.swift */; };
+		5B2E4F8F1FB9701000CEEF0A /* RefreshFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E4F8E1FB9701000CEEF0A /* RefreshFooterView.swift */; };
+		5B2E4F911FB9702500CEEF0A /* RefreshFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2E4F901FB9702400CEEF0A /* RefreshFooterView.xib */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -95,6 +97,8 @@
 		5B2E4F821FB9689F00CEEF0A /* RecommendUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendUserCell.xib; sourceTree = "<group>"; };
 		5B2E4F851FB9695F00CEEF0A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		5B2E4F8B1FB96B2200CEEF0A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		5B2E4F8E1FB9701000CEEF0A /* RefreshFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooterView.swift; sourceTree = "<group>"; };
+		5B2E4F901FB9702400CEEF0A /* RefreshFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshFooterView.xib; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		5B0DADBD1FB5819000F3ECEA /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				5B2E4F8D1FB96FF400CEEF0A /* view */,
 				5B0DADBF1FB581AE00F3ECEA /* Tools(工具类) */,
 				5B0DADBE1FB5819A00F3ECEA /* Category(扩展) */,
 			);
@@ -298,6 +303,15 @@
 				5B2E4F791FB967AA00CEEF0A /* RecommendUser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5B2E4F8D1FB96FF400CEEF0A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5B2E4F8E1FB9701000CEEF0A /* RefreshFooterView.swift */,
+				5B2E4F901FB9702400CEEF0A /* RefreshFooterView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		5B6938151FAC466200E5702B = {
@@ -526,6 +540,7 @@
 			files = (
 				5B69382C1FAC466200E5702B /* LaunchScreen.storyboard in Resources */,
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
+				5B2E4F911FB9702500CEEF0A /* RefreshFooterView.xib in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
 				5B2A20D81FB92EE500B00340 /* MeWebViewController.xib in Resources */,
 				5B2E4F801FB9688F00CEEF0A /* RecommendCategoryCell.xib in Resources */,
@@ -637,6 +652,7 @@
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
 				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
+				5B2E4F8F1FB9701000CEEF0A /* RefreshFooterView.swift in Sources */,
 				5B2E4F6E1FB9477500CEEF0A /* PublishNavigationController.swift in Sources */,
 				5B2E4F861FB9695F00CEEF0A /* UIImageView+Extension.swift in Sources */,
 				5B2E4F721FB9487900CEEF0A /* RecommendViewController.swift in Sources */,

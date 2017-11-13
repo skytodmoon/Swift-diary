@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GgM-rj-V0s">
-                                <rect key="frame" x="163.5" y="225" width="48" height="48"/>
+                                <rect key="frame" x="163" y="225" width="48" height="48"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-1N-mkU">
-                                <rect key="frame" x="72.5" y="303" width="230.5" height="61"/>
+                                <rect key="frame" x="72" y="303" width="230.5" height="61"/>
                                 <string key="text">快快登录吧, 关注百思最in牛人
 好友动态让你过把瘾儿~
 欧耶~~~~!</string>
@@ -64,7 +64,7 @@
         <!--Login Register View Controller-->
         <scene sceneID="trr-ys-mom">
             <objects>
-                <viewController id="TLa-16-wo3" customClass="LoginRegisterViewController" sceneMemberID="viewController">
+                <viewController id="TLa-16-wo3" customClass="LoginRegisterViewController" customModule="百思不得姐" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XBN-UK-KrQ" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
                                             <constraint firstAttribute="height" constant="1" id="TTV-1w-1qy"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-By-3pR" customClass="ZYDVerticalButton" customModule="百思不得姐" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-By-3pR" customClass="VerticalButton" customModule="百思不得姐" customModuleProvider="target">
                                         <rect key="frame" x="152" y="51" width="70" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="UV4-wC-IpC"/>
@@ -118,7 +118,7 @@
                                         <state key="normal" title="新浪微博" image="login_sina_icon"/>
                                         <state key="highlighted" title="新浪微博" image="login_sina_icon_click"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chP-VX-6wK" customClass="ZYDVerticalButton" customModule="百思不得姐" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chP-VX-6wK" customClass="VerticalButton" customModule="百思不得姐" customModuleProvider="target">
                                         <rect key="frame" x="52" y="51" width="70" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="See-fx-rKe"/>
@@ -128,7 +128,7 @@
                                         <state key="normal" title="QQ登录" image="login_QQ_icon"/>
                                         <state key="highlighted" title="QQ登录" image="login_QQ_icon_click"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4x-dz-ETb" customClass="ZYDVerticalButton" customModule="百思不得姐" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4x-dz-ETb" customClass="VerticalButton" customModule="百思不得姐" customModuleProvider="target">
                                         <rect key="frame" x="252" y="51" width="70" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="Whf-8q-kdh"/>
@@ -165,13 +165,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v54-mB-9fq">
                                         <rect key="frame" x="54" y="0.0" width="266" height="92"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-rN-Fof" customClass="ZYDTextField" customModule="百思不得姐" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-rN-Fof" customClass="TextField" customModule="百思不得姐" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="0.0" width="256" height="46"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-mn-OdV" customClass="ZYDTextField" customModule="百思不得姐" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-mn-OdV" customClass="TextField" customModule="百思不得姐" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="46" width="256" height="46"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -232,13 +232,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REB-LR-vUe">
                                         <rect key="frame" x="54" y="0.0" width="266" height="92"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-s8-z4q" customClass="ZYDTextField" customModule="百思不得姐" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-s8-z4q" customClass="TextField" customModule="百思不得姐" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="0.0" width="256" height="46"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wel-KN-bTf" customClass="ZYDTextField" customModule="百思不得姐" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wel-KN-bTf" customClass="TextField" customModule="百思不得姐" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="46" width="256" height="46"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -319,7 +319,7 @@
         <!--Recommend View Controller-->
         <scene sceneID="4fg-Q4-sde">
             <objects>
-                <viewController storyboardIdentifier="RecommendVC" id="yuh-xc-Crc" customClass="RecommendViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendVC" id="yuh-xc-Crc" customClass="RecommendViewController" customModule="百思不得姐" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qj-3P-Fea">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
