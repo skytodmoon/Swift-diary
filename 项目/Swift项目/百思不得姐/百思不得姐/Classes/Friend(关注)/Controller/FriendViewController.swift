@@ -13,7 +13,9 @@ class FriendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // 设置导航栏标题
+        navigationItem.title = "我的关注"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: "friendsRecommentIcon", highImage: "friendsRecommentIcon-click", targat: self, action: #selector(tagClick))
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +23,12 @@ class FriendViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func tagClick() {
+        
+        let vc = UIStoryboard(name: "FriendStoryboard", bundle: nil).instantiateViewController(withIdentifier: "RecommendVC")
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
-    */
 
 }

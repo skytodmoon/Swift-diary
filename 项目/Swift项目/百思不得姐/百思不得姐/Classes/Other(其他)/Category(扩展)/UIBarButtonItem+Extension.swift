@@ -10,13 +10,14 @@ import UIKit
 
 extension UIBarButtonItem {
     
-    convenience init(image: String, highImage: String, target: Any, action: Selector){
+    convenience init(image: String, highImage: String, targat:Any, action: Selector)  {
         let button = UIButton(type: .custom)
-        button.setBackgroundImage(UIImage(named: image), for: .normal)
-        button.setBackgroundImage(UIImage(named: highImage), for: .highlighted)
-        button.addTarget(target, action: action, for: .touchUpInside)
+        button.setBackgroundImage(UIImage(named:image), for: .normal)
+        button.setBackgroundImage(UIImage(named:highImage), for: .highlighted)
+        button.addTarget(targat, action: action, for: .touchUpInside)
         button.sizeToFit()
         self.init(customView: button)
     }
     
 }
+
