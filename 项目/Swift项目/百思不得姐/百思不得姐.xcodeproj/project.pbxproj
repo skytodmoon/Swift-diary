@@ -16,6 +16,10 @@
 		5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */; };
 		5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */; };
 		5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DADC51FB5871900F3ECEA /* TabBar.swift */; };
+		5B2A20D21FB92C3A00B00340 /* MeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A20D11FB92C3A00B00340 /* MeContent.swift */; };
+		5B2A20D41FB92C8C00B00340 /* MeVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A20D31FB92C8C00B00340 /* MeVerticalButton.swift */; };
+		5B2A20D71FB92EE500B00340 /* MeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A20D51FB92EE500B00340 /* MeWebViewController.swift */; };
+		5B2A20D81FB92EE500B00340 /* MeWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A20D61FB92EE500B00340 /* MeWebViewController.xib */; };
 		5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938211FAC466200E5702B /* AppDelegate.swift */; };
 		5B6938241FAC466200E5702B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6938231FAC466200E5702B /* ViewController.swift */; };
 		5B6938271FAC466200E5702B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6938251FAC466200E5702B /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		5B0DADC01FB581DA00F3ECEA /* FixedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedValue.swift; sourceTree = "<group>"; };
 		5B0DADC21FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		5B0DADC51FB5871900F3ECEA /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		5B2A20D11FB92C3A00B00340 /* MeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeContent.swift; sourceTree = "<group>"; };
+		5B2A20D31FB92C8C00B00340 /* MeVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVerticalButton.swift; sourceTree = "<group>"; };
+		5B2A20D51FB92EE500B00340 /* MeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeWebViewController.swift; sourceTree = "<group>"; };
+		5B2A20D61FB92EE500B00340 /* MeWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeWebViewController.xib; sourceTree = "<group>"; };
 		5B69381E1FAC466200E5702B /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6938211FAC466200E5702B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6938231FAC466200E5702B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				5B0DADB41FB5804000F3ECEA /* Controller */,
+				5B2A20D01FB92C1000B00340 /* Model */,
 				5B9FE7361FB5996300182B52 /* View */,
 			);
 			path = "Me(个人中心)";
@@ -171,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0DADB51FB5805800F3ECEA /* MeViewController.swift */,
+				5B2A20D51FB92EE500B00340 /* MeWebViewController.swift */,
+				5B2A20D61FB92EE500B00340 /* MeWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +234,14 @@
 				5B0DADC51FB5871900F3ECEA /* TabBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B2A20D01FB92C1000B00340 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B2A20D11FB92C3A00B00340 /* MeContent.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5B6938151FAC466200E5702B = {
@@ -315,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9FE7371FB5999000182B52 /* MeFooterView.swift */,
+				5B2A20D31FB92C8C00B00340 /* MeVerticalButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +469,7 @@
 				5B69382C1FAC466200E5702B /* LaunchScreen.storyboard in Resources */,
 				5B6938291FAC466200E5702B /* Assets.xcassets in Resources */,
 				5B6938271FAC466200E5702B /* Main.storyboard in Resources */,
+				5B2A20D81FB92EE500B00340 /* MeWebViewController.xib in Resources */,
 				5B9FE73E1FB59C9B00182B52 /* PublishViewController.xib in Resources */,
 				5B0DADBA1FB580DF00F3ECEA /* FriendStoryboard.storyboard in Resources */,
 			);
@@ -548,13 +569,16 @@
 				5B0DADAE1FB57FCB00F3ECEA /* EssenceViewController.swift in Sources */,
 				5B0DADB61FB5805800F3ECEA /* MeViewController.swift in Sources */,
 				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
+				5B2A20D71FB92EE500B00340 /* MeWebViewController.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,
 				5B0DADC11FB581DA00F3ECEA /* FixedValue.swift in Sources */,
 				5B9FE7381FB5999000182B52 /* MeFooterView.swift in Sources */,
 				5B6938241FAC466200E5702B /* ViewController.swift in Sources */,
 				5B0DADBC1FB580F000F3ECEA /* FriendViewController.swift in Sources */,
 				5B0DADB21FB5800C00F3ECEA /* NewViewController.swift in Sources */,
+				5B2A20D21FB92C3A00B00340 /* MeContent.swift in Sources */,
 				5B0DADC61FB5871900F3ECEA /* TabBar.swift in Sources */,
+				5B2A20D41FB92C8C00B00340 /* MeVerticalButton.swift in Sources */,
 				5B0DADAA1FB57F6A00F3ECEA /* MainNavigationController.swift in Sources */,
 				5B6938221FAC466200E5702B /* AppDelegate.swift in Sources */,
 				5B9FE73D1FB59C9B00182B52 /* PublishViewController.swift in Sources */,
