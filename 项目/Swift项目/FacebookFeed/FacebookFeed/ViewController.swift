@@ -37,6 +37,10 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         return CGSizeMake(view.frame.width, 400)
     }
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        collectionView?.collectionViewLayout.invalidateLayout()
+    }
 
 }
 
