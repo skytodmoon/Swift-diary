@@ -210,8 +210,9 @@
 		5B0DADAB1FB57F8900F3ECEA /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
-				5B2E4F9E1FB97AB200CEEF0A /* Model */,
 				5B0DADAC1FB57FAE00F3ECEA /* Controller */,
+				5BC42C9B1FBA8254002FA2AC /* View */,
+				5B2E4F9E1FB97AB200CEEF0A /* Model */,
 			);
 			path = "Essence(精华)";
 			sourceTree = "<group>";
@@ -265,9 +266,9 @@
 		5B0DADB71FB580AC00F3ECEA /* Friend(关注) */ = {
 			isa = PBXGroup;
 			children = (
-				5B2E4F761FB9676900CEEF0A /* Model */,
 				5B0DADB81FB580C100F3ECEA /* Controller */,
 				5B2E4F691FB946CC00CEEF0A /* View */,
+				5B2E4F761FB9676900CEEF0A /* Model */,
 			);
 			path = "Friend(关注)";
 			sourceTree = "<group>";
@@ -487,6 +488,13 @@
 				1DB6AD711FB9D24B00D24B78 /* AddTagViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BC42C9B1FBA8254002FA2AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
