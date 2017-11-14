@@ -7,15 +7,43 @@
 //
 
 import UIKit
-
+import Kingfisher
 class ContentVoice: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet weak var bgView: UIImageView!
+    
+    @IBOutlet weak var pictureView: UIImageView!
+    
+    @IBOutlet weak var playCountLabel: UILabel!
+    
+    @IBOutlet weak var voiceTimeLabel: UILabel!
+    
+    @IBOutlet weak var palyButton: UIButton!
+    
+    
+    static func voiceView() -> ContentVoice {
+        return Bundle.main.loadNibNamed("ContentVoice", owner: nil, options: nil)!.last as! ContentVoice
     }
-    */
-
+    
+    
+    public func setupView(_ content: Content) {
+        
+        let url = URL(string: content.large_image)
+        
+        pictureView.kf.setImage(with: url!)
+        
+        playCountLabel.text = "\(content.playcount)播放"
+        
+        let min = content.voicetime / 60
+        
+        let second = content.voicetime % 60
+        
+        voiceTimeLabel.text = "\(min):\(second)"
+    }
+    
+    @IBAction func play(_ sender: UIButton) {
+        
+    }
+    
+    
 }

@@ -78,6 +78,7 @@
 		5BC42CB71FBA8396002FA2AC /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42CB61FBA8396002FA2AC /* HeaderFooterView.swift */; };
 		5BC42CBA1FBA83A7002FA2AC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42CB81FBA83A7002FA2AC /* CommentCell.swift */; };
 		5BC42CBB1FBA83A7002FA2AC /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC42CB91FBA83A7002FA2AC /* CommentCell.xib */; };
+		5BC42CBD1FBA8CFF002FA2AC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42CBC1FBA8CFF002FA2AC /* Date+Extension.swift */; };
 		D1332C83366F29A8AD80A4E2 /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEF4C646F9368731F059E4C /* Pods______.framework */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,7 @@
 		5BC42CB61FBA8396002FA2AC /* HeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterView.swift; sourceTree = "<group>"; };
 		5BC42CB81FBA83A7002FA2AC /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		5BC42CB91FBA83A7002FA2AC /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		5BC42CBC1FBA8CFF002FA2AC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		69F508BAF13980CC0E526749 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		BBEF4C646F9368731F059E4C /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40505489A2A2B6AA988CB9C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +340,7 @@
 				5B2E4F941FB976B900CEEF0A /* UIView+Extension.swift */,
 				5B2E4F961FB976DC00CEEF0A /* UIColor+Extension.swift */,
 				5B2E4F981FB976F600CEEF0A /* String+Extension.swift */,
+				5BC42CBC1FBA8CFF002FA2AC /* Date+Extension.swift */,
 			);
 			path = "Category(扩展)";
 			sourceTree = "<group>";
@@ -775,6 +778,7 @@
 				5B2E4F741FB9488600CEEF0A /* LoginRegisterViewController.swift in Sources */,
 				5B0DADC31FB581FF00F3ECEA /* UIBarButtonItem+Extension.swift in Sources */,
 				5B2A20D71FB92EE500B00340 /* MeWebViewController.swift in Sources */,
+				5BC42CBD1FBA8CFF002FA2AC /* Date+Extension.swift in Sources */,
 				5B2E4F781FB9679700CEEF0A /* RecommendCategory.swift in Sources */,
 				1DB6AD6A1FB9D1AC00D24B78 /* TextView.swift in Sources */,
 				5B6938551FAC480300E5702B /* MainViewController.swift in Sources */,

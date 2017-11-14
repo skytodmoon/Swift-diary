@@ -7,18 +7,55 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CommentCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    static let commentCellIdentifier: String = "commentCell"
+    
+    static func commentCell(_ tableView: UITableView) -> CommentCell {
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: CommentCell.commentCellIdentifier)
+        
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed("CommentCell", owner: nil, options: nil)?.last as? UITableViewCell
+        }
+        return cell as! CommentCell
     }
     
+    @IBOutlet weak var headerView: UIImageView!
+    
+    @IBOutlet weak var sexView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    @IBOutlet weak var zaiCountLabel: UILabel!
+    
+    public func setupUI(_ comment: Comment) {
+        
+        headerView.setHeaderImage(comment.user.profile_image)
+        
+        sexView.image = comment.user.sex == "m" ? UIImage(named: "Profile_manIcon") : UIImage(named: "Profile_womanIcon")
+        
+        nameLabel.text = comment.user.username
+        
+        contentLabel.text = comment.content
+        
+        zaiCountLabel.text = "\(comment.like_count)"
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    // MARK: - 设置为true 让自身成为第一响应者
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    // MARK: - 设置为false 不使用系统自带的item
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        return false
+    }
 }

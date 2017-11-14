@@ -36,87 +36,184 @@ class EssenceContentViewController: UITableViewController {
     let footView: RefreshFooterView = RefreshFooterView.footerView()
     
     var currentIndex = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshView), name: SelectTabberNotification, object: nil)
+        //        tableView.register(ContentCell., forCellReuseIdentifier: indentifier)
+        
+        tableView.register(UINib.init(nibName: "ContentCell", bundle: nil), forCellReuseIdentifier: indentifier)
+        
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
+        var top: CGFloat = 99
+        var bottom: CGFloat = 49
+        if view.frame.height == 768 {
+            top += 24
+            bottom += 34
+        }
+        // 设置Inset
+        tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset
+        tableView.separatorStyle = .none
+        // 添加刷新控件
+        setupRefresh()
     }
-
+    
+    @objc func refreshView()  {
+        
+        
+        if currentIndex == tabBarController?.selectedIndex && view.isShowingOnKeyWindow() {
+            print("点击tabbar刷新")
+            tableView.mj_header.beginRefreshing()
+        }
+        // 记录当前选中
+        currentIndex = tabBarController!.selectedIndex
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    fileprivate func setupRefresh() {
+        tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadNewContents))
+        // 自动改变透明度
+        tableView.mj_header.isAutomaticallyChangeAlpha = true
+        tableView.mj_header.beginRefreshing()
+        
+        tableView.tableFooterView = footView
+        footView.delegate = self
+        footView.finishLoadData()
+        footView.isHidden = true
     }
-
+    
+}
+// MARK: - 上拉刷新 下拉刷新操作
+extension EssenceContentViewController {
+    
+    private func a() -> String {
+        if parent.self!.isKind(of: NewViewController.self) {
+            return "newlist"
+        }
+        return "list"
+    }
+    
+    @objc fileprivate func loadNewContents() {
+        
+        var parameter = [String: Any]()
+        parameter["a"] = a()
+        parameter["c"] = "data"
+        parameter["type"] = type.rawValue
+        
+        let url = URL(string: "http://api.budejie.com/api/api_open.php")
+        Alamofire.request(url!, method: .get, parameters: parameter).responseJSON { (response) in
+            
+            switch response.result {
+            case let .success(value):
+                
+                guard let dict = value as? [String: Any] else {
+                    return
+                }
+                
+                guard let datas = dict["list"] as? [[String: Any]] else {
+                    return
+                }
+                
+                if let lastTime = dict["info"] as? [String: Any] {
+                    self.maxTime = (lastTime["maxtime"] as? String) ?? ""
+                }
+                
+                //
+                self.contents = Content.mj_objectArray(withKeyValuesArray: datas) as! [Content]
+                
+                self.tableView.mj_header.endRefreshing()
+                self.page = 0
+                self.tableView.reloadData()
+                self.footView.isHidden = false
+                
+            case let .failure(error):
+                
+                print("load content \(error)")
+            }
+        }
+    }
+    
+    fileprivate func loadMoreContents() {
+        
+        var parameter = [String: Any]()
+        parameter["a"] = a()
+        parameter["c"] = "data"
+        parameter["type"] = type.rawValue
+        let p = page + 1
+        parameter["page"] = p
+        parameter["maxtime"] = maxTime
+        
+        
+        let url = URL(string: "http://api.budejie.com/api/api_open.php")
+        Alamofire.request(url!, method: .get, parameters: parameter).responseJSON { (response) in
+            
+            switch response.result {
+            case let .success(value):
+                
+                guard let dict = value as? [String: Any] else {
+                    return
+                }
+                
+                guard let datas = dict["list"] as? [[String: Any]] else {
+                    return
+                }
+                
+                if let lastTime = dict["info"] as? [String: Any] {
+                    self.maxTime = (lastTime["maxtime"] as? String) ?? ""
+                }
+                
+                self.contents = Content.mj_objectArray(withKeyValuesArray: datas) as! [Content]
+                self.page += 1
+                self.tableView.reloadData()
+                self.footView.finishLoadData()
+            case let .failure(error):
+                
+                print("load content \(error)")
+            }
+        }
+    }
+}
+// MARK: - dataSource
+extension EssenceContentViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return contents.count
     }
-
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: indentifier) as! ContentCell
+        cell.content = contents[indexPath.row]
+        cell.content?.cellHeight
+        cell.setupUI()
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+// MARK: - delegate
+extension EssenceContentViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = CommentViewController()
+        vc.content = contents[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let content = contents[indexPath.row]
+        // get - only
+        //        content.cellHeight = 0
+        return content.cellHeight
+    }
+}
+
+extension EssenceContentViewController: RefreshFooterViewDelegate {
+    func loadMoreData(_ footerView: RefreshFooterView) {
+        loadMoreContents()
+    }
+}
+
+
