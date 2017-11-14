@@ -90,6 +90,13 @@ class FeedCell: UICollectionViewCell {
         return imageView
     }()
     
+    let linkesCommentsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "488 条  10.7K 赞"
+        label.font = UIFont.systemFontOfSize(12)
+        return label
+    }()
+    
     
     func setupViews(){
         backgroundColor = UIColor.whiteColor()
@@ -97,11 +104,13 @@ class FeedCell: UICollectionViewCell {
         addSubview(profileImageView)
         addSubview(statusTextView)
         addSubview(statusImageView)
+        addSubview(linkesCommentsLabel)
         addConstraintsWithFormat("H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         addConstraintsWithFormat("H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat("H:|[v0]|", views:statusImageView)
+        addConstraintsWithFormat("H:|-12-[v0]|", views:linkesCommentsLabel)
         addConstraintsWithFormat("V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]|", views: profileImageView,statusTextView,statusImageView)
+        addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-|", views: profileImageView,statusTextView,statusImageView,linkesCommentsLabel)
 
     }
 }
