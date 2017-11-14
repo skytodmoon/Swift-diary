@@ -35,7 +35,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(view.frame.width, 60)
+        return CGSizeMake(view.frame.width, 380)
     }
 
 }
@@ -52,31 +52,69 @@ class FeedCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sample Name"
-        label.font = UIFont.boldSystemFontOfSize(14)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 2
+        let attributedText = NSMutableAttributedString(string: "醉看红尘这场梦", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)])
+        attributedText.appendAttributedString(NSAttributedString(string: "\n 22岁 * 深圳 南山", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName: UIColor(red: 155/255,green: 161/255, blue: 171/255, alpha: 1)]))
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+        
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: "globe_small")
+        attachment.bounds = CGRectMake(0, -2, 12, 12)
+        attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
+        label.attributedText = attributedText
         return label
     }()
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage(named: "headImage.png")
         imageView.contentMode = .ScaleAspectFit
-        imageView.backgroundColor = UIColor.redColor()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    let statusTextView: UITextView = {
+        let textView = UITextView()
+        textView.text = "一位喜欢Swift语言的ios程序员"
+        textView.font = UIFont.systemFontOfSize(14)
+        return textView
+    }()
+    
+    let statusImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "You name")
+        imageView.contentMode = .ScaleAspectFill
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
     
     func setupViews(){
         backgroundColor = UIColor.whiteColor()
         addSubview(nameLabel)
         addSubview(profileImageView)
-        
-        
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-8-[v0(44)]-8-[v1]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": profileImageView, "v1":nameLabel]))
-        
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        
-        
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-8-[v0(44)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": profileImageView]))
+        addSubview(statusTextView)
+        addSubview(statusImageView)
+        addConstraintsWithFormat("H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
+        addConstraintsWithFormat("H:|-4-[v0]-4-|", views: statusTextView)
+        addConstraintsWithFormat("H:|[v0]|", views:statusImageView)
+        addConstraintsWithFormat("V:|-12-[v0]", views: nameLabel)
+        addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]|", views: profileImageView,statusTextView,statusImageView)
+
     }
+}
+
+
+extension UIView {
+    func addConstraintsWithFormat(format: String, views: UIView...){
+        var viewsDictionary = [String: UIView]()
+            for (index, view) in views.enumerate() {
+                let key = "v\(index)"
+                viewsDictionary[key] = view
+                view.translatesAutoresizingMaskIntoConstraints = false
+            }
+            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+        }
 }
