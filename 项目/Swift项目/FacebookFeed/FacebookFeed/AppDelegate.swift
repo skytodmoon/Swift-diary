@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let feedController = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let navaigationController = UINavigationController(rootViewController: feedController)
         window?.rootViewController = navaigationController
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 51/255, green: 90/255, blue: 140/255, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        application.statusBarStyle = .LightContent
         return true
     }
 
