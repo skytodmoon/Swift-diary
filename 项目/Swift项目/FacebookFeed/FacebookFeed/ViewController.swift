@@ -10,10 +10,49 @@ import UIKit
 
 let  cellId = "cellId"
 
+class Post {
+    var name: String?
+    var statusText: String?
+    var profileImageName: String?
+    var statusImageName: String?
+    var numLikes: Int?
+    var numContent: Int?
+}
+
 class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
+    
+    var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let postMark = Post()
+        postMark.name = "章紫玲"
+        postMark.statusText = "我是一位舞蹈老师"
+        postMark.profileImageName = "headImage1"
+        postMark.statusImageName = "YouName2"
+        postMark.numLikes = 400
+        postMark.numContent = 123
+        
+        let postSteve = Post()
+        postSteve.name = "醉看红尘这场梦"
+        postSteve.statusText = "我本以为我只爱代码，自从“她”的出现改变了我，\n让我逐渐的产生好感，冷漠>关注>喜欢>爱意，让我经历了四种变化，她是我的另一半，\n她的舞蹈身影让我迷恋，她弹的钢琴让我陶醉，爱到写代码都会发呆想她，很感谢上帝赐予我这么好的女孩。"
+        postSteve.profileImageName = "headImage"
+        postSteve.statusImageName = "You name"
+        postSteve.numLikes = 1000
+        postSteve.numContent = 55
+        
+        let postGandhi = Post()
+        postGandhi.name = "测试"
+        postGandhi.statusText = "测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n"
+        postGandhi.profileImageName = "headImage"
+        postGandhi.statusImageName = "YouName2"
+        postGandhi.numLikes = 1000
+        postGandhi.numContent = 55
+        
+        posts.append(postMark)
+        posts.append(postSteve)
+        posts.append(postGandhi)
         
         navigationItem.title = "Facebook Feed"
         
@@ -26,16 +65,27 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        return collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath)
+        let feedCell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! FeedCell
+        
+        feedCell.post = posts[indexPath.item]
+        return feedCell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(view.frame.width, 400)
+        
+        if let statusText = posts[indexPath.item].statusText{
+            let rect = NSString(string: statusText).boundingRectWithSize(CGSizeMake(view.frame.width, 1000), options: NSStringDrawingOptions.UsesFontLeading.union(NSStringDrawingOptions.UsesLineFragmentOrigin), attributes: [NSFontAttributeName:UIFont.systemFontOfSize(14)], context: nil)
+            
+            let knownHeigth: CGFloat = 8 + 44 + 4 + 4 + 200 + 8 + 24 + 8 + 44
+            return CGSizeMake(view.frame.width, rect.height + knownHeigth + 24)
+        }
+        
+        return CGSizeMake(view.frame.width, 500)
     }
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
@@ -45,6 +95,40 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
 }
 
 class FeedCell: UICollectionViewCell {
+    
+    var post: Post? {
+        didSet {
+            
+            if let name = post?.name {
+                let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)])
+                attributedText.appendAttributedString(NSAttributedString(string: "\n 22岁 * 深圳 南山", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName: UIColor.rgb(155, green: 161, blue: 161)]))
+                
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.lineSpacing = 4
+                attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+                
+                let attachment = NSTextAttachment()
+                attachment.image = UIImage(named: "globe_small")
+                attachment.bounds = CGRectMake(0, -2, 12, 12)
+                attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
+                nameLabel.attributedText = attributedText
+            }
+            if let statusText = post?.statusText {
+                statusTextView.text = statusText
+            }
+            
+            if let profileImagename = post?.profileImageName {
+                profileImageView.image = UIImage(named: profileImagename)
+            }
+            
+            if let statusImageName = post?.statusImageName {
+                statusImageView.image = UIImage(named: statusImageName)
+            }
+        }
+    }
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -57,24 +141,13 @@ class FeedCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        let attributedText = NSMutableAttributedString(string: "醉看红尘这场梦", attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)])
-        attributedText.appendAttributedString(NSAttributedString(string: "\n 22岁 * 深圳 南山", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName: UIColor.rgb(155, green: 161, blue: 161)]))
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 4
-        attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
-        
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "globe_small")
-        attachment.bounds = CGRectMake(0, -2, 12, 12)
-        attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
-        label.attributedText = attributedText
+
         return label
     }()
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "headImage.png")
+//        imageView.image = UIImage(named: "headImage")
         imageView.contentMode = .ScaleAspectFit
         return imageView
     }()
@@ -83,12 +156,13 @@ class FeedCell: UICollectionViewCell {
         let textView = UITextView()
         textView.text = "一位喜欢Swift语言的ios程序员"
         textView.font = UIFont.systemFontOfSize(14)
+        textView.scrollEnabled = true
         return textView
     }()
     
     let statusImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "You name")
+//        imageView.image = UIImage(named: "You name")
         imageView.contentMode = .ScaleAspectFill
         imageView.layer.masksToBounds = true
         return imageView
@@ -134,6 +208,7 @@ class FeedCell: UICollectionViewCell {
         addSubview(likeButton)
         addSubview(commentButton)
         addSubview(shareButton)
+
         addConstraintsWithFormat("H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         addConstraintsWithFormat("H:|-4-[v0]-4-|", views: statusTextView)
         addConstraintsWithFormat("H:|[v0]|", views:statusImageView)
@@ -143,7 +218,7 @@ class FeedCell: UICollectionViewCell {
         
         addConstraintsWithFormat("H:|[v0(v2)][v1(v2)][v2]|", views:likeButton,commentButton,shareButton)
         addConstraintsWithFormat("V:|-12-[v0]", views: nameLabel)
-        addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(0.4)][v5(44)]|", views: profileImageView,statusTextView,statusImageView,linkesCommentsLabel,dividerLineView,likeButton)
+        addConstraintsWithFormat("V:|-8-[v0(44)]-4-[v1]-4-[v2(200)]-8-[v3(24)]-8-[v4(0.4)][v5(44)]|", views: profileImageView,statusTextView,statusImageView,linkesCommentsLabel,dividerLineView,likeButton)
         addConstraintsWithFormat("V:[v0(44)]|", views: commentButton)
         addConstraintsWithFormat("V:[v0(44)]|", views: shareButton)
     }
