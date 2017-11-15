@@ -23,10 +23,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         let urlCache = NSURLCache(memoryCapacity: memoryCapacity,diskCapacity: diskCapcity,diskPath: "myDiskPath")
         NSURLCache.setSharedURLCache(urlCache)
         
-        
-        
-        
-        if let path = NSBundle.mainBundle().pathForResource("single_post", ofType: "json"){
+        if let path = NSBundle.mainBundle().pathForResource("All_posts", ofType: "json"){
             
             do{
                 
@@ -34,10 +31,15 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
                 
                 let jsonDictionary = try(NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers))
                 
-                if let postDictionary = jsonDictionary["post"] as? [String: AnyObject]{
-                    let post = Post()
-                    post.setValuesForKeysWithDictionary(postDictionary)
-                    self.posts = [post]
+                if let postsArray = jsonDictionary["posts"] as? [[String: AnyObject]]{
+                    self.posts = [Post]()
+                    
+                    for postDicitionary in postsArray{
+                        let post = Post()
+                        post.setValuesForKeysWithDictionary(postDicitionary)
+                        self.posts.append(post)
+                    }
+                    
                 }
             }catch let err {
                 print(err)

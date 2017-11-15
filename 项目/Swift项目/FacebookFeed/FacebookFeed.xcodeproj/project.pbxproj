@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051D8CD068034689574579B6 /* Pods_FacebookFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07A07DF0321D164E310860E /* Pods_FacebookFeedUITests.framework */; };
+		1D08BA871FBC798500713504 /* All_posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D08BA861FBC798500713504 /* All_posts.json */; };
 		5B033C391FBBE379008C5331 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B033C381FBBE379008C5331 /* FeedCell.swift */; };
 		5B033C3B1FBBE42D008C5331 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B033C3A1FBBE42D008C5331 /* Post.swift */; };
 		5B033C3D1FBBE45F008C5331 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B033C3C1FBBE45F008C5331 /* ViewController.swift */; };
@@ -23,7 +24,6 @@
 		5BD873FE1FBBFC7C00FE1839 /* FriednRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD873FD1FBBFC7C00FE1839 /* FriednRequestCell.swift */; };
 		5BD874001FBBFC9700FE1839 /* RequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD873FF1FBBFC9700FE1839 /* RequestHeader.swift */; };
 		5BD874021FBC154400FE1839 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD874011FBC154400FE1839 /* MoreViewController.swift */; };
-		5BD874041FBC38C300FE1839 /* all_posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BD874031FBC38C300FE1839 /* all_posts.json */; };
 		5BD874061FBC38DC00FE1839 /* single_post.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BD874051FBC38DC00FE1839 /* single_post.json */; };
 		C6ACC7BA1B588D6303850B57 /* Pods_FacebookFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FA61A8AFCFEF099628B7CF /* Pods_FacebookFeed.framework */; };
 		D7737CC936A1BA8CA9A06C87 /* Pods_FacebookFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B43B8EE1F31857A4DC8ED3 /* Pods_FacebookFeedTests.framework */; };
@@ -48,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		09B43B8EE1F31857A4DC8ED3 /* Pods_FacebookFeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookFeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D08BA861FBC798500713504 /* All_posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = All_posts.json; sourceTree = "<group>"; };
 		28B7CB99AA6B59DC75DC74A1 /* Pods-FacebookFeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookFeedUITests/Pods-FacebookFeedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5B033C381FBBE379008C5331 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		5B033C3A1FBBE42D008C5331 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		5BD873FD1FBBFC7C00FE1839 /* FriednRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriednRequestCell.swift; sourceTree = "<group>"; };
 		5BD873FF1FBBFC9700FE1839 /* RequestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
 		5BD874011FBC154400FE1839 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		5BD874031FBC38C300FE1839 /* all_posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "\U0010all_posts.json"; sourceTree = "<group>"; };
 		5BD874051FBC38DC00FE1839 /* single_post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = single_post.json; sourceTree = "<group>"; };
 		6D4F51034F935DF4922F28A3 /* Pods-FacebookFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookFeedUITests/Pods-FacebookFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75692C366AACB530E7B60749 /* Pods-FacebookFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookFeed/Pods-FacebookFeed.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,11 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				5BD874051FBC38DC00FE1839 /* single_post.json */,
-				5BD874031FBC38C300FE1839 /* all_posts.json */,
 				5B033C3E1FBBE485008C5331 /* Extension */,
 				5B033C351FBBE350008C5331 /* Controller */,
 				5B033C361FBBE350008C5331 /* Model */,
 				5B033C371FBBE350008C5331 /* View */,
+				1D08BA861FBC798500713504 /* All_posts.json */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -349,8 +349,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B61FED91FBADA1B004996A0 /* LaunchScreen.storyboard in Resources */,
-				5BD874041FBC38C300FE1839 /* all_posts.json in Resources */,
 				5B61FED61FBADA1B004996A0 /* Assets.xcassets in Resources */,
+				1D08BA871FBC798500713504 /* All_posts.json in Resources */,
 				5BD874061FBC38DC00FE1839 /* single_post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

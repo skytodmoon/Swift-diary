@@ -19,9 +19,7 @@ class Post:SafeJsonObject{
     var statusInageUrl: String?
     
     var location: Location?
-    
-    var infoKey: String?
-    
+        
     override func setValue(value: AnyObject?, forKey key: String) {
         if key == "location"{
             location = Location()
