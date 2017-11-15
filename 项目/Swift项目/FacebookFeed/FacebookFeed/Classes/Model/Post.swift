@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Post: NSObject {
+class Post{
     
     var name: String?
     var statusText: String?
@@ -16,4 +16,10 @@ class Post: NSObject {
     var statusImageName: String?
     var numLikes: Int?
     var numContent: Int?
+    var statusInageUrl: String?
+}
+
+
+class Posts {
+
 }

@@ -14,35 +14,41 @@ class FeedCell: UICollectionViewCell {
     var post: Post? {
         didSet {
             
-            if let name = post?.name {
-                let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)])
-                attributedText.appendAttributedString(NSAttributedString(string: "\n 22岁 * 深圳 南山", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName: UIColor.rgb(155, green: 161, blue: 161)]))
-                
-                let paragraphStyle = NSMutableParagraphStyle()
-                paragraphStyle.lineSpacing = 4
-                attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
-                
-                let attachment = NSTextAttachment()
-                attachment.image = UIImage(named: "globe_small")
-                attachment.bounds = CGRectMake(0, -2, 12, 12)
-                attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
-                nameLabel.attributedText = attributedText
-            }
-            if let statusText = post?.statusText {
-                statusTextView.text = statusText
-            }
             
-            if let profileImagename = post?.profileImageName {
-                profileImageView.image = UIImage(named: profileImagename)
-            }
-            
-            if let statusImageName = post?.statusImageName {
-                statusImageView.image = UIImage(named: statusImageName)
-            }
+            setupNareLocationStatusAndProfileImage()
         }
+        
     }
     
-    
+    private func setupNareLocationStatusAndProfileImage() {
+        
+        if let name = post?.name {
+            let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(14)])
+            attributedText.appendAttributedString(NSAttributedString(string: "\n 22岁 * 深圳 南山", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(12), NSForegroundColorAttributeName: UIColor.rgb(155, green: 161, blue: 161)]))
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+            
+            let attachment = NSTextAttachment()
+            attachment.image = UIImage(named: "globe_small")
+            attachment.bounds = CGRectMake(0, -2, 12, 12)
+            attributedText.appendAttributedString(NSAttributedString(attachment: attachment))
+            nameLabel.attributedText = attributedText
+        }
+        if let statusText = post?.statusText {
+            statusTextView.text = statusText
+        }
+        
+        if let profileImagename = post?.profileImageName {
+            profileImageView.image = UIImage(named: profileImagename)
+        }
+        
+        if let statusImageName = post?.statusImageName {
+            statusImageView.image = UIImage(named: statusImageName)
+        }
+
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
