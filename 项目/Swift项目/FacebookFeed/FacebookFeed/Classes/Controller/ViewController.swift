@@ -24,36 +24,55 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         NSURLCache.setSharedURLCache(urlCache)
         
         
-        let postMark = Post()
-        postMark.name = "马克·扎克伯格"
-        postMark.statusText = "Facebook创始人兼首席执行官"
-        postMark.profileImageName = "FaceHead"
-        postMark.statusImageName = "YouName2"
-        postMark.numLikes = 400
-        postMark.numContent = 123
-        postMark.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/mark_zuckerberg_background.jpg"
+        if let path = NSBundle.mainBundle().pathForResource("single_post", ofType: "json"){
+            
+            do{
+                
+                let data = try(NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe))
+                
+                let jsonDictionary = try(NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers))
+                
+                if let postDictionary = jsonDictionary["post"] as? [String: AnyObject]{
+                    let post = Post()
+                    post.setValuesForKeysWithDictionary(postDictionary)
+                    self.posts = [post]
+                }
+            }catch let err {
+                print(err)
+            }
+        }
         
-        let postSteve = Post()
-        postSteve.name = "史蒂夫·乔布斯"
-        postSteve.statusText = "史蒂夫·乔布斯（Steve Jobs，1955年2月24日—2011年10月5日[2]  ），出生于美国加利福尼亚州旧金山，\n美国发明家、企业家、美国苹果公司联合创办人。1976年4月1日，乔布斯签署了一份合同，决定成立一家电脑公司。 \n 1977年4月，乔布斯在美国第一次计算机展览会展示了苹果Ⅱ号样机。1997年苹果推出iMac，创新的外壳颜色透明设计使得产品大卖，并让苹果度过财政危机。[4] \n 2011年8月24日，史蒂夫·乔布斯向苹果董事会提交辞职申请。乔布斯被认为是计算机业界与娱乐业界的标志性人物，他经历了苹果公司几十年的起落与兴衰，先后领导和推出了麦金塔计算机（Macintosh）、iMac、iPod、iPhone、iPad等风靡全球的电子产品，深刻地改变了现代通讯、娱乐、生活方式。乔布斯同时也是前Pixar动画公司的董事长及行政总裁。2011年10月5日，史蒂夫·乔布斯因患胰腺癌病逝，享年56岁"
-        postSteve.profileImageName = "SteveHeader"
-        postSteve.statusImageName = "You name"
-        postSteve.numLikes = 1000
-        postSteve.numContent = 55
-        postSteve.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/steve_jobs_background.jpg"
         
-        let postGandhi = Post()
-        postGandhi.name = "测试"
-        postGandhi.statusText = "测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n"
-        postGandhi.profileImageName = "headImage"
-        postGandhi.statusImageName = "YouName2"
-        postGandhi.numLikes = 1000
-        postGandhi.numContent = 55
-        postGandhi.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/gandhi_status.jpg"
-        
-        posts.append(postMark)
-        posts.append(postSteve)
-        posts.append(postGandhi)
+//        let postMark = Post()
+//        postMark.name = "马克·扎克伯格"
+//        postMark.statusText = "Facebook创始人兼首席执行官"
+//        postMark.profileImageName = "FaceHead"
+//        postMark.statusImageName = "YouName2"
+//        postMark.numLikes = 400
+//        postMark.numContent = 123
+//        postMark.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/mark_zuckerberg_background.jpg"
+//        
+//        let postSteve = Post()
+//        postSteve.name = "史蒂夫·乔布斯"
+//        postSteve.statusText = "史蒂夫·乔布斯（Steve Jobs，1955年2月24日—2011年10月5日[2]  ），出生于美国加利福尼亚州旧金山，\n美国发明家、企业家、美国苹果公司联合创办人。1976年4月1日，乔布斯签署了一份合同，决定成立一家电脑公司。 \n 1977年4月，乔布斯在美国第一次计算机展览会展示了苹果Ⅱ号样机。1997年苹果推出iMac，创新的外壳颜色透明设计使得产品大卖，并让苹果度过财政危机。[4] \n 2011年8月24日，史蒂夫·乔布斯向苹果董事会提交辞职申请。乔布斯被认为是计算机业界与娱乐业界的标志性人物，他经历了苹果公司几十年的起落与兴衰，先后领导和推出了麦金塔计算机（Macintosh）、iMac、iPod、iPhone、iPad等风靡全球的电子产品，深刻地改变了现代通讯、娱乐、生活方式。乔布斯同时也是前Pixar动画公司的董事长及行政总裁。2011年10月5日，史蒂夫·乔布斯因患胰腺癌病逝，享年56岁"
+//        postSteve.profileImageName = "SteveHeader"
+//        postSteve.statusImageName = "You name"
+//        postSteve.numLikes = 1000
+//        postSteve.numContent = 55
+//        postSteve.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/steve_jobs_background.jpg"
+//        
+//        let postGandhi = Post()
+//        postGandhi.name = "测试"
+//        postGandhi.statusText = "测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n测试测试测试测试测试测试测试测试测试测试测试测试测试\n"
+//        postGandhi.profileImageName = "headImage"
+//        postGandhi.statusImageName = "YouName2"
+//        postGandhi.numLikes = 1000
+//        postGandhi.numContent = 55
+//        postGandhi.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/gandhi_status.jpg"
+//        
+//        posts.append(postMark)
+//        posts.append(postSteve)
+//        posts.append(postGandhi)
         
         navigationItem.title = "内容"
         

@@ -8,15 +8,21 @@
 
 import UIKit
 
-class Post{
+class Post:NSObject{
     
     var name: String?
-    var statusText: String?
     var profileImageName: String?
+    var statusText: String?
     var statusImageName: String?
-    var numLikes: Int?
-    var numContent: Int?
+    var numLikes: NSNumber?
+    var numComments: NSNumber?
     var statusInageUrl: String?
+    
+    var location: Location?
 }
 
+class Location: NSObject {
+    var city: String?
+    var state: String?
+}
 
