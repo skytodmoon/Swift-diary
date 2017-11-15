@@ -25,18 +25,18 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         
         
         let postMark = Post()
-        postMark.name = "章紫玲"
-        postMark.statusText = "我是一位舞蹈老师"
-        postMark.profileImageName = "headImage1"
+        postMark.name = "马克·扎克伯格"
+        postMark.statusText = "Facebook创始人兼首席执行官"
+        postMark.profileImageName = "FaceHead"
         postMark.statusImageName = "YouName2"
         postMark.numLikes = 400
         postMark.numContent = 123
         postMark.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/mark_zuckerberg_background.jpg"
         
         let postSteve = Post()
-        postSteve.name = "醉看红尘这场梦"
-        postSteve.statusText = "我本以为我只爱代码，自从“她”的出现改变了我，\n让我逐渐的产生好感，冷漠>关注>喜欢>爱意，让我经历了四种变化，她是我的另一半，\n她的舞蹈身影让我迷恋，她弹的钢琴让我陶醉，爱到写代码都会发呆想她，很感谢上帝赐予我这么好的女孩。"
-        postSteve.profileImageName = "headImage"
+        postSteve.name = "史蒂夫·乔布斯"
+        postSteve.statusText = "史蒂夫·乔布斯（Steve Jobs，1955年2月24日—2011年10月5日[2]  ），出生于美国加利福尼亚州旧金山，\n美国发明家、企业家、美国苹果公司联合创办人。1976年4月1日，乔布斯签署了一份合同，决定成立一家电脑公司。 \n 1977年4月，乔布斯在美国第一次计算机展览会展示了苹果Ⅱ号样机。1997年苹果推出iMac，创新的外壳颜色透明设计使得产品大卖，并让苹果度过财政危机。[4] \n 2011年8月24日，史蒂夫·乔布斯向苹果董事会提交辞职申请。乔布斯被认为是计算机业界与娱乐业界的标志性人物，他经历了苹果公司几十年的起落与兴衰，先后领导和推出了麦金塔计算机（Macintosh）、iMac、iPod、iPhone、iPad等风靡全球的电子产品，深刻地改变了现代通讯、娱乐、生活方式。乔布斯同时也是前Pixar动画公司的董事长及行政总裁。2011年10月5日，史蒂夫·乔布斯因患胰腺癌病逝，享年56岁"
+        postSteve.profileImageName = "SteveHeader"
         postSteve.statusImageName = "You name"
         postSteve.numLikes = 1000
         postSteve.numContent = 55
@@ -94,20 +94,75 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         collectionView?.collectionViewLayout.invalidateLayout()
     }
     
+    let zoomImageView = UIImageView()
+    let blackBackgroundView = UIView()
+    let navBarCoverView = UIView()
+    let tabBarCoverView = UIView()
+    var statusImageView: UIImageView?
+
     func animateImageView(statusImageView: UIImageView){
         
+        self.statusImageView = statusImageView
+        
         if let startingFrame = statusImageView.superview?.convertRect(statusImageView.frame, toView: nil){
-            let zoomImageView = UIView()
+            
+            statusImageView.alpha = 0
+            
+            blackBackgroundView.frame = self.view.frame
+            blackBackgroundView.backgroundColor = UIColor.blackColor()
+            blackBackgroundView.alpha = 0
+            view.addSubview(blackBackgroundView)
+            
+            
+            navBarCoverView.frame = CGRectMake(0, 0, 1000, 20 + 44)
+            navBarCoverView.backgroundColor = UIColor.blackColor()
+            navBarCoverView.alpha = 0
+            
+            if let keyWindow = UIApplication.sharedApplication().keyWindow{
+                keyWindow.addSubview(navBarCoverView)
+                tabBarCoverView.frame = CGRectMake(0, keyWindow.frame.height - 49, 1000, 49)
+                tabBarCoverView.alpha = 0
+                tabBarCoverView.backgroundColor = UIColor.blackColor()
+                keyWindow.addSubview(tabBarCoverView)
+            }
+            
             zoomImageView.backgroundColor = UIColor.redColor()
-            zoomImageView.frame = statusImageView.frame
+            zoomImageView.frame = startingFrame
+            zoomImageView.userInteractionEnabled = true
+            zoomImageView.image = statusImageView.image
+            zoomImageView.contentMode = .ScaleAspectFill
+            zoomImageView.clipsToBounds = true
             view.addSubview(zoomImageView)
             
-            UIView.animateWithDuration(0.75) {()-> Void in
+            zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self,action: #selector(FeedController.zoomOut)))
+            
+            UIView.animateWithDuration(0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .CurveEaseOut, animations: {() -> Void in
                 let height = (self.view.frame.width / startingFrame.width) * startingFrame.height
                 let y = self.view.frame.height / 2 - height / 2
-                zoomImageView.frame = CGRectMake(0, y, self.view.frame.width, height)
-            }
+                self.zoomImageView.frame = CGRectMake(0, y, self.view.frame.width, height)
+                self.blackBackgroundView.alpha = 1
+                self.navBarCoverView.alpha = 1
+                self.tabBarCoverView.alpha = 1
+                }, completion: nil)
         }
+    }
+    
+    func zoomOut() {
+        if let startingFrame = statusImageView!.superview?.convertRect(statusImageView!.frame, toView: nil){
+            UIView.animateWithDuration(0.75, animations: { () -> Void in
+                    self.zoomImageView.frame = startingFrame
+                    self.blackBackgroundView.alpha = 0
+                    self.navBarCoverView.alpha = 0
+                    self.tabBarCoverView.alpha = 0
+                }, completion: { (didComplete) -> Void in
+                    self.zoomImageView.removeFromSuperview()
+                    self.blackBackgroundView.removeFromSuperview()
+                    self.navBarCoverView.removeFromSuperview()
+                    self.tabBarCoverView.removeFromSuperview()
+                    self.statusImageView?.alpha = 1
+            })
+        }
+
     }
 }
 
