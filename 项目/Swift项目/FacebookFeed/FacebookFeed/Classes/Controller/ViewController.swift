@@ -18,6 +18,12 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let memoryCapacity = 500 * 1024 * 1024
+        let diskCapcity = 500 * 1024 * 1024
+        let urlCache = NSURLCache(memoryCapacity: memoryCapacity,diskCapacity: diskCapcity,diskPath: "myDiskPath")
+        NSURLCache.setSharedURLCache(urlCache)
+        
+        
         let postMark = Post()
         postMark.name = "章紫玲"
         postMark.statusText = "我是一位舞蹈老师"
@@ -25,6 +31,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         postMark.statusImageName = "YouName2"
         postMark.numLikes = 400
         postMark.numContent = 123
+        postMark.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/mark_zuckerberg_background.jpg"
         
         let postSteve = Post()
         postSteve.name = "醉看红尘这场梦"
@@ -33,6 +40,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         postSteve.statusImageName = "You name"
         postSteve.numLikes = 1000
         postSteve.numContent = 55
+        postSteve.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/steve_jobs_background.jpg"
         
         let postGandhi = Post()
         postGandhi.name = "测试"
@@ -41,6 +49,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         postGandhi.statusImageName = "YouName2"
         postGandhi.numLikes = 1000
         postGandhi.numContent = 55
+        postGandhi.statusInageUrl = "http://s3-us-west-2.amazonaws.com/letsbuildthatapp/gandhi_status.jpg"
         
         posts.append(postMark)
         posts.append(postSteve)

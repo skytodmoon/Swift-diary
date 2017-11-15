@@ -15,6 +15,23 @@ class FeedCell: UICollectionViewCell {
         didSet {
             
             
+            statusImageView.image = nil
+            
+            if let statusImageUrl = post?.statusInageUrl {
+                    NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: statusImageUrl)!, completionHandler: { (data, response, error) -> Void in
+                        if error != nil {
+                            print(error)
+                            return
+                        }
+                        let image = UIImage(data: data!)
+                        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                            self.statusImageView.image = image
+                            
+                        })
+                    }).resume()
+                }
+    
+            
             setupNareLocationStatusAndProfileImage()
         }
         

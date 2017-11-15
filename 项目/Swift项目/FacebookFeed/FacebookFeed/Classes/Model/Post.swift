@@ -20,6 +20,3 @@ class Post{
 }
 
 
-class Posts {
-
-}
