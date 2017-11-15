@@ -17,15 +17,38 @@ class CustomTabBarController: UITabBarController {
         
         let feedController = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let navaigationController = UINavigationController(rootViewController: feedController)
-        navaigationController.title = "新闻"
+        navaigationController.title = "News Feed"
         navaigationController.tabBarItem.image = UIImage(named: "tabBar_essence_click_icon")
         
         let friedRequestController = FriendRequestsController()
         let secondNavController = UINavigationController(rootViewController: friedRequestController)
-        secondNavController.title = "中心"
+        secondNavController.title = "Request"
         secondNavController.tabBarItem.image = UIImage(named: "tabBar_friendTrends_click_icon")
         
-        viewControllers = [navaigationController,secondNavController]
+        
+        let messengerVC = UIViewController()
+        messengerVC.navigationItem.title = "SOME TITLE"
+        let messengerNavController = UINavigationController(rootViewController: messengerVC)
+        messengerNavController.title = "Message"
+        messengerNavController.tabBarItem.image = UIImage(named: "tabBar_friendTrends_icon")
+        
+        let notificationsNavController = UINavigationController(rootViewController: UIViewController())
+        notificationsNavController.title = "Notifications"
+        notificationsNavController.tabBarItem.image = UIImage(named: "tabBar_new_click_icon")
+        
+        let moreNavController = UINavigationController(rootViewController: MoreViewController())
+        moreNavController.title = "More"
+        moreNavController.tabBarItem.image = UIImage(named: "tabBar_me_click_icon")
+        
+        viewControllers = [navaigationController,secondNavController,messengerNavController,notificationsNavController,moreNavController]
+        
+        tabBar.translucent = false
+        let topBoder = CALayer()
+        topBoder.frame = CGRectMake(0, 0, 1000, 0.5)
+        topBoder.backgroundColor = UIColor.rgb(229, green: 231, blue: 235).CGColor
+        
+        tabBar.layer.addSublayer(topBoder)
+        tabBar.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

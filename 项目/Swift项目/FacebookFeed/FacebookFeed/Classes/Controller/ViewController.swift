@@ -74,6 +74,7 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         let feedCell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! FeedCell
         
         feedCell.post = posts[indexPath.item]
+        feedCell.feedController = self
         return feedCell
     }
     
@@ -92,7 +93,22 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         collectionView?.collectionViewLayout.invalidateLayout()
     }
-
+    
+    func animateImageView(statusImageView: UIImageView){
+        
+        if let startingFrame = statusImageView.superview?.convertRect(statusImageView.frame, toView: nil){
+            let zoomImageView = UIView()
+            zoomImageView.backgroundColor = UIColor.redColor()
+            zoomImageView.frame = statusImageView.frame
+            view.addSubview(zoomImageView)
+            
+            UIView.animateWithDuration(0.75) {()-> Void in
+                let height = (self.view.frame.width / startingFrame.width) * startingFrame.height
+                let y = self.view.frame.height / 2 - height / 2
+                zoomImageView.frame = CGRectMake(0, y, self.view.frame.width, height)
+            }
+        }
+    }
 }
 
 

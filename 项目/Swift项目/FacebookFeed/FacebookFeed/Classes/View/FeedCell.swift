@@ -11,6 +11,13 @@ import UIKit
 
 class FeedCell: UICollectionViewCell {
     
+    
+    var feedController: FeedController?
+    
+    func animate() {
+        feedController?.animateImageView(statusImageView)
+    }
+    
     var post: Post? {
         didSet {
             
@@ -100,9 +107,10 @@ class FeedCell: UICollectionViewCell {
     
     let statusImageView: UIImageView = {
         let imageView = UIImageView()
-        //        imageView.image = UIImage(named: "You name")
+        imageView.image = UIImage(named: "You name")
         imageView.contentMode = .ScaleAspectFill
         imageView.layer.masksToBounds = true
+        imageView.userInteractionEnabled = true
         return imageView
     }()
     
@@ -134,6 +142,7 @@ class FeedCell: UICollectionViewCell {
         button.titleLabel?.font = UIFont.boldSystemFontOfSize(14)
         return button
     }
+
     
     func setupViews(){
         backgroundColor = UIColor.whiteColor()
@@ -146,6 +155,8 @@ class FeedCell: UICollectionViewCell {
         addSubview(likeButton)
         addSubview(commentButton)
         addSubview(shareButton)
+        
+        statusImageView.addGestureRecognizer(UITapGestureRecognizer(target: self,action: #selector(FeedCell.animate)))
         
         addConstraintsWithFormat("H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         addConstraintsWithFormat("H:|-4-[v0]-4-|", views: statusTextView)
