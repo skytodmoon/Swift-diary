@@ -24,6 +24,8 @@ class FeedController: UICollectionViewController,UICollectionViewDelegateFlowLay
         NSURLCache.setSharedURLCache(urlCache)
         
         
+        
+        
         if let path = NSBundle.mainBundle().pathForResource("single_post", ofType: "json"){
             
             do{
