@@ -8,15 +8,20 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class Post:SafeJsonObject{
+=======
+class Post{
+>>>>>>> parent of 6f466b2a... 解析json
     
     var name: String?
-    var profileImageName: String?
     var statusText: String?
+    var profileImageName: String?
     var statusImageName: String?
-    var numLikes: NSNumber?
-    var numComments: NSNumber?
+    var numLikes: Int?
+    var numContent: Int?
     var statusInageUrl: String?
+<<<<<<< HEAD
     
     var location: Location?
         
@@ -39,10 +44,8 @@ class SafeJsonObject: NSObject {
             super.setValue(value, forKey: key)
         }
     }
+=======
+>>>>>>> parent of 6f466b2a... 解析json
 }
 
-class Location: NSObject {
-    var city: String?
-    var state: String?
-}
 
