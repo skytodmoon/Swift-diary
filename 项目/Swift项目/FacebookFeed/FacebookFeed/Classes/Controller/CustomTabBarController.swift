@@ -30,17 +30,13 @@ class CustomTabBarController: UITabBarController {
         messengerVC.navigationItem.title = "SOME TITLE"
         let messengerNavController = UINavigationController(rootViewController: messengerVC)
         messengerNavController.title = "Message"
-        messengerNavController.tabBarItem.image = UIImage(named: "tabBar_friendTrends_icon")
+        messengerNavController.tabBarItem.image = UIImage(named: "tabBar_me_click_icon")
         
         let notificationsNavController = UINavigationController(rootViewController: UIViewController())
         notificationsNavController.title = "Notifications"
         notificationsNavController.tabBarItem.image = UIImage(named: "tabBar_new_click_icon")
         
-        let moreNavController = UINavigationController(rootViewController: MoreViewController())
-        moreNavController.title = "More"
-        moreNavController.tabBarItem.image = UIImage(named: "tabBar_me_click_icon")
-        
-        viewControllers = [navaigationController,secondNavController,messengerNavController,notificationsNavController,moreNavController]
+        viewControllers = [navaigationController,secondNavController,messengerNavController,notificationsNavController]
         
         tabBar.translucent = false
         let topBoder = CALayer()
