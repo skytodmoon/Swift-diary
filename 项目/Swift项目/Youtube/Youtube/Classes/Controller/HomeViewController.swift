@@ -10,29 +10,63 @@ import UIKit
 
 class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
-    var viodes: [Video]={
-        
-        var kanyerChannel = Channel()
-        kanyerChannel.name = "KanyeIsTheBestChannel"
-        kanyerChannel.profileImageName = "kanye_profile"
-        
-        var blankSpaceVideo = Video()
-        blankSpaceVideo.title = "Taylor Swift - Blank Space"
-        blankSpaceVideo.thumnailImageName = "taylor_swift_blank_space"
-        blankSpaceVideo.channel = kanyerChannel
-        blankSpaceVideo.numberOfViews = 234234890
-        
-        var badBloodVideo = Video()
-        badBloodVideo.title = "Taylor Swift - Bad Blood featuring Kendrick Lamar"
-        badBloodVideo.thumnailImageName = "taylor_swift_bad_space"
-        badBloodVideo.channel = kanyerChannel
-        badBloodVideo.numberOfViews = 1234234
-        return [blankSpaceVideo,badBloodVideo]
-    }()
-
+//    var viodes: [Video]={
+//        
+//        var kanyerChannel = Channel()
+//        kanyerChannel.name = "KanyeIsTheBestChannel"
+//        kanyerChannel.profileImageName = "kanye_profile"
+//        
+//        var blankSpaceVideo = Video()
+//        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+//        blankSpaceVideo.thumnailImageName = "taylor_swift_blank_space"
+//        blankSpaceVideo.channel = kanyerChannel
+//        blankSpaceVideo.numberOfViews = 234234890
+//        
+//        var badBloodVideo = Video()
+//        badBloodVideo.title = "Taylor Swift - Bad Blood featuring Kendrick Lamar"
+//        badBloodVideo.thumnailImageName = "taylor_swift_bad_space"
+//        badBloodVideo.channel = kanyerChannel
+//        badBloodVideo.numberOfViews = 1234234
+//        return [blankSpaceVideo,badBloodVideo]
+//    }()
+    
+    var videos: [Video]?
+    
+    func fetchVideos(){
+        let url = NSURL(string: "http://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
+        NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+                self.videos = [Video]()
+                for dictionary in json as! [[String: AnyObject]] {
+                    let video = Video()
+                    video.title = dictionary["title"] as? String
+                    video.thumnailImageName = dictionary["thumbnail_image_name"] as? String
+                    let channeDicitionary = dictionary["channel"] as! [String: AnyObject]
+                    let channel = Channel()
+                    channel.name = channeDicitionary["name"] as? String
+                    channel.profileImageName = channeDicitionary["profile_image_name"] as? String
+                    video.channel = channel
+                    self.videos?.append(video)
+                }
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.collectionView?.reloadData()
+                })
+            } catch let jsonError {
+                print(jsonError)
+            }
+        }.resume()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchVideos()
         navigationItem.title = "Home"
         navigationController?.navigationBar.translucent = false
         
@@ -79,17 +113,17 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viodes.count
+        return videos?.count ?? 0
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath) as! VideoCell
-        cell.video = viodes[indexPath.item]
+        cell.video = videos?[indexPath.item]
         return cell
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let height = (view.frame.width - 16 - 16) * 9 / 16
-        return CGSizeMake(view.frame.width, height + 68)
+        return CGSizeMake(view.frame.width, height + 80)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
