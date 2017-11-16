@@ -30,9 +30,15 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
     }()
     
     let cellId = "cellId"
-    
+    let cellHeight:CGFloat  = 50
+
     let settings: [Setting] = {
-        return [Setting(name: "Settings", imageName: "settings")]
+        return [Setting(name: "Settings", imageName: "settings"),
+                Setting(name: "Terms & privacy policy", imageName: "Terms & privacy policy"),
+                Setting(name: "Send Feedback", imageName: "Send Feedback"),
+                Setting(name: "help", imageName: "help"),
+                Setting(name: "Switch Account", imageName: "Switch Account"),
+                Setting(name: "cancel", imageName: "cancel")]
     }()
     
     func showSettings(){
@@ -41,7 +47,7 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self,action: #selector(handleDissmiss)))
             window.addSubview(blackView)
             window.addSubview(collectionView)
-            let height: CGFloat = 200
+            let height: CGFloat = CGFloat(settings.count) * cellHeight
             let y = window.frame.height - height
             collectionView.frame = CGRectMake(0, window.frame.height, window.frame.width, height)
             blackView.frame = window.frame
@@ -76,13 +82,31 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.width, 50)
+        return CGSizeMake(collectionView.frame.width, cellHeight)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let setting = settings[indexPath.item]
+        print(setting.name)
+        handleDissmiss()
+        
+        
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
+            
+            self.blackView.alpha = 0
+            
+            if let window = UIApplication.sharedApplication().keyWindow{
+                self.collectionView.frame = CGRectMake(0, window.frame.height, self.collectionView.frame.width, self.collectionView.frame.height)
+            }
+            }) {(completion: Bool) in
+    }
+
+    }
+
     override init() {
         super.init()
         
