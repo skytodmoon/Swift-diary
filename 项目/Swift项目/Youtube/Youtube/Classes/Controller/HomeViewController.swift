@@ -14,7 +14,13 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         super.viewDidLoad()
         
         navigationItem.title = "Home"
+        navigationController?.navigationBar.translucent = false
         
+        let titleLabel = UILabel(frame: CGRectMake(0,0,view.frame.width - 32,view.frame.height))
+        titleLabel.text = "Home"
+        titleLabel.textColor = UIColor.whiteColor()
+        titleLabel.font = UIFont.systemFontOfSize(20)
+        navigationItem.titleView =  titleLabel
         collectionView?.backgroundColor = UIColor.whiteColor()
         
         collectionView?.registerClass(VideoCell.self, forCellWithReuseIdentifier: "cellId")
@@ -30,9 +36,12 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         return cell
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        return CGSizeMake(view.frame.width, 200)
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+        return CGSizeMake(view.frame.width, height + 68)
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
 
 }
