@@ -25,7 +25,7 @@ class SettingCell: BaseCell {
     
     let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "mine-setting-icon")
+        imageView.image = UIImage(named: "settings")
         imageView.contentMode = .ScaleAspectFill
         return imageView
     }()

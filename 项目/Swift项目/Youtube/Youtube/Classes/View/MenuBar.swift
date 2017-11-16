@@ -21,7 +21,7 @@ class MenuBar: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     }()
     
     let cellId = "cellId"
-    let imageNames = ["tabBar_essence_click_icon","tabBar_new_click_icon","tabBar_me_click_icon","tabBar_friendTrends_click_icon"]
+    let imageNames = ["homeSelected","trendingSelected","subscriptionsSelected","accountSelected"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         

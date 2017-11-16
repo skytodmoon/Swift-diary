@@ -91,9 +91,9 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }()
     
     func setuoNavBarButtons() {
-        let searchImage = UIImage(named: "search_icon")?.imageWithRenderingMode(.AlwaysOriginal)
+        let searchImage = UIImage(named: "navSearch")?.imageWithRenderingMode(.AlwaysOriginal)
         let searchBarButton = UIBarButtonItem(image: searchImage,style: .Plain, target: self,action: #selector(handleSearch))
-        let moreButton = UIBarButtonItem(image: UIImage(named:"nav_more_icon")?.imageWithRenderingMode(.AlwaysOriginal),style: .Plain, target: self,action: #selector(handleMore))
+        let moreButton = UIBarButtonItem(image: UIImage(named:"navSettings")?.imageWithRenderingMode(.AlwaysOriginal),style: .Plain, target: self,action: #selector(handleMore))
         navigationItem.rightBarButtonItems = [moreButton,searchBarButton]
     }
     
