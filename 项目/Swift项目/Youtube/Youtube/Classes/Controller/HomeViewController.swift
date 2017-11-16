@@ -97,19 +97,21 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         navigationItem.rightBarButtonItems = [moreButton,searchBarButton]
     }
     
-    private func setupMenuBar(){
-        view.addSubview(menuBar)
-        view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
-        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
-    }
-    
+    let settingsLauncher = SettingsLauncher()
     
     func handleMore(){
-        print(321)
+        settingsLauncher.showSettings()
     }
     
     func handleSearch(){
         print(123)
+    }
+    
+    
+    private func setupMenuBar(){
+        view.addSubview(menuBar)
+        view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
