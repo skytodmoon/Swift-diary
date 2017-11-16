@@ -9,10 +9,28 @@
 import UIKit
 
 class VideoCell: BaseCell {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
+    }
+    
+    var video: Video?{
+        didSet{
+            
+            titleLabel.text = video?.title
+            thumbnailImageView.image = UIImage(named: (video?.thumnailImageName)!)
+            
+            if let profileImageName = video?.channel?.profileImageName {
+                userProfileImageView.image = UIImage(named: profileImageName)
+            }
+            
+            if let channeName = video?.channel?.name, numberOfViews = video?.numberOfViews{
+                let subtitText = "\(channeName) * \(numberOfViews) * 2 year ago"
+                subtitleTextView.text = subtitText
+            }
+        }
     }
     
     let thumbnailImageView: UIImageView = {
