@@ -12,36 +12,12 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
     
     var videos: [Video]?
-    
+
     func fetchVideos(){
-        let url = NSURL(string: "http://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
-        NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
-                self.videos = [Video]()
-                for dictionary in json as! [[String: AnyObject]] {
-                    let video = Video()
-                    video.title = dictionary["title"] as? String
-                    video.thumnailImageName = dictionary["thumbnail_image_name"] as? String
-                    let channeDicitionary = dictionary["channel"] as! [String: AnyObject]
-                    let channel = Channel()
-                    channel.name = channeDicitionary["name"] as? String
-                    channel.profileImageName = channeDicitionary["profile_image_name"] as? String
-                    video.channel = channel
-                    self.videos?.append(video)
-                }
-                dispatch_async(dispatch_get_main_queue(),{
-                    self.collectionView?.reloadData()
-                })
-            } catch let jsonError {
-                print(jsonError)
-            }
-        }.resume()
+        ApiService.sharedInstance.fetchVideos { (videos:[Video]) in
+            self.videos = videos
+            self.collectionView?.reloadData()
+        }
     }
     
     override func viewDidLoad() {
@@ -103,9 +79,19 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
     
     private func setupMenuBar(){
+        navigationController?.hidesBarsOnSwipe = true
+        
+        let redView = UIView()
+        redView.backgroundColor = UIColor.rgb(230, green: 32, blue: 31)
+        view.addSubview(redView)
+        view.addConstraintsWithFormat("H:|[v0]|", views: redView)
+        view.addConstraintsWithFormat("V:[v0(50)]", views: redView)
+        
         view.addSubview(menuBar)
         view.addConstraintsWithFormat("H:|[v0]|", views: menuBar)
-        view.addConstraintsWithFormat("V:|[v0(50)]", views: menuBar)
+        view.addConstraintsWithFormat("V:[v0(50)]", views: menuBar)
+        
+        menuBar.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor).active = true
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
