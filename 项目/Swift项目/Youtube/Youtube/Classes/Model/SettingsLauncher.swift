@@ -9,13 +9,22 @@
 import UIKit
 
 class Setting: NSObject {
-    let name: String
+    let name: SettingName
     let imageName: String
     
-    init(name: String, imageName: String) {
+    init(name: SettingName, imageName: String) {
         self.name = name
         self.imageName = imageName
     }
+}
+
+enum SettingName: String {
+    case cancel = "cancle"
+    case Settings = "Settings"
+    case TermsPrivacy = "Terms & privacy policy"
+    case SendFeedback = "Send Feedback"
+    case Help = "Help"
+    case SwitchAccount = "Switch Account"
 }
 
 class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
@@ -33,13 +42,16 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
     let cellHeight:CGFloat  = 50
 
     let settings: [Setting] = {
-        return [Setting(name: "Settings", imageName: "settings"),
-                Setting(name: "Terms & privacy policy", imageName: "Terms & privacy policy"),
-                Setting(name: "Send Feedback", imageName: "Send Feedback"),
-                Setting(name: "help", imageName: "help"),
-                Setting(name: "Switch Account", imageName: "Switch Account"),
-                Setting(name: "cancel", imageName: "cancel")]
+        let settingSetting = Setting(name: .Settings, imageName: "settings")
+        let canceSetting = Setting(name: .cancel, imageName: "cancel")
+        return [settingSetting,Setting(name: .TermsPrivacy, imageName: "Terms & privacy policy"),
+                Setting(name: .SendFeedback, imageName: "Send Feedback"),
+                Setting(name: .Help, imageName: "help"),
+                Setting(name: .SwitchAccount, imageName: "Switch Account"),
+                Setting(name: .cancel, imageName: "cancel")]
     }()
+    
+    var homeController: HomeViewController?
     
     func showSettings(){
         if let window = UIApplication.sharedApplication().keyWindow{
@@ -60,12 +72,18 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
         }
     }
     
-    func handleDissmiss(){
-        UIView.animateWithDuration(0.5) {
+    func handleDissmiss(setting: Setting){
+        
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
+            
             self.blackView.alpha = 0
             
-            if let window = UIApplication.sharedApplication().keyWindow {
+            if let window = UIApplication.sharedApplication().keyWindow{
                 self.collectionView.frame = CGRectMake(0, window.frame.height, self.collectionView.frame.width, self.collectionView.frame.height)
+            }
+        }) {(completion: Bool) in
+            if setting.name != .cancel{
+                self.homeController?.showControllerForSetting(setting)
             }
         }
     }
@@ -90,21 +108,11 @@ class SettingsLauncher: NSObject,UICollectionViewDataSource,UICollectionViewDele
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let setting = settings[indexPath.item]
-        print(setting.name)
-        handleDissmiss()
+        
+        let setting = self.settings[indexPath.item]
+        handleDissmiss(setting)
         
         
-        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
-            
-            self.blackView.alpha = 0
-            
-            if let window = UIApplication.sharedApplication().keyWindow{
-                self.collectionView.frame = CGRectMake(0, window.frame.height, self.collectionView.frame.width, self.collectionView.frame.height)
-            }
-            }) {(completion: Bool) in
-    }
-
     }
 
     override init() {

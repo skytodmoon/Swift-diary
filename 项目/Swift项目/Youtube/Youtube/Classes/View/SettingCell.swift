@@ -12,7 +12,7 @@ class SettingCell: BaseCell {
     
     var setting: Setting? {
         didSet{
-            nameLablel.text = setting?.name
+            nameLablel.text = setting?.name.rawValue
             
             if let imageName = setting?.imageName {
                 iconImageView.image = UIImage(named: imageName)

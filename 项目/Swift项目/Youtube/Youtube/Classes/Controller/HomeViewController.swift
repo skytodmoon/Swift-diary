@@ -10,25 +10,6 @@ import UIKit
 
 class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
-//    var viodes: [Video]={
-//        
-//        var kanyerChannel = Channel()
-//        kanyerChannel.name = "KanyeIsTheBestChannel"
-//        kanyerChannel.profileImageName = "kanye_profile"
-//        
-//        var blankSpaceVideo = Video()
-//        blankSpaceVideo.title = "Taylor Swift - Blank Space"
-//        blankSpaceVideo.thumnailImageName = "taylor_swift_blank_space"
-//        blankSpaceVideo.channel = kanyerChannel
-//        blankSpaceVideo.numberOfViews = 234234890
-//        
-//        var badBloodVideo = Video()
-//        badBloodVideo.title = "Taylor Swift - Bad Blood featuring Kendrick Lamar"
-//        badBloodVideo.thumnailImageName = "taylor_swift_bad_space"
-//        badBloodVideo.channel = kanyerChannel
-//        badBloodVideo.numberOfViews = 1234234
-//        return [blankSpaceVideo,badBloodVideo]
-//    }()
     
     var videos: [Video]?
     
@@ -97,7 +78,11 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         navigationItem.rightBarButtonItems = [moreButton,searchBarButton]
     }
     
-    let settingsLauncher = SettingsLauncher()
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.homeController = self
+        return launcher
+    }()
     
     func handleMore(){
         settingsLauncher.showSettings()
@@ -105,6 +90,15 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     
     func handleSearch(){
         print(123)
+    }
+    
+    func showControllerForSetting(setting: Setting){
+        let dummySettingsViewController = UIViewController()
+        dummySettingsViewController.view.backgroundColor = UIColor.whiteColor()
+        dummySettingsViewController.navigationItem.title = setting.name.rawValue
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController?.pushViewController(dummySettingsViewController, animated: true)
     }
     
     
