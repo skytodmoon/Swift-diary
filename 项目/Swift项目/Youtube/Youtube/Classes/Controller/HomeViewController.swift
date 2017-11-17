@@ -68,6 +68,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         print(123)
     }
     
+    
     func showControllerForSetting(setting: Setting){
         let dummySettingsViewController = UIViewController()
         dummySettingsViewController.view.backgroundColor = UIColor.whiteColor()
