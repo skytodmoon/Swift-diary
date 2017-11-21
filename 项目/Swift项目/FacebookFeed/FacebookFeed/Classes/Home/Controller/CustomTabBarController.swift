@@ -26,7 +26,7 @@ class CustomTabBarController: UITabBarController {
         secondNavController.tabBarItem.image = UIImage(named: "tabBar_friendTrends_click_icon")
         
         
-        let messengerVC = FeaturedAppsController()
+        let messengerVC = UIViewController()
         messengerVC.navigationItem.title = "SOME TITLE"
         let messengerNavController = UINavigationController(rootViewController: messengerVC)
         messengerNavController.title = "Message"
