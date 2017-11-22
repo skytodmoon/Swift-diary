@@ -9,5 +9,6 @@
 import UIKit
 
 class Friend: NSObject {
-
+    var name: String?
+    var profileImageName: String?
 }
