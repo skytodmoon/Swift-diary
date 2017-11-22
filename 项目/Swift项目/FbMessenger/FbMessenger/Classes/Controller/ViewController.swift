@@ -36,7 +36,53 @@ class FriendsController: UICollectionViewController,UICollectionViewDelegateFlow
 }
 
 
-class FriendCell: UICollectionViewCell {
+class FriendCell: BaseCell {
+    
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .ScaleAspectFill
+        imageView.layer.cornerRadius = 34
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
+    let dividerLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white:0.5,alpha: 0.5)
+        return view
+    }()
+    
+
+    override func setupViews(){
+        
+        addSubview(profileImageView)
+        addSubview(dividerLineView)
+        
+        setupContainerView()
+        
+        profileImageView.image = UIImage(named: "headImage")
+        
+        addConstraintsWithFormat("H:|-12-[v0(68)]", views: profileImageView)
+        addConstraintsWithFormat("V:[v0(68)]", views: profileImageView)
+        
+        addConstraint(NSLayoutConstraint(item: profileImageView,attribute: .CenterY,relatedBy: .Equal,toItem: self,attribute: .CenterY,multiplier: 1,constant: 0))
+        
+        addConstraintsWithFormat("H:|-82-[v0]|", views: dividerLineView)
+        addConstraintsWithFormat("V:[v0(1)]|", views: dividerLineView)
+    }
+    
+    private func setupContainerView(){
+        let containerView = UIView()
+        containerView.backgroundColor = UIColor.redColor()
+        addSubview(containerView)
+        
+        addConstraintsWithFormat("H:|-90-[v0]|", views: containerView)
+        addConstraintsWithFormat("V:[v0(60)]", views: containerView)
+    }
+}
+
+
+class BaseCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

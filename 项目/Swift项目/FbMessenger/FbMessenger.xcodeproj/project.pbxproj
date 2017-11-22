@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		00DAEDDA9AFCE014BB3BC3CF /* Pods_FbMessengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD399F4158AB29DBC71ED881 /* Pods_FbMessengerUITests.framework */; };
 		0FA7271953E05BEDAD725FF7 /* Pods_FbMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C91B035D5DB969C1162AF3 /* Pods_FbMessenger.framework */; };
+		5B795BBB1FC54F9400DC73C8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */; };
+		5B795BBC1FC54F9400DC73C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */; };
+		5B795BBD1FC54F9400DC73C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BBA1FC54F9400DC73C8 /* ViewController.swift */; };
 		5BE328BB1FC3F82E002E9162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328BA1FC3F82E002E9162 /* AppDelegate.swift */; };
-		5BE328BD1FC3F82E002E9162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328BC1FC3F82E002E9162 /* ViewController.swift */; };
 		5BE328C21FC3F82E002E9162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE328C11FC3F82E002E9162 /* Assets.xcassets */; };
 		5BE328C51FC3F82E002E9162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE328C31FC3F82E002E9162 /* LaunchScreen.storyboard */; };
 		5BE328D01FC3F82E002E9162 /* FbMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328CF1FC3F82E002E9162 /* FbMessengerTests.swift */; };
 		5BE328DB1FC3F82E002E9162 /* FbMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328DA1FC3F82E002E9162 /* FbMessengerUITests.swift */; };
-		5BE328EB1FC3FB9B002E9162 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328E91FC3FB9B002E9162 /* UIColor+Extension.swift */; };
-		5BE328EC1FC3FB9B002E9162 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE328EA1FC3FB9B002E9162 /* UIView+Extension.swift */; };
 		7DCA1CFF81AB10629112F5F3 /* Pods_FbMessengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AFC302E35257228499D9EB /* Pods_FbMessengerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +39,11 @@
 
 /* Begin PBXFileReference section */
 		1780AD9C22C5122DC1F2A407 /* Pods-FbMessengerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbMessengerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FbMessengerTests/Pods-FbMessengerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5B795BBA1FC54F9400DC73C8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BE328B71FC3F82E002E9162 /* FbMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FbMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE328BA1FC3F82E002E9162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BE328BC1FC3F82E002E9162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BE328C11FC3F82E002E9162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE328C41FC3F82E002E9162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE328C61FC3F82E002E9162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,8 +53,6 @@
 		5BE328D61FC3F82E002E9162 /* FbMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FbMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE328DA1FC3F82E002E9162 /* FbMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbMessengerUITests.swift; sourceTree = "<group>"; };
 		5BE328DC1FC3F82E002E9162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BE328E91FC3FB9B002E9162 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		5BE328EA1FC3FB9B002E9162 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8129EDB141A1DBE9F03DC643 /* Pods-FbMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FbMessenger/Pods-FbMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD54029CB9803AE82989E8C /* Pods-FbMessengerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbMessengerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FbMessengerUITests/Pods-FbMessengerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2C55DA77335D5DEE5ACF697 /* Pods-FbMessengerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbMessengerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FbMessengerUITests/Pods-FbMessengerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +104,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B795BB51FC54F9400DC73C8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B795BB61FC54F9400DC73C8 /* Extension */,
+				5B795BB91FC54F9400DC73C8 /* Controller */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B795BB61FC54F9400DC73C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */,
+				5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5B795BB91FC54F9400DC73C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B795BBA1FC54F9400DC73C8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5BE328AE1FC3F82E002E9162 = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +155,8 @@
 		5BE328B91FC3F82E002E9162 /* FbMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				5BE328E81FC3FB9B002E9162 /* Extension */,
+				5B795BB51FC54F9400DC73C8 /* Classes */,
 				5BE328BA1FC3F82E002E9162 /* AppDelegate.swift */,
-				5BE328BC1FC3F82E002E9162 /* ViewController.swift */,
 				5BE328C11FC3F82E002E9162 /* Assets.xcassets */,
 				5BE328C31FC3F82E002E9162 /* LaunchScreen.storyboard */,
 				5BE328C61FC3F82E002E9162 /* Info.plist */,
@@ -155,15 +180,6 @@
 				5BE328DC1FC3F82E002E9162 /* Info.plist */,
 			);
 			path = FbMessengerUITests;
-			sourceTree = "<group>";
-		};
-		5BE328E81FC3FB9B002E9162 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				5BE328E91FC3FB9B002E9162 /* UIColor+Extension.swift */,
-				5BE328EA1FC3FB9B002E9162 /* UIView+Extension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		F7138DE5A64B2516A0B817EF /* Frameworks */ = {
@@ -462,10 +478,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE328EB1FC3FB9B002E9162 /* UIColor+Extension.swift in Sources */,
-				5BE328BD1FC3F82E002E9162 /* ViewController.swift in Sources */,
-				5BE328EC1FC3FB9B002E9162 /* UIView+Extension.swift in Sources */,
+				5B795BBD1FC54F9400DC73C8 /* ViewController.swift in Sources */,
 				5BE328BB1FC3F82E002E9162 /* AppDelegate.swift in Sources */,
+				5B795BBC1FC54F9400DC73C8 /* UIView+Extension.swift in Sources */,
+				5B795BBB1FC54F9400DC73C8 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
