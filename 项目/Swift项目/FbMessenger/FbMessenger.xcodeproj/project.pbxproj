@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00DAEDDA9AFCE014BB3BC3CF /* Pods_FbMessengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD399F4158AB29DBC71ED881 /* Pods_FbMessengerUITests.framework */; };
 		0FA7271953E05BEDAD725FF7 /* Pods_FbMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C91B035D5DB969C1162AF3 /* Pods_FbMessenger.framework */; };
+		5B72352B1FC69F6C008BBA64 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B72352A1FC69F6C008BBA64 /* FriendsController.swift */; };
+		5B72352E1FC6A0C9008BBA64 /* FbMessenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B72352C1FC6A0C9008BBA64 /* FbMessenger.xcdatamodeld */; };
 		5B795BBB1FC54F9400DC73C8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */; };
 		5B795BBC1FC54F9400DC73C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */; };
 		5B795BBD1FC54F9400DC73C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B795BBA1FC54F9400DC73C8 /* ViewController.swift */; };
@@ -43,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		1780AD9C22C5122DC1F2A407 /* Pods-FbMessengerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbMessengerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FbMessengerTests/Pods-FbMessengerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B72352A1FC69F6C008BBA64 /* FriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		5B72352D1FC6A0C9008BBA64 /* FbMessenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FbMessenger.xcdatamodel; sourceTree = "<group>"; };
+		5B72352F1FC6A186008BBA64 /* FbMessenger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FbMessenger-Bridging-Header.h"; sourceTree = "<group>"; };
 		5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5B795BBA1FC54F9400DC73C8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +124,8 @@
 				5B795BBF1FC559D200DC73C8 /* View */,
 				5B795BB61FC54F9400DC73C8 /* Extension */,
 				5B795BB91FC54F9400DC73C8 /* Controller */,
+				5B72352C1FC6A0C9008BBA64 /* FbMessenger.xcdatamodeld */,
+				5B72352F1FC6A186008BBA64 /* FbMessenger-Bridging-Header.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			children = (
 				5B795BB71FC54F9400DC73C8 /* UIColor+Extension.swift */,
 				5B795BB81FC54F9400DC73C8 /* UIView+Extension.swift */,
+				5B72352A1FC69F6C008BBA64 /* FriendsController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -513,6 +521,8 @@
 				5B795BBC1FC54F9400DC73C8 /* UIView+Extension.swift in Sources */,
 				5B795BC91FC55AAE00DC73C8 /* Message.swift in Sources */,
 				5B795BC51FC55A7C00DC73C8 /* BaseCell.swift in Sources */,
+				5B72352E1FC6A0C9008BBA64 /* FbMessenger.xcdatamodeld in Sources */,
+				5B72352B1FC69F6C008BBA64 /* FriendsController.swift in Sources */,
 				5B795BBB1FC54F9400DC73C8 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,10 +658,13 @@
 			baseConfigurationReference = 8129EDB141A1DBE9F03DC643 /* Pods-FbMessenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.FbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FbMessenger/Classes/FbMessenger-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -660,10 +673,12 @@
 			baseConfigurationReference = FC4E4E3E817C7D3877A68BCF /* Pods-FbMessenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.qjl.FbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FbMessenger/Classes/FbMessenger-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -757,6 +772,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B72352C1FC6A0C9008BBA64 /* FbMessenger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B72352D1FC6A0C9008BBA64 /* FbMessenger.xcdatamodel */,
+			);
+			currentVersion = 5B72352D1FC6A0C9008BBA64 /* FbMessenger.xcdatamodel */;
+			path = FbMessenger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5BE328AF1FC3F82E002E9162 /* Project object */;
 }
