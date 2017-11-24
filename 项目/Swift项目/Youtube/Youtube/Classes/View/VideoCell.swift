@@ -29,7 +29,7 @@ class VideoCell: BaseCell {
                 userProfileImageView.image = UIImage(named: profileImageName)
             }
             
-            if let channeName = video?.channel?.name, numberOfViews = video?.numberOfViews{
+            if let channeName = video?.channel?.name, numberOfViews = video?.number_of_views{
                 
                 let numberFormatter = NSNumberFormatter()
                 numberFormatter.numberStyle = .DecimalStyle
@@ -60,7 +60,7 @@ class VideoCell: BaseCell {
     }
     
     func setupThumbnailImage(){
-        if let thumbnailImageUrl = video?.thumnailImageName{
+        if let thumbnailImageUrl = video?.thumbnail_image_name{
             thumbnailImageView.loadImageUsingUrlString(thumbnailImageUrl)
         }
     }
