@@ -47,3 +47,20 @@ stringB += "http://www.ctolib.com"
 */
 
 //字符串插入值
+var varA = 20
+var constA = 100
+var varC:Float = 20.0
+var stringE = "\(varA) 乘以 \(constA) 等于\(varC * 100)"
+//字符串连接
+var stringE1 = varA + constA
+print(stringE1)
+print(stringE)
+//字符串长度
+var stringA1 = "www.ctolib.com"
+print("\(stringA1),长度为\(stringA1.count)")
+//字符串比较
+if varA == constA {
+    print("\(varA) 与\(constA) 是相等的")
+}else{
+    print("\(varA) 与\(constA) 是不相等的")
+}
