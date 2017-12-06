@@ -420,6 +420,143 @@ let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 //协议和扩展
+//类，枚举以及结构体都兼容协议。
+protocol ExampleProtocol {
+    var simpleDescription: String { get }
+    mutating func adjust()
+}
 
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int = 69105
+    func adjust() {
+        simpleDescription += "  Now 100% adjusted."
+    }
+}
+var a = SimpleClass()
+a.adjust()
+let aDescription = a.simpleDescription
 
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+var b = SimpleStructure()
+b.adjust()
+let bDescription = b.simpleDescription
+
+//注意使用 mutating关键字来声明在 SimpleStructure中使方法可以修改结构体。在 SimpleClass中则不需要这样声明，因为类里的方法总是可以修改其自身属性的。
+
+//使用 extension来给现存的类型增加功能，比如说新的方法和计算属性。你可以使用扩展来使协议来别处定义的类型，或者你导入的其他库或框架。
+
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+}
+print(7.simpleDescription)
+
+//你可以使用协议名称就像其他命名类型一样——比如说，创建一个拥有不同类型但是都遵循同一个协议的对象的集合。当你操作类型是协议类型的值的时候，协议外定义的方法是不可用的
+let protocolValue: ExampleProtocol = a
+print(protocolValue.simpleDescription)
+// print(protocolValue.anotherProperty) // Uncomment to see the error
+
+//尽管变量 protocolValue有 SimpleClass的运行时类型，但编译器还是把它看做 ExampleProtocol。这意味着你不能访问类在这个协议中扩展的方法或者属性。
+
+//错误处理
+//你可以用任何遵循 Error 协议的类型来表示错误。
+enum PrinterError: Error {
+    case outOfPaper
+    case noToner
+    case onFire
+}
+
+//使用 throw 来抛出一个错误并且用 throws 来标记一个可以抛出错误的函数。如果你在函数里抛出一个错误，函数会立即返回并且调用函数的代码会处理错误。
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner" {
+        throw PrinterError.noToner
+    }
+    return "Job sent"
+}
+
+//有好几种方法来处理错误。一种是使用 do-catch 。在 do 代码块里，你用 try 来在能抛出错误的函数前标记。在 catch 代码块，错误会自动赋予名字 error ，如果你不给定其他名字的话。
+do {
+    let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+    print(printerResponse)
+} catch {
+    print(error)
+}
+
+//你可以提供多个 catch 代码块来处理特定的错误。你可以在 catch 后写一个模式，用法和 switch 语句里的 case 一样。
+
+do {
+    let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+    print(printerResponse)
+} catch PrinterError.onFire {
+    print("I'll just put this over here, with the rest of the fire.")
+} catch let printerError as PrinterError {
+    print("Printer error: \(printerError).")
+} catch {
+    print(error)
+}
+//另一种处理错误的方法是使用 try? 来转换结果为可选项。如果函数抛出了错误，那么错误被忽略并且结果为 nil 。否则，结果是一个包含了函数返回值的可选项。
+let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
+
+//使用 defer 来写在函数返回后也会被执行的代码块，无论是否错误被抛出。你甚至可以在没有错误处理的时候使用 defer ，来简化需要在多处地方返回的函数。
+var fridgeIsOpen = false
+let fridgeContent = ["milk", "eggs", "leftovers"]
+
+func fridgeContains(_ food: String) -> Bool {
+    fridgeIsOpen = true
+    defer {
+        fridgeIsOpen = false
+    }
+    
+    let result = fridgeContent.contains(food)
+    return result
+}
+fridgeContains("banana")
+print(fridgeIsOpen)
+
+//泛型
+//把名字写在尖括号里来创建一个泛型方法或者类型。
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+    var result = [Item]()
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    return result
+}
+makeArray(repeating: "knock", numberOfTimes:4)
+
+//你可以从函数和方法同时还有类，枚举以及结构体创建泛型。
+
+// Reimplement the Swift standard library's optional type
+enum OptionalValue<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+var possibleInteger: OptionalValue<Int> = .none
+possibleInteger = .some(100)
+//在类型名称后紧接 where来明确一系列需求——比如说，来要求类型实现一个协议，要求两个类型必须相同，或者要求类必须继承自特定的父类。
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
+    where T.Iterator.Element: Equatable, T.Iterator.Element == U.Iterator.Element {
+        for lhsItem in lhs {
+            for rhsItem in rhs {
+                if lhsItem == rhsItem {
+                    return true
+                }
+            }
+        }
+        return false
+}
+anyCommonElements([1, 2, 3], [3])
+//修改 anyCommonElements(_:_:)函数来返回一个 两个数组中共有元素 的数组。
+//写 <T: Equatable>和 <T where T: Equatable>是同一回事。
 
