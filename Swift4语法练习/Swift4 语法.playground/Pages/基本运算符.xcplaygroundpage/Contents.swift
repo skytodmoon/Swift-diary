@@ -12,4 +12,23 @@ import Foundation
 受到运算符影响的值叫做操作数。在表达式 1 + 2  中， +  符号是一个二元运算符，其中的两个值 1 和 2 就是操作数。
 */
 
+//赋值运算符
+let b = 10
+var a = 5
+a = b
+// a 的值现在是 10
+
+let (x, y) = (1, 2)
+// x 等于 1, 同时 y 等于 2
+
+//算术运算符
+
+1 + 2 // equals 3
+5 - 3 // equals 2
+2 * 3 // equals 6
+10.0 / 2.5 // equals 4.0
+
+//加法运算符同时也支持 String  的拼接：
+"hello, " + "world" // equals "hello, world"
+
 
