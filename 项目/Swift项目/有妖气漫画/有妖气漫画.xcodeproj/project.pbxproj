@@ -14,6 +14,8 @@
 		5B5C84C71FDE97CE00557890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5C84C51FDE97CE00557890 /* LaunchScreen.storyboard */; };
 		5B5C84D21FDE97CF00557890 /* _____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84D11FDE97CF00557890 /* _____Tests.swift */; };
 		5B5C84DD1FDE97CF00557890 /* _____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84DC1FDE97CF00557890 /* _____UITests.swift */; };
+		5B5C84EE1FDE9BDC00557890 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84ED1FDE9BDC00557890 /* MainTabbarController.swift */; };
+		5B5C84F11FDE9DEC00557890 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84F01FDE9DEC00557890 /* Global.swift */; };
 		EE13455AEA02A8D65781616F /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3606FF65648BD4C9CEF5BEC6 /* Pods______.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3606FF65648BD4C9CEF5BEC6 /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3606FF65648BD4C9CEF5BEC6 /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5C84B91FDE97CE00557890 /* 有妖气漫画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有妖气漫画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5C84BC1FDE97CE00557890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5C84BE1FDE97CE00557890 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,13 +46,15 @@
 		5B5C84C61FDE97CE00557890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5C84C81FDE97CE00557890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5C84CD1FDE97CF00557890 /* 有妖气漫画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "有妖气漫画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5C84D11FDE97CF00557890 /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____Tests.swift; sourceTree = "<group>"; };
+		5B5C84D11FDE97CF00557890 /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____Tests.swift"; sourceTree = "<group>"; };
 		5B5C84D31FDE97CF00557890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5C84D81FDE97CF00557890 /* 有妖气漫画UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "有妖气漫画UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5C84DC1FDE97CF00557890 /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _____UITests.swift; sourceTree = "<group>"; };
+		5B5C84DC1FDE97CF00557890 /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
 		5B5C84DE1FDE97CF00557890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81D4771CEA4B39F8E428AD78 /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD6A4879401A4940790A6ECA /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5C84ED1FDE9BDC00557890 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		5B5C84F01FDE9DEC00557890 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		81D4771CEA4B39F8E428AD78 /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A4879401A4940790A6ECA /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB587FB7785403574549BC1B /* Pods-有妖气漫画.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-有妖气漫画.release.xcconfig"; path = "Pods/Target Support Files/Pods-有妖气漫画/Pods-有妖气漫画.release.xcconfig"; sourceTree = "<group>"; };
 		E4C37F3C4B9C04BCD1186191 /* Pods-有妖气漫画.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-有妖气漫画.debug.xcconfig"; path = "Pods/Target Support Files/Pods-有妖气漫画/Pods-有妖气漫画.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +110,7 @@
 		5B5C84BB1FDE97CE00557890 /* 有妖气漫画 */ = {
 			isa = PBXGroup;
 			children = (
+				5B5C84EA1FDE9BA400557890 /* Classes */,
 				5B5C84BC1FDE97CE00557890 /* AppDelegate.swift */,
 				5B5C84BE1FDE97CE00557890 /* ViewController.swift */,
 				5B5C84C01FDE97CE00557890 /* Main.storyboard */,
@@ -132,6 +137,39 @@
 				5B5C84DE1FDE97CF00557890 /* Info.plist */,
 			);
 			path = "有妖气漫画UITests";
+			sourceTree = "<group>";
+		};
+		5B5C84EA1FDE9BA400557890 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C84EB1FDE9BB700557890 /* Main */,
+				5B5C84EF1FDE9DD900557890 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B5C84EB1FDE9BB700557890 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C84EC1FDE9BBD00557890 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B5C84EC1FDE9BBD00557890 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C84ED1FDE9BDC00557890 /* MainTabbarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B5C84EF1FDE9DD900557890 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C84F01FDE9DEC00557890 /* Global.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		6964395044998C6F98A9451E /* Pods */ = {
@@ -370,8 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5C84F11FDE9DEC00557890 /* Global.swift in Sources */,
 				5B5C84BF1FDE97CE00557890 /* ViewController.swift in Sources */,
 				5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */,
+				5B5C84EE1FDE9BDC00557890 /* MainTabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
