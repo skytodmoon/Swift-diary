@@ -37,6 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         
+        let defaults = UserDefaults.standard
+        if defaults.value(forKey: String.sexTypeKey) == nil {
+            defaults.set(1, forKey: String.sexTypeKey)
+            defaults.synchronize()
+        }
+        
+        reachability?.listener = { status in
+            switch status {
+            case .reachable(.wwan): break
+                
+            default:
+                break
+            }
+        }
+        reachability?.startListening()
     }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -64,6 +79,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIApplication{
-    
 }
 
