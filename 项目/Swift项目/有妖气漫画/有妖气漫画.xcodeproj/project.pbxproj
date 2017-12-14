@@ -32,6 +32,16 @@
 		5B97B3E41FDF75AD00480E5F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3E31FDF75AD00480E5F /* UIColor+Extension.swift */; };
 		5B97B3E61FDF75DE00480E5F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3E51FDF75DE00480E5F /* UIView+Extension.swift */; };
 		5B97B3E91FDF79EB00480E5F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3E81FDF79EB00480E5F /* BaseTableViewCell.swift */; };
+		5B97B3EB1FE0BE8200480E5F /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3EA1FE0BE8200480E5F /* BaseCollectionViewCell.swift */; };
+		5B97B3ED1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3EC1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift */; };
+		5B97B3F11FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3F01FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift */; };
+		5B97B3F31FE0CCE100480E5F /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3F21FE0CCE100480E5F /* ParallaxHeaderMode.swift */; };
+		5B97B3F51FE0CCEF00480E5F /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3F41FE0CCEF00480E5F /* ParallaxHeader.swift */; };
+		5B97B3F81FE0CD8100480E5F /* UIBarButtonItemFixSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3F71FE0CD8100480E5F /* UIBarButtonItemFixSpace.swift */; };
+		5B97B3FA1FE0CDC100480E5F /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3F91FE0CDC100480E5F /* DispatchQueue+Extension.swift */; };
+		5B97B3FC1FE0D0E500480E5F /* CollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3FB1FE0D0E500480E5F /* CollectListViewController.swift */; };
+		5B97B3FE1FE0D0F500480E5F /* DocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3FD1FE0D0F500480E5F /* DocumentListViewController.swift */; };
+		5B97B4001FE0D10300480E5F /* DownloadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3FF1FE0D10300480E5F /* DownloadListViewController.swift */; };
 		EE13455AEA02A8D65781616F /* Pods______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3606FF65648BD4C9CEF5BEC6 /* Pods______.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +95,16 @@
 		5B97B3E31FDF75AD00480E5F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5B97B3E51FDF75DE00480E5F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5B97B3E81FDF79EB00480E5F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		5B97B3EA1FE0BE8200480E5F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B97B3EC1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		5B97B3F01FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
+		5B97B3F21FE0CCE100480E5F /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
+		5B97B3F41FE0CCEF00480E5F /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
+		5B97B3F71FE0CD8100480E5F /* UIBarButtonItemFixSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemFixSpace.swift; sourceTree = "<group>"; };
+		5B97B3F91FE0CDC100480E5F /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		5B97B3FB1FE0D0E500480E5F /* CollectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectListViewController.swift; sourceTree = "<group>"; };
+		5B97B3FD1FE0D0F500480E5F /* DocumentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListViewController.swift; sourceTree = "<group>"; };
+		5B97B3FF1FE0D10300480E5F /* DownloadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListViewController.swift; sourceTree = "<group>"; };
 		81D4771CEA4B39F8E428AD78 /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6A4879401A4940790A6ECA /* Pods______Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB587FB7785403574549BC1B /* Pods-有妖气漫画.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-有妖气漫画.release.xcconfig"; path = "Pods/Target Support Files/Pods-有妖气漫画/Pods-有妖气漫画.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +225,7 @@
 		5B5C84EF1FDE9DD900557890 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B97B3EE1FE0CC8500480E5F /* Component */,
 				5B97B3E21FDF759900480E5F /* Extension */,
 				5B5C84F01FDE9DEC00557890 /* Global.swift */,
 			);
@@ -277,6 +298,9 @@
 			isa = PBXGroup;
 			children = (
 				5B97B3CF1FDF6F7B00480E5F /* BookViewController.swift */,
+				5B97B3FB1FE0D0E500480E5F /* CollectListViewController.swift */,
+				5B97B3FD1FE0D0F500480E5F /* DocumentListViewController.swift */,
+				5B97B3FF1FE0D10300480E5F /* DownloadListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +336,8 @@
 			children = (
 				5B97B3E31FDF75AD00480E5F /* UIColor+Extension.swift */,
 				5B97B3E51FDF75DE00480E5F /* UIView+Extension.swift */,
+				5B97B3EC1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift */,
+				5B97B3F91FE0CDC100480E5F /* DispatchQueue+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -320,8 +346,36 @@
 			isa = PBXGroup;
 			children = (
 				5B97B3E81FDF79EB00480E5F /* BaseTableViewCell.swift */,
+				5B97B3EA1FE0BE8200480E5F /* BaseCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5B97B3EE1FE0CC8500480E5F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				5B97B3F61FE0CD6F00480E5F /* BarButtonItem */,
+				5B97B3EF1FE0CC9100480E5F /* ParallaxHeader */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		5B97B3EF1FE0CC9100480E5F /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				5B97B3F01FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift */,
+				5B97B3F21FE0CCE100480E5F /* ParallaxHeaderMode.swift */,
+				5B97B3F41FE0CCEF00480E5F /* ParallaxHeader.swift */,
+			);
+			path = ParallaxHeader;
+			sourceTree = "<group>";
+		};
+		5B97B3F61FE0CD6F00480E5F /* BarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				5B97B3F71FE0CD8100480E5F /* UIBarButtonItemFixSpace.swift */,
+			);
+			path = BarButtonItem;
 			sourceTree = "<group>";
 		};
 		6964395044998C6F98A9451E /* Pods */ = {
@@ -562,24 +616,34 @@
 			files = (
 				5B97B3DA1FDF72F900480E5F /* SubscibeListViewController.swift in Sources */,
 				5B97B3BF1FDF6EAA00480E5F /* BaseViewController.swift in Sources */,
+				5B97B4001FE0D10300480E5F /* DownloadListViewController.swift in Sources */,
 				5B97B3D41FDF6FC300480E5F /* MineViewController.swift in Sources */,
+				5B97B3F11FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift in Sources */,
 				5B97B3E41FDF75AD00480E5F /* UIColor+Extension.swift in Sources */,
 				5B5C84F11FDE9DEC00557890 /* Global.swift in Sources */,
 				5B97B3DF1FDF751E00480E5F /* MineHead.swift in Sources */,
 				5B97B3E11FDF755100480E5F /* SettingViewController.swift in Sources */,
 				5B97B3C71FDF6F1400480E5F /* MainNavigationController.swift in Sources */,
+				5B97B3EB1FE0BE8200480E5F /* BaseCollectionViewCell.swift in Sources */,
 				5B97B3E91FDF79EB00480E5F /* BaseTableViewCell.swift in Sources */,
 				5B97B3DC1FDF730B00480E5F /* RankListViewController.swift in Sources */,
 				5B97B3D61FDF72AD00480E5F /* BoutiqueListViewController.swift in Sources */,
 				5B97B3CB1FDF6F4E00480E5F /* CateListViewController.swift in Sources */,
+				5B97B3F31FE0CCE100480E5F /* ParallaxHeaderMode.swift in Sources */,
+				5B97B3F81FE0CD8100480E5F /* UIBarButtonItemFixSpace.swift in Sources */,
 				5B5C84BF1FDE97CE00557890 /* ViewController.swift in Sources */,
 				5B97B3E61FDF75DE00480E5F /* UIView+Extension.swift in Sources */,
 				5B97B3C11FDF6EBF00480E5F /* PageViewController.swift in Sources */,
+				5B97B3ED1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift in Sources */,
+				5B97B3FE1FE0D0F500480E5F /* DocumentListViewController.swift in Sources */,
+				5B97B3F51FE0CCEF00480E5F /* ParallaxHeader.swift in Sources */,
 				5B97B3D81FDF72BF00480E5F /* VIPListViewController.swift in Sources */,
+				5B97B3FA1FE0CDC100480E5F /* DispatchQueue+Extension.swift in Sources */,
 				5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */,
 				5B97B3D01FDF6F7B00480E5F /* BookViewController.swift in Sources */,
 				5B97B3C51FDF6EF300480E5F /* HomeViewController.swift in Sources */,
 				5B5C84EE1FDE9BDC00557890 /* MainTabbarController.swift in Sources */,
+				5B97B3FC1FE0D0E500480E5F /* CollectListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

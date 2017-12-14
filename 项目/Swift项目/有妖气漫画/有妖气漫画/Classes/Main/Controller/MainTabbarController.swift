@@ -21,12 +21,37 @@ class MainTabbarController: UITabBarController {
 
     func setupController(){
         /// 首页
+        let onePageVC = HomeViewController(titles: ["推荐",
+                                                     "VIP",
+                                                     "订阅",
+                                                     "排行"],
+                                            vcs: [BoutiqueListViewController(),
+                                                  VIPListViewController(),
+                                                  SubscibeListViewController(),
+                                                  RankListViewController()],
+                                            pageStyle: .navgationBarSegment)
+        addChildViewController(onePageVC,
+                               title: "首页",
+                               image: UIImage(named: "tab_home"),
+                               selectedImage: UIImage(named: "tab_home_S"))
         
         /// 分类
         let classVC = CateListViewController()
         addChildViewController(classVC, title: "分类", image: UIImage(named: "tab_class"), selectedImage: UIImage(named: "tab_class_S"))
         
         /// 书架
+        /// 书架
+        let bookVC = BookViewController(titles: ["收藏",
+                                                  "书单",
+                                                  "下载"],
+                                         vcs: [CollectListViewController(),
+                                               DocumentListViewController(),
+                                               DownloadListViewController()],
+                                         pageStyle: .navgationBarSegment)
+        addChildViewController(bookVC,
+                               title: "书架",
+                               image: UIImage(named: "tab_book"),
+                               selectedImage: UIImage(named: "tab_book_S"))
         
         /// 我的
         let mineVC = MineViewController()
