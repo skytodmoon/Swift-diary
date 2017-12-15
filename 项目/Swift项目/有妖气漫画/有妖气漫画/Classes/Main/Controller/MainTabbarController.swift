@@ -40,7 +40,6 @@ class MainTabbarController: UITabBarController {
         addChildViewController(classVC, title: "分类", image: UIImage(named: "tab_class"), selectedImage: UIImage(named: "tab_class_S"))
         
         /// 书架
-        /// 书架
         let bookVC = BookViewController(titles: ["收藏",
                                                   "书单",
                                                   "下载"],
