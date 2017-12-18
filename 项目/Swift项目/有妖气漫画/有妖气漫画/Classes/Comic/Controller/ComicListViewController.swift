@@ -19,9 +19,9 @@ class ComicListViewController: BaseViewController {
         let tw = UITableView(frame: .zero, style: .plain)
         tw.backgroundColor = UIColor.background
         tw.tableFooterView = UIView()
-//        tw.delegate = self
-//        tw.dataSource = self
-//        tw.register(cellType: ComicTCell.self)
+        tw.delegate = self
+        tw.dataSource = self
+        tw.register(cellType: ComicTCell.self)
         tw.Head = RefreshHeader { self.loadData(more: false) }
         tw.Foot = RefreshFooter { self.loadData(more: true) }
         tw.empty = EmptyView { self.loadData(more: false) }
@@ -73,27 +73,27 @@ class ComicListViewController: BaseViewController {
     }
 }
 
-//extension ComicListViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return comicList.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: ComicTCell.self)
-//        cell.spinnerName = spinnerName
-//        cell.indexPath = indexPath
-//        cell.model = comicList[indexPath.row]
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 180
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let model = comicList[indexPath.row]
-//        let vc = ComicViewController(comicid: model.comicId)
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//}
+extension ComicListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return comicList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: ComicTCell.self)
+        cell.spinnerName = spinnerName
+        cell.indexPath = indexPath
+        cell.model = comicList[indexPath.row]
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = comicList[indexPath.row]
+        let vc = ComicViewController(comicid: model.comicId)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
 
