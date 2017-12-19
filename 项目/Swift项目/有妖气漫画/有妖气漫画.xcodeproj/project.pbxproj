@@ -45,6 +45,12 @@
 		5BA118341FE245B100F2C40F /* RankCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA118331FE245B100F2C40F /* RankCCell.swift */; };
 		5BA118361FE245D700F2C40F /* TopCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA118351FE245D700F2C40F /* TopCCell.swift */; };
 		5BA118391FE2465D00F2C40F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA118381FE2465D00F2C40F /* API.swift */; };
+		5BA374501FE7677400C354A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3744F1FE7677400C354A6 /* DetailViewController.swift */; };
+		5BA374521FE7678600C354A6 /* OtherWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA374511FE7678600C354A6 /* OtherWorksViewController.swift */; };
+		5BA374541FE7679200C354A6 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA374531FE7679200C354A6 /* ChapterViewController.swift */; };
+		5BA374561FE767A300C354A6 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA374551FE767A300C354A6 /* ReadViewController.swift */; };
+		5BA374581FE767AF00C354A6 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA374571FE767AF00C354A6 /* CommentViewController.swift */; };
+		5BA3745A1FE767DA00C354A6 /* ComicHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA374591FE767DA00C354A6 /* ComicHead.swift */; };
 		5BBF955A1FE247C300166993 /* UIDeveice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF95591FE247C300166993 /* UIDeveice+Extension.swift */; };
 		5BBF955D1FE2481E00166993 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF955C1FE2481E00166993 /* Model.swift */; };
 		5BBF95601FE24C7500166993 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBF955F1FE24C7500166993 /* Refresh.swift */; };
@@ -125,6 +131,12 @@
 		5BA118331FE245B100F2C40F /* RankCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCCell.swift; sourceTree = "<group>"; };
 		5BA118351FE245D700F2C40F /* TopCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCCell.swift; sourceTree = "<group>"; };
 		5BA118381FE2465D00F2C40F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5BA3744F1FE7677400C354A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5BA374511FE7678600C354A6 /* OtherWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWorksViewController.swift; sourceTree = "<group>"; };
+		5BA374531FE7679200C354A6 /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
+		5BA374551FE767A300C354A6 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		5BA374571FE767AF00C354A6 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		5BA374591FE767DA00C354A6 /* ComicHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicHead.swift; sourceTree = "<group>"; };
 		5BBF95591FE247C300166993 /* UIDeveice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeveice+Extension.swift"; sourceTree = "<group>"; };
 		5BBF955C1FE2481E00166993 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5BBF955F1FE24C7500166993 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
@@ -495,6 +507,11 @@
 			children = (
 				5BBF956C1FE24E2000166993 /* ComicListViewController.swift */,
 				5BBF95711FE354C000166993 /* ComicViewController.swift */,
+				5BA3744F1FE7677400C354A6 /* DetailViewController.swift */,
+				5BA374511FE7678600C354A6 /* OtherWorksViewController.swift */,
+				5BA374531FE7679200C354A6 /* ChapterViewController.swift */,
+				5BA374551FE767A300C354A6 /* ReadViewController.swift */,
+				5BA374571FE767AF00C354A6 /* CommentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -503,6 +520,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBF956F1FE3547F00166993 /* ComicTCell.swift */,
+				5BA374591FE767DA00C354A6 /* ComicHead.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,12 +779,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA374581FE767AF00C354A6 /* CommentViewController.swift in Sources */,
 				5BBF955D1FE2481E00166993 /* Model.swift in Sources */,
 				5B97B3DA1FDF72F900480E5F /* SubscibeListViewController.swift in Sources */,
 				5B97B3BF1FDF6EAA00480E5F /* BaseViewController.swift in Sources */,
 				5B97B4001FE0D10300480E5F /* DownloadListViewController.swift in Sources */,
 				5BBF95671FE24DA400166993 /* SearchViewController.swift in Sources */,
 				5BBF95791FE3563700166993 /* BaseTableViewHeaderFooterView.swift in Sources */,
+				5BA374521FE7678600C354A6 /* OtherWorksViewController.swift in Sources */,
+				5BA374561FE767A300C354A6 /* ReadViewController.swift in Sources */,
 				5BBF95771FE3561800166993 /* USearchCCell.swift in Sources */,
 				5B97B3D41FDF6FC300480E5F /* MineViewController.swift in Sources */,
 				5B97B3F11FE0CCAD00480E5F /* UIScrollView+ParallaxHeader.swift in Sources */,
@@ -790,6 +811,7 @@
 				5BBF95691FE24DD600166993 /* Array+Extension.swift in Sources */,
 				5B97B3C11FDF6EBF00480E5F /* PageViewController.swift in Sources */,
 				5B97B3ED1FE0CC2900480E5F /* UIBarButtonItem+Extension.swift in Sources */,
+				5BA374541FE7679200C354A6 /* ChapterViewController.swift in Sources */,
 				5BA118391FE2465D00F2C40F /* API.swift in Sources */,
 				5B97B3FE1FE0D0F500480E5F /* DocumentListViewController.swift in Sources */,
 				5B97B3F51FE0CCEF00480E5F /* ParallaxHeader.swift in Sources */,
@@ -800,6 +822,7 @@
 				5B97B3D81FDF72BF00480E5F /* VIPListViewController.swift in Sources */,
 				5B97B3FA1FE0CDC100480E5F /* DispatchQueue+Extension.swift in Sources */,
 				5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */,
+				5BA374501FE7677400C354A6 /* DetailViewController.swift in Sources */,
 				5BBF957E1FE3585000166993 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				5B97B3D01FDF6F7B00480E5F /* BookViewController.swift in Sources */,
 				5B97B3C51FDF6EF300480E5F /* HomeViewController.swift in Sources */,
@@ -808,6 +831,7 @@
 				5BBF95751FE3560200166993 /* SearchTHead.swift in Sources */,
 				5B97B3FC1FE0D0E500480E5F /* CollectListViewController.swift in Sources */,
 				5BA118361FE245D700F2C40F /* TopCCell.swift in Sources */,
+				5BA3745A1FE767DA00C354A6 /* ComicHead.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
