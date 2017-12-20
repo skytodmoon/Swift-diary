@@ -10,28 +10,37 @@ import UIKit
 
 class DetailViewController: BaseViewController {
     
+    weak var delegate: ComicViewWillEndDraggingDelegate?
+    
     var detailStatic: DetailStaticModel?
+    var detailRealtime: DetailRealtimeModel?
+    var guessLike: GuessLikeModel?
+    
+    private  lazy var tableView: UITableView = {
+        let tw = UITableView(frame: .zero, style: .plain)
+//        tw.delegate = self
+//        tw.dataSource = self
+        tw.backgroundColor = UIColor.orange
+        tw.separatorStyle = .none
+//        tw.register(cellType: DescriptionTCell.self)
+//        tw.register(cellType: OtherWorksTCell.self)
+//        tw.register(cellType: TicketTCell.self)
+//        tw.register(cellType: GuessLikeTCell.self)
+        return tw
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func reloadData() {
+        tableView.reloadData()
     }
-    */
+    
+    override func configUI() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {$0.edges.equalTo(self.view.usnp.edges) }
+    }
 
 }

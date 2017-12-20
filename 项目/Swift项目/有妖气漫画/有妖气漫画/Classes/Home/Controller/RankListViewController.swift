@@ -10,26 +10,32 @@ import UIKit
 
 class RankListViewController: BaseViewController {
 
+    private lazy var tableView: UITableView = {
+        let tw = UITableView(frame: .zero, style: .plain)
+        tw.backgroundColor = UIColor.green
+        tw.tableFooterView = UIView()
+        tw.separatorStyle = .none
+//        tw.delegate = self
+//        tw.dataSource = self
+//        tw.separatorStyle = .none
+//        tw.register(cellType: RankTCell.self)
+        tw.Head = RefreshHeader{ self.loadData() }
+        tw.empty = EmptyView { self.loadData() }
+        return tw
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        loadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc private func loadData() {
     }
-    */
+    
+    override func configUI() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
+    }
 
 }

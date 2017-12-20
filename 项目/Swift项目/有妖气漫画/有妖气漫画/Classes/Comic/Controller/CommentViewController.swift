@@ -11,26 +11,41 @@ import UIKit
 class CommentViewController: BaseViewController {
     
     var detailStatic: DetailStaticModel?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var commentList: CommentListModel? {
+        didSet {
+            guard let commentList = commentList?.commentList else { return }
+            let viewModelArray = commentList.flatMap { (comment) -> CommentViewModel? in
+                return CommentViewModel(model: comment)
+            }
+            listArray.append(contentsOf: viewModelArray)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private var listArray = [CommentViewModel]()
+    
+    
+    weak var delegate: ComicViewWillEndDraggingDelegate?
+    
+    private lazy var tableView: UITableView = {
+        let tw = UITableView(frame: .zero, style: .plain)
+        tw.backgroundColor = UIColor.brown
+//        tw.delegate = self
+//        tw.dataSource = self
+//        tw.register(cellType: CommentTCell.self)
+//        tw.uFoot = URefreshFooter { self.loadData() }
+        return tw
+    }()
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    override func configUI() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {$0.edges.equalTo(self.view.usnp.edges) }
+    }
 
 }

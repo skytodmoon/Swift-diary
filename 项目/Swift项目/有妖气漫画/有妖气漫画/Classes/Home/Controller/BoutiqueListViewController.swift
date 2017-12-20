@@ -9,27 +9,34 @@
 import UIKit
 
 class BoutiqueListViewController: BaseViewController {
+    
+    
+    private lazy var tableView: UITableView = {
+        let tw = UITableView(frame: .zero, style: .plain)
+        tw.backgroundColor = UIColor.orange
+        tw.tableFooterView = UIView()
+//        tw.delegate = self
+//        tw.dataSource = self
+//        tw.register(cellType: UpdateTCell.self)
+        tw.Head = RefreshHeader { self.loadData(more: false) }
+        tw.Foot = RefreshFooter { self.loadData(more: true) }
+        tw.empty = EmptyView { self.loadData(more: false) }
+        return tw
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        loadData(more: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc private func loadData(more: Bool) {
+        
+        
     }
-    */
 
+    override func configUI() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
+    }
 }

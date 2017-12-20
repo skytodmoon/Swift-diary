@@ -10,26 +10,37 @@ import UIKit
 
 class SubscibeListViewController: BaseViewController {
 
+    private lazy var collectionView: UICollectionView = {
+        let lt = UCollectionViewSectionBackgroundLayout()
+        lt.minimumInteritemSpacing = 5
+        lt.minimumLineSpacing = 10
+        let cw = UICollectionView(frame: CGRect.zero, collectionViewLayout: lt)
+        cw.backgroundColor = UIColor.blue
+//        cw.delegate = self
+//        cw.dataSource = self
+//        cw.alwaysBounceVertical = true
+//        cw.register(cellType: ComicCCell.self)
+//        cw.register(supplementaryViewType: ComicCHead.self, ofKind: UICollectionElementKindSectionHeader)
+//        cw.register(supplementaryViewType: ComicCFoot.self, ofKind: UICollectionElementKindSectionFooter)
+        cw.Head = RefreshHeader{ self.loadData() }
+        cw.Foot = RefreshTipKissFooter(with: "使用妖气币可以购买订阅漫画\nVIP会员购买还有优惠哦~")
+        cw.empty = EmptyView { self.loadData() }
+        return cw
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        loadData()
     }
     
+    private func loadData() {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    override func configUI() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints{ $0.edges.equalTo(self.view.usnp.edges) }
+    }
 
 }

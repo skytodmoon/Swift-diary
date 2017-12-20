@@ -18,19 +18,19 @@ class ComicViewController: BaseViewController {
     
     private lazy var mainScrollView: UIScrollView = {
         let sw = UIScrollView()
-//        sw.delegate = self
+        sw.delegate = self
         return sw
     }()
     
     private lazy var detailVC: DetailViewController = {
         let dc = DetailViewController()
-//        dc.delegate = self
+        dc.delegate = self
         return dc
     }()
     
     private lazy var chapterVC: ChapterViewController = {
         let cc = ChapterViewController()
-//        cc.delegate = self
+        cc.delegate = self
         return cc
     }()
     
@@ -40,7 +40,7 @@ class ComicViewController: BaseViewController {
     
     private lazy var commentVC: CommentViewController = {
         let cc = CommentViewController()
-//        cc.delegate = self
+        cc.delegate = self
         return cc
     }()
     
@@ -75,7 +75,51 @@ class ComicViewController: BaseViewController {
     }
     private func loadData() {
         
+        let grpup = DispatchGroup()
         
+        grpup.enter()
+        ApiLoadingProvider.request(Api.detailStatic(comicid: comicid),
+                                   model: DetailStaticModel.self) { [weak self] (detailStatic) in
+                                    self?.detailStatic = detailStatic
+                                    self?.headView.detailStatic = detailStatic?.comic
+                                    
+                                    self?.detailVC.detailStatic = detailStatic
+                                    self?.chapterVC.detailStatic = detailStatic
+                                    self?.commentVC.detailStatic = detailStatic
+                                    
+                                    ApiProvider.request(Api.commentList(object_id: detailStatic?.comic?.comic_id ?? 0,
+                                                                         thread_id: detailStatic?.comic?.thread_id ?? 0,
+                                                                         page: -1),
+                                                        model: CommentListModel.self,
+                                                        completion: { [weak self] (commentList) in
+                                                            self?.commentVC.commentList = commentList
+                                                            grpup.leave()
+                                    })
+        }
+        
+        grpup.enter()
+        ApiProvider.request(Api.detailRealtime(comicid: comicid),
+                            model: DetailRealtimeModel.self) { [weak self] (returnData) in
+                                self?.detailRealtime = returnData
+                                self?.headView.detailRealtime = returnData?.comic
+                                
+                                self?.detailVC.detailRealtime = returnData
+                                self?.chapterVC.detailRealtime = returnData
+                                
+                                grpup.leave()
+        }
+        
+        grpup.enter()
+        ApiProvider.request(Api.guessLike, model: GuessLikeModel.self) { (returnData) in
+            self.detailVC.guessLike = returnData
+            grpup.leave()
+        }
+        
+        grpup.notify(queue: DispatchQueue.main) {
+            self.detailVC.reloadData()
+            self.chapterVC.reloadData()
+            self.commentVC.reloadData()
+        }
     }
     
     override func configUI() {
@@ -108,5 +152,29 @@ class ComicViewController: BaseViewController {
         navigationController?.barStyle(.clear)
         mainScrollView.contentOffset = CGPoint(x: 0, y: -mainScrollView.parallaxHeader.height)
     }
+}
+
+extension ComicViewController: UIScrollViewDelegate, ComicViewWillEndDraggingDelegate {
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= -scrollView.parallaxHeader.minimumHeight {
+            navigationController?.barStyle(.theme)
+            navigationItem.title = detailStatic?.comic?.name
+        } else {
+            navigationController?.barStyle(.clear)
+            navigationItem.title = ""
+        }
+    }
+    
+    func comicWillEndDragging(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            mainScrollView.setContentOffset(CGPoint(x: 0,
+                                                    y: -self.mainScrollView.parallaxHeader.minimumHeight),
+                                            animated: true)
+        } else if scrollView.contentOffset.y < 0 {
+            mainScrollView.setContentOffset(CGPoint(x: 0,
+                                                    y: -self.mainScrollView.parallaxHeader.height),
+                                            animated: true)
+        }
+    }
 }
