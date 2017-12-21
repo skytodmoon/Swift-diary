@@ -24,6 +24,10 @@
 		5B6955BC1FE9378D002B8B56 /* UpdateTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6955BB1FE9378D002B8B56 /* UpdateTCell.swift */; };
 		5B6955BE1FE9379D002B8B56 /* BoardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6955BD1FE9379D002B8B56 /* BoardCCell.swift */; };
 		5B6955C01FE937AF002B8B56 /* SpecialTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6955BF1FE937AF002B8B56 /* SpecialTCell.swift */; };
+		5B7133681FEA0B45009F8DD5 /* ComicCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7133671FEA0B45009F8DD5 /* ComicCCell.swift */; };
+		5B71336A1FEA0B99009F8DD5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7133691FEA0B99009F8DD5 /* WebViewController.swift */; };
+		5B71336C1FEA0C81009F8DD5 /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71336B1FEA0C81009F8DD5 /* SpecialViewController.swift */; };
+		5B71336E1FEA0CB2009F8DD5 /* UpdateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71336D1FEA0CB2009F8DD5 /* UpdateListViewController.swift */; };
 		5B97B3BF1FDF6EAA00480E5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3BE1FDF6EAA00480E5F /* BaseViewController.swift */; };
 		5B97B3C11FDF6EBF00480E5F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3C01FDF6EBF00480E5F /* PageViewController.swift */; };
 		5B97B3C51FDF6EF300480E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97B3C41FDF6EF300480E5F /* HomeViewController.swift */; };
@@ -119,6 +123,10 @@
 		5B6955BB1FE9378D002B8B56 /* UpdateTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTCell.swift; sourceTree = "<group>"; };
 		5B6955BD1FE9379D002B8B56 /* BoardCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCCell.swift; sourceTree = "<group>"; };
 		5B6955BF1FE937AF002B8B56 /* SpecialTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTCell.swift; sourceTree = "<group>"; };
+		5B7133671FEA0B45009F8DD5 /* ComicCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCCell.swift; sourceTree = "<group>"; };
+		5B7133691FEA0B99009F8DD5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5B71336B1FEA0C81009F8DD5 /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		5B71336D1FEA0CB2009F8DD5 /* UpdateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListViewController.swift; sourceTree = "<group>"; };
 		5B97B3BE1FDF6EAA00480E5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5B97B3C01FDF6EBF00480E5F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		5B97B3C41FDF6EF300480E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +315,7 @@
 				5B6955BB1FE9378D002B8B56 /* UpdateTCell.swift */,
 				5B6955BD1FE9379D002B8B56 /* BoardCCell.swift */,
 				5B6955BF1FE937AF002B8B56 /* SpecialTCell.swift */,
+				5B7133671FEA0B45009F8DD5 /* ComicCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 			children = (
 				5B97B3C01FDF6EBF00480E5F /* PageViewController.swift */,
 				5B97B3BE1FDF6EAA00480E5F /* BaseViewController.swift */,
+				5B7133691FEA0B99009F8DD5 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,11 +351,13 @@
 		5B97B3C31FDF6EE400480E5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B71336B1FEA0C81009F8DD5 /* SpecialViewController.swift */,
 				5B97B3C41FDF6EF300480E5F /* HomeViewController.swift */,
 				5B97B3D51FDF72AD00480E5F /* BoutiqueListViewController.swift */,
 				5B97B3D71FDF72BF00480E5F /* VIPListViewController.swift */,
 				5B97B3D91FDF72F900480E5F /* SubscibeListViewController.swift */,
 				5B97B3DB1FDF730B00480E5F /* RankListViewController.swift */,
+				5B71336D1FEA0CB2009F8DD5 /* UpdateListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -819,6 +831,7 @@
 				5B97B3BF1FDF6EAA00480E5F /* BaseViewController.swift in Sources */,
 				5B97B4001FE0D10300480E5F /* DownloadListViewController.swift in Sources */,
 				5BBF95671FE24DA400166993 /* SearchViewController.swift in Sources */,
+				5B71336E1FEA0CB2009F8DD5 /* UpdateListViewController.swift in Sources */,
 				5B66A84E1FE932AC00E632B3 /* CommentTCell.swift in Sources */,
 				5BBF95791FE3563700166993 /* BaseTableViewHeaderFooterView.swift in Sources */,
 				5BA374521FE7678600C354A6 /* OtherWorksViewController.swift in Sources */,
@@ -859,6 +872,7 @@
 				5BBF95601FE24C7500166993 /* Refresh.swift in Sources */,
 				5BBF95721FE354C000166993 /* ComicViewController.swift in Sources */,
 				5BBF95701FE3547F00166993 /* ComicTCell.swift in Sources */,
+				5B71336A1FEA0B99009F8DD5 /* WebViewController.swift in Sources */,
 				5B97B3D81FDF72BF00480E5F /* VIPListViewController.swift in Sources */,
 				5B97B3FA1FE0CDC100480E5F /* DispatchQueue+Extension.swift in Sources */,
 				5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */,
@@ -866,12 +880,14 @@
 				5B6955B81FE9373F002B8B56 /* BaseCollectionReusableView.swift in Sources */,
 				5BBF957E1FE3585000166993 /* UCollectionViewSectionBackgroundLayout.swift in Sources */,
 				5B97B3D01FDF6F7B00480E5F /* BookViewController.swift in Sources */,
+				5B71336C1FEA0C81009F8DD5 /* SpecialViewController.swift in Sources */,
 				5B97B3C51FDF6EF300480E5F /* HomeViewController.swift in Sources */,
 				5BBF957C1FE3582300166993 /* UCollectionViewAlignedLayout.swift in Sources */,
 				5B5C84EE1FDE9BDC00557890 /* MainTabbarController.swift in Sources */,
 				5BBF95751FE3560200166993 /* SearchTHead.swift in Sources */,
 				5B97B3FC1FE0D0E500480E5F /* CollectListViewController.swift in Sources */,
 				5BA118361FE245D700F2C40F /* TopCCell.swift in Sources */,
+				5B7133681FEA0B45009F8DD5 /* ComicCCell.swift in Sources */,
 				5B6955BE1FE9379D002B8B56 /* BoardCCell.swift in Sources */,
 				5BA3745A1FE767DA00C354A6 /* ComicHead.swift in Sources */,
 			);

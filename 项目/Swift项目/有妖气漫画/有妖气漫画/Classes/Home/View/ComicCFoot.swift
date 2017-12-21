@@ -9,5 +9,7 @@
 import UIKit
 
 class ComicCFoot: BaseCollectionReusableView {
-        
+    override func configUI() {
+        backgroundColor = UIColor.background
+    }
 }
