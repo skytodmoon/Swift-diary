@@ -28,13 +28,29 @@ class CommentViewController: BaseViewController {
     
     private lazy var tableView: UITableView = {
         let tw = UITableView(frame: .zero, style: .plain)
-        tw.backgroundColor = UIColor.brown
-//        tw.delegate = self
-//        tw.dataSource = self
-//        tw.register(cellType: CommentTCell.self)
-//        tw.uFoot = URefreshFooter { self.loadData() }
+        tw.delegate = self
+        tw.dataSource = self
+        tw.register(cellType: CommentTCell.self)
+        tw.Foot = RefreshFooter { self.loadData() }
         return tw
+        
     }()
+    
+    func loadData() {
+        ApiProvider.request(Api.commentList(object_id: detailStatic?.comic?.comic_id ?? 0,
+                                             thread_id: detailStatic?.comic?.thread_id ?? 0,
+                                             page: commentList?.serverNextPage ?? 0),
+                            model: CommentListModel.self) { (returnData) in
+                                if returnData?.hasMore == true {
+                                    self.tableView.Foot.endRefreshing()
+                                } else {
+                                    self.tableView.Foot.endRefreshingWithNoMoreData()
+                                }
+                                self.commentList = returnData
+                                self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,5 +63,27 @@ class CommentViewController: BaseViewController {
         view.addSubview(tableView)
         tableView.snp.makeConstraints {$0.edges.equalTo(self.view.usnp.edges) }
     }
-
 }
+
+extension CommentViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.comicWillEndDragging(scrollView)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return listArray[indexPath.row].height
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: CommentTCell.self)
+        cell.viewModel = listArray[indexPath.row]
+        return cell
+    }
+}
+
+
