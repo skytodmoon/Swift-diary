@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B41D11F1FEB8807008DCC2C /* DescriptionTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41D11E1FEB8807008DCC2C /* DescriptionTCell.swift */; };
+		5B41D1211FEB8841008DCC2C /* OtherWorksTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41D1201FEB8841008DCC2C /* OtherWorksTCell.swift */; };
+		5B41D1231FEB8861008DCC2C /* TicketTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41D1221FEB8861008DCC2C /* TicketTCell.swift */; };
+		5B41D1251FEB889C008DCC2C /* GuessLikeTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41D1241FEB889C008DCC2C /* GuessLikeTCell.swift */; };
+		5B41D1271FEB895F008DCC2C /* OtherWorksCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41D1261FEB895F008DCC2C /* OtherWorksCCell.swift */; };
 		5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84BC1FDE97CE00557890 /* AppDelegate.swift */; };
 		5B5C84BF1FDE97CE00557890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C84BE1FDE97CE00557890 /* ViewController.swift */; };
 		5B5C84C21FDE97CE00557890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5C84C01FDE97CE00557890 /* Main.storyboard */; };
@@ -99,6 +104,11 @@
 
 /* Begin PBXFileReference section */
 		3606FF65648BD4C9CEF5BEC6 /* Pods______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B41D11E1FEB8807008DCC2C /* DescriptionTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTCell.swift; sourceTree = "<group>"; };
+		5B41D1201FEB8841008DCC2C /* OtherWorksTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWorksTCell.swift; sourceTree = "<group>"; };
+		5B41D1221FEB8861008DCC2C /* TicketTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTCell.swift; sourceTree = "<group>"; };
+		5B41D1241FEB889C008DCC2C /* GuessLikeTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeTCell.swift; sourceTree = "<group>"; };
+		5B41D1261FEB895F008DCC2C /* OtherWorksCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWorksCCell.swift; sourceTree = "<group>"; };
 		5B5C84B91FDE97CE00557890 /* 有妖气漫画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有妖气漫画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5C84BC1FDE97CE00557890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5C84BE1FDE97CE00557890 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -566,6 +576,11 @@
 				5BBF956F1FE3547F00166993 /* ComicTCell.swift */,
 				5BA374591FE767DA00C354A6 /* ComicHead.swift */,
 				5B66A84D1FE932AC00E632B3 /* CommentTCell.swift */,
+				5B41D11E1FEB8807008DCC2C /* DescriptionTCell.swift */,
+				5B41D1201FEB8841008DCC2C /* OtherWorksTCell.swift */,
+				5B41D1221FEB8861008DCC2C /* TicketTCell.swift */,
+				5B41D1241FEB889C008DCC2C /* GuessLikeTCell.swift */,
+				5B41D1261FEB895F008DCC2C /* OtherWorksCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +857,7 @@
 				5B97B3E41FDF75AD00480E5F /* UIColor+Extension.swift in Sources */,
 				5B5C84F11FDE9DEC00557890 /* Global.swift in Sources */,
 				5B97B3DF1FDF751E00480E5F /* MineHead.swift in Sources */,
+				5B41D11F1FEB8807008DCC2C /* DescriptionTCell.swift in Sources */,
 				5B97B3E11FDF755100480E5F /* SettingViewController.swift in Sources */,
 				5B97B3C71FDF6F1400480E5F /* MainNavigationController.swift in Sources */,
 				5B6955B61FE93729002B8B56 /* RankTCell.swift in Sources */,
@@ -865,14 +881,17 @@
 				5BA374541FE7679200C354A6 /* ChapterViewController.swift in Sources */,
 				5B6955C01FE937AF002B8B56 /* SpecialTCell.swift in Sources */,
 				5B6955BC1FE9378D002B8B56 /* UpdateTCell.swift in Sources */,
+				5B41D1211FEB8841008DCC2C /* OtherWorksTCell.swift in Sources */,
 				5BA118391FE2465D00F2C40F /* API.swift in Sources */,
 				5B97B3FE1FE0D0F500480E5F /* DocumentListViewController.swift in Sources */,
 				5B97B3F51FE0CCEF00480E5F /* ParallaxHeader.swift in Sources */,
+				5B41D1271FEB895F008DCC2C /* OtherWorksCCell.swift in Sources */,
 				5BBF956D1FE24E2000166993 /* ComicListViewController.swift in Sources */,
 				5BBF95601FE24C7500166993 /* Refresh.swift in Sources */,
 				5BBF95721FE354C000166993 /* ComicViewController.swift in Sources */,
 				5BBF95701FE3547F00166993 /* ComicTCell.swift in Sources */,
 				5B71336A1FEA0B99009F8DD5 /* WebViewController.swift in Sources */,
+				5B41D1251FEB889C008DCC2C /* GuessLikeTCell.swift in Sources */,
 				5B97B3D81FDF72BF00480E5F /* VIPListViewController.swift in Sources */,
 				5B97B3FA1FE0CDC100480E5F /* DispatchQueue+Extension.swift in Sources */,
 				5B5C84BD1FDE97CE00557890 /* AppDelegate.swift in Sources */,
@@ -883,6 +902,7 @@
 				5B71336C1FEA0C81009F8DD5 /* SpecialViewController.swift in Sources */,
 				5B97B3C51FDF6EF300480E5F /* HomeViewController.swift in Sources */,
 				5BBF957C1FE3582300166993 /* UCollectionViewAlignedLayout.swift in Sources */,
+				5B41D1231FEB8861008DCC2C /* TicketTCell.swift in Sources */,
 				5B5C84EE1FDE9BDC00557890 /* MainTabbarController.swift in Sources */,
 				5BBF95751FE3560200166993 /* SearchTHead.swift in Sources */,
 				5B97B3FC1FE0D0E500480E5F /* CollectListViewController.swift in Sources */,
