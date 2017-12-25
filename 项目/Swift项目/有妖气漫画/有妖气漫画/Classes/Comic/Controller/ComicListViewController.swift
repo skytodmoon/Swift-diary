@@ -21,6 +21,7 @@ class ComicListViewController: BaseViewController {
         tw.tableFooterView = UIView()
         tw.delegate = self
         tw.dataSource = self
+        tw.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         tw.register(cellType: ComicTCell.self)
         tw.Head = RefreshHeader { self.loadData(more: false) }
         tw.Foot = RefreshFooter { self.loadData(more: true) }

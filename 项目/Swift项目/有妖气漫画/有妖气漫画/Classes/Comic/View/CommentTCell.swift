@@ -25,6 +25,13 @@ class CommentTCell: BaseTableViewCell {
         return nl
     }()
     
+    private lazy var timeLabel: UILabel = {
+        let tl = UILabel()
+        tl.textColor = UIColor.orange
+        tl.font = UIFont.systemFont(ofSize: 11)
+        return tl
+    }()
+    
     lazy var contentTextView: UITextView = {
         let cw = UITextView()
         cw.isUserInteractionEnabled = false
@@ -54,6 +61,14 @@ class CommentTCell: BaseTableViewCell {
             $0.left.right.equalTo(nickNameLabel)
             $0.bottom.greaterThanOrEqualToSuperview().offset(-10)
         }
+        
+        contentView.addSubview(timeLabel)
+        timeLabel.snp.makeConstraints {
+            $0.top.equalTo(contentTextView.snp.bottom).offset(-5)
+            $0.left.equalTo(iconView.snp.right).offset(15)
+            $0.height.equalTo(15)
+            $0.width.equalTo(100)
+        }
     }
     
     var viewModel: CommentViewModel? {
@@ -62,6 +77,10 @@ class CommentTCell: BaseTableViewCell {
             iconView.kf.setImage(urlString: viewModel.model?.face)
             nickNameLabel.text = viewModel.model?.nickname
             contentTextView.text = viewModel.model?.content_filter
+            
+            let format = DateFormatter()
+            format.dateFormat = "yyyy-MM-dd"
+            timeLabel.text = "\(format.string(from: Date(timeIntervalSince1970: viewModel.model?.create_time ?? 0)))"
         }
     }
 }

@@ -11,14 +11,12 @@ import UIKit
 class TopCCell: BaseCollectionViewCell {
     private lazy var iconView: UIImageView = {
         let iw = UIImageView()
-        iw.contentMode = .scaleAspectFill
+        iw.contentMode = .scaleAspectFit
         return iw
     }()
     
     override func configUI() {
-        layer.cornerRadius = 5
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
+
         layer.masksToBounds = true
         
         contentView.addSubview(iconView)

@@ -12,6 +12,7 @@ class RankCCell: BaseCollectionViewCell {
     private lazy var iconView: UIImageView = {
         let iw = UIImageView()
         iw.contentMode = .scaleAspectFill
+        iw.backgroundColor = UIColor.groupTableViewBackground
         return iw
     }()
     

@@ -24,17 +24,25 @@ class ComicCHead: BaseCollectionReusableView {
         return UIImageView()
     }()
     
+    lazy var moreIcon: UIImageView = {
+        let iw = UIImageView()
+        iw.image = UIImage(named: "boutique_item_showmore_Normal")
+        iw.contentMode = .scaleAspectFit
+        return iw
+    }()
+    
     lazy var titleLabel: UILabel = {
         let tl = UILabel()
         tl.font = UIFont.systemFont(ofSize: 14)
-        tl.textColor = UIColor(r: 56, g: 221, b: 146)
+        tl.font = UIFont.boldSystemFont(ofSize: 16)
+        tl.textColor = UIColor.black
         return tl
     }()
     
     lazy var moreButton: UIButton = {
         let mn = UIButton(type: .system)
-        mn.setTitle("• • •", for: .normal)
-        mn.setTitleColor(UIColor(r: 56, g: 221, b: 146), for: .normal)
+        mn.setTitle("更多", for: .normal)
+        mn.setTitleColor(UIColor.gray, for: .normal)
         mn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         mn.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
         return mn
@@ -69,8 +77,16 @@ class ComicCHead: BaseCollectionReusableView {
         
         addSubview(moreButton)
         moreButton.snp.makeConstraints {
-            $0.top.right.bottom.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.right.equalToSuperview().offset(-25)
             $0.width.equalTo(40)
+        }
+        
+        addSubview(moreIcon)
+        moreIcon.snp.makeConstraints {
+            $0.right.equalToSuperview().offset(-10)
+            $0.centerY.equalToSuperview()
+            $0.width.height.equalTo(15)
         }
     }
 }
