@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hUx-Mn-hUj" customClass="CollectionGameCell" customModule="XMTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-9F-WfO">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM2-IX-XQn">
+                        <rect key="frame" x="0.0" y="120" width="100" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="lTS-eq-cNf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="DM2-IX-XQn" firstAttribute="top" secondItem="jhd-9F-WfO" secondAttribute="bottom" id="58j-iF-xfj"/>
+                <constraint firstAttribute="trailing" secondItem="DM2-IX-XQn" secondAttribute="trailing" id="AtX-fY-zC3"/>
+                <constraint firstItem="jhd-9F-WfO" firstAttribute="leading" secondItem="hUx-Mn-hUj" secondAttribute="leading" id="Deh-yD-RpS"/>
+                <constraint firstAttribute="bottom" secondItem="DM2-IX-XQn" secondAttribute="bottom" id="JhN-Ih-QdW"/>
+                <constraint firstAttribute="trailing" secondItem="jhd-9F-WfO" secondAttribute="trailing" id="MWj-B1-iGD"/>
+                <constraint firstItem="jhd-9F-WfO" firstAttribute="top" secondItem="hUx-Mn-hUj" secondAttribute="top" id="rFt-Vs-6DI"/>
+                <constraint firstItem="DM2-IX-XQn" firstAttribute="leading" secondItem="hUx-Mn-hUj" secondAttribute="leading" id="xbo-zq-mwA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="8rv-Zu-ZNZ"/>
+            <size key="customSize" width="101" height="146"/>
+            <connections>
+                <outlet property="imageView" destination="jhd-9F-WfO" id="S0I-vu-uMc"/>
+                <outlet property="nameLabel" destination="DM2-IX-XQn" id="3cw-lw-jag"/>
+            </connections>
+            <point key="canvasLocation" x="60" y="119"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="LOGO" width="90" height="90"/>
+    </resources>
+</document>

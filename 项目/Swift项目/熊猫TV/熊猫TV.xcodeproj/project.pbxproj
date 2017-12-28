@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B1BE54B1FF37E1A00C87B2F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE54A1FF37E1A00C87B2F /* NavigationController.swift */; };
+		5B1BE54E1FF37E5800C87B2F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE54D1FF37E5800C87B2F /* Common.swift */; };
+		5B1BE5511FF37E9F00C87B2F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE5501FF37E9F00C87B2F /* UIColor+Extension.swift */; };
+		5B1BE5531FF382B500C87B2F /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE5521FF382B500C87B2F /* NetworkTools.swift */; };
+		5B1BE5561FF382EF00C87B2F /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE5551FF382EF00C87B2F /* GameVM.swift */; };
+		5B1BE5591FF3832E00C87B2F /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE5581FF3832E00C87B2F /* GameModel.swift */; };
+		5B1BE55D1FF3854600C87B2F /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE55B1FF3854600C87B2F /* CollectionGameCell.swift */; };
+		5B1BE55E1FF3854600C87B2F /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1BE55C1FF3854600C87B2F /* CollectionGameCell.xib */; };
+		5B1BE5611FF3855100C87B2F /* CollectionGameLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BE55F1FF3855100C87B2F /* CollectionGameLiveCell.swift */; };
+		5B1BE5621FF3855100C87B2F /* CollectionGameLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1BE5601FF3855100C87B2F /* CollectionGameLiveCell.xib */; };
+		5B589BFD1FF33F48002E6BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589BFC1FF33F48002E6BF5 /* AppDelegate.swift */; };
+		5B589BFF1FF33F48002E6BF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589BFE1FF33F48002E6BF5 /* ViewController.swift */; };
+		5B589C021FF33F48002E6BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B589C001FF33F48002E6BF5 /* Main.storyboard */; };
+		5B589C041FF33F48002E6BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B589C031FF33F48002E6BF5 /* Assets.xcassets */; };
+		5B589C071FF33F48002E6BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B589C051FF33F48002E6BF5 /* LaunchScreen.storyboard */; };
+		5B589C121FF33F48002E6BF5 /* __TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C111FF33F48002E6BF5 /* __TVTests.swift */; };
+		5B589C1D1FF33F49002E6BF5 /* __TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C1C1FF33F49002E6BF5 /* __TVUITests.swift */; };
+		5B589C551FF37C64002E6BF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C541FF37C64002E6BF5 /* TabBarController.swift */; };
+		5B589C5B1FF37CF6002E6BF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C5A1FF37CF6002E6BF5 /* HomeViewController.swift */; };
+		5B589C5F1FF37D10002E6BF5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C5E1FF37D10002E6BF5 /* GameViewController.swift */; };
+		5B589C631FF37D2C002E6BF5 /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C621FF37D2C002E6BF5 /* EntertainmentViewController.swift */; };
+		5B589C671FF37D42002E6BF5 /* SmallShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589C661FF37D42002E6BF5 /* SmallShowViewController.swift */; };
+		969C9178390FB626DE2F8D89 /* Pods___TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E12EC73E7BE878BD32EEBEC /* Pods___TV.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B589C0E1FF33F48002E6BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B589BF11FF33F48002E6BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B589BF81FF33F48002E6BF5;
+			remoteInfo = "熊猫TV";
+		};
+		5B589C191FF33F48002E6BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B589BF11FF33F48002E6BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B589BF81FF33F48002E6BF5;
+			remoteInfo = "熊猫TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089A183F5C5DD1EE197F67FC /* Pods-熊猫TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-熊猫TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-熊猫TV/Pods-熊猫TV.debug.xcconfig"; sourceTree = "<group>"; };
+		5B1BE54A1FF37E1A00C87B2F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		5B1BE54D1FF37E5800C87B2F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		5B1BE5501FF37E9F00C87B2F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5B1BE5521FF382B500C87B2F /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		5B1BE5551FF382EF00C87B2F /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
+		5B1BE5581FF3832E00C87B2F /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		5B1BE55B1FF3854600C87B2F /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
+		5B1BE55C1FF3854600C87B2F /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		5B1BE55F1FF3855100C87B2F /* CollectionGameLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameLiveCell.swift; sourceTree = "<group>"; };
+		5B1BE5601FF3855100C87B2F /* CollectionGameLiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameLiveCell.xib; sourceTree = "<group>"; };
+		5B589BF91FF33F48002E6BF5 /* 熊猫TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "熊猫TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B589BFC1FF33F48002E6BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B589BFE1FF33F48002E6BF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B589C011FF33F48002E6BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B589C031FF33F48002E6BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B589C061FF33F48002E6BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B589C081FF33F48002E6BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B589C0D1FF33F48002E6BF5 /* 熊猫TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "熊猫TVTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B589C111FF33F48002E6BF5 /* __TVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __TVTests.swift; sourceTree = "<group>"; };
+		5B589C131FF33F48002E6BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B589C181FF33F48002E6BF5 /* 熊猫TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "熊猫TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B589C1C1FF33F49002E6BF5 /* __TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __TVUITests.swift; sourceTree = "<group>"; };
+		5B589C1E1FF33F49002E6BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B589C541FF37C64002E6BF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5B589C5A1FF37CF6002E6BF5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5B589C5E1FF37D10002E6BF5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5B589C621FF37D2C002E6BF5 /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
+		5B589C661FF37D42002E6BF5 /* SmallShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallShowViewController.swift; sourceTree = "<group>"; };
+		8E12EC73E7BE878BD32EEBEC /* Pods___TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___TV.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B68A6A1B702F87593AD095 /* Pods___TVUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___TVUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBCA379243BE39574F4D6E67 /* Pods___TVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___TVTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1613FED4AB48A559FCADD3 /* Pods-熊猫TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-熊猫TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-熊猫TV/Pods-熊猫TV.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B589BF61FF33F48002E6BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969C9178390FB626DE2F8D89 /* Pods___TV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C0A1FF33F48002E6BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C151FF33F48002E6BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		087981F7816C10D23EE7537C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				089A183F5C5DD1EE197F67FC /* Pods-熊猫TV.debug.xcconfig */,
+				FF1613FED4AB48A559FCADD3 /* Pods-熊猫TV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1B543686B82DC709447E537C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E12EC73E7BE878BD32EEBEC /* Pods___TV.framework */,
+				FBCA379243BE39574F4D6E67 /* Pods___TVTests.framework */,
+				F8B68A6A1B702F87593AD095 /* Pods___TVUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B1BE54C1FF37E4600C87B2F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE54F1FF37E8D00C87B2F /* Extension */,
+				5B1BE54D1FF37E5800C87B2F /* Common.swift */,
+				5B1BE5521FF382B500C87B2F /* NetworkTools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5B1BE54F1FF37E8D00C87B2F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE5501FF37E9F00C87B2F /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5B1BE5541FF382DD00C87B2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE5551FF382EF00C87B2F /* GameVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B1BE5571FF3831500C87B2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE5581FF3832E00C87B2F /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B1BE55A1FF3853400C87B2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE55B1FF3854600C87B2F /* CollectionGameCell.swift */,
+				5B1BE55C1FF3854600C87B2F /* CollectionGameCell.xib */,
+				5B1BE55F1FF3855100C87B2F /* CollectionGameLiveCell.swift */,
+				5B1BE5601FF3855100C87B2F /* CollectionGameLiveCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B589BF01FF33F48002E6BF5 = {
+			isa = PBXGroup;
+			children = (
+				5B589BFB1FF33F48002E6BF5 /* 熊猫TV */,
+				5B589C101FF33F48002E6BF5 /* 熊猫TVTests */,
+				5B589C1B1FF33F49002E6BF5 /* 熊猫TVUITests */,
+				5B589BFA1FF33F48002E6BF5 /* Products */,
+				087981F7816C10D23EE7537C /* Pods */,
+				1B543686B82DC709447E537C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B589BFA1FF33F48002E6BF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B589BF91FF33F48002E6BF5 /* 熊猫TV.app */,
+				5B589C0D1FF33F48002E6BF5 /* 熊猫TVTests.xctest */,
+				5B589C181FF33F48002E6BF5 /* 熊猫TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B589BFB1FF33F48002E6BF5 /* 熊猫TV */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C511FF37C3B002E6BF5 /* Classes */,
+				5B589BFC1FF33F48002E6BF5 /* AppDelegate.swift */,
+				5B589BFE1FF33F48002E6BF5 /* ViewController.swift */,
+				5B589C001FF33F48002E6BF5 /* Main.storyboard */,
+				5B589C031FF33F48002E6BF5 /* Assets.xcassets */,
+				5B589C051FF33F48002E6BF5 /* LaunchScreen.storyboard */,
+				5B589C081FF33F48002E6BF5 /* Info.plist */,
+			);
+			path = "熊猫TV";
+			sourceTree = "<group>";
+		};
+		5B589C101FF33F48002E6BF5 /* 熊猫TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C111FF33F48002E6BF5 /* __TVTests.swift */,
+				5B589C131FF33F48002E6BF5 /* Info.plist */,
+			);
+			path = "熊猫TVTests";
+			sourceTree = "<group>";
+		};
+		5B589C1B1FF33F49002E6BF5 /* 熊猫TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C1C1FF33F49002E6BF5 /* __TVUITests.swift */,
+				5B589C1E1FF33F49002E6BF5 /* Info.plist */,
+			);
+			path = "熊猫TVUITests";
+			sourceTree = "<group>";
+		};
+		5B589C511FF37C3B002E6BF5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B1BE54C1FF37E4600C87B2F /* Tools */,
+				5B589C641FF37D33002E6BF5 /* SmallShow */,
+				5B589C601FF37D19002E6BF5 /* Entertainment */,
+				5B589C5C1FF37D01002E6BF5 /* Game */,
+				5B589C581FF37CE2002E6BF5 /* Home */,
+				5B589C521FF37C40002E6BF5 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B589C521FF37C40002E6BF5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C531FF37C48002E6BF5 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B589C531FF37C48002E6BF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C541FF37C64002E6BF5 /* TabBarController.swift */,
+				5B1BE54A1FF37E1A00C87B2F /* NavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B589C581FF37CE2002E6BF5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C591FF37CE8002E6BF5 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B589C591FF37CE8002E6BF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C5A1FF37CF6002E6BF5 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B589C5C1FF37D01002E6BF5 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C5D1FF37D06002E6BF5 /* Controller */,
+				5B1BE55A1FF3853400C87B2F /* View */,
+				5B1BE5571FF3831500C87B2F /* Model */,
+				5B1BE5541FF382DD00C87B2F /* ViewModel */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		5B589C5D1FF37D06002E6BF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C5E1FF37D10002E6BF5 /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B589C601FF37D19002E6BF5 /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C611FF37D1F002E6BF5 /* Controller */,
+			);
+			path = Entertainment;
+			sourceTree = "<group>";
+		};
+		5B589C611FF37D1F002E6BF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C621FF37D2C002E6BF5 /* EntertainmentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B589C641FF37D33002E6BF5 /* SmallShow */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C651FF37D37002E6BF5 /* Controller */,
+			);
+			path = SmallShow;
+			sourceTree = "<group>";
+		};
+		5B589C651FF37D37002E6BF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B589C661FF37D42002E6BF5 /* SmallShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B589BF81FF33F48002E6BF5 /* 熊猫TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B589C211FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TV" */;
+			buildPhases = (
+				46B98E7BF159D803191F1CDD /* [CP] Check Pods Manifest.lock */,
+				5B589BF51FF33F48002E6BF5 /* Sources */,
+				5B589BF61FF33F48002E6BF5 /* Frameworks */,
+				5B589BF71FF33F48002E6BF5 /* Resources */,
+				8312437C75DC3EEC83FE559F /* [CP] Embed Pods Frameworks */,
+				891D762173261E3F9999710B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "熊猫TV";
+			productName = "熊猫TV";
+			productReference = 5B589BF91FF33F48002E6BF5 /* 熊猫TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B589C0C1FF33F48002E6BF5 /* 熊猫TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B589C241FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TVTests" */;
+			buildPhases = (
+				5B589C091FF33F48002E6BF5 /* Sources */,
+				5B589C0A1FF33F48002E6BF5 /* Frameworks */,
+				5B589C0B1FF33F48002E6BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B589C0F1FF33F48002E6BF5 /* PBXTargetDependency */,
+			);
+			name = "熊猫TVTests";
+			productName = "熊猫TVTests";
+			productReference = 5B589C0D1FF33F48002E6BF5 /* 熊猫TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B589C171FF33F48002E6BF5 /* 熊猫TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B589C271FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TVUITests" */;
+			buildPhases = (
+				5B589C141FF33F48002E6BF5 /* Sources */,
+				5B589C151FF33F48002E6BF5 /* Frameworks */,
+				5B589C161FF33F48002E6BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B589C1A1FF33F48002E6BF5 /* PBXTargetDependency */,
+			);
+			name = "熊猫TVUITests";
+			productName = "熊猫TVUITests";
+			productReference = 5B589C181FF33F48002E6BF5 /* 熊猫TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B589BF11FF33F48002E6BF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "金亮齐";
+				TargetAttributes = {
+					5B589BF81FF33F48002E6BF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					5B589C0C1FF33F48002E6BF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B589BF81FF33F48002E6BF5;
+					};
+					5B589C171FF33F48002E6BF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B589BF81FF33F48002E6BF5;
+					};
+				};
+			};
+			buildConfigurationList = 5B589BF41FF33F48002E6BF5 /* Build configuration list for PBXProject "熊猫TV" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B589BF01FF33F48002E6BF5;
+			productRefGroup = 5B589BFA1FF33F48002E6BF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B589BF81FF33F48002E6BF5 /* 熊猫TV */,
+				5B589C0C1FF33F48002E6BF5 /* 熊猫TVTests */,
+				5B589C171FF33F48002E6BF5 /* 熊猫TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B589BF71FF33F48002E6BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B589C071FF33F48002E6BF5 /* LaunchScreen.storyboard in Resources */,
+				5B1BE5621FF3855100C87B2F /* CollectionGameLiveCell.xib in Resources */,
+				5B1BE55E1FF3854600C87B2F /* CollectionGameCell.xib in Resources */,
+				5B589C041FF33F48002E6BF5 /* Assets.xcassets in Resources */,
+				5B589C021FF33F48002E6BF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C0B1FF33F48002E6BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C161FF33F48002E6BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46B98E7BF159D803191F1CDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-熊猫TV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8312437C75DC3EEC83FE559F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-熊猫TV/Pods-熊猫TV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-熊猫TV/Pods-熊猫TV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		891D762173261E3F9999710B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-熊猫TV/Pods-熊猫TV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B589BF51FF33F48002E6BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B589C5F1FF37D10002E6BF5 /* GameViewController.swift in Sources */,
+				5B1BE5531FF382B500C87B2F /* NetworkTools.swift in Sources */,
+				5B1BE54B1FF37E1A00C87B2F /* NavigationController.swift in Sources */,
+				5B1BE55D1FF3854600C87B2F /* CollectionGameCell.swift in Sources */,
+				5B1BE5611FF3855100C87B2F /* CollectionGameLiveCell.swift in Sources */,
+				5B589C631FF37D2C002E6BF5 /* EntertainmentViewController.swift in Sources */,
+				5B1BE5561FF382EF00C87B2F /* GameVM.swift in Sources */,
+				5B589C551FF37C64002E6BF5 /* TabBarController.swift in Sources */,
+				5B1BE54E1FF37E5800C87B2F /* Common.swift in Sources */,
+				5B589BFF1FF33F48002E6BF5 /* ViewController.swift in Sources */,
+				5B589C671FF37D42002E6BF5 /* SmallShowViewController.swift in Sources */,
+				5B589BFD1FF33F48002E6BF5 /* AppDelegate.swift in Sources */,
+				5B589C5B1FF37CF6002E6BF5 /* HomeViewController.swift in Sources */,
+				5B1BE5591FF3832E00C87B2F /* GameModel.swift in Sources */,
+				5B1BE5511FF37E9F00C87B2F /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C091FF33F48002E6BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B589C121FF33F48002E6BF5 /* __TVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B589C141FF33F48002E6BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B589C1D1FF33F49002E6BF5 /* __TVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B589C0F1FF33F48002E6BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B589BF81FF33F48002E6BF5 /* 熊猫TV */;
+			targetProxy = 5B589C0E1FF33F48002E6BF5 /* PBXContainerItemProxy */;
+		};
+		5B589C1A1FF33F48002E6BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B589BF81FF33F48002E6BF5 /* 熊猫TV */;
+			targetProxy = 5B589C191FF33F48002E6BF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B589C001FF33F48002E6BF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B589C011FF33F48002E6BF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B589C051FF33F48002E6BF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B589C061FF33F48002E6BF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B589C1F1FF33F49002E6BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B589C201FF33F49002E6BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B589C221FF33F49002E6BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 089A183F5C5DD1EE197F67FC /* Pods-熊猫TV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5B589C231FF33F49002E6BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1613FED4AB48A559FCADD3 /* Pods-熊猫TV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5B589C251FF33F49002E6BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/熊猫TV.app/熊猫TV";
+			};
+			name = Debug;
+		};
+		5B589C261FF33F49002E6BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TVTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/熊猫TV.app/熊猫TV";
+			};
+			name = Release;
+		};
+		5B589C281FF33F49002E6BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "熊猫TV";
+			};
+			name = Debug;
+		};
+		5B589C291FF33F49002E6BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "熊猫TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cn.qjl.--TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "熊猫TV";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B589BF41FF33F48002E6BF5 /* Build configuration list for PBXProject "熊猫TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B589C1F1FF33F49002E6BF5 /* Debug */,
+				5B589C201FF33F49002E6BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B589C211FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B589C221FF33F49002E6BF5 /* Debug */,
+				5B589C231FF33F49002E6BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B589C241FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B589C251FF33F49002E6BF5 /* Debug */,
+				5B589C261FF33F49002E6BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B589C271FF33F49002E6BF5 /* Build configuration list for PBXNativeTarget "熊猫TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B589C281FF33F49002E6BF5 /* Debug */,
+				5B589C291FF33F49002E6BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B589BF11FF33F48002E6BF5 /* Project object */;
+}

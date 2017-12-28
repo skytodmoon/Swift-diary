@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9KD-Ey-ohQ" customClass="CollectionGameLiveCell" customModule="XMTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="89"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YCI-e7-buP">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="69"/>
+                    </imageView>
+                    <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OnO-XJ-3pd">
+                        <rect key="frame" x="0.0" y="59" width="150" height="10"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此处是标题呵呵呵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIk-et-1JD">
+                                <rect key="frame" x="5" y="0.0" width="145" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="8fA-TO-h5H"/>
+                            <constraint firstAttribute="bottom" secondItem="DIk-et-1JD" secondAttribute="bottom" id="D0b-vL-kiW"/>
+                            <constraint firstItem="DIk-et-1JD" firstAttribute="top" secondItem="OnO-XJ-3pd" secondAttribute="top" id="ag8-7Z-mWf"/>
+                            <constraint firstAttribute="trailing" secondItem="DIk-et-1JD" secondAttribute="trailing" id="eZp-Op-qhY"/>
+                            <constraint firstItem="DIk-et-1JD" firstAttribute="leading" secondItem="OnO-XJ-3pd" secondAttribute="leading" constant="5" id="x1e-nl-ms0"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="少帮主" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-r7-Mpy">
+                        <rect key="frame" x="5" y="69" width="85" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df9-GA-syj">
+                        <rect key="frame" x="112" y="69" width="33" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="12.5万">
+                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="df9-GA-syj" secondAttribute="trailing" constant="5" id="291-uC-Loo"/>
+                <constraint firstItem="YCI-e7-buP" firstAttribute="top" secondItem="9KD-Ey-ohQ" secondAttribute="top" id="2PQ-CU-wME"/>
+                <constraint firstAttribute="bottom" secondItem="df9-GA-syj" secondAttribute="bottom" id="53R-4g-VnS"/>
+                <constraint firstItem="df9-GA-syj" firstAttribute="top" secondItem="OnO-XJ-3pd" secondAttribute="bottom" id="5sX-tB-GSV"/>
+                <constraint firstItem="OnO-XJ-3pd" firstAttribute="leading" secondItem="YCI-e7-buP" secondAttribute="leading" id="9PI-hg-LOI"/>
+                <constraint firstAttribute="bottom" secondItem="YCI-e7-buP" secondAttribute="bottom" constant="20" id="Wlj-Bj-6pc"/>
+                <constraint firstItem="OnO-XJ-3pd" firstAttribute="bottom" secondItem="YCI-e7-buP" secondAttribute="bottom" id="bph-jW-RMq"/>
+                <constraint firstItem="2hC-r7-Mpy" firstAttribute="leading" secondItem="9KD-Ey-ohQ" secondAttribute="leading" constant="5" id="d20-PD-9aT"/>
+                <constraint firstAttribute="trailing" secondItem="2hC-r7-Mpy" secondAttribute="trailing" constant="60" id="hwf-bb-7Vo"/>
+                <constraint firstAttribute="trailing" secondItem="YCI-e7-buP" secondAttribute="trailing" id="nPv-e6-grQ"/>
+                <constraint firstAttribute="bottom" secondItem="2hC-r7-Mpy" secondAttribute="bottom" id="r3X-yA-z3h"/>
+                <constraint firstItem="2hC-r7-Mpy" firstAttribute="top" secondItem="OnO-XJ-3pd" secondAttribute="bottom" id="ufU-mD-Cyu"/>
+                <constraint firstItem="YCI-e7-buP" firstAttribute="leading" secondItem="9KD-Ey-ohQ" secondAttribute="leading" id="v3Z-7k-DYY"/>
+                <constraint firstItem="OnO-XJ-3pd" firstAttribute="trailing" secondItem="YCI-e7-buP" secondAttribute="trailing" id="wAF-QP-rUp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="UGF-FK-TJg"/>
+            <size key="customSize" width="150" height="89"/>
+            <connections>
+                <outlet property="imageView" destination="YCI-e7-buP" id="9LO-xF-qUv"/>
+                <outlet property="nameLabel" destination="DIk-et-1JD" id="Rk8-ht-cjj"/>
+                <outlet property="nickNameLabel" destination="2hC-r7-Mpy" id="FEu-w9-bqZ"/>
+                <outlet property="person_numBtn" destination="df9-GA-syj" id="NXT-jf-0D6"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="159.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
