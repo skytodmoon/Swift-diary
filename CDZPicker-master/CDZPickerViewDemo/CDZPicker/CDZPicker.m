@@ -106,35 +106,7 @@ static const NSInteger CDZToolBarHeight = 44;
     [view addSubview:pickerView];
 }
 
-+ (void)showMultiPickerInView:(UIView *)view
-                  withBuilder:(CDZPickerBuilder *)builder
-                 stringArrays:(NSArray<NSArray<NSString *> *> *)arrays
-                      confirm:(CDZConfirmBlock)confirmBlock cancel:(CDZCancelBlock)cancelBlcok{
-    CDZPicker *pickerView = [[CDZPicker alloc]initWithFrame:view.frame];
-    pickerView.linkage = NO;
-    pickerView.stringArrays = arrays;
-    pickerView.confirmBlock = confirmBlock;
-    pickerView.cancelBlock = cancelBlcok;
-    pickerView.builder = builder ?:[CDZPickerBuilder new];
-    [pickerView config];
-    [view addSubview:pickerView];
-}
 
-
-+ (void)showLinkagePickerInView:(UIView *)view
-                    withBuilder:(CDZPickerBuilder *)builder
-                     components:(NSArray<CDZPickerComponentObject *> *)components
-                        confirm:(CDZConfirmBlock)confirmBlock
-                         cancel:(CDZCancelBlock)cancelBlcok{
-    CDZPicker *pickerView = [[CDZPicker alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    pickerView.linkage = YES;
-    pickerView.componets = components;
-    pickerView.confirmBlock = confirmBlock;
-    pickerView.cancelBlock = cancelBlcok;
-    pickerView.builder = builder ?:[CDZPickerBuilder new];
-    [pickerView config];
-    [view addSubview:pickerView];
-}
 
 - (void)setupViews{
     self.backgroundColor = self.builder.isShowMask ? BACKGROUND_BLACK_COLOR : UIColor.clearColor;
